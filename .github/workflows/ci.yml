@@ -1,0 +1,53 @@
+name: CI - Build and Verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Lint, Build, and Verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        env:
+          # Ensure canonical URLs and sitemap use the production domain during CI build
+          VITE_SITE_URL: https://mb-fretservices.com
+        run: npm run build
+
+      - name: Verify build outputs exist
+        run: |
+          test -f dist/index.html
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+
+      - name: Add SPA fallback (GitHub Pages friendly)
+        run: cp dist/index.html dist/404.html
+
+      - name: Upload production artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist
+          path: dist
+          if-no-files-found: error
