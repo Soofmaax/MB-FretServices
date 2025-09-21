@@ -29,7 +29,7 @@ function App() {
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal" element={<Legal />} />
-            <Route path="/fret-maritime" element={<FreightMaritime />} />
+            <Route path="/services/fret-maritime" element={<FreightMaritime />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

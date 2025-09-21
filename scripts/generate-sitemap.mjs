@@ -48,6 +48,7 @@ function priorityFor(pathname) {
   const map = {
     '/': { changefreq: 'weekly', priority: '1.0' },
     '/services': { changefreq: 'weekly', priority: '0.8' },
+    '/services/fret-maritime': { changefreq: 'weekly', priority: '0.8' },
     '/destinations': { changefreq: 'weekly', priority: '0.8' },
     '/contact': { changefreq: 'monthly', priority: '0.6' },
     '/legal': { changefreq: 'yearly', priority: '0.3' },
