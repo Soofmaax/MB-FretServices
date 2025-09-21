@@ -1,7 +1,8 @@
 import React from 'react';
-import { Ship, Plane, FileText, Shield } from 'lucide-react';
+import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
 
@@ -96,7 +97,7 @@ const Services: React.FC = () => {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             itemListElement: [
-              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.' },
+              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.', url: ((import.meta as any).env?.VITE_SITE_URL || 'https://mb-fretservices.com') + '/services/fret-maritime' },
               { '@type': 'Service', name: 'Fret Aérien', description: 'Rapidité et fiabilité pour vos urgences. Idéal pour marchandises de valeur, périssables ou urgentes.' },
               { '@type': 'Service', name: 'Dédouanement', description: 'Expertise administrative complète et conformité réglementaire assurée.' },
               { '@type': 'Service', name: 'Assurance Cargo', description: 'Protection totale de vos marchandises, couverture complète de l’enlèvement à la livraison.' },
@@ -161,6 +162,15 @@ const Services: React.FC = () => {
                       {service.destinations}
                     </p>
                   </div>
+
+                  {service.title === 'Fret Maritime' && (
+                    <div className="mb-6">
+                      <Link to="/services/fret-maritime" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+                        En savoir plus sur le fret maritime
+                        <ArrowRight size={16} className="ml-1" />
+                      </Link>
+                    </div>
+                  )}
                   
                   <CtaButton href="/contact" variant="primary">
                     Demander un Devis
