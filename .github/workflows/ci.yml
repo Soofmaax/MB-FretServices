@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Lint, Build, and Verify
+    name: Lint, Typecheck, Build, and Verify
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -30,9 +30,11 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Typecheck
+        run: npm run typecheck
+
       - name: Build
         env:
-          # Ensure canonical URLs and sitemap use the production domain during CI build
           VITE_SITE_URL: https://mb-fretservices.com
         run: npm run build
 
