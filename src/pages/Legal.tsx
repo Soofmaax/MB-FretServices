@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const Legal: React.FC = () => {
+const Legal: FC = () => {
   const SITE_URL = getSiteUrl();
 
   return (

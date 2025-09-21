@@ -1,11 +1,11 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const Services: React.FC = () => {
+const Services: FC = () => {
 
   const services = [
     {

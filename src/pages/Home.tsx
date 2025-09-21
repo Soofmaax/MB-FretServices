@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import Hero from '../components/Hero';
 import ValuePropositions from '../components/ValuePropositions';
 import DestinationsShowcase from '../components/DestinationsShowcase';
@@ -6,7 +6,7 @@ import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const Home: React.FC = () => {
+const Home: FC = () => {
   const SITE_URL = getSiteUrl();
 
   return (

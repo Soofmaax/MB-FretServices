@@ -1,9 +1,9 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const Contact: React.FC = () => {
+const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
 
   return (

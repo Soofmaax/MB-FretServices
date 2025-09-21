@@ -1,10 +1,10 @@
-import React from 'react';
+import type { FC } from 'react';
 import { MapPin, Clock, Ship, Plane } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const Destinations: React.FC = () => {
+const Destinations: FC = () => {
   const SITE_URL = getSiteUrl();
 
   const regions = [
@@ -15,11 +15,12 @@ const Destinations: React.FC = () => {
           name: 'Congo',
           capital: 'Brazzaville',
           port: 'Pointe-Noire',
-          maritime: {
-            from: 'Le Havre, Anvers',
-            duration: '18-22 jours',
-            frequency: 'Hebdomadaire'
-          },
+          maritime:
+            {
+              from: 'Le Havre, Anvers',
+              duration: '18-22 jours',
+              frequency: 'Hebdomadaire'
+            },
           aerien: {
             from: 'Paris CDG, Lyon',
             duration: '6-8 heures',
