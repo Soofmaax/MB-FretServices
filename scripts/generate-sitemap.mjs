@@ -88,11 +88,22 @@ function main() {
   const siteUrl = readEnvSiteUrl();
   const routes = getRoutesFromApp();
   const xml = buildSitemap(routes, siteUrl);
-  const outDir = path.join(root, 'public');
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  const outPath = path.join(outDir, 'sitemap.xml');
-  fs.writeFileSync(outPath, xml, 'utf8');
-  console.log(`Generated sitemap with ${routes.length} route(s) at ${outPath}`);
+
+  // Write to public/ for Vite to copy during build
+  const publicDir = path.join(root, 'public');
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  const publicPath = path.join(publicDir, 'sitemap.xml');
+  fs.writeFileSync(publicPath, xml, 'utf8');
+
+  // If dist/ exists (postbuild), also write the sitemap directly there
+  const distDir = path.join(root, 'dist');
+  if (fs.existsSync(distDir)) {
+    const distPath = path.join(distDir, 'sitemap.xml');
+    fs.writeFileSync(distPath, xml, 'utf8');
+    console.log(`Generated sitemap with ${routes.length} route(s) at ${publicPath} and ${distPath}`);
+  } else {
+    console.log(`Generated sitemap with ${routes.length} route(s) at ${publicPath}`);
+  }
 }
 
 main();
