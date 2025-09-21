@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Remplacez l'URL ci-dessous par votre domaine canonique une fois connu
-Sitemap: https://your-domain.com/sitemap.xml
+# Domaine canonique
+Sitemap: https://mb-fretservices.com/sitemap.xml
