@@ -145,7 +145,15 @@ const Services: React.FC = () => {
                   </div>
                   
                   <CtaButton href="/contact" variant="primary">
-                    Demander un Devis
+                    {index === 0 ? (
+                      <CtaButton href="/services/fret-maritime" variant="primary">
+                        En Savoir Plus
+                      </CtaButton>
+                    ) : (
+                      <CtaButton href="/contact" variant="primary">
+                        Demander un Devis
+                      </CtaButton>
+                    )}
                   </CtaButton>
                 </div>
                 

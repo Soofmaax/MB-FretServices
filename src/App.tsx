@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import Destinations from './pages/Destinations';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
+import FreightMaritime from './pages/FreightMaritime';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/destinations" element={<Destinations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal" element={<Legal />} />
+            <Route path="/services/fret-maritime" element={<FreightMaritime />} />
           </Routes>
         </main>
         <Footer />
