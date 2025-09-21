@@ -65,14 +65,23 @@ function buildSitemap(urls, siteUrl) {
         pathname === '/'
           ? new URL('/', siteUrl).href
           : new URL(pathname.startsWith('/') ? pathname : `/${pathname}`, siteUrl).href;
+
+      // Normalize trailing slash: keep it only for root
+      let finalLoc = loc;
+      if (pathname === '/') {
+        if (!finalLoc.endsWith('/')) finalLoc += '/';
+      } else {
+        if (finalLoc.endsWith('/')) finalLoc = finalLoc.slice(0, -1);
+      }
+
       return `  <url>
-    <loc>${loc.replace(/\\/$/, pathname === '/' ? '/' : '')}</loc>
+    <loc>${finalLoc}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <lastmod>${today}</lastmod>
   </url>`;
     })
-    .join('\\n');
+    .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
