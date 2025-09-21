@@ -1,41 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
+import SEO from '../components/SEO';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const FreightMaritime: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Fret Maritime vers l\'Afrique - Transport Conteneur FCL LCL | MB Fret Services';
-    
-    const metaDescription = document.createElement('meta');
-    metaDescription.name = 'description';
-    metaDescription.content = 'Fret maritime professionnel vers l\'Afrique : Congo, Angola, Côte d\'Ivoire. Conteneurs 20\' et 40\', FCL et LCL. Devis gratuit sous 24h. Expert depuis 15 ans.';
-    
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) existingMeta.remove();
-    document.head.appendChild(metaDescription);
-
-    return () => {
-      if (metaDescription.parentNode) {
-        metaDescription.parentNode.removeChild(metaDescription);
-      }
-    };
-  }, []);
+  const SITE_URL = getSiteUrl();
 
   const advantages = [
     {
       icon: Ship,
       title: 'Expertise Maritime',
-      description: 'Plus de 15 ans d\'expérience dans le transport maritime vers l\'Afrique'
+      description: "Plus de 15 ans d'expérience dans le transport maritime vers l'Afrique",
     },
     {
       icon: Clock,
       title: 'Délais Maîtrisés',
-      description: 'Rotations régulières et délais de transit optimisés'
+      description: 'Rotations régulières et délais de transit optimisés',
     },
     {
       icon: Shield,
       title: 'Sécurité Garantie',
-      description: 'Assurance cargo et suivi en temps réel de vos marchandises'
+      description: 'Assurance cargo et suivi en temps réel de vos marchandises',
     }
   ];
 
@@ -83,13 +69,92 @@ const FreightMaritime: React.FC = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Fret Maritime vers l'Afrique - Transport Conteneur FCL LCL | MB Fret Services"
+        description="Fret maritime professionnel vers l'Afrique : Congo, Angola, Côte d'Ivoire. Conteneurs 20' et 40', FCL et LCL. Devis gratuit sous 24h. Expert depuis 15 ans."
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL + '/' },
+              { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services' },
+              { '@type': 'ListItem', position: 3, name: 'Fret maritime', item: SITE_URL + '/services/fret-maritime' },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: "Fret maritime vers l'Afrique (FCL & LCL)",
+            serviceType: 'Fret maritime',
+            provider: {
+              '@type': 'Organization',
+              name: 'MB Fret Services',
+              url: SITE_URL,
+            },
+            areaServed: [
+              { '@type': 'Country', name: 'Congo' },
+              { '@type': 'Country', name: 'Angola' },
+              { '@type': 'Country', name: "Côte d'Ivoire" },
+              { '@type': 'Country', name: 'Cameroun' },
+            ],
+            availableChannel: {
+              '@type': 'ServiceChannel',
+              serviceLocation: { '@type': 'Place', name: 'France et Europe' },
+            },
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Quelle est la différence entre FCL et LCL ?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. " +
+                    "LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, idéal pour les petits volumes.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Quels documents sont nécessaires pour le fret maritime ?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    "Facture commerciale, liste de colisage, connaissement maritime (Bill of Lading), certificat d'origine si requis, " +
+                    'et documents spécifiques selon la nature des marchandises (certificats sanitaires, etc.).',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Comment suivre mon conteneur en transit ?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, ' +
+                    "de l'embarquement au port de départ jusqu'à l'arrivée au port de destination.",
+                },
+              },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: "Fret Maritime vers l'Afrique",
+            inLanguage: 'fr-FR',
+          },
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
           style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")'
+            backgroundImage: 'url(\"https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600\")'
           }}
         ></div>
         
@@ -193,6 +258,8 @@ const FreightMaritime: React.FC = () => {
               <img 
                 src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Conteneurs de fret maritime"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-96 object-cover rounded-xl shadow-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent rounded-xl"></div>

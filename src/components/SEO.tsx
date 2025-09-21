@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { getSiteUrl } from '../utils/siteUrl';
 
 type SEOProps = {
   title: string;
@@ -19,20 +20,19 @@ const DEFAULT_OG_IMAGE =
 
 const getCanonical = (explicit?: string) => {
   if (explicit) return explicit;
-  const base = (import.meta as any).env?.VITE_SITE_URL as string | undefined;
   if (typeof window === 'undefined') return undefined;
   const { pathname } = window.location;
+  const base = getSiteUrl();
   try {
-    // If a base URL is defined, build canonical from it to avoid dev hostnames.
-    // We purposely drop search params (utm, etc.) from canonical URLs.
-    if (base) {
-      const url = new URL(pathname, base);
-      return url.href;
+    const url = new URL(pathname, base);
+    // Ensure no trailing slash for non-root paths
+    if (pathname !== '/') {
+      return url.href.replace(/\/$/, '');
     }
+    return url.href;
   } catch {
-    // ignore
+    return window.location.origin + pathname;
   }
-  return window.location.origin + pathname;
 };
 
 const SEO: React.FC<SEOProps> = ({

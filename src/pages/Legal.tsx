@@ -1,7 +1,10 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const Legal: React.FC = () => {
+  const SITE_URL = getSiteUrl();
+
   return (
     <div className="pt-16">
       <SEO
@@ -16,13 +19,13 @@ const Legal: React.FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Accueil',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/' : 'https://mb-fretservices.com/',
+                item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Mentions légales',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/legal' : 'https://mb-fretservices.com/legal',
+                item: SITE_URL + '/legal',
               },
             ],
           },

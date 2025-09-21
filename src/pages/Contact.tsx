@@ -1,8 +1,11 @@
 import React from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const Contact: React.FC = () => {
+  const SITE_URL = getSiteUrl();
+
   return (
     <div className="pt-16">
       <SEO
@@ -17,13 +20,13 @@ const Contact: React.FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Accueil',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/' : 'https://mb-fretservices.com/',
+                item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Contact',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/contact' : 'https://mb-fretservices.com/contact',
+                item: SITE_URL + '/contact',
               },
             ],
           },

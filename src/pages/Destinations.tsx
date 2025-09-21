@@ -2,8 +2,10 @@ import React from 'react';
 import { MapPin, Clock, Ship, Plane } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const Destinations: React.FC = () => {
+  const SITE_URL = getSiteUrl();
 
   const regions = [
     {
@@ -101,13 +103,13 @@ const Destinations: React.FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Accueil',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/' : 'https://mb-fretservices.com/',
+                item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Destinations',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/destinations' : 'https://mb-fretservices.com/destinations',
+                item: SITE_URL + '/destinations',
               },
             ],
           },

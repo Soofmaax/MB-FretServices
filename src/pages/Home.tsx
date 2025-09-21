@@ -4,9 +4,10 @@ import ValuePropositions from '../components/ValuePropositions';
 import DestinationsShowcase from '../components/DestinationsShowcase';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const Home: React.FC = () => {
-  const SITE_URL = (import.meta as any).env?.VITE_SITE_URL || 'https://mb-fretservices.com';
+  const SITE_URL = getSiteUrl();
 
   return (
     <div className="pt-16">

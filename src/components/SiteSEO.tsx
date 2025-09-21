@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const SITE_URL = (import.meta as any).env?.VITE_SITE_URL || 'https://mb-fretservices.com';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const SiteSEO: React.FC = () => {
+  const SITE_URL = getSiteUrl();
+
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

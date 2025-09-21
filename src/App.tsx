@@ -8,6 +8,9 @@ import Destinations from './pages/Destinations';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
 import FreightMaritime from './pages/FreightMaritime';
+import ScrollToTop from './components/ScrollToTop';
+import NotFound from './pages/NotFound';
+import SiteSEO from './components/SiteSEO';
 
 function App() {
   return (
@@ -27,6 +30,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/services/fret-maritime" element={<FreightMaritime />} />
+            {/* Redirect old slug to the canonical one */}
+            <Route path="/fret-maritime" element={<Navigate to="/services/fret-maritime" replace />} />
+            {/* 404 catch-all */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

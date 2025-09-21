@@ -3,6 +3,7 @@ import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import { getSiteUrl } from '../utils/siteUrl';
 
 const Services: React.FC = () => {
 
@@ -83,13 +84,13 @@ const Services: React.FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Accueil',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/' : 'https://mb-fretservices.com/',
+                item: getSiteUrl() + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Services',
-                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/services' : 'https://mb-fretservices.com/services',
+                item: getSiteUrl() + '/services',
               },
             ],
           },
@@ -97,7 +98,7 @@ const Services: React.FC = () => {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             itemListElement: [
-              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.', url: ((import.meta as any).env?.VITE_SITE_URL || 'https://mb-fretservices.com') + '/services/fret-maritime' },
+              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.', url: (getSiteUrl()) + '/services/fret-maritime' },
               { '@type': 'Service', name: 'Fret Aérien', description: 'Rapidité et fiabilité pour vos urgences. Idéal pour marchandises de valeur, périssables ou urgentes.' },
               { '@type': 'Service', name: 'Dédouanement', description: 'Expertise administrative complète et conformité réglementaire assurée.' },
               { '@type': 'Service', name: 'Assurance Cargo', description: 'Protection totale de vos marchandises, couverture complète de l’enlèvement à la livraison.' },
