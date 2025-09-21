@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const DestinationsShowcase: React.FC = () => {
   const destinations = [
@@ -49,10 +50,12 @@ const DestinationsShowcase: React.FC = () => {
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="aspect-w-16 aspect-h-12 relative">
+              <div className="relative">
                 <img 
                   src={destination.image} 
                   alt={`Transport vers ${destination.country}`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -84,13 +87,13 @@ const DestinationsShowcase: React.FC = () => {
           <p className="text-gray-600 mb-6">
             Besoin d'une destination spécifique ? Nous étudions toutes les demandes.
           </p>
-          <a 
-            href="/destinations" 
+          <Link 
+            to="/destinations" 
             className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
           >
             Voir toutes nos destinations
-            <ArrowRight size={18} className="ml-2" />
-          </a>
+           <AArrowRight size={18} className="ml-2" />
+         </a>
         </div>
       </div>
     </section>

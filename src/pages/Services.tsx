@@ -162,6 +162,8 @@ const Services: React.FC = () => {
                         index === 2 ? '7681091' : '416978'
                       }.jpeg?auto=compress&cs=tinysrgb&w=800`}
                       alt={`Service ${service.title}`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-64 lg:h-80 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
