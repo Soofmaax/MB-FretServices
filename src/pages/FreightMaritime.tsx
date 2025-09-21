@@ -1,10 +1,10 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const FreightMaritime: React.FC = () => {
+const FreightMaritime: FC = () => {
   const SITE_URL = getSiteUrl();
 
   const advantages = [
@@ -154,7 +154,7 @@ const FreightMaritime: React.FC = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
           style={{
-            backgroundImage: `url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")`
+            backgroundImage: 'url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")'
           }}
         ></div>
         

@@ -1,7 +1,7 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Ship, Plane, Shield } from 'lucide-react';
 
-const ValuePropositions: React.FC = () => {
+const ValuePropositions: FC = () => {
   const propositions = [
     {
       icon: Ship,

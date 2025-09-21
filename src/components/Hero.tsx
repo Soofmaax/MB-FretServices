@@ -1,14 +1,14 @@
-import React from 'react';
+import type { FC } from 'react';
 import CtaButton from './CtaButton';
 
-const Hero: React.FC = () => {
+const Hero: FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-30"></div>
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
         style={{
-          backgroundImage: `url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")`
+          backgroundImage: 'url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")'
         }}
       ></div>
       

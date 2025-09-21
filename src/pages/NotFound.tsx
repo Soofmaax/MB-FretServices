@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
-const NotFound: React.FC = () => {
+const NotFound: FC = () => {
   return (
     <div className="pt-16">
       <SEO

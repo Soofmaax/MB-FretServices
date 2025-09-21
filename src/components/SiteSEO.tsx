@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
 
-const SiteSEO: React.FC = () => {
+const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
 
   const organization = {

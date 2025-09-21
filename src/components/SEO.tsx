@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { buildCanonical } from '../utils/seo';
 
@@ -18,7 +18,7 @@ const DEFAULT_LOCALE = 'fr_FR';
 const DEFAULT_OG_IMAGE =
   'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
 
-const SEO: React.FC<SEOProps> = ({
+const SEO: FC<SEOProps> = ({
   title,
   description,
   canonical,

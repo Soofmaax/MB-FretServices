@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const DestinationsShowcase: React.FC = () => {
+const DestinationsShowcase: FC = () => {
   const destinations = [
     {
       country: 'Congo',

@@ -1,15 +1,15 @@
-import React from 'react';
+import type { FC, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
 interface CtaButtonProps {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: 'primary' | 'secondary' | 'outline';
   className?: string;
   onClick?: () => void;
 }
 
-const CtaButton: React.FC<CtaButtonProps> = ({ 
+const CtaButton: FC<CtaButtonProps> = ({ 
   href, 
   children, 
   variant = 'primary', 
