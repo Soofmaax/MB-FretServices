@@ -1,25 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { MapPin, Clock, Ship, Plane } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
+import SEO from '../components/SEO';
 
 const Destinations: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Destinations - Transport vers Afrique, Asie et Europe | MB Fret Services';
-    
-    const metaDescription = document.createElement('meta');
-    metaDescription.name = 'description';
-    metaDescription.content = 'Transport international vers Congo, Angola, Chine, Turquie. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h.';
-    
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) existingMeta.remove();
-    document.head.appendChild(metaDescription);
-
-    return () => {
-      if (metaDescription.parentNode) {
-        metaDescription.parentNode.removeChild(metaDescription);
-      }
-    };
-  }, []);
 
   const regions = [
     {
@@ -105,6 +89,10 @@ const Destinations: React.FC = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Destinations - Transport vers Afrique, Asie et Europe | MB Fret Services"
+        description="Transport international vers Congo, Angola, Chine, Turquie. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

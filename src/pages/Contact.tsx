@@ -1,27 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Contact - Devis Gratuit Transport International | MB Fret Services';
-    
-    const metaDescription = document.createElement('meta');
-    metaDescription.name = 'description';
-    metaDescription.content = 'Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie.';
-    
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) existingMeta.remove();
-    document.head.appendChild(metaDescription);
-
-    return () => {
-      if (metaDescription.parentNode) {
-        metaDescription.parentNode.removeChild(metaDescription);
-      }
-    };
-  }, []);
-
   return (
     <div className="pt-16">
+      <SEO
+        title="Contact - Devis Gratuit Transport International | MB Fret Services"
+        description="Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,35 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Hero from '../components/Hero';
 import ValuePropositions from '../components/ValuePropositions';
 import DestinationsShowcase from '../components/DestinationsShowcase';
 import CtaButton from '../components/CtaButton';
+import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    document.title = 'MB Fret Services - Transport International entre Europe, Asie et Afrique';
-    
-    // Add meta description
-    const metaDescription = document.createElement('meta');
-    metaDescription.name = 'description';
-    metaDescription.content = 'MB Fret Services : Votre spécialiste du transport international. Fret maritime et aérien vers l\'Afrique, l\'Asie et l\'Europe. Dédouanement et logistique intégrée.';
-    
-    // Remove existing meta description if any
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) {
-      existingMeta.remove();
-    }
-    
-    document.head.appendChild(metaDescription);
-
-    return () => {
-      if (metaDescription.parentNode) {
-        metaDescription.parentNode.removeChild(metaDescription);
-      }
-    };
-  }, []);
-
   return (
     <div className="pt-16">
+      <SEO
+        title="MB Fret Services - Transport International entre Europe, Asie et Afrique"
+        description="MB Fret Services : Votre spécialiste du transport international. Fret maritime et aérien vers l'Afrique, l'Asie et l'Europe. Dédouanement et logistique intégrée."
+      />
       <Hero />
       <ValuePropositions />
       <DestinationsShowcase />

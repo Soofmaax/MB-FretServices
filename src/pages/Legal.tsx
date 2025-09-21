@@ -1,26 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import SEO from '../components/SEO';
 
 const Legal: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Mentions Légales | MB Fret Services';
-    
-    const metaDescription = document.createElement('meta');
-    metaDescription.name = 'description';
-    metaDescription.content = 'Mentions légales de MB Fret Services - Informations légales et conditions d\'utilisation du site.';
-    
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) existingMeta.remove();
-    document.head.appendChild(metaDescription);
-
-    return () => {
-      if (metaDescription.parentNode) {
-        metaDescription.parentNode.removeChild(metaDescription);
-      }
-    };
-  }, []);
-
   return (
     <div className="pt-16">
+      <SEO
+        title="Mentions Légales | MB Fret Services"
+        description="Mentions légales de MB Fret Services - Informations légales et conditions d'utilisation du site."
+      />
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-lg p-8 lg:p-12">

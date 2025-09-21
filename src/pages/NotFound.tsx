@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const NotFound: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Page introuvable - MB Fret Services';
-  }, []);
-
   return (
     <div className="pt-16">
+      <SEO
+        title="Page introuvable - MB Fret Services"
+        description="La page demandée est introuvable."
+        noindex
+      />
       <section className="py-24 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-primary-900 mb-4">404</h1>

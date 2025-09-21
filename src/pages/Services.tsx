@@ -1,25 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Ship, Plane, FileText, Shield } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
+import SEO from '../components/SEO';
 
 const Services: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Nos Services - Fret Maritime, Aérien et Dédouanement | MB Fret Services';
-    
-    const metaDescription = document.createElement('meta');
-    metaDescription.name = 'description';
-    metaDescription.content = 'Découvrez nos services de transport international : fret maritime vers l\'Afrique, fret aérien express, dédouanement professionnel et assurance cargo.';
-    
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) existingMeta.remove();
-    document.head.appendChild(metaDescription);
-
-    return () => {
-      if (metaDescription.parentNode) {
-        metaDescription.parentNode.removeChild(metaDescription);
-      }
-    };
-  }, []);
 
   const services = [
     {
@@ -86,6 +70,10 @@ const Services: React.FC = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Nos Services - Fret Maritime, Aérien et Dédouanement | MB Fret Services"
+        description="Découvrez nos services de transport international : fret maritime vers l'Afrique, fret aérien express, dédouanement professionnel et assurance cargo."
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
