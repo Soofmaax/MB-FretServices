@@ -7,9 +7,6 @@ import Services from './pages/Services';
 import Destinations from './pages/Destinations';
 import Contact from './pages/Contact';
 import Legal from './pages/Legal';
-import ScrollToTop from './components/ScrollToTop';
-import NotFound from './pages/NotFound';
-import SiteSEO from './components/SiteSEO';
 import FreightMaritime from './pages/FreightMaritime';
 
 function App() {
@@ -30,7 +27,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/services/fret-maritime" element={<FreightMaritime />} />
-            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
