@@ -92,8 +92,8 @@ const DestinationsShowcase: React.FC = () => {
             className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
           >
             Voir toutes nos destinations
-           <AArrowRight size={18} className="ml-2" />
-         </a>
+            <ArrowRight size={18} className="ml-2" />
+          </Link>
         </div>
       </div>
     </section>

@@ -9,12 +9,31 @@ type SEOProps = {
   ogType?: 'website' | 'article';
   twitterCard?: 'summary' | 'summary_large_image';
   noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
 };
 
 const DEFAULT_SITE_NAME = 'MB Fret Services';
 const DEFAULT_LOCALE = 'fr_FR';
 const DEFAULT_OG_IMAGE =
   'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
+
+const getCanonical = (explicit?: string) => {
+  if (explicit) return explicit;
+  const base = (import.meta as any).env?.VITE_SITE_URL as string | undefined;
+  if (typeof window === 'undefined') return undefined;
+  const { pathname } = window.location;
+  try {
+    // If a base URL is defined, build canonical from it to avoid dev hostnames.
+    // We purposely drop search params (utm, etc.) from canonical URLs.
+    if (base) {
+      const url = new URL(pathname, base);
+      return url.href;
+    }
+  } catch {
+    // ignore
+  }
+  return window.location.origin + pathname;
+};
 
 const SEO: React.FC<SEOProps> = ({
   title,
@@ -24,13 +43,15 @@ const SEO: React.FC<SEOProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
+  jsonLd,
 }) => {
-  const url = canonical ?? (typeof window !== 'undefined' ? window.location.href : undefined);
+  const url = getCanonical(canonical);
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {!noindex && <meta name="robots" content="index,follow" />}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
 
       {/* Open Graph */}
@@ -50,6 +71,13 @@ const SEO: React.FC<SEOProps> = ({
 
       {/* Canonical */}
       {url && <link rel="canonical" href={url} />}
+
+      {/* Structured Data */}
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      )}
     </Helmet>
   );
 };

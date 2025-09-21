@@ -6,11 +6,20 @@ import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
+  const SITE_URL = (import.meta as any).env?.VITE_SITE_URL || 'https://mb-fretservices.com';
+
   return (
     <div className="pt-16">
       <SEO
         title="MB Fret Services - Transport International entre Europe, Asie et Afrique"
         description="MB Fret Services : Votre spécialiste du transport international. Fret maritime et aérien vers l'Afrique, l'Asie et l'Europe. Dédouanement et logistique intégrée."
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Accueil - MB Fret Services',
+          url: SITE_URL + '/',
+          inLanguage: 'fr-FR',
+        }}
       />
       <Hero />
       <ValuePropositions />

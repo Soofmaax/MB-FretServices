@@ -92,6 +92,32 @@ const Destinations: React.FC = () => {
       <SEO
         title="Destinations - Transport vers Afrique, Asie et Europe | MB Fret Services"
         description="Transport international vers Congo, Angola, Chine, Turquie. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Accueil',
+                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/' : 'https://mb-fretservices.com/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Destinations',
+                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/destinations' : 'https://mb-fretservices.com/destinations',
+              },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Destinations - MB Fret Services',
+            inLanguage: 'fr-FR',
+          },
+        ]}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">

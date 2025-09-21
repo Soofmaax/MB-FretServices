@@ -7,6 +7,32 @@ const Legal: React.FC = () => {
       <SEO
         title="Mentions Légales | MB Fret Services"
         description="Mentions légales de MB Fret Services - Informations légales et conditions d'utilisation du site."
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Accueil',
+                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/' : 'https://mb-fretservices.com/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Mentions légales',
+                item: (import.meta as any).env?.VITE_SITE_URL ? (import.meta as any).env?.VITE_SITE_URL + '/legal' : 'https://mb-fretservices.com/legal',
+              },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'Mentions légales - MB Fret Services',
+            inLanguage: 'fr-FR',
+          },
+        ]}
       />
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
