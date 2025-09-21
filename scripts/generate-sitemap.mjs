@@ -31,7 +31,8 @@ function readEnvSiteUrl() {
 function getRoutesFromApp() {
   const appPath = path.join(root, 'src', 'App.tsx');
   const content = fs.readFileSync(appPath, 'utf8');
-  const regex = new RegExp('<Route\\s+path\\s*=\\s*\\"(.*?)\\"', 'g');
+  // Simpler pattern: match path="..."; double quotes are not escaped in a single-quoted string
+  const regex = new RegExp('<Route\\s+path\\s*=\\s*"(.*?)"', 'g');
   const routes = new Set();
   let m;
   while ((m = regex.exec(content)) !== null) {

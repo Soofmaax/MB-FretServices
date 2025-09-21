@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { getSiteUrl } from '../utils/siteUrl';
+import { buildCanonical } from '../utils/seo';
 
 type SEOProps = {
   title: string;
@@ -18,23 +18,6 @@ const DEFAULT_LOCALE = 'fr_FR';
 const DEFAULT_OG_IMAGE =
   'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
 
-const getCanonical = (explicit?: string) => {
-  if (explicit) return explicit;
-  if (typeof window === 'undefined') return undefined;
-  const { pathname } = window.location;
-  const base = getSiteUrl();
-  try {
-    const url = new URL(pathname, base);
-    // Ensure no trailing slash for non-root paths
-    if (pathname !== '/') {
-      return url.href.replace(/\/$/, '');
-    }
-    return url.href;
-  } catch {
-    return window.location.origin + pathname;
-  }
-};
-
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -45,7 +28,7 @@ const SEO: React.FC<SEOProps> = ({
   noindex = false,
   jsonLd,
 }) => {
-  const url = getCanonical(canonical);
+  const url = buildCanonical(canonical);
 
   return (
     <Helmet>
