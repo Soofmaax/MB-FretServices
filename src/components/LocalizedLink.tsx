@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { detectLangFromPath, localizeTo } from '../utils/paths';
+import { localizeTo } from '../utils/paths';
 
 type Props = {
   to: string; // logical path without language prefix (e.g. 'services', 'contact', 'services/fret-maritime', '' for home)
