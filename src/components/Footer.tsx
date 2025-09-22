@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import LocalizedLink from './LocalizedLink';
 
 const Footer: FC = () => {
   return (
@@ -32,29 +32,29 @@ const Footer: FC = () => {
             <h4 className="text-lg font-semibold text-accent-400">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
                   Accueil
-                </Link>
+                </LocalizedLink>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="services" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
                   Nos Services
-                </Link>
+                </LocalizedLink>
               </li>
               <li>
-                <Link to="/destinations" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="destinations" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
                   Destinations
-                </Link>
+                </LocalizedLink>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="contact" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
                   Contact
-                </Link>
+                </LocalizedLink>
               </li>
               <li>
-                <Link to="/legal" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="legal" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
                   Mentions Légales
-                </Link>
+                </LocalizedLink>
               </li>
             </ul>
           </div>

@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
+import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 
 const Services: FC = () => {
@@ -166,14 +166,14 @@ const Services: FC = () => {
 
                   {service.title === 'Fret Maritime' && (
                     <div className="mb-6">
-                      <Link to="/services/fret-maritime" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+                      <LocalizedLink to="services/fret-maritime" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
                         En savoir plus sur le fret maritime
                         <ArrowRight size={16} className="ml-1" />
-                      </Link>
+                      </LocalizedLink>
                     </div>
                   )}
                   
-                  <CtaButton href="/contact" variant="primary">
+                  <CtaButton href="contact" variant="primary">
                     Demander un Devis
                   </CtaButton>
                 </div>
@@ -215,7 +215,7 @@ const Services: FC = () => {
             pour vous proposer la solution la plus adaptée et économique.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CtaButton href="/contact" variant="primary" className="text-lg px-8 py-4">
+            <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
               Consultation Gratuite
             </CtaButton>
             <a 

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import LocalizedLink from './LocalizedLink';
 
 const DestinationsShowcase: FC = () => {
   const destinations = [
@@ -87,13 +87,13 @@ const DestinationsShowcase: FC = () => {
           <p className="text-gray-600 mb-6">
             Besoin d'une destination spécifique ? Nous étudions toutes les demandes.
           </p>
-          <Link 
-            to="/destinations" 
+          <LocalizedLink 
+            to="destinations" 
             className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
           >
             Voir toutes nos destinations
             <ArrowRight size={18} className="ml-2" />
-          </Link>
+          </LocalizedLink>
         </div>
       </div>
     </section>

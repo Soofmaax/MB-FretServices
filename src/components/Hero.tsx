@@ -25,10 +25,10 @@ const Hero: FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <CtaButton href="/contact" variant="primary" className="text-lg px-8 py-4">
+            <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
               Demander un Devis Gratuit
             </CtaButton>
-            <CtaButton href="/services" variant="outline" className="text-lg px-8 py-4">
+            <CtaButton href="services" variant="outline" className="text-lg px-8 py-4">
               Découvrir nos Services
             </CtaButton>
           </div>

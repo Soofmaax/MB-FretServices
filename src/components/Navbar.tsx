@@ -1,13 +1,25 @@
 import type { FC } from 'react';
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import CtaButton from './CtaButton';
+import LocalizedLink from './LocalizedLink';
+import { useTranslation } from 'react-i18next';
+
+const LANGS = [
+  { code: 'fr', label: 'FR' },
+  { code: 'en', label: 'EN' },
+  { code: 'pt', label: 'PT' },
+];
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const params = useParams();
+  const currentLang = params.lng && ['fr', 'en', 'pt'].includes(params.lng) ? params.lng : 'fr';
+  const { t } = useTranslation(['navbar', 'common']);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,13 +46,27 @@ const Navbar: FC = () => {
   }, [location.pathname]);
 
   const navigationItems = [
-    { name: 'Accueil', href: '/' },
-    { name: 'Nos Services', href: '/services' },
-    { name: 'Destinations', href: '/destinations' },
-    { name: 'Contact', href: '/contact' },
+    { name: t('navbar:home', 'Accueil'), href: '' },
+    { name: t('navbar:services', 'Nos Services'), href: 'services' },
+    { name: t('navbar:destinations', 'Destinations'), href: 'destinations' },
+    { name: t('navbar:contact', 'Contact'), href: 'contact' },
   ];
 
-  const isActiveLink = (href: string) => location.pathname === href;
+  const isActiveLink = (href: string) => {
+    const normalized = href ? `/${currentLang}/${href}` : `/${currentLang}`;
+    return location.pathname === normalized;
+  };
+
+  const onLanguageChange = (lng: string) => {
+    const parts = location.pathname.split('/');
+    if (parts.length > 1 && ['fr', 'en', 'pt'].includes(parts[1])) {
+      parts[1] = lng;
+      const target = parts.join('/') || `/${lng}`;
+      navigate(target, { replace: true });
+    } else {
+      navigate(`/${lng}`, { replace: true });
+    }
+  };
 
   return (
     <nav
@@ -52,17 +78,17 @@ const Navbar: FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
+          <LocalizedLink to="" className="flex-shrink-0">
             <span className="text-2xl font-bold text-primary-900">
               MB Fret Services
             </span>
-          </Link>
+          </LocalizedLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex md:items-center">
             <div className="ml-10 flex items-baseline space-x-8">
               {navigationItems.map((item) => (
-                <Link
+                <LocalizedLink
                   key={item.name}
                   to={item.href}
                   aria-current={isActiveLink(item.href) ? 'page' : undefined}
@@ -73,20 +99,44 @@ const Navbar: FC = () => {
                   }`}
                 >
                   {item.name}
-                </Link>
+                </LocalizedLink>
               ))}
+            </div>
+            <div className="ml-6">
+              <CtaButton href="contact" variant="primary">
+                {t('common:get_quote', 'Demander un Devis')}
+              </CtaButton>
+            </div>
+            <div className="ml-4">
+              <label htmlFor="lang" className="sr-only">Langue</label>
+              <select
+                id="lang"
+                value={currentLang}
+                onChange={(e) => onLanguageChange(e.target.value)}
+                className="border border-gray-300 rounded-md px-2 py-1 text-sm text-primary-700 hover:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500"
+                aria-label="Changer de langue"
+              >
+                {LANGS.map((l) => (
+                  <option key={l.code} value={l.code}>{l.label}</option>
+                ))}
+              </select>
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <CtaButton href="/contact" variant="primary">
-              Demander un Devis
-            </CtaButton>
-          </div>
-
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <label htmlFor="lang-m" className="sr-only">Langue</label>
+            <select
+              id="lang-m"
+              value={currentLang}
+              onChange={(e) => onLanguageChange(e.target.value)}
+              className="border border-gray-300 rounded-md px-2 py-1 text-sm text-primary-700"
+              aria-label="Changer de langue"
+            >
+              {LANGS.map((l) => (
+                <option key={l.code} value={l.code}>{l.label}</option>
+              ))}
+            </select>
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-controls="mobile-menu"
@@ -105,7 +155,7 @@ const Navbar: FC = () => {
         <div id="mobile-menu" className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navigationItems.map((item) => (
-              <Link
+              <LocalizedLink
                 key={item.name}
                 to={item.href}
                 aria-current={isActiveLink(item.href) ? 'page' : undefined}
@@ -117,11 +167,11 @@ const Navbar: FC = () => {
                 }`}
               >
                 {item.name}
-              </Link>
+              </LocalizedLink>
             ))}
-            <div className="pt-2">
-              <CtaButton href="/contact" variant="primary" className="w-full">
-                Demander un Devis
+            <div className="pt-2 px-2">
+              <CtaButton href="contact" variant="primary" className="w-full">
+                {t('common:get_quote', 'Demander un Devis')}
               </CtaButton>
             </div>
           </div>
