@@ -15,6 +15,9 @@ import url from 'url';
  *   LINGODEV_API_URL (optional; defaults to https://api.lingo.dev/v1/translate if LINGODEV_API_KEY is set)
  *   LINGODEV_API_KEY
  *   LIBRETRANSLATE_URL (optional, default https://libretranslate.com/translate)
+ *   I18N_TARGET_LANGS (optional, e.g. \"en,pt,es\"; defaults to \"en,pt\")
+ *   I18N_ALLOW_PUBLIC_MT=1 (optional, allow LibreTranslate fallback; defaults to disabled on CI)
+ *   I18N_LIBRE_MAX_ATTEMPTS=3 (optional, retries for 429/5xx)
  *   DRY_RUN=1 (optional, don't write files)
  */
 
@@ -129,14 +132,21 @@ const DEFAULT_LINGO_URL = 'https://api.lingo.dev/v1/translate';
 const LINGODEV_API_URL = RAW_LINGO_URL || (LINGODEV_API_KEY ? DEFAULT_LINGO_URL : '');
 const LIBRE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.com/translate';
 
+// Disable public MT on CI unless explicitly allowed
+const ALLOW_PUBLIC_MT = (() => {
+  const v = String(process.env.I18N_ALLOW_PUBLIC_MT || '').toLowerCase();
+  if (v === '1' || v === 'true' || v === 'yes') return true;
+  if (process.env.CI || process.env.NETLIFY) return false;
+  return true;
+})();
+let loggedSkipLibre = false;
+
 // Normalize language codes for provider
 function mapLangForProvider(lang, provider) {
   if (provider === 'lingodev') {
-    // Assume 'fr', 'en', 'pt' supported
     return lang;
   }
   if (provider === 'libre') {
-    // 'pt' is okay
     return lang;
   }
   return lang;
@@ -157,33 +167,71 @@ async function translateWithLingoDev(text, source, target) {
     throw new Error(`LingoDev HTTP ${res.status}`);
   }
   const data = await res.json();
-  // Try common shapes
   return data.translatedText || data.translation || data.result || data.text || '';
 }
 
 async function translateWithLibre(text, source, target) {
-  const res = await fetch(LIBRE_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', accept: 'application/json' },
-    body: JSON.stringify({
-      q: text,
-      source: mapLangForProvider(source, 'libre'),
-      target: mapLangForProvider(target, 'libre'),
-      format: 'text',
-    }),
-  });
-  if (!res.ok) {
-    throw new Error(`LibreTranslate HTTP ${res.status}`);
+  const maxAttempts = Number.parseInt(process.env.I18N_LIBRE_MAX_ATTEMPTS || '3', 10) || 3;
+  let attempt = 0;
+
+  while (attempt < maxAttempts) {
+    attempt++;
+    const res = await fetch(LIBRE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify({
+        q: text,
+        source: mapLangForProvider(source, 'libre'),
+        target: mapLangForProvider(target, 'libre'),
+        format: 'text',
+      }),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      return data.translatedText || '';
+    }
+
+    const status = res.status;
+    if (status === 400) {
+      console.warn('LibreTranslate HTTP 400 (bad request). Skipping this key.');
+      return '';
+    }
+
+    if (status === 429) {
+      const ra = res.headers.get('retry-after');
+      let waitMs = 0;
+      if (ra) {
+        const sec = Number.parseInt(ra, 10);
+        if (!Number.isNaN(sec)) waitMs = sec * 1000;
+      }
+      if (!waitMs) {
+        const base = 500 * Math.pow(2, attempt - 1);
+        waitMs = base + Math.floor(Math.random() * 250);
+      }
+      console.warn(`LibreTranslate rate-limited (429). Retrying in ${waitMs}ms (attempt ${attempt}/${maxAttempts}).`);
+      await sleep(waitMs);
+      continue;
+    }
+
+    if (status >= 500 && status < 600) {
+      const backoff = 500 * Math.pow(2, attempt - 1) + Math.floor(Math.random() * 250);
+      console.warn(`LibreTranslate server error ${status}. Retrying in ${backoff}ms (attempt ${attempt}/${maxAttempts}).`);
+      await sleep(backoff);
+      continue;
+    }
+
+    console.warn(`LibreTranslate HTTP ${status}. Skipping this key.`);
+    return '';
   }
-  const data = await res.json();
-  return data.translatedText || '';
+
+  // Give up after retries
+  return '';
 }
 
 async function translate(text, source, target) {
-  // Skip empty or identical languages
   if (!text || source === target) return text;
 
-  // Prefer LingoDev if configured (URL present → either explicit or defaulted because key is present)
   if (LINGODEV_API_URL) {
     try {
       return await translateWithLingoDev(text, source, target);
@@ -191,7 +239,15 @@ async function translate(text, source, target) {
       console.warn('LingoDev translation failed, falling back to LibreTranslate:', e.message || e);
     }
   }
-  // Fallback
+
+  if (!ALLOW_PUBLIC_MT) {
+    if (!loggedSkipLibre) {
+      console.log('Skipping LibreTranslate fallback (I18N_ALLOW_PUBLIC_MT not enabled; disabled on CI by default).');
+      loggedSkipLibre = true;
+    }
+    return '';
+  }
+
   return await translateWithLibre(text, source, target);
 }
 
@@ -216,7 +272,6 @@ async function processNamespace(ns) {
       const existing = getByPath(targetObj, key);
       if (typeof existing === 'string' && existing.trim().length > 0) continue;
 
-      // Translate
       let translated = '';
       try {
         translated = await translate(frText, BASE_LANG, target);
