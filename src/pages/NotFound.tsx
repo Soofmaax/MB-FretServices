@@ -50,6 +50,12 @@ const NotFound: FC = () => {
               >
                 {t('notFound:ui.cta')}
               </LocalizedLink>
+              <LocalizedLink
+                to="contact"
+                className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-accent-500 text-accent-600 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500 transition-colors"
+              >
+                {t('common:get_quote', 'Demander un Devis')}
+              </LocalizedLink>
             </div>
 
             {/* Quick links to key pages */}
