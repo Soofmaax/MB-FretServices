@@ -19,12 +19,14 @@ function App() {
         {/* Language-scoped routes */}
         <Route path="/:lng" element={<LangLayout />}>
           <Route index element={<Home />} />
-          {/* FR/EN canonical slugs */}
+          {/* FR canonical slugs */}
           <Route path="services" element={<Services />} />
           <Route path="destinations" element={<Destinations />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="legal" element={<Legal />} />
+          <Route path="mentions-legales" element={<Legal />} />
           <Route path="services/fret-maritime" element={<FreightMaritime />} />
+          {/* Backward-compat legal slug */}
+          <Route path="legal" element={<Legal />} />
           {/* EN localized slugs (aliases) */}
           <Route path="legal-notice" element={<Legal />} />
           <Route path="services/maritime-freight" element={<FreightMaritime />} />
@@ -32,6 +34,7 @@ function App() {
           <Route path="servicos" element={<Services />} />
           <Route path="destinos" element={<Destinations />} />
           <Route path="contacto" element={<Contact />} />
+          <Route path="aviso-legal" element={<Legal />} />
           <Route path="servicos/frete-maritimo" element={<FreightMaritime />} />
           {/* Redirect legacy path under language */}
           <Route path="fret-maritime" element={<Navigate to="services/fret-maritime" replace />} />

@@ -5,11 +5,13 @@ import SEO from '../components/SEO';
 import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
+import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 type ServiceKey = 'maritime' | 'air' | 'customs' | 'insurance';
 
 const Services: FC = () => {
   const { t } = useTranslation('services');
+  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
 
   const serviceDefs: Array<{ icon: FC<{ size?: number; className?: string }>; key: ServiceKey }> = [
     { icon: Ship, key: 'maritime' },
@@ -38,7 +40,7 @@ const Services: FC = () => {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Services',
-                item: getSiteUrl() + '/services',
+                item: getSiteUrl() + pathForLang('services', lang),
               },
             ],
           },
@@ -46,7 +48,7 @@ const Services: FC = () => {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             itemListElement: [
-              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.', url: (getSiteUrl()) + '/services/fret-maritime' },
+              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.', url: getSiteUrl() + pathForLang('services_freight_maritime', lang) },
               { '@type': 'Service', name: 'Fret Aérien', description: 'Rapidité et fiabilité pour vos urgences. Idéal pour marchandises de valeur, périssables ou urgentes.' },
               { '@type': 'Service', name: 'Dédouanement', description: 'Expertise administrative complète et conformité réglementaire assurée.' },
               { '@type': 'Service', name: 'Assurance Cargo', description: 'Protection totale de vos marchandises, couverture complète de l’enlèvement à la livraison.' },

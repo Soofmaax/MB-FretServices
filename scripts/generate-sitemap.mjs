@@ -15,7 +15,7 @@ const SLUGS = {
     services: 'services',
     destinations: 'destinations',
     contact: 'contact',
-    legal: 'legal',
+    legal: 'mentions-legales',
     services_freight_maritime: 'services/fret-maritime',
   },
   en: {
@@ -31,7 +31,7 @@ const SLUGS = {
     services: 'servicos',
     destinations: 'destinos',
     contact: 'contacto',
-    legal: 'legal',
+    legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
   },
 };
@@ -91,7 +91,9 @@ function priorityFor(pathname) {
     '/destinations': { changefreq: 'weekly', priority: '0.8' },
     '/contact': { changefreq: 'monthly', priority: '0.6' },
     '/legal': { changefreq: 'yearly', priority: '0.3' },
+    '/mentions-legales': { changefreq: 'yearly', priority: '0.3' },
     '/legal-notice': { changefreq: 'yearly', priority: '0.3' },
+    '/aviso-legal': { changefreq: 'yearly', priority: '0.3' },
     '/servicos': { changefreq: 'weekly', priority: '0.8' },
     '/servicos/frete-maritimo': { changefreq: 'weekly', priority: '0.8' },
     '/destinos': { changefreq: 'weekly', priority: '0.8' },

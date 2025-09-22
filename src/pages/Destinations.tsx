@@ -4,6 +4,7 @@ import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
+import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 type Region = {
   name: string;

@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import CtaButton from './CtaButton';
 import LocalizedLink from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
+import { localizeTo } from '../utils/paths';
 
 const LANGS = [
   { code: 'fr', label: 'FR' },
@@ -53,8 +54,9 @@ const Navbar: FC = () => {
   ];
 
   const isActiveLink = (href: string) => {
-    const normalized = href ? `/${currentLang}/${href}` : `/${currentLang}`;
-    return location.pathname === normalized;
+    const lang = (currentLang as 'fr' | 'en' | 'pt');
+    const localized = localizeTo(href, lang);
+    return location.pathname === localized;
   };
 
   const onLanguageChange = (lng: string) => {

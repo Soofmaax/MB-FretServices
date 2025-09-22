@@ -2,10 +2,13 @@ import type { FC } from 'react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
+import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 const Legal: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation('legal');
+  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+  const legalPath = pathForLang('legal', lang);
 
   return (
     <div className="pt-16">
@@ -27,7 +30,7 @@ const Legal: FC = () => {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Mentions légales',
-                item: SITE_URL + '/legal',
+                item: SITE_URL + legalPath,
               },
             ],
           },
