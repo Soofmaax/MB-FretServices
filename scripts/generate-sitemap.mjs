@@ -5,6 +5,9 @@ import url from 'url';
 const projectRoot = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(projectRoot, '..');
 
+// Languages supported in the app
+const SUP_LANGS = ['fr', 'en', 'pt'];
+
 function readEnvSiteUrl() {
   const defaults = 'https://mb-fretservices.com';
   // Prefer process env if provided by CI
@@ -31,21 +34,42 @@ function readEnvSiteUrl() {
 function getRoutesFromApp() {
   const appPath = path.join(root, 'src', 'App.tsx');
   const content = fs.readFileSync(appPath, 'utf8');
-  // Simpler pattern: match path="..."; double quotes are not escaped in a single-quoted string
-  const regex = new RegExp('<Route\\s+path\\s*=\\s*"(.*?)"', 'g');
+  // Match any Route with a path="..."; captures nested values like "services"
+  const regex = new RegExp('<Route\\s+path\\s*=\\s*\"(.*?)\"', 'g');
   const routes = new Set();
   let m;
   while ((m = regex.exec(content)) !== null) {
     const p = m[1];
     if (!p || p === '*' || p.startsWith(':')) continue;
+    // Ignore legacy redirect-only path
+    if (p === '/fret-maritime') continue;
     routes.add(p);
   }
-  // Ensure root route exists
-  if (!routes.has('/')) routes.add('/');
+  // Ensure root marker exists
+  routes.add('/');
   return Array.from(routes);
 }
 
+function expandWithLanguages(routes) {
+  const out = new Set();
+  for (const r of routes) {
+    if (r === '/') {
+      for (const lng of SUP_LANGS) out.add(`/${lng}`);
+      continue;
+    }
+    // ensure no leading slash for join
+    const seg = r.replace(/^\/+/, '');
+    for (const lng of SUP_LANGS) {
+      out.add(`/${lng}/${seg}`);
+    }
+  }
+  return Array.from(out);
+}
+
 function priorityFor(pathname) {
+  // Remove language prefix to evaluate logical path
+  const parts = pathname.split('/').filter(Boolean);
+  const logical = parts.length > 1 ? `/${parts.slice(1).join('/')}` : '/';
   const map = {
     '/': { changefreq: 'weekly', priority: '1.0' },
     '/services': { changefreq: 'weekly', priority: '0.8' },
@@ -54,7 +78,7 @@ function priorityFor(pathname) {
     '/contact': { changefreq: 'monthly', priority: '0.6' },
     '/legal': { changefreq: 'yearly', priority: '0.3' },
   };
-  return map[pathname] || { changefreq: 'monthly', priority: '0.5' };
+  return map[logical] || { changefreq: 'monthly', priority: '0.5' };
 }
 
 function buildSitemap(urls, siteUrl) {
@@ -62,18 +86,13 @@ function buildSitemap(urls, siteUrl) {
   const urlset = urls
     .map((pathname) => {
       const { changefreq, priority } = priorityFor(pathname);
-      const loc =
-        pathname === '/'
-          ? new URL('/', siteUrl).href
-          : new URL(pathname.startsWith('/') ? pathname : `/${pathname}`, siteUrl).href;
+      const loc = new URL(pathname, siteUrl).href;
 
-      // Normalize trailing slash: keep it only for root
+      // Normalize trailing slash: keep it only for pure language roots like /fr
       let finalLoc = loc;
-      if (pathname === '/') {
-        if (!finalLoc.endsWith('/')) finalLoc += '/';
-      } else {
-        if (finalLoc.endsWith('/')) finalLoc = finalLoc.slice(0, -1);
-      }
+      const parts = pathname.split('/').filter(Boolean);
+      const isLangRoot = parts.length === 1 && SUP_LANGS.includes(parts[0]);
+      if (!isLangRoot && finalLoc.endsWith('/')) finalLoc = finalLoc.slice(0, -1);
 
       return `  <url>
     <loc>${finalLoc}</loc>
@@ -97,7 +116,8 @@ ${urlset}
 function main() {
   const siteUrl = readEnvSiteUrl();
   const routes = getRoutesFromApp();
-  const xml = buildSitemap(routes, siteUrl);
+  const expanded = expandWithLanguages(routes);
+  const xml = buildSitemap(expanded, siteUrl);
 
   // Write to public/ for Vite to copy during build
   const publicDir = path.join(root, 'public');
@@ -110,9 +130,9 @@ function main() {
   if (fs.existsSync(distDir)) {
     const distPath = path.join(distDir, 'sitemap.xml');
     fs.writeFileSync(distPath, xml, 'utf8');
-    console.log(`Generated sitemap with ${routes.length} route(s) at ${publicPath} and ${distPath}`);
+    console.log(`Generated sitemap with ${expanded.length} route(s) at ${publicPath} and ${distPath}`);
   } else {
-    console.log(`Generated sitemap with ${routes.length} route(s) at ${publicPath}`);
+    console.log(`Generated sitemap with ${expanded.length} route(s) at ${publicPath}`);
   }
 }
 

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import LocalizedLink from '../components/LocalizedLink';
 
 const NotFound: FC = () => {
   return (
@@ -16,12 +16,12 @@ const NotFound: FC = () => {
           <p className="text-xl text-gray-600 mb-8">
             La page que vous cherchez n&apos;existe pas ou a été déplacée.
           </p>
-          <Link
-            to="/"
+          <LocalizedLink
+            to=""
             className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-500 text-white hover:bg-accent-600 transition-colors"
           >
             Retour à l&apos;accueil
-          </Link>
+          </LocalizedLink>
         </div>
       </section>
     </div>
