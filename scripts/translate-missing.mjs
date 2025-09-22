@@ -142,19 +142,87 @@ function mapLangForProvider(lang, provider) {
   return lang;
 }
 
+// Retry helpers
+function parseRetryAfter(value) {
+  if (!value) return null;
+  const seconds = Number(value);
+  if (!Number.isNaN(seconds)) return Math.max(0, seconds * 1000);
+  const dateMs = Date.parse(value);
+  if (!Number.isNaN(dateMs)) {
+    const delta = dateMs - Date.now();
+    return delta > 0 ? delta : 0;
+  }
+  return null;
+}
+
+async function readErrorMessage(res) {
+  try {
+    const data = await res.clone().json();
+    if (typeof data === 'string') return data;
+    return JSON.stringify(data);
+  } catch {
+    try {
+      return await res.clone().text();
+    } catch {
+      return '';
+    }
+  }
+}
+
+async function postJsonWithRetry(urlStr, payload, headers = {}, opts = {}) {
+  const maxRetries = opts.maxRetries ?? 3;
+  const baseDelay = opts.baseDelay ?? 500;
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    let res;
+    try {
+      res = await fetch(urlStr, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...headers, accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (e) {
+      if (attempt < maxRetries) {
+        const jitter = Math.random() * 100;
+        await sleep(baseDelay * Math.pow(2, attempt) + jitter);
+        continue;
+      }
+      throw e;
+    }
+    if (res.ok) return res;
+    const status = res.status;
+    const retryable = status === 429 || (status >= 500 && status <= 599);
+    if (retryable && attempt < maxRetries) {
+      const raMs = parseRetryAfter(res.headers.get('retry-after'));
+      const jitter = Math.random() * 100;
+      const delay = raMs != null ? raMs : baseDelay * Math.pow(2, attempt) + jitter;
+      await sleep(delay);
+      continue;
+    }
+    return res;
+  }
+  throw new Error('Failed after retries');
+}
+
+const translationCache = new Map();
+
 async function translateWithLingoDev(text, source, target) {
   const src = mapLangForProvider(source, 'lingodev');
   const tgt = mapLangForProvider(target, 'lingodev');
-  const res = await fetch(LINGODEV_API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      ...(LINGODEV_API_KEY ? { Authorization: `Bearer ${LINGODEV_API_KEY}` } : {}),
-    },
-    body: JSON.stringify({ q: text, source: src, target: tgt }),
-  });
+  const res = await postJsonWithRetry(
+    LINGODEV_API_URL,
+    { q: text, source: src, target: tgt },
+    LINGODEV_API_KEY ? { Authorization: `Bearer ${LINGODEV_API_KEY}` } : {},
+    { maxRetries: 3, baseDelay: 500 }
+  );
   if (!res.ok) {
-    throw new Error(`LingoDev HTTP ${res.status}`);
+    const status = res.status;
+    const msg = await readErrorMessage(res);
+    if (status === 400) {
+      console.warn(`LingoDev HTTP 400 - ${msg || 'Bad Request'}`);
+      return '';
+    }
+    console.warn(`LingoDev HTTP ${status}${msg ? ` - ${msg}` : ''}`);
+    return '';
   }
   const data = await res.json();
   // Try common shapes
@@ -162,18 +230,26 @@ async function translateWithLingoDev(text, source, target) {
 }
 
 async function translateWithLibre(text, source, target) {
-  const res = await fetch(LIBRE_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', accept: 'application/json' },
-    body: JSON.stringify({
+  const res = await postJsonWithRetry(
+    LIBRE_URL,
+    {
       q: text,
       source: mapLangForProvider(source, 'libre'),
       target: mapLangForProvider(target, 'libre'),
       format: 'text',
-    }),
-  });
+    },
+    {},
+    { maxRetries: 4, baseDelay: 600 }
+  );
   if (!res.ok) {
-    throw new Error(`LibreTranslate HTTP ${res.status}`);
+    const status = res.status;
+    const msg = await readErrorMessage(res);
+    if (status === 400) {
+      console.warn(`LibreTranslate HTTP 400 - ${msg || 'Bad Request'}`);
+      return '';
+    }
+    console.warn(`LibreTranslate HTTP ${status}${msg ? ` - ${msg}` : ''}`);
+    return '';
   }
   const data = await res.json();
   return data.translatedText || '';
@@ -183,16 +259,28 @@ async function translate(text, source, target) {
   // Skip empty or identical languages
   if (!text || source === target) return text;
 
+  const cacheKey = `${source}:${target}:${text}`;
+  if (translationCache.has(cacheKey)) return translationCache.get(cacheKey);
+
   // Prefer LingoDev if configured (URL present → either explicit or defaulted because key is present)
+  let out = '';
   if (LINGODEV_API_URL) {
     try {
-      return await translateWithLingoDev(text, source, target);
+      out = await translateWithLingoDev(text, source, target);
     } catch (e) {
       console.warn('LingoDev translation failed, falling back to LibreTranslate:', e.message || e);
     }
+    if (out && out.trim().length > 0) {
+      translationCache.set(cacheKey, out);
+      return out;
+    }
   }
   // Fallback
-  return await translateWithLibre(text, source, target);
+  out = await translateWithLibre(text, source, target);
+  if (out && out.trim().length > 0) {
+    translationCache.set(cacheKey, out);
+  }
+  return out;
 }
 
 async function processNamespace(ns) {
