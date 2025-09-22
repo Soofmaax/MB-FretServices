@@ -19,11 +19,17 @@ function App() {
         {/* Language-scoped routes */}
         <Route path="/:lng" element={<LangLayout />}>
           <Route index element={<Home />} />
+          {/* FR/EN canonical slugs */}
           <Route path="services" element={<Services />} />
           <Route path="destinations" element={<Destinations />} />
           <Route path="contact" element={<Contact />} />
           <Route path="legal" element={<Legal />} />
           <Route path="services/fret-maritime" element={<FreightMaritime />} />
+          {/* PT localized slugs (aliases) */}
+          <Route path="servicos" element={<Services />} />
+          <Route path="destinos" element={<Destinations />} />
+          <Route path="contacto" element={<Contact />} />
+          <Route path="servicos/frete-maritimo" element={<FreightMaritime />} />
           {/* Redirect legacy path under language */}
           <Route path="fret-maritime" element={<Navigate to="services/fret-maritime" replace />} />
           {/* 404 for unknown routes within language */}
