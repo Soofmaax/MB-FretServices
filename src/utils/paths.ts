@@ -147,9 +147,9 @@ export function pathForLang(key: RouteKey, lang: Lang): string {
  * - nested: 'services/fret-maritime'
  */
 export function localizeTo(to: string, lang: Lang): string {
-  const normalized = to.replace(/^\/+/, ''); // remove leading slash
-  const key = keyFromPath(`/${lang}/${normalized}`);
-  return pathForLang(key, lang);
-}/${normalized}`);
+  // remove leading/trailing slashes to build a normalized logical path
+  const normalized = to.replace(/^\/+/, '').replace(/\/+$/, '');
+  const path = `/${lang}${normalized ? `/${normalized}` : ''}`;
+  const key = keyFromPath(path);
   return pathForLang(key, lang);
 }
