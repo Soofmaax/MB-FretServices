@@ -13,7 +13,7 @@ const Hero: FC = () => {
       {/* Background image as real <img> for better LCP and sizing */}
       <img
         src={HERO_IMG}
-        alt=""
+        alt={t('alt_hero')}
         fetchPriority="high"
         decoding="async"
         loading="eager"

@@ -3,35 +3,17 @@ import { MapPin, ArrowRight } from 'lucide-react';
 import LocalizedLink from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
 
+type ShowcaseItem = {
+  country: string;
+  city: string;
+  image: string;
+  routes: string[];
+};
+
 const DestinationsShowcase: FC = () => {
   const { t } = useTranslation('home');
 
-  const destinations = [
-    {
-      country: 'Congo',
-      city: 'Pointe-Noire',
-      image: 'https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800',
-      routes: ['Maritime depuis Le Havre', 'Aérien depuis Paris CDG']
-    },
-    {
-      country: 'Angola',
-      city: 'Luanda',
-      image: 'https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800',
-      routes: ['Maritime depuis Anvers', 'Aérien depuis Marseille']
-    },
-    {
-      country: 'Chine',
-      city: 'Shanghai',
-      image: 'https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800',
-      routes: ['Maritime transpacifique', 'Aérien direct']
-    },
-    {
-      country: 'Turquie',
-      city: 'Istanbul',
-      image: 'https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800',
-      routes: ['Transport routier', 'Aérien depuis Lyon']
-    }
-  ];
+  const destinations = t('showcase', { returnObjects: true }) as ShowcaseItem[];
 
   return (
     <section className="py-16 lg:py-24 bg-white">
@@ -47,29 +29,29 @@ const DestinationsShowcase: FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {destinations.map((destination, index) => (
-            <div 
-              key={index} 
+            <div
+              key={`${destination.country}-${index}`}
               className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-slide-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="relative">
-                <img 
-                  src={destination.image} 
-                  alt={`Transport vers ${destination.country}`}
+                <img
+                  src={destination.image}
+                  alt={`${destination.country} - ${destination.city}`}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               </div>
-              
+
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="flex items-center mb-2">
                   <MapPin size={18} className="text-accent-400 mr-2" />
                   <h3 className="text-xl font-bold">{destination.country}</h3>
                 </div>
                 <p className="text-gray-200 mb-3">{destination.city}</p>
-                
+
                 <div className="space-y-1">
                   {destination.routes.map((route, routeIndex) => (
                     <div key={routeIndex} className="flex items-center text-sm text-gray-300">
@@ -79,7 +61,7 @@ const DestinationsShowcase: FC = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="absolute inset-0 bg-accent-500/0 group-hover:bg-accent-500/10 transition-colors duration-300"></div>
             </div>
           ))}
@@ -89,8 +71,8 @@ const DestinationsShowcase: FC = () => {
           <p className="text-gray-600 mb-6">
             {t('destinations_need_specific')}
           </p>
-          <LocalizedLink 
-            to="destinations" 
+          <LocalizedLink
+            to="destinations"
             className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
           >
             {t('destinations_more')}

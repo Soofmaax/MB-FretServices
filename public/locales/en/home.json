@@ -1,8 +1,55 @@
 {
+  "valueProps": {
+    "title": "Why choose MB Fret Services?",
+    "subtitle": "We combine expertise, technology and a global network to deliver transport solutions tailored to your needs.",
+    "items": [
+      {
+        "title": "Sea Freight",
+        "description": "Cost-effective solutions for large shipments to Africa and Asia with real-time tracking.",
+        "features": ["20' and 40' containers", "FCL and LCL", "Port-to-port or door-to-door"]
+      },
+      {
+        "title": "Air Freight",
+        "description": "Fast and secure transport for urgent and high-value goods.",
+        "features": ["Express delivery", "Temperature controlled", "Continuous GPS tracking"]
+      },
+      {
+        "title": "Customs Clearance",
+        "description": "Comprehensive customs procedures expertise to facilitate your international trade.",
+        "features": ["Customs declarations", "Regulatory compliance", "Administrative support"]
+      }
+    ]
+  },
   "destinations_title": "Our Main Destinations",
   "destinations_subtitle": "We serve the key global markets with solutions tailored to each region and cargo type.",
   "destinations_more": "See all destinations",
   "destinations_need_specific": "Need a specific destination? We assess all requests.",
+  "showcase": [
+    {
+      "country": "Congo",
+      "city": "Pointe-Noire",
+      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["Sea freight from Le Havre", "Air freight from Paris CDG"]
+    },
+    {
+      "country": "Angola",
+      "city": "Luanda",
+      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["Sea freight from Antwerp", "Air freight from Marseille"]
+    },
+    {
+      "country": "China",
+      "city": "Shanghai",
+      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["Transpacific sea route", "Direct air"]
+    },
+    {
+      "country": "Turkey",
+      "city": "Istanbul",
+      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["Road transport", "Air freight from Lyon"]
+    }
+  ],
   "final_cta_title": "Ready to ship your goods?",
   "final_cta_text": "Get a personalized quote in under 24 hours. Our experts support you at every step of your logistics project.",
   "whatsapp": "Contact us on WhatsApp"
