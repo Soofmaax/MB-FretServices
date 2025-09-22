@@ -5,14 +5,14 @@ import url from 'url';
 /**
  * Auto-translate missing keys from base language (fr) to targets (en, pt).
  * Provider order:
- *  - LingoDev if LINGODEV_API_URL and LINGODEV_API_KEY are set (generic POST {q, source, target})
+ *  - LingoDev if (URL is configured OR API key present → default URL) and key is set
  *  - LibreTranslate public endpoint as fallback (best-effort)
  *
  * Usage:
  *   node scripts/translate-missing.mjs
  *
  * Env:
- *   LINGODEV_API_URL
+ *   LINGODEV_API_URL (optional; defaults to https://api.lingo.dev/v1/translate if LINGODEV_API_KEY is set)
  *   LINGODEV_API_KEY
  *   LIBRETRANSLATE_URL (optional, default https://libretranslate.com/translate)
  *   DRY_RUN=1 (optional, don't write files)
@@ -116,9 +116,13 @@ function setByPath(obj, pathStr, value) {
   }
 }
 
-// Provider selection
-const LINGODEV_API_URL = process.env.LINGODEV_API_URL || '';
+// Provider selection (with sensible defaults)
+const RAW_LINGO_URL = process.env.LINGODEV_API_URL || '';
 const LINGODEV_API_KEY = process.env.LINGODEV_API_KEY || '';
+const DEFAULT_LINGO_URL = 'https://api.lingo.dev/v1/translate';
+// If user set an API key but not the URL, try the default Engine endpoint.
+// If it fails, we'll fall back to LibreTranslate gracefully.
+const LINGODEV_API_URL = RAW_LINGO_URL || (LINGODEV_API_KEY ? DEFAULT_LINGO_URL : '');
 const LIBRE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.com/translate';
 
 // Normalize language codes for provider
@@ -175,7 +179,7 @@ async function translate(text, source, target) {
   // Skip empty or identical languages
   if (!text || source === target) return text;
 
-  // Prefer LingoDev if configured
+  // Prefer LingoDev if configured (URL present → either explicit or defaulted because key is present)
   if (LINGODEV_API_URL) {
     try {
       return await translateWithLingoDev(text, source, target);
