@@ -23,7 +23,11 @@ const repoRoot = path.resolve(__dirname, '..');
 const LOCALES_ROOT = path.join(repoRoot, 'public', 'locales');
 
 const BASE_LANG = 'fr';
-const TARGET_LANGS = ['en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
+// Control target languages via env to avoid API rate limits on build.
+// Example: I18N_TARGET_LANGS="en,pt,es" (defaults to en,pt)
+const TARGET_LANGS = (process.env.I18N_TARGET_LANGS
+  ? process.env.I18N_TARGET_LANGS.split(',').map(s => s.trim()).filter(Boolean)
+  : ['en', 'pt']);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
