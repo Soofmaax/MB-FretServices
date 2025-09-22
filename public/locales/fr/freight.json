@@ -1,0 +1,75 @@
+{
+  "seo": {
+    "title": "Fret Maritime vers l'Afrique - Transport Conteneur FCL LCL | MB Fret Services",
+    "description": "Fret maritime professionnel vers l'Afrique : Congo, Angola, Côte d'Ivoire. Conteneurs 20' et 40', FCL et LCL. Devis gratuit sous 24h. Expert depuis 15 ans."
+  },
+  "hero": {
+    "title": "Fret Maritime vers l'Afrique",
+    "subtitle": "Solutions conteneurs FCL et LCL",
+    "intro": "Transport maritime professionnel vers les principaux ports africains. Conteneurs 20' et 40', groupage LCL, véhicules et marchandises spéciales. Rotations régulières depuis les ports français et européens.",
+    "cta_quote": "Devis Fret Maritime Gratuit",
+    "cta_whatsapp": "WhatsApp Direct"
+  },
+  "why": {
+    "title": "Pourquoi choisir notre fret maritime ?",
+    "subtitle": "Expertise reconnue dans le transport maritime vers l'Afrique avec des solutions adaptées à tous vos besoins."
+  },
+  "advantages": [
+    {
+      "title": "Expertise Maritime",
+      "description": "Plus de 15 ans d'expérience dans le transport maritime vers l'Afrique"
+    },
+    {
+      "title": "Délais Maîtrisés",
+      "description": "Rotations régulières et délais de transit optimisés"
+    },
+    {
+      "title": "Sécurité Garantie",
+      "description": "Assurance cargo et suivi en temps réel de vos marchandises"
+    }
+  ],
+  "services": {
+    "title": "Nos Services de Fret Maritime",
+    "subtitle": "Solutions complètes de transport maritime adaptées à tous types de marchandises. De l'enlèvement à la livraison, nous gérons votre fret de A à Z.",
+    "list": [
+      "Conteneurs 20' et 40' (FCL - Full Container Load)",
+      "Groupage maritime (LCL - Less than Container Load)",
+      "Transport de véhicules neufs et d'occasion",
+      "Machines industrielles et équipements lourds",
+      "Marchandises dangereuses (IMO)",
+      "Conteneurs frigorifiques (reefer)",
+      "Service porte à porte avec enlèvement",
+      "Dédouanement import/export inclus"
+    ],
+    "cta": "Demander un Devis Personnalisé"
+  },
+  "destinations": {
+    "title": "Destinations Fret Maritime Afrique",
+    "subtitle": "Rotations régulières vers les principaux ports africains avec des délais optimisés.",
+    "label_duration": "Durée transit",
+    "label_frequency": "Fréquence",
+    "label_departure": "Départ depuis",
+    "cta_prefix": "Devis vers "
+  },
+  "destinations_list": [
+    { "country": "Congo", "port": "Pointe-Noire", "duration": "18-22 jours", "frequency": "Hebdomadaire", "departure": "Le Havre, Anvers" },
+    { "country": "Angola", "port": "Luanda", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire", "departure": "Anvers, Rotterdam" },
+    { "country": "Côte d'Ivoire", "port": "Abidjan", "duration": "12-15 jours", "frequency": "Quotidien", "departure": "Le Havre, Marseille" },
+    { "country": "Cameroun", "port": "Douala", "duration": "15-18 jours", "frequency": "Bi-hebdomadaire", "departure": "Anvers, Hambourg" }
+  ],
+  "faq": {
+    "title": "Questions Fréquentes - Fret Maritime",
+    "q1": "Quelle est la différence entre FCL et LCL ?",
+    "a1": "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, idéal pour les petits volumes.",
+    "q2": "Quels documents sont nécessaires pour le fret maritime ?",
+    "a2": "Facture commerciale, liste de colisage, connaissement maritime (Bill of Lading), certificat d'origine si requis, et documents spécifiques selon la nature des marchandises (certificats sanitaires, etc.).",
+    "q3": "Comment suivre mon conteneur en transit ?",
+    "a3": "Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, de l'embarquement au port de départ jusqu'à l'arrivée au port de destination."
+  },
+  "final": {
+    "title": "Prêt à expédier par fret maritime ?",
+    "text": "Obtenez votre devis personnalisé en moins de 24h. Nos experts analysent vos besoins et vous proposent la solution maritime la plus économique.",
+    "cta": "Devis Fret Maritime",
+    "whatsapp": "WhatsApp Immédiat"
+  }
+}

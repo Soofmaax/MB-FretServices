@@ -12,9 +12,9 @@ const Footer: FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-accent-400">MB Fret Services</h3>
+            <h3 className="text-xl font-bold text-accent-400">{t('brand')}</h3>
             <p className="text-gray-300 leading-relaxed">
-              {t('company_desc', "Votre pont logistique entre l'Europe, l'Asie et l'Afrique. Nous connectons les continents avec des solutions de transport fiables et efficaces.")}
+              {t('about')}
             </p>
             <div className="flex space-x-4">
               <a
@@ -30,31 +30,31 @@ const Footer: FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-accent-400">{t('nav_title', 'Navigation')}</h4>
+            <h4 className="text-lg font-semibold text-accent-400">{t('nav_title')}</h4>
             <ul className="space-y-2">
               <li>
                 <LocalizedLink to="" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('nav.home', 'Accueil')}
+                  {t('home')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="services" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('nav.services', 'Nos Services')}
+                  {t('services')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="destinations" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('nav.destinations', 'Destinations')}
+                  {t('destinations')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="contact" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('nav.contact', 'Contact')}
+                  {t('contact')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="legal" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('nav.legal', 'Mentions Légales')}
+                  {t('legal')}
                 </LocalizedLink>
               </li>
             </ul>
@@ -62,7 +62,7 @@ const Footer: FC = () => {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-accent-400">{t('contact_title', 'Contact')}</h4>
+            <h4 className="text-lg font-semibold text-accent-400">{t('contact_title')}</h4>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-accent-400 flex-shrink-0" />
@@ -90,13 +90,13 @@ const Footer: FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-accent-400 transition-colors duration-200"
                 >
-                  {t('whatsapp_label', 'WhatsApp: +33 1 23 45 67 89')}
+                  {t('whatsapp_label')}
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-accent-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">
-                  {t('address', 'Paris, France')}
+                  {t('city')}
                 </span>
               </li>
             </ul>
@@ -105,7 +105,7 @@ const Footer: FC = () => {
 
         <div className="border-t border-primary-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © {new Date().getFullYear()} MB Fret Services. {t('rights', 'Tous droits réservés.')}
+            © {new Date().getFullYear()} MB Fret Services. {t('rights')}
           </p>
         </div>
       </div>

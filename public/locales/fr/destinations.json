@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Nos Destinations Mondiales",
+    "subtitle": "Réseau étendu de partenaires logistiques pour connecter vos marchés. Routes optimisées et fréquences adaptées à vos besoins commerciaux."
+  },
+  "labels": {
+    "port_principal": "Port principal :",
+    "depart": "Départ :",
+    "duree": "Durée :",
+    "frequence": "Fréquence :",
+    "maritime": "Transport Maritime",
+    "air": "Transport Aérien",
+    "specialites": "Spécialités transport :"
+  },
+  "other": {
+    "not_listed_title": "Destination non listée ?",
+    "not_listed_text": "Notre réseau mondial nous permet d'étudier toutes les destinations. Contactez-nous pour une étude personnalisée de votre projet.",
+    "fast_response": "Réponse Rapide",
+    "fast_response_desc": "Devis sous 24h pour toute destination",
+    "global_network": "Réseau Mondial",
+    "global_network_desc": "Partenaires dans plus de 50 pays",
+    "tailored": "Solutions Sur-Mesure",
+    "tailored_desc": "Adaptées à vos contraintes spécifiques",
+    "cta_study": "Étudier ma Destination",
+    "cta_whatsapp": "WhatsApp Direct"
+  }
+}

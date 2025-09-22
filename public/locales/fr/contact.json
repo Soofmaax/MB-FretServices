@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Contactez nos Experts",
+    "subtitle": "Besoin d'un devis ou de conseils ? Notre équipe vous répond sous 24h. Parlons de votre projet logistique."
+  },
+  "methods": {
+    "email": "Email",
+    "email_hint": "Réponse sous 24h garantie",
+    "phone": "Téléphone",
+    "phone_hours": "Lun-Ven 9h-18h",
+    "whatsapp": "WhatsApp",
+    "whatsapp_hint": "Réponse immédiate",
+    "office": "Bureau",
+    "office_city": "Paris, France",
+    "office_hint": "Sur rendez-vous",
+    "chat_direct": "Chat Direct"
+  },
+  "guide": {
+    "title": "Comment obtenir votre devis ?",
+    "intro": "Pour vous proposer la meilleure solution, nous avons besoin de quelques informations sur votre projet.",
+    "info_title": "Informations nécessaires",
+    "items": [
+      {
+        "title": "Type de marchandise :",
+        "desc": "Nature, poids, dimensions, valeur"
+      },
+      {
+        "title": "Origine et destination :",
+        "desc": "Adresses précises d'enlèvement et livraison"
+      },
+      {
+        "title": "Délais souhaités :",
+        "desc": "Date d'expédition et réception"
+      },
+      {
+        "title": "Services additionnels :",
+        "desc": "Assurance, dédouanement, livraison"
+      }
+    ],
+    "commitment_title": "Notre engagement",
+    "commitment": [
+      {
+        "title": "Réponse rapide :",
+        "desc": "Devis détaillé sous 24h ouvrables"
+      },
+      {
+        "title": "Transparence totale :",
+        "desc": "Tous frais détaillés, aucune surprise"
+      },
+      {
+        "title": "Conseil expert :",
+        "desc": "Solutions optimales pour votre budget"
+      },
+      {
+        "title": "Suivi personnalisé :",
+        "desc": "Un interlocuteur dédié à votre projet"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à démarrer votre projet ?",
+    "text": "Nos experts sont disponibles pour analyser vos besoins et vous proposer la solution logistique la plus adaptée.",
+    "email": "Envoyer un Email",
+    "whatsapp": "WhatsApp Direct",
+    "call": "Appeler Maintenant"
+  }
+}
