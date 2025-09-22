@@ -1,0 +1,12 @@
+{
+  "seo": {
+    "title": "Page introuvable - MB Fret Services",
+    "description": "La page demandée est introuvable ou a été déplacée."
+  },
+  "ui": {
+    "code": "404",
+    "heading": "Oups… Cette page s'est égarée.",
+    "message": "Le lien que vous avez suivi est peut-être rompu, ou la page a été déplacée. Retournez à l'accueil pour poursuivre votre navigation.",
+    "cta": "Retourner à l'accueil"
+  }
+}
