@@ -8,5 +8,8 @@
     "heading": "Oops… This page got lost.",
     "message": "The link you followed may be broken, or the page may have been moved. Go back to the homepage to continue browsing.",
     "cta": "Back to homepage"
+  },
+  "quick": {
+    "title": "Useful pages"
   }
 }
