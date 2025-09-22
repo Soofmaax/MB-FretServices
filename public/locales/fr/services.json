@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Nos Services de Transport International",
+    "subtitle": "Solutions complètes de logistique internationale adaptées à vos besoins. Du fret maritime économique au transport aérien express, nous gérons vos marchandises de A à Z."
+  },
+  "maritime": {
+    "title": "Fret Maritime",
+    "subtitle": "Solutions économiques pour gros volumes",
+    "description": "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux vers l'Afrique et l'Asie. Nous gérons tous types de marchandises avec un suivi complet.",
+    "features": [
+      "Conteneurs 20' et 40' (FCL)",
+      "Groupage (LCL) pour petits volumes",
+      "Transport de véhicules et machines",
+      "Marchandises spéciales et dangereuses",
+      "Service port à port ou porte à porte",
+      "Suivi en temps réel via plateforme web"
+    ],
+    "destinations": "Principales destinations : Congo, Angola, Côte d'Ivoire, Cameroun",
+    "more_link": "En savoir plus sur le fret maritime"
+  },
+  "air": {
+    "title": "Fret Aérien",
+    "subtitle": "Rapidité et fiabilité pour vos urgences",
+    "description": "Le transport aérien est idéal pour vos marchandises de haute valeur, périssables ou urgentes. Notre réseau de partenaires garantit des délais serrés vers toutes destinations.",
+    "features": [
+      "Express 24-48h vers destinations principales",
+      "Transport sous température contrôlée",
+      "Marchandises fragiles et précieuses",
+      "Documents et échantillons",
+      "Suivi GPS en temps réel",
+      "Assurance tous risques incluse"
+    ],
+    "destinations": "Desservi : Chine, Turquie, Maroc, Tunisie, pays d'Afrique centrale"
+  },
+  "customs": {
+    "title": "Dédouanement",
+    "subtitle": "Expertise administrative complète",
+    "description": "Notre équipe de déclarants en douane agréés vous accompagne dans toutes les formalités administratives. Nous garantissons la conformité réglementaire de vos opérations.",
+    "features": [
+      "Déclarations import/export",
+      "Gestion des régimes douaniers spéciaux",
+      "Conseil en classification tarifaire",
+      "Optimisation fiscale légale",
+      "Représentation en cas de contrôle",
+      "Veille réglementaire permanente"
+    ],
+    "destinations": "Tous ports et aéroports français et européens"
+  },
+  "insurance": {
+    "title": "Assurance Cargo",
+    "subtitle": "Protection totale de vos marchandises",
+    "description": "Protégez vos investissements avec nos solutions d'assurance adaptées à chaque type de transport. Couverture complète de l'enlèvement à la livraison finale.",
+    "features": [
+      "Assurance tous risques transport",
+      "Couverture guerre et grèves",
+      "Protection contre les avaries communes",
+      "Expertise et règlement rapide",
+      "Conseils en prévention des risques",
+      "Tarifs préférentiels selon volumes"
+    ],
+    "destinations": "Couverture mondiale tous modes de transport"
+  },
+  "labels": {
+    "destinations": "Destinations : "
+  },
+  "ctaSection": {
+    "title": "Besoin d'une solution personnalisée ?",
+    "text": "Chaque projet logistique est unique. Nos experts analysent vos besoins pour vous proposer la solution la plus adaptée et économique.",
+    "consultation": "Consultation Gratuite",
+    "whatsapp": "Chat WhatsApp"
+  }
+}

@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import type { FC, ReactNode } from 'react';
+import LocalizedLink from './LocalizedLink';
 
 interface CtaButtonProps {
-  href: string;
-  children: React.ReactNode;
+  href: string; // path without language prefix, can start with '/' or be relative
+  children: ReactNode;
   variant?: 'primary' | 'secondary' | 'outline';
   className?: string;
   onClick?: () => void;
 }
 
-const CtaButton: React.FC<CtaButtonProps> = ({ 
+const CtaButton: FC<CtaButtonProps> = ({ 
   href, 
   children, 
   variant = 'primary', 
@@ -27,13 +27,13 @@ const CtaButton: React.FC<CtaButtonProps> = ({
   const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
   return (
-    <Link 
+    <LocalizedLink 
       to={href} 
       className={buttonClasses}
       onClick={onClick}
     >
       {children}
-    </Link>
+    </LocalizedLink>
   );
 };
 
