@@ -6,7 +6,7 @@ const projectRoot = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(projectRoot, '..');
 
 // Languages supported in the app
-const SUP_LANGS = ['fr', 'en', 'pt'];
+const SUP_LANGS = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
 
 // Logical keys -> localized slugs
 const SLUGS = {
@@ -33,6 +33,54 @@ const SLUGS = {
     contact: 'contacto',
     legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
+  },
+  ar: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+  },
+  es: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+  },
+  tr: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+  },
+  sw: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+  },
+  de: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+  },
+  it: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
   },
 };
 

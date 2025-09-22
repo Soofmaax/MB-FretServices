@@ -23,7 +23,7 @@ const repoRoot = path.resolve(__dirname, '..');
 const LOCALES_ROOT = path.join(repoRoot, 'public', 'locales');
 
 const BASE_LANG = 'fr';
-const TARGET_LANGS = ['en', 'pt'];
+const TARGET_LANGS = ['en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 

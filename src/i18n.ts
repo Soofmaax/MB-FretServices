@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpBackend from 'i18next-http-backend';
 
 // Languages supported
-export const SUPPORTED_LANGS = ['fr', 'en', 'pt'] as const;
+export const SUPPORTED_LANGS = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'] as const;
 export type SupportedLang = typeof SUPPORTED_LANGS[number];
 
 i18n
