@@ -14,10 +14,12 @@ import url from 'url';
  * Env:
  *   LINGODEV_API_URL (optional; defaults to https://api.lingo.dev/v1/translate if LINGODEV_API_KEY is set)
  *   LINGODEV_API_KEY
- *   LIBRETRANSLATE_URL (optional, default https://libretranslate.de/translate)
+ *   LIBRETRANSLATE_URL (optional, default https://libretranslate.com/translate)
+ *   LIBRETRANSLATE_API_KEY (optional)
  *   I18N_TARGET_LANGS (optional, e.g. "en,pt,es"; defaults to "en,pt")
  *   I18N_ALLOW_PUBLIC_MT=1 (optional, allow LibreTranslate fallback; defaults to disabled on CI)
  *   I18N_LIBRE_MAX_ATTEMPTS=3 (optional, retries for 429/5xx)
+ *   I18N_FILL_WITH_SOURCE=1 (optional; when a translation is unavailable, copy source text to targets; defaults to enabled on CI/Netlify)
  *   DRY_RUN=1 (optional, don't write files)
  */
 
@@ -130,7 +132,8 @@ const DEFAULT_LINGO_URL = 'https://api.lingo.dev/v1/translate';
 // If user set an API key but not the URL, try the default Engine endpoint.
 // If it fails, we'll fall back to LibreTranslate gracefully.
 const LINGODEV_API_URL = RAW_LINGO_URL || (LINGODEV_API_KEY ? DEFAULT_LINGO_URL : '');
-const LIBRE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.de/translate';
+const LIBRE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.com/translate';
+const LIBRE_API_KEY = process.env.LIBRETRANSLATE_API_KEY || '';
 
 // Disable public MT on CI unless explicitly allowed
 const ALLOW_PUBLIC_MT = (() => {
@@ -139,6 +142,15 @@ const ALLOW_PUBLIC_MT = (() => {
   if (process.env.CI || process.env.NETLIFY) return false;
   return true;
 })();
+
+// When translations are unavailable, copy source text into targets (defaults to enabled on CI)
+const FILL_WITH_SOURCE = (() => {
+  const v = String(process.env.I18N_FILL_WITH_SOURCE || '').toLowerCase();
+  if (v === '1' || v === 'true' || v === 'yes') return true;
+  if (v === '0' || v === 'false' || v === 'no') return false;
+  return Boolean(process.env.CI || process.env.NETLIFY);
+})();
+
 let loggedSkipLibre = false;
 
 // Normalize language codes for provider
@@ -159,7 +171,6 @@ async function translateWithLingoDev(text, source, target) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json',
       ...(LINGODEV_API_KEY ? { Authorization: `Bearer ${LINGODEV_API_KEY}` } : {}),
     },
     body: JSON.stringify({ q: text, source: src, target: tgt }),
@@ -179,12 +190,13 @@ async function translateWithLibre(text, source, target) {
     attempt++;
     const res = await fetch(LIBRE_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         q: text,
         source: mapLangForProvider(source, 'libre'),
         target: mapLangForProvider(target, 'libre'),
         format: 'text',
+        ...(LIBRE_API_KEY ? { api_key: LIBRE_API_KEY } : {}),
       }),
     });
 
@@ -280,10 +292,16 @@ async function processNamespace(ns) {
         await sleep(120);
       } catch (e) {
         console.warn(`Translation error for key "${key}" (${BASE_LANG}->${target}):`, e.message || e);
-        continue;
+        translated = '';
       }
-      if (translated && translated.trim().length > 0) {
-        setByPath(targetObj, key, translated);
+
+      let valueToWrite = typeof translated === 'string' ? translated.trim() : '';
+      if (!valueToWrite && FILL_WITH_SOURCE) {
+        valueToWrite = frText;
+      }
+
+      if (valueToWrite) {
+        setByPath(targetObj, key, valueToWrite);
         changed = true;
       }
     }
@@ -302,6 +320,10 @@ async function processNamespace(ns) {
 }
 
 async function main() {
+  if (process.env.NETLIFY || process.env.CI) {
+    console.log(`[i18n] CI environment detected. Public MT is ${ALLOW_PUBLIC_MT ? 'ENABLED' : 'DISABLED'}. Fill-with-source is ${FILL_WITH_SOURCE ? 'ENABLED' : 'DISABLED'}.`);
+  }
+
   if (!fs.existsSync(path.join(LOCALES_ROOT, BASE_LANG))) {
     console.error(`Base locale folder not found: ${path.join(LOCALES_ROOT, BASE_LANG)}`);
     process.exit(0);

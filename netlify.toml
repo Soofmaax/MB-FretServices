@@ -6,6 +6,7 @@
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
   I18N_ALLOW_PUBLIC_MT = "0"
+  I18N_FILL_WITH_SOURCE = "1"
 
 # SEO 301 redirects (must appear before SPA fallback)
 # Legacy root-level paths
