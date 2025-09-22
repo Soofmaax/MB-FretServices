@@ -5,92 +5,23 @@ import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 
+type Region = {
+  name: string;
+  countries: Array<{
+    name: string;
+    capital?: string;
+    port: string;
+    maritime: { from: string; duration: string; frequency: string };
+    aerien: { from: string; duration: string; frequency: string };
+    specialites: string[];
+  }>;
+};
+
 const Destinations: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation('destinations');
 
-  const regions = [
-    {
-      name: 'Afrique Centrale',
-      countries: [
-        {
-          name: 'Congo',
-          capital: 'Brazzaville',
-          port: 'Pointe-Noire',
-          maritime:
-            {
-              from: 'Le Havre, Anvers',
-              duration: '18-22 jours',
-              frequency: 'Hebdomadaire'
-            },
-          aerien: {
-            from: 'Paris CDG, Lyon',
-            duration: '6-8 heures',
-            frequency: 'Quotidien'
-          },
-          specialites: ['Véhicules', 'Machines industrielles', 'Produits alimentaires']
-        },
-        {
-          name: 'Angola',
-          capital: 'Luanda',
-          port: 'Luanda',
-          maritime: {
-            from: 'Anvers, Rotterdam',
-            duration: '20-25 jours',
-            frequency: 'Bi-hebdomadaire'
-          },
-          aerien: {
-            from: 'Paris CDG, Marseille',
-            duration: '7-9 heures',
-            frequency: '5x/semaine'
-          },
-          specialites: ['Matériel médical', 'BTP', 'Électronique']
-        }
-      ]
-    },
-    {
-      name: 'Asie',
-      countries: [
-        {
-          name: 'Chine',
-          capital: 'Beijing',
-          port: 'Shanghai, Shenzhen',
-          maritime: {
-            from: 'Le Havre, Hambourg',
-            duration: '30-35 jours',
-            frequency: 'Quotidien'
-          },
-          aerien: {
-            from: 'Paris CDG, Lyon',
-            duration: '10-12 heures',
-            frequency: 'Quotidien'
-          },
-          specialites: ['Import textile', 'Électronique', 'Machines']
-        }
-      ]
-    },
-    {
-      name: 'Proche-Orient',
-      countries: [
-        {
-          name: 'Turquie',
-          capital: 'Ankara',
-          port: 'Istanbul, Izmir',
-          maritime: {
-            from: 'Marseille, Gênes',
-            duration: '5-7 jours',
-            frequency: '3x/semaine'
-          },
-          aerien: {
-            from: 'Paris CDG, Lyon, Nice',
-            duration: '3-4 heures',
-            frequency: 'Quotidien'
-          },
-          specialites: ['Textile', 'Agroalimentaire', 'Automobile']
-        }
-      ]
-    }
-  ];
+  const regions = t('regions', { returnObjects: true }) as Region[];
 
   return (
     <div className="pt-16">
@@ -226,7 +157,7 @@ const Destinations: FC = () => {
 
                       <div className="pt-4 border-t border-gray-200">
                         <CtaButton href="contact" variant="primary" className="w-full">
-                          {`Demander un Devis pour ${country.name}`}
+                          {t('other.cta_for', { country: country.name })}
                         </CtaButton>
                       </div>
                     </div>
