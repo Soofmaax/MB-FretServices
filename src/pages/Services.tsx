@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import type { FC, ComponentType } from 'react';
 import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
@@ -13,7 +13,7 @@ const Services: FC = () => {
   const { t } = useTranslation('services');
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
 
-  const serviceDefs: Array<{ icon: FC<{ size?: number; className?: string }>; key: ServiceKey }> = [
+  const serviceDefs: Array<{ icon: ComponentType<{ size?: number | string; className?: string }>; key: ServiceKey }> = [
     { icon: Ship, key: 'maritime' },
     { icon: Plane, key: 'air' },
     { icon: FileText, key: 'customs' },

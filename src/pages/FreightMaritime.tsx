@@ -1,11 +1,11 @@
-import type { FC } from 'react';
+import type { FC, ComponentType } from 'react';
 import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 
-type Advantage = { icon: FC<{ size?: number; className?: string }>; title: string; description: string };
+type Advantage = { icon: ComponentType<{ size?: number | string; className?: string }>; title: string; description: string };
 type Destination = { country: string; port: string; duration: string; frequency: string; departure: string };
 
 const FreightMaritime: FC = () => {

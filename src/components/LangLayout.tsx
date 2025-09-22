@@ -14,6 +14,8 @@ type Params = {
 const isSupported = (lng: string | undefined): lng is SupportedLang =>
   !!lng && (SUPPORTED_LANGS as unknown as string[]).includes(lng);
 
+const isRtl = (lng: string) => ['ar', 'he', 'fa', 'ur'].includes(lng);
+
 const LangLayout: FC<{ children?: ReactNode }> = () => {
   const { lng } = useParams<Params>();
 
@@ -22,7 +24,7 @@ const LangLayout: FC<{ children?: ReactNode }> = () => {
     void i18n.changeLanguage(language);
     if (typeof document !== 'undefined') {
       document.documentElement.lang = language;
-      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = isRtl(language) ? 'rtl' : 'ltr';
     }
   }, [lng]);
 
