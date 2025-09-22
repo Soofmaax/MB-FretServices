@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { buildCanonical } from '../utils/seo';
 import { getSiteUrl } from '../utils/siteUrl';
+import { detectLangFromPath, keyFromPath, pathForLang, type Lang } from '../utils/paths';
 
 type SEOProps = {
   title: string;
@@ -18,45 +19,43 @@ const DEFAULT_SITE_NAME = 'MB Fret Services';
 const DEFAULT_OG_IMAGE =
   'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
 
-const SUP_LANGS = ['fr', 'en', 'pt'] as const;
-type Lang = typeof SUP_LANGS[number];
-
+const SUP_LANGS: Lang[] = ['fr', 'en', 'pt'];
 const OG_LOCALE_MAP: Record<Lang, string> = {
   fr: 'fr_FR',
   en: 'en_GB',
   pt: 'pt_PT',
 };
 
-function isLang(val: string | undefined): val is Lang {
-  return !!val && (SUP_LANGS as readonly string[]).includes(val);
-}
-
 function getCurrentLangFromPath(): Lang {
   if (typeof window === 'undefined') return 'fr';
-  const seg = window.location.pathname.split('/').filter(Boolean)[0];
-  return isLang(seg) ? seg : 'fr';
+  return detectLangFromPath(window.location.pathname);
 }
 
 function buildAlternateLinks(): { href: string; hrefLang: string }[] {
   if (typeof window === 'undefined') return [];
   const site = getSiteUrl();
-  const parts = window.location.pathname.split('/');
-  const pathRest = (() => {
-    const [, ...rest] = parts; // drop leading empty string
-    if (isLang(rest[0])) {
-      rest.shift(); // drop existing lang
-    }
-    const p = rest.join('/');
-    return p ? `/${p}` : '';
-  })();
+  const key = keyFromPath(window.location.pathname);
 
-  const alternates = (SUP_LANGS as readonly Lang[]).map((lng) => {
-    const href = new URL(`/${lng}${pathRest}`, site).href.replace(/\/$/, '');
+  const alternates = SUP_LANGS.map((lng) => {
+    const href = new URL(pathForLang(key, lng), site).href.replace(/\/$/, '');
     const hrefLang = lng === 'fr' ? 'fr-FR' : lng === 'en' ? 'en-GB' : 'pt-PT';
     return { href, hrefLang };
   });
 
-  return alternates;
+  // Add regional hreflang variants mapping to same URLs (multi-region targeting Sub-Saharan Africa)
+  const regional: Array<{ href: string; hrefLang: string }> = [];
+  for (const lng of SUP_LANGS) {
+    const baseHref = new URL(pathForLang(key, lng), site).href.replace(/\/$/, '');
+    if (lng === 'fr') {
+      ['fr-CI','fr-CM','fr-CD','fr-SN','fr-GA','fr-BJ','fr-TG'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
+    } else if (lng === 'en') {
+      ['en-NG','en-GH','en-KE','en-ZA','en-UG','en-RW','en-TZ'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
+    } else if (lng === 'pt') {
+      ['pt-AO','pt-MZ'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
+    }
+  }
+
+  return [...alternates, ...regional];
 }
 
 const SEO: FC<SEOProps> = ({
@@ -88,11 +87,6 @@ const SEO: FC<SEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={DEFAULT_SITE_NAME} />
       <meta property="og:locale" content={ogLocale} />
-      {alternates
-        .filter((a) => a.hrefLang !== ogLocale.replace('_', '-'))
-        .map((a) => (
-          <meta key={a.hrefLang} property="og:locale:alternate" content={a.hrefLang.replace('-', '_')} />
-        ))}
       {ogImage && <meta property="og:image" content={ogImage} />}
 
       {/* Twitter */}
@@ -106,7 +100,7 @@ const SEO: FC<SEOProps> = ({
 
       {/* Hreflang alternates */}
       {alternates.map((alt) => (
-        <link key={alt.hrefLang} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
+        <link key={`${alt.hrefLang}-${alt.href}`} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
       ))}
       {/* x-default to EN by convention */}
       {alternates.find((a) => a.hrefLang === 'en-GB') && (

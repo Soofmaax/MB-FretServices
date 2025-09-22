@@ -1,8 +1,11 @@
 import type { FC } from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
 import LocalizedLink from './LocalizedLink';
+import { useTranslation } from 'react-i18next';
 
 const DestinationsShowcase: FC = () => {
+  const { t } = useTranslation('home');
+
   const destinations = [
     {
       country: 'Congo',
@@ -35,11 +38,10 @@ const DestinationsShowcase: FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            Nos Destinations Principales
+            {t('destinations_title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nous desservons les principaux marchés mondiaux avec des solutions 
-            adaptées à chaque région et type de marchandise.
+            {t('destinations_subtitle')}
           </p>
         </div>
 
@@ -85,13 +87,13 @@ const DestinationsShowcase: FC = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            Besoin d'une destination spécifique ? Nous étudions toutes les demandes.
+            {t('destinations_need_specific')}
           </p>
           <LocalizedLink 
             to="destinations" 
             className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
           >
-            Voir toutes nos destinations
+            {t('destinations_more')}
             <ArrowRight size={18} className="ml-2" />
           </LocalizedLink>
         </div>

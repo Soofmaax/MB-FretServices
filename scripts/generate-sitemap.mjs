@@ -8,9 +8,45 @@ const root = path.resolve(projectRoot, '..');
 // Languages supported in the app
 const SUP_LANGS = ['fr', 'en', 'pt'];
 
+// Logical keys -> localized slugs
+const SLUGS = {
+  fr: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/fret-maritime',
+  },
+  en: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/fret-maritime',
+  },
+  pt: {
+    home: '',
+    services: 'servicos',
+    destinations: 'destinos',
+    contact: 'contacto',
+    legal: 'legal',
+    services_freight_maritime: 'servicos/frete-maritimo',
+  },
+};
+
+const PATH_KEYS = [
+  'home',
+  'services',
+  'services_freight_maritime',
+  'destinations',
+  'contact',
+  'legal',
+];
+
 function readEnvSiteUrl() {
   const defaults = 'https://mb-fretservices.com';
-  // Prefer process env if provided by CI
   if (process.env.VITE_SITE_URL) return process.env.VITE_SITE_URL;
 
   const envFiles = ['.env.production', '.env'];
@@ -31,39 +67,16 @@ function readEnvSiteUrl() {
   return defaults;
 }
 
-function getRoutesFromApp() {
-  const appPath = path.join(root, 'src', 'App.tsx');
-  const content = fs.readFileSync(appPath, 'utf8');
-  // Match any Route with a path="..."; captures nested values like "services"
-  const regex = new RegExp('<Route\\s+path\\s*=\\s*\"(.*?)\"', 'g');
-  const routes = new Set();
-  let m;
-  while ((m = regex.exec(content)) !== null) {
-    const p = m[1];
-    if (!p || p === '*' || p.startsWith(':')) continue;
-    // Ignore legacy redirect-only path
-    if (p === '/fret-maritime') continue;
-    routes.add(p);
-  }
-  // Ensure root marker exists
-  routes.add('/');
-  return Array.from(routes);
-}
-
-function expandWithLanguages(routes) {
-  const out = new Set();
-  for (const r of routes) {
-    if (r === '/') {
-      for (const lng of SUP_LANGS) out.add(`/${lng}`);
-      continue;
-    }
-    // ensure no leading slash for join
-    const seg = r.replace(/^\/+/, '');
-    for (const lng of SUP_LANGS) {
-      out.add(`/${lng}/${seg}`);
+function buildPaths() {
+  const paths = [];
+  for (const lng of SUP_LANGS) {
+    for (const key of PATH_KEYS) {
+      const slug = SLUGS[lng][key];
+      const p = `/${lng}${slug ? `/${slug}` : ''}`;
+      paths.push(p);
     }
   }
-  return Array.from(out);
+  return paths;
 }
 
 function priorityFor(pathname) {
@@ -77,6 +90,10 @@ function priorityFor(pathname) {
     '/destinations': { changefreq: 'weekly', priority: '0.8' },
     '/contact': { changefreq: 'monthly', priority: '0.6' },
     '/legal': { changefreq: 'yearly', priority: '0.3' },
+    '/servicos': { changefreq: 'weekly', priority: '0.8' },
+    '/servicos/frete-maritimo': { changefreq: 'weekly', priority: '0.8' },
+    '/destinos': { changefreq: 'weekly', priority: '0.8' },
+    '/contacto': { changefreq: 'monthly', priority: '0.6' },
   };
   return map[logical] || { changefreq: 'monthly', priority: '0.5' };
 }
@@ -115,9 +132,8 @@ ${urlset}
 
 function main() {
   const siteUrl = readEnvSiteUrl();
-  const routes = getRoutesFromApp();
-  const expanded = expandWithLanguages(routes);
-  const xml = buildSitemap(expanded, siteUrl);
+  const paths = buildPaths();
+  const xml = buildSitemap(paths, siteUrl);
 
   // Write to public/ for Vite to copy during build
   const publicDir = path.join(root, 'public');
@@ -130,9 +146,9 @@ function main() {
   if (fs.existsSync(distDir)) {
     const distPath = path.join(distDir, 'sitemap.xml');
     fs.writeFileSync(distPath, xml, 'utf8');
-    console.log(`Generated sitemap with ${expanded.length} route(s) at ${publicPath} and ${distPath}`);
+    console.log(`Generated sitemap with ${paths.length} route(s) at ${publicPath} and ${distPath}`);
   } else {
-    console.log(`Generated sitemap with ${expanded.length} route(s) at ${publicPath}`);
+    console.log(`Generated sitemap with ${paths.length} route(s) at ${publicPath}`);
   }
 }
 

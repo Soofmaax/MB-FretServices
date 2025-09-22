@@ -1,30 +1,24 @@
 import type { FC, ReactNode } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { detectLangFromPath, localizeTo } from '../utils/paths';
 
 type Props = {
-  to: string; // path without language prefix, e.g. 'services', '/contact'
+  to: string; // logical path without language prefix (e.g. 'services', 'contact', 'services/fret-maritime', '' for home)
   className?: string;
   children: ReactNode;
   onClick?: () => void;
   'aria-current'?: 'page' | undefined;
 };
 
-const normalize = (p: string): string => {
-  if (!p) return '';
-  return p.replace(/^\/+/, ''); // remove leading slashes
-};
-
 const LocalizedLink: FC<Props> = ({ to, className, children, onClick, ...rest }) => {
   const { lng } = useParams();
-  const location = useLocation();
-  const lang = lng && ['fr', 'en', 'pt'].includes(lng) ? lng : 'fr';
+  const lang = (lng && ['fr', 'en', 'pt'].includes(lng)) ? (lng as 'fr' | 'en' | 'pt') : 'fr';
 
-  const target = normalize(to);
-  const full = `/${lang}${target ? `/${target}` : ''}`;
+  // Build localized path according to current language (handles localized slugs)
+  const href = localizeTo(to, lang);
 
-  // Preserve search/hash if link points to same path segment? Keep simple: no search/hash by default.
   return (
-    <Link to={full} className={className} onClick={onClick} {...rest}>
+    <Link to={href} className={className} onClick={onClick} {...rest}>
       {children}
     </Link>
   );

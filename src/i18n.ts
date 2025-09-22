@@ -22,7 +22,7 @@ i18n
       escapeValue: false,
     },
     defaultNS: 'common',
-    ns: ['common', 'navbar'],
+    ns: ['common', 'navbar', 'hero', 'footer', 'home', 'services', 'destinations', 'contact', 'legal', 'freight', 'notFound'],
     detection: {
       order: ['path', 'navigator', 'htmlTag', 'cookie', 'localStorage'],
       caches: ['localStorage'],
