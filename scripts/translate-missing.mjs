@@ -14,8 +14,8 @@ import url from 'url';
  * Env:
  *   LINGODEV_API_URL (optional; defaults to https://api.lingo.dev/v1/translate if LINGODEV_API_KEY is set)
  *   LINGODEV_API_KEY
- *   LIBRETRANSLATE_URL (optional, default https://libretranslate.com/translate)
- *   I18N_TARGET_LANGS (optional, e.g. \"en,pt,es\"; defaults to \"en,pt\")
+ *   LIBRETRANSLATE_URL (optional, default https://libretranslate.de/translate)
+ *   I18N_TARGET_LANGS (optional, e.g. "en,pt,es"; defaults to "en,pt")
  *   I18N_ALLOW_PUBLIC_MT=1 (optional, allow LibreTranslate fallback; defaults to disabled on CI)
  *   I18N_LIBRE_MAX_ATTEMPTS=3 (optional, retries for 429/5xx)
  *   DRY_RUN=1 (optional, don't write files)
@@ -130,7 +130,7 @@ const DEFAULT_LINGO_URL = 'https://api.lingo.dev/v1/translate';
 // If user set an API key but not the URL, try the default Engine endpoint.
 // If it fails, we'll fall back to LibreTranslate gracefully.
 const LINGODEV_API_URL = RAW_LINGO_URL || (LINGODEV_API_KEY ? DEFAULT_LINGO_URL : '');
-const LIBRE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.com/translate';
+const LIBRE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.de/translate';
 
 // Disable public MT on CI unless explicitly allowed
 const ALLOW_PUBLIC_MT = (() => {
@@ -159,6 +159,7 @@ async function translateWithLingoDev(text, source, target) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      'Accept': 'application/json',
       ...(LINGODEV_API_KEY ? { Authorization: `Bearer ${LINGODEV_API_KEY}` } : {}),
     },
     body: JSON.stringify({ q: text, source: src, target: tgt }),
@@ -178,7 +179,7 @@ async function translateWithLibre(text, source, target) {
     attempt++;
     const res = await fetch(LIBRE_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', accept: 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         q: text,
         source: mapLangForProvider(source, 'libre'),
