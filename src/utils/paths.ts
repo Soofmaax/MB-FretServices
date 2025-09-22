@@ -84,6 +84,31 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
   },
 };
 
+// Alias sets for slug recognition
+const SERVICE_ALIASES = new Set([
+  'services', 'servicos', 'servicios', 'hizmetler', 'servizi', 'leistungen', 'huduma', 'خدمات'
+]);
+const DEST_ALIASES = new Set([
+  'destinations', 'destinos', 'destinazioni', 'ziele', 'destinasyonlar', 'vituo', 'وجهات'
+]);
+const CONTACT_ALIASES = new Set([
+  'contact', 'contacto', 'kontakt', 'contatti', 'iletisim', 'mawasiliano', 'اتصال'
+]);
+const LEGAL_ALIASES = new Set([
+  'legal', 'mentions-legales', 'legal-notice', 'aviso-legal', 'impressum', 'note-legali', 'yasal-uyari', 'إشعار-قانوني'
+]);
+const FREIGHT_ALIASES = new Set([
+  'services/fret-maritime',
+  'servicos/frete-maritimo',
+  'services/maritime-freight',
+  'servicios/transporte-maritimo',
+  'hizmetler/deniz-tasimaciligi',
+  'servizi/trasporto-marittimo',
+  'leistungen/seefracht',
+  'huduma/usafirishaji-wa-baharini',
+  'خدمات/الشحن-البحري'
+]);
+
 export function detectLangFromPath(pathname: string): Lang {
   const seg = pathname.split('/').filter(Boolean)[0];
   if (['fr','en','pt','ar','es','tr','sw','de','it'].includes(seg || '')) return seg as Lang;
@@ -100,12 +125,11 @@ export function keyFromPath(pathname: string): RouteKey {
 
   if (rest === '' || rest === '/') return 'home';
 
-  // Map known slugs to keys
-  if (['services', 'servicos'].includes(rest)) return 'services';
-  if (['destinations', 'destinos'].includes(rest)) return 'destinations';
-  if (['contact', 'contacto'].includes(rest)) return 'contact';
-  if (['legal', 'mentions-legales', 'legal-notice', 'aviso-legal'].includes(rest)) return 'legal';
-  if (['services/fret-maritime', 'servicos/frete-maritimo', 'services/maritime-freight'].includes(rest)) return 'services_freight_maritime';
+  if (SERVICE_ALIASES.has(rest)) return 'services';
+  if (DEST_ALIASES.has(rest)) return 'destinations';
+  if (CONTACT_ALIASES.has(rest)) return 'contact';
+  if (LEGAL_ALIASES.has(rest)) return 'legal';
+  if (FREIGHT_ALIASES.has(rest)) return 'services_freight_maritime';
 
   // default to home
   return 'home';
