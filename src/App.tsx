@@ -25,6 +25,9 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="legal" element={<Legal />} />
           <Route path="services/fret-maritime" element={<FreightMaritime />} />
+          {/* EN localized slugs (aliases) */}
+          <Route path="legal-notice" element={<Legal />} />
+          <Route path="services/maritime-freight" element={<FreightMaritime />} />
           {/* PT localized slugs (aliases) */}
           <Route path="servicos" element={<Services />} />
           <Route path="destinos" element={<Destinations />} />

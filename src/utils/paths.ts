@@ -22,8 +22,8 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services: 'services',
     destinations: 'destinations',
     contact: 'contact',
-    legal: 'legal',
-    services_freight_maritime: 'services/fret-maritime', // keep same for now
+    legal: 'legal-notice',
+    services_freight_maritime: 'services/maritime-freight',
   },
   pt: {
     home: '',
@@ -55,8 +55,8 @@ export function keyFromPath(pathname: string): RouteKey {
   if (['services', 'servicos'].includes(rest)) return 'services';
   if (['destinations', 'destinos'].includes(rest)) return 'destinations';
   if (['contact', 'contacto'].includes(rest)) return 'contact';
-  if (['legal'].includes(rest)) return 'legal';
-  if (['services/fret-maritime', 'servicos/frete-maritimo'].includes(rest)) return 'services_freight_maritime';
+  if (['legal', 'legal-notice'].includes(rest)) return 'legal';
+  if (['services/fret-maritime', 'servicos/frete-maritimo', 'services/maritime-freight'].includes(rest)) return 'services_freight_maritime';
 
   // default to home
   return 'home';
