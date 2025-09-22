@@ -68,12 +68,13 @@ function readEnvSiteUrl() {
 }
 
 function buildPaths() {
+  /** @type {{lang: string, key: string, path: string}[]} */
   const paths = [];
   for (const lng of SUP_LANGS) {
     for (const key of PATH_KEYS) {
       const slug = SLUGS[lng][key];
       const p = `/${lng}${slug ? `/${slug}` : ''}`;
-      paths.push(p);
+      paths.push({ lang: lng, key, path: p });
     }
   }
   return paths;
@@ -93,35 +94,65 @@ function priorityFor(pathname) {
     '/legal': { changefreq: 'yearly', priority: '0.3' },
     '/mentions-legales': { changefreq: 'yearly', priority: '0.3' },
     '/legal-notice': { changefreq: 'yearly', priority: '0.3' },
-    '/aviso-legal': { changefreq: 'yearly', priority: '0.3' },
     '/servicos': { changefreq: 'weekly', priority: '0.8' },
     '/servicos/frete-maritimo': { changefreq: 'weekly', priority: '0.8' },
     '/destinos': { changefreq: 'weekly', priority: '0.8' },
     '/contacto': { changefreq: 'monthly', priority: '0.6' },
+    '/aviso-legal': { changefreq: 'yearly', priority: '0.3' },
   };
   return map[logical] || { changefreq: 'monthly', priority: '0.5' };
 }
 
-function buildSitemap(urls, siteUrl) {
+function buildSitemap(entries, siteUrl) {
   const today = new Date().toISOString().split('T')[0];
-  const urlset = urls
-    .map((pathname) => {
-      const { changefreq, priority } = priorityFor(pathname);
-      const loc = new URL(pathname, siteUrl).href;
+
+  const urlset = entries
+    .map(({ lang, key, path }) => {
+      const { changefreq, priority } = priorityFor(path);
+      const loc = new URL(path, siteUrl).href;
 
       // Normalize trailing slash: keep it only for pure language roots like /fr
       let finalLoc = loc;
-      const parts = pathname.split('/').filter(Boolean);
+      const parts = path.split('/').filter(Boolean);
       const isLangRoot = parts.length === 1 && SUP_LANGS.includes(parts[0]);
       if (!isLangRoot && finalLoc.endsWith('/')) finalLoc = finalLoc.slice(0, -1);
 
+      // Build alternate links for the same key across all languages
+      const alternates = SUP_LANGS
+        .map((lng) => {
+          const altSlug = SLUGS[lng][key];
+          const altPath = `/${lng}${altSlug ? `/${altSlug}` : ''}`;
+          const altHref = new URL(altPath, siteUrl).href.replace(/\/$/, '');
+          const hrefLang =
+            lng === 'fr' ? 'fr-FR' : lng === 'en' ? 'en-GB' : 'pt-PT';
+          return `    <xhtml:link rel="alternate" hreflang="${hrefLang}" href="${altHref}" />`;
+        })
+        .join('\n');
+
+      // x-default -> EN by convention
+      const xDefaultPath = `/${'en'}${SLUGS.en[key] ? `/${SLUGS.en[key]}` : ''}`;
+      const xDefaultHref = new URL(xDefaultPath, siteUrl).href.replace(/\/$/, '');
+
       return `  <url>
     <loc>${finalLoc}</loc>
+${alternates}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xDefaultHref}" />
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
     <lastmod>${today}</lastmod>
   </url>`;
     })
+    .join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+${urlset}
+</urlset>
+`;
+})
     .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>

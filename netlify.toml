@@ -6,7 +6,50 @@
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
 
-# SPA fallback: route all paths to index.html
+# SEO 301 redirects (must appear before SPA fallback)
+# Legacy root-level paths
+[[redirects]]
+  from = "/fret-maritime"
+  to = "/fr/services/fret-maritime"
+  status = 301
+
+[[redirects]]
+  from = "/legal"
+  to = "/fr/mentions-legales"
+  status = 301
+
+# Language-specific legacy paths
+[[redirects]]
+  from = "/en/legal"
+  to = "/en/legal-notice"
+  status = 301
+
+[[redirects]]
+  from = "/pt/services"
+  to = "/pt/servicos"
+  status = 301
+
+[[redirects]]
+  from = "/pt/destinations"
+  to = "/pt/destinos"
+  status = 301
+
+[[redirects]]
+  from = "/pt/contact"
+  to = "/pt/contacto"
+  status = 301
+
+[[redirects]]
+  from = "/en/services/fret-maritime"
+  to = "/en/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/pt/services/fret-maritime"
+  to = "/pt/servicos/transporte-maritimo"
+  status = 301
+
+# SPA fallback: route all other paths to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
