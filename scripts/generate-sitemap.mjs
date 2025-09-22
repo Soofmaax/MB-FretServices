@@ -107,7 +107,7 @@ function buildSitemap(entries, siteUrl) {
   const today = new Date().toISOString().split('T')[0];
 
   const urlset = entries
-    .map(({ lang, key, path }) => {
+    .map(({ key, path }) => {
       const { changefreq, priority } = priorityFor(path);
       const loc = new URL(path, siteUrl).href;
 
@@ -123,8 +123,7 @@ function buildSitemap(entries, siteUrl) {
           const altSlug = SLUGS[lng][key];
           const altPath = `/${lng}${altSlug ? `/${altSlug}` : ''}`;
           const altHref = new URL(altPath, siteUrl).href.replace(/\/$/, '');
-          const hrefLang =
-            lng === 'fr' ? 'fr-FR' : lng === 'en' ? 'en-GB' : 'pt-PT';
+          const hrefLang = lng === 'fr' ? 'fr-FR' : lng === 'en' ? 'en-GB' : 'pt-PT';
           return `    <xhtml:link rel="alternate" hreflang="${hrefLang}" href="${altHref}" />`;
         })
         .join('\n');
@@ -142,17 +141,6 @@ ${alternates}
     <lastmod>${today}</lastmod>
   </url>`;
     })
-    .join('\n');
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
->
-${urlset}
-</urlset>
-`;
-})
     .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
