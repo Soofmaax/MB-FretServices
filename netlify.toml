@@ -5,6 +5,8 @@
 [build.environment]
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
+  # Disable public LibreTranslate calls during CI to avoid 400/429 breaking builds
+  I18N_ALLOW_PUBLIC_MT = "0"
 
 # SEO 301 redirects (must appear before SPA fallback)
 # Legacy root-level paths
