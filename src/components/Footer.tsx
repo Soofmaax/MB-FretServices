@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 import LocalizedLink from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
 
@@ -22,8 +22,53 @@ const Footer: FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 p-2 rounded-full transition-colors duration-200"
+                aria-label="WhatsApp"
+                title="WhatsApp"
               >
                 <MessageCircle size={20} />
+              </a>
+            </div>
+            {/* Social icons */}
+            <div className="flex items-center gap-4 pt-2">
+              <a
+                href="https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                className="text-gray-300 hover:text-accent-400 transition-colors"
+              >
+                <Linkedin size={22} />
+              </a>
+              <a
+                href="https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                title="Twitter"
+                className="text-gray-300 hover:text-accent-400 transition-colors"
+              >
+                <Twitter size={22} />
+              </a>
+              <a
+                href="https://www.instagram.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                title="Instagram"
+                className="text-gray-300 hover:text-accent-400 transition-colors"
+              >
+                <Instagram size={22} />
+              </a>
+              <a
+                href="https://www.facebook.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                title="Facebook"
+                className="text-gray-300 hover:text-accent-400 transition-colors"
+              >
+                <Facebook size={22} />
               </a>
             </div>
           </div>

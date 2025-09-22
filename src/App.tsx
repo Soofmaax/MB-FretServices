@@ -41,8 +41,8 @@ function App() {
           {/* 404 for unknown routes within language */}
           <Route path="*" element={<NotFound />} />
         </Route>
-        {/* Catch-all: redirect to default language */}
-        <Route path="*" element={<Navigate to="/fr" replace />} />
+        {/* Catch-all: show 404 for unknown root-level paths */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

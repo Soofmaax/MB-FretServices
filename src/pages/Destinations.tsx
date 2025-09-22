@@ -21,6 +21,7 @@ type Region = {
 const Destinations: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation('destinations');
+  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
 
   const regions = t('regions', { returnObjects: true }) as Region[];
 
@@ -44,7 +45,7 @@ const Destinations: FC = () => {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Destinations',
-                item: SITE_URL + '/destinations',
+                item: SITE_URL + pathForLang('destinations', lang),
               },
             ],
           },

@@ -7,3 +7,19 @@
     @apply font-sans;
   }
 }
+
+/* Local utilities for subtle animations used on 404 page */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes drift-slow {
+  0%, 100% { transform: translateX(0px) rotate(0deg); }
+  50% { transform: translateX(10px) rotate(2deg); }
+}
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+.animate-drift-slow {
+  animation: drift-slow 12s ease-in-out infinite;
+}
