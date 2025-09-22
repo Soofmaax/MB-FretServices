@@ -15,11 +15,10 @@ import url from 'url';
  *   LINGODEV_API_URL (optional; defaults to https://api.lingo.dev/v1/translate if LINGODEV_API_KEY is set)
  *   LINGODEV_API_KEY
  *   LIBRETRANSLATE_URL (optional, default https://libretranslate.com/translate)
- *   LIBRETRANSLATE_API_KEY (optional)
+ *   LIBRETRANSLATE_API_KEY (optional, if your LibreTranslate instance requires it)
  *   I18N_TARGET_LANGS (optional, e.g. "en,pt,es"; defaults to "en,pt")
- *   I18N_ALLOW_PUBLIC_MT=1 (optional, allow LibreTranslate fallback; defaults to disabled on CI)
+ *   I18N_ALLOW_PUBLIC_MT=1 (optional, allow LibreTranslate fallback; defaults to disabled on CI/Netlify)
  *   I18N_LIBRE_MAX_ATTEMPTS=3 (optional, retries for 429/5xx)
- *   I18N_FILL_WITH_SOURCE=1 (optional; when a translation is unavailable, copy source text to targets; defaults to enabled on CI/Netlify)
  *   DRY_RUN=1 (optional, don't write files)
  */
 
@@ -138,19 +137,12 @@ const LIBRE_API_KEY = process.env.LIBRETRANSLATE_API_KEY || '';
 // Disable public MT on CI unless explicitly allowed
 const ALLOW_PUBLIC_MT = (() => {
   const v = String(process.env.I18N_ALLOW_PUBLIC_MT || '').toLowerCase();
-  if (v === '1' || v === 'true' || v === 'yes') return true;
-  if (process.env.CI || process.env.NETLIFY) return false;
-  return true;
+  if (process.env.CI || process.env.NETLIFY) {
+    // default OFF on CI/Netlify unless explicitly enabled
+    return v === '1' || v === 'true' || v === 'yes';
+  }
+  return v === '' ? true : (v === '1' || v === 'true' || v === 'yes');
 })();
-
-// When translations are unavailable, copy source text into targets (defaults to enabled on CI)
-const FILL_WITH_SOURCE = (() => {
-  const v = String(process.env.I18N_FILL_WITH_SOURCE || '').toLowerCase();
-  if (v === '1' || v === 'true' || v === 'yes') return true;
-  if (v === '0' || v === 'false' || v === 'no') return false;
-  return Boolean(process.env.CI || process.env.NETLIFY);
-})();
-
 let loggedSkipLibre = false;
 
 // Normalize language codes for provider
@@ -255,7 +247,7 @@ async function translate(text, source, target) {
 
   if (!ALLOW_PUBLIC_MT) {
     if (!loggedSkipLibre) {
-      console.log('Skipping LibreTranslate fallback (I18N_ALLOW_PUBLIC_MT not enabled; disabled on CI by default).');
+      console.log('Skipping LibreTranslate fallback (I18N_ALLOW_PUBLIC_MT not enabled; disabled on CI/Netlify by default).');
       loggedSkipLibre = true;
     }
     return '';
@@ -292,16 +284,10 @@ async function processNamespace(ns) {
         await sleep(120);
       } catch (e) {
         console.warn(`Translation error for key "${key}" (${BASE_LANG}->${target}):`, e.message || e);
-        translated = '';
+        continue;
       }
-
-      let valueToWrite = typeof translated === 'string' ? translated.trim() : '';
-      if (!valueToWrite && FILL_WITH_SOURCE) {
-        valueToWrite = frText;
-      }
-
-      if (valueToWrite) {
-        setByPath(targetObj, key, valueToWrite);
+      if (translated && translated.trim().length > 0) {
+        setByPath(targetObj, key, translated);
         changed = true;
       }
     }
@@ -320,10 +306,6 @@ async function processNamespace(ns) {
 }
 
 async function main() {
-  if (process.env.NETLIFY || process.env.CI) {
-    console.log(`[i18n] CI environment detected. Public MT is ${ALLOW_PUBLIC_MT ? 'ENABLED' : 'DISABLED'}. Fill-with-source is ${FILL_WITH_SOURCE ? 'ENABLED' : 'DISABLED'}.`);
-  }
-
   if (!fs.existsSync(path.join(LOCALES_ROOT, BASE_LANG))) {
     console.error(`Base locale folder not found: ${path.join(LOCALES_ROOT, BASE_LANG)}`);
     process.exit(0);
