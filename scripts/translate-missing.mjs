@@ -126,7 +126,7 @@ function setByPath(obj, pathStr, value) {
 
 // Provider selection (with sensible defaults)
 const RAW_LINGO_URL = process.env.LINGODEV_API_URL || '';
-const LINGODEV_API_KEY = process.env.LINGODEV_API_KEY || '';
+const LINGODEV_API_KEY = process.env.LINGODEV_API_KEY || process.env.LINGODOTDEV_API_KEY || '';
 const DEFAULT_LINGO_URL = 'https://api.lingo.dev/v1/translate';
 // If user set an API key but not the URL, try the default Engine endpoint.
 // If it fails, we'll fall back to LibreTranslate gracefully.
