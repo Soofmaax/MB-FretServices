@@ -116,6 +116,22 @@ const Legal: FC = () => {
                   {t('sections.liability.content')}
                 </p>
               </section>
+
+              {/* Credits */}
+              <section className="mt-8">
+                <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.credits.heading', 'Crédits')}</h2>
+                <p className="text-gray-700 leading-relaxed">
+                  {t('sections.credits.content', 'Conception & développement:')}{' '}
+                  <a
+                    href="https://smarterlogicweb.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent-600 hover:text-accent-700"
+                  >
+                    Smarter Logic Web
+                  </a>
+                </p>
+              </section>
             </div>
 
             <div className="border-t border-gray-200 mt-12 pt-8 text-center">

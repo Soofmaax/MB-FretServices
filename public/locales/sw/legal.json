@@ -46,6 +46,10 @@
       "heading": "Uwajibikaji",
       "content": "MB Fret Services hujitahidi kutoa taarifa sahihi iwezekanavyo. Hata hivyo, haiwezi kuwajibika kwa mapungufu, makosa au kuchelewa kusasisha, iwe kwa makosa yake au ya washirika wanaotoa taarifa."
     },
+    "credits": {
+      "heading": "Shukrani",
+      "content": "Ubunifu na ukuzaji: Smarter Logic Web"
+    },
     "last_update": "Sasisho la mwisho: {{date}}"
   }
 }
