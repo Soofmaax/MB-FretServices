@@ -19,6 +19,7 @@ const SiteSEO: FC = () => {
         '@type': 'ContactPoint',
         telephone: PHONE,
         email: 'contact@mb-fretservices.com',
+        url: 'https://wa.me/33749235539',
         contactType: 'customer service',
         areaServed: ['FR', 'EU', 'AF', 'AS'],
         availableLanguage: ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'de', 'it', 'sw'],
