@@ -5,6 +5,7 @@ import App from './App.tsx';
 import './index.css';
 import './i18n';
 import { initAnalytics } from './analytics';
+import { initClarity } from './clarity';
 
 // GitHub Pages SPA fallback support:
 // If the 404.html redirected to "/?p=/xxx", normalize back to "/xxx" before the app mounts.
@@ -22,6 +23,13 @@ try {
 // Initialize analytics (noop if VITE_GA_ID not set or DNT on)
 try {
   initAnalytics();
+} catch {
+  // ignore
+}
+
+// Initialize Microsoft Clarity (noop if VITE_CLARITY_ID not set or DNT on)
+try {
+  initClarity();
 } catch {
   // ignore
 }
