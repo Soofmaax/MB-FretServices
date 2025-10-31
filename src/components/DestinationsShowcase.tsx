@@ -23,7 +23,7 @@ const DestinationsShowcase: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
             {t('destinations_title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             {t('destinations_subtitle')}
           </p>
         </div>
@@ -69,12 +69,12 @@ const DestinationsShowcase: FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-700 mb-6">
             {t('destinations_need_specific')}
           </p>
           <LocalizedLink
             to="destinations"
-            className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
+            className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium transition-colors duration-200"
           >
             {t('destinations_more')}
             <ArrowRight size={18} className="ml-2" aria-hidden="true" />
