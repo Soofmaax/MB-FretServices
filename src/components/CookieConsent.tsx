@@ -4,6 +4,7 @@ import { saveConsent, loadConsent } from '../consent';
 import { updateAnalyticsConsent } from '../analytics';
 import { initClarity } from '../clarity';
 import { useTranslation } from 'react-i18next';
+import LocalizedLink from './LocalizedLink';
 
 const CookieConsent: FC = () => {
   const { t } = useTranslation('consent');
@@ -71,7 +72,13 @@ const CookieConsent: FC = () => {
                 {t('desc', 'Nous utilisons des cookies facultatifs pour améliorer votre expérience (statistiques et ergonomie) et, le cas échéant, pour afficher de la publicité personnalisée. Si vous refusez, seuls les cookies nécessaires seront utilisés. Vous pouvez modifier votre sélection via “Gérer les cookies”.')}
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                {t('privacy_note', 'Consultez notre Déclaration de confidentialité pour plus d’informations.')}
+                {t('privacy_note', 'Consultez notre Déclaration de confidentialité pour plus d’informations.')}{' '}
+                <LocalizedLink
+                  to="legal"
+                  className="text-accent-600 hover:text-accent-700 underline underline-offset-2"
+                >
+                  {t('privacy_link', 'Politique de confidentialité')}
+                </LocalizedLink>
               </p>
             </div>
             <div className="mt-4 sm:mt-0 sm:flex sm:flex-shrink-0 sm:items-center sm:gap-2">
