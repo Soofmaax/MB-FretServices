@@ -51,4 +51,23 @@ describe('ResponsiveImage', () => {
     expect(img.getAttribute('loading')).toBe('eager');
     expect(img.getAttribute('fetchpriority') || img.getAttribute('fetchPriority')).toBe('high');
   });
+
+  it('handles URLs without w= param by appending it', () => {
+    const noWidthSrc =
+      'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb';
+    render(
+      <ResponsiveImage
+        src={noWidthSrc}
+        alt="no-w"
+        width={800}
+        height={533}
+      />
+    );
+    const img = screen.getByAltText('no-w') as HTMLImageElement;
+    const source = img.previousElementSibling as HTMLSourceElement;
+    const srcset = source?.getAttribute('srcset') ?? '';
+    expect(srcset).toContain('w=800 800w');
+    expect(srcset).toContain('w=1200 1200w');
+    expect(srcset).toContain('w=1600 1600w');
+  });
 });
