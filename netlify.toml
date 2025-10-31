@@ -55,6 +55,20 @@
   to = "/index.html"
   status = 200
 
+# Global security headers (served by Netlify)
+# Note: CSP as header is preferred to meta. We allow inline scripts for JSON-LD via 'unsafe-inline'.
+# If you later add a nonce, replace 'unsafe-inline' with 'nonce-<generated>' and add the same nonce to JSON-LD <script>.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.pexels.com https://www.google-analytics.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), accelerometer=(), gyroscope=(), magnetometer=(), midi=(), interest-cohort=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+
 # Caching policies
 [[headers]]
   for = "/assets/*"
