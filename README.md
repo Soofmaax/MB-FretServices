@@ -45,7 +45,31 @@ Cache : `.cache/i18n-cache.json`.
 
 Astuce : définissez `VITE_SITE_URL` (ex : `.env.production`) pour produire des canoniques/hreflang/sitemap/ai.txt corrects en production.
 
-### Prerendering (Netlify)
+### Déploiement Cloudflare Pages
+
+Le site est désormais prévu pour Cloudflare Pages (statique + SPA fallback).  
+Build :
+- Commande : `npm run build`
+- Dossier de sortie : `dist`
+
+Fichiers de configuration inclus :
+- `public/_headers` — en-têtes de sécurité et cache (copié en `dist/` au build)
+- `public/_redirects` — redirections SEO et fallback SPA
+
+Variables d’environnement à définir dans Pages :
+- `VITE_SITE_URL` (URL publique)
+- `VITE_GA_ID` (optionnel, Analytics)
+- `VITE_GSC_VERIFICATION` / `VITE_BING_VERIFICATION` (optionnels, vérifs moteur)
+
+Tests rapides :
+- Redirections : `curl -I https://mb-fretservices.com/fret-maritime` (301 vers `/fr/services/fret-maritime`)
+- Headers : `curl -I https://mb-fretservices.com/` (CSP, X-Frame-Options…)
+- Fallback SPA : accéder à une route non listée → renvoie `index.html`
+
+Prerendering (alternative à Netlify) :
+- Cloudflare Pages n’a pas de prerender intégré. Deux options :
+  - SSG (pré-rendu au build) avec Vite SSG pour les pages/langues principales
+  - Workers + service externe (ex. Prerender.io) pour servir HTML pré-rendu aux bots Prerendering (Netlify)
 
 Pour les SPA, Netlify peut servir une version pré-rendue aux crawlers (SEO, unfurling social, IA).
 
