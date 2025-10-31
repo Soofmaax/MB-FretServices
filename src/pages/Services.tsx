@@ -3,6 +3,7 @@ import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import LocalizedLink from '../components/LocalizedLink';
+import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
@@ -86,8 +87,7 @@ const Services: FC = () => {
                   key={def.key}
                   className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center animate-slide-up ${
                     index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                  }`}
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  } ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : index === 2 ? 'animate-delay-400' : 'animate-delay-600'}`}
                 >
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                     <div className="flex items-center mb-6">
@@ -100,7 +100,7 @@ const Services: FC = () => {
                       </div>
                     </div>
 
-                    <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                       {description}
                     </p>
 
@@ -136,7 +136,7 @@ const Services: FC = () => {
 
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                     <div className="relative rounded-xl overflow-hidden shadow-xl">
-                      <img
+                      <ResponsiveImage
                         src={`https://images.pexels.com/photos/${
                           index === 0 ? '906982' :
                           index === 1 ? '723240' :
@@ -147,11 +147,10 @@ const Services: FC = () => {
                           index === 2 ? '7681091' : '416978'
                         }.jpeg?auto=compress&cs=tinysrgb&w=800`}
                         alt={`Service ${title}`}
-                        loading="lazy"
-                        decoding="async"
                         width={800}
                         height={533}
                         className="w-full h-64 lg:h-80 object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
                     </div>
@@ -169,7 +168,7 @@ const Services: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
             {t('ctaSection.title')}
           </h2>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
             {t('ctaSection.text')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -177,7 +176,7 @@ const Services: FC = () => {
               {t('ctaSection.consultation')}
             </CtaButton>
             <a
-              href="https://wa.me/33123456789"
+              href="https://wa.me/33749235539"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white transition-all duration-200"

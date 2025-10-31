@@ -1,24 +1,31 @@
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
+import { CSP_NONCE } from '../config/security';
 
 const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
   const GSC = (import.meta.env?.VITE_GSC_VERIFICATION as string | undefined) || '';
   const BING = (import.meta.env?.VITE_BING_VERIFICATION as string | undefined) || '';
 
+  const PHONE = '+33 7 49 23 55 39';
+  const DEV = { '@type': 'Organization', name: 'Smarter Logic Web', url: 'https://smarterlogicweb.com' };
+
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'MB Fret Services',
     url: SITE_URL,
+    creator: DEV,
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+33 1 23 45 67 89',
+        telephone: PHONE,
+        email: 'contact@mb-fretservices.com',
+        url: 'https://wa.me/33749235539',
         contactType: 'customer service',
         areaServed: ['FR', 'EU', 'AF', 'AS'],
-        availableLanguage: ['fr', 'en'],
+        availableLanguage: ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'de', 'it', 'sw'],
       },
     ],
   };
@@ -29,6 +36,7 @@ const SiteSEO: FC = () => {
     name: 'MB Fret Services',
     url: SITE_URL,
     inLanguage: 'fr-FR',
+    creator: DEV,
   };
 
   const localBusiness = {
@@ -38,7 +46,7 @@ const SiteSEO: FC = () => {
     url: SITE_URL,
     image: 'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200',
     email: 'contact@mb-fretservices.com',
-    telephone: '+33 1 23 45 67 89',
+    telephone: PHONE,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Paris',
@@ -50,6 +58,7 @@ const SiteSEO: FC = () => {
       longitude: 2.3522,
     },
     areaServed: ['Europe', 'Africa', 'Asia'],
+    creator: DEV,
   };
 
   return (
@@ -59,13 +68,13 @@ const SiteSEO: FC = () => {
       {BING ? <meta name="msvalidate.01" content={BING} /> : null}
 
       {/* Structured data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(organization)}
       </script>
-      <script type="application/ld+json">
+      <script type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(website)}
       </script>
-      <script type="application/ld+json">
+      <script type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(localBusiness)}
       </script>
     </Helmet>

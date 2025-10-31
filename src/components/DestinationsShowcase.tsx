@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
 import LocalizedLink from './LocalizedLink';
+import ResponsiveImage from './ResponsiveImage';
 import { useTranslation } from 'react-i18next';
 
 type ShowcaseItem = {
@@ -22,7 +23,7 @@ const DestinationsShowcase: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
             {t('destinations_title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             {t('destinations_subtitle')}
           </p>
         </div>
@@ -31,18 +32,16 @@ const DestinationsShowcase: FC = () => {
           {destinations.map((destination, index) => (
             <div
               key={`${destination.country}-${index}`}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-slide-up"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-150' : index === 2 ? 'animate-delay-300' : index === 3 ? 'animate-delay-450' : 'animate-delay-600'}`}
             >
               <div className="relative">
-                <img
+                <ResponsiveImage
                   src={destination.image}
                   alt={`${destination.country} - ${destination.city}`}
-                  loading="lazy"
-                  decoding="async"
                   width={800}
                   height={533}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               </div>
@@ -70,12 +69,12 @@ const DestinationsShowcase: FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-700 mb-6">
             {t('destinations_need_specific')}
           </p>
           <LocalizedLink
             to="destinations"
-            className="inline-flex items-center text-accent-500 hover:text-accent-600 font-medium transition-colors duration-200"
+            className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium transition-colors duration-200"
           >
             {t('destinations_more')}
             <ArrowRight size={18} className="ml-2" aria-hidden="true" />

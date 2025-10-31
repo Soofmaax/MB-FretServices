@@ -43,8 +43,7 @@ const ValuePropositions: FC = () => {
             return (
               <div
                 key={prop.title}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2 animate-slide-up"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group hover:-translate-y-2 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : 'animate-delay-400'}`}
               >
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon size={32} className="text-white" aria-hidden="true" />

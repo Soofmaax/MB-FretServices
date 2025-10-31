@@ -65,7 +65,7 @@ const Legal: FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.contact.heading')}</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  <strong>{t('sections.contact.labels.telephone')} :</strong> +33 1 23 45 67 89<br />
+                  <strong>{t('sections.contact.labels.telephone')} :</strong> +33 7 49 23 55 39<br />
                   <strong>{t('sections.contact.labels.email')} :</strong> contact@mb-fretservices.com<br />
                   <strong>{t('sections.contact.labels.adresse')} :</strong> Paris, France
                 </p>
@@ -114,6 +114,22 @@ const Legal: FC = () => {
                 <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.liability.heading')}</h2>
                 <p className="text-gray-700 leading-relaxed">
                   {t('sections.liability.content')}
+                </p>
+              </section>
+
+              {/* Credits */}
+              <section className="mt-8">
+                <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.credits.heading', 'Crédits')}</h2>
+                <p className="text-gray-700 leading-relaxed">
+                  {t('sections.credits.content', 'Conception & développement:')}{' '}
+                  <a
+                    href="https://smarterlogicweb.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent-600 hover:text-accent-700"
+                  >
+                    Smarter Logic Web
+                  </a>
                 </p>
               </section>
             </div>

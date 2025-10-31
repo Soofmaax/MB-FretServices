@@ -9,6 +9,8 @@ import {
   buildAlternateLinks,
 } from '../utils/seoHelpers';
 
+import { CSP_NONCE } from '../config/security';
+
 type SEOProps = {
   title: string;
   description: string;
@@ -34,6 +36,9 @@ const SEO: FC<SEOProps> = ({
   const currentLang = getCurrentLangFromPath();
   const ogLocale = OG_LOCALE_MAP[currentLang] ?? 'fr_FR';
   const alternates = buildAlternateLinks();
+  const xDefaultHref =
+    alternates.find((a) => a.hrefLang === 'fr-FR')?.href ??
+    alternates.find((a) => a.hrefLang === 'en-GB')?.href;
 
   return (
     <Helmet>
@@ -64,14 +69,12 @@ const SEO: FC<SEOProps> = ({
       {alternates.map((alt) => (
         <link key={`${alt.hrefLang}-${alt.href}`} rel="alternate" hrefLang={alt.hrefLang} href={alt.href} />
       ))}
-      {/* x-default to EN by convention */}
-      {alternates.find((a) => a.hrefLang === 'en-GB') && (
-        <link rel="alternate" hrefLang="x-default" href={alternates.find((a) => a.hrefLang === 'en-GB')!.href} />
-      )}
+      {/* x-default: prefer FR, fallback EN */}
+      {xDefaultHref && <link rel="alternate" hrefLang="x-default" href={xDefaultHref} />}
 
       {/* Structured Data */}
       {jsonLd && (
-        <script type="application/ld+json">
+        <script type="application/ld+json" nonce={CSP_NONCE}>
           {JSON.stringify(jsonLd)}
         </script>
       )}

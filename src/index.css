@@ -26,3 +26,13 @@
 .animate-drift-slow {
   animation: drift-slow 12s ease-in-out infinite;
 }
+
+/* Deterministic animation delay utilities to avoid inline styles */
+.animate-delay-0 { animation-delay: 0ms; }
+.animate-delay-150 { animation-delay: 150ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-450 { animation-delay: 450ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-800 { animation-delay: 800ms; }

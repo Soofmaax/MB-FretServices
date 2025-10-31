@@ -39,7 +39,7 @@ const NotFound: FC = () => {
             <p className="text-2xl md:text-3xl text-primary-900 font-semibold mb-4">
               {t('notFound:ui.heading')}
             </p>
-            <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
               {t('notFound:ui.message')}
             </p>
 

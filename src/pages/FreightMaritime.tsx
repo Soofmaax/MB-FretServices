@@ -2,6 +2,7 @@ import type { FC, ComponentType } from 'react';
 import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
+import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 
@@ -108,12 +109,17 @@ const FreightMaritime: FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")'
-          }}
-        ></div>
+        <div className="absolute inset-0">
+          <ResponsiveImage
+            src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Conteneurs de fret maritime"
+            width={1600}
+            height={900}
+            priority
+            sizes="100vw"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in">
@@ -138,7 +144,7 @@ const FreightMaritime: FC = () => {
                 {t('hero.cta_quote')}
               </CtaButton>
               <a
-                href={`https://wa.me/33123456789?text=${encodeURIComponent("Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique")}`}
+                href={`https://wa.me/33749235539?text=${encodeURIComponent("Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition-all duration-200"
@@ -157,7 +163,7 @@ const FreightMaritime: FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {t('why.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               {t('why.subtitle')}
             </p>
           </div>
@@ -166,14 +172,13 @@ const FreightMaritime: FC = () => {
             {advantages.map((advantage, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : 'animate-delay-400'}`}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center">
                   <advantage.icon size={32} className="text-white" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-4">{advantage.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
+                <p className="text-gray-700 leading-relaxed">{advantage.description}</p>
               </div>
             ))}
           </div>
@@ -188,7 +193,7 @@ const FreightMaritime: FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
                 {t('services.title')}
               </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 {t('services.subtitle')}
               </p>
 
@@ -209,14 +214,13 @@ const FreightMaritime: FC = () => {
             </div>
 
             <div className="relative">
-              <img
+              <ResponsiveImage
                 src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Conteneurs de fret maritime"
-                loading="lazy"
-                decoding="async"
                 width={800}
                 height={533}
                 className="w-full h-96 object-cover rounded-xl shadow-xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent rounded-xl"></div>
             </div>
@@ -231,7 +235,7 @@ const FreightMaritime: FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {t('destinations.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               {t('destinations.subtitle')}
             </p>
           </div>
@@ -240,14 +244,13 @@ const FreightMaritime: FC = () => {
             {destinations.map((destination, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-150' : index === 2 ? 'animate-delay-300' : index === 3 ? 'animate-delay-450' : 'animate-delay-600'}`}
               >
                 <div className="flex items-center mb-6">
                   <MapPin size={24} className="text-accent-500 mr-3" aria-hidden="true" />
                   <div>
                     <h3 className="text-2xl font-bold text-primary-900">{destination.country}</h3>
-                    <p className="text-gray-600">Port : {destination.port}</p>
+                    <p className="text-gray-700">Port : {destination.port}</p>
                   </div>
                 </div>
 
@@ -331,7 +334,7 @@ const FreightMaritime: FC = () => {
               {t('final.cta')}
             </CtaButton>
             <a
-              href={`https://wa.me/33123456789?text=${encodeURIComponent('Bonjour, je souhaite un devis pour du fret maritime')}`}
+              href={`https://wa.me/33749235539?text=${encodeURIComponent('Bonjour, je souhaite un devis pour du fret maritime')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition-all duration-200"
