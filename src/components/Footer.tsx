@@ -169,6 +169,17 @@ const Footer: FC = () => {
           <p className="text-gray-300">
             © {new Date().getFullYear()} MB Fret Services. {t('footer:rights')}
           </p>
+          <p className="text-gray-300 mt-2">
+            {t('footer:built_by', 'Développé par')}{' '}
+            <a
+              href="https://smarterlogicweb.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-400 hover:text-accent-300"
+            >
+              Smarter Logic Web
+            </a>
+          </p>
         </div>
       </div>
     </footer>

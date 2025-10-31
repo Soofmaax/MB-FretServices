@@ -9,11 +9,14 @@ const SiteSEO: FC = () => {
   const BING = (import.meta.env?.VITE_BING_VERIFICATION as string | undefined) || '';
 
   const PHONE = '+33 7 49 23 55 39';
+  const DEV = { '@type': 'Organization', name: 'Smarter Logic Web', url: 'https://smarterlogicweb.com' };
+
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'MB Fret Services',
     url: SITE_URL,
+    creator: DEV,
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -33,6 +36,7 @@ const SiteSEO: FC = () => {
     name: 'MB Fret Services',
     url: SITE_URL,
     inLanguage: 'fr-FR',
+    creator: DEV,
   };
 
   const localBusiness = {
@@ -54,6 +58,7 @@ const SiteSEO: FC = () => {
       longitude: 2.3522,
     },
     areaServed: ['Europe', 'Africa', 'Asia'],
+    creator: DEV,
   };
 
   return (

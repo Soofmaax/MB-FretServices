@@ -82,6 +82,7 @@ function aiTxt(siteUrl) {
   lines.push(`  social:`);
   lines.push(`    linkedin: https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER`);
   lines.push(`    twitter: https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER`);
+  lines.push(`  developer: https://smarterlogicweb.com`);
   lines.push(`  pages:`);
 
   for (const p of pages) {
