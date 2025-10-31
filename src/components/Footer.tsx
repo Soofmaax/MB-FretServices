@@ -6,6 +6,14 @@ import { useTranslation } from 'react-i18next';
 const Footer: FC = () => {
   const { t } = useTranslation('footer');
 
+  const openCookieManager = () => {
+    try {
+      window.dispatchEvent(new CustomEvent('open-cookie-consent'));
+    } catch {
+      // ignore
+    }
+  };
+
   return (
     <footer className="bg-primary-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -103,6 +111,15 @@ const Footer: FC = () => {
                 </LocalizedLink>
               </li>
             </ul>
+            <div className="pt-4">
+              <button
+                type="button"
+                onClick={openCookieManager}
+                className="text-gray-300 hover:text-accent-400 underline underline-offset-4"
+              >
+                Gérer les cookies
+              </button>
+            </div>
           </div>
 
           {/* Contact Information */}

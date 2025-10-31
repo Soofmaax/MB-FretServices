@@ -7,6 +7,7 @@ import ScrollToTop from './ScrollToTop';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { trackPageview } from '../analytics';
+import CookieConsent from './CookieConsent';
 
 type Params = {
   lng?: string;
@@ -56,6 +57,7 @@ const LangLayout: FC<{ children?: ReactNode }> = () => {
         </main>
         <Footer />
       </div>
+      <CookieConsent />
     </>
   );
 };
