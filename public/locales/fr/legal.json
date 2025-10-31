@@ -1,0 +1,51 @@
+{
+  "page_title": "Mentions Légales",
+  "sections": {
+    "info": {
+      "heading": "Informations légales",
+      "labels": {
+        "raison_sociale": "Raison sociale",
+        "forme_juridique": "Forme juridique",
+        "capital_social": "Capital social",
+        "siege_social": "Siège social",
+        "siret": "SIRET",
+        "code_ape": "Code APE"
+      }
+    },
+    "contact": {
+      "heading": "Contact",
+      "labels": {
+        "telephone": "Téléphone",
+        "email": "Email",
+        "adresse": "Adresse"
+      }
+    },
+    "hosting": {
+      "heading": "Hébergement",
+      "content_line1": "Ce site est hébergé par [Nom de l'hébergeur]",
+      "content_line2": "[Adresse de l'hébergeur]"
+    },
+    "ip": {
+      "heading": "Propriété intellectuelle",
+      "content": "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés."
+    },
+    "terms": {
+      "heading": "Conditions d'utilisation",
+      "content": "L'utilisation de ce site implique l'acceptation pleine et entière des conditions générales d'utilisation décrites ci-après. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment."
+    },
+    "privacy": {
+      "heading": "Protection des données personnelles",
+      "content1": "En conformité avec la loi « Informatique et Libertés » du 6 janvier 1978 modifiée et le Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de portabilité et d'effacement de vos données personnelles.",
+      "content2": "Pour exercer ces droits, veuillez nous contacter à l'adresse : contact@mb-fretservices.com"
+    },
+    "cookies": {
+      "heading": "Cookies",
+      "content": "Ce site utilise des cookies pour améliorer l'expérience utilisateur et réaliser des statistiques de visites. En continuant votre navigation, vous acceptez l'utilisation de ces cookies."
+    },
+    "liability": {
+      "heading": "Responsabilité",
+      "content": "MB Fret Services s'efforce de fournir des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations."
+    },
+    "last_update": "Dernière mise à jour : {{date}}"
+  }
+}
