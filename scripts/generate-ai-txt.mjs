@@ -74,8 +74,8 @@ function aiTxt(siteUrl) {
   lines.push(`    - Asia: [China, Turkey]`);
   lines.push(`  contact:`);
   lines.push(`    email: contact@mb-fretservices.com`);
-  lines.push(`    phone: "+33 1 23 45 67 89"`);
-  lines.push(`    whatsapp: https://wa.me/33123456789`);
+  lines.push(`    phone: "+33 7 49 23 55 39"`);
+  lines.push(`    whatsapp: https://wa.me/33749235539`);
   lines.push(`  address:`);
   lines.push(`    city: Paris`);
   lines.push(`    country: FR`);

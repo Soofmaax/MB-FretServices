@@ -82,10 +82,10 @@ const Contact: FC = () => {
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.phone')}</h3>
               <a
-                href="tel:+33123456789"
+                href="tel:+33749235539"
                 className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
-                +33 1 23 45 67 89
+                +33 7 49 23 55 39
               </a>
               <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.phone_hours')}
@@ -99,7 +99,7 @@ const Contact: FC = () => {
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.whatsapp')}</h3>
               <a
-                href="https://wa.me/33123456789"
+                href="https://wa.me/33749235539"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
@@ -200,7 +200,7 @@ const Contact: FC = () => {
             </a>
 
             <a
-              href={`https://wa.me/33123456789?text=${encodeURIComponent('Bonjour, je souhaite obtenir un devis pour un transport international')}`}
+              href={`https://wa.me/33749235539?text=${encodeURIComponent('Bonjour, je souhaite obtenir un devis pour un transport international')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
@@ -210,7 +210,7 @@ const Contact: FC = () => {
             </a>
 
             <a
-              href="tel:+33123456789"
+              href="tel:+33749235539"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-white text-white hover:bg-white hover:text-primary-900 transition-all duration-200"
             >
               <Phone size={20} className="mr-2" aria-hidden="true" />

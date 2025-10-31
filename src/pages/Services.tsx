@@ -176,7 +176,7 @@ const Services: FC = () => {
               {t('ctaSection.consultation')}
             </CtaButton>
             <a
-              href="https://wa.me/33123456789"
+              href="https://wa.me/33749235539"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white transition-all duration-200"

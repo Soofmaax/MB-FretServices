@@ -26,7 +26,7 @@ const Footer: FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://wa.me/33123456789"
+                href="https://wa.me/33749235539"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 p-2 rounded-full transition-colors duration-200"
@@ -138,16 +138,16 @@ const Footer: FC = () => {
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-accent-400 flex-shrink-0" aria-hidden="true" />
                 <a
-                  href="tel:+33123456789"
+                  href="tel:+33749235539"
                   className="text-gray-300 hover:text-accent-400 transition-colors duration-200"
                 >
-                  +33 1 23 45 67 89
+                  +33 7 49 23 55 39
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <MessageCircle size={18} className="text-accent-400 flex-shrink-0" aria-hidden="true" />
                 <a
-                  href="https://wa.me/33123456789"
+                  href="https://wa.me/33749235539"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-accent-400 transition-colors duration-200"

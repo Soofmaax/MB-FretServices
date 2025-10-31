@@ -8,6 +8,7 @@ const SiteSEO: FC = () => {
   const GSC = (import.meta.env?.VITE_GSC_VERIFICATION as string | undefined) || '';
   const BING = (import.meta.env?.VITE_BING_VERIFICATION as string | undefined) || '';
 
+  const PHONE = '+33 7 49 23 55 39';
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -16,7 +17,7 @@ const SiteSEO: FC = () => {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+33 1 23 45 67 89',
+        telephone: PHONE,
         contactType: 'customer service',
         areaServed: ['FR', 'EU', 'AF', 'AS'],
         availableLanguage: ['fr', 'en'],
@@ -39,7 +40,7 @@ const SiteSEO: FC = () => {
     url: SITE_URL,
     image: 'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200',
     email: 'contact@mb-fretservices.com',
-    telephone: '+33 1 23 45 67 89',
+    telephone: PHONE,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Paris',

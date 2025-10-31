@@ -65,7 +65,7 @@ const Legal: FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.contact.heading')}</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  <strong>{t('sections.contact.labels.telephone')} :</strong> +33 1 23 45 67 89<br />
+                  <strong>{t('sections.contact.labels.telephone')} :</strong> +33 7 49 23 55 39<br />
                   <strong>{t('sections.contact.labels.email')} :</strong> contact@mb-fretservices.com<br />
                   <strong>{t('sections.contact.labels.adresse')} :</strong> Paris, France
                 </p>

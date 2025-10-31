@@ -144,7 +144,7 @@ const FreightMaritime: FC = () => {
                 {t('hero.cta_quote')}
               </CtaButton>
               <a
-                href={`https://wa.me/33123456789?text=${encodeURIComponent("Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique")}`}
+                href={`https://wa.me/33749235539?text=${encodeURIComponent("Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition-all duration-200"
@@ -334,7 +334,7 @@ const FreightMaritime: FC = () => {
               {t('final.cta')}
             </CtaButton>
             <a
-              href={`https://wa.me/33123456789?text=${encodeURIComponent('Bonjour, je souhaite un devis pour du fret maritime')}`}
+              href={`https://wa.me/33749235539?text=${encodeURIComponent('Bonjour, je souhaite un devis pour du fret maritime')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition-all duration-200"
