@@ -163,7 +163,7 @@ const FreightMaritime: FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {t('why.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               {t('why.subtitle')}
             </p>
           </div>
@@ -178,7 +178,7 @@ const FreightMaritime: FC = () => {
                   <advantage.icon size={32} className="text-white" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-primary-900 mb-4">{advantage.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
+                <p className="text-gray-700 leading-relaxed">{advantage.description}</p>
               </div>
             ))}
           </div>
@@ -193,7 +193,7 @@ const FreightMaritime: FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
                 {t('services.title')}
               </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 {t('services.subtitle')}
               </p>
 
@@ -235,7 +235,7 @@ const FreightMaritime: FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {t('destinations.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               {t('destinations.subtitle')}
             </p>
           </div>
@@ -250,7 +250,7 @@ const FreightMaritime: FC = () => {
                   <MapPin size={24} className="text-accent-500 mr-3" aria-hidden="true" />
                   <div>
                     <h3 className="text-2xl font-bold text-primary-900">{destination.country}</h3>
-                    <p className="text-gray-600">Port : {destination.port}</p>
+                    <p className="text-gray-700">Port : {destination.port}</p>
                   </div>
                 </div>
 

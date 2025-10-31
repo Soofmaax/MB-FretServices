@@ -70,7 +70,7 @@ const Contact: FC = () => {
               >
                 contact@mb-fretservices.com
               </a>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.email_hint')}
               </p>
             </div>
@@ -87,7 +87,7 @@ const Contact: FC = () => {
               >
                 +33 1 23 45 67 89
               </a>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.phone_hours')}
               </p>
             </div>
@@ -106,7 +106,7 @@ const Contact: FC = () => {
               >
                 {t('methods.chat_direct')}
               </a>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.whatsapp_hint')}
               </p>
             </div>
@@ -120,7 +120,7 @@ const Contact: FC = () => {
               <p className="text-gray-700 font-medium">
                 {t('methods.office_city')}
               </p>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.office_hint')}
               </p>
             </div>
@@ -135,7 +135,7 @@ const Contact: FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
               {t('guide.title')}
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed">
               {t('guide.intro')}
             </p>
           </div>
@@ -152,7 +152,7 @@ const Contact: FC = () => {
                     <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-primary-900">{item.title}</span>
-                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                      <p className="text-gray-700 text-sm">{item.desc}</p>
                     </div>
                   </li>
                 ))}

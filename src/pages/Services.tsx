@@ -100,7 +100,7 @@ const Services: FC = () => {
                       </div>
                     </div>
 
-                    <p className="text-gray-600 mb-6 leading-relaxed text-lg">
+                    <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                       {description}
                     </p>
 
@@ -168,7 +168,7 @@ const Services: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
             {t('ctaSection.title')}
           </h2>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
             {t('ctaSection.text')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
