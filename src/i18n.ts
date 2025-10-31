@@ -34,14 +34,19 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    // Minimal default namespace; others will be loaded on demand by components using useTranslation(ns)
     defaultNS: 'common',
-    ns: ['common', 'navbar', 'hero', 'footer', 'home', 'services', 'destinations', 'contact', 'legal', 'freight', 'notFound'],
+    ns: ['common'],
     detection: {
       order: ['path', 'navigator', 'htmlTag', 'cookie', 'localStorage'],
       caches: ['localStorage'],
       lookupFromPathIndex: BASE_SEGS, // shift by base segments if any
     },
     returnNull: false,
+    // Enable React Suspense for on-demand namespace loading (components are rendered under Suspense boundaries)
+    react: {
+      useSuspense: true,
+    } as any,
   });
 
 export default i18n;

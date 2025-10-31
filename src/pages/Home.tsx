@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 import Hero from '../components/Hero';
-import ValuePropositions from '../components/ValuePropositions';
-import DestinationsShowcase from '../components/DestinationsShowcase';
+import { lazy, Suspense } from 'react';
+const ValuePropositions = lazy(() => import('../components/ValuePropositions'));
+const DestinationsShowcase = lazy(() => import('../components/DestinationsShowcase'));
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
@@ -23,8 +24,12 @@ const Home: FC = () => {
         }}
       />
       <Hero />
-      <ValuePropositions />
-      <DestinationsShowcase />
+      <Suspense fallback={null}>
+        <ValuePropositions />
+      </Suspense>
+      <Suspense fallback={null}>
+        <DestinationsShowcase />
+      </Suspense>
       
       {/* Final CTA Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary-900 to-primary-800 text-white">
