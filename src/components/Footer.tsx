@@ -4,7 +4,7 @@ import LocalizedLink from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
 
 const Footer: FC = () => {
-  const { t } = useTranslation('footer');
+  const { t } = useTranslation(['footer', 'consent']);
 
   const openCookieManager = () => {
     try {
@@ -20,9 +20,9 @@ const Footer: FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-accent-400">{t('brand')}</h3>
+            <h3 className="text-xl font-bold text-accent-400">{t('footer:brand')}</h3>
             <p className="text-gray-300 leading-relaxed">
-              {t('about')}
+              {t('footer:about')}
             </p>
             <div className="flex space-x-4">
               <a
@@ -83,31 +83,31 @@ const Footer: FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-accent-400">{t('nav_title')}</h4>
+            <h4 className="text-lg font-semibold text-accent-400">{t('footer:nav_title')}</h4>
             <ul className="space-y-2">
               <li>
                 <LocalizedLink to="" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('home')}
+                  {t('footer:home')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="services" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('services')}
+                  {t('footer:services')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="destinations" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('destinations')}
+                  {t('footer:destinations')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="contact" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('contact')}
+                  {t('footer:contact')}
                 </LocalizedLink>
               </li>
               <li>
                 <LocalizedLink to="legal" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
-                  {t('legal')}
+                  {t('footer:legal')}
                 </LocalizedLink>
               </li>
             </ul>
@@ -117,14 +117,14 @@ const Footer: FC = () => {
                 onClick={openCookieManager}
                 className="text-gray-300 hover:text-accent-400 underline underline-offset-4"
               >
-                Gérer les cookies
+                {t('consent:manage', 'Gérer les cookies')}
               </button>
             </div>
           </div>
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-accent-400">{t('contact_title')}</h4>
+            <h4 className="text-lg font-semibold text-accent-400">{t('footer:contact_title')}</h4>
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-accent-400 flex-shrink-0" aria-hidden="true" />
@@ -152,13 +152,13 @@ const Footer: FC = () => {
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-accent-400 transition-colors duration-200"
                 >
-                  {t('whatsapp_label')}
+                  {t('footer:whatsapp_label')}
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-accent-400 flex-shrink-0 mt-1" aria-hidden="true" />
                 <span className="text-gray-300">
-                  {t('city')}
+                  {t('footer:city')}
                 </span>
               </li>
             </ul>
@@ -167,7 +167,7 @@ const Footer: FC = () => {
 
         <div className="border-t border-primary-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © {new Date().getFullYear()} MB Fret Services. {t('rights')}
+            © {new Date().getFullYear()} MB Fret Services. {t('footer:rights')}
           </p>
         </div>
       </div>

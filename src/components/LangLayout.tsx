@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import i18n, { SUPPORTED_LANGS, type SupportedLang } from '../i18n';
 import SiteSEO from './SiteSEO';
 import ScrollToTop from './ScrollToTop';
@@ -51,13 +51,19 @@ const LangLayout: FC<{ children?: ReactNode }> = () => {
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-primary-900 focus:outline-none focus:ring-2 focus:ring-accent-500 px-4 py-2 rounded">
           Passer au contenu principal
         </a>
-        <Navbar />
+        <Suspense fallback={null}>
+          <Navbar />
+        </Suspense>
         <main id="main" tabIndex={-1}>
           <Outlet />
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
-      <CookieConsent />
+      <Suspense fallback={null}>
+        <CookieConsent />
+      </Suspense>
     </>
   );
 };
