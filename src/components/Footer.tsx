@@ -170,7 +170,7 @@ const Footer: FC = () => {
             © {new Date().getFullYear()} MB Fret Services. {t('footer:rights')}
           </p>
           <p className="text-gray-300 mt-2">
-            {t('footer:built_by', 'Développé par')}{' '}
+            {t('footer:credits', 'Conception & développement:')}{' '}
             <a
               href="https://smarterlogicweb.com"
               target="_blank"
