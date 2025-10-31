@@ -3,6 +3,7 @@ import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import LocalizedLink from '../components/LocalizedLink';
+import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
@@ -86,8 +87,7 @@ const Services: FC = () => {
                   key={def.key}
                   className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center animate-slide-up ${
                     index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                  }`}
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  } ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : index === 2 ? 'animate-delay-400' : 'animate-delay-600'}`}
                 >
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                     <div className="flex items-center mb-6">
@@ -136,54 +136,22 @@ const Services: FC = () => {
 
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                     <div className="relative rounded-xl overflow-hidden shadow-xl">
-                      <picture>
-                        <source
-                          type="image/jpeg"
-                          srcSet={`https://images.pexels.com/photos/${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }/pexels-photo-${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }/pexels-photo-${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w, https://images.pexels.com/photos/${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }/pexels-photo-${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w`}
-                        />
-                        <img
-                          src={`https://images.pexels.com/photos/${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }/pexels-photo-${
-                            index === 0 ? '906982' :
-                            index === 1 ? '723240' :
-                            index === 2 ? '7681091' : '416978'
-                          }.jpeg?auto=compress&cs=tinysrgb&w=800`}
-                          alt={`Service ${title}`}
-                          loading="lazy"
-                          decoding="async"
-                          width={800}
-                          height={533}
-                          className="w-full h-64 lg:h-80 object-cover"
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-                      </picture>
+                      <ResponsiveImage
+                        src={`https://images.pexels.com/photos/${
+                          index === 0 ? '906982' :
+                          index === 1 ? '723240' :
+                          index === 2 ? '7681091' : '416978'
+                        }/pexels-photo-${
+                          index === 0 ? '906982' :
+                          index === 1 ? '723240' :
+                          index === 2 ? '7681091' : '416978'
+                        }.jpeg?auto=compress&cs=tinysrgb&w=800`}
+                        alt={`Service ${title}`}
+                        width={800}
+                        height={533}
+                        className="w-full h-64 lg:h-80 object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
                     </div>
                   </div>

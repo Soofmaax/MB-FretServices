@@ -86,8 +86,7 @@ const Destinations: FC = () => {
                 {region.countries.map((country, countryIndex) => (
                   <div
                     key={countryIndex}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-slide-up"
-                    style={{ animationDelay: `${countryIndex * 200}ms` }}
+                    className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-slide-up ${countryIndex === 0 ? 'animate-delay-0' : countryIndex === 1 ? 'animate-delay-200' : countryIndex === 2 ? 'animate-delay-400' : 'animate-delay-600'}`}
                   >
                     <div className="p-8">
                       <div className="flex items-center mb-6">

@@ -2,6 +2,7 @@ import type { FC, ComponentType } from 'react';
 import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
+import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 
@@ -108,27 +109,17 @@ const FreightMaritime: FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
-        <picture className="absolute inset-0">
-          <source
-            type="image/jpeg"
-            srcSet="
-              https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
-              https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w,
-              https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w
-            "
-          />
-          <img
+        <div className="absolute inset-0">
+          <ResponsiveImage
             src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt="Conteneurs de fret maritime"
-            fetchPriority="high"
-            decoding="async"
-            loading="eager"
             width={1600}
             height={900}
-            className="w-full h-full object-cover"
+            priority
             sizes="100vw"
+            className="w-full h-full object-cover"
           />
-        </picture>
+        </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in">
@@ -181,8 +172,7 @@ const FreightMaritime: FC = () => {
             {advantages.map((advantage, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : 'animate-delay-400'}`}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center">
                   <advantage.icon size={32} className="text-white" aria-hidden="true" />
@@ -224,14 +214,13 @@ const FreightMaritime: FC = () => {
             </div>
 
             <div className="relative">
-              <img
+              <ResponsiveImage
                 src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Conteneurs de fret maritime"
-                loading="lazy"
-                decoding="async"
                 width={800}
                 height={533}
                 className="w-full h-96 object-cover rounded-xl shadow-xl"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent rounded-xl"></div>
             </div>
@@ -255,8 +244,7 @@ const FreightMaritime: FC = () => {
             {destinations.map((destination, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-150' : index === 2 ? 'animate-delay-300' : index === 3 ? 'animate-delay-450' : 'animate-delay-600'}`}
               >
                 <div className="flex items-center mb-6">
                   <MapPin size={24} className="text-accent-500 mr-3" aria-hidden="true" />

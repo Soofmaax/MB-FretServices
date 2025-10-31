@@ -1,8 +1,7 @@
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
-
-const CSP_NONCE = 'abc123';
+import { CSP_NONCE } from '../config/security';
 
 const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -63,11 +62,12 @@ const SiteSEO: FC = () => {
       {/* Structured data */}
       <script type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(organization)}
-    </crscript>
-     <iscript type="application/ld+json" nonce={CSP_NONCE}>
+      </script>
+      <script type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(website)}
-    </atscript>
-     < script type="applicationocalBusiness)}
+      </script>
+      <script type="application/ld+json" nonce={CSP_NONCE}>
+        {JSON.stringify(localBusiness)}
       </script>
     </Helmet>
   );

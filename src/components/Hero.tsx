@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import CtaButton from './CtaButton';
+import ResponsiveImage from './ResponsiveImage';
 import { useTranslation } from 'react-i18next';
 
 const HERO_IMG =
@@ -10,28 +11,18 @@ const Hero: FC = () => {
 
   return (
     <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white overflow-hidden">
-      {/* Background image as <picture> with srcset for better LCP and sizing */}
-      <picture className="absolute inset-0">
-        <source
-          type="image/jpeg"
-          srcSet="
-            https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
-            https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w,
-            https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w
-          "
-        />
-        <img
+      {/* Background image using reusable ResponsiveImage for stability and maintainability */}
+      <div className="absolute inset-0">
+        <ResponsiveImage
           src={HERO_IMG}
           alt={t('alt_hero')}
-          fetchPriority="high"
-          decoding="async"
-          loading="eager"
           width={1600}
           height={900}
-          className="w-full h-full object-cover"
+          priority
           sizes="100vw"
+          className="w-full h-full object-cover"
         />
-      </picture>
+      </div>
       <div className="absolute inset-0 bg-black opacity-30"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">

@@ -76,7 +76,7 @@ const Contact: FC = () => {
             </div>
 
             {/* Téléphone */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group" style={{ animationDelay: '200ms' }}>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-200">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Phone size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -93,7 +93,7 @@ const Contact: FC = () => {
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group" style={{ animationDelay: '400ms' }}>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-4_codeelay: '400ms' }}>
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -112,7 +112,7 @@ const Contact: FC = () => {
             </div>
 
             {/* Bureau */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group" style={{ animationDelay: '600ms' }}>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-600">
               <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MapPin size={32} className="text-white" aria-hidden="true" />
               </div>
