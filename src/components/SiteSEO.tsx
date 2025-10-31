@@ -2,6 +2,8 @@ import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
 
+const CSP_NONCE = 'abc123';
+
 const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
   const GSC = (import.meta.env?.VITE_GSC_VERIFICATION as string | undefined) || '';
@@ -59,14 +61,13 @@ const SiteSEO: FC = () => {
       {BING ? <meta name="msvalidate.01" content={BING} /> : null}
 
       {/* Structured data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(organization)}
-      </script>
-      <script type="application/ld+json">
+    </crscript>
+     <iscript type="application/ld+json" nonce={CSP_NONCE}>
         {JSON.stringify(website)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(localBusiness)}
+    </atscript>
+     < script type="applicationocalBusiness)}
       </script>
     </Helmet>
   );

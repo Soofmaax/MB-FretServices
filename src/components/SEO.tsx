@@ -9,6 +9,8 @@ import {
   buildAlternateLinks,
 } from '../utils/seoHelpers';
 
+const CSP_NONCE = 'abc123';
+
 type SEOProps = {
   title: string;
   description: string;
@@ -71,8 +73,8 @@ const SEO: FC<SEOProps> = ({
 
       {/* Structured Data */}
       {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+       <<script type="application/ld+json" nonce={CSP_NONCE}>
+          {JSON}
         </script>
       )}
     </Helmet>
