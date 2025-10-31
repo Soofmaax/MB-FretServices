@@ -14,6 +14,12 @@ const DestinationsShowcase: FC = () => {
   const { t } = useTranslation('home');
 
   const destinations = t('showcase', { returnObjects: true }) as ShowcaseItem[];
+  const buildSrcSet = (url: string) => {
+    const u800 = url.replace(/w=\d+/, 'w=800');
+    const u1200 = url.replace(/w=\d+/, 'w=1200');
+    const u1600 = url.replace(/w=\d+/, 'w=1600');
+    return `${u800} 800w, ${u1200} 1200w, ${u1600} 1600w`;
+  };
 
   return (
     <section className="py-16 lg:py-24 bg-white">
@@ -35,15 +41,19 @@ const DestinationsShowcase: FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="relative">
-                <img
-                  src={destination.image}
-                  alt={`${destination.country} - ${destination.city}`}
-                  loading="lazy"
-                  decoding="async"
-                  width={800}
-                  height={533}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                <picture>
+                  <source type="image/jpeg" srcSet={buildSrcSet(destination.image)} />
+                  <img
+                    src={destination.image}
+                    alt={`${destination.country} - ${destination.city}`}
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={533}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               </div>
 

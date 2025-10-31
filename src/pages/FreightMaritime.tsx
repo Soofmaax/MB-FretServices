@@ -108,12 +108,27 @@ const FreightMaritime: FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600")'
-          }}
-        ></div>
+        <picture className="absolute inset-0">
+          <source
+            type="image/jpeg"
+            srcSet="
+              https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800 800w,
+              https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w,
+              https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w
+            "
+          />
+          <img
+            src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Conteneurs de fret maritime"
+            fetchPriority="high"
+            decoding="async"
+            loading="eager"
+            width={1600}
+            height={900}
+            className="w-full h-full object-cover"
+            sizes="100vw"
+          />
+        </picture>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="animate-fade-in">

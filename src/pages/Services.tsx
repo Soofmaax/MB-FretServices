@@ -136,23 +136,54 @@ const Services: FC = () => {
 
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                     <div className="relative rounded-xl overflow-hidden shadow-xl">
-                      <img
-                        src={`https://images.pexels.com/photos/${
-                          index === 0 ? '906982' :
-                          index === 1 ? '723240' :
-                          index === 2 ? '7681091' : '416978'
-                        }/pexels-photo-${
-                          index === 0 ? '906982' :
-                          index === 1 ? '723240' :
-                          index === 2 ? '7681091' : '416978'
-                        }.jpeg?auto=compress&cs=tinysrgb&w=800`}
-                        alt={`Service ${title}`}
-                        loading="lazy"
-                        decoding="async"
-                        width={800}
-                        height={533}
-                        className="w-full h-64 lg:h-80 object-cover"
-                      />
+                      <picture>
+                        <source
+                          type="image/jpeg"
+                          srcSet={`https://images.pexels.com/photos/${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }/pexels-photo-${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }.jpeg?auto=compress&cs=tinysrgb&w=800 800w, https://images.pexels.com/photos/${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }/pexels-photo-${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w, https://images.pexels.com/photos/${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }/pexels-photo-${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }.jpeg?auto=compress&cs=tinysrgb&w=1600 1600w`}
+                        />
+                        <img
+                          src={`https://images.pexels.com/photos/${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }/pexels-photo-${
+                            index === 0 ? '906982' :
+                            index === 1 ? '723240' :
+                            index === 2 ? '7681091' : '416978'
+                          }.jpeg?auto=compress&cs=tinysrgb&w=800`}
+                          alt={`Service ${title}`}
+                          loading="lazy"
+                          decoding="async"
+                          width={800}
+                          height={533}
+                          className="w-full h-64 lg:h-80 object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </picture>
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
                     </div>
                   </div>
