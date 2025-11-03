@@ -1,5 +1,7 @@
 # MB Fret Services — Site vitrine (React + Vite + TS)
 
+![Node](https://img.shields.io/badge/node-20%2B-3c873a) ![License](https://img.shields.io/badge/license-MIT-green) ![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-blue)
+
 Site multilingue optimisé pour le SEO international (Europe ↔ Afrique ↔ Asie), prêt pour GitHub Pages et Cloudflare Pages. Stack moderne, CI stricte, accessibilité et sécurité soignées.
 
 ## Sommaire
@@ -47,7 +49,7 @@ Générez des captures et placez‑les dans `public/screenshots`:
 - Helmet pour SEO (title, description, canonical, OG/Twitter)
 - i18next pour i18n (9 langues)
 - SSG via Puppeteer postbuild (FR/EN/PT)
-- Détails: voir ARCHITECTURE.md
+- Détails: voir documentation/ARCHITECTURE.md
 
 ## Fonctionnalités clés
 - SEO International:
@@ -86,7 +88,7 @@ Format / Lint / Typecheck / Tests:
 - `npm run test`
 
 Build & Preview:
-- `npm run build`
+- `npm run build` (minification JS/CSS, optimisation des assets par Vite)
 - `npm run preview`
 
 SSG & Génération:
@@ -165,7 +167,8 @@ Exemple (`.env.example`):
 - Micro‑animations: optionnel (gardez `prefers-reduced-motion`)
 
 ## Contribuer
-Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines.
+Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines. Consultez également documentation/STYLEGUIDE.md pour les conventions de style</.
+
 
 ## Changelog
 - 2025‑01‑03 — Docs: refonte complète du README et ajout ARCHITECTURE/CONTRIBUTING/VISUELS
@@ -175,7 +178,7 @@ Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines
 - 2025‑01‑03 — Sécurité: CSP sans nonce + headers Pages
 
 ## Développé par
-Ce projet a été conçu et développé par SmarterLogic Web.
+Développé par **SmarterLogicWeb**.
 
 Pour en savoir plus ou pour nous contacter, visitez notre site: https://smarterlogiqueweb.com.
 

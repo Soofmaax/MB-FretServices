@@ -9,8 +9,6 @@ import {
   buildAlternateLinks,
 } from '../utils/seoHelpers';
 
-import { CSP_NONCE } from '../config/security';
-
 type SEOProps = {
   title: string;
   description: string;

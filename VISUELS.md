@@ -1,43 +1,58 @@
 # VISUELS (Logos, Favicons, OpenGraph, Hero)
 
-Guide pour gérer les assets visuels (logos, favicons, images OG/Twitter, images de hero).
+Ce fichier liste les visuels manquants/à fournir et leur emplacement exact pour finaliser le portfolio.
 
-## Favicons & Manifest
+## 1) OpenGraph/Twitter (image par défaut)
 
-- `public/favicon.svg` — favicon principal
-- Optionnel: `site.webmanifest` si vous ajoutez un PWA manifest
+- Fichier: `index.html`, lignes ~24–33
+  - `<meta property="og:image" ...>` et `<meta property="twitter:image" ...>` pointent vers une image Pexels.
+  - À fournir: `public/og-default.webp` (1200×630 ou 1600×900), poids < 300 Ko.
+  - Action: mettre à jour `index.html` et `src/utils/seoHelpers.ts` (const `DEFAULT_OG_IMAGE`, ligne ~5).
 
-## OpenGraph & Twitter
+## 2) Hero (home)
 
-- Image par défaut:
-  - Index/Helmet: `og:image` pointant vers une image de 1200–1600px large
-  - Ratio conseillé: 1200×630 (Twitter: 1200×600)
-- Hébergement:
-  - Placer les images OG/Twitter sous `public/` ou un CDN stable
-- Bonnes pratiques:
-  - Poids < 300 Ko si possible (WebP)
-  - Titre/description cohérents avec la page
+- Fichier: `src/components/Hero.tsx`, constante `HERO_IMG` (ligne ~7) et `<ResponsiveImage ...>` (lignes ~15–28).
+  - Actuel: image Pexels distant.
+  - À fournir: `/public/images/hero-{800,1200,1600}.{avif,webp,jpg}`.
+  - Action: remplacer `HERO_IMG` par `/images/hero-1600.webp` + prop `webpSrc`/`avifSrc` si local.
 
-## Hero images
+## 3) Freight Maritime (hero + section)
 
-- Utiliser `<picture>` et `ResponsiveImage` pour fournir WebP/AVIF + fallback JPEG
-- Définir `width`/`height` ou styles CSS avec aspect ratio pour limiter le CLS
-- Preload d’une version adaptée mobile (ex: 1200px)
-- `object-position` pour cadrage (ex: `0% 50%`)
+- Fichier: `src/pages/FreightMaritime.tsx`
+  - Hero `<ResponsiveImage ...>` (ligne ~39) — Pexels 1600.
+  - Image section détaillée `<ResponsiveImage ...>` (ligne ~130) — Pexels 800.
+  - À fournir: `/public/images/freight-hero-{800,1200,1600}.{avif,webp,jpg}`, `/public/images/freight-detail-{800,1200,1600}.{avif,webp,jpg}`.
 
-## Prise de captures
+## 4) Services (grid visuels)
 
-- Script: `npm run screenshots`
-- BASE_URL:
-  - `http://localhost:4173` via `npm run preview`
-  - ou l’URL de production
-- Sortie:
-  - Images enregistrées dans `public/screenshots/*.png`
-- Intégration au README:
-  - Ajoutez des liens Markdown vers `public/screenshots/...` si souhaité
+- Fichier: `src/pages/Services.tsx`
+  - Images Pexels dynamiques (lignes ~89–116).
+  - À fournir: `/public/images/services-{maritime,air,customs,insurance}-{800,1200,1600}.{avif,webp,jpg}`.
 
-## Conseils de performance
+## 5) Destinations Showcase (home)
 
-- Préférer WebP/AVIF pour les grandes images
-- Éviter des dimensions supérieures à l’espace d’affichage
-- `decoding="async"` et lazy loading pour images hors‑écran
+- Fichier: `src/components/DestinationsShowcase.tsx`, `<ResponsiveImage ...>` (lignes ~32–41).
+  - Actuel: URL d’images dans `public/locales/*/home.json` (4 visuels par langue).
+  - À fournir: `/public/images/showcase-{1..4}-{800,1200,1600}.{avif,webp,jpg}` et mise à jour des fichiers `home.json` pour utiliser les chemins locaux.
+
+## 6) JSON‑LD LocalBusiness (image)
+
+- Fichier: `src/components/SiteSEO.tsx`, propriété `image` (ligne ~34).
+  - Actuel: Pexels 1200.
+  - À fournir: `/public/images/localbusiness-1200.webp`.
+
+## 7) Favicons & manifest
+
+- Fichier: `public/favicon.svg` — OK.
+- Optionnel: `public/site.webmanifest` + icônes 192×192, 512×512.
+
+## 8) Screenshots (portfolio)
+
+- Script: `scripts/screenshots.mjs`
+- Sortie: `public/screenshots/*.png`
+- À intégrer au README si souhaité.
+
+Notes:
+- Nomenclature recommandée pour srcset: `{name}-{800,1200,1600}.{avif,webp,jpg}`.
+- Toujours fournir `width`/`height` ou un ratio CSS pour éviter le CLS.
+- Vérifier le chargement en production (PSI/Lighthouse) et ajuster `sizes` si nécessaire.
