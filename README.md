@@ -4,8 +4,24 @@ Projet de site vitrine multilingue (FR/EN/PT/ES/AR/TR/DE/IT/SW) pour services de
 
 Note : ce dépôt est destiné au développement. Les URLs finales (production) se configurent via `VITE_SITE_URL` au moment du déploiement.
 
-## Démarrage
+## Sommaire
 
+- Démarrage rapide
+- Internationalisation (i18n)
+- SEO & Données structurées (JSON‑LD)
+- SSG (pré‑rendu) FR/EN/PT
+- Qualité & CI/CD (Audit PR)
+- Sécurité & En-têtes HTTP
+- Déploiement (Cloudflare Pages, GitHub Pages)
+- Performance & Accessibilité
+- Variables d’environnement
+- Scripts
+- FAQ & Dépannage
+- Développé par
+
+## Démarrage rapide
+
+Prérequis :
 - Node.js 20+
 - npm 9+
 
@@ -35,97 +51,107 @@ Variables supportées :
 
 Cache : `.cache/i18n-cache.json`.
 
-## SEO
+## SEO & JSON‑LD
 
 - Balises par page via `react-helmet-async` (`src/components/SEO.tsx`).
-- Données structurées globales via `SiteSEO` (Organization, WebSite) + `LocalBusiness` avec coordonnées géo (Paris).
+- Données structurées globales via `SiteSEO` (Organization, WebSite, LocalBusiness).
+  - `openingHours` fourni, `sameAs` avec placeholders sociaux.
 - Sitemap XML généré poste-build par `scripts/generate-sitemap.mjs` et copié dans `public/` (+ dist/).
 - robots.txt généré poste-build par `scripts/generate-robots.mjs` (autorise explicitement GPTBot, Google-Extended, ClaudeBot, PerplexityBot, CCBot, Applebot-Extended) et référence le sitemap.
-- ai.txt (manifest pour LLM) généré poste-build par `scripts/generate-ai-txt.mjs` à la racine du site. Ce fichier résume les services, langues, zones desservies, pages clés et exemples d’intentions pour faciliter la compréhension des IA génératives.
+- ai.txt (manifest pour LLM) généré poste-build par `scripts/generate-ai-txt.mjs`.
 
 Astuce : définissez `VITE_SITE_URL` (ex : `.env.production`) pour produire des canoniques/hreflang/sitemap/ai.txt corrects en production.
 
-### Déploiement Cloudflare Pages
+## SSG (pré‑rendu) FR/EN/PT
 
-Le site est désormais prévu pour Cloudflare Pages (statique + SPA fallback).  
-Build :
-- Commande : `npm run build`
-- Dossier de sortie : `dist`
+Le pré‑rendu statique des pages clés FR/EN/PT est exécuté après `vite build`.
 
-Fichiers de configuration inclus :
-- `public/_headers` — en-têtes de sécurité et cache (copié en `dist/` au build)
+- Script : `scripts/ssg-prerender.mjs` (Puppeteer)
+- Sortie : snapshots HTML dans `dist/<route>/index.html`
+- Routes couvertes : `/fr`, `/en`, `/pt`, et principales pages services/contact/destinations.
+
+L’objectif est d’améliorer le SEO, l’unfurl social et l’indexation en fournissant un HTML initial riche.
+
+## Qualité & CI/CD (Audit PR)
+
+Un audit automatique est lancé sur chaque Pull Request.
+
+- Workflow : `.github/workflows/pr-audit.yml`
+- Vérifications :
+  - Liens brisés (404)
+  - En‑têtes HTTP (CSP, X‑Frame‑Options, X‑Content‑Type‑Options, Referrer‑Policy)
+  - Lighthouse (Performance, A11y, Best Practices, SEO)
+  - Accessibilité (pa11y) sur Home/Services/Contact
+- Quality Gate (bloquant) :
+  - Liens brisés > 0
+  - XFO/XCTO/CSP manquants
+  - Performance Lighthouse < 85
+  - Violations a11y de niveau error
+- Rapport : publié en commentaire dans la PR (audit-report.md)
+
+## Sécurité & En‑têtes HTTP
+
+En‑têtes côté Pages (Cloudflare/GitHub Pages) via `public/_headers` :
+- Content‑Security‑Policy : `default-src 'self'` + domaines autorisés (GTAG/Clarity)
+- X‑Frame‑Options : DENY
+- X‑Content‑Type‑Options : nosniff
+- Referrer‑Policy : strict-origin-when-cross-origin
+- COOP/CORP : same-origin
+- Permissions‑Policy : toutes fonctionnalités critiques désactivées
+- Cache‑Control : immutable pour assets, no‑cache pour pages clés
+
+Note : activer HSTS au niveau du domaine (Cloudflare → Security) pour `Strict-Transport-Security`.
+
+## Déploiement
+
+- Définir `VITE_SITE_URL` (URL publique finale).
+- `npm run build` (sitemap/robots/ai.txt + SSG générés).
+- Servir `dist/` avec fallback SPA (/* → /index.html) si nécessaire.
+
+### Cloudflare Pages
+
+Le site est prévu pour Pages (statique + SPA fallback).
+
+Build :
+- Commande : `npm run build`
+- Sortie : `dist`
+
+Fichiers de configuration :
+- `public/_headers` — en‑têtes sécurité et cache
 - `public/_redirects` — redirections SEO et fallback SPA
 
-Variables d’environnement à définir dans Pages :
-- `VITE_SITE_URL` (URL publique)
-- `VITE_GA_ID` (optionnel, Analytics)
-- `VITE_GSC_VERIFICATION` / `VITE_BING_VERIFICATION` (optionnels, vérifs moteur)
+Variables d’environnement (Pages) :
+- `VITE_SITE_URL`, `VITE_GA_ID` (optionnel), `VITE_GSC_VERIFICATION` / `VITE_BING_VERIFICATION` (optionnels)
 
-Tests rapides :
-- Redirections : `curl -I https://mb-fretservices.com/fret-maritime` (301 vers `/fr/services/fret-maritime`)
-- Headers : `curl -I https://mb-fretservices.com/` (CSP, X-Frame-Options…)
-- Fallback SPA : accéder à une route non listée → renvoie `index.html`
+Tests rapides :
+- Redirections : `curl -I https://mb-fretservices.com/fret-maritime`
+- Headers : `curl -I https://mb-fretservices.com/`
+- Fallback SPA : route non listée → `index.html`
 
-Prerendering (alternative à Netlify) :
-- Cloudflare Pages n’a pas de prerender intégré. Deux options :
-  - SSG (pré-rendu au build) avec Vite SSG pour les pages/langues principales
-  - Workers + service externe (ex. Prerender.io) pour servir HTML pré-rendu aux bots Prerendering (Netlify)
+### GitHub Pages
 
-Pour les SPA, Netlify peut servir une version pré-rendue aux crawlers (SEO, unfurling social, IA).
+Support SPA inclus :
+- Workflow : `.github/workflows/pages.yml` (build + deploy)
+- Fallback SPA : copie `dist/index.html` → `dist/404.html`
 
-- Activer : Netlify → Project configuration → Build & deploy → Post processing → Prerendering (toggle).
-- Cache : les pages pré-rendues sont mises en cache 24–48h (non invalidé par un nouveau déploiement).
-- Test manuel :
-  - `curl -A twitterbot https://mb-fretservices.com/fr` (UA crawler reconnu)
-  - `https://mb-fretservices.com/fr/?_escaped_fragment_=` (forçage)
-- Bonnes pratiques :
-  - Vérifier les balises OG/Twitter (Helmet) et <title>/<meta>.
-  - Éviter d’ajouter des `<script>` critiques en tête qui pourraient perturber l’extraction des meta par certains crawlers.
-- Alternative : Netlify Prerender Extension (UI) si vous souhaitez plus de visibilité/logs.
+Base path (VITE_BASE) :
+- User/Organization Pages (`username.github.io`) : `VITE_BASE=/`
+- Project Pages (`username.github.io/repo`) : `VITE_BASE=/REPO-NAME/`
+- Détermination automatique côté Actions (pages.yml)
 
-## Analytics
+## Performance & Accessibilité
 
-- Google Analytics 4 (GTAG) léger, respectant Do Not Track et anonymisation IP.
-- Variables :
-  - `VITE_GA_ID=G-XXXXXXXXXX` (laisser vide pour désactiver)
-- Intégration : initialisation dans `src/main.tsx`, page_view sur chaque navigation dans `LangLayout`.
-
-## Accessibilité
-
-- Lien d’évitement « Passer au contenu principal ».
-- Focus automatique sur `<main id="main">` après navigation.
-- Icônes décoratives marquées `aria-hidden="true"`.
-
-## Sécurité (front)
-
-CSP dans `index.html` :
-- script-src `self` + GTM
-- connect-src pour GA
-- style-src `self` + Google Fonts (avec `'unsafe-inline'`)
-- font-src Google Fonts
-- img-src `self` + images.pexels.com + GA + `data:`
-- frame-ancestors 'none', upgrade-insecure-requests
-
-Adapter si vous ajoutez d’autres domaines (CDN/analytics).
-
-## Performance
-
-- Preload de l’image « hero ».
-- Preconnect vers images.pexels.com, Google Fonts, GTM/GA.
-- Dimensions d’images explicites (réduction du CLS).
-
-## Routage et langues
-
-- SPA via React Router, préfixe `/:lng/...`.
-- `LocalizedLink` pour la construction des URLs localisées.
-- `LangLayout` positionne `lang`/`dir` sur `<html>`.
+- Hero image en preload, preconnect vers ressources externes.
+- Dimensions d’images explicites (réduction CLS).
+- A11y : skip link « Passer au contenu », focus visuel, icônes décoratives avec `aria-hidden="true"`.
 
 ## Variables d’environnement
 
 Exemple (`.env.example`) :
 - `VITE_SITE_URL=https://example.com`
+- `VITE_BASE=/` (ou `/REPO-NAME/` pour GitHub Project Pages)
 - `VITE_GA_ID=G-XXXXXXXXXX`
-- `VITE_GSC_VERIFICATION=...` (optionnel, Google Search Console)
+- `VITE_GSC_VERIFICATION=...` (optionnel)
 - `VITE_BING_VERIFICATION=...` (optionnel)
 
 ## Scripts
@@ -135,34 +161,21 @@ Exemple (`.env.example`) :
 - `preview` — prévisualisation du build
 - `lint` — ESLint
 - `typecheck` — TypeScript
-- `prebuild` — i18n sync (best-effort)
-- `postbuild` — sitemap + robots + ai.txt
+- `prebuild` — i18n sync (best‑effort)
+- `postbuild` — sitemap + robots + ai.txt + SSG
+- `test` — Vitest (jsdom)
+- `i18n:sync` — synchronisation i18n
 
-## Déploiement
+## FAQ & Dépannage
 
-- Définir `VITE_SITE_URL` (URL publique finale).
-- `npm run build` (sitemap/robots/ai.txt générés).
-- Servir `dist/` avec fallback SPA (/* → /index.html) si nécessaire.
-
-### GitHub Pages
-
-Support pour GitHub Pages (SPA) inclus :
-- Workflow : `.github/workflows/pages.yml` (build + upload + deploy Pages)
-- Fallback SPA : copie automatique `dist/index.html` → `dist/404.html` (voir CI)
-- VITE_BASE :
-  - User/Organization Pages (`username.github.io`) : laissez `VITE_BASE=/`
-  - Project Pages (`username.github.io/repo`) : définissez `VITE_BASE=/REPO-NAME/`
-  - Configurable via env ou `.env.production`
-
-Activer Pages :
-- Settings → Pages → Source: GitHub Actions
-- Pousser sur `main`, le workflow déploie vers Pages.
-
-### Cloudflare Pages
-
-Voir section dédiée plus haut (build `dist`, fichiers `public/_headers` et `public/_redirects` pris en charge).
-
-En-têtes de sécurité côté plateforme recommandés (HSTS, Permissions-Policy…).
+- Les metas OG/Twitter ne s’affichent pas sur les partages ?
+  - Vérifiez les balises via `SEO.tsx` et exécutez un partage test (Twitter Card Validator, Facebook Debugger).
+- Des liens 404 dans l’audit PR ?
+  - Consultez le commentaire de PR; corrigez les chemins dans `LocalizedLink` ou les routes.
+- HSTS absent dans l’audit PR ?
+  - Activez HSTS dans le dashboard de votre CDN (Cloudflare) — l’en‑tête ne peut pas toujours être injecté côté Pages.
+- Perf Lighthouse < 85 ?
+  - Réduisez les images (WebP/AVIF), vérifiez le poids JS/CSS, limitez les connexions externes.
 
 ## Licence
 
@@ -172,8 +185,8 @@ Ce dépôt inclut un fichier `LICENSE` (MIT). Adapter si nécessaire.
 
 Ce projet a été conçu et développé par SmarterLogic Web.
 
-Pour en savoir plus ou pour nous contacter, visitez notre site : https://smarterlogiqueweb.com.
+Pour en savoir plus ou pour nous contacter, visitez notre site : https://smarterlogiqueweb.com.
 
 - Branding & Identité Visuelle
-- Développement Front-End
+- Développement Front‑End
 - Optimisation SEO
