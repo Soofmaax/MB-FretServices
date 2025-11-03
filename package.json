@@ -48,6 +48,7 @@
     "jsdom": "^24.0.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/jest-dom": "^6.4.8",
-    "puppeteer": "^23.7.0"
+    "puppeteer": "^23.7.0",
+    "pa11y": "^6.3.0"
   }
 }

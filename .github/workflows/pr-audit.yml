@@ -46,16 +46,12 @@ jobs:
           temporaryPublicStorage: true
         continue-on-error: true
 
-      - name: Accessibility (pa11y) - 3 key pages
-        uses: pa11y/action@v2
-        with:
-          urls: |
-            http://localhost:8080/fr
-            http://localhost:8080/fr/services
-            http://localhost:8080/fr/contact
-          reporter: csv
-          chromeLaunchConfig: '{"args": ["--no-sandbox", "--disable-dev-shm-usage"]}'
-        continue-on-error: true
+      - name: Accessibility (pa11y CLI) - 3 key pages
+        run: |
+          echo "url,type,code,message" > pa11y.csv
+          npx pa11y -r csv http://localhost:8080/fr >> pa11y.csv || true
+          npx pa11y -r csv http://localhost:8080/fr/services >> pa11y.csv || true
+          npx pa11y -r csv http://localhost:8080/fr/contact >> pa11y.csv || true
 
       - name: Run custom audit script (links, headers, SEO)
         run: node scripts/pr-audit.mjs
