@@ -12,7 +12,9 @@
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
     "i18n:sync": "node scripts/translate-missing.mjs",
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "audit:site": "node scripts/audit-site.mjs",
+    "screenshots": "node scripts/screenshots.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
