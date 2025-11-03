@@ -28,14 +28,25 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Determine base path (VITE_BASE)
+        id: basepath
+        shell: bash
+        run: |
+          REPO="${GITHUB_REPOSITORY##*/}"
+          OWNER="${GITHUB_REPOSITORY%%/*}"
+          if [[ "$REPO" == "${OWNER}.github.io" ]]; then
+            echo "base=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "base=/${REPO}/" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         env:
           VITE_SITE_URL: https://mb-fretservices.com
-          # Set VITE_BASE for project pages (e.g. /repo-name/) if needed:
-          # VITE_BASE: /mb-fretservices/
+          VITE_BASE: ${{ steps.basepath.outputs.base }}
         run: npm run build
 
       - name: Add SPA fallback (404.html)
