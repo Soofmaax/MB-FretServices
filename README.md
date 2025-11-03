@@ -2,7 +2,7 @@
 
 ![Node](https://img.shields.io/badge/node-20%2B-3c873a) ![License](https://img.shields.io/badge/license-MIT-green) ![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-blue)
 
-Site multilingue optimisé pour le SEO international (Europe ↔ Afrique ↔ Asie), prêt pour GitHub Pages et Cloudflare Pages. Stack moderne, CI stricte, accessibilité et sécurité soignées.
+Site multilingue optimisé pour le SEO international (Europe ↔ Afrique ↔ Asie), prêt pour GitHub Pages et Netlify. Stack moderne, CI stricte, accessibilité et sécurité soignées.
 
 ## Sommaire
 - Aperçu
@@ -12,7 +12,7 @@ Site multilingue optimisé pour le SEO international (Europe ↔ Afrique ↔ Asi
 - Fonctionnalités clés
 - Qualité & CI
 - Démarrage & Scripts
-- Déploiement (GitHub Pages, Cloudflare Pages)
+- Déploiement (GitHub Pages, Netlify)
 - Audit automatisé (PR & site)
 - Sécurité & Headers
 - Accessibilité (WCAG AA)
@@ -112,10 +112,11 @@ Screenshots:
   - Project Pages (`username.github.io/repo`): `VITE_BASE=/REPO-NAME/`
   - Détermination automatique côté Actions
 
-### Cloudflare Pages
+### Netlify
 - Build: `npm run build` → `dist/`
-- `_headers` (sécurité + cache), `_redirects` (SEO + fallback SPA)
-- Variables: `VITE_SITE_URL`, `VITE_GA_ID` (optionnel), `VITE_GSC_VERIFICATION`/`VITE_BING_VERIFICATION`
+- Configuration: `netlify.toml` (publish, redirects, en‑têtes de sécurité)
+- Variables: `VITE_SITE_URL`, `VITE_GA_ID` (optionnel), `VITE_GSC_VERIFICATION` / `VITE_BING_VERIFICATION` (optionnels)
+- Redirections SEO et fallback SPA définis dans `netlify.toml`
 
 ## Audit automatisé (PR & site)
 - PR: audit qualité avec commentaire (voir `.github/workflows/pr-audit.yml`)
@@ -125,11 +126,11 @@ Screenshots:
 - CSP: `default-src 'self'`, script‑src autorise GTAG/Clarity si activés
 - X‑Frame‑Options: DENY
 - X‑Content‑Type‑Options: nosniff
-- Referrer‑Policy: strict-origin-when-cross-origin
+- Referrer‑Policy: no-referrer
 - COOP/CORP: same-origin
 - Permissions‑Policy: fonctionnalités critiques désactivées
 - Cache‑Control: immutable sur `/assets/*`, no‑cache sur pages clés
-- HSTS: activer côté domaine (Cloudflare)
+- HSTS: activer côté domaine (CDN / Netlify si supporté)
 
 ## Accessibilité (WCAG AA)
 - Navigation clavier: skip link “Passer au contenu”
@@ -167,7 +168,7 @@ Exemple (`.env.example`):
 - Micro‑animations: optionnel (gardez `prefers-reduced-motion`)
 
 ## Contribuer
-Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines. Consultez également documentation/STYLEGUIDE.md pour les conventions de style</.
+Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines. Consultez également documentation/STYLEGUIDE.md pour les conventions de style.
 
 
 ## Changelog

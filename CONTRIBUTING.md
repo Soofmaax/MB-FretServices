@@ -45,8 +45,9 @@ Utilisez les Conventional Commits:
 - Push sur `main` → déploiement auto
 - Base path (`VITE_BASE`) déterminé automatiquement (user/org vs project pages)
 
-### Cloudflare Pages
-- Build `dist`, fichiers `_headers` et `_redirects` pris en charge
-- Activer HSTS côté domaine, HTTP/3 et Brotli
+### Netlify
+- Build: `npm run build` (publication de `dist`)
+- Configuration via `netlify.toml` (headers, redirects)
+- Variables d’environnement dans Netlify (Site Settings → Environment variables)
 
 Merci !

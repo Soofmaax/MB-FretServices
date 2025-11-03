@@ -15,7 +15,6 @@ Ce document décrit l’architecture du site vitrine MB Fret Services (React + V
   - `i18n.ts` (i18next)
 - `public/`
   - `locales/{lng}/*.json` (traductions)
-  - `_headers`, `_redirects` (Pages)
   - `robots.txt`, `sitemap.xml`, `ai.txt`, `favicon.svg`, `404.html`, `screenshots/`
 - `scripts/`
   - `generate-sitemap.mjs`, `generate-robots.mjs`, `generate-ai-txt.mjs`
@@ -45,7 +44,7 @@ Ce document décrit l’architecture du site vitrine MB Fret Services (React + V
 
 ## 5. Sécurité
 
-- En‑têtes via `_headers` / Netlify/Pages: CSP sans nonce, XFO, XCTO, Referrer‑Policy, COOP/CORP, Permissions‑Policy
+- En‑têtes via Netlify (`netlify.toml`) et configuration de plateforme: CSP sans nonce, XFO, XCTO, Referrer‑Policy, COOP/CORP, Permissions‑Policy
 - HSTS: à activer côté domaine (CDN) si disponible
 - Liens externes: `rel="noopener noreferrer"` systématique
 
@@ -63,4 +62,4 @@ Ce document décrit l’architecture du site vitrine MB Fret Services (React + V
 ## 8. Déploiement
 
 - GitHub Pages: base path auto (user/org vs project pages), fallback 404
-- Cloudflare Pages: `_headers` / `_redirects`, `dist/` comme sortie
+- Netlify: configuration via `netlify.toml` (headers de sécurité, redirections, cache)
