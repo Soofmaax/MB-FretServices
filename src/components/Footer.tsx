@@ -172,12 +172,12 @@ const Footer: FC = () => {
           <p className="text-gray-300 mt-2">
             {t('footer:credits', 'Conception & développement:')}{' '}
             <a
-              href="https://smarterlogicweb.com"
+              href="https://smarterlogiqueweb.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent-400 hover:text-accent-300"
             >
-              Smarter Logic Web
+              SmarterLogic Web
             </a>
           </p>
         </div>

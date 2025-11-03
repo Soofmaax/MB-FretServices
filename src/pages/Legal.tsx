@@ -123,12 +123,23 @@ const Legal: FC = () => {
                 <p className="text-gray-700 leading-relaxed">
                   {t('sections.credits.content', 'Conception & développement:')}{' '}
                   <a
-                    href="https://smarterlogicweb.com"
+                    href="https://smarterlogiqueweb.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent-600 hover:text-accent-700"
                   >
-                    Smarter Logic Web
+                    SmarterLogic Web
+                  </a>
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-2">
+                  Pour tout problème ou demande, merci de nous contacter via notre site :{' '}
+                  <a
+                    href="https://smarterlogiqueweb.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent-600 hover:text-accent-700"
+                  >
+                    smarterlogiqueweb.com
                   </a>
                 </p>
               </section>

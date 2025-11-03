@@ -167,3 +167,13 @@ En-têtes de sécurité côté plateforme recommandés (HSTS, Permissions-Policy
 ## Licence
 
 Ce dépôt inclut un fichier `LICENSE` (MIT). Adapter si nécessaire.
+
+## Développé par
+
+Ce projet a été conçu et développé par SmarterLogic Web.
+
+Pour en savoir plus ou pour nous contacter, visitez notre site : https://smarterlogiqueweb.com.
+
+- Branding & Identité Visuelle
+- Développement Front-End
+- Optimisation SEO

@@ -21,7 +21,7 @@ site:
   social:
     linkedin: https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER
     twitter: https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER
-  developer: https://smarterlogicweb.com
+  developer: https://smarterlogiqueweb.com
   pages:
     - lang: fr
       key: home
