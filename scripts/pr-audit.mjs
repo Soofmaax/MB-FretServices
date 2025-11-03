@@ -15,11 +15,24 @@ const BASE_URL = process.env.BASE_URL || 'http://localhost:8080';
 
 // Pages to crawl within same origin (limit depth to avoid infinite loops)
 const START_PATHS = [
+  // French
   '/fr',
   '/fr/services',
   '/fr/contact',
   '/fr/destinations',
   '/fr/services/fret-maritime',
+  // English
+  '/en',
+  '/en/services',
+  '/en/contact',
+  '/en/destinations',
+  '/en/services/maritime-freight',
+  // Portuguese
+  '/pt',
+  '/pt/servicos',
+  '/pt/contacto',
+  '/pt/destinos',
+  '/pt/servicos/frete-maritimo',
 ];
 const MAX_PAGES = 50;
 
@@ -274,7 +287,7 @@ async function main() {
   if (!sec.present.xfo) failReasons.push('X-Frame-Options manquant');
   if (!sec.present.xcto) failReasons.push('X-Content-Type-Options manquant');
   if (!sec.csp) failReasons.push('Content-Security-Policy manquant');
-  if (lh && lh.perf < 85) failReasons.push(`Performance Lighthouse < 85 (=${lh.perf})`);
+  if (lh && lh.perf < 90) failReasons.push(`Performance Lighthouse < 90 (=${lh.perf})`);
   if (pa11y && pa11y.some((i) => i.type === 'error')) failReasons.push('Violations a11y (pa11y) de niveau error');
 
   const summaryPath = path.join(process.cwd(), 'audit-summary.json');
