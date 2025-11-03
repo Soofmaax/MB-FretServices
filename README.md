@@ -181,6 +181,48 @@ Exemple (`.env.example`) :
 
 Ce dépôt inclut un fichier `LICENSE` (MIT). Adapter si nécessaire.
 
+## Contribuer
+
+Lignes directrices pour contribuer au projet :
+
+- Branches :
+  - `feature/<slug>` pour les nouvelles fonctionnalités (ex : `feature/branding-smarterlogic`)
+  - `fix/<slug>` pour les corrections (ex : `fix/footer-link`)
+  - `docs/<slug>` pour les changements de documentation
+- Commits (conventional commits recommandés) :
+  - `feat: ...` nouvelle fonctionnalité
+  - `fix: ...` correction de bug
+  - `docs: ...` documentation uniquement
+  - `chore: ...` tâches diverses (CI, tooling)
+- Pull Requests :
+  - Base : `main`
+  - Inclure une description claire, des screenshots si UI
+  - Lancement automatique de l’audit PR (liens, headers, Lighthouse, a11y)
+  - Le Quality Gate doit être vert (sinon indiquer la raison et le plan d’action)
+
+Processus de revue :
+- Vérifier que le build passe (`npm run build`)
+- Lire le rapport d’audit PR posté par la CI
+- Résoudre les points bloquants (liens 404, headers manquants, perf < 85, violations a11y)
+
+Guides additionnels :
+- i18n : si vous ajoutez des clés, lancez `npm run i18n:sync`
+- SEO : assurez-vous que `SEO.tsx` est correctement renseigné sur les nouvelles pages
+- SSG : ajoutez la route dans `scripts/ssg-prerender.mjs` si vous souhaitez pré‑rendre une nouvelle page
+
+## Changelog
+
+Ce projet suit un changelog simple (KEEP A CHANGELOG inspiré). Les entrées majeures sont consignées ci‑dessous :
+
+- 2025‑01‑03 — Docs : refonte complète du README (Sommaire, SSG, Qualité, Sécurité, Déploiement, FAQ)
+- 2025‑01‑03 — Branding : intégration SmarterLogic Web (Footer, Mentions Légales, JSON‑LD, ai.txt)
+- 2025‑01‑03 — Qualité : ajout d’un audit PR (links, headers, Lighthouse, a11y, Quality Gate)
+- 2025‑01‑03 — SSG : pré‑rendu FR/EN/PT via Puppeteer
+- 2025‑01‑03 — Sécurité : CSP sans nonce + headers Pages
+
+Pour les versions futures, utilisez le format :
+- YYYY‑MM‑DD — Type : description concise (module/fichiers)
+
 ## Développé par
 
 Ce projet a été conçu et développé par SmarterLogic Web.
@@ -190,3 +232,18 @@ Pour en savoir plus ou pour nous contacter, visitez notre site : https://smarte
 - Branding & Identité Visuelle
 - Développement Front‑End
 - Optimisation SEO
+
+---
+
+## English quick note
+
+Contributing:
+- Branches: `feature/<slug>`, `fix/<slug>`, `docs/<slug>`
+- Conventional commits: `feat`, `fix`, `docs`, `chore`
+- PRs target `main`, CI posts an audit report; Quality Gate must pass.
+
+Changelog:
+- Keep a simple dated log (see examples above).
+
+Deployment:
+- Cloudflare Pages or GitHub Pages; set `VITE_SITE_URL` and (for project pages) `VITE_BASE=/REPO-NAME/`.
