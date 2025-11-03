@@ -144,6 +144,24 @@ Exemple (`.env.example`) :
 - `npm run build` (sitemap/robots/ai.txt générés).
 - Servir `dist/` avec fallback SPA (/* → /index.html) si nécessaire.
 
+### GitHub Pages
+
+Support pour GitHub Pages (SPA) inclus :
+- Workflow : `.github/workflows/pages.yml` (build + upload + deploy Pages)
+- Fallback SPA : copie automatique `dist/index.html` → `dist/404.html` (voir CI)
+- VITE_BASE :
+  - User/Organization Pages (`username.github.io`) : laissez `VITE_BASE=/`
+  - Project Pages (`username.github.io/repo`) : définissez `VITE_BASE=/REPO-NAME/`
+  - Configurable via env ou `.env.production`
+
+Activer Pages :
+- Settings → Pages → Source: GitHub Actions
+- Pousser sur `main`, le workflow déploie vers Pages.
+
+### Cloudflare Pages
+
+Voir section dédiée plus haut (build `dist`, fichiers `public/_headers` et `public/_redirects` pris en charge).
+
 En-têtes de sécurité côté plateforme recommandés (HSTS, Permissions-Policy…).
 
 ## Licence
