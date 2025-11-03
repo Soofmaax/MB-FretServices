@@ -9,6 +9,10 @@
   html[lang="ar"] body {
     font-family: 'Cairo', 'Inter', system-ui, sans-serif;
   }
+  /* Focus visible: assurer un indicateur clair et cohérent */
+  :focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-accent-500;
+  }
 }
 
 /* Local utilities for subtle animations used on 404 page */
