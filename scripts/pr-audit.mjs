@@ -267,6 +267,23 @@ async function main() {
   const outPath = path.join(process.cwd(), 'audit-report.md');
   fs.writeFileSync(outPath, lines.join('\n'), 'utf8');
   console.log(`Wrote ${outPath}`);
+
+  // Quality Gate strict
+  const failReasons = [];
+  if (linkRes.broken.length > 0) failReasons.push(`Liens brisés détectés: ${linkRes.broken.length}`);
+  if (!sec.present.xfo) failReasons.push('X-Frame-Options manquant');
+  if (!sec.present.xcto) failReasons.push('X-Content-Type-Options manquant');
+  if (!sec.csp) failReasons.push('Content-Security-Policy manquant');
+  if (lh && lh.perf < 85) failReasons.push(`Performance Lighthouse < 85 (=${lh.perf})`);
+  if (pa11y && pa11y.some((i) => i.type === 'error')) failReasons.push('Violations a11y (pa11y) de niveau error');
+
+  const summaryPath = path.join(process.cwd(), 'audit-summary.json');
+  const summary = { fail: failReasons.length > 0, reason: failReasons.join(' | ') };
+  fs.writeFileSync(summaryPath, JSON.stringify(summary), 'utf8');
+  if (summary.fail) {
+    console.error(`Quality Gate failed: ${summary.reason}`);
+    process.exit(1);
+  }
 }
 
 main().catch((e) => {

@@ -1,30 +1,31 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <title>Redirecting…</title>
-    <meta name="robots" content="noindex,nofollow">
-    <meta name="referrer" content="no-referrer">
-    <script>
-      (function(l) {
-        // Known language codes to avoid mistaking them for a repo name on user pages
-        var langs = {'fr':1,'en':1,'pt':1,'es':1,'ar':1,'tr':1,'sw':1,'de':1,'it':1};
-        var path = l.pathname || '/';
-        var segs = path.split('/').filter(Boolean);
-        // Guess base: if the first segment is NOT a language, assume it is the repo name (/repo/…)
-        var base = '/';
-        if (segs.length && !langs[segs[0]]) {
-          base = '/' + segs[0] + '/';
-        }
-        // Build redirect target: send the original path+query+hash as ?p=… to index
-        var p = path + (l.search || '') + (l.hash || '');
-        var dest = base + '?p=' + encodeURIComponent(p);
-        l.replace(dest);
-      })(window.location);
-    </script>
-    <noscript>
-      <meta http-equiv="refresh" content="0; url=/" />
-    </noscript>
+    <meta charset="UTF-8">
+    <title>Page non trouvée — MB Fret Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      :root { color-scheme: light dark; }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#f8fafc; color:#0a2342; }
+      .container { max-width: 720px; margin: 10vh auto; padding: 2rem; background:#fff; border-radius: 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.07); }
+      h1 { font-size: 2rem; margin: 0 0 1rem; }
+      p { margin: 0.5rem 0; color:#334155; }
+      .links { display:flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+      a { display:inline-block; padding: 0.6rem 0.9rem; border-radius: 8px; text-decoration: none; background:#0a2342; color:#fff; }
+      a.secondary { background:#eef2ff; color:#0a2342; }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container" role="main">
+      <h1>Page non trouvée (404)</h1>
+      <p>La page demandée n’existe pas ou a été déplacée.</p>
+      <p>Veuillez choisir votre langue :</p>
+      <div class="links">
+        <a href="/fr">Accueil (FR)</a>
+        <a class="secondary" href="/en">Home (EN)</a>
+        <a class="secondary" href="/pt">Início (PT)</a>
+      </div>
+      <p style="margin-top:1rem">Si vous pensez qu’il s’agit d’une erreur, contactez : <a class="secondary" href="mailto:contact@mb-fretservices.com">contact@mb-fretservices.com</a></p>
+    </div>
+  </body>
 </html>

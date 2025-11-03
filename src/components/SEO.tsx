@@ -74,7 +74,7 @@ const SEO: FC<SEOProps> = ({
 
       {/* Structured Data */}
       {jsonLd && (
-        <script type="application/ld+json" nonce={CSP_NONCE}>
+        <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
       )}

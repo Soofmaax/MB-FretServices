@@ -7,7 +7,7 @@
     "dev": "vite",
     "prebuild": "node scripts/translate-missing.mjs",
     "build": "vite build",
-    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/generate-robots.mjs && node scripts/generate-ai-txt.mjs",
+    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/generate-robots.mjs && node scripts/generate-ai-txt.mjs && node scripts/ssg-prerender.mjs",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
@@ -45,6 +45,7 @@
     "vitest": "^2.0.5",
     "jsdom": "^24.0.0",
     "@testing-library/react": "^16.0.0",
-    "@testing-library/jest-dom": "^6.4.8"
+    "@testing-library/jest-dom": "^6.4.8",
+    "puppeteer": "^23.7.0"
   }
 }

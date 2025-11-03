@@ -1,7 +1,6 @@
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
-import { CSP_NONCE } from '../config/security';
 
 const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -17,6 +16,12 @@ const SiteSEO: FC = () => {
     name: 'MB Fret Services',
     url: SITE_URL,
     creator: DEV,
+    sameAs: [
+      'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.instagram.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.facebook.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+    ],
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -58,6 +63,16 @@ const SiteSEO: FC = () => {
       longitude: 2.3522,
     },
     areaServed: ['Europe', 'Africa', 'Asia'],
+    openingHours: [
+      'Mo-Fr 09:00-18:00',
+      'Sa 10:00-14:00',
+    ],
+    sameAs: [
+      'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.instagram.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.facebook.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+    ],
     creator: DEV,
   };
 
@@ -68,13 +83,13 @@ const SiteSEO: FC = () => {
       {BING ? <meta name="msvalidate.01" content={BING} /> : null}
 
       {/* Structured data */}
-      <script type="application/ld+json" nonce={CSP_NONCE}>
+      <script type="application/ld+json">
         {JSON.stringify(organization)}
       </script>
-      <script type="application/ld+json" nonce={CSP_NONCE}>
+      <script type="application/ld+json">
         {JSON.stringify(website)}
       </script>
-      <script type="application/ld+json" nonce={CSP_NONCE}>
+      <script type="application/ld+json">
         {JSON.stringify(localBusiness)}
       </script>
     </Helmet>
