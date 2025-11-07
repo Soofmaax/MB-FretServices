@@ -14,6 +14,7 @@
         --accent-400:#fb923c;
         --accent-500:#FF5722;
         --accent-600:#ea580c;
+        --accent-700:#c2410c;
         --gray-25:#fcfcfd;
         --gray-50:#f9fafb;
         --gray-100:#f3f4f6;
@@ -32,7 +33,7 @@
         position:absolute; inset:0;
         background-image: url('https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600');
         background-size: cover; background-position: center;
-        filter: brightness(0.9) saturate(1.05);
+        filter: brightness(0.95) saturate(1.05);
         transform: scale(1.03);
       }
       /* Voile bleu sur l'image, fidèle au design d'origine */
@@ -45,79 +46,96 @@
       .content {
         position: absolute; inset: 3mm;
         padding: 6mm;
-        display: grid; grid-template-rows: auto 1fr auto;
+        display: grid; grid-template-rows: auto auto 1fr auto;
         gap: 5mm;
-        /* card blanche pour lisibilité (comme le design d'origine) */
         background: #fff;
-        border: 0.4mm solid var(--gray-200);
-        border-radius: 4mm;
+        border: 0.5mm solid var(--gray-200);
+        border-radius: 5mm;
         overflow: hidden;
       }
 
-      /* Header fidèle au design : gradient et badges */
-      .header {
-        position: relative; color:#fff; padding: 8mm 8mm 6mm;
-        background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+      /* Bandeau accent top pour dynamiser */
+      .accent-top {
+        height: 3mm;
+        background: linear-gradient(90deg, var(--accent-500), var(--accent-600));
+        border-radius: 2mm;
       }
-      .header > * { position: relative; z-index: 1; }
+
+      /* Header plus contrasté */
+      .header {
+        color:#fff; padding: 8mm 8mm 6mm;
+        background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+        border-radius: 4mm;
+        box-shadow: 0 1mm 4mm rgba(0,0,0,0.18);
+      }
       .header-top { display:flex; align-items:center; justify-content:space-between; gap:4mm; }
       .logo { display:flex; align-items:center; gap:3mm; }
       .logo-mark {
-        width:8mm; height:8mm; border-radius:2mm; background:linear-gradient(135deg,var(--accent-500),var(--accent-600));
+        width:9mm; height:9mm; border-radius:2.2mm; background:linear-gradient(135deg,var(--accent-500),var(--accent-600));
         box-shadow:0 0.6mm 2mm rgba(0,0,0,0.25);
       }
-      .brand { font-weight:700; font-size:16pt; letter-spacing:0.2px; }
-      .tagline { font-size:10.5pt; color:#e5e7eb; margin-top:1mm; }
+      .brand { font-weight:700; font-size:18pt; letter-spacing:0.3px; }
+      .tagline { font-size:11pt; color:#e5e7eb; margin-top:1mm; }
       .badges { display:flex; flex-wrap:wrap; gap:2mm; margin-top:3mm; }
       .badge {
-        font-size:8.5pt; padding:1.8mm 3mm; border-radius:4mm; background:rgba(255,255,255,0.10);
-        border:0.4mm solid rgba(255,255,255,0.20);
+        font-size:9pt; padding:1.8mm 3.2mm; border-radius:4mm; background:rgba(255,255,255,0.12);
+        border:0.4mm solid rgba(255,255,255,0.25);
       }
 
-      /* Corps identique : valeurs, services/process, destinations/contacts, CTA */
-      .body { padding: 6mm 8mm; background: #fff; display: grid; grid-template-rows: auto auto 1fr; gap: 5mm; }
+      /* Corps */
+      .body { padding: 6mm 8mm; display: grid; grid-template-rows: auto auto 1fr; gap: 6mm; }
 
       .title-underline { display:inline-block; padding-bottom:1mm; border-bottom: 1mm solid var(--accent-500); }
 
       .vp-row { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:4mm; }
       .vp { background: var(--gray-50); border: 0.4mm solid var(--gray-200); border-radius: 4mm; padding: 4mm; }
-      .vp h4 { margin:0 0 1mm; font-size:10.5pt; color:var(--primary-900); }
-      .vp p { margin:0; font-size:9pt; color:var(--gray-700); }
+      .vp h4 { margin:0 0 1mm; font-size:11pt; color:var(--primary-900); }
+      .vp p { margin:0; font-size:9.5pt; color:var(--gray-700); }
 
-      .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
-      .card { border: 0.4mm solid var(--gray-200); border-radius: 4mm; padding: 5mm; position: relative; }
-      .card h3 { margin:0 0 2mm; font-size:12pt; color:var(--primary-900); }
-      .list { list-style:none; margin:0; padding:0; font-size:9.5pt; color:var(--gray-700); }
-      .list li { display:flex; align-items:flex-start; gap:3mm; margin:2mm 0; }
-      .dot { width:2.2mm; height:2.2mm; border-radius:50%; background:var(--accent-500); margin-top:1.2mm; flex-shrink:0; }
-
-      .card::before{
-        content:""; position:absolute; left:0; right:0; top:0; height:1mm; background: linear-gradient(90deg, var(--accent-500), var(--accent-600));
-        opacity:0.5;
-      }
+      .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+      .card { border: 0.4mm solid var(--gray-200); border-radius: 4mm; padding: 5mm; position: relative; background:#fff; }
+      .card h3 { margin:0 0 3mm; font-size:13pt; color:var(--primary-900); }
+      .list { list-style:none; margin:0; padding:0; font-size:10.5pt; color:var(--gray-700); }
+      .list li { display:flex; align-items:flex-start; gap:3mm; margin:2.6mm 0; }
+      .dot { width:2.6mm; height:2.6mm; border-radius:50%; background:var(--accent-500); margin-top:1.4mm; flex-shrink:0; }
+      .card::before{ content:""; position:absolute; left:0; right:0; top:0; height:1mm; background: linear-gradient(90deg, var(--accent-500), var(--accent-600)); opacity:0.55; }
 
       .process { margin-top:2mm; display:grid; grid-template-columns: repeat(4, 1fr); gap:3mm; }
       .step { background: var(--gray-25); border:0.4mm dashed var(--gray-200); border-radius:3mm; padding:3mm; text-align:center; }
-      .step strong { display:block; font-size:9.5pt; color:var(--primary-900); }
-      .step span { font-size:8.5pt; color:var(--gray-700); }
+      .step strong { display:block; font-size:10pt; color:var(--primary-900); }
+      .step span { font-size:8.8pt; color:var(--gray-700); }
 
       .right { background: var(--gray-50); }
       .qr { margin-top:3mm; display:flex; align-items:center; gap:4mm; }
-      .qr .placeholder { width:28mm; height:28mm; border-radius:2mm; border:0.4mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; }
+      .qr .placeholder { width:30mm; height:30mm; border-radius:2mm; border:0.4mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; }
       .qr small { color:var(--gray-700); }
-      .contact-strip { margin-top:4mm; display:grid; grid-template-columns: 1fr 1fr 1fr; gap:3mm; }
-      .chip { background: #fff; border: 0.4mm solid var(--gray-200); border-radius: 4mm; padding: 2mm 3mm; font-size:9pt; }
+
+      .contact-strip { margin-top:4mm; display:grid; grid-template-columns: 1fr; gap:3mm; }
+      .chip { background: #fff; border: 0.5mm solid var(--gray-200); border-radius: 4mm; padding: 3mm 4mm; font-size:10.5pt; }
       .chip a { color: var(--accent-600); text-decoration: none; }
 
+      /* Ruban CTA très visible */
       .cta-banner {
-        background: linear-gradient(135deg, var(--accent-500), var(--accent-600)); color:#fff; border-radius:4mm; padding:4mm 6mm;
-        display:flex; align-items:center; justify-content:space-between; box-shadow: 0 1mm 3mm rgba(0,0,0,0.15);
+        background: linear-gradient(135deg, var(--accent-500), var(--accent-700));
+        color:#fff; border-radius:5mm; padding:5mm 7mm;
+        display:flex; align-items:center; justify-content:space-between; box-shadow: 0 1.4mm 5mm rgba(0,0,0,0.18);
+        border: 0.5mm solid rgba(255,255,255,0.2);
       }
-      .cta-banner strong { font-size:11pt; }
-      .btn { display:inline-block; padding:3mm 5mm; font-weight:600; border-radius:4mm; text-decoration:none; font-size:9.5pt; background:#fff; color:var(--accent-600); }
-      .btn-outline { border:0.4mm solid #fff; color:#fff; background:transparent; }
+      .cta-banner strong { font-size:12pt; letter-spacing:0.2px; }
+      .btn {
+        display:inline-block; padding:4mm 6mm; font-weight:700; border-radius:4mm; text-decoration:none; font-size:11pt; background:#fff; color:var(--accent-600);
+        border:0.5mm solid #fff;
+      }
+      .btn-outline { border:0.5mm solid #fff; color:#fff; background:transparent; margin-left:3mm; }
 
-      .footer { padding: 5mm 8mm; background: #fff; border-top: 0.4mm solid var(--gray-200); font-size:8.5pt; color:var(--gray-700); }
+      /* Bandeau callout en pied pour renforcer l'action */
+      .callout {
+        background: linear-gradient(90deg, var(--accent-500), var(--accent-600));
+        color:#fff; border-radius:4mm; padding:4mm 6mm; text-align:center; font-weight:700; font-size:11pt;
+        box-shadow: 0 1mm 4mm rgba(0,0,0,0.15);
+      }
+
+      .footer { padding: 5mm 8mm; background: #fff; border-top: 0.5mm solid var(--gray-200); font-size:9.5pt; color:var(--gray-700); }
       .mentions { display:grid; grid-template-columns: 1fr 1fr; gap:4mm; }
       .muted { color:#6b7280; } .sep { color:#9ca3af; margin:0 1mm; } .heart { color:#e11d48; }
 
@@ -143,14 +161,16 @@
       <div class="bg-overlay" aria-hidden="true"></div>
 
       <div class="content">
-        <!-- Header fidèle au modèle -->
+        <div class="accent-top" aria-hidden="true"></div>
+
+        <!-- Header fidèle au modèle + plus de présence -->
         <header class="header">
           <div class="header-top">
             <div class="logo">
               <div class="logo-mark" aria-hidden="true"></div>
               <div>
                 <div class="brand">MB Fret Services</div>
-                <div class="tagline">Votre pont logistique — Europe ↔ Afrique ↔ Asie</div>
+                <div class="tagline">Transport international — Europe ↔ Afrique ↔ Asie</div>
               </div>
             </div>
             <div class="badges">
@@ -189,6 +209,12 @@
                 <li><span class="dot"></span> Assurance cargo — couverture complète</li>
                 <li><span class="dot"></span> Collecte & livraison — porte-à-porte</li>
               </ul>
+              <div class="process">
+                <div class="step"><strong>1. Devis</strong><span>Estimation rapide</span></div>
+                <div class="step"><strong>2. Enlèvement</strong><span>Collecte planifiée</span></div>
+                <div class="step"><strong>3. Transit</strong><span>Suivi en temps réel</span></div>
+                <div class="step"><strong>4. Livraison</strong><span>À destination</span></div>
+              </div>
             </div>
 
             <div class="card right">
@@ -216,13 +242,19 @@
             </div>
           </section>
 
+          <!-- Ruban CTA très visible -->
           <section class="cta-banner">
-            <strong>Obtenez votre devis en moins de 24h</strong>
+            <strong>Devis personnalisé en moins de 24h — Réponse rapide</strong>
             <div>
               <a class="btn" href="mailto:contact@mb-fretservices.com?subject=Demande%20de%20devis%20transport%20international">Demander un devis</a>
               <a class="btn btn-outline" href="https://wa.me/33749235539" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
           </section>
+
+          <!-- Bandeau callout complémentaire -->
+          <div class="callout">
+            Europe ↔ Afrique ↔ Asie — Fret maritime & aérien • Dédouanement • Assurance — Porte-à-porte
+          </div>
         </main>
 
         <!-- Mentions légales -->
