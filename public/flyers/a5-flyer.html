@@ -23,17 +23,26 @@
       html, body { height: 100%; background: #fff; color: #111827; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
       .flyer { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; }
 
-      /* Header (Hero) */
+      /* Header (Hero) with site image */
       .header {
-        background:
-          radial-gradient(1200px 300px at 20% 0%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%),
-          linear-gradient(135deg, var(--primary-900), var(--primary-800));
-        color:#fff; padding: 8mm 8mm 6mm; position: relative;
+        position: relative; color:#fff; padding: 8mm 8mm 6mm;
+        background: linear-gradient(135deg, rgba(10,35,66,0.85), rgba(34,55,95,0.85));
+        overflow: hidden;
       }
+      .header::before{
+        content:""; position:absolute; inset:0;
+        background-image: url('https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-size: cover; background-position: center;
+        filter: brightness(0.9) saturate(1.05);
+        transform: scale(1.05);
+      }
+      .header::after{
+        content:""; position:absolute; left:0; right:0; bottom:0; height:8mm;
+        background: linear-gradient(to top, #fff 0%, rgba(255,255,255,0) 100%);
+      }
+      .header > * { position: relative; z-index: 1; }
       .header-top { display:flex; align-items:center; justify-content:space-between; gap:4mm; }
-      .logo {
-        display:flex; align-items:center; gap:3mm;
-      }
+      .logo { display:flex; align-items:center; gap:3mm; }
       .logo-mark {
         width:8mm; height:8mm; border-radius:2mm; background:linear-gradient(135deg,var(--accent-500),var(--accent-600));
         box-shadow:0 0.6mm 2mm rgba(0,0,0,0.25);
@@ -44,6 +53,11 @@
       .badge {
         font-size:8.5pt; padding:1.8mm 3mm; border-radius:4mm; background:rgba(255,255,255,0.10);
         border:0.4mm solid rgba(255,255,255,0.20);
+      }
+
+      /* Decorative accent underline used across titles */
+      .title-underline {
+        display:inline-block; padding-bottom:1mm; border-bottom: 1mm solid var(--accent-500);
       }
 
       /* Body */
@@ -60,11 +74,17 @@
       /* Services & Process */
       .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
 
-      .card { border: 0.4mm solid var(--gray-200); border-radius: 4mm; padding: 5mm; }
+      .card { border: 0.4mm solid var(--gray-200); border-radius: 4mm; padding: 5mm; position: relative; }
       .card h3 { margin:0 0 2mm; font-size:12pt; color:var(--primary-900); }
       .list { list-style:none; margin:0; padding:0; font-size:9.5pt; color:var(--gray-700); }
       .list li { display:flex; align-items:flex-start; gap:3mm; margin:2mm 0; }
       .dot { width:2.2mm; height:2.2mm; border-radius:50%; background:var(--accent-500); margin-top:1.2mm; flex-shrink:0; }
+
+      /* subtle top accent on cards */
+      .card::before{
+        content:""; position:absolute; left:0; right:0; top:0; height:1mm; background: linear-gradient(90deg, var(--accent-500), var(--accent-600));
+        opacity:0.5;
+      }
 
       .process { margin-top:2mm; display:grid; grid-template-columns: repeat(4, 1fr); gap:3mm; }
       .step {
@@ -135,15 +155,15 @@
         <!-- Value propositions -->
         <section class="vp-row">
           <div class="vp">
-            <h4>Rapidité & fiabilité</h4>
+            <h4 class="title-underline">Rapidité & fiabilité</h4>
             <p>Solutions express et suivi en temps réel pour vos envois urgents.</p>
           </div>
           <div class="vp">
-            <h4>Optimisation des coûts</h4>
+            <h4 class="title-underline">Optimisation des coûts</h4>
             <p>Groupage LCL et routes optimisées pour réduire votre budget transport.</p>
           </div>
           <div class="vp">
-            <h4>Conformité & sérénité</h4>
+            <h4 class="title-underline">Conformité & sérénité</h4>
             <p>Dédouanement maîtrisé, assurance cargo et conformité réglementaire.</p>
           </div>
         </section>
