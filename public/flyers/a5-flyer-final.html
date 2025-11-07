@@ -5,63 +5,77 @@
     <title>MB Fret Services — Flyer A5 (Final imprimable)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Police (optionnelle pour impression offline) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&amp;display=swap" rel="stylesheet">
     <style>
       /* A5 portrait (148x210mm) avec fond perdu (bleed) 3mm et zone de sécurité 6mm */
       :root{
         --primary-900:#0A2342;
+        --primary-700:#22375f;
         --accent-500:#FF5722;
         --accent-600:#ea580c;
+        --gray-100:#f3f4f6;
         --gray-200:#e5e7eb;
         --gray-700:#374151;
       }
       @page { size: A5 portrait; margin: 0; }
       html, body { height: 100%; background: #fff; color: #111827; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-
-      /* Feuille (fond blanc, pas d'effet web) */
       .sheet { position: relative; width: 100%; height: 100%; background: #fff; overflow: hidden; }
+
+      /* HERO PHOTO BANNER (print) */
+      .hero {
+        position:absolute; left:0; right:0; top:0; height: 45mm; /* large visuel en tête */
+        background-image: url('https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-size: cover; background-position: center;
+      }
+      .hero::after {
+        content:""; position:absolute; inset:0;
+        background: linear-gradient(to bottom, rgba(10,35,66,0.65) 0%, rgba(10,35,66,0.35) 60%, rgba(255,255,255,0.0) 100%);
+      }
+      .hero-title {
+        position:absolute; left: 9mm; right: 9mm; top: 12mm;
+        color:#fff; text-align:center;
+      }
+      .hero-title .brand { font-weight:800; font-size:22pt; letter-spacing:0.3px; }
+      .hero-title .tagline { font-size:12pt; opacity:0.95; margin-top:1.5mm; }
 
       /* Zone de contenu */
       .content {
-        position: absolute; inset: 3mm; /* bleed 3mm */
-        padding: 6mm; /* zone de sécurité */
-        display: grid; grid-template-rows: auto 1fr auto;
+        position: absolute; inset: 3mm; /* bleed */
+        padding: 6mm; /* safe zone */
+        display: grid; grid-template-rows: 45mm auto auto auto; /* réserve l'espace du hero */
         gap: 6mm;
-        background: #fff;
-        border: 0.6mm solid var(--gray-200);
+        background: transparent;
       }
 
-      /* En-tête typographique (papier) */
-      .header { text-align:center; }
-      .brand { font-weight:800; font-size:22pt; letter-spacing:0.2px; color: var(--primary-900); }
-      .tagline { margin-top:1mm; font-size:12pt; color: var(--gray-700); }
-      .accent { width:32mm; height:1.5mm; background: var(--accent-500); margin: 4mm auto 0; }
+      /* Barre accent de séparation */
+      .accent { height: 2mm; background: linear-gradient(90deg, var(--accent-500), var(--accent-600)); border-radius: 1mm; }
 
-      /* Corps: deux colonnes sobres (pas de cartes UI) */
+      /* Corps: deux colonnes print-first, typographiques */
       .columns { display:grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
-      .col h3 { margin:0 0 3mm; font-size:13pt; color: var(--primary-900); }
-      .list { list-style:none; margin:0; padding:0; font-size:11pt; color: var(--gray-700); line-height:1.35; }
+      .col h3 { margin:0 0 3mm; font-size:13pt; color: #0A2342; }
+      .list { list-style:none; margin:0; padding:0; font-size:11.5pt; color: var(--gray-700); line-height:1.35; }
       .list li { display:flex; gap:3mm; margin:3mm 0; }
-      .dot { width:2.8mm; height:2.8mm; border-radius:50%; background: var(--accent-500); margin-top:1.6mm; flex-shrink:0; }
+      .dot { width:3mm; height:3mm; border-radius:50%; background: var(--accent-500); margin-top:1.6mm; flex-shrink:0; }
 
-      /* Bloc QR réservé + Contacts (bloc typographique, pas de "chip") */
-      .qr { display:flex; align-items:center; gap:4mm; margin-top:6mm; }
-      .qr .placeholder { width:32mm; height:32mm; border:0.5mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; font-size:9pt; color: var(--gray-700); }
-      .contacts { margin-top:6mm; font-size:11pt; color: var(--gray-700); }
+      /* QR réservé + Contacts (typographique) */
+      .qr { display:flex; align-items:center; gap:5mm; margin-top:7mm; }
+      .qr .placeholder { width:34mm; height:34mm; border:0.5mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; font-size:9.5pt; color: var(--gray-700); }
+      .contacts { margin-top:7mm; font-size:11.5pt; color: var(--gray-700); }
       .contacts p { margin:2mm 0; }
 
-      /* Bandeau CTA plein (papier) */
+      /* CTA STRIP large, très visible */
       .cta {
         background: linear-gradient(90deg, var(--accent-500), var(--accent-600));
         color:#fff;
-        padding: 6mm;
-        display:flex; align-items:center; justify-content:space-between;
-        font-weight:700; font-size:12pt;
+        padding: 7mm 7mm;
+        display:grid; grid-template-columns: 1fr 1fr; gap: 4mm; align-items:center;
+        font-weight:800; font-size:12.5pt;
+        border-radius: 2mm;
       }
       .cta .cta-right { text-align:right; }
-      .cta a { color:#fff; text-decoration:none; font-weight:800; }
+      .cta a { color:#fff; text-decoration:none; }
 
-      /* Footer mentions légales (papier) */
+      /* FOOTER mentions légales */
       .footer {
         border-top: 0.6mm solid var(--gray-200);
         padding-top: 5mm; font-size:9.5pt; color: var(--gray-700);
@@ -69,7 +83,7 @@
       }
       .muted { color:#6b7280; } .sep { color:#9ca3af; margin:0 1mm; }
 
-      /* Traits de coupe */
+      /* Crop marks */
       .crop-marks .mark { position:absolute; background:#000; }
       .crop-marks .tl-h { top:0; left:0; width:15mm; height:0.3mm; }
       .crop-marks .tl-v { top:0; left:0; width:0.3mm; height:15mm; }
@@ -85,13 +99,16 @@
   </head>
   <body>
     <div class="sheet">
+      <!-- HERO PHOTO -->
+      <div class="hero" aria-hidden="true"></div>
       <div class="content">
-        <!-- Header typographique -->
-        <header class="header">
+        <div class="hero-title">
           <div class="brand">MB Fret Services</div>
           <div class="tagline">Transport international — Europe ↔ Afrique ↔ Asie</div>
-          <div class="accent" aria-hidden="true"></div>
-        </header>
+        </div>
+
+        <!-- Accent separator -->
+        <div class="accent" aria-hidden="true"></div>
 
         <!-- Corps: deux colonnes print-first -->
         <main class="columns">
@@ -131,7 +148,7 @@
           </section>
         </main>
 
-        <!-- Bandeau d'action simple et massif -->
+        <!-- Bandeau d'action massif (email + téléphone) -->
         <div class="cta">
           <div>Devis personnalisé en moins de 24h</div>
           <div class="cta-right">
@@ -140,7 +157,7 @@
           </div>
         </div>
 
-        <!-- Mentions légales (sans éléments UI) -->
+        <!-- Mentions légales -->
         <footer class="footer">
           <div>
             <strong>MB Fret Services</strong><br>
