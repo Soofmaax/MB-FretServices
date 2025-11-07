@@ -32,23 +32,31 @@
         background: linear-gradient(to bottom, rgba(10,35,66,0.65) 0%, rgba(10,35,66,0.35) 60%, rgba(255,255,255,0.0) 100%);
       }
       .hero-title {
-        position:absolute; left: 9mm; right: 9mm; top: 12mm;
+        position:absolute; left: 9mm; right: 9mm; top: 10mm;
         color:#fff; text-align:center;
       }
       .hero-title .brand { font-weight:800; font-size:22pt; letter-spacing:0.3px; }
-      .hero-title .tagline { font-size:12pt; opacity:0.95; margin-top:1.5mm; }
+      .hero-title .tagline { font-size:12pt; opacity:0.95; margin-top:1mm; }
+      .hero-title .subline { font-size:10.5pt; opacity:0.95; margin-top:1.5mm; }
 
       /* Zone de contenu */
       .content {
         position: absolute; inset: 3mm; /* bleed */
         padding: 6mm; /* safe zone */
-        display: grid; grid-template-rows: 45mm auto auto auto; /* réserve l'espace du hero */
+        display: grid; grid-template-rows: 45mm auto auto auto auto; /* réserve l'espace du hero */
         gap: 6mm;
         background: transparent;
       }
 
       /* Barre accent de séparation */
       .accent { height: 2mm; background: linear-gradient(90deg, var(--accent-500), var(--accent-600)); border-radius: 1mm; }
+
+      /* Bandeau promesse/offre */
+      .promise {
+        background: #fff; border: 0.5mm solid var(--accent-500); padding: 4mm 6mm; border-radius: 2mm;
+        font-size: 11pt; color: var(--primary-900);
+      }
+      .promise strong { color: var(--accent-600); }
 
       /* Corps: deux colonnes print-first, typographiques */
       .columns { display:grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
@@ -104,22 +112,28 @@
       <div class="content">
         <div class="hero-title">
           <div class="brand">MB Fret Services</div>
-          <div class="tagline">Transport international — Europe ↔ Afrique ↔ Asie</div>
+          <div class="tagline">FRET MARITIME & AÉRIEN — Porte‑à‑porte • Douane • Assurance</div>
+          <div class="subline">Europe ↔ Afrique ↔ Asie</div>
         </div>
 
         <!-- Accent separator -->
         <div class="accent" aria-hidden="true"></div>
+
+        <!-- Promesse / Offre -->
+        <div class="promise">
+          <strong>Offre découverte:</strong> audit transport gratuit & conseil sur l’optimisation des coûts (LCL/FCL, aérien), sans engagement.
+        </div>
 
         <!-- Corps: deux colonnes print-first -->
         <main class="columns">
           <section class="col">
             <h3>Nos services</h3>
             <ul class="list">
-              <li><span class="dot"></span> Fret maritime (FCL/LCL)</li>
-              <li><span class="dot"></span> Fret aérien (cargo & colis)</li>
-              <li><span class="dot"></span> Dédouanement & conformité</li>
-              <li><span class="dot"></span> Assurance cargo</li>
-              <li><span class="dot"></span> Porte‑à‑porte</li>
+              <li><span class="dot"></span> Fret maritime (FCL/LCL) — conteneurs 20’/40’, groupage</li>
+              <li><span class="dot"></span> Fret aérien — express (cargo & colis), urgent</li>
+              <li><span class="dot"></span> Dédouanement — formalités & conformité</li>
+              <li><span class="dot"></span> Assurance cargo — protection adaptée</li>
+              <li><span class="dot"></span> Collecte & livraison — porte‑à‑porte</li>
             </ul>
           </section>
 
@@ -129,6 +143,16 @@
               <li><span class="dot"></span> Afrique: Congo, Angola, Côte d’Ivoire, Cameroun…</li>
               <li><span class="dot"></span> Asie: Chine, Turquie…</li>
               <li><span class="dot"></span> Europe: France, réseau UE</li>
+            </ul>
+
+            <!-- Pourquoi MB Fret Services -->
+            <h3 style="margin-top:6mm;">Pourquoi MB Fret Services ?</h3>
+            <ul class="list">
+              <li><span class="dot"></span> <strong>Rapidité:</strong> devis <strong>&lt; 24h</strong>, enlèvement planifié rapidement</li>
+              <li><span class="dot"></span> <strong>Suivi en temps réel:</strong> visibilité sur chaque étape</li>
+              <li><span class="dot"></span> <strong>Optimisation des coûts:</strong> routes & groupage adaptés</li>
+              <li><span class="dot"></span> <strong>Conformité:</strong> douane maîtrisée, partenaires certifiés</li>
+              <li><span class="dot"></span> <strong>Sérénité:</strong> assurance cargo et support dédié</li>
             </ul>
 
             <!-- QR réservé + Contacts -->
@@ -150,7 +174,7 @@
 
         <!-- Bandeau d'action massif (email + téléphone) -->
         <div class="cta">
-          <div>Devis personnalisé en moins de 24h</div>
+          <div>Devis en 24h • Enlèvement rapide • Suivi en temps réel</div>
           <div class="cta-right">
             <div><a href="mailto:contact@mb-fretservices.com?subject=Demande%20de%20devis%20transport%20international">contact@mb-fretservices.com</a></div>
             <div><a href="tel:+33749235539">+33 7 49 23 55 39</a></div>
