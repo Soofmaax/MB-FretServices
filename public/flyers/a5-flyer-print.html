@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>MB Fret Services — Flyer A5 (Impression)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Option: charger Inter. Pour une impression 100% offline, vous pouvez le retirer. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+      /* Spécifications impression
+       * - Format A5 (148 x 210 mm)
+       * - Fond perdu (bleed) : 3 mm
+       * - Marge intérieure (zone de sécurité) : 6 mm
+       * - Traits de coupe : visibles à l'impression
+       */
+      :root{
+        --primary-900:#0A2342;
+        --primary-800:#22375f;
+        --accent-500:#FF5722;
+        --accent-600:#ea580c;
+        --gray-50:#f9fafb;
+        --gray-200:#e5e7eb;
+        --gray-700:#374151;
+      }
+      @page { size: A5 portrait; margin: 0; }
+      html, body { height: 100%; background: #fff; color: #111827; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+      .sheet {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        /* Simuler le fond perdu (bleed) en couvrant bord à bord */
+        background: linear-gradient(135deg, rgba(10,35,66,1), rgba(34,55,95,1));
+        overflow: hidden;
+      }
+      /* Image de fond (recouvre avec bleed) */
+      .sheet::before{
+        content:"";
+        position:absolute; inset:0;
+        background-image: url('https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-size: cover; background-position: center;
+        opacity: 0.35;
+      }
+
+      /* Zone utile (après fond perdu) = marge intérieure (sécurité) 6 mm tout autour */
+      .content {
+        position: absolute;
+        inset: 3mm; /* recule de 3mm (bleed) pour atteindre le bord de coupe */
+        padding: 6mm; /* zone de sécurité pour éviter les coupes sur le texte */
+        background: #fff; /* corps blanc pour rester lisible et sobre */
+        border: 0.4mm solid var(--gray-200);
+        border-radius: 4mm;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 5mm;
+      }
+
+      /* Header */
+      .header { color:#fff; border-radius: 3mm; overflow:hidden; }
+      .header-inner {
+        position: relative;
+        padding: 6mm;
+        background:
+          radial-gradient(1200px 300px at 20% 0%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 60%),
+          linear-gradient(135deg, var(--primary-900), var(--primary-800));
+      }
+      .brand { font-weight:700; font-size:16pt; letter-spacing:0.2px; }
+      .tagline { font-size:10.5pt; color:#e5e7eb; margin-top:1mm; }
+      .badges { display:flex; flex-wrap:wrap; gap:2mm; margin-top:3mm; }
+      .badge {
+        font-size:8.5pt; padding:1.8mm 3mm; border-radius:4mm; background:rgba(255,255,255,0.10);
+        border:0.4mm solid rgba(255,255,255,0.20); color:#fff;
+      }
+
+      /* Body layout */
+      .body { display:grid; grid-template-rows: auto auto 1fr; gap: 5mm; }
+      .vp-row { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:4mm; }
+      .vp { background: var(--gray-50); border: 0.4mm solid var(--gray-200); border-radius: 3mm; padding: 4mm; }
+      .vp h4 { margin:0 0 1mm; font-size:10.5pt; color:var(--primary-900); }
+      .vp p { margin:0; font-size:9pt; color:var(--gray-700); }
+
+      .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+      .card { border: 0.4mm solid var(--gray-200); border-radius: 3mm; padding: 5mm; position: relative; background:#fff; }
+      .card h3 { margin:0 0 2mm; font-size:12pt; color:var(--primary-900); }
+      .list { list-style:none; margin:0; padding:0; font-size:9.5pt; color:var(--gray-700); }
+      .list li { display:flex; align-items:flex-start; gap:3mm; margin:2mm 0; }
+      .dot { width:2.2mm; height:2.2mm; border-radius:50%; background:var(--accent-500); margin-top:1.2mm; flex-shrink:0; }
+
+      .process { margin-top:2mm; display:grid; grid-template-columns: repeat(4, 1fr); gap:3mm; }
+      .step {
+        background: var(--gray-50); border:0.4mm dashed var(--gray-200); border-radius:3mm; padding:3mm; text-align:center;
+      }
+      .step strong { display:block; font-size:9.5pt; color:var(--primary-900); }
+      .step span { font-size:8.5pt; color:var(--gray-700); }
+
+      .right { background: var(--gray-50); }
+      .qr { margin-top:3mm; display:flex; align-items:center; gap:4mm; }
+      .qr .placeholder { width:28mm; height:28mm; border-radius:2mm; border:0.4mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; }
+      .qr small { color:var(--gray-700); }
+      .contact-strip { margin-top:4mm; display:grid; grid-template-columns: 1fr 1fr 1fr; gap:3mm; }
+      .chip { background: #fff; border: 0.4mm solid var(--gray-200); border-radius: 3mm; padding: 2mm 3mm; font-size:9pt; }
+      .chip a { color: var(--accent-600); text-decoration: none; }
+
+      .cta-banner {
+        background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
+        color:#fff; border-radius:3mm; padding:4mm 6mm; display:flex; align-items:center; justify-content:space-between;
+        box-shadow: 0 1mm 3mm rgba(0,0,0,0.15);
+      }
+      .cta-banner strong { font-size:11pt; }
+      .btn {
+        display:inline-block; padding:3mm 5mm; font-weight:600; border-radius:3mm; text-decoration:none; font-size:9.5pt;
+        background:#fff; color:var(--accent-600);
+      }
+      .btn-outline { border:0.4mm solid #fff; color:#fff; background:transparent; }
+
+      /* Footer (legal mentions) */
+      .footer { padding: 5mm; background: #fff; border-top: 0.4mm solid var(--gray-200); font-size:8.5pt; color:var(--gray-700); border-radius:3mm; }
+      .mentions { display:grid; grid-template-columns: 1fr 1fr; gap:4mm; }
+      .muted { color:#6b7280; } .sep { color:#9ca3af; margin:0 1mm; } .heart { color:#e11d48; }
+
+      /* Crop marks (traits de coupe) */
+      .crop-marks .mark { position:absolute; background:#000; }
+      .crop-marks .tl-h { top:0; left:0; width:15mm; height:0.3mm; }
+      .crop-marks .tl-v { top:0; left:0; width:0.3mm; height:15mm; }
+      .crop-marks .tr-h { top:0; right:0; width:15mm; height:0.3mm; }
+      .crop-marks .tr-v { top:0; right:0; width:0.3mm; height:15mm; }
+      .crop-marks .bl-h { bottom:0; left:0; width:15mm; height:0.3mm; }
+      .crop-marks .bl-v { bottom:0; left:0; width:0.3mm; height:15mm; }
+      .crop-marks .br-h { bottom:0; right:0; width:15mm; height:0.3mm; }
+      .crop-marks .br-v { bottom:0; right:0; width:0.3mm; height:15mm; }
+      @media screen { .crop-marks .mark { opacity:0.2; } }
+      @media print { .crop-marks .mark { opacity:1; } }
+
+      @media print { .btn, a { color: inherit; text-decoration: none; } }
+    </style>
+  </head>
+  <body>
+    <div class="sheet">
+      <div class="content">
+        <!-- Header -->
+        <header class="header">
+          <div class="header-inner">
+            <div class="brand">MB Fret Services</div>
+            <div class="tagline">Votre pont logistique — Europe ↔ Afrique ↔ Asie</div>
+            <div class="badges">
+              <span class="badge">Fret maritime (FCL/LCL)</span>
+              <span class="badge">Fret aérien</span>
+              <span class="badge">Dédouanement</span>
+              <span class="badge">Assurance cargo</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Body -->
+        <main class="body">
+          <!-- Value props -->
+          <section class="vp-row">
+            <div class="vp">
+              <h4>Rapidité & fiabilité</h4>
+              <p>Solutions express et suivi en temps réel pour vos envois urgents.</p>
+            </div>
+            <div class="vp">
+              <h4>Optimisation des coûts</h4>
+              <p>Groupage LCL et routes optimisées pour réduire votre budget transport.</p>
+            </div>
+            <div class="vp">
+              <h4>Conformité & sérénité</h4>
+              <p>Dédouanement maîtrisé, assurance cargo et conformité réglementaire.</p>
+            </div>
+          </section>
+
+          <!-- Services & Process -->
+          <section class="grid-2">
+            <div class="card">
+              <h3>Nos services</h3>
+              <ul class="list">
+                <li><span class="dot"></span> Fret maritime — conteneurs 20’/40’, groupage LCL</li>
+                <li><span class="dot"></span> Fret aérien — express et sécurisé (cargo & colis)</li>
+                <li><span class="dot"></span> Dédouanement — formalités & conformité</li>
+                <li><span class="dot"></span> Assurance cargo — couverture complète</li>
+                <li><span class="dot"></span> Collecte & livraison — porte-à-porte</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Process simplifié</h3>
+              <div class="process">
+                <div class="step"><strong>1. Devis</strong><span>Estimation rapide</span></div>
+                <div class="step"><strong>2. Enlèvement</strong><span>Collecte planifiée</span></div>
+                <div class="step"><strong>3. Transit</strong><span>Suivi en temps réel</span></div>
+                <div class="step"><strong>4. Livraison</strong><span>À destination</span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Destinations, Contacts & Espace QR -->
+          <section class="grid-2">
+            <div class="card right">
+              <h3>Destinations principales</h3>
+              <ul class="list">
+                <li><span class="dot"></span> Afrique: Congo, Angola, Côte d’Ivoire, Cameroun…</li>
+                <li><span class="dot"></span> Asie: Chine, Turquie…</li>
+                <li><span class="dot"></span> Europe: France, réseau partenaires UE</li>
+              </ul>
+              <div class="qr">
+                <!-- Espace réservé pour votre QR (image à insérer plus tard) -->
+                <div class="placeholder"><small class="muted">Espace QR</small></div>
+                <div>
+                  <strong>Scannez pour en savoir plus</strong><br>
+                  <small>https://mb-fretservices.com</small>
+                </div>
+              </div>
+              <div class="contact-strip">
+                <div class="chip">Tél: <a href="tel:+33749235539">+33 7 49 23 55 39</a></div>
+                <div class="chip">Email: <a href="mailto:contact@mb-fretservices.com">contact@mb-fretservices.com</a></div>
+                <div class="chip">WhatsApp: <a href="https://wa.me/33749235539" target="_blank" rel="noopener noreferrer">33749235539</a></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Pourquoi nous choisir ?</h3>
+              <ul class="list">
+                <li><span class="dot"></span> Expertise Afrique/Asie — réseau fiable et partenaires certifiés</li>
+                <li><span class="dot"></span> Traçabilité — notifications, suivi et support dédié</li>
+                <li><span class="dot"></span> Assurance et risques — protection adaptée à votre cargaison</li>
+                <li><span class="dot"></span> Flexibilité — solutions sur-mesure (volume, délais, budget)</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- CTA banner -->
+          <section class="cta-banner">
+            <strong>Obtenez votre devis en moins de 24h</strong>
+            <div>
+              <a class="btn" href="mailto:contact@mb-fretservices.com?subject=Demande%20de%20devis%20transport%20international">Demander un devis</a>
+              <a class="btn btn-outline" href="https://wa.me/33749235539" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer / Mentions légales -->
+        <footer class="footer">
+          <div class="mentions">
+            <div>
+              <strong>MB Fret Services</strong><br>
+              Adresse: [À compléter]<br>
+              Email: contact@mb-fretservices.com • Tél: +33 7 49 23 55 39<br>
+              Site: https://mb-fretservices.com
+            </div>
+            <div>
+              SIRET: [À compléter] • TVA intracom: [À compléter]<br>
+              RC Pro: [Assureur] • N° de police: [À compléter]<br>
+              Directeur de publication: [Nom à compléter]
+            </div>
+          </div>
+          <div style="margin-top:3mm;">
+            <span class="muted">Ne pas jeter sur la voie publique</span>
+            <span class="sep">•</span>
+            <span class="muted">Offre non contractuelle — photos non contractuelles</span>
+            <span class="sep">•</span>
+            <span class="muted">Prix TTC sauf indication contraire</span>
+            <span class="sep">•</span>
+            <span class="muted">Imprimé le: ____ / ____ / 2025</span>
+            <span class="sep">•</span>
+            <span class="muted">Mentions légales: https://mb-fretservices.com/fr/mentions-legales</span>
+          </div>
+          <div style="margin-top:2mm;" class="muted">
+            © 2025 — Développé avec <span class="heart" aria-hidden="true">❤</span> par <strong>SmarterLogicWeb</strong>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Traits de coupe à l'extérieur de la zone utile -->
+      <div class="crop-marks" aria-hidden="true" style="position:absolute; inset:0; pointer-events:none;">
+        <div class="mark tl-h"></div><div class="mark tl-v"></div>
+        <div class="mark tr-h"></div><div class="mark tr-v"></div>
+        <div class="mark bl-h"></div><div class="mark bl-v"></div>
+        <div class="mark br-h"></div><div class="mark br-v"></div>
+      </div>
+    </div>
+  </body>
+</html>
