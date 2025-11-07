@@ -19,9 +19,10 @@
         --gray-200:#e5e7eb;
         --gray-700:#374151;
       }
+      /* Format d'impression A5 + marge d'impression (6mm) */
       @page { size: A5 portrait; margin: 6mm; }
       html, body { height: 100%; background: #fff; color: #111827; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-      .flyer { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; }
+      .flyer { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; position: relative; }
 
       /* Header (Hero) with site image */
       .header {
@@ -93,10 +94,10 @@
       .step strong { display:block; font-size:9.5pt; color:var(--primary-900); }
       .step span { font-size:8.5pt; color:var(--gray-700); }
 
-      /* Destinations + QR + Contact strip */
+      /* Destinations + Contact strip + Espace QR réservé */
       .right { background: var(--gray-50); }
       .qr { margin-top:3mm; display:flex; align-items:center; gap:4mm; }
-      .qr img { width:28mm; height:28mm; border-radius:2mm; border:0.4mm solid var(--gray-200); }
+      .qr .placeholder { width:28mm; height:28mm; border-radius:2mm; border:0.4mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; }
       .qr small { color:var(--gray-700); }
       .contact-strip {
         margin-top:4mm; display:grid; grid-template-columns: 1fr 1fr 1fr; gap:3mm;
@@ -125,6 +126,19 @@
       .footer { padding: 5mm 8mm; background: #fff; border-top: 0.4mm solid var(--gray-200); font-size:8.5pt; color:var(--gray-700); }
       .mentions { display:grid; grid-template-columns: 1fr 1fr; gap:4mm; }
       .muted { color:#6b7280; } .sep { color:#9ca3af; margin:0 1mm; } .heart { color:#e11d48; }
+
+      /* Crop marks (traits de coupe) — visibles à l'impression */
+      .crop-marks .mark { position:absolute; background:#000; }
+      .crop-marks .tl-h { top:0; left:0; width:15mm; height:0.3mm; }
+      .crop-marks .tl-v { top:0; left:0; width:0.3mm; height:15mm; }
+      .crop-marks .tr-h { top:0; right:0; width:15mm; height:0.3mm; }
+      .crop-marks .tr-v { top:0; right:0; width:0.3mm; height:15mm; }
+      .crop-marks .bl-h { bottom:0; left:0; width:15mm; height:0.3mm; }
+      .crop-marks .bl-v { bottom:0; left:0; width:0.3mm; height:15mm; }
+      .crop-marks .br-h { bottom:0; right:0; width:15mm; height:0.3mm; }
+      .crop-marks .br-v { bottom:0; right:0; width:0.3mm; height:15mm; }
+      @media screen { .crop-marks .mark { opacity:0.2; } }
+      @media print { .crop-marks .mark { opacity:1; } }
 
       @media print { .btn, a { color: inherit; text-decoration: none; } }
     </style>
@@ -192,7 +206,7 @@
           </div>
         </section>
 
-        <!-- Destinations, QR & Contacts -->
+        <!-- Destinations, Contacts & Espace QR -->
         <section class="grid-2">
           <div class="card right">
             <h3>Destinations principales</h3>
@@ -202,7 +216,8 @@
               <li><span class="dot"></span> Europe: France, réseau partenaires UE</li>
             </ul>
             <div class="qr">
-              <img alt="QR vers le site MB Fret Services" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Fmb-fretservices.com%2Ffr">
+              <!-- Placeholder QR area réservé (image supprimée). -->
+              <div class="placeholder"><small class="muted">Espace QR</small></div>
               <div>
                 <strong>Scannez pour en savoir plus</strong><br>
                 <small>https://mb-fretservices.com</small>
@@ -266,6 +281,14 @@
           © 2025 — Développé avec <span class="heart" aria-hidden="true">❤</span> par <strong>SmarterLogicWeb</strong>
         </div>
       </footer>
+
+      <!-- Crop marks (traits de coupe) -->
+      <div class="crop-marks" aria-hidden="true" style="position:absolute; inset:0; pointer-events:none;">
+        <div class="mark tl-h"></div><div class="mark tl-v"></div>
+        <div class="mark tr-h"></div><div class="mark tr-v"></div>
+        <div class="mark bl-h"></div><div class="mark bl-v"></div>
+        <div class="mark br-h"></div><div class="mark br-v"></div>
+      </div>
     </div>
   </body>
 </html>
