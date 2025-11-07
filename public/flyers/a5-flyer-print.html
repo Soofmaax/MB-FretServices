@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <title>MB Fret Services — Flyer A5 (Impression)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&amp;display=swap" rel="stylesheet">
     <style>
-      /* Spécifications impression
-       * - A5 portrait (148 x 210 mm) + fond perdu 3 mm
-       * - Zone de sécurité 6 mm
-       * - Traits de coupe
-       * - Design épuré et lisible à petite taille
-       */
+      /* A5 vertical, très lisible: grosses tailles, peu d'éléments, fort contraste */
       :root{
         --primary-900:#0A2342;
         --accent-500:#FF5722;
+        --gray-100:#f3f4f6;
         --gray-200:#e5e7eb;
         --gray-700:#374151;
       }
@@ -22,61 +18,55 @@
       html, body { height: 100%; background: #fff; color: #111827; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
       .sheet { position: relative; width: 100%; height: 100%; background: #fff; overflow: hidden; }
 
-      /* Fond perdu: bande colorée pleine largeur */
-      .bleed {
-        position:absolute; inset:0; background: var(--primary-900);
-      }
+      /* Fond perdu en haut et bas pour un bandeau bleu solide */
+      .bleed-top, .bleed-bottom { position:absolute; left:0; right:0; height:18mm; background: var(--primary-900); }
+      .bleed-top { top:0; } .bleed-bottom { bottom:0; }
 
-      /* Zone utile */
+      /* Zone utile (marges + cadre) */
       .content {
         position: absolute;
         inset: 3mm; /* bleed */
-        padding: 6mm; /* zone de sécurité */
+        padding: 7mm 6mm;
         background: #fff;
-        border: 0.4mm solid var(--gray-200);
+        border: 0.6mm solid var(--gray-200);
         border-radius: 3mm;
         display: grid;
         grid-template-rows: auto 1fr auto;
-        gap: 6mm;
+        gap: 7mm;
       }
 
-      /* Header épuré */
+      /* Header centré, très simple */
       .header {
-        display:flex; align-items:center; justify-content:space-between;
-        background: var(--primary-900); color:#fff; border-radius:3mm; padding: 6mm;
+        text-align:center;
+        padding: 4mm 4mm 2mm;
       }
-      .brand { font-weight:700; font-size:18pt; letter-spacing:0.2px; }
-      .tagline { font-size:11pt; opacity:0.9; }
-      .badge-row { display:flex; gap:3mm; flex-wrap:wrap; margin-left:6mm; }
-      .badge { font-size:9pt; padding:2mm 3mm; border-radius:3mm; background:rgba(255,255,255,0.12); border:0.3mm solid rgba(255,255,255,0.25); }
+      .brand { font-weight:700; font-size:20pt; letter-spacing:0.3px; color: var(--primary-900); }
+      .tagline { font-size:12pt; color: var(--gray-700); margin-top:2mm; }
+      .divider { width: 28mm; height: 0.8mm; background: var(--accent-500); border-radius: 2mm; margin: 4mm auto 0; }
 
-      /* Corps minimaliste et lisible */
-      .hero-line { font-size:14pt; font-weight:700; color: var(--primary-900); }
-      .sub { font-size:11pt; color: var(--gray-700); }
-
-      .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
-      .card { border: 0.4mm solid var(--gray-200); border-radius: 3mm; padding: 6mm; }
-      .card h3 { margin:0 0 3mm; font-size:12pt; color:var(--primary-900); }
-      .list { list-style:none; margin:0; padding:0; font-size:11pt; color:var(--gray-700); }
+      /* Corps: deux colonnes, peu de lignes, police large */
+      .grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+      .card { border: 0.4mm solid var(--gray-200); border-radius: 3mm; padding: 6mm; background:#fff; }
+      .card h3 { margin:0 0 4mm; font-size:13pt; color:var(--primary-900); }
+      .list { list-style:none; margin:0; padding:0; font-size:12pt; color:var(--gray-700); line-height:1.4; }
       .list li { display:flex; gap:3mm; margin:3mm 0; }
-      .dot { width:2.6mm; height:2.6mm; border-radius:50%; background:var(--accent-500); margin-top:1.6mm; flex-shrink:0; }
+      .dot { width:3mm; height:3mm; border-radius:50%; background:var(--accent-500); margin-top:2mm; flex-shrink:0; }
 
-      .contact-strip { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:3mm; margin-top:4mm; }
-      .chip { background:#fff; border:0.4mm solid var(--gray-200); border-radius:3mm; padding: 3mm 4mm; font-size:10.5pt; }
+      /* QR réservé + Contacts en bas de la colonne droite */
+      .qr { display:flex; align-items:center; gap:4mm; margin-top:6mm; }
+      .qr .placeholder { width:32mm; height:32mm; border-radius:2mm; border:0.4mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; font-size:9pt; color:var(--gray-700); }
+      .qr small { color:var(--gray-700); font-size:10pt; }
+      .contact-strip { display:grid; grid-template-columns: 1fr; gap:3mm; margin-top:6mm; }
+      .chip { background:#fff; border:0.4mm solid var(--gray-200); border-radius:3mm; padding: 3mm 4mm; font-size:11pt; }
       .chip a { color: var(--accent-500); text-decoration:none; }
 
-      /* Espace QR réservé */
-      .qr { display:flex; align-items:center; gap:4mm; margin-top:4mm; }
-      .qr .placeholder { width:30mm; height:30mm; border-radius:2mm; border:0.4mm dashed var(--gray-200); display:flex; align-items:center; justify-content:center; font-size:9pt; color:var(--gray-700); }
-      .qr small { color:var(--gray-700); font-size:9pt; }
-
-      /* CTA simple et grand */
+      /* CTA large, très lisible */
       .cta { display:flex; align-items:center; justify-content:space-between; background:var(--accent-500); color:#fff; border-radius:3mm; padding: 6mm; }
-      .cta strong { font-size:12pt; }
-      .btn { display:inline-block; padding:4mm 6mm; font-weight:700; border-radius:3mm; text-decoration:none; font-size:11pt; background:#fff; color:var(--accent-500); }
+      .cta strong { font-size:13pt; }
+      .btn { display:inline-block; padding:4mm 6mm; font-weight:700; border-radius:3mm; text-decoration:none; font-size:12pt; background:#fff; color:var(--accent-500); }
 
       /* Footer (mentions légales) */
-      .footer { padding: 6mm; background:#fff; border-top:0.4mm solid var(--gray-200); font-size:9pt; color:var(--gray-700); border-radius:3mm; }
+      .footer { padding: 6mm; background:#fff; border-top:0.6mm solid var(--gray-200); font-size:10pt; color:var(--gray-700); border-radius:3mm; }
       .mentions { display:grid; grid-template-columns: 1fr 1fr; gap:4mm; }
       .muted { color:#6b7280; } .sep { color:#9ca3af; margin:0 1mm; } .heart { color:#e11d48; }
 
@@ -96,29 +86,20 @@
   </head>
   <body>
     <div class="sheet">
-      <div class="bleed" aria-hidden="true"></div>
+      <div class="bleed-top" aria-hidden="true"></div>
+      <div class="bleed-bottom" aria-hidden="true"></div>
 
       <div class="content">
-        <!-- Header compact -->
+        <!-- Header centré -->
         <header class="header">
-          <div>
-            <div class="brand">MB Fret Services</div>
-            <div class="tagline">Transport international — Europe ↔ Afrique ↔ Asie</div>
-          </div>
-          <div class="badge-row">
-            <span class="badge">Fret maritime</span>
-            <span class="badge">Fret aérien</span>
-            <span class="badge">Dédouanement</span>
-            <span class="badge">Assurance cargo</span>
-          </div>
+          <div class="brand">MB Fret Services</div>
+          <div class="tagline">Transport international — Europe ↔ Afrique ↔ Asie</div>
+          <div class="divider"></div>
         </header>
 
-        <!-- Corps lisible (peu d'info, grosses tailles) -->
+        <!-- Corps: deux colonnes, contenu réduit et lisible -->
         <main>
-          <p class="hero-line">Logistique de bout en bout — devis sous 24h</p>
-          <p class="sub">Conteneurs 20’/40’, groupage LCL, fret aérien express, formalités douanières et assurance cargo.</p>
-
-          <div class="grid-2" style="margin-top:6mm;">
+          <div class="grid-2">
             <section class="card">
               <h3>Nos services</h3>
               <ul class="list">
@@ -138,7 +119,7 @@
                 <li><span class="dot"></span> Europe: France, réseau UE</li>
               </ul>
 
-              <!-- QR réservé -->
+              <!-- QR réservé + Contacts -->
               <div class="qr">
                 <div class="placeholder">Espace QR</div>
                 <div>
@@ -147,7 +128,6 @@
                 </div>
               </div>
 
-              <!-- Contacts -->
               <div class="contact-strip">
                 <div class="chip">Tél: <a href="tel:+33749235539">+33 7 49 23 55 39</a></div>
                 <div class="chip">Email: <a href="mailto:contact@mb-fretservices.com">contact@mb-fretservices.com</a></div>
@@ -157,13 +137,13 @@
           </div>
 
           <!-- CTA large -->
-          <div class="cta" style="margin-top:6mm;">
+          <div class="cta" style="margin-top:7mm;">
             <strong>Devis personnalisé en moins de 24h</strong>
             <a class="btn" href="mailto:contact@mb-fretservices.com?subject=Demande%20de%20devis%20transport%20international">Demander un devis</a>
           </div>
         </main>
 
-        <!-- Mentions légales lisibles -->
+        <!-- Mentions légales -->
         <footer class="footer">
           <div class="mentions">
             <div>
