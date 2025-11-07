@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>MB Fret Services — Flyer A5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --primary-900:#0A2342;
+        --primary-800:#22375f;
+        --accent-500:#FF5722;
+        --accent-600:#ea580c;
+        --gray-50:#f9fafb;
+        --gray-200:#e5e7eb;
+        --gray-700:#374151;
+      }
+      @page {
+        size: A5 portrait;
+        margin: 8mm;
+      }
+      html, body {
+        height: 100%;
+        background: #fff;
+        color: #111827;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      }
+      .flyer {
+        width: 100%;
+        height: calc(100% - 0mm);
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        border: 1px solid var(--gray-200);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      /* Header */
+      .header {
+        background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+        color: #fff;
+        padding: 12mm 10mm 8mm;
+        position: relative;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 18pt;
+        letter-spacing: 0.2px;
+      }
+      .tagline {
+        margin-top: 2mm;
+        font-size: 11pt;
+        color: #d1d5db;
+      }
+      .badge {
+        display: inline-block;
+        margin-top: 4mm;
+        padding: 2mm 4mm;
+        border-radius: 4mm;
+        background: rgba(255,255,255,0.08);
+        border: 0.4mm solid rgba(255,255,255,0.15);
+        font-size: 9pt;
+      }
+
+      /* Body */
+      .body {
+        padding: 8mm 10mm;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6mm;
+        background: #fff;
+      }
+      .card {
+        border: 0.4mm solid var(--gray-200);
+        border-radius: 4mm;
+        padding: 6mm;
+      }
+      .card h3 {
+        margin: 0;
+        font-size: 12pt;
+        color: var(--primary-900);
+      }
+      .list {
+        margin: 4mm 0 0;
+        padding: 0;
+        list-style: none;
+        font-size: 10pt;
+        color: var(--gray-700);
+      }
+      .list li {
+        margin: 2mm 0;
+        display: flex;
+        align-items: flex-start;
+      }
+      .dot {
+        width: 2.2mm; height: 2.2mm; border-radius: 50%;
+        background: var(--accent-500);
+        margin-right: 3mm; margin-top: 1.2mm; flex-shrink: 0;
+      }
+
+      .cta {
+        margin-top: 4mm;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3mm;
+      }
+      .btn {
+        display: inline-block;
+        padding: 3mm 5mm;
+        text-align: center;
+        font-weight: 600;
+        border-radius: 4mm;
+        text-decoration: none;
+        font-size: 10pt;
+      }
+      .btn-primary {
+        background: var(--accent-500);
+        color: #fff;
+        box-shadow: 0 1mm 3mm rgba(0,0,0,0.15);
+      }
+      .btn-outline {
+        border: 0.4mm solid var(--accent-500);
+        color: var(--accent-600);
+      }
+
+      .right {
+        background: var(--gray-50);
+        border: 0.4mm dashed var(--gray-200);
+      }
+      .qr {
+        margin-top: 4mm;
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+      }
+      .qr img {
+        width: 28mm; height: 28mm; border-radius: 2mm; border: 0.4mm solid var(--gray-200);
+      }
+      .qr small { color: var(--gray-700); }
+
+      /* Footer / Mentions légales */
+      .footer {
+        padding: 6mm 10mm;
+        background: #fff;
+        border-top: 0.4mm solid var(--gray-200);
+        font-size: 8.5pt;
+        color: var(--gray-700);
+      }
+      .mentions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+      }
+      .muted { color: #6b7280; }
+      .sep { color: #9ca3af; margin: 0 1mm; }
+      .heart { color: #e11d48; }
+
+      @media print {
+        .btn, a { color: inherit; text-decoration: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flyer">
+      <header class="header">
+        <div class="brand">MB Fret Services</div>
+        <div class="tagline">Transport international — Europe ↔ Afrique ↔ Asie</div>
+        <div class="badge">Fret maritime (FCL/LCL) • Fret aérien • Dédouanement • Assurance cargo</div>
+      </header>
+
+      <main class="body">
+        <!-- Services -->
+        <section class="card">
+          <h3>Nos services</h3>
+          <ul class="list">
+            <li><span class="dot"></span> Fret maritime — conteneurs 20’/40’, groupage LCL</li>
+            <li><span class="dot"></span> Fret aérien — express et sécurisé pour urgences</li>
+            <li><span class="dot"></span> Dédouanement — formalités et conformité</li>
+            <li><span class="dot"></span> Assurance cargo — couverture complète</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary" href="mailto:contact@mb-fretservices.com?subject=Demande%20de%20devis%20transport%20international">Demander un devis</a>
+            <a class="btn btn-outline" href="https://wa.me/33749235539" target="_blank" rel="noopener noreferrer">WhatsApp: +33 7 49 23 55 39</a>
+          </div>
+        </section>
+
+        <!-- Destinations + QR -->
+        <section class="card right">
+          <h3>Destinations principales</h3>
+          <ul class="list">
+            <li><span class="dot"></span> Afrique: Congo, Angola, Côte d’Ivoire, Cameroun…</li>
+            <li><span class="dot"></span> Asie: Chine, Turquie…</li>
+            <li><span class="dot"></span> Europe: France, réseau partenaires UE</li>
+          </ul>
+
+          <div class="qr">
+            <img alt="QR vers le site MB Fret Services" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&amp;data=https%3A%2F%2Fmb-fretservices.com%2Ffr">
+            <div>
+              <strong>Scannez pour en savoir plus</strong><br>
+              <small>https://mb-fretservices.com</small>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="mentions">
+          <div>
+            <strong>MB Fret Services</strong><br>
+            Adresse: [À compléter]<br>
+            Email: contact@mb-fretservices.com • Tél: +33 7 49 23 55 39<br>
+            Site: https://mb-fretservices.com
+          </div>
+          <div>
+            SIRET: [À compléter] • TVA intracom: [À compléter]<br>
+            RC Pro: [Assureur] • N° de police: [À compléter]<br>
+            Directeur de publication: [Nom à compléter]
+          </div>
+        </div>
+        <div style="margin-top:4mm;">
+          <span class="muted">Ne pas jeter sur la voie publique</span>
+          <span class="sep">•</span>
+          <span class="muted">Offre non contractuelle — photos non contractuelles</span>
+          <span class="sep">•</span>
+          <span class="muted">Prix TTC sauf indication contraire</span>
+          <span class="sep">•</span>
+          <span class="muted">Imprimé le: ____ / ____ / 2025</span>
+        </div>
+        <div style="margin-top:2mm;" class="muted">
+          © 2025 — Développé avec <span class="heart" aria-hidden="true">❤</span> par <strong>SmarterLogicWeb</strong> • Mentions légales: https://mb-fretservices.com/fr/mentions-legales
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
