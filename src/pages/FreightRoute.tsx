@@ -42,25 +42,37 @@ const contentMap: Record<
   services_freight_france_china: {
     title: "Fret maritime France ↔ Chine (FCL & LCL)",
     subtitle:
-      "Solutions FCL/LCL fiables entre les principaux ports français (Le Havre, Marseille-Fos) et les hubs chinois (Shanghai, Ningbo, Shenzhen).",
+      "Solutions FCL/LCL fiables entre les principaux ports français (Le Havre, Marseille-Fos, Dunkerque) et les hubs chinois (Shanghai, Ningbo, Shenzhen, Qingdao).",
     heroBase: 'hero-china',
     ports: {
       from: ['Le Havre', 'Marseille-Fos', 'Dunkerque'],
       to: ['Shanghai', 'Ningbo', 'Shenzhen', 'Qingdao'],
     },
-    transit: "Délais indicatifs: 35–50 jours selon l'itinéraire et l'armateur.",
+    transit: "Délais indicatifs: 35–50 jours selon l'itinéraire, la saison et la congestion.",
     faq: [
       {
         q: 'FCL ou LCL: que choisir sur l’axe France–Chine ?',
-        a: "FCL convient aux volumes importants avec un meilleur contrôle et sécurité. LCL est optimal en dessous de ~13–15 m³, avec consolidation et coûts partagés.",
+        a: "Au‑delà de ~13–15 m³, le FCL est souvent plus économique et plus sûr (moins de manipulations). En‑dessous, le LCL reste pertinent pour optimiser le budget.",
       },
       {
-        q: 'Quels Incoterms privilégier (FOB/CIF/CIP) ?',
-        a: "FOB/CIF restent les plus répandus. Le choix dépend de votre appétence au risque et du contrôle souhaité sur le transport principal.",
+        q: 'Quels Incoterms privilégier (FOB/CIF/DAP/DDP) ?',
+        a: "FOB/CIF restent courants sur la Chine; DAP/DDP offrent une prise en charge élargie. Le choix dépend du contrôle voulu et du profil de risque.",
       },
       {
         q: 'Gérez‑vous la documentation douanière ?',
-        a: "Oui: DAU, certificats, contrôle conformité et conseils réglementaires selon la nature des marchandises.",
+        a: "Oui: BL, facture commerciale, liste de colisage, certificats éventuels; plus contrôle conformité et assistance dédouanement.",
+      },
+      {
+        q: 'Le fret ferroviaire peut‑il remplacer le maritime ?',
+        a: "Pour certains corridors, le rail offre ~18–22 jours de transit. C’est un compromis vitesse/coût intéressant entre l’aérien et le maritime.",
+      },
+      {
+        q: 'Quelles périodes sont les plus tendues ?',
+        a: "Le Nouvel An chinois et le Q4 avant Noël. Mieux vaut réserver en amont et conserver des alternatives de service.",
+      },
+      {
+        q: 'Proposez‑vous une assurance cargo ?',
+        a: "Oui, couverture ad valorem du départ à la livraison, avec conseils d’emballage pour réduire le risque.",
       },
     ],
     areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Country', name: 'China' }],
@@ -68,25 +80,37 @@ const contentMap: Record<
   services_freight_france_congo: {
     title: "Fret maritime France ↔ Congo (FCL & LCL)",
     subtitle:
-      "Groupage LCL et conteneurs complets vers Pointe‑Noire avec options de ramassage en France (IDF, Lyon, Marseille).",
+      "Groupage LCL et conteneurs complets vers Pointe‑Noire, avec ramassage B2B en France (IDF, Lyon, Marseille) et accompagnement documentaire.",
     heroBase: 'hero-congo',
     ports: {
       from: ['Le Havre', 'Marseille-Fos'],
       to: ['Pointe‑Noire'],
     },
-    transit: 'Délais indicatifs: 20–30 jours selon départs et escales.',
+    transit: 'Délais indicatifs: 20–30 jours selon départs, escales et saison.',
     faq: [
       {
-        q: 'Proposez‑vous le ramassage et l’emballage ?',
-        a: "Oui, ramassage B2B dans les principaux hubs français et emballage export conforme pour réduire le risque en transit.",
+        q: 'Le LCL est‑il adapté pour le Congo ?',
+        a: "Oui, le groupage est pertinent pour colis/volumes modestes. Nous opérons des consolidations régulières avec visibilité sur les jalons.",
       },
       {
-        q: 'Puis‑je suivre mon expédition ?',
-        a: "Oui, suivi en temps réel et visibilité des étapes clés (embarquement, transbordement, arrivée).",
+        q: 'Assurez‑vous le ramassage et l’emballage ?',
+        a: "Ramassage B2B dans les hubs français; emballage export pour limiter les avaries et respecter les exigences portuaires.",
       },
       {
-        q: 'Accompagnez‑vous sur le dédouanement ?',
-        a: "Oui, accompagnement de bout en bout avec nos partenaires locaux.",
+        q: 'Suivi et notifications: quel niveau de visibilité ?',
+        a: "Suivi en temps réel, mises à jour aux étapes clés (embarquement, transit, arrivée) et relances proactives.",
+      },
+      {
+        q: 'Quelles pièces sont requises à l’import au Congo ?',
+        a: "BL, facture, PL, certificat d’origine si requis, et documents spécifiques selon la marchandise. Assistance au dédouanement disponible.",
+      },
+      {
+        q: 'Recommandez‑vous une assurance ?',
+        a: "Oui, une police ad valorem est conseillée. Nous calibrons la couverture selon la valeur et la sensibilité des biens.",
+      },
+      {
+        q: 'FCL vs LCL vers Pointe‑Noire: seuil de bascule ?',
+        a: "Autour de 13–15 m³, le FCL devient souvent compétitif et plus prévisible; en‑dessous, le LCL reste intéressant.",
       },
     ],
     areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Country', name: 'Congo' }],
@@ -94,25 +118,37 @@ const contentMap: Record<
   services_freight_france_turkey: {
     title: "Fret maritime France ↔ Turquie (FCL & LCL)",
     subtitle:
-      "Liaisons régulières avec Istanbul/Izmir. Solutions multimodales (Mer/Route/Air) et délais optimisés.",
+      "Liaisons régulières avec Istanbul, Izmir et Mersin. Options multimodales Mer/Route/Air pour des délais courts et une planification souple.",
     heroBase: 'hero-turkey',
     ports: {
       from: ['Marseille-Fos', 'Le Havre'],
       to: ['Istanbul', 'Izmir', 'Mersin'],
     },
-    transit: 'Délais indicatifs: 7–15 jours selon le port et la saison.',
+    transit: 'Délais indicatifs: 7–15 jours selon port et saison.',
     faq: [
       {
-        q: 'Faites‑vous du cross‑trade (ex: Chine → Turquie → Afrique) ?',
-        a: "Oui, étude au cas par cas avec planification documentaire et choix d’armateur/réseau.",
+        q: 'Quelles sont les forces du corridor France–Turquie ?',
+        a: "Délais courts, fréquences élevées, bonnes alternatives multimodales. Idéal pour flux réguliers et chaînes d’approvisionnement réactives.",
       },
       {
-        q: 'Quelles assurances recommandez‑vous ?',
-        a: "Assurance cargo ad valorem couvrant les risques majeurs du départ à la livraison.",
+        q: 'Proposez‑vous des schémas multimodaux ?',
+        a: "Oui: Mer/Route pour optimiser le coût; recours à l’aérien en cas d’urgence; orchestration selon vos contraintes.",
       },
       {
-        q: 'Pouvez‑vous gérer les flux urgents ?',
-        a: "Oui, via options express (aérien) ou multimodal pour respecter les contraintes de délai.",
+        q: 'Le cross‑trade est‑il possible (ex: Chine→Turquie→Europe/Afrique) ?',
+        a: "Oui, étude au cas par cas avec verrouillage documentaire et sélection d’armateurs/partenaires.",
+      },
+      {
+        q: 'Quels documents et Incoterms recommandez‑vous ?',
+        a: "BL, facture, PL; Incoterms au choix (FOB/CIF/DAP/DDP) selon partage des responsabilités et du risque.",
+      },
+      {
+        q: 'FCL vs LCL sur la Turquie: que privilégier ?',
+        a: "FCL pour volumes significatifs et délais plus stables; LCL compétitif pour petits envois ou flux irréguliers.",
+      },
+      {
+        q: 'Assurance et gestion des risques ?',
+        a: "Assurance ad valorem recommandée; conseils d’emballage et préparation documentaire pour éviter litiges et retards.",
       },
     ],
     areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Country', name: 'Turkey' }],
@@ -130,6 +166,12 @@ const FreightRoute: FC = () => {
 
   const c = contentMap[routeKey];
   const ogImagePath = `/images/og-${c.heroBase.replace('hero-', '')}.webp`;
+  const routeLabel =
+    routeKey === 'services_freight_france_china'
+      ? 'France ↔ Chine'
+      : routeKey === 'services_freight_france_congo'
+      ? 'France ↔ Congo'
+      : 'France ↔ Turquie';
 
   const breadcrumb = {
     '@context': 'https://schema.org',
@@ -268,6 +310,136 @@ const FreightRoute: FC = () => {
               À titre indicatif: 20’ ≈ 33 m³, 40’ ≈ 67 m³. Les tolérances et limites de poids/volume dépendent de
               l’armateur et du service.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section: Coûts & modes / Douane / Assurance / USP */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Coûts & modes (FCL/LCL) — {routeLabel}</h2>
+              {routeKey === 'services_freight_france_china' && (
+                <>
+                  <p className="text-lg text-gray-700 mb-4">
+                    Sur l’axe {routeLabel}, le FCL devient souvent optimal au‑delà d’environ 13–15 m³: moins de manipulations, sécurité renforcée et délais plus stables.
+                    En‑dessous, le LCL (groupage) est un bon levier pour contenir les coûts.
+                  </p>
+                  <p className="text-lg text-gray-700 mb-4">
+                    Les prix varient selon la saison, l’armateur et la charge des navires (BAF/CAF/PSS). Utilisez le Calculateur CBM et demandez un devis pour une
+                    estimation transparente et à jour.
+                  </p>
+                </>
+              )}
+              {routeKey === 'services_freight_france_congo' && (
+                <>
+                  <p className="text-lg text-gray-700 mb-4">
+                    Vers Pointe‑Noire, le groupage LCL est très pertinent pour les petits volumes et colis B2B. Au‑delà de ~13–15 m³, le FCL devient progressivement
+                    plus compétitif et plus prévisible.
+                  </p>
+                  <p className="text-lg text-gray-700 mb-4">
+                    Les coûts tiennent compte des surcharges maritimes et des opérations portuaires. Nous vous guidons sur le meilleur schéma selon le budget et l’échéance.
+                  </p>
+                </>
+              )}
+              {routeKey === 'services_freight_france_turkey' && (
+                <>
+                  <p className="text-lg text-gray-700 mb-4">
+                    {routeLabel} bénéficie de délais courts et de fréquences élevées. FCL pour volumes consolidés et régularité; LCL reste une alternative pragmatique
+                    pour des flux irréguliers.
+                  </p>
+                  <p className="text-lg text-gray-700 mb-4">
+                    En cas d’urgence, des options multimodales (Mer/Route/Air) permettent de respecter des jalons critiques sans exploser les coûts.
+                  </p>
+                </>
+              )}
+
+              <div className="mt-6">
+                <CtaButton href="contact" variant="primary">Demander un devis</CtaButton>
+                <LocalizedLink to="guides/fcl-vs-lcl" className="ml-4 text-accent-600 hover:text-accent-700 font-medium">Comprendre FCL vs LCL</LocalizedLink>
+              </div>
+            </div>
+
+            <div>
+              <div className="bg-white rounded-xl p-6 shadow">
+                <h3 className="text-2xl font-bold text-primary-900 mb-4">Douane & documentation</h3>
+                {routeKey === 'services_freight_france_china' && (
+                  <p className="text-gray-700 mb-4">
+                    Nous gérons BL, facture, liste de colisage, certificats d’origine (si requis) et contrôles conformité. Incoterms courants: FOB/CIF; DAP/DDP pour
+                    une prise en charge élargie. Assistance dédouanement incluse.
+                  </p>
+                )}
+                {routeKey === 'services_freight_france_congo' && (
+                  <p className="text-gray-700 mb-4">
+                    Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane
+                    et accompagnement sur les droits & taxes.
+                  </p>
+                )}
+                {routeKey === 'services_freight_france_turkey' && (
+                  <p className="text-gray-700 mb-4">
+                    BL, facture, PL; Incoterms adaptés (FOB/CIF/DAP/DDP) selon partage des responsabilités. Paramétrage documentaire et coordination portuaire
+                    pour éviter retards.
+                  </p>
+                )}
+
+                <h4 className="text-lg font-semibold text-primary-900 mb-2">Assurance & risques</h4>
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Assurance cargo ad valorem: couverture du départ à la livraison</li>
+                  <li>Conseils d’emballage export pour réduire avaries et litiges</li>
+                  <li>Visibilité des jalons et relances proactives</li>
+                </ul>
+
+                <div className="mt-6">
+                  <LocalizedLink to="documentation/incoterms-2020" className="text-accent-600 hover:text-accent-700 font-medium">
+                    Guide Incoterms 2020
+                  </LocalizedLink>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-primary-900 mb-4">Pourquoi nous choisir sur {routeLabel}</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                {routeKey === 'services_freight_france_china' && (
+                  <>
+                    <li>Planification sur pics (CNY, Q4) et alternatives de service</li>
+                    <li>Options rail en complément pour gagner du temps quand nécessaire</li>
+                    <li>Réseau d’armateurs et hubs pour lisser les congestions</li>
+                  </>
+                )}
+                {routeKey === 'services_freight_france_congo' && (
+                  <>
+                    <li>Forte expertise LCL/colis vers Pointe‑Noire avec consolidations régulières</li>
+                    <li>Ramassage B2B dans les principaux hubs français</li>
+                    <li>Accompagnement documentaire et dédouanement local</li>
+                  </>
+                )}
+                {routeKey === 'services_freight_france_turkey' && (
+                  <>
+                    <li>Délais courts et orchestration multimodale (Mer/Route/Air)</li>
+                    <li>Études cross‑trade et verrouillage documentaire</li>
+                    <li>Suivi 24/7 et communication réactive</li>
+                  </>
+                )}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-primary-900 mb-4">Services clés</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>FCL: 20’, 40’, 40’HC; options Reefer/Open Top selon étude</li>
+                <li>LCL (groupage): départs réguliers, visibilité jalons</li>
+                <li>Pré/Post‑acheminement (Route/Fer) selon budget et délais</li>
+                <li>Gestion documentaire: BL, facture, PL, certificats</li>
+                <li>Assurance ad valorem, conseils d’emballage</li>
+              </ul>
+              <div className="mt-6">
+                <CtaButton href="contact" variant="primary">Obtenir un devis</CtaButton>
+              </div>
+            </div>
           </div>
         </div>
       </section>
