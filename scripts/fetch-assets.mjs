@@ -178,16 +178,53 @@ async function main() {
     const fallback1200 = path.join(imagesDir, 'hero-maritime.jpg');
     const basePath = fs.existsSync(base1600) ? base1600 : fallback1200;
 
-    // China: red tint
-    await buildTintedFromPath('hero-china', basePath, { r: 185, g: 28, b: 28 }); // #b91c1c
+    // China: red vif
+    await buildTintedFromPath('hero-china', basePath, { r: 220, g: 38, b: 38 }); // #dc2626
 
-    // Congo: green tint
+    // Congo: vert forêt
     await buildTintedFromPath('hero-congo', basePath, { r: 22, g: 101, b: 52 }); // #166534
 
-    // Turkey: blue tint
-    await buildTintedFromPath('hero-turkey', basePath, { r: 29, g: 78, b: 216 }); // #1d4ed8
+    // Turkey: rouge profond (différent de Chine)
+    await buildTintedFromPath('hero-turkey', basePath, { r: 190, g: 18, b: 60 }); // #be123c
   } catch (e) {
     console.warn('Failed to build tinted route variants:', e?.message || e);
+  }
+
+  // Build route-specific OG images (1200x630) from the tinted variants
+  try {
+    const ogOut = (name) => ({
+      webp: path.join(publicDir, 'images', `og-${name}.webp`),
+      jpg: path.join(publicDir, 'images', `og-${name}.jpg`),
+    });
+    ensureDir(path.join(publicDir, 'images'));
+
+    const chinaBase = fs.existsSync(path.join(imagesDir, 'hero-china-1600.jpg'))
+      ? path.join(imagesDir, 'hero-china-1600.jpg')
+      : path.join(imagesDir, 'hero-china.jpg');
+    const congoBase = fs.existsSync(path.join(imagesDir, 'hero-congo-1600.jpg'))
+      ? path.join(imagesDir, 'hero-congo-1600.jpg')
+      : path.join(imagesDir, 'hero-congo.jpg');
+    const turkeyBase = fs.existsSync(path.join(imagesDir, 'hero-turkey-1600.jpg'))
+      ? path.join(imagesDir, 'hero-turkey-1600.jpg')
+      : path.join(imagesDir, 'hero-turkey.jpg');
+
+    // Helper: create OG from a base image path
+    async function buildOg(name, base) {
+      await sharp(base)
+        .resize(1200, 630, { fit: 'cover', position: 'centre' })
+        .webp({ quality: 80 })
+        .toFile(ogOut(name).webp);
+      await sharp(base)
+        .resize(1200, 630, { fit: 'cover', position: 'centre' })
+        .jpeg({ quality: 85, progressive: true })
+        .toFile(ogOut(name).jpg);
+    }
+
+    await buildOg('china', chinaBase);
+    await buildOg('congo', congoBase);
+    await buildOg('turkey', turkeyBase);
+  } catch (e) {
+    console.warn('Failed to build OG route images:', e?.message || e);
   }
 
   console.log('Assets prepared under public/images and og-default.* at public/');

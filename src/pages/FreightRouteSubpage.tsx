@@ -116,12 +116,14 @@ const FreightRouteSubpage: FC = () => {
   const parentUrl = SITE_URL + pathForLang(ctx.parentKey, lang);
   const t = titles(ctx.country, ctx.sub);
   const jsonLd = typeof window !== 'undefined' ? buildJsonLd(SITE_URL, langPath, parentUrl, t.h1) : [];
+  const ogImage = `/images/og-${ctx.country}.webp`;
 
   return (
     <div className="pt-16">
       <SEO
         title={t.title}
         description={t.desc}
+        ogImage={ogImage}
         jsonLd={jsonLd as any}
       />
 
