@@ -42,7 +42,7 @@ const contentMap: Record<
     title: "Fret maritime France ↔ Chine (FCL & LCL)",
     subtitle:
       "Solutions FCL/LCL fiables entre les principaux ports français (Le Havre, Marseille-Fos) et les hubs chinois (Shanghai, Ningbo, Shenzhen).",
-    heroBase: 'hero-maritime',
+    heroBase: 'hero-china',
     ports: {
       from: ['Le Havre', 'Marseille-Fos', 'Dunkerque'],
       to: ['Shanghai', 'Ningbo', 'Shenzhen', 'Qingdao'],
@@ -68,7 +68,7 @@ const contentMap: Record<
     title: "Fret maritime France ↔ Congo (FCL & LCL)",
     subtitle:
       "Groupage LCL et conteneurs complets vers Pointe‑Noire avec options de ramassage en France (IDF, Lyon, Marseille).",
-    heroBase: 'hero-maritime',
+    heroBase: 'hero-congo',
     ports: {
       from: ['Le Havre', 'Marseille-Fos'],
       to: ['Pointe‑Noire'],
@@ -94,7 +94,7 @@ const contentMap: Record<
     title: "Fret maritime France ↔ Turquie (FCL & LCL)",
     subtitle:
       "Liaisons régulières avec Istanbul/Izmir. Solutions multimodales (Mer/Route/Air) et délais optimisés.",
-    heroBase: 'hero-maritime',
+    heroBase: 'hero-turkey',
     ports: {
       from: ['Marseille-Fos', 'Le Havre'],
       to: ['Istanbul', 'Izmir', 'Mersin'],

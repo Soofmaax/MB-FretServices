@@ -95,6 +95,44 @@ async function buildOgDefault(fromName) {
     .toFile(path.join(publicDir, 'og-default.jpg'));
 }
 
+/**
+ * Create tinted variants from an existing base image file.
+ * Generates name.jpg (1200w) and -800/-1200/-1600 in jpg/webp/avif.
+ */
+async function buildTintedFromPath(name, basePath, tintColor) {
+  const sizes = [800, 1200, 1600];
+  if (!fs.existsSync(basePath)) {
+    throw new Error(`Base image not found: ${basePath}`);
+  }
+
+  // Base fallback 1200 jpg
+  await sharp(basePath)
+    .resize({ width: 1200 })
+    .tint(tintColor)
+    .jpeg({ quality: 82, progressive: true })
+    .toFile(path.join(imagesDir, `${name}.jpg`));
+
+  for (const w of sizes) {
+    await sharp(basePath)
+      .resize({ width: w })
+      .tint(tintColor)
+      .jpeg({ quality: 82, progressive: true })
+      .toFile(path.join(imagesDir, `${name}-${w}.jpg`));
+
+    await sharp(basePath)
+      .resize({ width: w })
+      .tint(tintColor)
+      .webp({ quality: 80 })
+      .toFile(path.join(imagesDir, `${name}-${w}.webp`));
+
+    await sharp(basePath)
+      .resize({ width: w })
+      .tint(tintColor)
+      .avif({ quality: 50 })
+      .toFile(path.join(imagesDir, `${name}-${w}.avif`));
+  }
+}
+
 async function main() {
   ensureDir(publicDir);
   ensureDir(imagesDir);
@@ -132,6 +170,24 @@ async function main() {
     await buildOgDefault('hero-maritime');
   } catch (e) {
     console.warn('Failed to build OG default:', e?.message || e);
+  }
+
+  // Build route-specific tinted variants from hero-maritime (to ensure visual distinction)
+  try {
+    const base1600 = path.join(imagesDir, 'hero-maritime-1600.jpg');
+    const fallback1200 = path.join(imagesDir, 'hero-maritime.jpg');
+    const basePath = fs.existsSync(base1600) ? base1600 : fallback1200;
+
+    // China: red tint
+    await buildTintedFromPath('hero-china', basePath, { r: 185, g: 28, b: 28 }); // #b91c1c
+
+    // Congo: green tint
+    await buildTintedFromPath('hero-congo', basePath, { r: 22, g: 101, b: 52 }); // #166534
+
+    // Turkey: blue tint
+    await buildTintedFromPath('hero-turkey', basePath, { r: 29, g: 78, b: 216 }); // #1d4ed8
+  } catch (e) {
+    console.warn('Failed to build tinted route variants:', e?.message || e);
   }
 
   console.log('Assets prepared under public/images and og-default.* at public/');
