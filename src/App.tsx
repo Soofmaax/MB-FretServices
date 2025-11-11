@@ -9,6 +9,9 @@ const Destinations = lazy(() => import('./pages/Destinations'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
+const AirFreight = lazy(() => import('./pages/AirFreight'));
+const Customs = lazy(() => import('./pages/Customs'));
+const Insurance = lazy(() => import('./pages/Insurance'));
 const FreightRoute = lazy(() => import('./pages/FreightRoute'));
 const PillarIncoterms = lazy(() => import('./pages/PillarIncoterms'));
 const PillarFCLvsLCL = lazy(() => import('./pages/PillarFCLvsLCL'));
@@ -70,6 +73,30 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightMaritime />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/fret-aerien"
+            element={
+              <Suspense fallback={null}>
+                <AirFreight />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/dedouanement"
+            element={
+              <Suspense fallback={null}>
+                <Customs />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/assurance-cargo"
+            element={
+              <Suspense fallback={null}>
+                <Insurance />
               </Suspense>
             }
           />
@@ -138,6 +165,30 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightMaritime />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/air-freight"
+            element={
+              <Suspense fallback={null}>
+                <AirFreight />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/customs-clearance"
+            element={
+              <Suspense fallback={null}>
+                <Customs />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/cargo-insurance"
+            element={
+              <Suspense fallback={null}>
+                <Insurance />
               </Suspense>
             }
           />
@@ -221,6 +272,30 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightMaritime />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/frete-aereo"
+            element={
+              <Suspense fallback={null}>
+                <AirFreight />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/despacho-aduaneiro"
+            element={
+              <Suspense fallback={null}>
+                <Customs />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/seguro-carga"
+            element={
+              <Suspense fallback={null}>
+                <Insurance />
               </Suspense>
             }
           />

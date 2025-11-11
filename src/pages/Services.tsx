@@ -128,6 +128,30 @@ const Services: FC = () => {
                         </LocalizedLink>
                       </div>
                     )}
+                    {def.key === 'air' && (
+                      <div className="mb-6">
+                        <LocalizedLink to="services/fret-aerien" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+                          {t('air.more_link', 'Découvrir le fret aérien')}
+                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                        </LocalizedLink>
+                      </div>
+                    )}
+                    {def.key === 'customs' && (
+                      <div className="mb-6">
+                        <LocalizedLink to="services/dedouanement" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+                          {t('customs.more_link', 'En savoir plus')}
+                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                        </LocalizedLink>
+                      </div>
+                    )}
+                    {def.key === 'insurance' && (
+                      <div className="mb-6">
+                        <LocalizedLink to="services/assurance-cargo" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+                          {t('insurance.more_link', 'Assurer vos envois')}
+                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                        </LocalizedLink>
+                      </div>
+                    )}
 
                     <CtaButton href="contact" variant="primary">
                       {t('common:get_quote')}

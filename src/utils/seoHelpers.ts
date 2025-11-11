@@ -2,7 +2,10 @@ import { getSiteUrl } from './siteUrl';
 import { detectLangFromPath, keyFromPath, pathForLang, type Lang } from './paths';
 
 export const DEFAULT_SITE_NAME = 'MB Fret Services';
+
+// Prefer env-defined OG image (can be /og-default.webp), else external fallback
 export const DEFAULT_OG_IMAGE =
+  (import.meta.env?.VITE_OG_IMAGE as string | undefined) ||
   'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
 
 export const SUP_LANGS: Lang[] = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];

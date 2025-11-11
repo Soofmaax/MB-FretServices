@@ -15,6 +15,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'mentions-legales',
     services_freight_maritime: 'services/fret-maritime',
+    services_air_freight: 'services/fret-aerien',
+    services_customs: 'services/dedouanement',
+    services_insurance: 'services/assurance-cargo',
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
@@ -28,6 +31,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal-notice',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -41,6 +47,9 @@ const SLUGS = {
     contact: 'contacto',
     legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
+    services_air_freight: 'servicos/frete-aereo',
+    services_customs: 'servicos/despacho-aduaneiro',
+    services_insurance: 'servicos/seguro-carga',
     services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
     services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
@@ -54,6 +63,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -67,6 +79,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -80,6 +95,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -93,6 +111,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -106,6 +127,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -119,6 +143,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -152,7 +179,12 @@ function buildPages(siteUrl) {
     const entries = Object.entries(sl);
     for (const [key, slug] of entries) {
       // Only include primary logical pages + key route pages
-      if (!['home','services','destinations','contact','legal','services_freight_maritime','services_freight_france_china','services_freight_france_congo','services_freight_france_turkey','pillar_incoterms','pillar_fcl_lcl'].includes(key)) continue;
+      if (![
+        'home','services','destinations','contact','legal',
+        'services_freight_maritime','services_air_freight','services_customs','services_insurance',
+        'services_freight_france_china','services_freight_france_congo','services_freight_france_turkey',
+        'pillar_incoterms','pillar_fcl_lcl'
+      ].includes(key)) continue;
       const path = `/${lng}${slug ? `/${slug}` : ''}`;
       const url = new URL(path, siteUrl).href.replace(/\/$/, '');
       pages.push({ lang: lng, key, url });

@@ -7,6 +7,9 @@ export type RouteKey =
   | 'contact'
   | 'legal'
   | 'services_freight_maritime'
+  | 'services_air_freight'
+  | 'services_customs'
+  | 'services_insurance'
   | 'services_freight_france_china'
   | 'services_freight_france_congo'
   | 'services_freight_france_turkey'
@@ -21,6 +24,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'mentions-legales',
     services_freight_maritime: 'services/fret-maritime',
+    services_air_freight: 'services/fret-aerien',
+    services_customs: 'services/dedouanement',
+    services_insurance: 'services/assurance-cargo',
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
@@ -34,6 +40,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal-notice',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -47,6 +56,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contacto',
     legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
+    services_air_freight: 'servicos/frete-aereo',
+    services_customs: 'servicos/despacho-aduaneiro',
+    services_insurance: 'servicos/seguro-carga',
     services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
     services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
@@ -61,6 +73,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -74,6 +89,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -87,6 +105,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -100,6 +121,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -113,6 +137,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -126,6 +153,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
@@ -157,6 +187,21 @@ const FREIGHT_ALIASES = new Set([
   'leistungen/seefracht',
   'huduma/usafirishaji-wa-baharini',
   'خدمات/الشحن-البحري'
+]);
+const AIR_ALIASES = new Set([
+  'services/fret-aerien',
+  'services/air-freight',
+  'servicos/frete-aereo',
+]);
+const CUSTOMS_ALIASES = new Set([
+  'services/dedouanement',
+  'services/customs-clearance',
+  'servicos/despacho-aduaneiro',
+]);
+const INSURANCE_ALIASES = new Set([
+  'services/assurance-cargo',
+  'services/cargo-insurance',
+  'servicos/seguro-carga',
 ]);
 
 // Route-specific maritime pages aliases (multi-lang)
@@ -220,6 +265,9 @@ export function keyFromPath(pathname: string): RouteKey {
   if (CONTACT_ALIASES.has(rest)) return 'contact';
   if (LEGAL_ALIASES.has(rest)) return 'legal';
   if (FREIGHT_ALIASES.has(rest)) return 'services_freight_maritime';
+  if (AIR_ALIASES.has(rest)) return 'services_air_freight';
+  if (CUSTOMS_ALIASES.has(rest)) return 'services_customs';
+  if (INSURANCE_ALIASES.has(rest)) return 'services_insurance';
   if (FREIGHT_FRANCE_CHINA_ALIASES.has(rest)) return 'services_freight_france_china';
   if (FREIGHT_FRANCE_CONGO_ALIASES.has(rest)) return 'services_freight_france_congo';
   if (FREIGHT_FRANCE_TURKEY_ALIASES.has(rest)) return 'services_freight_france_turkey';
