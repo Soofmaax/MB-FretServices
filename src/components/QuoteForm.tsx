@@ -11,6 +11,16 @@ const routes = [
   { key: 'services_freight_france_turkey', label: 'France ↔ Turquie' },
 ] as const;
 
+function track(event: string, params?: Record<string, unknown>) {
+  try {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', event, params || {});
+    }
+  } catch {
+    // ignore
+  }
+}
+
 const QuoteForm: FC<Props> = ({ defaultRoute = null }) => {
   const [step, setStep] = useState(1);
   const [route, setRoute] = useState<string>(defaultRoute || routes[0].key);
@@ -27,11 +37,27 @@ const QuoteForm: FC<Props> = ({ defaultRoute = null }) => {
     return (l * w * h * q) / 1_000_000;
   }, [dims]);
 
-  const next = () => setStep((s) => Math.min(3, s + 1));
+  const next = () => {
+    setStep((s) => {
+      const nextStep = Math.min(3, s + 1);
+      if (nextStep === 2) {
+        track('lead_progress', { step: 2, route, service });
+      } else if (nextStep === 3) {
+        track('lead_progress', { step: 3, route, service, cbm: Number.isFinite(cbm) ? Number(cbm.toFixed(2)) : 0 });
+      }
+      return nextStep;
+    });
+  };
+
   const prev = () => setStep((s) => Math.max(1, s - 1));
 
   const submitMail = () => {
     const r = routes.find((r) => r.key === route)?.label || '';
+    track('lead_submit', {
+      route,
+      service,
+      cbm: Number.isFinite(cbm) ? Number(cbm.toFixed(2)) : 0,
+    });
     const subject = encodeURIComponent(`Demande de devis — ${r} (${service})`);
     const body = encodeURIComponent(
       [
