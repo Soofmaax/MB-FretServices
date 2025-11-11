@@ -163,6 +163,18 @@ const ROUTES = [
   '/ar/guides/fcl-vs-lcl',
 ];
 
+// Optional filter by languages to speed up prerender
+const PRERENDER_LANGS = (process.env.PRERENDER_LANGS || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+const ROUTES_TO_RENDER = PRERENDER_LANGS.length
+  ? ROUTES.filter((r) => {
+      const m = r.match(/^\/([a-z]{2})\b/);
+      return m && PRERENDER_LANGS.includes(m[1]);
+    })
+  : ROUTES;
+
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
@@ -191,7 +203,9 @@ async function main() {
 
   try {
     const page = await browser.newPage();
-    for (const route of ROUTES) {
+    const targets = ROUTES_TO_RENDER;
+    console.log(`Prerender routes count: ${targets.length}${PRERENDER_LANGS.length ? ` (langs: ${PRERENDER_LANGS.join(',')})` : ''}`);
+    for (const route of targets) {
       const url = baseUrl + route;
       console.log(`Prerendering ${url}`);
       try {

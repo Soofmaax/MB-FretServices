@@ -5,7 +5,11 @@ import url from 'url';
 const projectRoot = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(projectRoot, '..');
 
-const SUP_LANGS = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
+const ENV_LANGS = (process.env.AI_TXT_LANGS || process.env.SITEMAP_LANGS || process.env.SUP_LANGS || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
 
 const SLUGS = {
   fr: {
@@ -289,7 +293,7 @@ function aiTxt(siteUrl) {
   lines.push(`  description: >-`);
   lines.push(`    MB Fret Services propose des solutions de transport international (fret maritime FCL/LCL, fret aérien),`);
   lines.push(`    dédouanement et assurance cargo depuis l'Europe vers l'Afrique et l'Asie. Devis sous 24 h.`);
-  lines.push(`  languages: [fr, en, pt, es, ar, tr, de, it, sw]`);
+  lines.push(`  languages: [${SUP_LANGS.join(', ')}]`);
   lines.push(`  topics: [logistics, freight, maritime, air, customs, shipping, africa, asia, europe]`);
   lines.push(`  target_audience: B2B & particuliers expédiant des marchandises vers l'Afrique et l'Asie depuis l'Europe`);
   lines.push(`  service_regions:`);

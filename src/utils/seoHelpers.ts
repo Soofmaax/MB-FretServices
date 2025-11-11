@@ -8,7 +8,11 @@ export const DEFAULT_OG_IMAGE =
   (import.meta.env?.VITE_OG_IMAGE as string | undefined) ||
   'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
 
-export const SUP_LANGS: Lang[] = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
+const ENV_SUP_LANGS = (import.meta.env?.VITE_SUP_LANGS as string | undefined)
+  ? (import.meta.env.VITE_SUP_LANGS as string).split(',').map((s) => s.trim()).filter(Boolean)
+  : [];
+export const SUP_LANGS: Lang[] =
+  (ENV_SUP_LANGS.length ? (ENV_SUP_LANGS as Lang[]) : (['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'] as Lang[]));
 
 export const OG_LOCALE_MAP: Record<Lang, string> = {
   fr: 'fr_FR',

@@ -5,8 +5,13 @@ import url from 'url';
 const projectRoot = path.dirname(url.fileURLToPath(import.meta.url));
 const root = path.resolve(projectRoot, '..');
 
-// Languages supported in the app
-const SUP_LANGS = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
+// Languages supported in the app (overridable via env)
+// Use SITEMAP_LANGS or SUP_LANGS env as comma-separated list, e.g. "fr,en"
+const ENV_LANGS = (process.env.SITEMAP_LANGS || process.env.SUP_LANGS || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
 
 // Logical keys -> localized slugs
 const SLUGS = {
