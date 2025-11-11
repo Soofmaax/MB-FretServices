@@ -58,7 +58,7 @@ function titles(country: Country, sub: SubTopic) {
   };
 }
 
-function buildJsonLd(siteUrl: string, langPath: string, parentUrl: string, h1: string) {
+function buildJsonLd(siteUrl: string, langPath: string, parentUrl: string, h1: string, faqEntities: Array<{ name: string; text: string }>) {
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -82,26 +82,43 @@ function buildJsonLd(siteUrl: string, langPath: string, parentUrl: string, h1: s
   const faq = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Quel est le seuil pour préférer le FCL au LCL ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'À partir de ~13–15 m³, le FCL devient souvent plus économique et plus sûr que le LCL.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Quels documents éviter d’oublier ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Facture, packing list, BL, certificats d’origine/assurance selon la marchandise et la route.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Pouvez-vous assister sur la douane ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Oui, contrôle documentaire, représentation en douane et paramétrage Incoterms adaptés.' },
-      },
-    ],
+    mainEntity: faqEntities.map((e) => ({
+      '@type': 'Question',
+      name: e.name,
+      acceptedAnswer: { '@type': 'Answer', text: e.text },
+    })),
   };
 
   return [breadcrumb, article, faq];
+}
+
+function faqFor(country: Country, sub: SubTopic) {
+  if (sub === 'fcl_lcl') {
+    return [
+      { name: 'Quel seuil pour basculer du LCL au FCL ?', text: 'Autour de 13–15 m³ selon ports/saison. Évaluez aussi valeur/risque/délais.' },
+      { name: 'Le LCL est-il plus risqué ?', text: 'Il implique consolidation/déconsolidation. Emballage export + assurance ad valorem réduisent significativement le risque.' },
+      { name: 'Peut-on mixer LCL et aérien ?', text: 'Oui, pour respecter un jalon critique. Nous calibrons un schéma multimodal adapté.' },
+      { name: 'Quels conteneurs FCL existent ?', text: '20’, 40’, 40’HC; options Reefer/Open Top selon étude de faisabilité et nature des biens.' },
+      { name: 'Comment estimer mon CBM ?', text: 'Longueur×Largeur×Hauteur×Quantité / 1 000 000. Utilisez notre calculateur CBM en ligne.' },
+    ];
+  }
+  if (sub === 'customs') {
+    const routeHint = country === 'china' ? 'Chine' : country === 'congo' ? 'Congo' : 'Turquie';
+    return [
+      { name: `Quels documents pour ${routeHint} ?`, text: 'Facture, packing list, BL, certificat d’origine si requis; autres certificats selon la marchandise.' },
+      { name: 'Quel Incoterm choisir ?', text: 'FOB/CIF fréquents en maritime; DAP/DDP pour prise en charge étendue. Nous conseillons selon risque/contrôle/budget.' },
+      { name: 'Pouvez-vous représenter en douane ?', text: 'Oui. Contrôle documentaire, droits & taxes, coordination avec le terminal.' },
+      { name: 'Comment éviter les retards ?', text: 'Anticiper les cut-offs, valider les codes SH, qualité documentaire, échanges proactifs avec l’armateur.' },
+      { name: 'L’assurance est-elle obligatoire ?', text: 'Recommandée ad valorem. Elle sécurise trésorerie et continuité d’activité en cas d’avarie/perte.' },
+    ];
+  }
+  // checklist
+  return [
+    { name: 'Que vérifier en priorité ?', text: 'Facture/PL signées, BL (brouillon), certificats requis, coordonnées réceptionnaire, contraintes site.' },
+    { name: 'Comment documenter l’emballage ?', text: 'Photos datées, matériaux adaptés, calage; joindre schémas si sensible.' },
+    { name: 'Faut-il un RDV au port ?', text: 'Selon terminal. Nous coordonnons créneaux et consignes d’accès.' },
+    { name: 'Quid des assurances ?', text: 'Souscrire ad valorem, préciser exclusions, conserver preuves et numéros de lot.' },
+  ];
 }
 
 const FreightRouteSubpage: FC = () => {
@@ -115,8 +132,9 @@ const FreightRouteSubpage: FC = () => {
 
   const parentUrl = SITE_URL + pathForLang(ctx.parentKey, lang);
   const t = titles(ctx.country, ctx.sub);
-  const jsonLd = typeof window !== 'undefined' ? buildJsonLd(SITE_URL, langPath, parentUrl, t.h1) : [];
   const ogImage = `/images/og-${ctx.country}.webp`;
+  const faqEntities = faqFor(ctx.country, ctx.sub);
+  const jsonLd = typeof window !== 'undefined' ? buildJsonLd(SITE_URL, langPath, parentUrl, t.h1, faqEntities) : [];
 
   return (
     <div className="pt-16">
@@ -133,47 +151,116 @@ const FreightRouteSubpage: FC = () => {
             <a href={parentUrl} className="text-accent-600 hover:text-accent-700">Retour à la page route</a>
           </p>
           <h1 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">{t.h1}</h1>
+
           {ctx.sub === 'fcl_lcl' && (
             <>
               <p className="text-lg text-gray-700 mb-6">
-                FCL (conteneur complet) offre sécurité et contrôle. LCL (groupage) optimise les coûts pour les volumes inférieurs à ~13–15 m³.
-                Sur cette route, nous recommandons FCL dès que le volume ou la valeur justifie une sécurité accrue et des délais plus prévisibles.
+                FCL (conteneur complet) maximise le contrôle et limite les manipulations; LCL (groupage) optimise le budget pour des
+                volumes inférieurs à ~13–15 m³. L’arbitrage doit considérer volume, valeur, délai et sensibilité de la marchandise.
               </p>
+              <h2 className="text-2xl font-bold text-primary-900 mb-3">Seuils, coûts et risques</h2>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Seuils indicatifs: 20’ ≈ 33 m³, 40’ ≈ 67 m³</li>
-                <li>FCL: moins de manipulations, meilleur contrôle, assurance simplifiée</li>
-                <li>LCL: coûts partagés, consolidation hebdomadaire selon ports</li>
+                <li>Seuils indicatifs: 20’ ≈ 33 m³, 40’ ≈ 67 m³, 40’HC ≈ 76 m³</li>
+                <li>Coût total: comparer FCL vs LCL (pré/post‑acheminement, THC, surcharges, assurance, douane)</li>
+                <li>Risque: LCL implique consolidation; privilégier emballage export et assurance ad valorem</li>
               </ul>
-            </>
-          )}
-          {ctx.sub === 'customs' && (
-            <>
-              <p className="text-lg text-gray-700 mb-6">
-                Dédouanement: vérifiez facture, packing list, codes SH, certificats d’origine et règles spécifiques pays.
-                Nous assurons la représentation et la conformité documentaire bout en bout.
-              </p>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Cas d’usage {ctx.country === 'china' ? 'Chine' : ctx.country === 'congo' ? 'Congo' : 'Turquie'}</h3>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Incoterms adaptés (FOB/CIF/DAP) selon votre tolérance au risque</li>
-                <li>Anticipez droits & taxes et éventuels contrôles</li>
-                <li>Synchronisation avec l’armateur et le terminal portuaire</li>
+                {ctx.country === 'china' && (
+                  <>
+                    <li>Programmes récurrents: FCL prioritaire; LCL pour prototypes/petites séries</li>
+                    <li>Pics saisonniers (CNY, Q4): sécuriser capacité et anticiper cut‑offs</li>
+                  </>
+                )}
+                {ctx.country === 'congo' && (
+                  <>
+                    <li>Colis/Palettes: LCL groupé vers Pointe‑Noire; visibilité jalons</li>
+                    <li>Équipements sensibles: bascule FCL + préparation documentaire stricte</li>
+                  </>
+                )}
+                {ctx.country === 'turkey' && (
+                  <>
+                    <li>Délais courts: FCL pour stabilité; LCL ou route pour ponctuels</li>
+                    <li>Cross‑trade: verrouillage documentaire multi‑pays</li>
+                  </>
+                )}
               </ul>
-            </>
-          )}
-          {ctx.sub === 'checklist' && (
-            <>
-              <p className="text-lg text-gray-700 mb-6">
-                Utilisez cette checklist pour fluidifier l’embarquement et éviter les retards:
-              </p>
-              <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Facture commerciale et packing list signées</li>
-                <li>BL (à valider) et certificat d’origine si requis</li>
-                <li>Assurance (ad valorem) et photos d’emballage</li>
-                <li>Contact réceptionnaire et modalités de livraison</li>
-              </ul>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <CtaButton href="contact" variant="primary">Comparer FCL/LCL avec un expert</CtaButton>
+                <LocalizedLink to="guides/fcl-vs-lcl" className="text-accent-600 hover:text-accent-700 font-medium">Guide FCL vs LCL</LocalizedLink>
+              </div>
             </>
           )}
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          {ctx.sub === 'customs' && (
+            <>
+              <p className="text-lg text-gray-700 mb-6">
+                Réussir la douane, c’est d’abord une documentation impeccable (facture, PL, BL, certificats). Nous pilotons la
+                représentation, le calcul droits & taxes et la coordination terminal/armateur pour éviter retards et coûts additionnels.
+              </p>
+              <h2 className="text-2xl font-bold text-primary-900 mb-3">Documents & Incoterms</h2>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Facture, packing list, BL, certificat d’origine (si requis), autres certificats spécifiques</li>
+                <li>Incoterms: FOB/CIF fréquents; DAP/DDP pour prise en charge élargie et expérience porte‑à‑porte</li>
+                <li>Codes SH précis: conditionnent droits & taxes, contrôles potentiels</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Pièges fréquents</h3>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Incohérences entre documents (quantités, poids, descriptions)</li>
+                <li>Cut‑offs manqués (documentaire/VGM) et absence de preuve d’emballage</li>
+                <li>Assurance sous‑dimensionnée vs valeur réelle</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <CtaButton href="contact" variant="primary">Parler à un spécialiste douane</CtaButton>
+                <LocalizedLink to="documentation/incoterms-2020" className="text-accent-600 hover:text-accent-700 font-medium">Incoterms 2020</LocalizedLink>
+              </div>
+            </>
+          )}
+
+          {ctx.sub === 'checklist' && (
+            <>
+              <p className="text-lg text-gray-700 mb-6">
+                Suivez cette checklist pour fluidifier l’embarquement et la livraison. Elle couvre préparation, documents, assurance
+                et coordination avec les parties prenantes.
+              </p>
+              <h2 className="text-2xl font-bold text-primary-900 mb-3">Avant l’expédition</h2>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li>CBM/poids estimés (outil CBM), choix FCL/LCL</li>
+                <li>Port/service sélectionnés (direct vs transbordement)</li>
+                <li>Emballage export (calage, cerclage, marquages)</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Documents</h3>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Facture commerciale, packing list</li>
+                <li>BL (brouillon à valider), certificat d’origine si requis</li>
+                <li>Assurance ad valorem: police et preuves</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Au port et à l’arrivée</h3>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Cut‑offs respectés, VGM transmis</li>
+                <li>Coordination terminal, créneau de livraison, contraintes site</li>
+                <li>Dédouanement, mainlevée et preuve de livraison</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <CtaButton href="contact" variant="primary">Demander un accompagnement</CtaButton>
+                <LocalizedLink to="services/fret-maritime" className="text-accent-600 hover:text-accent-700 font-medium">Voir les services</LocalizedLink>
+              </div>
+            </>
+          )}
+
+          <div className="mt-10">
+            <h2 className="text-2xl font-bold text-primary-900 mb-3">FAQ</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {faqEntities.map((f, i) => (
+                <div key={i} className="bg-gray-50 rounded-lg p-4">
+                  <h3 className="font-semibold text-primary-900 mb-1">{f.name}</h3>
+                  <p className="text-gray-700">{f.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-3">
             <CtaButton href="contact" variant="primary">Demander un devis</CtaButton>
             <LocalizedLink to="documentation/incoterms-2020" className="text-accent-600 hover:text-accent-700 font-medium">
               Guide Incoterms 2020

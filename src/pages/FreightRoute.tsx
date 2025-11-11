@@ -444,6 +444,198 @@ const FreightRoute: FC = () => {
         </div>
       </section>
 
+      {/* Section: Étapes, Incoterms, Cas d'usage, Checklist (contenu étendu) */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="lg:col-span-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Étapes opérationnelles et bonnes pratiques</h2>
+              <ol className="list-decimal pl-6 text-gray-700 space-y-2">
+                <li>Qualification du besoin (volume CBM/poids, sensibilité marchandise, Incoterm souhaité)</li>
+                <li>Choix du port et du service (direct/transbordement), arbitrage FCL/LCL</li>
+                <li>Préparation documentaire (facture, PL, certificats) et conformité (codes SH)</li>
+                <li>Réservation et cut-offs (booking, VGM, cut-off documentaire)</li>
+                <li>Embarquement, suivi et notifications jalons</li>
+                <li>Dédouanement à l’import, mainlevée, livraison finale</li>
+              </ol>
+              <div className="mt-6">
+                <p className="text-gray-700">
+                  Bonnes pratiques: anticiper les pics (saisons, jours fériés), soigner l’emballage export (calage, cerclage),
+                  sécuriser l’assurance ad valorem et garder une marge sur les délais critiques.
+                </p>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-10 mb-4">Incoterms & responsabilités</h2>
+              <p className="text-gray-700 mb-3">
+                Le choix d’Incoterm influence le contrôle, la répartition des coûts et le point de transfert des risques.
+                Exemples courants: FOB/CIF pour les flux maritimes standards; DAP/DDP pour une expérience porte‑à‑porte.
+              </p>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>FOB: contrôle acheteur sur transport principal; exige une maturité logistique</li>
+                <li>CIF: prévisibilité budgétaire via fret+assurance côté vendeur; contrôle moindre</li>
+                <li>DAP/DDP: prise en charge étendue, fluidité opérationnelle, exigences douane/fiscalité</li>
+              </ul>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-10 mb-4">Calcul du coût total livré</h2>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Sea freight + surcharges (BAF, CAF, PSS)</li>
+                <li>THC origine/destination, BL, manutentions</li>
+                <li>Pré/post‑acheminement route/fer</li>
+                <li>Assurance, droits & taxes, frais de dossier</li>
+              </ul>
+              <p className="text-gray-700 mt-2">
+                Comparez toujours FCL vs LCL sur la base du coût total et pas uniquement du tarif au m³.
+              </p>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-10 mb-4">Cas d’usage</h2>
+              {routeKey === 'services_freight_france_china' && (
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Séries régulières: FCL pour sécuriser délais/capacité; rail ponctuel pour accélérer</li>
+                  <li>Lancements produits: LCL pour pilotes puis bascule FCL dès montée en volume</li>
+                  <li>Marchandises sensibles: FCL + emballage pro + assurance ad valorem</li>
+                </ul>
+              )}
+              {routeKey === 'services_freight_france_congo' && (
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Colis/petits lots: LCL groupé vers Pointe‑Noire avec visibilité des jalons</li>
+                  <li>Équipements lourds: FCL/Open Top selon étude, ramassage orchestré</li>
+                  <li>Flux projet: coordination documentaire et assistance locale au dédouanement</li>
+                </ul>
+              )}
+              {routeKey === 'services_freight_france_turkey' && (
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Réassort rapide: LCL ou route/multimodal pour tenir des fenêtres serrées</li>
+                  <li>Programmes récurrents: FCL avec planification hebdo et slots réservés</li>
+                  <li>Cross‑trade: verrouillage documentaire, partenaires adaptés par segment</li>
+                </ul>
+              )}
+
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-10 mb-4">Checklist d’expédition</h2>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Facture commerciale, packing list, BL (à valider)</li>
+                <li>Certificat d’origine et documents spécifiques (si requis)</li>
+                <li>Assurance ad valorem et photos d’emballage</li>
+                <li>Coordonnées réceptionnaire, créneau de livraison, contraintes site</li>
+              </ul>
+
+              <div className="mt-8">
+                <CtaButton href="contact" variant="primary">Demander un devis détaillé</CtaButton>
+                <LocalizedLink to="documentation/incoterms-2020" className="ml-4 text-accent-600 hover:text-accent-700 font-medium">
+                  Comprendre les Incoterms
+                </LocalizedLink>
+              </div>
+            </div>
+
+            <aside>
+              <div className="bg-gray-50 rounded-xl p-6 shadow">
+                <h3 className="text-2xl font-bold text-primary-900 mb-3">Ports & corridors {routeLabel}</h3>
+                {routeKey === 'services_freight_france_china' && (
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>France: Le Havre, Marseille‑Fos, Dunkerque</li>
+                    <li>Chine: Shanghai, Ningbo, Shenzhen, Qingdao</li>
+                    <li>Services: directs vs transbordement selon saison/capacité</li>
+                  </ul>
+                )}
+                {routeKey === 'services_freight_france_congo' && (
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>France: Le Havre, Marseille‑Fos</li>
+                    <li>Congo: Pointe‑Noire</li>
+                    <li>Spécificités: visibilité jalons LCL, contrôles douaniers</li>
+                  </ul>
+                )}
+                {routeKey === 'services_freight_france_turkey' && (
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>France: Marseille‑Fos, Le Havre</li>
+                    <li>Turquie: Istanbul, Izmir, Mersin</li>
+                    <li>Atouts: délais courts, options route/multimodal</li>
+                  </ul>
+                )}
+                <div className="mt-6">
+                  <LocalizedLink to="guides/fcl-vs-lcl" className="text-accent-600 hover:text-accent-700 font-medium">
+                    Guide FCL/LCL
+                  </LocalizedLink>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Conseils opérationnels avancés — {routeLabel}</h2>
+          {routeKey === 'services_freight_france_china' && (
+            <>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Planification & capacité</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Anticiper les hausses de demande (CNY, Q4) et réserver des slots</li>
+                <li>Comparer services directs vs transbordements selon le port chinois</li>
+                <li>Prévoir une marge calendrier pour absorber congestions et météo</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Documentation & conformité</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Descriptions produits alignées codes SH; éviter les libellés ambigus</li>
+                <li>BL: vérifier brouillon (draft) avant émission pour éviter corrections coûteuses</li>
+                <li>Assurance: calibrer couverture selon la valeur et la sensibilité</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">KPIs à suivre</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>OTD (on-time delivery) port à port et porte à porte</li>
+                <li>Taux d’anomalies documentaires</li>
+                <li>Écart coût réel vs devis (coût total livré)</li>
+              </ul>
+            </>
+          )}
+          {routeKey === 'services_freight_france_congo' && (
+            <>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Groupage LCL & visibilité</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Planifier les consolidations pour limiter l’attente entre départs</li>
+                <li>Assurer une traçabilité claire des colis et étiquetages</li>
+                <li>Valider en amont les exigences documentaires locales</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Prévention des risques</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Emballage export renforcé, photos datées, scellés si nécessaire</li>
+                <li>Choisir FCL dès que la valeur/volume le justifie pour réduire manipulations</li>
+                <li>Coordonner le ramassage B2B sur des créneaux compatibles réception terminal</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">KPIs à suivre</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Taux de réclamations/avarie</li>
+                <li>Délai moyen de dédouanement</li>
+                <li>Respect des créneaux de livraison</li>
+              </ul>
+            </>
+          )}
+          {routeKey === 'services_freight_france_turkey' && (
+            <>
+              <h3 className="text-xl font-semibold text-primary-900 mb-2">Multimodal & réactivité</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Comparer Mer/Route/Air selon jalons; basculer en express si nécessaire</li>
+                <li>Programmer des départs fréquents pour lisser l’activité</li>
+                <li>Préparer alternatives portuaires (Izmir/Mersin) selon période</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">Qualité documentaire</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>BL/facture/PL cohérents; anticiper certificats d’origine si requis</li>
+                <li>Incoterms adaptés au niveau de contrôle désiré</li>
+                <li>Assurance correctement dimensionnée au risque</li>
+              </ul>
+              <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">KPIs à suivre</h3>
+              <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Délai moyen door-to-door</li>
+                <li>Taux de non-conformité documentaire</li>
+                <li>Coût total par m³ vs budget</li>
+              </ul>
+            </>
+          )}
+          <div className="mt-8">
+            <CtaButton href="contact" variant="primary">Construire mon plan de transport</CtaButton>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Questions fréquentes</h2>

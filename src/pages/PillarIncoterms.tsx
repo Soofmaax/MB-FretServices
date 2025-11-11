@@ -138,6 +138,28 @@ const PillarIncoterms: FC = () => {
           prix d’un contrôle moindre.
         </p>
 
+        <h2>Glossaire des responsabilités (version simplifiée)</h2>
+        <ul>
+          <li><strong>Livraison</strong>: point où la charge passe du vendeur à l’acheteur (Incoterm-dépendant)</li>
+          <li><strong>Transfert de risque</strong>: moment exact où le risque change de partie</li>
+          <li><strong>Frais principaux</strong>: transport maritime et surcharges (BAF/CAF/PSS)</li>
+          <li><strong>Formalités douanières</strong>: export/import selon l’Incoterm choisi</li>
+          <li><strong>Assurance</strong>: recommandée ad valorem pour protéger la trésorerie</li>
+        </ul>
+
+        <h2>Matrice (textualisée) de responsabilités</h2>
+        <p>
+          Règle générale: <em>FOB/CFR/CIF</em> transfèrent le risque à l’embarquement; <em>DAP/DPU/DDP</em> déplacent le point de
+          livraison au pays d’arrivée; <em>EXW/FCA</em> responsabilisent fortement l’acheteur sur l’amont.
+        </p>
+        <ul>
+          <li><strong>FOB</strong>: Export vendeur; fret/assurance à la charge acheteur; risque à l’embarquement</li>
+          <li><strong>CFR</strong>: Export + fret vendeur; risque dès l’embarquement pour l’acheteur</li>
+          <li><strong>CIF</strong>: Export + fret + assurance vendeur; risque dès l’embarquement pour l’acheteur</li>
+          <li><strong>DAP</strong>: Vendeur supporte transport jusqu’au site; import à charge acheteur</li>
+          <li><strong>DDP</strong>: Vendeur assume jusqu’à la livraison, droits & taxes inclus</li>
+        </ul>
+
         <h2>Cas pratiques et routes clés</h2>
         <h3>France ↔ Chine</h3>
         <p>
@@ -160,7 +182,23 @@ const PillarIncoterms: FC = () => {
           risques douaniers.
         </p>
 
-        <h2>Bonnes pratiques de décision</h2>
+        <h2>Erreurs fréquentes et comment les éviter</h2>
+        <ul>
+          <li>Confusion entre point de livraison et transfert de risque</li>
+          <li>Oublier d’ajuster l’assurance quand le risque bascule tôt (FOB/CFR)</li>
+          <li>Incohérences documentaires (quantités, poids, descriptions) → retards</li>
+          <li>Choix d’Incoterm non aligné à la maturité logistique interne</li>
+        </ul>
+
+        <h2>Processus de décision (pas-à-pas)</h2>
+        <ol>
+          <li>Évaluer capacité interne (ressources, SI, partenaires)</li>
+          <li>Comparer scénarios (FOB/CIF/DAP) sur coût total livré et risque</li>
+          <li>Vérifier l’adéquation documentaire et l’assurance</li>
+          <li>Fixer l’Incoterm dans le contrat et communiquer aux parties</li>
+        </ol>
+
+        <h2>Bonnes pratiques</h2>
         <ul>
           <li>Évaluer la maturité logistique interne (ressources, SI, partenaires).</li>
           <li>Analyser la sensibilité délai/coût/risque par route, marchandise et saisonnalité.</li>
@@ -191,6 +229,14 @@ const PillarIncoterms: FC = () => {
         <details>
           <summary>Peut-on changer d’Incoterm en cours de négociation ?</summary>
           <p>Oui, s’il est consigné contractuellement et que les effets sont intégrés dans le prix, le planning et les assurances.</p>
+        </details>
+        <details>
+          <summary>FOB et FCA sont-ils interchangeables ?</summary>
+          <p>Non. FCA convient mieux au non-maritime jusqu’à remise au transporteur; FOB est spécifique maritime avec risque à l’embarquement.</p>
+        </details>
+        <details>
+          <summary>DDP est-il toujours recommandé ?</summary>
+          <p>Pratique pour l’acheteur mais exigeant pour le vendeur (fiscalité, import). À utiliser selon vos capacités locales.</p>
         </details>
       </article>
     </div>

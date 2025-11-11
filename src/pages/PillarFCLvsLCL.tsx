@@ -116,6 +116,29 @@ const PillarFCLvsLCL: FC = () => {
           <li>Arbitrez selon criticité délai et exposition au risque.</li>
         </ol>
 
+        <h2>Coûts détaillés: comparer “coût total livré”</h2>
+        <ul>
+          <li>Fret maritime + surcharges (BAF/CAF/PSS)</li>
+          <li>THC origine/destination, documentation (BL), manutentions</li>
+          <li>Pré/post‑acheminement (route/fer), éventuels stationnements</li>
+          <li>Assurance ad valorem, droits & taxes, frais de dossier</li>
+        </ul>
+        <p>Le meilleur choix n’est pas le tarif le plus bas, mais celui qui minimise le coût total avec le niveau de risque acceptable.</p>
+
+        <h2>Risques et emballage</h2>
+        <ul>
+          <li>LCL: davantage de manipulations → emballage export impératif (calage, renforts, marquage)</li>
+          <li>FCL: sécurise les risques mécaniques; surveiller le gerbage, l’arrimage et la ventilation</li>
+          <li>Tous modes: documentation cohérente et assurance proportionnée à la valeur</li>
+        </ul>
+
+        <h2>Scénarios comparatifs (simplifiés)</h2>
+        <ul>
+          <li><strong>Petit volume, délai souple</strong>: LCL, consolidation hebdomadaire</li>
+          <li><strong>Volume moyen, valeur sensible</strong>: FCL 20’ avec emballage pro et assurance</li>
+          <li><strong>Fort volume récurrent</strong>: FCL 40’/40’HC, slots et planning fixés</li>
+        </ul>
+
         <div className="not-prose bg-blue-50 border-l-4 border-accent-500 p-4 rounded my-8">
           <p className="text-sm">
             Outil associé:&nbsp;
@@ -147,6 +170,21 @@ const PillarFCLvsLCL: FC = () => {
           empilement). Optimisez l’emballage export pour limiter l’espace perdu et les avaries.
         </p>
 
+        <h2>Erreurs fréquentes</h2>
+        <ul>
+          <li>Comparer uniquement le fret sans intégrer les coûts annexes</li>
+          <li>Ignorer la saisonnalité et la congestion sur l’axe considéré</li>
+          <li>Minimiser l’importance de l’emballage export et de l’assurance</li>
+        </ul>
+
+        <h2>Checklist décisionnelle</h2>
+        <ul>
+          <li>CBM/poids validés; sensibilité marchandises appréciée</li>
+          <li>Ports/services choisis; planning et cut‑offs compris</li>
+          <li>Scénarios FCL/LCL chiffrés sur coût total</li>
+          <li>Assurance/emballage documentés</li>
+        </ul>
+
         <h2>FAQ</h2>
         <details>
           <summary>Quand le LCL est-il risqué ?</summary>
@@ -155,6 +193,10 @@ const PillarFCLvsLCL: FC = () => {
         <details>
           <summary>Peut-on “splitter” une commande en LCL multiple ?</summary>
           <p>Oui. Cela permet d’aligner livraisons et trésorerie, au prix d’une complexité à coordonner.</p>
+        </details>
+        <details>
+          <summary>Le 40’HC est-il toujours plus avantageux qu’un 40’DV ?</summary>
+          <p>Souvent en volume utile, mais à confirmer selon la nature des biens, la masse et le port de départ.</p>
         </details>
 
         <div className="not-prose mt-10">
