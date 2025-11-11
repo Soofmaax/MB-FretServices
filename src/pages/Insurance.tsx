@@ -5,6 +5,7 @@ import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { Shield, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Insurance: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -66,6 +67,15 @@ const Insurance: FC = () => {
         ogImage="/og-default.webp"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
+      <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-insurance-1200.jpg"
+          imagesrcset="/images/hero-insurance-800.jpg 800w, /images/hero-insurance-1200.jpg 1200w, /images/hero-insurance-1600.jpg 1600w"
+          imagesizes="100vw"
+        />
+      </Helmet>
 
       <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-black/30"></div>

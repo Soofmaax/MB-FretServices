@@ -45,12 +45,19 @@ const SEO: FC<SEOProps> = ({
     .map((l) => OG_LOCALE_MAP[l])
     .filter(Boolean) as string[];
 
+  // Convert OG locale to BCP47 for content-language meta (fr_FR -> fr-FR)
+  const contentLang = (OG_LOCALE_MAP[currentLang] || 'fr_FR').replace('_', '-');
+
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: currentLang }}>
       <title>{title}</title>
       <meta name="description" content={description} />
       {!noindex && <meta name="robots" content="index,follow" />}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
+      {/* Helpful indexing hints */}
+      {!noindex && <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
+      {!noindex && <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
+      <meta httpEquiv="content-language" content={contentLang} />
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />
