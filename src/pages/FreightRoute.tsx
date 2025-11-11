@@ -6,6 +6,7 @@ import { getSiteUrl } from '../utils/siteUrl';
 import { keyFromPath, detectLangFromPath, pathForLang } from '../utils/paths';
 import CBMCalculator from '../components/CBMCalculator';
 import QuoteForm from '../components/QuoteForm';
+import LocalizedLink from '../components/LocalizedLink';
 
 type RouteKey =
   | 'services_freight_france_china'
@@ -269,6 +270,57 @@ const FreightRoute: FC = () => {
                 <p className="text-gray-700">{f.a}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {routeKey === 'services_freight_france_china' && (
+              <>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">FCL vs LCL — France ↔ Chine</h3>
+                  <LocalizedLink to="services/fret-maritime/france-chine/fcl-lcl" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">Douane — France ↔ Chine</h3>
+                  <LocalizedLink to="services/fret-maritime/france-chine/douane" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">Checklist documentaire — France ↔ Chine</h3>
+                  <LocalizedLink to="services/fret-maritime/france-chine/checklist" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+              </>
+            )}
+            {routeKey === 'services_freight_france_congo' && (
+              <>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">FCL vs LCL — France ↔ Congo</h3>
+                  <LocalizedLink to="services/fret-maritime/france-congo/fcl-lcl" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">Douane — France ↔ Congo</h3>
+                  <LocalizedLink to="services/fret-maritime/france-congo/douane" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">Checklist — France ↔ Congo</h3>
+                  <LocalizedLink to="services/fret-maritime/france-congo/checklist" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+              </>
+            )}
+            {routeKey === 'services_freight_france_turkey' && (
+              <>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">FCL vs LCL — France ↔ Turquie</h3>
+                  <LocalizedLink to="services/fret-maritime/france-turquie/fcl-lcl" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">Douane — France ↔ Turquie</h3>
+                  <LocalizedLink to="services/fret-maritime/france-turquie/douane" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+                <div className="bg-white rounded-lg p-5 shadow">
+                  <h3 className="font-semibold text-primary-900 mb-2">Checklist — France ↔ Turquie</h3>
+                  <LocalizedLink to="services/fret-maritime/france-turquie/checklist" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>
