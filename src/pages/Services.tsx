@@ -162,6 +162,43 @@ const Services: FC = () => {
         </div>
       </section>
 
+      {/* Key Maritime Routes (Hard silo hubs) */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">Routes phares</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { title: 'France ↔ Chine', to: 'services/fret-maritime/france-chine', img: '906982' },
+              { title: 'France ↔ Congo', to: 'services/fret-maritime/france-congo', img: '416978' },
+              { title: 'France ↔ Turquie', to: 'services/fret-maritime/france-turquie', img: '723240' },
+            ].map((r, i) => (
+              <div key={r.title} className={`bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all animate-slide-up ${i === 1 ? 'animate-delay-150' : i === 2 ? 'animate-delay-300' : 'animate-delay-0'}`}>
+                <LocalizedLink to={r.to} className="block group">
+                  <div className="relative h-44">
+                    <ResponsiveImage
+                      src={`https://images.pexels.com/photos/${r.img}/pexels-photo-${r.img}.jpeg?auto=compress&cs=tinysrgb&w=800`}
+                      alt={r.title}
+                      width={800}
+                      height={300}
+                      className="w-full h-full object-cover"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">{r.title}</h3>
+                    <p className="text-sm text-gray-700">FCL/LCL, ports majeurs, délais optimisés, suivi 24/7.</p>
+                    <div className="mt-3 inline-flex items-center text-accent-600 font-medium">
+                      Découvrir <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                    </div>
+                  </div>
+                </LocalizedLink>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

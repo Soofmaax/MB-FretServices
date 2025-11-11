@@ -9,6 +9,7 @@ const Destinations = lazy(() => import('./pages/Destinations'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
+const FreightRoute = lazy(() => import('./pages/FreightRoute'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -70,6 +71,31 @@ function App() {
               </Suspense>
             }
           />
+          {/* FR route-specific pages */}
+          <Route
+            path="services/fret-maritime/france-chine"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/fret-maritime/france-congo"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/fret-maritime/france-turquie"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
           {/* Backward-compat legal slug */}
           <Route
             path="legal"
@@ -93,6 +119,31 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightMaritime />
+              </Suspense>
+            }
+          />
+          {/* EN + default international slugs for route-specific pages (also used by es/tr/sw/de/it/ar) */}
+          <Route
+            path="services/maritime-freight/france-china"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/maritime-freight/france-congo"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/maritime-freight/france-turkey"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
               </Suspense>
             }
           />
@@ -134,6 +185,31 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightMaritime />
+              </Suspense>
+            }
+          />
+          {/* PT route-specific pages */}
+          <Route
+            path="servicos/frete-maritimo/franca-china"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/frete-maritimo/franca-congo"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/frete-maritimo/franca-turquia"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
               </Suspense>
             }
           />

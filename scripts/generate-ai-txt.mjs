@@ -8,15 +8,105 @@ const root = path.resolve(projectRoot, '..');
 const SUP_LANGS = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
 
 const SLUGS = {
-  fr: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'mentions-legales', services_freight_maritime: 'services/fret-maritime' },
-  en: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal-notice', services_freight_maritime: 'services/maritime-freight' },
-  pt: { home: '', services: 'servicos', destinations: 'destinos', contact: 'contacto', legal: 'aviso-legal', services_freight_maritime: 'servicos/frete-maritimo' },
-  ar: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal', services_freight_maritime: 'services/maritime-freight' },
-  es: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal', services_freight_maritime: 'services/maritime-freight' },
-  tr: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal', services_freight_maritime: 'services/maritime-freight' },
-  sw: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal', services_freight_maritime: 'services/maritime-freight' },
-  de: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal', services_freight_maritime: 'services/maritime-freight' },
-  it: { home: '', services: 'services', destinations: 'destinations', contact: 'contact', legal: 'legal', services_freight_maritime: 'services/maritime-freight' },
+  fr: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'mentions-legales',
+    services_freight_maritime: 'services/fret-maritime',
+    services_freight_france_china: 'services/fret-maritime/france-chine',
+    services_freight_france_congo: 'services/fret-maritime/france-congo',
+    services_freight_france_turkey: 'services/fret-maritime/france-turquie',
+  },
+  en: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal-notice',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
+  pt: {
+    home: '',
+    services: 'servicos',
+    destinations: 'destinos',
+    contact: 'contacto',
+    legal: 'aviso-legal',
+    services_freight_maritime: 'servicos/frete-maritimo',
+    services_freight_france_china: 'servicos/frete-maritimo/franca-china',
+    services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
+    services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
+  },
+  ar: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
+  es: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
+  tr: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
+  sw: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
+  de: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
+  it: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal',
+    services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+  },
 };
 
 function readEnvSiteUrl() {
@@ -43,8 +133,8 @@ function buildPages(siteUrl) {
     const sl = SLUGS[lng];
     const entries = Object.entries(sl);
     for (const [key, slug] of entries) {
-      // Only include primary logical pages
-      if (!['home','services','destinations','contact','legal','services_freight_maritime'].includes(key)) continue;
+      // Only include primary logical pages + key route pages
+      if (!['home','services','destinations','contact','legal','services_freight_maritime','services_freight_france_china','services_freight_france_congo','services_freight_france_turkey'].includes(key)) continue;
       const path = `/${lng}${slug ? `/${slug}` : ''}`;
       const url = new URL(path, siteUrl).href.replace(/\/$/, '');
       pages.push({ lang: lng, key, url });

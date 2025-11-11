@@ -17,6 +17,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'mentions-legales',
     services_freight_maritime: 'services/fret-maritime',
+    services_freight_france_china: 'services/fret-maritime/france-chine',
+    services_freight_france_congo: 'services/fret-maritime/france-congo',
+    services_freight_france_turkey: 'services/fret-maritime/france-turquie',
   },
   en: {
     home: '',
@@ -25,6 +28,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal-notice',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   pt: {
     home: '',
@@ -33,6 +39,9 @@ const SLUGS = {
     contact: 'contacto',
     legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
+    services_freight_france_china: 'servicos/frete-maritimo/franca-china',
+    services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
+    services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
   },
   ar: {
     home: '',
@@ -41,6 +50,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   es: {
     home: '',
@@ -49,6 +61,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   tr: {
     home: '',
@@ -57,6 +72,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   sw: {
     home: '',
@@ -65,6 +83,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   de: {
     home: '',
@@ -73,6 +94,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   it: {
     home: '',
@@ -81,6 +105,9 @@ const SLUGS = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
 };
 
@@ -100,6 +127,9 @@ const PATH_KEYS = [
   'home',
   'services',
   'services_freight_maritime',
+  'services_freight_france_china',
+  'services_freight_france_congo',
+  'services_freight_france_turkey',
   'destinations',
   'contact',
   'legal',
@@ -160,6 +190,13 @@ function priorityFor(pathname) {
     '/contacto': { changefreq: 'monthly', priority: '0.6' },
     '/aviso-legal': { changefreq: 'yearly', priority: '0.3' },
   };
+  if (
+    logical.startsWith('/services/fret-maritime/france-') ||
+    logical.startsWith('/services/maritime-freight/france-') ||
+    logical.startsWith('/servicos/frete-maritimo/franca-')
+  ) {
+    return { changefreq: 'weekly', priority: '0.8' };
+  }
   return map[logical] || { changefreq: 'monthly', priority: '0.5' };
 }
 

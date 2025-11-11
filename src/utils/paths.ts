@@ -6,7 +6,10 @@ export type RouteKey =
   | 'destinations'
   | 'contact'
   | 'legal'
-  | 'services_freight_maritime';
+  | 'services_freight_maritime'
+  | 'services_freight_france_china'
+  | 'services_freight_france_congo'
+  | 'services_freight_france_turkey';
 
 const SLUGS: Record<Lang, Record<RouteKey, string>> = {
   fr: {
@@ -16,6 +19,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'mentions-legales',
     services_freight_maritime: 'services/fret-maritime',
+    services_freight_france_china: 'services/fret-maritime/france-chine',
+    services_freight_france_congo: 'services/fret-maritime/france-congo',
+    services_freight_france_turkey: 'services/fret-maritime/france-turquie',
   },
   en: {
     home: '',
@@ -24,6 +30,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal-notice',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   pt: {
     home: '',
@@ -32,6 +41,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contacto',
     legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
+    services_freight_france_china: 'servicos/frete-maritimo/franca-china',
+    services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
+    services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
   },
   // New languages use international slugs (English) by default
   ar: {
@@ -41,6 +53,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   es: {
     home: '',
@@ -49,6 +64,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   tr: {
     home: '',
@@ -57,6 +75,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   sw: {
     home: '',
@@ -65,6 +86,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   de: {
     home: '',
@@ -73,6 +97,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
   it: {
     home: '',
@@ -81,6 +108,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     contact: 'contact',
     legal: 'legal',
     services_freight_maritime: 'services/maritime-freight',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
   },
 };
 
@@ -107,6 +137,23 @@ const FREIGHT_ALIASES = new Set([
   'leistungen/seefracht',
   'huduma/usafirishaji-wa-baharini',
   'خدمات/الشحن-البحري'
+]);
+
+// Route-specific maritime pages aliases (multi-lang)
+const FREIGHT_FRANCE_CHINA_ALIASES = new Set<string>([
+  'services/fret-maritime/france-chine',
+  'services/maritime-freight/france-china',
+  'servicos/frete-maritimo/franca-china',
+]);
+const FREIGHT_FRANCE_CONGO_ALIASES = new Set<string>([
+  'services/fret-maritime/france-congo',
+  'services/maritime-freight/france-congo',
+  'servicos/frete-maritimo/franca-congo',
+]);
+const FREIGHT_FRANCE_TURKEY_ALIASES = new Set<string>([
+  'services/fret-maritime/france-turquie',
+  'services/maritime-freight/france-turkey',
+  'servicos/frete-maritimo/franca-turquia',
 ]);
 
 function stripBase(pathname: string): string {
@@ -142,6 +189,9 @@ export function keyFromPath(pathname: string): RouteKey {
   if (CONTACT_ALIASES.has(rest)) return 'contact';
   if (LEGAL_ALIASES.has(rest)) return 'legal';
   if (FREIGHT_ALIASES.has(rest)) return 'services_freight_maritime';
+  if (FREIGHT_FRANCE_CHINA_ALIASES.has(rest)) return 'services_freight_france_china';
+  if (FREIGHT_FRANCE_CONGO_ALIASES.has(rest)) return 'services_freight_france_congo';
+  if (FREIGHT_FRANCE_TURKEY_ALIASES.has(rest)) return 'services_freight_france_turkey';
 
   // default to home
   return 'home';
@@ -156,7 +206,7 @@ export function pathForLang(key: RouteKey, lang: Lang): string {
  * Transform a generic "to" value into the localized path.
  * Accepts:
  * - '' | '/' | 'services' | 'destinations' | 'contact' | 'legal'
- * - nested: 'services/fret-maritime'
+ * - nested: 'services/fret-maritime', 'services/fret-maritime/france-chine'
  */
 export function localizeTo(to: string, lang: Lang): string {
   const normalized = to.replace(/^\/*/, ''); // remove leading slash
