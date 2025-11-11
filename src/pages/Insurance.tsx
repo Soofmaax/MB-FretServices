@@ -63,7 +63,7 @@ const Insurance: FC = () => {
       <SEO
         title="Assurance cargo — Couverture ad valorem | MB Fret Services"
         description="Assurance transport pour fret maritime/aérien: couverture ad valorem, gestion des sinistres, conseils packaging export. Porte-à-porte."
-        ogImage="https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        ogImage="/og-default.webp"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 
@@ -71,13 +71,16 @@ const Insurance: FC = () => {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0">
           <ResponsiveImage
-            src="https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/hero-insurance.jpg"
+            webpSrc="/images/hero-insurance.webp"
+            avifSrc="/images/hero-insurance.avif"
             alt="Assurance cargo transport"
             width={1600}
             height={900}
             priority
             sizes="100vw"
             className="w-full h-full object-cover"
+            type="image/jpeg"
           />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

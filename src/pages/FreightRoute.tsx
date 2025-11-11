@@ -31,7 +31,7 @@ const contentMap: Record<
   {
     title: string;
     subtitle: string;
-    heroImg: string;
+    heroBase: string;
     ports: { from: string[]; to: string[] };
     transit: string;
     faq: Array<{ q: string; a: string }>;
@@ -42,8 +42,7 @@ const contentMap: Record<
     title: "Fret maritime France ↔ Chine (FCL & LCL)",
     subtitle:
       "Solutions FCL/LCL fiables entre les principaux ports français (Le Havre, Marseille-Fos) et les hubs chinois (Shanghai, Ningbo, Shenzhen).",
-    heroImg:
-      'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    heroBase: 'hero-maritime',
     ports: {
       from: ['Le Havre', 'Marseille-Fos', 'Dunkerque'],
       to: ['Shanghai', 'Ningbo', 'Shenzhen', 'Qingdao'],
@@ -69,8 +68,7 @@ const contentMap: Record<
     title: "Fret maritime France ↔ Congo (FCL & LCL)",
     subtitle:
       "Groupage LCL et conteneurs complets vers Pointe‑Noire avec options de ramassage en France (IDF, Lyon, Marseille).",
-    heroImg:
-      'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    heroBase: 'hero-maritime',
     ports: {
       from: ['Le Havre', 'Marseille-Fos'],
       to: ['Pointe‑Noire'],
@@ -96,8 +94,7 @@ const contentMap: Record<
     title: "Fret maritime France ↔ Turquie (FCL & LCL)",
     subtitle:
       "Liaisons régulières avec Istanbul/Izmir. Solutions multimodales (Mer/Route/Air) et délais optimisés.",
-    heroImg:
-      'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    heroBase: 'hero-maritime',
     ports: {
       from: ['Marseille-Fos', 'Le Havre'],
       to: ['Istanbul', 'Izmir', 'Mersin'],
@@ -175,7 +172,7 @@ const FreightRoute: FC = () => {
       <SEO
         title={`${c.title} — Devis Rapide & Délais Garantis | MB Fret Services`}
         description={`${c.subtitle} ${c.transit} Devis sous 24h, suivi 24/7, accompagnement douanier.`}
-        ogImage={c.heroImg}
+        ogImage="/og-default.webp"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 
@@ -183,13 +180,16 @@ const FreightRoute: FC = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <ResponsiveImage
-            src={c.heroImg}
+            src={`/images/${c.heroBase}.jpg`}
+            webpSrc={`/images/${c.heroBase}.webp`}
+            avifSrc={`/images/${c.heroBase}.avif`}
             alt={c.title}
             width={1600}
             height={900}
             sizes="100vw"
             priority
             className="w-full h-full object-cover"
+            type="image/jpeg"
           />
         </div>
 

@@ -30,7 +30,7 @@ const FreightMaritime: FC = () => {
       <SEO
         title={t('seo.title')}
         description={t('seo.description')}
-        ogImage="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        ogImage="/og-default.webp"
         jsonLd={[
           {
             '@context': 'https://schema.org',
@@ -112,13 +112,16 @@ const FreightMaritime: FC = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <ResponsiveImage
-            src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/hero-maritime.jpg"
+            webpSrc="/images/hero-maritime.webp"
+            avifSrc="/images/hero-maritime.avif"
             alt="Conteneurs de fret maritime"
             width={1600}
             height={900}
             priority
             sizes="100vw"
             className="w-full h-full object-cover"
+            type="image/jpeg"
           />
         </div>
 

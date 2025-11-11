@@ -69,7 +69,7 @@ const AirFreight: FC = () => {
       <SEO
         title="Fret aérien — Rapide et sécurisé | MB Fret Services"
         description="Solutions de fret aérien B2B: express, sécurisé, traçable. Europe ↔ Afrique/Asie. Porte-à-porte, assurance cargo, conformité IATA."
-        ogImage="https://images.pexels.com/photos/723240/pexels-photo-723240.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        ogImage="/og-default.webp"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 
@@ -77,13 +77,16 @@ const AirFreight: FC = () => {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0">
           <ResponsiveImage
-            src="https://images.pexels.com/photos/723240/pexels-photo-723240.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/hero-air.jpg"
+            webpSrc="/images/hero-air.webp"
+            avifSrc="/images/hero-air.avif"
             alt="Avion cargo fret aérien"
             width={1600}
             height={900}
             priority
             sizes="100vw"
             className="w-full h-full object-cover"
+            type="image/jpeg"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

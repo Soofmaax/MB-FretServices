@@ -63,7 +63,7 @@ const Customs: FC = () => {
       <SEO
         title="Dédouanement & conformité — Import/Export | MB Fret Services"
         description="Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité."
-        ogImage="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        ogImage="/og-default.webp"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 
@@ -71,13 +71,16 @@ const Customs: FC = () => {
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0">
           <ResponsiveImage
-            src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="/images/hero-customs.jpg"
+            webpSrc="/images/hero-customs.webp"
+            avifSrc="/images/hero-customs.avif"
             alt="Dédouanement et formalités documentaires"
             width={1600}
             height={900}
             priority
             sizes="100vw"
             className="w-full h-full object-cover"
+            type="image/jpeg"
           />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
