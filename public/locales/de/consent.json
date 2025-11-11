@@ -1,0 +1,11 @@
+{
+  "title": "Cookie-Verwaltung",
+  "desc": "Wir verwenden optionale Cookies, um Ihre Erfahrung zu verbessern (Statistiken und Benutzerfreundlichkeit) und ggf. personalisierte Werbung anzuzeigen. Wenn Sie ablehnen, werden nur erforderliche Cookies verwendet. Sie können Ihre Auswahl über „Cookies verwalten“ ändern.",
+  "privacy_note": "Weitere Informationen finden Sie in unserer Datenschutzerklärung.",
+  "privacy_link": "Datenschutzerklärung",
+  "accept": "Akzeptieren",
+  "refuse": "Ablehnen",
+  "manage": "Cookies verwalten",
+  "analytics_label": "Statistiken und Verbesserung der Nutzererfahrung (Google Analytics, Microsoft Clarity)",
+  "save": "Speichern"
+}

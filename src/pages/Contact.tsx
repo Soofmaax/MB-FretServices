@@ -70,49 +70,49 @@ const Contact: FC = () => {
               >
                 contact@mb-fretservices.com
               </a>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.email_hint')}
               </p>
             </div>
 
             {/* Téléphone */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group" style={{ animationDelay: '200ms' }}>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-200">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Phone size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.phone')}</h3>
               <a
-                href="tel:+33123456789"
+                href="tel:+33749235539"
                 className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
-                +33 1 23 45 67 89
+                +33 7 49 23 55 39
               </a>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.phone_hours')}
               </p>
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group" style={{ animationDelay: '400ms' }}>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-400">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.whatsapp')}</h3>
               <a
-                href="https://wa.me/33123456789"
+                href="https://wa.me/33749235539"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 {t('methods.chat_direct')}
               </a>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.whatsapp_hint')}
               </p>
             </div>
 
             {/* Bureau */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group" style={{ animationDelay: '600ms' }}>
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-600">
               <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MapPin size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -120,7 +120,7 @@ const Contact: FC = () => {
               <p className="text-gray-700 font-medium">
                 {t('methods.office_city')}
               </p>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-700 mt-2 text-sm">
                 {t('methods.office_hint')}
               </p>
             </div>
@@ -135,7 +135,7 @@ const Contact: FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
               {t('guide.title')}
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed">
               {t('guide.intro')}
             </p>
           </div>
@@ -152,7 +152,7 @@ const Contact: FC = () => {
                     <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-primary-900">{item.title}</span>
-                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                      <p className="text-gray-700 text-sm">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -200,7 +200,7 @@ const Contact: FC = () => {
             </a>
 
             <a
-              href={`https://wa.me/33123456789?text=${encodeURIComponent('Bonjour, je souhaite obtenir un devis pour un transport international')}`}
+              href={`https://wa.me/33749235539?text=${encodeURIComponent('Bonjour, je souhaite obtenir un devis pour un transport international')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-green-600 text-white hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
@@ -210,7 +210,7 @@ const Contact: FC = () => {
             </a>
 
             <a
-              href="tel:+33123456789"
+              href="tel:+33749235539"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-white text-white hover:bg-white hover:text-primary-900 transition-all duration-200"
             >
               <Phone size={20} className="mr-2" aria-hidden="true" />

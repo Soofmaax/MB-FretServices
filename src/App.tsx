@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Destinations from './pages/Destinations';
-import Contact from './pages/Contact';
-import Legal from './pages/Legal';
-import FreightMaritime from './pages/FreightMaritime';
-import NotFound from './pages/NotFound';
+import { lazy, Suspense } from 'react';
 import LangLayout from './components/LangLayout';
+
+// Route-based code splitting for performance
+const Home = lazy(() => import('./pages/Home'));
+const Services = lazy(() => import('./pages/Services'));
+const Destinations = lazy(() => import('./pages/Destinations'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Legal = lazy(() => import('./pages/Legal'));
+const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
@@ -18,64 +21,365 @@ function App() {
         <Route path="/fret-maritime" element={<Navigate to="/fr/services/fret-maritime" replace />} />
         {/* Language-scoped routes */}
         <Route path="/:lng" element={<LangLayout />}>
-          <Route index element={<Home />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={null}>
+                <Home />
+              </Suspense>
+            }
+          />
           {/* FR canonical slugs */}
-          <Route path="services" element={<Services />} />
-          <Route path="destinations" element={<Destinations />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="mentions-legales" element={<Legal />} />
-          <Route path="services/fret-maritime" element={<FreightMaritime />} />
+          <Route
+            path="services"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="destinations"
+            element={
+              <Suspense fallback={null}>
+                <Destinations />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contact"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="mentions-legales"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/fret-maritime"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* Backward-compat legal slug */}
-          <Route path="legal" element={<Legal />} />
+          <Route
+            path="legal"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
           {/* EN localized slugs (aliases) */}
-          <Route path="legal-notice" element={<Legal />} />
-          <Route path="services/maritime-freight" element={<FreightMaritime />} />
+          <Route
+            path="legal-notice"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/maritime-freight"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* PT localized slugs (aliases) */}
-          <Route path="servicos" element={<Services />} />
-          <Route path="destinos" element={<Destinations />} />
-          <Route path="contacto" element={<Contact />} />
-          <Route path="aviso-legal" element={<Legal />} />
-          <Route path="servicos/frete-maritimo" element={<FreightMaritime />} />
+          <Route
+            path="servicos"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="destinos"
+            element={
+              <Suspense fallback={null}>
+                <Destinations />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contacto"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="aviso-legal"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/frete-maritimo"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* ES localized slugs (aliases) */}
-          <Route path="servicios" element={<Services />} />
-          <Route path="contacto" element={<Contact />} />
-          <Route path="aviso-legal" element={<Legal />} />
-          <Route path="servicios/transporte-maritimo" element={<FreightMaritime />} />
+          <Route
+            path="servicios"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contacto"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="aviso-legal"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicios/transporte-maritimo"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* TR localized slugs (aliases, ASCII) */}
-          <Route path="hizmetler" element={<Services />} />
-          <Route path="iletisim" element={<Contact />} />
-          <Route path="yasal-uyari" element={<Legal />} />
-          <Route path="hizmetler/deniz-tasimaciligi" element={<FreightMaritime />} />
+          <Route
+            path="hizmetler"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="iletisim"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="yasal-uyari"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="hizmetler/deniz-tasimaciligi"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* IT localized slugs (aliases) */}
-          <Route path="servizi" element={<Services />} />
-          <Route path="destinazioni" element={<Destinations />} />
-          <Route path="contatti" element={<Contact />} />
-          <Route path="note-legali" element={<Legal />} />
-          <Route path="servizi/trasporto-marittimo" element={<FreightMaritime />} />
+          <Route
+            path="servizi"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="destinazioni"
+            element={
+              <Suspense fallback={null}>
+                <Destinations />
+              </Suspense>
+            }
+          />
+          <Route
+            path="contatti"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="note-legali"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servizi/trasporto-marittimo"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* DE localized slugs (aliases) */}
-          <Route path="leistungen" element={<Services />} />
-          <Route path="ziele" element={<Destinations />} />
-          <Route path="kontakt" element={<Contact />} />
-          <Route path="impressum" element={<Legal />} />
-          <Route path="leistungen/seefracht" element={<FreightMaritime />} />
+          <Route
+            path="leistungen"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="ziele"
+            element={
+              <Suspense fallback={null}>
+                <Destinations />
+              </Suspense>
+            }
+          />
+          <Route
+            path="kontakt"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="impressum"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="leistungen/seefracht"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* SW localized slugs (aliases) */}
-          <Route path="huduma" element={<Services />} />
-          <Route path="vituo" element={<Destinations />} />
-          <Route path="mawasiliano" element={<Contact />} />
-          <Route path="huduma/usafirishaji-wa-baharini" element={<FreightMaritime />} />
+          <Route
+            path="huduma"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="vituo"
+            element={
+              <Suspense fallback={null}>
+                <Destinations />
+              </Suspense>
+            }
+          />
+          <Route
+            path="mawasiliano"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="huduma/usafirishaji-wa-baharini"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* AR localized slugs (aliases) */}
-          <Route path="خدمات" element={<Services />} />
-          <Route path="وجهات" element={<Destinations />} />
-          <Route path="اتصال" element={<Contact />} />
-          <Route path="إشعار-قانوني" element={<Legal />} />
-          <Route path="خدمات/الشحن-البحري" element={<FreightMaritime />} />
+          <Route
+            path="خدمات"
+            element={
+              <Suspense fallback={null}>
+                <Services />
+              </Suspense>
+            }
+          />
+          <Route
+            path="وجهات"
+            element={
+              <Suspense fallback={null}>
+                <Destinations />
+              </Suspense>
+            }
+          />
+          <Route
+            path="اتصال"
+            element={
+              <Suspense fallback={null}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="إشعار-قانوني"
+            element={
+              <Suspense fallback={null}>
+                <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="خدمات/الشحن-البحري"
+            element={
+              <Suspense fallback={null}>
+                <FreightMaritime />
+              </Suspense>
+            }
+          />
           {/* Redirect legacy path under language */}
           <Route path="fret-maritime" element={<Navigate to="services/fret-maritime" replace />} />
           {/* 404 for unknown routes within language */}
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={null}>
+                <NotFound />
+              </Suspense>
+            }
+          />
         </Route>
         {/* Catch-all: show 404 for unknown root-level paths */}
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={null}>
+              <NotFound />
+            </Suspense>
+          }
+        />
       </Routes>
     </Router>
   );

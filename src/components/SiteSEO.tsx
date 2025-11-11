@@ -7,18 +7,30 @@ const SiteSEO: FC = () => {
   const GSC = (import.meta.env?.VITE_GSC_VERIFICATION as string | undefined) || '';
   const BING = (import.meta.env?.VITE_BING_VERIFICATION as string | undefined) || '';
 
+  const PHONE = '+33 7 49 23 55 39';
+  const DEV = { '@type': 'Organization', name: 'SmarterLogic Web', url: 'https://smarterlogiqueweb.com' };
+
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'MB Fret Services',
     url: SITE_URL,
+    creator: DEV,
+    sameAs: [
+      'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.instagram.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.facebook.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+    ],
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+33 1 23 45 67 89',
+        telephone: PHONE,
+        email: 'contact@mb-fretservices.com',
+        url: 'https://wa.me/33749235539',
         contactType: 'customer service',
         areaServed: ['FR', 'EU', 'AF', 'AS'],
-        availableLanguage: ['fr', 'en'],
+        availableLanguage: ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'de', 'it', 'sw'],
       },
     ],
   };
@@ -29,6 +41,7 @@ const SiteSEO: FC = () => {
     name: 'MB Fret Services',
     url: SITE_URL,
     inLanguage: 'fr-FR',
+    creator: DEV,
   };
 
   const localBusiness = {
@@ -38,7 +51,7 @@ const SiteSEO: FC = () => {
     url: SITE_URL,
     image: 'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200',
     email: 'contact@mb-fretservices.com',
-    telephone: '+33 1 23 45 67 89',
+    telephone: PHONE,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Paris',
@@ -50,6 +63,17 @@ const SiteSEO: FC = () => {
       longitude: 2.3522,
     },
     areaServed: ['Europe', 'Africa', 'Asia'],
+    openingHours: [
+      'Mo-Fr 09:00-18:00',
+      'Sa 10:00-14:00',
+    ],
+    sameAs: [
+      'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.instagram.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://www.facebook.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+      'https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
+    ],
+    creator: DEV,
   };
 
   return (

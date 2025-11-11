@@ -46,6 +46,10 @@
       "heading": "Sorumluluk",
       "content": "MB Fret Services en doğru bilgiyi sunmaya özen gösterir. Bununla birlikte, bilgileri sağlayan üçüncü taraf ortakların veya kendi sebeplerinden kaynaklanan eksiklikler, yanlışlıklar ve güncelleme hatalarından sorumlu tutulamaz."
     },
+    "credits": {
+      "heading": "Katkılar",
+      "content": "Tasarım ve geliştirme:"
+    },
     "last_update": "Son güncelleme: {{date}}"
   }
 }

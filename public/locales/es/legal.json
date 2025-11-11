@@ -46,6 +46,10 @@
       "heading": "Responsabilidad",
       "content": "MB Fret Services se esfuerza por proporcionar información lo más precisa posible. Sin embargo, no se hace responsable de omisiones, inexactitudes o fallos en la actualización, ya sean de su propia responsabilidad o de terceros socios que proporcionan la información."
     },
+    "credits": {
+      "heading": "Créditos",
+      "content": "Diseño y desarrollo:"
+    },
     "last_update": "Última actualización: {{date}}"
   }
 }

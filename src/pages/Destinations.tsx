@@ -86,15 +86,14 @@ const Destinations: FC = () => {
                 {region.countries.map((country, countryIndex) => (
                   <div
                     key={countryIndex}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-slide-up"
-                    style={{ animationDelay: `${countryIndex * 200}ms` }}
+                    className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-slide-up ${countryIndex === 0 ? 'animate-delay-0' : countryIndex === 1 ? 'animate-delay-200' : countryIndex === 2 ? 'animate-delay-400' : 'animate-delay-600'}`}
                   >
                     <div className="p-8">
                       <div className="flex items-center mb-6">
                         <MapPin size={24} className="text-accent-500 mr-3" />
                         <div>
                           <h3 className="text-2xl font-bold text-primary-900">{country.name}</h3>
-                          <p className="text-gray-600">{t('labels.port_principal')} {country.port}</p>
+                          <p className="text-gray-700">{t('labels.port_principal')} {country.port}</p>
                         </div>
                       </div>
 
@@ -106,15 +105,15 @@ const Destinations: FC = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
                           <div>
-                            <span className="text-gray-600">{t('labels.depart')}</span>
+                            <span className="text-gray-700">{t('labels.depart')}</span>
                             <p className="font-medium">{country.maritime.from}</p>
                           </div>
                           <div>
-                            <span className="text-gray-600">{t('labels.duree')}</span>
+                            <span className="text-gray-700">{t('labels.duree')}</span>
                             <p className="font-medium">{country.maritime.duration}</p>
                           </div>
                           <div>
-                            <span className="text-gray-600">{t('labels.frequence')}</span>
+                            <span className="text-gray-700">{t('labels.frequence')}</span>
                             <p className="font-medium">{country.maritime.frequency}</p>
                           </div>
                         </div>
@@ -128,15 +127,15 @@ const Destinations: FC = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
                           <div>
-                            <span className="text-gray-600">{t('labels.depart')}</span>
+                            <span className="text-gray-700">{t('labels.depart')}</span>
                             <p className="font-medium">{country.aerien.from}</p>
                           </div>
                           <div>
-                            <span className="text-gray-600">{t('labels.duree')}</span>
+                            <span className="text-gray-700">{t('labels.duree')}</span>
                             <p className="font-medium">{country.aerien.duration}</p>
                           </div>
                           <div>
-                            <span className="text-gray-600">{t('labels.frequence')}</span>
+                            <span className="text-gray-700">{t('labels.frequence')}</span>
                             <p className="font-medium">{country.aerien.frequency}</p>
                           </div>
                         </div>
@@ -177,7 +176,7 @@ const Destinations: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
             {t('other.not_listed_title')}
           </h2>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
             {t('other.not_listed_text')}
           </p>
 
@@ -185,17 +184,17 @@ const Destinations: FC = () => {
             <div className="p-6 bg-gray-50 rounded-lg">
               <Clock size={40} className="text-accent-500 mx-auto mb-4" />
               <h3 className="font-semibold text-primary-900 mb-2">{t('other.fast_response')}</h3>
-              <p className="text-gray-600 text-sm">{t('other.fast_response_desc')}</p>
+              <p className="text-gray-700 text-sm">{t('other.fast_response_desc')}</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-lg">
               <MapPin size={40} className="text-accent-500 mx-auto mb-4" />
               <h3 className="font-semibold text-primary-900 mb-2">{t('other.global_network')}</h3>
-              <p className="text-gray-600 text-sm">{t('other.global_network_desc')}</p>
+              <p className="text-gray-700 text-sm">{t('other.global_network_desc')}</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-lg">
               <Ship size={40} className="text-accent-500 mx-auto mb-4" />
               <h3 className="font-semibold text-primary-900 mb-2">{t('other.tailored')}</h3>
-              <p className="text-gray-600 text-sm">{t('other.tailored_desc')}</p>
+              <p className="text-gray-700 text-sm">{t('other.tailored_desc')}</p>
             </div>
           </div>
 
@@ -204,7 +203,7 @@ const Destinations: FC = () => {
               {t('other.cta_study')}
             </CtaButton>
             <a
-              href="https://wa.me/33123456789"
+              href="https://wa.me/33749235539"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white transition-all duration-200"

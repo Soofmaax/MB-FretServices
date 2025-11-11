@@ -46,6 +46,10 @@
       "heading": "Liability",
       "content": "MB Fret Services strives to provide information that is as accurate as possible. However, it cannot be held liable for omissions, inaccuracies and failures to update, whether of its own doing or that of third-party partners providing the information."
     },
+    "credits": {
+      "heading": "Credits",
+      "content": "Design & development:"
+    },
     "last_update": "Last update: {{date}}"
   }
 }

@@ -1,4 +1,4 @@
-name: CI - Build and Verify
+name: CI - Lint, Test, Build and Verify
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Lint, Typecheck, Build, and Verify
+    name: Lint, Test, Typecheck, Build, and Verify
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -29,6 +29,11 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: Unit Tests
+        env:
+          VITE_SITE_URL: https://mb-fretservices.com
+        run: npm run test
 
       - name: Typecheck
         run: npm run typecheck
