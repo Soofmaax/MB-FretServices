@@ -10,6 +10,8 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
 const FreightRoute = lazy(() => import('./pages/FreightRoute'));
+const PillarIncoterms = lazy(() => import('./pages/PillarIncoterms'));
+const PillarFCLvsLCL = lazy(() => import('./pages/PillarFCLvsLCL'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -96,6 +98,23 @@ function App() {
               </Suspense>
             }
           />
+          {/* FR pillar pages */}
+          <Route
+            path="documentation/incoterms-2020"
+            element={
+              <Suspense fallback={null}>
+                <PillarIncoterms />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guides/fcl-vs-lcl"
+            element={
+              <Suspense fallback={null}>
+                <PillarFCLvsLCL />
+              </Suspense>
+            }
+          />
           {/* Backward-compat legal slug */}
           <Route
             path="legal"
@@ -144,6 +163,23 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
+              </Suspense>
+            }
+          />
+          {/* EN + default pillar pages */}
+          <Route
+            path="resources/incoterms-2020"
+            element={
+              <Suspense fallback={null}>
+                <PillarIncoterms />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guides/fcl-vs-lcl"
+            element={
+              <Suspense fallback={null}>
+                <PillarFCLvsLCL />
               </Suspense>
             }
           />
@@ -210,6 +246,23 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
+              </Suspense>
+            }
+          />
+          {/* PT pillar pages */}
+          <Route
+            path="documentacao/incoterms-2020"
+            element={
+              <Suspense fallback={null}>
+                <PillarIncoterms />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guias/fcl-vs-lcl"
+            element={
+              <Suspense fallback={null}>
+                <PillarFCLvsLCL />
               </Suspense>
             }
           />

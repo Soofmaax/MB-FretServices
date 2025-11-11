@@ -20,6 +20,8 @@ const SLUGS = {
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
+    pillar_incoterms: 'documentation/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   en: {
     home: '',
@@ -31,6 +33,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   pt: {
     home: '',
@@ -42,6 +46,8 @@ const SLUGS = {
     services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
     services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
+    pillar_incoterms: 'documentacao/incoterms-2020',
+    pillar_fcl_lcl: 'guias/fcl-vs-lcl',
   },
   ar: {
     home: '',
@@ -53,6 +59,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   es: {
     home: '',
@@ -64,6 +72,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   tr: {
     home: '',
@@ -75,6 +85,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   sw: {
     home: '',
@@ -86,6 +98,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   de: {
     home: '',
@@ -97,6 +111,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   it: {
     home: '',
@@ -108,6 +124,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
 };
 
@@ -130,6 +148,8 @@ const PATH_KEYS = [
   'services_freight_france_china',
   'services_freight_france_congo',
   'services_freight_france_turkey',
+  'pillar_incoterms',
+  'pillar_fcl_lcl',
   'destinations',
   'contact',
   'legal',
@@ -189,6 +209,11 @@ function priorityFor(pathname) {
     '/destinos': { changefreq: 'weekly', priority: '0.8' },
     '/contacto': { changefreq: 'monthly', priority: '0.6' },
     '/aviso-legal': { changefreq: 'yearly', priority: '0.3' },
+    '/documentation/incoterms-2020': { changefreq: 'weekly', priority: '0.7' },
+    '/resources/incoterms-2020': { changefreq: 'weekly', priority: '0.7' },
+    '/documentacao/incoterms-2020': { changefreq: 'weekly', priority: '0.7' },
+    '/guides/fcl-vs-lcl': { changefreq: 'weekly', priority: '0.7' },
+    '/guias/fcl-vs-lcl': { changefreq: 'weekly', priority: '0.7' },
   };
   if (
     logical.startsWith('/services/fret-maritime/france-') ||

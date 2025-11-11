@@ -199,6 +199,27 @@ const Services: FC = () => {
         </div>
       </section>
 
+      {/* Guides & Resources */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">Guides &amp; Ressources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { title: 'Incoterms 2020 — Guide complet', to: 'documentation/incoterms-2020', desc: 'Comprendre responsabilités/coûts/risques (FOB, CIF, DAP...). Cas pratiques Chine/Turquie.' },
+              { title: 'FCL vs LCL — Comment décider ?', to: 'guides/fcl-vs-lcl', desc: 'Seuils volumétriques (≈13–15 m³), sécurité, délais, multimodalité. Méthode et cas d’usage.' },
+            ].map((g, i) => (
+              <LocalizedLink key={g.title} to={g.to} className={`block bg-white rounded-xl p-6 shadow hover:shadow-lg transition-all animate-slide-up ${i === 1 ? 'animate-delay-150' : 'animate-delay-0'}`}>
+                <h3 className="text-xl font-semibold text-primary-900 mb-2">{g.title}</h3>
+                <p className="text-sm text-gray-700">{g.desc}</p>
+                <div className="mt-3 inline-flex items-center text-accent-600 font-medium">
+                  Lire le guide <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                </div>
+              </LocalizedLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

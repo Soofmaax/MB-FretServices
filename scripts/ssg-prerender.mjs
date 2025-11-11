@@ -14,6 +14,7 @@ const root = path.resolve(projectRoot, '..');
 const distDir = path.join(root, 'dist');
 
 const ROUTES = [
+  // FR
   '/fr',
   '/fr/services',
   '/fr/destinations',
@@ -22,6 +23,9 @@ const ROUTES = [
   '/fr/services/fret-maritime/france-chine',
   '/fr/services/fret-maritime/france-congo',
   '/fr/services/fret-maritime/france-turquie',
+  '/fr/documentation/incoterms-2020',
+  '/fr/guides/fcl-vs-lcl',
+  // EN
   '/en',
   '/en/services',
   '/en/destinations',
@@ -30,6 +34,9 @@ const ROUTES = [
   '/en/services/maritime-freight/france-china',
   '/en/services/maritime-freight/france-congo',
   '/en/services/maritime-freight/france-turkey',
+  '/en/resources/incoterms-2020',
+  '/en/guides/fcl-vs-lcl',
+  // PT
   '/pt',
   '/pt/servicos',
   '/pt/destinos',
@@ -38,6 +45,68 @@ const ROUTES = [
   '/pt/servicos/frete-maritimo/franca-china',
   '/pt/servicos/frete-maritimo/franca-congo',
   '/pt/servicos/frete-maritimo/franca-turquia',
+  '/pt/documentacao/incoterms-2020',
+  '/pt/guias/fcl-vs-lcl',
+  // ES
+  '/es',
+  '/es/services',
+  '/es/contact',
+  '/es/services/maritime-freight',
+  '/es/services/maritime-freight/france-china',
+  '/es/services/maritime-freight/france-congo',
+  '/es/services/maritime-freight/france-turkey',
+  '/es/resources/incoterms-2020',
+  '/es/guides/fcl-vs-lcl',
+  // TR
+  '/tr',
+  '/tr/services',
+  '/tr/contact',
+  '/tr/services/maritime-freight',
+  '/tr/services/maritime-freight/france-china',
+  '/tr/services/maritime-freight/france-congo',
+  '/tr/services/maritime-freight/france-turkey',
+  '/tr/resources/incoterms-2020',
+  '/tr/guides/fcl-vs-lcl',
+  // DE
+  '/de',
+  '/de/services',
+  '/de/contact',
+  '/de/services/maritime-freight',
+  '/de/services/maritime-freight/france-china',
+  '/de/services/maritime-freight/france-congo',
+  '/de/services/maritime-freight/france-turkey',
+  '/de/resources/incoterms-2020',
+  '/de/guides/fcl-vs-lcl',
+  // IT
+  '/it',
+  '/it/services',
+  '/it/contact',
+  '/it/services/maritime-freight',
+  '/it/services/maritime-freight/france-china',
+  '/it/services/maritime-freight/france-congo',
+  '/it/services/maritime-freight/france-turkey',
+  '/it/resources/incoterms-2020',
+  '/it/guides/fcl-vs-lcl',
+  // SW
+  '/sw',
+  '/sw/services',
+  '/sw/contact',
+  '/sw/services/maritime-freight',
+  '/sw/services/maritime-freight/france-china',
+  '/sw/services/maritime-freight/france-congo',
+  '/sw/services/maritime-freight/france-turkey',
+  '/sw/resources/incoterms-2020',
+  '/sw/guides/fcl-vs-lcl',
+  // AR
+  '/ar',
+  '/ar/services',
+  '/ar/contact',
+  '/ar/services/maritime-freight',
+  '/ar/services/maritime-freight/france-china',
+  '/ar/services/maritime-freight/france-congo',
+  '/ar/services/maritime-freight/france-turkey',
+  '/ar/resources/incoterms-2020',
+  '/ar/guides/fcl-vs-lcl',
 ];
 
 function ensureDir(dir) {

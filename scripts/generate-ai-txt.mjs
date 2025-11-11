@@ -18,6 +18,8 @@ const SLUGS = {
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
+    pillar_incoterms: 'documentation/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   en: {
     home: '',
@@ -29,6 +31,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   pt: {
     home: '',
@@ -40,6 +44,8 @@ const SLUGS = {
     services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
     services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
+    pillar_incoterms: 'documentacao/incoterms-2020',
+    pillar_fcl_lcl: 'guias/fcl-vs-lcl',
   },
   ar: {
     home: '',
@@ -51,6 +57,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   es: {
     home: '',
@@ -62,6 +70,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   tr: {
     home: '',
@@ -73,6 +83,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   sw: {
     home: '',
@@ -84,6 +96,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   de: {
     home: '',
@@ -95,6 +109,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   it: {
     home: '',
@@ -106,6 +122,8 @@ const SLUGS = {
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
 };
 
@@ -134,7 +152,7 @@ function buildPages(siteUrl) {
     const entries = Object.entries(sl);
     for (const [key, slug] of entries) {
       // Only include primary logical pages + key route pages
-      if (!['home','services','destinations','contact','legal','services_freight_maritime','services_freight_france_china','services_freight_france_congo','services_freight_france_turkey'].includes(key)) continue;
+      if (!['home','services','destinations','contact','legal','services_freight_maritime','services_freight_france_china','services_freight_france_congo','services_freight_france_turkey','pillar_incoterms','pillar_fcl_lcl'].includes(key)) continue;
       const path = `/${lng}${slug ? `/${slug}` : ''}`;
       const url = new URL(path, siteUrl).href.replace(/\/$/, '');
       pages.push({ lang: lng, key, url });
@@ -212,6 +230,60 @@ function main() {
   } else {
     console.log(`Generated ai.txt at ${publicPath}`);
   }
+}
+
+main();
+
+function aiTxt(siteUrl) {
+  const pages = buildPages(siteUrl);
+  const updated = new Date().toISOString();
+
+  // Very simple YAML without external deps
+  const lines = [];
+  lines.push('version: 1');
+  lines.push('site:');
+  lines.push(`  name: MB Fret Services`);
+  lines.push(`  url: ${siteUrl}`);
+  lines.push(`  description: >-`);
+  lines.push(`    MB Fret Services propose des solutions de transport international (fret maritime FCL/LCL, fret aérien),`);
+  lines.push(`    dédouanement et assurance cargo depuis l'Europe vers l'Afrique et l'Asie. Devis sous 24 h.`);
+  lines.push(`  languages: [fr, en, pt, es, ar, tr, de, it, sw]`);
+  lines.push(`  topics: [logistics, freight, maritime, air, customs, shipping, africa, asia, europe]`);
+  lines.push(`  target_audience: B2B & particuliers expédiant des marchandises vers l'Afrique et l'Asie depuis l'Europe`);
+  lines.push(`  service_regions:`);
+  lines.push(`    - Africa: [Congo, Angola, Côte d'Ivoire, Cameroun]`);
+  lines.push(`    - Asia: [China, Turkey]`);
+  lines.push(`  contact:`);
+  lines.push(`    email: contact@mb-fretservices.com`);
+  lines.push(`    phone: "+33 7 49 23 55 39"`);
+  lines.push(`    whatsapp: https://wa.me/33749235539`);
+  lines.push(`  address:`);
+  lines.push(`    city: Paris`);
+  lines.push(`    country: FR`);
+  lines.push(`  social:`);
+  lines.push(`    linkedin: https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER`);
+  lines.push(`    twitter: https://twitter.com/NOM-DE-L-ENTREPRISE-PLACEHOLDER`);
+  lines.push(`  developer: https://smarterlogicweb.com`);
+  lines.push(`  pages:`);
+
+  for (const p of pages) {
+    lines.push(`    - lang: ${p.lang}`);
+    lines.push(`      key: ${p.key}`);
+    lines.push(`      url: ${p.url}`);
+  }
+
+  lines.push('  examples:');
+  lines.push(`    - query: "expédier un conteneur 20' vers Pointe-Noire"`);
+  lines.push(`      suggest: "${siteUrl}/fr/services/fret-maritime"`);
+  lines.push(`    - query: "prix fret aérien Paris vers Luanda"`);
+  lines.push(`      suggest: "${siteUrl}/fr/services"`);
+  lines.push(`    - query: "dédouanement import machines en France"`);
+  lines.push(`      suggest: "${siteUrl}/fr/services"`);
+  lines.push('metadata:');
+  lines.push(`  source_of_truth: sitemap.xml, pages content, structured data`);
+  lines.push(`  updated_at: ${updated}`);
+
+  return lines.join('\n') + '\n';
 }
 
 main();
