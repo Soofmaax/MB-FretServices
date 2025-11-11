@@ -7,6 +7,7 @@ import {
   OG_LOCALE_MAP,
   getCurrentLangFromPath,
   buildAlternateLinks,
+  SUP_LANGS,
 } from '../utils/seoHelpers';
 
 type SEOProps = {
@@ -38,6 +39,12 @@ const SEO: FC<SEOProps> = ({
     alternates.find((a) => a.hrefLang === 'fr-FR')?.href ??
     alternates.find((a) => a.hrefLang === 'en-GB')?.href;
 
+  // Open Graph alternate locales for other supported languages
+  const alternateOgLocales = SUP_LANGS
+    .filter((l) => l !== currentLang)
+    .map((l) => OG_LOCALE_MAP[l])
+    .filter(Boolean) as string[];
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -52,6 +59,9 @@ const SEO: FC<SEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={DEFAULT_SITE_NAME} />
       <meta property="og:locale" content={ogLocale} />
+      {alternateOgLocales.map((loc) => (
+        <meta key={`og:locale:alt-${loc}`} property="og:locale:alternate" content={loc} />
+      ))}
       {ogImage && <meta property="og:image" content={ogImage} />}
 
       {/* Twitter */}
