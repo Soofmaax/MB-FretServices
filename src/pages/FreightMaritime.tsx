@@ -30,6 +30,7 @@ const FreightMaritime: FC = () => {
       <SEO
         title={t('seo.title')}
         description={t('seo.description')}
+        ogImage="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
         jsonLd={[
           {
             '@context': 'https://schema.org',

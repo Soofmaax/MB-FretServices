@@ -175,6 +175,7 @@ const FreightRoute: FC = () => {
       <SEO
         title={`${c.title} — Devis Rapide & Délais Garantis | MB Fret Services`}
         description={`${c.subtitle} ${c.transit} Devis sous 24h, suivi 24/7, accompagnement douanier.`}
+        ogImage={c.heroImg}
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 

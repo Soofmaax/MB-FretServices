@@ -69,6 +69,7 @@ const AirFreight: FC = () => {
       <SEO
         title="Fret aérien — Rapide et sécurisé | MB Fret Services"
         description="Solutions de fret aérien B2B: express, sécurisé, traçable. Europe ↔ Afrique/Asie. Porte-à-porte, assurance cargo, conformité IATA."
+        ogImage="https://images.pexels.com/photos/723240/pexels-photo-723240.jpeg?auto=compress&cs=tinysrgb&w=1600"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 
