@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import SEO from '../components/SEO';
 import CtaButton from '../components/CtaButton';
+import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { FileText, CheckCircle } from 'lucide-react';
@@ -62,11 +63,24 @@ const Customs: FC = () => {
       <SEO
         title="Dédouanement & conformité — Import/Export | MB Fret Services"
         description="Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité."
+        ogImage="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
 
-      <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0">
+          <ResponsiveImage
+            src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Dédouanement et formalités documentaires"
+            width={1600}
+            height={900}
+            priority
+            sizes="100vw"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-6">
             <FileText size={48} className="text-accent-400 mr-4" aria-hidden="true" />
             <h1 className="text-4xl md:text-5xl font-bold">Dédouanement</h1>
