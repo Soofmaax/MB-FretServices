@@ -235,7 +235,7 @@ const FreightRoute: FC = () => {
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: c.faq.map((f) => ({
+    mainEntity: (faq || c.faq).map((f) => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },

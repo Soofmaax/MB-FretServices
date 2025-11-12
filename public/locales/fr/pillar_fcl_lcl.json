@@ -1,0 +1,133 @@
+{
+  "title": "FCL vs LCL — Comment décider ? | MB Fret Services",
+  "description": "Choisir entre FCL et LCL en B2B maritime: seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage routes France–Chine/Turquie/Afrique.",
+  "hero_h1": "FCL vs LCL — Méthode de décision",
+  "hero_intro": "Optimisez le coût total, la sécurité et le time-to-market. Une méthode claire pour arbitrer selon votre volume, vos délais et la sensibilité de la marchandise.",
+  "hero_links": {
+    "maritime": "Fret maritime",
+    "china": "France ↔ Chine",
+    "turkey": "France ↔ Turquie",
+    "congo": "France ↔ Congo"
+  },
+  "sections": [
+    {
+      "h2": "Rappels: définitions et implications",
+      "p": [
+        "FCL (Full Container Load): un conteneur réservé à votre chargement; sécurité, traçabilité et délais maîtrisés.",
+        "LCL (Less than Container Load): groupage avec autres expéditeurs; consolidation/déconsolidation requises."
+      ]
+    },
+    {
+      "h2": "Seuils volumétriques et économiques",
+      "p": [
+        "En-dessous de 13–15 m³, le LCL est habituellement plus compétitif. Au-delà, le FCL devient rapidement avantageux en coût par m³ et en gestion des risques (moins de manipulations).",
+        "Certains ports, saisons et situations de capacité peuvent décaler ce seuil; restez pragmatique."
+      ]
+    },
+    {
+      "h2": "Critères de décision",
+      "ul": [
+        "Volume/poids — CBM et masse; utilisez le calculateur CBM.",
+        "Valeur/sensibilité — FCL favorisé pour fragiles/haute valeur.",
+        "Délais — FCL plus direct; LCL implique consolidation.",
+        "Budget — comparer FCL vs LCL sur coût total (pré/post).",
+        "Capacité interne — SI/partenaires et aptitude à gérer l’embarquement."
+      ]
+    },
+    {
+      "h2": "Méthode rapide",
+      "ol": [
+        "Estimer le CBM (H×L×l×Qté / 1 000 000).",
+        "Projeter un coût total FCL vs LCL selon ports/saison.",
+        "Arbitrer selon criticité délai et exposition au risque."
+      ]
+    },
+    {
+      "h2": "Coûts détaillés: comparer “coût total livré”",
+      "ul": [
+        "Fret maritime + surcharges (BAF/CAF/PSS)",
+        "THC origine/destination, documentation (BL), manutentions",
+        "Pré/post‑acheminement (route/fer), stationnements éventuels",
+        "Assurance ad valorem, droits & taxes, frais de dossier"
+      ],
+      "p": [
+        "Le meilleur choix n’est pas le tarif le plus bas, mais celui qui minimise le coût total avec un niveau de risque acceptable."
+      ]
+    },
+    {
+      "h2": "Risques et emballage",
+      "ul": [
+        "LCL: davantage de manipulations → emballage export impératif (calage, renforts, marquage)",
+        "FCL: sécurise les risques mécaniques; surveiller gerbage/arrimage/ventilation",
+        "Tous modes: documentation cohérente et assurance proportionnée à la valeur"
+      ]
+    },
+    {
+      "h2": "Scénarios comparatifs (simplifiés)",
+      "ul": [
+        "Petit volume, délai souple: LCL, consolidation hebdomadaire",
+        "Volume moyen, valeur sensible: FCL 20’ avec emballage pro et assurance",
+        "Fort volume récurrent: FCL 40’/40’HC, slots et planning fixés"
+      ]
+    },
+    {
+      "h2": "Cas d’usage par route",
+      "sub": [
+        {
+          "h3": "France ↔ Chine",
+          "p": [
+            "Flux planifiés et volumétriques: FCL sécurise délais et qualité. Pour des petits volumes tests, LCL reste viable, en anticipant les consolidations."
+          ]
+        },
+        {
+          "h3": "France ↔ Turquie",
+          "p": [
+            "LCL pertinent pour campagnes ponctuelles faibles volumes; FCL s’impose sur récurrences B2B avec contraintes délai et contrôle."
+          ]
+        },
+        {
+          "h3": "France ↔ Afrique (Congo)",
+          "p": [
+            "Groupages LCL adressent les petits volumes (colis, palettes) avec ramassage multi‑hubs (IDF, Lyon, Marseille). Pour chargements sensibles, basculez au FCL."
+          ]
+        }
+      ]
+    },
+    {
+      "h2": "CBM, TEU et dimensionnement",
+      "p": [
+        "20’ ≈ 33 m³, 40’ ≈ 67 m³. Le taux de chargement utile dépend du type de marchandise et des contraintes (poids, ADR, empilement). Optimisez l’emballage export pour limiter l’espace perdu et les avaries."
+      ]
+    },
+    {
+      "h2": "Erreurs fréquentes",
+      "ul": [
+        "Comparer uniquement le fret sans intégrer les coûts annexes",
+        "Ignorer la saisonnalité et la congestion sur l’axe considéré",
+        "Minimiser l’importance de l’emballage export et de l’assurance"
+      ]
+    },
+    {
+      "h2": "Checklist décisionnelle",
+      "ul": [
+        "CBM/poids validés; sensibilité marchandises appréciée",
+        "Ports/services choisis; planning et cut‑offs compris",
+        "Scénarios FCL/LCL chiffrés sur coût total",
+        "Assurance/emballage documentés"
+      ]
+    },
+    {
+      "h2": "Guides associés",
+      "p": [
+        "Outil: Calculateur CBM. Guides: Incoterms 2020."
+      ]
+    }
+  ],
+  "faq": [
+    { "q": "Quel seuil de volume pour passer du LCL au FCL ?", "a": "Autour de 13–15 m³, le FCL devient souvent plus intéressant économiquement et en sécurité. L’arbitrage dépend du port, de la saisonnalité et des délais." },
+    { "q": "Le LCL est-il plus risqué ?", "a": "Le groupage implique des manipulations supplémentaires. Un emballage export et une assurance ad valorem réduisent fortement le risque. Pour des marchandises sensibles, FCL recommandé." },
+    { "q": "Peut-on mixer LCL et aérien pour accélérer une partie du flux ?", "a": "Oui, la multimodalité permet de respecter vos jalons clés. Nous calibrons un plan de transport adapté avec consolidation partielle." }
+  ],
+  "cta_compare": "Prêt à comparer FCL/LCL ?",
+  "cta_compare_desc": "Nos experts recommandent une option selon votre volume, votre risque et vos délais."
+}
