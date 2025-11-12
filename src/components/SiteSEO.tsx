@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
+import { DEFAULT_OG_IMAGE } from '../utils/seoHelpers';
 
 const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -10,11 +11,17 @@ const SiteSEO: FC = () => {
   const PHONE = '+33 7 49 23 55 39';
   const DEV = { '@type': 'Organization', name: 'SmarterLogic Web', url: 'https://smarterlogiqueweb.com' };
 
+  const ogImgAbs = DEFAULT_OG_IMAGE.startsWith('http')
+    ? DEFAULT_OG_IMAGE
+    : new URL(DEFAULT_OG_IMAGE, SITE_URL).href;
+
   const organization = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'MB Fret Services',
     url: SITE_URL,
+    logo: ogImgAbs,
+    image: ogImgAbs,
     creator: DEV,
     sameAs: [
       'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',
@@ -49,7 +56,7 @@ const SiteSEO: FC = () => {
     '@type': 'LocalBusiness',
     name: 'MB Fret Services',
     url: SITE_URL,
-    image: 'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: ogImgAbs,
     email: 'contact@mb-fretservices.com',
     telephone: PHONE,
     address: {

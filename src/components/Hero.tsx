@@ -3,9 +3,6 @@ import CtaButton from './CtaButton';
 import ResponsiveImage from './ResponsiveImage';
 import { useTranslation } from 'react-i18next';
 
-const HERO_IMG =
-  'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
-
 const Hero: FC = () => {
   const { t } = useTranslation('hero');
 
@@ -14,13 +11,16 @@ const Hero: FC = () => {
       {/* Background image using reusable ResponsiveImage for stability and maintainability */}
       <div className="absolute inset-0">
         <ResponsiveImage
-          src={HERO_IMG}
+          src="/images/hero-maritime.jpg"
+          webpSrc="/images/hero-maritime.webp"
+          avifSrc="/images/hero-maritime.avif"
           alt={t('alt_hero')}
           width={1600}
           height={900}
           priority
           sizes="100vw"
           className="w-full h-full object-cover"
+          type="image/jpeg"
         />
       </div>
       <div className="absolute inset-0 bg-black opacity-30"></div>

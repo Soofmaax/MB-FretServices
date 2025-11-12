@@ -5,6 +5,17 @@
 [build.environment]
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
+  # Fast deployment defaults (can be widened later)
+  VITE_LANG_INDEX = "fr,en"
+  VITE_SUP_LANGS = "fr,en"
+  # Build-time script controls (limit heavy tasks)
+  SITEMAP_LANGS = "fr,en"
+  PRERENDER_LANGS = "fr,en"
+  AI_TXT_LANGS = "fr,en"
+  # Skip i18n translation during Netlify build; run via GitHub Action instead
+  I18N_SKIP = "1"
+  # Optional: skip Puppeteer prerender completely if needed
+  # PRERENDER_SKIP = "1"
 
 # SEO 301 redirects (must appear before SPA fallback)
 # Legacy root-level paths
