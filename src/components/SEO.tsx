@@ -56,8 +56,10 @@ const SEO: FC<SEOProps> = ({
   const isLangAllowedToIndex = !INDEX_LANGS || INDEX_LANGS.includes(currentLang);
   const effectiveNoindex = noindex || !isLangAllowedToIndex;
 
+  const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
   return (
-    <Helmet htmlAttributes={{ lang: currentLang }}>
+    <Helmet htmlAttributes={{ lang: currentLang, dir }}>
       <title>{title}</title>
       <meta name="description" content={description} />
       {!effectiveNoindex && <meta name="robots" content="index,follow" />}

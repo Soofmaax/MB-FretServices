@@ -41,7 +41,7 @@ if (process.env.I18N_SKIP && !['0', 'false', 'False', 'FALSE'].includes(String(p
 const BASE_LANG = 'fr';
 const TARGET_LANGS = (process.env.I18N_TARGET_LANGS
   ? process.env.I18N_TARGET_LANGS.split(',').map(s => s.trim()).filter(Boolean)
-  : ['en', 'pt']);
+  : ['en', 'pt', 'es', 'tr', 'de', 'it', 'sw', 'ar']);
 const CONCURRENCY = Math.max(1, Number(process.env.I18N_CONCURRENCY || 3));
 
 function readJson(p) {
