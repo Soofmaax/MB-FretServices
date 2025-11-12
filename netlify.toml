@@ -5,15 +5,17 @@
 [build.environment]
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
-  # Indexation & alternates across all supported languages
-  VITE_LANG_INDEX = "fr,en,pt,es,tr,de,it,sw,ar"
-  VITE_SUP_LANGS = "fr,en,pt,es,tr,de,it,sw,ar"
-  # Build-time script controls
-  SITEMAP_LANGS = "fr,en,pt,es,tr,de,it,sw,ar"
-  PRERENDER_LANGS = "fr,en,pt,es,tr,de,it,sw,ar"
-  AI_TXT_LANGS = "fr,en,pt,es,tr,de,it,sw,ar"
-  # Translation targets (auto-translate missing keys during prebuild)
-  I18N_TARGET_LANGS = "en,pt,es,tr,de,it,sw,ar"
+  # Fast deployment defaults (can be widened later)
+  VITE_LANG_INDEX = "fr,en"
+  VITE_SUP_LANGS = "fr,en"
+  # Build-time script controls (limit heavy tasks)
+  SITEMAP_LANGS = "fr,en"
+  PRERENDER_LANGS = "fr,en"
+  AI_TXT_LANGS = "fr,en"
+  # Skip i18n translation during Netlify build; run via GitHub Action instead
+  I18N_SKIP = "1"
+  # Optional: skip Puppeteer prerender completely if needed
+  # PRERENDER_SKIP = "1"
 
 # SEO 301 redirects (must appear before SPA fallback)
 # Legacy root-level paths

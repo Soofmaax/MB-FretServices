@@ -1,7 +1,11 @@
 /**
  * Simple SSG prerender for selected routes using Puppeteer.
- * - Builds static HTML snapshots for FR/EN/PT pages.
+ * - Builds static HTML snapshots for selected language pages.
  * - Writes to dist/<route>/index.html
+ *
+ * Performance controls:
+ * - Skip entirely if PRERENDER_SKIP=1
+ * - Limit languages via PRERENDER_LANGS=fr,en
  */
 import fs from 'fs';
 import path from 'path';
@@ -174,6 +178,13 @@ const ROUTES_TO_RENDER = PRERENDER_LANGS.length
       return m && PRERENDER_LANGS.includes(m[1]);
     })
   : ROUTES;
+
+// Optional total skip
+const PRERENDER_SKIP = process.env.PRERENDER_SKIP && !['0', 'false', 'False', 'FALSE'].includes(String(process.env.PRERENDER_SKIP));
+if (PRERENDER_SKIP) {
+  console.log('[prerender] Skip enabled via PRERENDER_SKIP. Skipping Puppeteer prerender.');
+  process.exit(0);
+}
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });

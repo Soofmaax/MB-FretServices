@@ -6,6 +6,10 @@
  *
  * Requires: sharp
  *   npm i -D sharp
+ *
+ * Build-time performance:
+ * - Skips entirely if ASSETS_SKIP=1
+ * - Skips per-asset work if target files already exist
  */
 import fs from 'fs';
 import path from 'path';
@@ -49,33 +53,50 @@ async function fetchBuffer(srcUrl) {
 
 async function buildVariants(name, srcUrl) {
   const sizes = [800, 1200, 1600];
+
+  // If all variants exist, skip work
+  const allExist = ['.jpg', '-800.jpg', '-1200.jpg', '-1600.jpg', '-800.webp', '-1200.webp', '-1600.webp', '-800.avif', '-1200.avif', '-1600.avif']
+    .every((suffix) => fs.existsSync(path.join(imagesDir, `${name}${suffix}`)));
+  if (allExist) {
+    console.log(`[assets] Skip ${name}: already present`);
+    return;
+  }
+
   const buffer = await fetchBuffer(srcUrl);
 
   // Base fallback JPEG without suffix (use 1200px)
-  await sharp(buffer)
-    .resize({ width: 1200 })
-    .jpeg({ quality: 82, progressive: true })
-    .toFile(path.join(imagesDir, `${name}.jpg`));
+  if (!fs.existsSync(path.join(imagesDir, `${name}.jpg`))) {
+    await sharp(buffer)
+      .resize({ width: 1200 })
+      .jpeg({ quality: 82, progressive: true })
+      .toFile(path.join(imagesDir, `${name}.jpg`));
+  }
 
   for (const w of sizes) {
-    await sharp(buffer)
-      .resize({ width: w })
-      .jpeg({ quality: 82, progressive: true })
-      .toFile(path.join(imagesDir, `${name}-${w}.jpg`));
+    const jpgOut = path.join(imagesDir, `${name}-${w}.jpg`);
+    const webpOut = path.join(imagesDir, `${name}-${w}.webp`);
+    const avifOut = path.join(imagesDir, `${name}-${w}.avif`);
 
-    await sharp(buffer)
-      .resize({ width: w })
-      .webp({ quality: 80 })
-      .toFile(path.join(imagesDir, `${name}-${w}.webp`));
-
-    await sharp(buffer)
-      .resize({ width: w })
-      .avif({ quality: 50 })
-      .toFile(path.join(imagesDir, `${name}-${w}.avif`));
+    if (!fs.existsSync(jpgOut)) {
+      await sharp(buffer).resize({ width: w }).jpeg({ quality: 82, progressive: true }).toFile(jpgOut);
+    }
+    if (!fs.existsSync(webpOut)) {
+      await sharp(buffer).resize({ width: w }).webp({ quality: 80 }).toFile(webpOut);
+    }
+    if (!fs.existsSync(avifOut)) {
+      await sharp(buffer).resize({ width: w }).avif({ quality: 50 }).toFile(avifOut);
+    }
   }
 }
 
 async function buildOgDefault(fromName) {
+  const webpOut = path.join(publicDir, 'og-default.webp');
+  const jpgOut = path.join(publicDir, 'og-default.jpg');
+  if (fs.existsSync(webpOut) && fs.existsSync(jpgOut)) {
+    console.log('[assets] Skip og-default: already present');
+    return;
+  }
+
   const srcPath = path.join(imagesDir, `${fromName}-1600.jpg`);
   const fallback = path.join(imagesDir, `${fromName}.jpg`);
   const input = fs.existsSync(srcPath) ? srcPath : fallback;
@@ -84,15 +105,19 @@ async function buildOgDefault(fromName) {
   const ogW = 1200;
   const ogH = 630;
 
-  await sharp(input)
-    .resize(ogW, ogH, { fit: 'cover', position: 'centre' })
-    .webp({ quality: 80 })
-    .toFile(path.join(publicDir, 'og-default.webp'));
+  if (!fs.existsSync(webpOut)) {
+    await sharp(input)
+      .resize(ogW, ogH, { fit: 'cover', position: 'centre' })
+      .webp({ quality: 80 })
+      .toFile(webpOut);
+  }
 
-  await sharp(input)
-    .resize(ogW, ogH, { fit: 'cover', position: 'centre' })
-    .jpeg({ quality: 85, progressive: true })
-    .toFile(path.join(publicDir, 'og-default.jpg'));
+  if (!fs.existsSync(jpgOut)) {
+    await sharp(input)
+      .resize(ogW, ogH, { fit: 'cover', position: 'centre' })
+      .jpeg({ quality: 85, progressive: true })
+      .toFile(jpgOut);
+  }
 }
 
 /**
@@ -105,35 +130,42 @@ async function buildTintedFromPath(name, basePath, tintColor) {
     throw new Error(`Base image not found: ${basePath}`);
   }
 
+  // Skip if variants already exist
+  const allExist = ['.jpg', '-800.jpg', '-1200.jpg', '-1600.jpg', '-800.webp', '-1200.webp', '-1600.webp', '-800.avif', '-1200.avif', '-1600.avif']
+    .every((suffix) => fs.existsSync(path.join(imagesDir, `${name}${suffix}`)));
+  if (allExist) {
+    console.log(`[assets] Skip tinted ${name}: already present`);
+    return;
+  }
+
   // Base fallback 1200 jpg
-  await sharp(basePath)
-    .resize({ width: 1200 })
-    .tint(tintColor)
-    .jpeg({ quality: 82, progressive: true })
-    .toFile(path.join(imagesDir, `${name}.jpg`));
+  if (!fs.existsSync(path.join(imagesDir, `${name}.jpg`))) {
+    await sharp(basePath).resize({ width: 1200 }).tint(tintColor).jpeg({ quality: 82, progressive: true }).toFile(path.join(imagesDir, `${name}.jpg`));
+  }
 
   for (const w of sizes) {
-    await sharp(basePath)
-      .resize({ width: w })
-      .tint(tintColor)
-      .jpeg({ quality: 82, progressive: true })
-      .toFile(path.join(imagesDir, `${name}-${w}.jpg`));
+    const jpgOut = path.join(imagesDir, `${name}-${w}.jpg`);
+    const webpOut = path.join(imagesDir, `${name}-${w}.webp`);
+    const avifOut = path.join(imagesDir, `${name}-${w}.avif`);
 
-    await sharp(basePath)
-      .resize({ width: w })
-      .tint(tintColor)
-      .webp({ quality: 80 })
-      .toFile(path.join(imagesDir, `${name}-${w}.webp`));
-
-    await sharp(basePath)
-      .resize({ width: w })
-      .tint(tintColor)
-      .avif({ quality: 50 })
-      .toFile(path.join(imagesDir, `${name}-${w}.avif`));
+    if (!fs.existsSync(jpgOut)) {
+      await sharp(basePath).resize({ width: w }).tint(tintColor).jpeg({ quality: 82, progressive: true }).toFile(jpgOut);
+    }
+    if (!fs.existsSync(webpOut)) {
+      await sharp(basePath).resize({ width: w }).tint(tintColor).webp({ quality: 80 }).toFile(webpOut);
+    }
+    if (!fs.existsSync(avifOut)) {
+      await sharp(basePath).resize({ width: w }).tint(tintColor).avif({ quality: 50 }).toFile(avifOut);
+    }
   }
 }
 
 async function main() {
+  if (process.env.ASSETS_SKIP && !['0', 'false', 'False', 'FALSE'].includes(String(process.env.ASSETS_SKIP))) {
+    console.log('[assets] Skip enabled via ASSETS_SKIP. Skipping asset generation.');
+    return;
+  }
+
   ensureDir(publicDir);
   ensureDir(imagesDir);
 
@@ -159,7 +191,6 @@ async function main() {
 
   for (const a of assets) {
     try {
-      console.log(`Fetching ${a.name} from ${a.src}`);
       await buildVariants(a.name, a.src);
     } catch (e) {
       console.warn(`Failed to build ${a.name}:`, e?.message || e);
@@ -210,14 +241,14 @@ async function main() {
 
     // Helper: create OG from a base image path
     async function buildOg(name, base) {
-      await sharp(base)
-        .resize(1200, 630, { fit: 'cover', position: 'centre' })
-        .webp({ quality: 80 })
-        .toFile(ogOut(name).webp);
-      await sharp(base)
-        .resize(1200, 630, { fit: 'cover', position: 'centre' })
-        .jpeg({ quality: 85, progressive: true })
-        .toFile(ogOut(name).jpg);
+      const wOut = ogOut(name).webp;
+      const jOut = ogOut(name).jpg;
+      if (!fs.existsSync(wOut)) {
+        await sharp(base).resize(1200, 630, { fit: 'cover', position: 'centre' }).webp({ quality: 80 }).toFile(wOut);
+      }
+      if (!fs.existsSync(jOut)) {
+        await sharp(base).resize(1200, 630, { fit: 'cover', position: 'centre' }).jpeg({ quality: 85, progressive: true }).toFile(jOut);
+      }
     }
 
     await buildOg('china', chinaBase);
