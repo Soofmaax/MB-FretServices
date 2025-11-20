@@ -74,7 +74,7 @@ const CookieConsent: FC = () => {
               <p className="text-xs text-gray-500 mt-2">
                 {t('privacy_note', 'Consultez notre Déclaration de confidentialité pour plus d’informations.')}{' '}
                 <LocalizedLink
-                  to="legal"
+                  to="privacy"
                   className="text-accent-600 hover:text-accent-700 underline underline-offset-2"
                 >
                   {t('privacy_link', 'Politique de confidentialité')}

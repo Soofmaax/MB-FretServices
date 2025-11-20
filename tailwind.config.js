@@ -1,4 +1,4 @@
-import { siteConfig } from './src/config/site.config';
+import { siteColors } from './src/config/site-colors.js';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -16,7 +16,7 @@ export default {
           600: '#2c538c',
           700: '#254372',
           800: '#22375f',
-          900: siteConfig.colors.primary,
+          900: siteColors.primary,
         },
         accent: {
           50: '#fff7ed',
@@ -24,7 +24,7 @@ export default {
           200: '#fed7aa',
           300: '#fdba74',
           400: '#fb923c',
-          500: siteConfig.colors.accent,
+          500: siteColors.accent,
           600: '#ea580c',
           700: '#D84315',
           800: '#9a3412',

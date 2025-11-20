@@ -1,3 +1,5 @@
+import { siteColors } from './site-colors';
+
 export const siteConfig = {
   businessName: 'MB Fret Services',
   businessType: 'logistics' as const,
@@ -19,10 +21,7 @@ export const siteConfig = {
     localBusinessType: 'LocalBusiness',
   },
 
-  colors: {
-    primary: '#1E3A8A',
-    accent: '#E64A19',
-  },
+  colors: siteColors,
   
   features: {
     multiLanguage: true,
