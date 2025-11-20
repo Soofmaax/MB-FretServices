@@ -57,6 +57,13 @@
       }
     ]
   },
+  "form": {
+    "name": "Nom complet",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer",
+    "gdpr_notice": "Les informations saisies sont utilisées exclusivement pour répondre à votre demande de contact. Aucun démarchage automatique ni revente de vos données."
+  },
   "cta": {
     "title": "Prêt à démarrer votre projet ?",
     "text": "Nos experts sont disponibles pour analyser vos besoins et vous proposer la solution logistique la plus adaptée.",

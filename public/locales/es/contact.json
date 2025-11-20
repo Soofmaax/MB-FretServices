@@ -33,6 +33,13 @@
       { "title": "Seguimiento personalizado:", "desc": "Un interlocutor dedicado a su proyecto" }
     ]
   },
+  "form": {
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "gdpr_notice": "La información facilitada se utilizará únicamente para responder a su solicitud. No realizamos prospección automática ni vendemos sus datos."
+  },
   "cta": {
     "title": "¿Listo para iniciar su proyecto?",
     "text": "Nuestros expertos están disponibles para analizar sus necesidades y proponer la solución logística más adecuada.",

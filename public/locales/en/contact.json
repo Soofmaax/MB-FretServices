@@ -33,6 +33,13 @@
       { "title": "Personalized follow-up:", "desc": "A dedicated contact for your project" }
     ]
   },
+  "form": {
+    "name": "Full name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "gdpr_notice": "The information you provide will only be used to reply to your enquiry. No automated marketing or resale of your data."
+  },
   "cta": {
     "title": "Ready to start your project?",
     "text": "Our experts are available to analyze your needs and propose the most suitable logistics solution.",

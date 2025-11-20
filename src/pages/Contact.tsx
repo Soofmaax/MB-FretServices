@@ -128,6 +128,73 @@ const Contact: FC = () => {
         </div>
       </section>
 
+      {/* Formulaire de contact */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 text-center">
+            {t('hero.title')}
+          </h2>
+          <form
+            className="bg-white rounded-xl shadow-lg p-8"
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <div className="space-y-6">
+              <div>
+                <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">
+                  {t('form.name')}
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-1">
+                  {t('form.email')}
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">
+                  {t('form.message')}
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows={5}
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
+                />
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-gray-500">
+              {t('form.gdpr_notice')}
+            </p>
+            <div className="mt-6">
+              <button
+                type="submit"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-700 text-white hover:bg-accent-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-700 text-sm font-medium"
+              >
+                {t('form.submit')}
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       {/* Guide pour demande de devis */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
