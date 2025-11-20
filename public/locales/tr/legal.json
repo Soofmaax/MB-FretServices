@@ -10,7 +10,8 @@
         "capital_social": "Sermaye",
         "siege_social": "Merkez adresi",
         "siret": "SIRET",
-        "code_ape": "APE kodu"
+        "code_ape": "APE kodu",
+        "rc_pro": "Mesleki sorumluluk sigortası"
       }
     },
     "contact": {

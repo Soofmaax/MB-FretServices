@@ -10,7 +10,8 @@
         "capital_social": "Stammkapital",
         "siege_social": "Sitz",
         "siret": "SIRET",
-        "code_ape": "APE-Code"
+        "code_ape": "APE-Code",
+        "rc_pro": "Berufshaftpflichtversicherung"
       }
     },
     "contact": {

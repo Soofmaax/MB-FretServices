@@ -58,7 +58,8 @@ const Legal: FC = () => {
                   <strong>{t('sections.info.labels.capital_social')} :</strong> {"{{CAPITAL}}"}<br />
                   <strong>{t('sections.info.labels.siege_social')} :</strong> {"{{SIEGE_SOCIAL}}"}<br />
                   <strong>{t('sections.info.labels.siret')} :</strong> {"{{SIRET}}"}<br />
-                  <strong>{t('sections.info.labels.code_ape')} :</strong> {"{{APE}}"}
+                  <strong>{t('sections.info.labels.code_ape')} :</strong> {"{{APE}}"}<br />
+                  <strong>{t('sections.info.labels.rc_pro')} :</strong> {"{{RC_PRO}}"}
                 </p>
               </section>
 

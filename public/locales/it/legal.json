@@ -10,7 +10,8 @@
         "capital_social": "Capitale sociale",
         "siege_social": "Sede legale",
         "siret": "SIRET",
-        "code_ape": "Codice APE"
+        "code_ape": "Codice APE",
+        "rc_pro": "Responsabilità civile professionale"
       }
     },
     "contact": {

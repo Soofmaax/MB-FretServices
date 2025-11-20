@@ -10,7 +10,8 @@
         "capital_social": "Share capital",
         "siege_social": "Registered office",
         "siret": "SIRET",
-        "code_ape": "APE code"
+        "code_ape": "APE code",
+        "rc_pro": "Professional liability insurance"
       }
     },
     "contact": {
