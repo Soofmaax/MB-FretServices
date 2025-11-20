@@ -1,24 +1,49 @@
-name: Lingo.dev i18n
+name: i18n sync
 
 on:
   workflow_dispatch:
-  pull_request:
-    types: [opened, synchronize, reopened]
+  push:
+    paths:
+      - 'public/locales/fr/**'
+      - 'src/pages/**'
+      - 'scripts/translate-missing.mjs'
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  i18n:
-    name: Auto-translate missing keys
+  sync:
+    name: Auto-translate missing keys and commit
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      # Runs Lingo.dev Action which uses i18n.json at repo root
-      - name: Lingo.dev
-        uses: lingodotdev/lingo.dev@main
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          api-key: ${{ secrets.LINGODOTDEV_API_KEY }}
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run i18n translation sync
+        env:
+          # Optional: provide DeepL for higher quality; otherwise LibreTranslate will be used
+          # DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          I18N_TARGET_LANGS: en,pt,es,tr,de,it,sw,ar
+          I18N_CONCURRENCY: 3
+        run: npm run i18n:sync
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain public/locales)" ]; then
+            git add public/locales
+            git commit -m "i18n: sync translations"
+            git push
+          else
+            echo "No i18n changes to commit."
+          fi

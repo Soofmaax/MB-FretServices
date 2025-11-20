@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/translate-missing.mjs",
+    "prebuild": "node scripts/translate-missing.mjs && node scripts/fetch-assets.mjs",
     "build": "vite build",
     "postbuild": "node scripts/generate-sitemap.mjs && node scripts/generate-robots.mjs && node scripts/generate-ai-txt.mjs && node scripts/ssg-prerender.mjs",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
     "i18n:sync": "node scripts/translate-missing.mjs",
+    "assets:fetch": "node scripts/fetch-assets.mjs",
     "test": "vitest --run",
     "audit:site": "node scripts/audit-site.mjs",
     "screenshots": "node scripts/screenshots.mjs"
@@ -47,6 +48,7 @@
     "jsdom": "^24.0.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/jest-dom": "^6.4.8",
-    "puppeteer": "^23.7.0"
+    "puppeteer": "^23.7.0",
+    "sharp": "^0.33.5"
   }
 }

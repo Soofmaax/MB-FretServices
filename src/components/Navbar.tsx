@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import CtaButton from './CtaButton';
 import LocalizedLink from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
@@ -23,6 +23,7 @@ const SUP = ['fr','en','pt','es','ar','tr','sw','de','it'] as const;
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [routesOpen, setRoutesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -51,14 +52,18 @@ const Navbar: FC = () => {
       if (e.key === 'Escape' && isOpen) {
         setIsOpen(false);
       }
+      if (e.key === 'Escape' && routesOpen) {
+        setRoutesOpen(false);
+      }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [isOpen]);
+  }, [isOpen, routesOpen]);
 
-  // Ferme le menu mobile lors d'un changement de route
+  // Ferme les menus lors d'un changement de route
   useEffect(() => {
     setIsOpen(false);
+    setRoutesOpen(false);
   }, [location.pathname]);
 
   const navigationItems = [
@@ -118,6 +123,37 @@ const Navbar: FC = () => {
                   {item.name}
                 </LocalizedLink>
               ))}
+
+              {/* Routes dropdown */}
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setRoutesOpen((v) => !v)}
+                  aria-haspopup="true"
+                  aria-expanded={routesOpen}
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-primary-700 hover:text-accent-500"
+                >
+                  Routes
+                  <ChevronDown size={16} className="ml-1" aria-hidden="true" />
+                </button>
+                {routesOpen && (
+                  <div
+                    role="menu"
+                    aria-label="Routes principales"
+                    className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50"
+                  >
+                    <LocalizedLink to="services/fret-maritime/france-chine" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
+                      France ↔ Chine
+                    </LocalizedLink>
+                    <LocalizedLink to="services/fret-maritime/france-congo" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
+                      France ↔ Congo
+                    </LocalizedLink>
+                    <LocalizedLink to="services/fret-maritime/france-turquie" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
+                      France ↔ Turquie
+                    </LocalizedLink>
+                  </div>
+                )}
+              </div>
             </div>
             <div className="ml-6">
               <CtaButton href="contact" variant="primary">
@@ -186,6 +222,21 @@ const Navbar: FC = () => {
                 {item.name}
               </LocalizedLink>
             ))}
+
+            {/* Mobile routes list */}
+            <div className="px-3 pt-3">
+              <p className="text-xs uppercase tracking-wide text-gray-500 mb-2">Routes</p>
+              <LocalizedLink to="services/fret-maritime/france-chine" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded">
+                France ↔ Chine
+              </LocalizedLink>
+              <LocalizedLink to="services/fret-maritime/france-congo" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded">
+                France ↔ Congo
+              </LocalizedLink>
+              <LocalizedLink to="services/fret-maritime/france-turquie" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded">
+                France ↔ Turquie
+              </LocalizedLink>
+            </div>
+
             <div className="pt-2 px-2">
               <CtaButton href="contact" variant="primary" className="w-full">
                 {t('common:get_quote', 'Demander un Devis')}

@@ -23,6 +23,7 @@ import url from 'url';
  *   I18N_TARGET_LANGS       (ex: "en,pt,es" — défaut "en,pt")
  *   I18N_CONCURRENCY        (ex: 3 — défaut 3)
  *   DRY_RUN=1               (ne pas écrire sur disque)
+ *   I18N_SKIP=1             (passer complètement la synchro i18n — utile pour accélérer les builds)
  */
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -31,10 +32,16 @@ const LOCALES_ROOT = path.join(repoRoot, 'public', 'locales');
 const CACHE_DIR = path.join(repoRoot, '.cache');
 const CACHE_FILE = path.join(CACHE_DIR, 'i18n-cache.json');
 
+// Optional skip (to avoid long builds)
+if (process.env.I18N_SKIP && !['0', 'false', 'False', 'FALSE'].includes(String(process.env.I18N_SKIP))) {
+  console.log('[i18n] Skip enabled via I18N_SKIP env. Skipping translation sync.');
+  process.exit(0);
+}
+
 const BASE_LANG = 'fr';
 const TARGET_LANGS = (process.env.I18N_TARGET_LANGS
   ? process.env.I18N_TARGET_LANGS.split(',').map(s => s.trim()).filter(Boolean)
-  : ['en', 'pt']);
+  : ['en', 'pt', 'es', 'tr', 'de', 'it', 'sw', 'ar']);
 const CONCURRENCY = Math.max(1, Number(process.env.I18N_CONCURRENCY || 3));
 
 function readJson(p) {
