@@ -6,6 +6,7 @@ export type RouteKey =
   | 'destinations'
   | 'contact'
   | 'legal'
+  | 'privacy'
   | 'services_freight_maritime'
   | 'services_air_freight'
   | 'services_customs'
@@ -32,6 +33,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'mentions-legales',
+    privacy: 'politique-confidentialite',
     services_freight_maritime: 'services/fret-maritime',
     services_air_freight: 'services/fret-aerien',
     services_customs: 'services/dedouanement',
@@ -57,6 +59,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal-notice',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -82,6 +85,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinos',
     contact: 'contacto',
     legal: 'aviso-legal',
+    privacy: 'politica-privacidade',
     services_freight_maritime: 'servicos/frete-maritimo',
     services_air_freight: 'servicos/frete-aereo',
     services_customs: 'servicos/despacho-aduaneiro',
@@ -108,6 +112,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -133,6 +138,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -158,6 +164,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -183,6 +190,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -208,6 +216,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -233,6 +242,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
+    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
@@ -266,6 +276,19 @@ const CONTACT_ALIASES = new Set([
 ]);
 const LEGAL_ALIASES = new Set([
   'legal', 'mentions-legales', 'legal-notice', 'aviso-legal', 'impressum', 'note-legali', 'yasal-uyari', 'إشعار-قانوني'
+]);
+
+const PRIVACY_ALIASES = new Set([
+  'privacy',
+  'politique-confidentialite',
+  'privacy-policy',
+  'politica-privacidade',
+  'politica-privacidad',
+  'gizlilik-politikasi',
+  'informativa-privacy',
+  'datenschutz',
+  'sera-ya-faragha',
+  'سياسة-الخصوصية',
 ]);
 const FREIGHT_ALIASES = new Set([
   'services/fret-maritime',
@@ -403,6 +426,7 @@ export function keyFromPath(pathname: string): RouteKey {
   if (DEST_ALIASES.has(rest)) return 'destinations';
   if (CONTACT_ALIASES.has(rest)) return 'contact';
   if (LEGAL_ALIASES.has(rest)) return 'legal';
+  if (PRIVACY_ALIASES.has(rest)) return 'privacy';
   if (FREIGHT_ALIASES.has(rest)) return 'services_freight_maritime';
   if (AIR_ALIASES.has(rest)) return 'services_air_freight';
   if (CUSTOMS_ALIASES.has(rest)) return 'services_customs';
