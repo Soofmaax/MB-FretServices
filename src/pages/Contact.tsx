@@ -1,4 +1,5 @@
-import type { FC } from 'react';
+import type { FC, FormEvent } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
@@ -7,6 +8,32 @@ import { useTranslation } from 'react-i18next';
 const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation('contact');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('submitting');
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      const body = new URLSearchParams(formData as any).toString();
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  };
 
   return (
     <div className="pt-16">
@@ -66,7 +93,7 @@ const Contact: FC = () => {
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.email')}</h3>
               <a
                 href="mailto:contact@mb-fretservices.com"
-                className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+                className="text-accent-700 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 contact@mb-fretservices.com
               </a>
@@ -83,7 +110,7 @@ const Contact: FC = () => {
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.phone')}</h3>
               <a
                 href="tel:+33749235539"
-                className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+                className="text-accent-700 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 +33 7 49 23 55 39
               </a>
@@ -102,7 +129,7 @@ const Contact: FC = () => {
                 href="https://wa.me/33749235539"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+                className="text-accent-700 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 {t('methods.chat_direct')}
               </a>
@@ -128,6 +155,85 @@ const Contact: FC = () => {
         </div>
       </section>
 
+      {/* Formulaire de contact */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 text-center">
+            {t('hero.title')}
+          </h2>
+          <form
+            name="contact"
+            data-netlify="true"
+            className="bg-white rounded-xl shadow-lg p-8"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <div className="space-y-6">
+              <div>
+                <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">
+                  {t('form.name')}
+                </label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autoComplete="name"
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-1">
+                  {t('form.email')}
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
+                />
+              </div>
+              <div>
+                <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">
+                  {t('form.message')}
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows={5}
+                  required
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
+                />
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-gray-500">
+              {t('form.gdpr_notice')}
+            </p>
+            {status === 'success' && (
+              <p className="mt-4 text-sm text-green-700">
+                {t('form.success', 'Merci, nous vous répondrons sous 24h.')}
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="mt-4 text-sm text-red-700">
+                {t('form.error', 'Une erreur est survenue. Merci de réessayer ou de nous contacter directement par email ou téléphone.')}
+              </p>
+            )}
+            <div className="mt-6">
+              <button
+                type="submit"
+                disabled={status === 'submitting'}
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-700 text-white hover:bg-accent-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-700 text-sm font-medium disabled:opacity-75"
+              >
+                {status === 'submitting' ? t('form.submitting', 'Envoi en cours...') : t('form.submit')}
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       {/* Guide pour demande de devis */}
       <section className="py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,13 +249,13 @@ const Contact: FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-6 flex items-center">
-                <Send size={24} className="text-accent-500 mr-3" aria-hidden="true" />
+                <Send size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                 {t('guide.info_title')}
               </h3>
               <ul className="space-y-4">
                 {(t('guide.items', { returnObjects: true }) as Array<{ title: string; desc: string }>).map((item, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-primary-900">{item.title}</span>
                       <p className="text-gray-700 text-sm">{item.desc}</p>
@@ -161,13 +267,13 @@ const Contact: FC = () => {
 
             <div className="bg-gradient-to-br from-accent-50 to-accent-100 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-6 flex items-center">
-                <Clock size={24} className="text-accent-500 mr-3" aria-hidden="true" />
+                <Clock size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                 {t('guide.commitment_title')}
               </h3>
               <ul className="space-y-4">
                 {(t('guide.commitment', { returnObjects: true }) as Array<{ title: string; desc: string }>).map((c, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-primary-900">{c.title}</span>
                       <p className="text-gray-700 text-sm">{c.desc}</p>
@@ -193,7 +299,7 @@ const Contact: FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="mailto:contact@mb-fretservices.com?subject=Demande de devis transport international"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-accent-500 text-white hover:bg-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-accent-700 text-white hover:bg-accent-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Mail size={20} className="mr-2" aria-hidden="true" />
               {t('cta.email')}

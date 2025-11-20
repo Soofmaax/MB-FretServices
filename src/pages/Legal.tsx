@@ -15,6 +15,7 @@ const Legal: FC = () => {
       <SEO
         title="Mentions Légales | MB Fret Services"
         description="Mentions légales de MB Fret Services - Informations légales et conditions d'utilisation du site."
+        robotsContent="noindex,follow"
         jsonLd={[
           {
             '@context': 'https://schema.org',
@@ -54,11 +55,12 @@ const Legal: FC = () => {
                 <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.info.heading')}</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   <strong>{t('sections.info.labels.raison_sociale')} :</strong> MB Fret Services<br />
-                  <strong>{t('sections.info.labels.forme_juridique')} :</strong> [À compléter]<br />
-                  <strong>{t('sections.info.labels.capital_social')} :</strong> [À compléter]<br />
-                  <strong>{t('sections.info.labels.siege_social')} :</strong> Paris, France<br />
-                  <strong>{t('sections.info.labels.siret')} :</strong> [À compléter]<br />
-                  <strong>{t('sections.info.labels.code_ape')} :</strong> [À compléter]
+                  <strong>{t('sections.info.labels.forme_juridique')} :</strong> {"{{FORME_JURIDIQUE}}"}<br />
+                  <strong>{t('sections.info.labels.capital_social')} :</strong> {"{{CAPITAL}}"}<br />
+                  <strong>{t('sections.info.labels.siege_social')} :</strong> {"{{SIEGE_SOCIAL}}"}<br />
+                  <strong>{t('sections.info.labels.siret')} :</strong> {"{{SIRET}}"}<br />
+                  <strong>{t('sections.info.labels.code_ape')} :</strong> {"{{APE}}"}<br />
+                  <strong>{t('sections.info.labels.rc_pro')} :</strong> {"{{RC_PRO}}"}
                 </p>
               </section>
 

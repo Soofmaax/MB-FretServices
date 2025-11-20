@@ -33,6 +33,13 @@
       { "title": "Kişisel takip:", "desc": "Projenize özel bir muhatap" }
     ]
   },
+  "form": {
+    "name": "Ad ve soyad",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "submit": "Gönder",
+    "gdpr_notice": "Girdiğiniz bilgiler yalnızca talebinize cevap vermek için kullanılacaktır. Otomatik pazarlama veya veri satışı yapılmaz."
+  },
   "cta": {
     "title": "Projenize başlamak için hazır mısınız?",
     "text": "Uzmanlarımız ihtiyaçlarınızı analiz ederek en uygun lojistik çözümü sunmak için hazır.",

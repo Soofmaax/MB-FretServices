@@ -1,4 +1,5 @@
 {
+  "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Impressum",
   "sections": {
     "info": {
@@ -9,7 +10,8 @@
         "capital_social": "Stammkapital",
         "siege_social": "Sitz",
         "siret": "SIRET",
-        "code_ape": "APE-Code"
+        "code_ape": "APE-Code",
+        "rc_pro": "Berufshaftpflichtversicherung"
       }
     },
     "contact": {
@@ -22,8 +24,8 @@
     },
     "hosting": {
       "heading": "Hosting",
-      "content_line1": "Diese Website wird betrieben von [Name des Hosters]",
-      "content_line2": "[Adresse des Hosters]"
+      "content_line1": "Diese Website wird betrieben von {{HEBERGEUR_NOM}}",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
     },
     "ip": {
       "heading": "Geistiges Eigentum",

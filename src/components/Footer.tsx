@@ -115,7 +115,7 @@ const Footer: FC = () => {
               <button
                 type="button"
                 onClick={openCookieManager}
-                className="text-gray-300 hover:text-accent-400 underline underline-offset-4"
+                className="text-sm text-gray-500 hover:text-accent-400 underline underline-offset-4"
               >
                 {t('consent:manage', 'Gérer les cookies')}
               </button>

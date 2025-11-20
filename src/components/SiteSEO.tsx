@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getSiteUrl } from '../utils/siteUrl';
 import { DEFAULT_OG_IMAGE } from '../utils/seoHelpers';
+import { siteConfig } from '../config/site.config';
 
 const SiteSEO: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -53,26 +54,42 @@ const SiteSEO: FC = () => {
 
   const localBusiness = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'MB Fret Services',
+    '@type': siteConfig.seo.localBusinessType,
+    name: siteConfig.businessName,
     url: SITE_URL,
     image: ogImgAbs,
-    email: 'contact@mb-fretservices.com',
+    email: siteConfig.contact.email,
     telephone: PHONE,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Paris',
-      addressCountry: 'FR',
+      streetAddress: siteConfig.address.street,
+      postalCode: siteConfig.address.postal,
+      addressLocality: siteConfig.address.city,
+      addressRegion: 'Île-de-France',
+      addressCountry: siteConfig.address.country,
     },
     geo: {
       '@type': 'GeoCoordinates',
       latitude: 48.8566,
       longitude: 2.3522,
     },
-    areaServed: ['Europe', 'Africa', 'Asia'],
-    openingHours: [
-      'Mo-Fr 09:00-18:00',
-      'Sa 10:00-14:00',
+    priceRange: '€€',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Saturday'],
+        opens: '10:00',
+        closes: '14:00',
+      },
+    ],
+    areaServed: [
+      'Europe', 'Africa', 'Asia'
     ],
     sameAs: [
       'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',

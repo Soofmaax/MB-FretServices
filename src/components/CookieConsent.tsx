@@ -74,7 +74,7 @@ const CookieConsent: FC = () => {
               <p className="text-xs text-gray-500 mt-2">
                 {t('privacy_note', 'Consultez notre Déclaration de confidentialité pour plus d’informations.')}{' '}
                 <LocalizedLink
-                  to="legal"
+                  to="privacy"
                   className="text-accent-600 hover:text-accent-700 underline underline-offset-2"
                 >
                   {t('privacy_link', 'Politique de confidentialité')}
@@ -97,7 +97,7 @@ const CookieConsent: FC = () => {
               </button>
               <button
                 onClick={onAccept}
-                className="px-4 py-2 rounded-md bg-accent-500 text-white hover:bg-accent-600 transition-colors text-sm ml-2"
+                className="px-4 py-2 rounded-md bg-accent-700 text-white hover:bg-accent-800 transition-colors text-sm ml-2"
               >
                 {t('accept', 'Accepter')}
               </button>
@@ -112,7 +112,7 @@ const CookieConsent: FC = () => {
                   type="checkbox"
                   checked={analytics}
                   onChange={(e) => setAnalytics(e.target.checked)}
-                  className="h-4 w-4 text-accent-500 border-gray-300 rounded focus:ring-accent-500"
+                  className="h-4 w-4 text-accent-700 border-gray-300 rounded focus:ring-accent-700"
                 />
                 <label htmlFor="consent-analytics" className="ml-2 text-sm text-primary-900">
                   {t('analytics_label', 'Statistiques et amélioration (Google Analytics, Microsoft Clarity)')}

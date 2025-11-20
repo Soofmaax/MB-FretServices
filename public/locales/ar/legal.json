@@ -1,4 +1,5 @@
 {
+  "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "إشعار قانوني",
   "sections": {
     "info": {
@@ -9,7 +10,8 @@
         "capital_social": "رأس المال",
         "siege_social": "المقر الرئيسي",
         "siret": "SIRET",
-        "code_ape": "رمز APE"
+        "code_ape": "رمز APE",
+        "rc_pro": "التأمين على المسؤولية المهنية"
       }
     },
     "contact": {
@@ -22,8 +24,8 @@
     },
     "hosting": {
       "heading": "الاستضافة",
-      "content_line1": "يتم استضافة هذا الموقع بواسطة [اسم المُستضيف]",
-      "content_line2": "[عنوان المُستضيف]"
+      "content_line1": "يتم استضافة هذا الموقع بواسطة {{HEBERGEUR_NOM}}",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
     },
     "ip": {
       "heading": "الملكية الفكرية",

@@ -33,6 +33,13 @@
       { "title": "Ufuatiliaji binafsi:", "desc": "Mtu maalum wa kuwasiliana kwa mradi wako" }
     ]
   },
+  "form": {
+    "name": "Jina kamili",
+    "email": "Barua pepe",
+    "message": "Ujumbe",
+    "submit": "Tuma",
+    "gdpr_notice": "Taarifa unazotoa zitatumika tu kujibu ombi lako. Hatufanyi uuzaji wa moja kwa moja wala kuuza data zako."
+  },
   "cta": {
     "title": "Uko tayari kuanza mradi wako?",
     "text": "Wataalamu wetu wapo tayari kuchambua mahitaji yako na kupendekeza suluhisho bora la vifaa.",
