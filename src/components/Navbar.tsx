@@ -129,7 +129,6 @@ const Navbar: FC = () => {
                 <button
                   type="button"
                   onClick={() => setRoutesOpen((v) => !v)}
-                  aria-haspopup="true"
                   aria-expanded={routesOpen}
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-primary-700 hover:text-accent-700"
                 >
@@ -138,8 +137,6 @@ const Navbar: FC = () => {
                 </button>
                 {routesOpen && (
                   <div
-                    role="menu"
-                    aria-label="Routes principales"
                     className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50"
                   >
                     <LocalizedLink to="services/fret-maritime/france-chine" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
