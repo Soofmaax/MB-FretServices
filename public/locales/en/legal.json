@@ -1,4 +1,5 @@
 {
+  "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Legal Notice",
   "sections": {
     "info": {
@@ -22,8 +23,8 @@
     },
     "hosting": {
       "heading": "Hosting",
-      "content_line1": "This site is hosted by [Hosting provider name]",
-      "content_line2": "[Hosting provider address]"
+      "content_line1": "This site is hosted by {{HEBERGEUR_NOM}}",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
     },
     "ip": {
       "heading": "Intellectual Property",

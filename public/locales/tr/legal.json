@@ -1,4 +1,5 @@
 {
+  "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Yasal Bilgi",
   "sections": {
     "info": {
@@ -22,8 +23,8 @@
     },
     "hosting": {
       "heading": "Barındırma",
-      "content_line1": "Bu site [Barındırıcı adı] tarafından barındırılmaktadır",
-      "content_line2": "[Barındırıcı adresi]"
+      "content_line1": "Bu site {{HEBERGEUR_NOM}} tarafından barındırılmaktadır",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
     },
     "ip": {
       "heading": "Fikri Mülkiyet",
