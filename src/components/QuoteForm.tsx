@@ -177,7 +177,7 @@ const QuoteForm: FC<Props> = ({ defaultRoute = null }) => {
 
           <div className="flex justify-between gap-2 mt-2">
             <button onClick={prev} className="px-4 py-2 rounded border border-gray-300 text-sm">Retour</button>
-            <button onClick={submitMail} className="px-4 py-2 rounded bg-accent-500 text-white hover:bg-accent-600 text-sm">Envoyer la demande</button>
+            <button onClick={submitMail} className="px-4 py-2 rounded bg-accent-700 text-white hover:bg-accent-800 text-sm">Envoyer la demande</button>
           </div>
         </div>
       )}

@@ -66,7 +66,7 @@ const Contact: FC = () => {
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.email')}</h3>
               <a
                 href="mailto:contact@mb-fretservices.com"
-                className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+                className="text-accent-700 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 contact@mb-fretservices.com
               </a>
@@ -83,7 +83,7 @@ const Contact: FC = () => {
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.phone')}</h3>
               <a
                 href="tel:+33749235539"
-                className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+                className="text-accent-700 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 +33 7 49 23 55 39
               </a>
@@ -102,7 +102,7 @@ const Contact: FC = () => {
                 href="https://wa.me/33749235539"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+                className="text-accent-700 hover:text-accent-600 transition-colors duration-200 font-medium"
               >
                 {t('methods.chat_direct')}
               </a>
@@ -143,13 +143,13 @@ const Contact: FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-6 flex items-center">
-                <Send size={24} className="text-accent-500 mr-3" aria-hidden="true" />
+                <Send size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                 {t('guide.info_title')}
               </h3>
               <ul className="space-y-4">
                 {(t('guide.items', { returnObjects: true }) as Array<{ title: string; desc: string }>).map((item, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-primary-900">{item.title}</span>
                       <p className="text-gray-700 text-sm">{item.desc}</p>
@@ -161,13 +161,13 @@ const Contact: FC = () => {
 
             <div className="bg-gradient-to-br from-accent-50 to-accent-100 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-6 flex items-center">
-                <Clock size={24} className="text-accent-500 mr-3" aria-hidden="true" />
+                <Clock size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                 {t('guide.commitment_title')}
               </h3>
               <ul className="space-y-4">
                 {(t('guide.commitment', { returnObjects: true }) as Array<{ title: string; desc: string }>).map((c, idx) => (
                   <li key={idx} className="flex items-start">
-                    <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-accent-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                     <div>
                       <span className="font-medium text-primary-900">{c.title}</span>
                       <p className="text-gray-700 text-sm">{c.desc}</p>
@@ -193,7 +193,7 @@ const Contact: FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="mailto:contact@mb-fretservices.com?subject=Demande de devis transport international"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-accent-500 text-white hover:bg-accent-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-accent-700 text-white hover:bg-accent-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Mail size={20} className="mr-2" aria-hidden="true" />
               {t('cta.email')}

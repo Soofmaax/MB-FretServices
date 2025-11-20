@@ -314,7 +314,7 @@ const FreightRoute: FC = () => {
               <ul className="mt-4 space-y-2">
                 {(bulletsPorts || []).map((bp, i) => (
                   <li key={i} className="flex items-start">
-                    <span className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2"></span>
+                    <span className="w-2 h-2 bg-accent-700 rounded-full mr-3 mt-2"></span>
                     {bp}
                   </li>
                 ))}

@@ -116,8 +116,8 @@ const Navbar: FC = () => {
                   aria-current={isActiveLink(item.href) ? 'page' : undefined}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     isActiveLink(item.href)
-                      ? 'text-accent-500 border-b-2 border-accent-500'
-                      : 'text-primary-700 hover:text-accent-500 hover:border-b-2 hover:border-accent-500'
+                      ? 'text-accent-700 border-b-2 border-accent-700'
+                      : 'text-primary-700 hover:text-accent-700 hover:border-b-2 hover:border-accent-700'
                   }`}
                 >
                   {item.name}
@@ -131,7 +131,7 @@ const Navbar: FC = () => {
                   onClick={() => setRoutesOpen((v) => !v)}
                   aria-haspopup="true"
                   aria-expanded={routesOpen}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-primary-700 hover:text-accent-500"
+                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-primary-700 hover:text-accent-700"
                 >
                   Routes
                   <ChevronDown size={16} className="ml-1" aria-hidden="true" />
@@ -195,7 +195,7 @@ const Navbar: FC = () => {
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
               aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-              className="inline-flex items-center justify-center p-2 rounded-md text-primary-700 hover:text-accent-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-primary-700 hover:text-accent-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent-700"
             >
               {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
             </button>
@@ -215,8 +215,8 @@ const Navbar: FC = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                   isActiveLink(item.href)
-                    ? 'text-accent-500 bg-gray-50'
-                    : 'text-primary-700 hover:text-accent-500 hover:bg-gray-50'
+                    ? 'text-accent-700 bg-gray-50'
+                    : 'text-primary-700 hover:text-accent-700 hover:bg-gray-50'
                 }`}
               >
                 {item.name}

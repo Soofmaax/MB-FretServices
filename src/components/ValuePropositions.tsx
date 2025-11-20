@@ -49,7 +49,7 @@ const ValuePropositions: FC = () => {
                   <Icon size={32} className="text-white" aria-hidden="true" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-primary-900 mb-4 group-hover:text-accent-500 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-primary-900 mb-4 group-hover:text-accent-700 transition-colors duration-300">
                   {prop.title}
                 </h3>
 
