@@ -18,6 +18,11 @@ export const siteConfig = {
     defaultLocale: 'fr',
     localBusinessType: 'LocalBusiness',
   },
+
+  colors: {
+    primary: '#1E3A8A',
+    accent: '#E64A19',
+  },
   
   features: {
     multiLanguage: true,

@@ -18,6 +18,7 @@ type SEOProps = {
   ogType?: 'website' | 'article';
   twitterCard?: 'summary' | 'summary_large_image';
   noindex?: boolean;
+  robotsContent?: string;
   jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
 };
 
@@ -29,6 +30,7 @@ const SEO: FC<SEOProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   noindex = false,
+  robotsContent,
   jsonLd,
 }) => {
   const url = buildCanonical(canonical);
@@ -56,17 +58,28 @@ const SEO: FC<SEOProps> = ({
   const isLangAllowedToIndex = !INDEX_LANGS || INDEX_LANGS.includes(currentLang);
   const effectiveNoindex = noindex || !isLangAllowedToIndex;
 
+  const robotsMeta = robotsContent ?? (effectiveNoindex ? 'noindex,nofollow' : 'index,follow');
+
   const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
   return (
     <Helmet htmlAttributes={{ lang: currentLang, dir }}>
       <title>{title}</title>
       <meta name="description" content={description} />
-      {!effectiveNoindex && <meta name="robots" content="index,follow" />}
-      {effectiveNoindex && <meta name="robots" content="noindex,nofollow" />}
+      <meta name="robots" content={robotsMeta} />
       {/* Helpful indexing hints */}
-      {!effectiveNoindex && <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
-      {!effectiveNoindex && <meta name="bingbot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />}
+      {robotsMeta.startsWith('index') && (
+        <>
+          <meta
+            name="googlebot"
+            content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          />
+          <meta
+            name="bingbot"
+            content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+          />
+        </>
+      )}
       <meta httpEquiv="content-language" content={contentLang} />
 
       {/* Open Graph */}

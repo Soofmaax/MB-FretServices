@@ -15,6 +15,7 @@ const Legal: FC = () => {
       <SEO
         title="Mentions Légales | MB Fret Services"
         description="Mentions légales de MB Fret Services - Informations légales et conditions d'utilisation du site."
+        robotsContent="noindex,follow"
         jsonLd={[
           {
             '@context': 'https://schema.org',

@@ -1,4 +1,5 @@
-import type { FC } from 'react';
+import type { FC, FormEvent } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
@@ -7,6 +8,32 @@ import { useTranslation } from 'react-i18next';
 const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation('contact');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('submitting');
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      const body = new URLSearchParams(formData as any).toString();
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  };
 
   return (
     <div className="pt-16">
@@ -135,11 +162,12 @@ const Contact: FC = () => {
             {t('hero.title')}
           </h2>
           <form
+            name="contact"
+            data-netlify="true"
             className="bg-white rounded-xl shadow-lg p-8"
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
+            onSubmit={handleSubmit}
           >
+            <input type="hidden" name="form-name" value="contact" />
             <div className="space-y-6">
               <div>
                 <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -183,12 +211,23 @@ const Contact: FC = () => {
             <p className="mt-4 text-xs text-gray-500">
               {t('form.gdpr_notice')}
             </p>
+            {status === 'success' && (
+              <p className="mt-4 text-sm text-green-700">
+                {t('form.success', 'Merci, nous vous répondrons sous 24h.')}
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="mt-4 text-sm text-red-700">
+                {t('form.error', 'Une erreur est survenue. Merci de réessayer ou de nous contacter directement par email ou téléphone.')}
+              </p>
+            )}
             <div className="mt-6">
               <button
                 type="submit"
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-700 text-white hover:bg-accent-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-700 text-sm font-medium"
+                disabled={status === 'submitting'}
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-700 text-white hover:bg-accent-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-700 text-sm font-medium disabled:opacity-75"
               >
-                {t('form.submit')}
+                {status === 'submitting' ? t('form.submitting', 'Envoi en cours...') : t('form.submit')}
               </button>
             </div>
           </form>
