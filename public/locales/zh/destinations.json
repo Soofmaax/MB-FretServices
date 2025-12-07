@@ -1,0 +1,81 @@
+{
+  "seo": {
+    "title": "目的地 - 通往非洲、亚洲与欧洲的运输 | MB Fret Services",
+    "description": "国际运输服务覆盖刚果、安哥拉、中国、土耳其等。自法国出发的海运与空运线路。24 小时内提供个性化报价。"
+  },
+  "hero": {
+    "title": "全球服务目的地",
+    "subtitle": "依托广泛的物流合作伙伴网络，帮助您连接核心市场。航线与班期根据您的业务需求进行优化。"
+  },
+  "labels": {
+    "port_principal": "主要港口：",
+    "depart": "出发地：",
+    "duree": "时效：",
+    "frequence": "班期：",
+    "maritime": "海运",
+    "air": "空运",
+    "specialites": "运输专项："
+  },
+  "regions": [
+    {
+      "name": "中非地区",
+      "countries": [
+        {
+          "name": "刚果",
+          "capital": "布拉柴维尔",
+          "port": "Pointe-Noire",
+          "maritime": { "from": "勒阿弗尔、安特卫普", "duration": "18–22 天", "frequency": "每周" },
+          "aerien": { "from": "巴黎 CDG、里昂", "duration": "6–8 小时", "frequency": "每日" },
+          "specialites": ["车辆", "工业机械", "食品"]
+        },
+        {
+          "name": "安哥拉",
+          "capital": "罗安达",
+          "port": "罗安达",
+          "maritime": { "from": "安特卫普、鹿特丹", "duration": "20–25 天", "frequency": "每两周" },
+          "aerien": { "from": "巴黎 CDG、马赛", "duration": "7–9 小时", "frequency": "每周 5 班" },
+          "specialites": ["医疗设备", "建筑工程", "电子产品"]
+        }
+      ]
+    },
+    {
+      "name": "亚洲",
+      "countries": [
+        {
+          "name": "中国",
+          "capital": "北京",
+          "port": "上海、深圳",
+          "maritime": { "from": "勒阿弗尔、汉堡", "duration": "30–35 天", "frequency": "每日" },
+          "aerien": { "from": "巴黎 CDG、里昂", "duration": "10–12 小时", "frequency": "每日" },
+          "specialites": ["纺织进口", "电子产品", "机械设备"]
+        }
+      ]
+    },
+    {
+      "name": "中东地区",
+      "countries": [
+        {
+          "name": "土耳其",
+          "capital": "安卡拉",
+          "port": "伊斯坦布尔、伊兹密尔",
+          "maritime": { "from": "马赛、热那亚", "duration": "5–7 天", "frequency": "每周 3 班" },
+          "aerien": { "from": "巴黎 CDG、里昂、尼斯", "duration": "3–4 小时", "frequency": "每日" },
+          "specialites": ["纺织", "食品工业", "汽车及零部件"]
+        }
+      ]
+    }
+  ],
+  "other": {
+    "not_listed_title": "找不到您的目的地？",
+    "not_listed_text": "凭借全球合作网络，我们可以评估几乎所有目的地。欢迎与我们联系，获取针对您项目的个性化方案。",
+    "fast_response": "快速响应",
+    "fast_response_desc": "任何目的地 24 小时内提供报价",
+    "global_network": "全球网络",
+    "global_network_desc": "合作伙伴覆盖 50 多个国家",
+    "tailored": "定制化方案",
+    "tailored_desc": "根据您的具体限制与要求量身设计",
+    "cta_study": "评估我的目的地",
+    "cta_whatsapp": "WhatsApp 直联",
+    "cta_for": "为 {{country}} 请求报价"
+  }
+}

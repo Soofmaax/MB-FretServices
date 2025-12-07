@@ -1,0 +1,16 @@
+{
+  "home": "首页",
+  "services": "服务",
+  "destinations": "目的地",
+  "contact": "联系",
+  "guides": "指南",
+  "resources": "资源",
+  "routes": "航线",
+  "route_france_china": "法国 ↔ 中国",
+  "route_france_congo": "法国 ↔ 刚果",
+  "route_france_turkey": "法国 ↔ 土耳其",
+  "lang_label": "语言",
+  "lang_aria": "切换语言",
+  "menu_open": "打开菜单",
+  "menu_close": "关闭菜单"
+}

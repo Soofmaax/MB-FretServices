@@ -12,13 +12,14 @@ const ENV_SUP_LANGS = (import.meta.env?.VITE_SUP_LANGS as string | undefined)
   ? (import.meta.env.VITE_SUP_LANGS as string).split(',').map((s) => s.trim()).filter(Boolean)
   : [];
 export const SUP_LANGS: Lang[] =
-  (ENV_SUP_LANGS.length ? (ENV_SUP_LANGS as Lang[]) : (['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'] as Lang[]));
+  (ENV_SUP_LANGS.length ? (ENV_SUP_LANGS as Lang[]) : (['fr', 'en', 'pt', 'ar', 'zh', 'es', 'tr', 'sw', 'de', 'it'] as Lang[]));
 
 export const OG_LOCALE_MAP: Record<Lang, string> = {
   fr: 'fr_FR',
   en: 'en_GB',
   pt: 'pt_PT',
   ar: 'ar_AR',
+  zh: 'zh_CN',
   es: 'es_ES',
   tr: 'tr_TR',
   sw: 'sw_KE',
@@ -36,13 +37,13 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
   const site = getSiteUrl();
   const key = keyFromPath(window.location.pathname);
 
-  const hreflangMap: Record<Lang, string> = {
+  const hreflangMap: Recor<<Lang, string> = {
     fr: 'fr-FR',
     en: 'en-GB',
     pt: 'pt-PT',
     ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
+    zh: 'zh-CN',
+    es: 'tr-TR',
     sw: 'sw-KE',
     de: 'de-DE',
     it: 'it-IT',
@@ -77,6 +78,8 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
       ['de-DE','de-AT','de-CH'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
     } else if (lng === 'it') {
       ['it-IT','it-CH'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
+    } else if (lng === 'zh') {
+      ['zh-CN','zh-SG'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
     }
   }
 

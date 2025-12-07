@@ -1,0 +1,224 @@
+{
+  "seo": {
+    "title": "发往非洲的海运 - FCL/LCL 集装箱运输 | MB Fret Services",
+    "description": "面向非洲的专业海运服务：刚果、安哥拉、科特迪瓦等。20' 与 40' 集装箱，FCL 整箱与 LCL 拼箱。24 小时内免费报价，15 年行业经验。"
+  },
+  "hero": {
+    "title": "非洲航线海运",
+    "subtitle": "FCL 整箱与 LCL 拼箱方案",
+    "intro": "面向非洲主要港口的专业海运服务。20' 与 40' 集装箱、LCL 拼箱、车辆及特殊货物。自法国及欧洲港口定期开航。",
+    "cta_quote": "获取海运报价",
+    "cta_whatsapp": "WhatsApp 直联"
+  },
+  "air": {
+    "seo": {
+      "title": "空运货物 — 快速且安全 | MB Fret Services",
+      "description": "B2B 空运解决方案：快速、安全、可追踪。欧洲 ↔ 非洲/亚洲。门到门服务、货物保险与 IATA 合规。"
+    },
+    "breadcrumb_service_name": "空运",
+    "service_name": "B2B 空运 — 快速且安全",
+    "service_type": "空运",
+    "faq": [
+      {
+        "q": "哪些类型的货物适合空运？",
+        "a": "高价值、易腐或时效要求高的货物。空运可最大限度缩短运输时间并降低暴露风险。"
+      },
+      {
+        "q": "欧洲 ↔ 非洲/亚洲的典型运输时效是多少？",
+        "a": "根据枢纽和季节不同：门到机场约 1–5 天，门到门约 3–8 天。我们也可提供加急选项。"
+      },
+      {
+        "q": "你们是否提供空运货物保险？",
+        "a": "是的。我们建议采用 Ad Valorem 计价的货物保险，并根据货物价值、性质及业务关键性提供建议。"
+      }
+    ],
+    "hero": {
+      "title": "空运服务",
+      "subtitle": "优先、可靠、安全。",
+      "intro": "专为紧急、敏感或高价值货物设计的快速安全方案。我们全程掌控运输链并提供实时跟踪。",
+      "cta_quote": "请求报价",
+      "cta_whatsapp": "WhatsApp"
+    },
+    "features": [
+      {
+        "title": "快速时效",
+        "text": "优先处理、定期航班与加急选项，覆盖紧急运输需求。"
+      },
+      {
+        "title": "增强安全性",
+        "text": "可追踪的运输流程、严谨的单证控制以及与货值相匹配的保险方案。"
+      }
+    ],
+    "services": {
+      "title": "服务内容",
+      "intro": "我们在主要航空枢纽（CDG、AMS、FRA、IST 等）运营，提供加急、拼货与 Ad Valorem 保险选项。",
+      "list": [
+        "门到机场与门到门服务",
+        "单证审核与 IATA 合规",
+        "空运包装与加固",
+        "7×24 小时跟踪与通知"
+      ],
+      "cta": "获取报价"
+    },
+    "images": {
+      "hero_alt": "装载货物的货运飞机",
+      "services_alt": "仓库中进行空运装载作业"
+    }
+  },
+  "why": {
+    "title": "为什么选择我们的海运服务？",
+    "subtitle": "在通往非洲的海运领域拥有多年经验，可提供符合您需求的多种解决方案。"
+  },
+  "advantages": [
+    {
+      "title": "海运专业能力",
+      "description": "超过 15 年发往非洲的海运操作经验"
+    },
+    {
+      "title": "时效可控",
+      "description": "定期航班与优化后的航程时间"
+    },
+    {
+      "title": "安全有保障",
+      "description": "货物保险与全程实时跟踪"
+    }
+  ],
+  "services": {
+    "title": "我们的海运服务",
+    "subtitle": "针对各类货物提供完整的海运解决方案。从提货到最终交付，我们为您全程管理货物运输。",
+    "list": [
+      "20' 与 40' 集装箱（FCL - Full Container Load）",
+      "海运拼箱（LCL - Less than Container Load）",
+      "新车与二手车辆运输",
+      "工业机械与重型设备",
+      "危险品（IMO）",
+      "冷藏箱（reefer）",
+      "含上门提货的门到门服务",
+      "包含进出口清关服务"
+    ],
+    "cta": "获取个性化海运报价"
+  },
+  "customs": {
+    "seo": {
+      "title": "清关与合规 — 进出口 | MB Fret Services",
+      "description": "进出口清关手续、报关代理、关税与税费计算。单证支持、Incoterms 咨询与法规合规。"
+    },
+    "breadcrumb_service_name": "清关",
+    "service_name": "进出口清关与合规",
+    "service_type": "清关服务",
+    "faq": [
+      {
+        "q": "清关时必需的文件有哪些？",
+        "a": "商业发票、装箱单、原产地证明、必要时的各类证书与许可，具体取决于货物类型。"
+      },
+      {
+        "q": "你们是否提供报关代理服务？",
+        "a": "是的，我们负责报关代理、文件审核以及法规合规，涵盖进出口业务。"
+      },
+      {
+        "q": "你们能就 Incoterms 提供建议吗？",
+        "a": "当然，我们可根据您的物流流向、风险承受能力与组织架构，协助选择最合适的 Incoterm（如 FOB/CIF/DAP 等）。"
+      }
+    ],
+    "hero": {
+      "title": "清关服务",
+      "subtitle": "通过严格的单证管理与高效的报关代理，保障您的货物流向安全合规。",
+      "cta_quote": "与专家沟通"
+    },
+    "points": [
+      "单证审核与合规检查",
+      "进口与出口报关代理",
+      "关税与税费测算与管理",
+      "Incoterms 与流程支持"
+    ],
+    "services": {
+      "title": "服务内容",
+      "cta": "获取预估方案"
+    },
+    "images": {
+      "hero_alt": "清关文件与审批流程"
+    }
+  },
+  "destinations": {
+    "title": "非洲海运目的地",
+    "subtitle": "定期开航，通往非洲主要港口，并提供优化后的运输时效。",
+    "label_duration": "运输时间",
+    "label_frequency": "班期",
+    "label_departure": "起运港",
+    "label_port": "目的港：",
+    "cta_prefix": "获取前往 "
+  },
+  "destinations_list": [
+    { "country": "刚果", "port": "Pointe-Noire", "duration": "18–22 天", "frequency": "每周", "departure": "勒阿弗尔、安特卫普" },
+    { "country": "安哥拉", "port": "罗安达", "duration": "20–25 天", "frequency": "每两周", "departure": "安特卫普、鹿特丹" },
+    { "country": "科特迪瓦", "port": "阿比让", "duration": "12–15 天", "frequency": "每日", "departure": "勒阿弗尔、马赛" },
+    { "country": "喀麦隆", "port": "杜阿拉", "duration": "15–18 天", "frequency": "每两周", "departure": "安特卫普、汉堡" }
+  ],
+  "faq": {
+    "title": "海运常见问题",
+    "q1": "FCL 与 LCL 有何区别？",
+    "a1": "FCL（整箱）：您独占一个 20' 或 40' 集装箱，适合中大体积或高价值货物。LCL（拼箱）：多个发货人共用一个集装箱，更适合小体积货物。",
+    "q2": "海运需要哪些单证？",
+    "a2": "商业发票、装箱单、提单（Bill of Lading）、必要时的原产地证以及与货物类型相关的专项证书（如卫生证等）。",
+    "q3": "如何在运输过程中跟踪集装箱？",
+    "a3": "我们提供跟踪编号以及访问在线平台的权限，您可从始发港装船到目的港抵达全程查看状态。"
+  },
+  "final": {
+    "title": "准备好使用海运了吗？",
+    "text": "24 小时内为您提供个性化海运报价。我们的专家将结合您的需求推荐最具成本效益的方案。",
+    "cta": "海运报价",
+    "whatsapp": "WhatsApp 即时联系"
+  },
+  "insurance": {
+    "seo": {
+      "title": "货运保险 — Ad Valorem 货值保险 | MB Fret Services",
+      "description": "海运/空运货物保险：Ad Valorem 货值覆盖、理赔处理、出口包装建议。支持门到门运输。"
+    },
+    "breadcrumb_service_name": "货物保险",
+    "service_name": "货物保险 — Ad Valorem 货值保障",
+    "service_type": "运输保险",
+    "faq": [
+      {
+        "q": "为什么需要为海运/空运购买保险？",
+        "a": "保险可覆盖损坏、丢失或被盗等风险。Ad Valorem 货值保险有助于保护现金流和 B2B 合同履约能力。"
+      },
+      {
+        "q": "你们推荐哪些保险条款？",
+        "a": "视货物与航线而定：例如 Institute Cargo Clauses (A) 可提供较广泛的保障，特殊货物则可能需要 ADR 或易腐货物相关条款。"
+      },
+      {
+        "q": "是否提供门到门保险？",
+        "a": "是的，我们可根据需要从提货到最终交付全程覆盖，包括前段与后段的陆运。"
+      }
+    ],
+    "hero": {
+      "title": "货物保险",
+      "subtitle": "为您的供应链与现金流提供与 B2B 业务相匹配的保险保障。",
+      "cta_quote": "申请保险方案"
+    },
+    "benefits": [
+      "针对您的业务量身定制的 Ad Valorem 货值保险",
+      "理赔协助与证据管理",
+      "包装与防护建议，减少损失风险",
+      "可与运价报价一并呈现，提升成本透明度"
+    ],
+    "services": {
+      "title": "核心优势",
+      "cta_quote": "申请保险方案",
+      "cta_quote_secondary": "获取报价"
+    },
+    "images": {
+      "hero_alt": "货物保险相关文件",
+      "services_alt": "分析货运保险保障范围"
+    }
+  },
+  "images": {
+    "hero_alt": "集装箱海运码头",
+    "services_alt": "正在装载的海运集装箱"
+  },
+  "service_type": "海运",
+  "whatsapp": {
+    "hero_quote_africa": "您好，我想咨询前往非洲的海运报价。",
+    "final_quote": "您好，我想获取一份海运报价。"
+  }
+}
