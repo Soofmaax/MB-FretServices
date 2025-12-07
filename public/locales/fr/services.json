@@ -3,6 +3,10 @@
     "title": "Nos Services de Transport International",
     "subtitle": "Solutions complètes de logistique internationale adaptées à vos besoins. Du fret maritime économique au transport aérien express, nous gérons vos marchandises de A à Z."
   },
+  "seo": {
+    "title": "Nos Services - Fret Maritime, Aérien et Dédouanement | MB Fret Services",
+    "description": "Découvrez nos services de transport international : fret maritime vers l'Afrique, fret aérien express, dédouanement professionnel et assurance cargo."
+  },
   "maritime": {
     "title": "Fret Maritime",
     "subtitle": "Solutions économiques pour gros volumes",
@@ -68,5 +72,35 @@
     "text": "Chaque projet logistique est unique. Nos experts analysent vos besoins pour vous proposer la solution la plus adaptée et économique.",
     "consultation": "Consultation Gratuite",
     "whatsapp": "Chat WhatsApp"
+  },
+  "routesSection": {
+    "title": "Routes phares",
+    "discover": "Découvrir",
+    "cards": {
+      "france_china": {
+        "title": "France ↔ Chine",
+        "teaser": "FCL/LCL, ports majeurs, délais optimisés, suivi 24/7."
+      },
+      "france_congo": {
+        "title": "France ↔ Congo",
+        "teaser": "FCL/LCL, ports majeurs, délais optimisés, suivi 24/7."
+      },
+      "france_turkey": {
+        "title": "France ↔ Turquie",
+        "teaser": "FCL/LCL, ports majeurs, délais optimisés, suivi 24/7."
+      }
+    }
+  },
+  "guidesSection": {
+    "title": "Guides & Ressources",
+    "read": "Lire le guide",
+    "incoterms": {
+      "title": "Incoterms 2020 — Guide complet",
+      "desc": "Comprendre responsabilités/coûts/risques (FOB, CIF, DAP...). Cas pratiques Chine/Turquie."
+    },
+    "fcl_lcl": {
+      "title": "FCL vs LCL — Comment décider ?",
+      "desc": "Seuils volumétriques (≈13–15 m³), sécurité, délais, multimodalité. Méthode et cas d’usage."
+    }
   }
 }

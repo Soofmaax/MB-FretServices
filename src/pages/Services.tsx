@@ -11,8 +11,9 @@ import { detectLangFromPath, pathForLang } from '../utils/paths';
 type ServiceKey = 'maritime' | 'air' | 'customs' | 'insurance';
 
 const Services: FC = () => {
-  const { t } = useTranslation(['services', 'common']);
+  const { t } = useTranslation(['services', 'common', 'navbar']);
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+  const siteUrl = getSiteUrl();
 
   const serviceDefs: Array<{ icon: ComponentType<{ size?: number | string; className?: string }>; key: ServiceKey }> = [
     { icon: Ship, key: 'maritime' },
@@ -21,11 +22,33 @@ const Services: FC = () => {
     { icon: Shield, key: 'insurance' },
   ];
 
+  const seoTitle = t(
+    'services:seo.title',
+    'Nos Services - Fret Maritime, Aérien et Dédouanement | MB Fret Services'
+  );
+  const seoDescription = t(
+    'services:seo.description',
+    "Découvrez nos services de transport international : fret maritime vers l'Afrique, fret aérien express, dédouanement professionnel et assurance cargo."
+  );
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
   return (
     <div className="pt-16">
       <SEO
-        title="Nos Services - Fret Maritime, Aérien et Dédouanement | MB Fret Services"
-        description="Découvrez nos services de transport international : fret maritime vers l'Afrique, fret aérien express, dédouanement professionnel et assurance cargo."
+        title={seoTitle}
+        description={seoDescription}
         jsonLd={[
           {
             '@context': 'https://schema.org',
@@ -34,14 +57,14 @@ const Services: FC = () => {
               {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'Accueil',
-                item: getSiteUrl() + '/',
+                name: t('navbar:home', 'Accueil'),
+                item: siteUrl + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Services',
-                item: getSiteUrl() + pathForLang('services', lang),
+                name: t('navbar:services', 'Services'),
+                item: siteUrl + pathForLang('services', lang),
               },
             ],
           },
@@ -49,11 +72,46 @@ const Services: FC = () => {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             itemListElement: [
-              { '@type': 'Service', name: 'Fret Maritime', description: 'Solutions économiques pour gros volumes. Transport maritime vers l’Afrique et l’Asie avec suivi complet.', url: getSiteUrl() + pathForLang('services_freight_maritime', lang) },
-              { '@type': 'Service', name: 'Fret Aérien', description: 'Rapidité et fiabilité pour vos urgences. Idéal pour marchandises de valeur, périssables ou urgentes.' },
-              { '@type': 'Service', name: 'Dédouanement', description: 'Expertise administrative complète et conformité réglementaire assurée.' },
-              { '@type': 'Service', name: 'Assurance Cargo', description: 'Protection totale de vos marchandises, couverture complète de l’enlèvement à la livraison.' },
+              {
+                '@type': 'Service',
+                name: t('services:maritime.title', 'Fret Maritime'),
+                description: t(
+                  'services:maritime.description',
+                  "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux vers l'Afrique et l'Asie. Nous gérons tous types de marchandises avec un suivi complet."
+                ),
+                url: siteUrl + pathForLang('services_freight_maritime', lang),
+              },
+              {
+                '@type': 'Service',
+                name: t('services:air.title', 'Fret Aérien'),
+                description: t(
+                  'services:air.description',
+                  'Le transport aérien est idéal pour vos marchandises de haute valeur, périssables ou urgentes. Notre réseau de partenaires garantit des délais serrés vers toutes destinations.'
+                ),
+              },
+              {
+                '@type': 'Service',
+                name: t('services:customs.title', 'Dédouanement'),
+                description: t(
+                  'services:customs.description',
+                  'Notre équipe de déclarants en douane agréés vous accompagne dans toutes les formalités administratives. Nous garantissons la conformité réglementaire de vos opérations.'
+                ),
+              },
+              {
+                '@type': 'Service',
+                name: t('services:insurance.title', 'Assurance Cargo'),
+                description: t(
+                  'services:insurance.description',
+                  "Protégez vos investissements avec nos solutions d'assurance adaptées à chaque type de transport. Couverture complète de l'enlèvement à la livraison finale."
+                ),
+              },
             ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `${t('navbar:services', 'Services')} - MB Fret Services`,
+            inLanguage: langTag,
           },
         ]}
       />
@@ -189,36 +247,54 @@ const Services: FC = () => {
       {/* Key Maritime Routes (Hard silo hubs) */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">Routes phares</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
+            {t('services:routesSection.title', 'Routes phares')}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: 'France ↔ Chine', to: 'services/fret-maritime/france-chine', img: '906982' },
-              { title: 'France ↔ Congo', to: 'services/fret-maritime/france-congo', img: '416978' },
-              { title: 'France ↔ Turquie', to: 'services/fret-maritime/france-turquie', img: '723240' },
-            ].map((r, i) => (
-              <div key={r.title} className={`bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all animate-slide-up ${i === 1 ? 'animate-delay-150' : i === 2 ? 'animate-delay-300' : 'animate-delay-0'}`}>
-                <LocalizedLink to={r.to} className="block group">
-                  <div className="relative h-44">
-                    <ResponsiveImage
-                      src={`https://images.pexels.com/photos/${r.img}/pexels-photo-${r.img}.jpeg?auto=compress&cs=tinysrgb&w=800`}
-                      alt={r.title}
-                      width={800}
-                      height={300}
-                      className="w-full h-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">{r.title}</h3>
-                    <p className="text-sm text-gray-700">FCL/LCL, ports majeurs, délais optimisés, suivi 24/7.</p>
-                    <div className="mt-3 inline-flex items-center text-accent-600 font-medium">
-                      Découvrir <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+              { key: 'france_china' as const, to: 'services/fret-maritime/france-chine', img: '906982' },
+              { key: 'france_congo' as const, to: 'services/fret-maritime/france-congo', img: '416978' },
+              { key: 'france_turkey' as const, to: 'services/fret-maritime/france-turquie', img: '723240' },
+            ].map((r, i) => {
+              const title = t(`services:routesSection.cards.${r.key}.title`);
+              const teaser = t(
+                `services:routesSection.cards.${r.key}.teaser`,
+                'FCL/LCL, ports majeurs, délais optimisés, suivi 24/7.'
+              );
+              const discover = t('services:routesSection.discover', 'Découvrir');
+
+              return (
+                <div
+                  key={r.key}
+                  className={`bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all animate-slide-up ${
+                    i === 1 ? 'animate-delay-150' : i === 2 ? 'animate-delay-300' : 'animate-delay-0'
+                  }`}
+                >
+                  <LocalizedLink to={r.to} className="block group">
+                    <div className="relative h-44">
+                      <ResponsiveImage
+                        src={`https://images.pexels.com/photos/${r.img}/pexels-photo-${r.img}.jpeg?auto=compress&cs=tinysrgb&w=800`}
+                        alt={title}
+                        width={800}
+                        height={300}
+                        className="w-full h-full object-cover"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
                     </div>
-                  </div>
-                </LocalizedLink>
-              </div>
-            ))}
+                    <div className="p-5">
+                      <h3 className="text-xl font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
+                        {title}
+                      </h3>
+                      <p className="text-sm text-gray-700">{teaser}</p>
+                      <div className="mt-3 inline-flex items-center text-accent-600 font-medium">
+                        {discover} <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                      </div>
+                    </div>
+                  </LocalizedLink>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -226,20 +302,34 @@ const Services: FC = () => {
       {/* Guides & Resources */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">Guides &amp; Ressources</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
+            {t('services:guidesSection.title', 'Guides & Ressources')}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: 'Incoterms 2020 — Guide complet', to: 'documentation/incoterms-2020', desc: 'Comprendre responsabilités/coûts/risques (FOB, CIF, DAP...). Cas pratiques Chine/Turquie.' },
-              { title: 'FCL vs LCL — Comment décider ?', to: 'guides/fcl-vs-lcl', desc: 'Seuils volumétriques (≈13–15 m³), sécurité, délais, multimodalité. Méthode et cas d’usage.' },
-            ].map((g, i) => (
-              <LocalizedLink key={g.title} to={g.to} className={`block bg-white rounded-xl p-6 shadow hover:shadow-lg transition-all animate-slide-up ${i === 1 ? 'animate-delay-150' : 'animate-delay-0'}`}>
-                <h3 className="text-xl font-semibold text-primary-900 mb-2">{g.title}</h3>
-                <p className="text-sm text-gray-700">{g.desc}</p>
-                <div className="mt-3 inline-flex items-center text-accent-600 font-medium">
-                  Lire le guide <ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                </div>
-              </LocalizedLink>
-            ))}
+              { key: 'incoterms' as const, to: 'documentation/incoterms-2020' },
+              { key: 'fcl_lcl' as const, to: 'guides/fcl-vs-lcl' },
+            ].map((g, i) => {
+              const title = t(`services:guidesSection.${g.key}.title`);
+              const desc = t(`services:guidesSection.${g.key}.desc`);
+              const read = t('services:guidesSection.read', 'Lire le guide');
+
+              return (
+                <LocalizedLink
+                  key={g.key}
+                  to={g.to}
+                  className={`block bg-white rounded-xl p-6 shadow hover:shadow-lg transition-all animate-slide-up ${
+                    i === 1 ? 'animate-delay-150' : 'animate-delay-0'
+                  }`}
+                >
+                  <h3 className="text-xl font-semibold text-primary-900 mb-2">{title}</h3>
+                  <p className="text-sm text-gray-700">{desc}</p>
+                  <div className="mt-3 inline-flex items-center text-accent-600 font-medium">
+                    {read} <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                  </div>
+                </LocalizedLink>
+              );
+            })}
           </div>
         </div>
       </section>
