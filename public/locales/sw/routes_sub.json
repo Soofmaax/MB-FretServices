@@ -1,0 +1,428 @@
+{
+  "labels": {
+    "home": "Mwanzo",
+    "services": "Huduma",
+    "route_root": "Usafirishaji wa baharini",
+    "back_to_route": "Rudi kwenye ukurasa wa njia",
+    "faq": "Maswali ya mara kwa mara",
+    "cta_quote": "Omba bei ya ofa",
+    "cta_compare_fcl_lcl": "Linganisha FCL/LCL na mtaalam",
+    "cta_customs_specialist": "Zungumza na mtaalam wa ushuru",
+    "cta_assistance": "Omba usaidizi",
+    "guide_incoterms": "Incoterms 2020",
+    "guide_fcl": "Elewa FCL dhidi ya LCL",
+    "see_services": "Tazama huduma",
+    "view": "Fungua maelezo"
+  },
+  "china": {
+    "fcl_lcl": {
+      "h1": "FCL dhidi ya LCL — Ufaransa ↔ China",
+      "title": "FCL dhidi ya LCL kwenye njia ya Ufaransa ↔ China — Chagua njia sahihi | MB Fret Services",
+      "desc": "Viwango vya ujazo (~13–15 m³), usalama na gharama. Linganisha FCL na LCL kwenye njia ya Ufaransa ↔ China na boresha bajeti yako.",
+      "intro": [
+        "FCL (kontena kamili) huongeza udhibiti na kupunguza uhamishaji wa mzigo; LCL (mzigo wa pamoja) husaidia kudhibiti gharama kwa ujazo mdogo wa takriban chini ya 13–15 m³. Uamuzi sahihi unahitaji kuzingatia ujazo, thamani, muda na unyeti wa bidhaa."
+      ],
+      "sections": [
+        {
+          "h2": "Viwango, gharama na hatari",
+          "ul": [
+            "Viwango vya makadirio: 20’ ≈ 33 m³, 40’ ≈ 67 m³, 40’HC ≈ 76 m³",
+            "Gharama ya jumla iliyowasilishwa: linganisha FCL dhidi ya LCL (usafirishaji wa kabla/baada ya bandari, THC, ada za ziada, bima na ushuru)",
+            "Hatari: LCL inahusisha kukusanya na kusambaza upya mizigo; tumia kifungashio cha kiwango cha usafirishaji na bima ya ad valorem"
+          ]
+        },
+        {
+          "h3": "Mifano ya matumizi kwa China",
+          "ul": [
+            "Mikondo ya mara kwa mara: FCL kama chaguo kuu; LCL kwa majaribio, sampuli na shehena ndogo",
+            "Msimu wa kilele (Mwaka Mpya wa Kichina, robo ya 4): hakikisha nafasi ya meli mapema na fuatilia tarehe za cut‑off"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni ujazo gani unaofaa kubadili kutoka LCL kwenda FCL?",
+          "a": "Kwa ujumla kati ya m³ 13–15 kulingana na bandari na msimu. Pia zingatia thamani, hatari na mahitaji ya muda."
+        },
+        {
+          "q": "Je, LCL ni hatari zaidi?",
+          "a": "Ndiyo, kwa sababu inahitaji kukusanya na kusambaza upya mzigo. Kifungashio cha kiwango cha usafirishaji na bima ya ad valorem hupunguza sana hatari."
+        },
+        {
+          "q": "Je, tunaweza kuchanganya LCL na usafiri wa anga?",
+          "a": "Ndiyo, ili kutimiza tarehe muhimu ya utoaji. Tunaweza kubuni mpango wa usafiri wa njia nyingi kulingana na vikwazo vyako."
+        },
+        {
+          "q": "Ni aina gani za kontena za FCL zinazopatikana?",
+          "a": "20’, 40’, 40’HC; chaguo za Reefer au Open Top zinategemea tathmini ya kiufundi na aina ya mzigo."
+        },
+        {
+          "q": "Ninawezaje kukadiria CBM yangu?",
+          "a": "Urefu × Upana × Urefu × Idadi / 1 000 000. Unaweza pia kutumia kihesabati chetu cha CBM mtandaoni."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Taratibu za forodha — Ufaransa ↔ China",
+      "title": "Forodha na hati — Ufaransa ↔ China | MB Fret Services",
+      "desc": "Hati muhimu, uzingatiaji wa kanuni na Incoterms kwenye njia ya Ufaransa ↔ China. Punguza hatari kupitia udhibiti madhubuti wa nyaraka.",
+      "intro": [
+        "Ufanisi katika forodha huanza na hati zisizo na makosa (faktura, packing list, BL na vyeti). Tunasimamia uwakilishi, hesabu ya ushuru na kodi na uratibu na bandari na kampuni ya meli ili kuepuka ucheleweshaji na gharama zisizotarajiwa."
+      ],
+      "sections": [
+        {
+          "h2": "Hati na Incoterms",
+          "ul": [
+            "Faktura, packing list, BL, cheti cha asili (ikiwa kinahitajika) na vyeti vingine maalum kulingana na bidhaa",
+            "Incoterms: FOB/CIF ni za kawaida; DAP/DDP kwa usimamizi mpana zaidi na uzoefu wa mlango‑kwa‑mlango",
+            "Nambari sahihi za HS: huamua viwango vya ushuru, kodi na uwezekano wa ukaguzi"
+          ]
+        },
+        {
+          "h3": "Makosa ya kawaida",
+          "ul": [
+            "Tofauti kati ya hati (idadi, uzito, maelezo ya bidhaa)",
+            "Kupitisha tarehe za cut‑off (nyaraka/VGM) bila kutuma taarifa muhimu",
+            "Bima ya thamani ndogo kuliko thamani halisi ya mzigo"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni hati gani zinazohitajika kwa usafirishaji kwenda China?",
+          "a": "Faktura, packing list, BL, cheti cha asili ikiwa kinahitajika, pamoja na vyeti maalum kulingana na aina ya bidhaa."
+        },
+        {
+          "q": "Nifanyie chaguo gani la Incoterm?",
+          "a": "FOB/CIF ni maarufu kwa usafirishaji wa baharini; DAP/DDP kwa pale unapotaka mchuuzi awajibike kwa sehemu kubwa zaidi ya mnyororo. Tunashauri kulingana na mgawanyo wa hatari, udhibiti na bajeti."
+        },
+        {
+          "q": "Je, mnaweza kutuwakilisha kwenye forodha?",
+          "a": "Ndiyo. Tunafanya ukaguzi wa nyaraka, tunasimamia ushuru na kodi na tunaratibu na bandari."
+        },
+        {
+          "q": "Ninawezaje kupunguza ucheleweshaji?",
+          "a": "Andaa hati mapema, hakikisha usahihi wa nambari za HS, zingatia tarehe za cut‑off na weka mawasiliano ya wazi na upande wa usafirishaji."
+        },
+        {
+          "q": "Je, bima ni lazima?",
+          "a": "Bima ya ad valorem inapendekezwa sana. Inalinda mtiririko wa fedha na uendelevu wa biashara ikiwa kutatokea uharibifu au upotevu."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Orodha ya ukaguzi wa hati — Ufaransa ↔ China",
+      "title": "Orodha ya ukaguzi wa hati — Ufaransa ↔ China | MB Fret Services",
+      "desc": "Orodha muhimu ya kuandaa usafirishaji kwenye njia ya Ufaransa ↔ China: faktura, packing list, BL, vyeti na bima.",
+      "intro": [
+        "Fuata orodha hii ili kufanya upakiaji na utoaji kuwa laini. Inashughulikia maandalizi, hati, bima na uratibu kati ya wadau wote."
+      ],
+      "sections": [
+        {
+          "h2": "Kabla ya usafirishaji",
+          "ul": [
+            "Kadiria CBM/uzito (ukitumia kifaa cha CBM), chagua FCL au LCL",
+            "Chagua bandari na huduma (moja kwa moja au kupitia bandari ya kati)",
+            "Tayarisha kifungashio cha kiwango cha usafirishaji (kujaza vizuri, kuzuia kusogea, alama sahihi)"
+          ]
+        },
+        {
+          "h3": "Hati",
+          "ul": [
+            "Faktura ya biashara na packing list",
+            "BL (rasimu ya kuidhinishwa), cheti cha asili ikiwa kinahitajika",
+            "Bima ya ad valorem: nakala ya sera na vielelezo vinavyohitajika"
+          ]
+        },
+        {
+          "h3": "Bandarini na baada ya kuwasili",
+          "ul": [
+            "Hakikisha tarehe za cut‑off zinazingatiwa na VGM imetumwa",
+            "Ratibu na bandari, nafasi za kupakia au kupakua na vikwazo vya eneo la mteja",
+            "Fanyia kazi ushuru wa kuingiza, uondoaji wa mzigo na uthibitisho wa kukabidhi mzigo (POD)"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ninapaswa kuangalia nini kama kipaumbele?",
+          "a": "Faktura/packing list zilizosainiwa, rasimu ya BL, vyeti vinavyohitajika, maelezo ya mpokeaji na vikwazo vya mahali pa kupakua."
+        },
+        {
+          "q": "Ninawezaje kuthibitisha hali ya kifungashio?",
+          "a": "Piga picha zenye tarehe, tumia vifaa vinavyolinda vyema mzigo na toa michoro au maelezo ya ziada kwa mizigo nyeti."
+        },
+        {
+          "q": "Je, ni lazima kuwe na miadi maalum bandarini?",
+          "a": "Inategemea bandari na terminal. Tunaweza kusaidia kuomba na kuratibu miadi hiyo."
+        },
+        {
+          "q": "Bima inapaswa kushughulikia nini?",
+          "a": "Inashauriwa kuchukua bima ya ad valorem, kuelewa vizuizi vyake na kuhifadhi ushahidi (picha, namba za kundi, nk.)."
+        }
+      ]
+    }
+  },
+  "congo": {
+    "fcl_lcl": {
+      "h1": "FCL dhidi ya LCL — Ufaransa ↔ Kongo",
+      "title": "FCL dhidi ya LCL kwenye njia ya Ufaransa ↔ Kongo — Chagua njia sahihi | MB Fret Services",
+      "desc": "Viwango vya ujazo (~13–15 m³), usalama na gharama. Linganisha FCL na LCL kwenye njia ya Ufaransa ↔ Kongo.",
+      "intro": [
+        "Katika njia ya Ufaransa ↔ Kongo, chaguo kati ya FCL na LCL linategemea ujazo na unyeti wa mzigo. Kwa shehena ndogo kuelekea Pointe‑Noire, LCL ni chaguo muhimu; kadiri thamani na ujazo vinavyoongezeka, FCL huwa na faida zaidi."
+      ],
+      "sections": [
+        {
+          "h2": "Viwango, gharama na hatari",
+          "ul": [
+            "Linganisha gharama ya jumla iliyofikishwa (usafiri wa kabla/baada ya bandari, THC, ada za ziada, bima)",
+            "Badilisha kwenda FCL kupunguza uhamishaji wa mzigo wakati thamani na unyeti wa bidhaa ni wa juu"
+          ]
+        },
+        {
+          "h3": "Mifano ya matumizi kwa Kongo",
+          "ul": [
+            "Vifurushi na pallet: LCL ya mara kwa mara kuelekea Pointe‑Noire ikiwa na ufuatiliaji wa hatua muhimu",
+            "Vifaa nyeti: FCL pamoja na taratibu kali za nyaraka na kifungashio cha kitaalamu"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni ujazo upi unaofaa kubadili kutoka LCL kwenda FCL?",
+          "a": "Kwa kawaida kati ya 13–15 m³, ukibadilishwa kulingana na bandari na msimu."
+        },
+        {
+          "q": "Je, LCL inafaa kwa pallet na vifurushi?",
+          "a": "Ndiyo, kwa sababu inaruhusu kusafirisha kiasi kidogo kwa gharama ya kuridhisha, huku ikitoa taarifa kuhusu tarehe za kuondoka na hatua kuu."
+        },
+        {
+          "q": "Ni aina gani ya bima mnayopendekeza?",
+          "a": "Bima ya ad valorem, inayolingana na thamani na unyeti wa bidhaa."
+        },
+        {
+          "q": "Tunaweza kuchanganya LCL na usafiri wa anga?",
+          "a": "Ndiyo, kwa shehena muhimu au sehemu ya mradi yenye tarehe kali za utoaji. Tunapima kila kesi tofauti."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Taratibu za forodha — Ufaransa ↔ Kongo",
+      "title": "Forodha na hati — Ufaransa ↔ Kongo | MB Fret Services",
+      "desc": "Hati zinazohitajika, uwakilishi na uratibu na terminal ili kupunguza ucheleweshaji.",
+      "intro": [
+        "Tunafanya ukaguzi wa kina wa nyaraka: faktura, packing list, BL, cheti cha asili ikiwa kinahitajika na karatasi maalum kulingana na mzigo. Tunatoa uwakilishi wa forodha na usaidizi katika kuhesabu na kulipa ushuru na kodi."
+      ],
+      "sections": [
+        {
+          "h2": "Hati na Incoterms",
+          "ul": [
+            "Faktura/packing list/BL, cheti cha asili ikiwa kinahitajika",
+            "Incoterms: FOB/CIF/DAP/DDP kulingana na mgawanyo wa hatari na wajibu",
+            "Nambari sahihi za HS"
+          ]
+        },
+        {
+          "h3": "Makosa ya kawaida",
+          "ul": [
+            "Hati ambazo hazilingani (idadi, maelezo, uzito)",
+            "Kuchelewa kutuma VGM na kutokuzingatia tarehe za cut‑off",
+            "Bima isiyotosha ukilinganisha na thamani ya mzigo"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni hati gani zinazohitajika kwa Kongo?",
+          "a": "Faktura, packing list, BL, cheti cha asili ikiwa kinahitajika na hati maalum kulingana na bidhaa."
+        },
+        {
+          "q": "Je, mnasimamia uwakilishi wa forodha?",
+          "a": "Ndiyo, tunawakilisha mteja kwenye forodha, tunasimamia nyaraka na mawasiliano na terminal."
+        },
+        {
+          "q": "Ni Incoterms zipi hutumika zaidi?",
+          "a": "FOB/CIF ni za kawaida; DAP/DDP inapendekezwa pale ambapo mnunuzi anataka mchuuzi awajibike zaidi kwa mlolongo wa usafirishaji."
+        },
+        {
+          "q": "Ninawezaje kupunguza ucheleweshaji wa forodha?",
+          "a": "Andaa nyaraka mapema, hakikisha zinaendana, zingatia tarehe za cut‑off na weka mawasiliano ya karibu na timu ya forodha."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Orodha ya ukaguzi wa hati — Ufaransa ↔ Kongo",
+      "title": "Orodha ya ukaguzi wa hati — Ufaransa ↔ Kongo | MB Fret Services",
+      "desc": "Orodha ya vitendo ya kuandaa usafirishaji kwenda Pointe‑Noire.",
+      "intro": [
+        "Mchakato uliopangwa vizuri wa maandalizi hupunguza hatari ya ucheleweshaji na migogoro. Zingatia kifungashio cha kiwango cha usafirishaji, ushahidi wa nyaraka na uthabiti wa data."
+      ],
+      "sections": [
+        {
+          "h2": "Kabla ya usafirishaji",
+          "ul": [
+            "Kadiria CBM/uzito",
+            "Chagua FCL au LCL",
+            "Chagua huduma na bandari",
+            "Tayarisha kifungashio cha kiwango cha usafirishaji"
+          ]
+        },
+        {
+          "h3": "Hati",
+          "ul": [
+            "Faktura/packing list",
+            "BL (rasimu), cheti cha asili ikiwa kinahitajika",
+            "Sera ya bima na ushahidi unaohitajika"
+          ]
+        },
+        {
+          "h3": "Bandarini na baada ya kuwasili",
+          "ul": [
+            "Hakikisha tarehe za cut‑off zinazingatiwa na VGM imetumwa kwa wakati",
+            "Ratibu kazi za terminal na usafiri wa hatua ya mwisho",
+            "Kamisha ushuru wa kuingiza na pata uthibitisho wa kupokea mzigo"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni mambo gani ya kuangalia kwanza?",
+          "a": "Faktura/packing list, rasimu ya BL, vyeti vinavyohitajika na maelezo ya mpokeaji."
+        },
+        {
+          "q": "Je, miadi maalum bandarini inahitajika?",
+          "a": "Hutegemea terminal; tunaweza kukusaidia kupanga na kuthibitisha miadi hiyo."
+        },
+        {
+          "q": "Je, bima inahitajika kwa usafirishaji kwenda Kongo?",
+          "a": "Inapendekezwa sana kuwa na bima ya ad valorem; hakikisha unahifadhi vielelezo na picha kwa ajili ya madai yoyote."
+        }
+      ]
+    }
+  },
+  "turkey": {
+    "fcl_lcl": {
+      "h1": "FCL dhidi ya LCL — Ufaransa ↔ Uturuki",
+      "title": "FCL dhidi ya LCL kwenye njia ya Ufaransa ↔ Uturuki — Chagua njia sahihi | MB Fret Services",
+      "desc": "Kulinganisha FCL/LCL kwenye njia ya masafa mafupi/kati ukiwa na chaguo la usafiri wa njia nyingi.",
+      "intro": [
+        "Njia hii ina muda mfupi wa safari na safari nyingi kwa wiki: FCL inafaa sana kwa mizigo ya mara kwa mara na thabiti; LCL na usafiri wa barabara vinafaa kwa usafirishaji wa mara chache au wa kiasi kidogo."
+      ],
+      "sections": [
+        {
+          "h2": "Viwango, gharama na hatari",
+          "ul": [
+            "Linganisha FCL na LCL kwa kuzingatia gharama ya jumla iliyofikishwa na muda wa usafiri",
+            "Tumia suluhu za usafiri wa njia nyingi ili kufikia tarehe muhimu bila kuongeza gharama kupita kiasi"
+          ]
+        },
+        {
+          "h3": "Mifano ya matumizi kwa Uturuki",
+          "ul": [
+            "Muda mfupi wa usafiri: FCL kwa mizigo thabiti; LCL au barabara kwa usafirishaji wa mara moja",
+            "Cross‑trade: mpangilio madhubuti wa nyaraka kwa biashara inayohusisha nchi nyingi"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni ujazo gani unaofaa kubadili kutoka LCL kwenda FCL?",
+          "a": "Kwa kawaida kati ya 13–15 m³ kulingana na mazingira ya biashara, lakini uamuzi pia unategemea muda wa usafiri unaohitajika na marudio ya usafirishaji."
+        },
+        {
+          "q": "Je, suluhu za usafiri wa njia nyingi zinafaa?",
+          "a": "Ndiyo: mchanganyiko wa baharini, barabara na anga husaidia kufikia tarehe za utoaji bila kupandisha gharama kupita kiasi."
+        },
+        {
+          "q": "Je, LCL inafaa kwa kuongeza hisa (replenishment)?",
+          "a": "Inafaa kwa kampeni ndogo au za majaribio; kwa mizigo ya mara kwa mara na ya kiasi kikubwa, FCL ndilo chaguo bora."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Taratibu za forodha — Ufaransa ↔ Uturuki",
+      "title": "Forodha na hati — Ufaransa ↔ Uturuki | MB Fret Services",
+      "desc": "Ubora wa nyaraka na Incoterms sahihi kwa muda mfupi wa usafiri.",
+      "intro": [
+        "Tunadhibiti BL, faktura na packing list; tunapendekeza Incoterms (FOB/CIF/DAP/DDP) kulingana na jinsi unavyotaka kugawanya wajibu. Mpangilio sahihi wa nyaraka na uratibu na bandari hupunguza hatari ya ucheleweshaji."
+      ],
+      "sections": [
+        {
+          "h2": "Hati na Incoterms",
+          "ul": [
+            "BL, faktura, packing list; cheti cha asili ikiwa kinahitajika",
+            "Incoterms: FOB/CIF/DAP/DDP",
+            "Nambari sahihi za HS"
+          ]
+        },
+        {
+          "h3": "Makosa ya kawaida",
+          "ul": [
+            "Hati ambazo haziendani",
+            "Kutojiandaa vizuri kwa tarehe za cut‑off",
+            "Bima ndogo isiyotosha kufidia hatari"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni hati gani zinazohitajika kwa Uturuki?",
+          "a": "Kwa kawaida BL, faktura, packing list na cheti cha asili ikiwa kinahitajika."
+        },
+        {
+          "q": "Ni Incoterms zipi zinapendekezwa?",
+          "a": "FOB/CIF ni za kawaida; DAP/DDP hutumika ikiwa unataka kuuza kwa masharti ya wigo mpana wa wajibu kwa mnunuzi."
+        },
+        {
+          "q": "Ninawezaje kuepuka ucheleweshaji?",
+          "a": "Andaa bandari mbadala kama chaguo, hakikisha ubora wa nyaraka na ujiandae mapema kwa tarehe za cut‑off."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Orodha ya ukaguzi wa hati — Ufaransa ↔ Uturuki",
+      "title": "Orodha ya ukaguzi wa hati — Ufaransa ↔ Uturuki | MB Fret Services",
+      "desc": "Orodha ya kuhifadhi mtiririko wa usafiri wa haraka na unaodhibitiwa.",
+      "intro": [
+        "Angalia CBM/uzito, chagua bandari, hakikisha hati zimekamilika na panga hatua muhimu. Ratibu kazi za terminal na usafirishaji wa hatua ya mwisho."
+      ],
+      "sections": [
+        {
+          "h2": "Kabla ya usafirishaji",
+          "ul": [
+            "Thibitisha CBM/uzito",
+            "Chagua FCL au LCL",
+            "Amua huduma na bandari",
+            "Tayarisha kifungashio cha kiwango cha usafirishaji"
+          ]
+        },
+        {
+          "h3": "Hati",
+          "ul": [
+            "Faktura/packing list",
+            "BL (rasimu) na cheti cha asili ikiwa kinahitajika",
+            "Bima ya ad valorem"
+          ]
+        },
+        {
+          "h3": "Bandarini na baada ya kuwasili",
+          "ul": [
+            "Hakikisha tarehe za cut‑off zinazingatiwa na VGM imetumwa",
+            "Ratibu kazi za terminal na usafiri wa hatua ya mwisho",
+            "Fanyia kazi ushuru wa kuingiza na pata uthibitisho wa kupokea mzigo"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ni mambo gani ya kuangalia kwanza?",
+          "a": "Faktura/packing list, rasimu ya BL, vyeti vinavyohitajika na hatua kuu za ratiba."
+        },
+        {
+          "q": "Je, bima inapaswa kufunika nini?",
+          "a": "Inapendekezwa bima ya ad valorem; hakikisha unahifadhi ushahidi na picha ili kuwezesha madai iwapo kutakuwa na tatizo."
+        }
+      ]
+    }
+  }
+}
