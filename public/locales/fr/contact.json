@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Contact - Devis Gratuit Transport International | MB Fret Services",
+    "description": "Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
+  },
   "hero": {
     "title": "Contactez nos Experts",
     "subtitle": "Besoin d'un devis ou de conseils ? Notre équipe vous répond sous 24h. Parlons de votre projet logistique."
@@ -62,7 +66,10 @@
     "email": "Email",
     "message": "Message",
     "submit": "Envoyer",
-    "gdpr_notice": "Les informations saisies sont utilisées exclusivement pour répondre à votre demande de contact. Aucun démarchage automatique ni revente de vos données."
+    "gdpr_notice": "Les informations saisies sont utilisées exclusivement pour répondre à votre demande de contact. Aucun démarchage automatique ni revente de vos données.",
+    "success": "Merci, nous vous répondrons sous 24h.",
+    "error": "Une erreur est survenue. Merci de réessayer ou de nous contacter directement par email ou téléphone.",
+    "submitting": "Envoi en cours..."
   },
   "cta": {
     "title": "Prêt à démarrer votre projet ?",

@@ -4,11 +4,35 @@ import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
+import { detectLangFromPath } from '../utils/paths';
 
 const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
-  const { t } = useTranslation('contact');
+  const { t } = useTranslation(['contact', 'navbar']);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t(
+    'contact:seo.title',
+    'Contact - Devis Gratuit Transport International | MB Fret Services'
+  );
+  const seoDescription = t(
+    'contact:seo.description',
+    'Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
+  );
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,8 +62,8 @@ const Contact: FC = () => {
   return (
     <div className="pt-16">
       <SEO
-        title="Contact - Devis Gratuit Transport International | MB Fret Services"
-        description="Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
+        title={seoTitle}
+        description={seoDescription}
         jsonLd={[
           {
             '@context': 'https://schema.org',
@@ -48,13 +72,13 @@ const Contact: FC = () => {
               {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'Accueil',
+                name: t('navbar:home', 'Accueil'),
                 item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Contact',
+                name: t('navbar:contact', 'Contact'),
                 item: SITE_URL + '/contact',
               },
             ],
@@ -62,8 +86,8 @@ const Contact: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'ContactPage',
-            name: 'Contact - MB Fret Services',
-            inLanguage: 'fr-FR',
+            name: `${t('navbar:contact', 'Contact')} - MB Fret Services`,
+            inLanguage: langTag,
           },
         ]}
       />

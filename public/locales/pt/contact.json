@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Contacto - Orçamento gratuito de transporte internacional | MB Fret Services",
+    "description": "Contacte a MB Fret Services para um orçamento gratuito. Especialistas em transporte marítimo e aéreo. WhatsApp, email ou telefone. Resposta garantida em 24h."
+  },
   "hero": {
     "title": "Contacte os Nossos Especialistas",
     "subtitle": "Precisa de um orçamento ou de aconselhamento? A nossa equipa responde em 24 horas. Vamos falar do seu projeto logístico."
@@ -38,7 +42,10 @@
     "email": "Email",
     "message": "Mensagem",
     "submit": "Enviar",
-    "gdpr_notice": "As informações fornecidas serão utilizadas apenas para responder ao seu pedido. Não fazemos prospeção automática nem vendemos os seus dados."
+    "gdpr_notice": "As informações fornecidas serão utilizadas apenas para responder ao seu pedido. Não fazemos prospeção automática nem vendemos os seus dados.",
+    "success": "Obrigado, entraremos em contacto consigo no prazo de 24 horas.",
+    "error": "Ocorreu um erro. Tente novamente ou contacte-nos diretamente por email ou telefone.",
+    "submitting": "Envio em curso..."
   },
   "cta": {
     "title": "Pronto para iniciar o seu projeto?",

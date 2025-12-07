@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Contact - Free international transport quote | MB Fret Services",
+    "description": "Contact MB Fret Services for a free quote. Experts in sea and air freight. WhatsApp, email or phone. Reply within 24 hours guaranteed."
+  },
   "hero": {
     "title": "Contact Our Experts",
     "subtitle": "Need a quote or advice? Our team replies within 24 hours. Let's discuss your logistics project."
@@ -38,7 +42,10 @@
     "email": "Email",
     "message": "Message",
     "submit": "Send",
-    "gdpr_notice": "The information you provide will only be used to reply to your enquiry. No automated marketing or resale of your data."
+    "gdpr_notice": "The information you provide will only be used to reply to your enquiry. No automated marketing or resale of your data.",
+    "success": "Thank you, we will get back to you within 24 hours.",
+    "error": "An error occurred. Please try again or contact us directly by email or phone.",
+    "submitting": "Sending..."
   },
   "cta": {
     "title": "Ready to start your project?",
