@@ -136,6 +136,7 @@
     "label_duration": "زمن العبور",
     "label_frequency": "التكرار",
     "label_departure": "الانطلاق من",
+    "label_port": "الميناء:",
     "cta_prefix": "عرض سعر إلى "
   },
   "destinations_list": [
@@ -201,5 +202,14 @@
       "hero_alt": "تأمين على شحن البضائع",
       "services_alt": "مراجعة تغطية تأمين الشحن"
     }
+  },
+  "images": {
+    "hero_alt": "حاويات شحن بحري",
+    "services_alt": "تحميل حاويات شحن بحري"
+  },
+  "service_type": "الشحن البحري",
+  "whatsapp": {
+    "hero_quote_africa": "مرحباً، أود الحصول على عرض سعر للشحن البحري إلى أفريقيا",
+    "final_quote": "مرحباً، أود الحصول على عرض سعر للشحن البحري"
   }
 }

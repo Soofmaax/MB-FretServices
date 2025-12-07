@@ -1,5 +1,8 @@
 {
   "labels": {
+    "home": "Accueil",
+    "services": "Services",
+    "route_root": "Fret maritime",
     "back_to_route": "Retour à la page route",
     "faq": "FAQ",
     "cta_quote": "Demander un devis",

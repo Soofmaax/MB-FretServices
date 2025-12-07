@@ -145,6 +145,7 @@
     "label_duration": "Durée transit",
     "label_frequency": "Fréquence",
     "label_departure": "Départ depuis",
+    "label_port": "Port :",
     "cta_prefix": "Devis vers "
   },
   "destinations_list": [
@@ -210,5 +211,14 @@
       "hero_alt": "Assurance cargo transport",
       "services_alt": "Analyse des garanties d'assurance cargo"
     }
+  },
+  "images": {
+    "hero_alt": "Conteneurs de fret maritime",
+    "services_alt": "Chargement de conteneurs de fret maritime"
+  },
+  "service_type": "Fret maritime",
+  "whatsapp": {
+    "hero_quote_africa": "Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique",
+    "final_quote": "Bonjour, je souhaite un devis pour du fret maritime"
   }
 }

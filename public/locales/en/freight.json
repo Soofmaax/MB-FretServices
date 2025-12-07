@@ -136,6 +136,7 @@
     "label_duration": "Transit time",
     "label_frequency": "Frequency",
     "label_departure": "Departure from",
+    "label_port": "Port:",
     "cta_prefix": "Quote to "
   },
   "destinations_list": [
@@ -201,5 +202,14 @@
       "hero_alt": "Cargo insurance for transport",
       "services_alt": "Reviewing cargo insurance coverage"
     }
+  },
+  "images": {
+    "hero_alt": "Sea freight containers",
+    "services_alt": "Loading of sea freight containers"
+  },
+  "service_type": "Sea freight",
+  "whatsapp": {
+    "hero_quote_africa": "Hello, I would like a quote for sea freight to Africa",
+    "final_quote": "Hello, I would like a quote for sea freight"
   }
 }

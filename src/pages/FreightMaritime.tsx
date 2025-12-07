@@ -5,15 +5,45 @@ import SEO from '../components/SEO';
 import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
+import { detectLangFromPath, pathForLang } from '../utils/paths';
 
-type Advantage = { icon: ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>; title: string; description: string };
+type Advantage = {
+  icon: ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>;
+  title: string;
+  description: string;
+};
 type Destination = { country: string; port: string; duration: string; frequency: string; departure: string };
 
 const FreightMaritime: FC = () => {
   const SITE_URL = getSiteUrl();
-  const { t } = useTranslation('freight');
+  const { t } = useTranslation(['freight', 'navbar']);
+  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
 
-  const advData = (t('advantages', { returnObjects: true }) as Array<{ title: string; description: string }>);
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t(
+    'freight:seo.title',
+    "Sea Freight to Africa - FCL LCL Container Transport | MB Fret Services"
+  );
+  const seoDescription = t(
+    'freight:seo.description',
+    "Professional sea freight to Africa: Congo, Angola, Côte d'Ivoire. 20' and 40' containers, FCL and LCL. Free quote within 24h. 15 years of expertise."
+  );
+
+  const advData = t('freight:advantages', {
+    returnObjects: true,
+  }) as Array<{ title: string; description: string }>;
 
   const advantages: Advantage[] = [
     { icon: Ship, title: advData[0]?.title || '', description: advData[0]?.description || '' },
@@ -21,31 +51,58 @@ const FreightMaritime: FC = () => {
     { icon: Shield, title: advData[2]?.title || '', description: advData[2]?.description || '' },
   ];
 
-  const destinations = t('destinations_list', { returnObjects: true }) as Destination[];
+  const destinations = t('freight:destinations_list', { returnObjects: true }) as Destination[];
 
-  const services = t('services.list', { returnObjects: true }) as string[];
+  const services = t('freight:services.list', { returnObjects: true }) as string[];
+
+  const faqData = t('freight:faq', {
+    returnObjects: true,
+  }) as {
+    title?: string;
+    q1?: string;
+    a1?: string;
+    q2?: string;
+    a2?: string;
+    q3?: string;
+    a3?: string;
+  };
 
   return (
     <div className="pt-16">
       <SEO
-        title={t('seo.title')}
-        description={t('seo.description')}
+        title={seoTitle}
+        description={seoDescription}
         ogImage="/og-default.webp"
         jsonLd={[
           {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL + '/' },
-              { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + '/services' },
-              { '@type': 'ListItem', position: 3, name: 'Fret maritime', item: SITE_URL + '/services/fret-maritime' },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: t('navbar:home', 'Home'),
+                item: SITE_URL + '/',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: t('navbar:services', 'Services'),
+                item: SITE_URL + pathForLang('services', lang),
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: t('freight:hero.title', 'Sea Freight to Africa'),
+                item: SITE_URL + pathForLang('services_freight_maritime', lang),
+              },
             ],
           },
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: "Fret maritime vers l'Afrique (FCL & LCL)",
-            serviceType: 'Fret maritime',
+            name: t('freight:hero.title', 'Sea Freight to Africa'),
+            serviceType: t('freight:service_type', 'Sea freight'),
             provider: {
               '@type': 'Organization',
               name: 'MB Fret Services',
@@ -54,55 +111,46 @@ const FreightMaritime: FC = () => {
             areaServed: [
               { '@type': 'Country', name: 'Congo' },
               { '@type': 'Country', name: 'Angola' },
-              { '@type': 'Country', name: "Côte d'Ivoire" },
-              { '@type': 'Country', name: 'Cameroun' },
+              { '@type': 'Country', name: 'Ivory Coast' },
+              { '@type': 'Country', name: 'Cameroon' },
             ],
             availableChannel: {
               '@type': 'ServiceChannel',
-              serviceLocation: { '@type': 'Place', name: 'France et Europe' },
+              serviceLocation: { '@type': 'Place', name: 'France and Europe' },
             },
           },
           {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Quelle est la différence entre FCL et LCL ?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. " +
-                    "LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, idéal pour les petits volumes.",
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Quels documents sont nécessaires pour le fret maritime ?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    "Facture commerciale, liste de colisage, connaissement maritime (Bill of Lading), certificat d'origine si requis, " +
-                    'et documents spécifiques selon la nature des marchandises (certificats sanitaires, etc.).',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Comment suivre mon conteneur en transit ?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    'Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, ' +
-                    "de l'embarquement au port de départ jusqu'à l'arrivée au port de destination.",
-                },
-              },
-            ],
+              faqData?.q1 && faqData?.a1
+                ? {
+                    '@type': 'Question',
+                    name: faqData.q1,
+                    acceptedAnswer: { '@type': 'Answer', text: faqData.a1 },
+                  }
+                : null,
+              faqData?.q2 && faqData?.a2
+                ? {
+                    '@type': 'Question',
+                    name: faqData.q2,
+                    acceptedAnswer: { '@type': 'Answer', text: faqData.a2 },
+                  }
+                : null,
+              faqData?.q3 && faqData?.a3
+                ? {
+                    '@type': 'Question',
+                    name: faqData.q3,
+                    acceptedAnswer: { '@type': 'Answer', text: faqData.a3 },
+                  }
+                : null,
+            ].filter(Boolean),
           },
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: "Fret Maritime vers l'Afrique",
-            inLanguage: 'fr-FR',
+            name: `${t('freight:hero.title', 'Sea Freight to Africa')} - MB Fret Services`,
+            inLanguage: langTag,
           },
         ]}
       />
@@ -115,7 +163,7 @@ const FreightMaritime: FC = () => {
             src="/images/hero-maritime.jpg"
             webpSrc="/images/hero-maritime.webp"
             avifSrc="/images/hero-maritime.avif"
-            alt="Conteneurs de fret maritime"
+            alt={t('freight:images.hero_alt', 'Sea freight containers')}
             width={1600}
             height={900}
             priority
@@ -131,29 +179,34 @@ const FreightMaritime: FC = () => {
               <Ship size={48} className="text-accent-400 mr-4" aria-hidden="true" />
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  {t('hero.title')}
+                  {t('freight:hero.title')}
                 </h1>
                 <p className="text-xl md:text-2xl text-accent-400 font-medium">
-                  {t('hero.subtitle')}
+                  {t('freight:hero.subtitle')}
                 </p>
               </div>
             </div>
 
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl leading-relaxed">
-              {t('hero.intro')}
+              {t('freight:hero.intro')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
-                {t('hero.cta_quote')}
+                {t('freight:hero.cta_quote')}
               </CtaButton>
               <a
-                href={`https://wa.me/33749235539?text=${encodeURIComponent("Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique")}`}
+                href={`https://wa.me/33749235539?text=${encodeURIComponent(
+                  t(
+                    'freight:whatsapp.hero_quote_africa',
+                    'Hello, I would like a quote for sea freight to Africa'
+                  )
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition-all duration-200"
               >
-                {t('hero.cta_whatsapp')}
+                {t('freight:hero.cta_whatsapp')}
               </a>
             </div>
           </div>
@@ -195,10 +248,10 @@ const FreightMaritime: FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
-                {t('services.title')}
+                {t('freight:services.title')}
               </h2>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                {t('services.subtitle')}
+                {t('freight:services.subtitle')}
               </p>
 
               <div className="space-y-4">
@@ -212,7 +265,7 @@ const FreightMaritime: FC = () => {
 
               <div className="mt-8">
                 <CtaButton href="contact" variant="primary">
-                  {t('services.cta')}
+                  {t('freight:services.cta')}
                 </CtaButton>
               </div>
             </div>
@@ -220,7 +273,7 @@ const FreightMaritime: FC = () => {
             <div className="relative">
               <ResponsiveImage
                 src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Conteneurs de fret maritime"
+                alt={t('freight:images.services_alt', 'Loading of sea freight containers')}
                 width={800}
                 height={533}
                 className="w-full h-96 object-cover rounded-xl shadow-xl"
@@ -237,10 +290,10 @@ const FreightMaritime: FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-              {t('destinations.title')}
+              {t('freight:destinations.title')}
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              {t('destinations.subtitle')}
+              {t('freight:destinations.subtitle')}
             </p>
           </div>
 
@@ -254,28 +307,37 @@ const FreightMaritime: FC = () => {
                   <MapPin size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                   <div>
                     <h3 className="text-2xl font-bold text-primary-900">{destination.country}</h3>
-                    <p className="text-gray-700">Port : {destination.port}</p>
+                    <p className="text-gray-700">
+                      {t('freight:destinations.label_port', 'Port:')} {destination.port}
+                    </p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div>
-                    <span className="text-sm text-gray-500">{t('destinations.label_duration')}</span>
+                    <span className="text-sm text-gray-500">
+                      {t('freight:destinations.label_duration')}
+                    </span>
                     <p className="font-semibold text-primary-900">{destination.duration}</p>
                   </div>
                   <div>
-                    <span className="text-sm text-gray-500">{t('destinations.label_frequency')}</span>
+                    <span className="text-sm text-gray-500">
+                      {t('freight:destinations.label_frequency')}
+                    </span>
                     <p className="font-semibold text-primary-900">{destination.frequency}</p>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <span className="text-sm text-gray-500">{t('destinations.label_departure')}</span>
+                  <span className="text-sm text-gray-500">
+                    {t('freight:destinations.label_departure')}
+                  </span>
                   <p className="font-semibold text-primary-900">{destination.departure}</p>
                 </div>
 
                 <CtaButton href="contact" variant="outline" className="w-full">
-                  {t('destinations.cta_prefix')}{destination.country}
+                  {t('freight:destinations.cta_prefix')}
+                  {destination.country}
                 </CtaButton>
               </div>
             ))}
@@ -288,35 +350,35 @@ const FreightMaritime: FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-              {t('faq.title')}
+              {t('freight:faq.title')}
             </h2>
           </div>
 
           <div className="space-y-8">
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-4">
-                {t('faq.q1')}
+                {faqData?.q1}
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                {t('faq.a1')}
+                {faqData?.a1}
               </p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-4">
-                {t('faq.q2')}
+                {faqData?.q2}
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                {t('faq.a2')}
+                {faqData?.a2}
               </p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="text-xl font-bold text-primary-900 mb-4">
-                {t('faq.q3')}
+                {faqData?.q3}
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                {t('faq.a3')}
+                {faqData?.a3}
               </p>
             </div>
           </div>
@@ -327,24 +389,29 @@ const FreightMaritime: FC = () => {
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary-900 to-primary-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {t('final.title')}
+            {t('freight:final.title')}
           </h2>
           <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-            {t('final.text')}
+            {t('freight:final.text')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
-              {t('final.cta')}
+              {t('freight:final.cta')}
             </CtaButton>
             <a
-              href={`https://wa.me/33749235539?text=${encodeURIComponent('Bonjour, je souhaite un devis pour du fret maritime')}`}
+              href={`https://wa.me/33749235539?text=${encodeURIComponent(
+                t(
+                  'freight:whatsapp.final_quote',
+                  'Hello, I would like a quote for sea freight'
+                )
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white transition-all duration-200"
             >
               <ArrowRight size={20} className="mr-2" aria-hidden="true" />
-              {t('final.whatsapp')}
+              {t('freight:final.whatsapp')}
             </a>
           </div>
         </div>

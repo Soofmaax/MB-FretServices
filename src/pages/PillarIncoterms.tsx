@@ -8,15 +8,50 @@ import { useTranslation } from 'react-i18next';
 const PillarIncoterms: FC = () => {
   const SITE_URL = getSiteUrl();
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
-  const { t } = useTranslation(['pillar_incoterms']);
+  const { t } = useTranslation(['pillar_incoterms', 'navbar']);
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t(
+    'pillar_incoterms:title',
+    'Incoterms 2020 — Complete guide (FOB, CIF…) | MB Fret Services'
+  );
+  const seoDescription = t(
+    'pillar_incoterms:description',
+    'Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks, and practical cases on China/Turkey/Congo routes.'
+  );
 
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Ressources', item: SITE_URL + (lang === 'fr' ? '/fr/documentation/incoterms-2020' : pathForLang('pillar_incoterms', lang)) },
-      { '@type': 'ListItem', position: 3, name: 'Incoterms 2020' },
+      { '@type': 'ListItem', position: 1, name: t('navbar:home', 'Home'), item: SITE_URL + '/' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: t('navbar:resources', 'Resources'),
+        item:
+          SITE_URL +
+          (lang === 'fr'
+            ? '/fr/documentation/incoterms-2020'
+            : pathForLang('pillar_incoterms', lang)),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: t('pillar_incoterms:breadcrumb_label', 'Incoterms 2020'),
+      },
     ],
   };
 
@@ -26,13 +61,18 @@ const PillarIncoterms: FC = () => {
     headline: t('pillar_incoterms:hero_h1'),
     author: { '@type': 'Organization', name: 'MB Fret Services' },
     publisher: { '@type': 'Organization', name: 'MB Fret Services' },
+    inLanguage: langTag,
     mainEntityOfPage: SITE_URL + pathForLang('pillar_incoterms', lang),
   };
+
+  const faqArray = t('pillar_incoterms:faq', {
+    returnObjects: true,
+  }) as Array<{ q: string; a: string }>;
 
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: (t('pillar_incoterms:faq', { returnObjects: true }) as Array<{ q: string; a: string }>).map((qa) => ({
+    mainEntity: faqArray.map((qa) => ({
       '@type': 'Question',
       name: qa.q,
       acceptedAnswer: { '@type': 'Answer', text: qa.a },
@@ -43,11 +83,7 @@ const PillarIncoterms: FC = () => {
 
   return (
     <div className="pt-16">
-      <SEO
-        title={t('pillar_incoterms:title')}
-        description={t('pillar_incoterms:description')}
-        jsonLd={[breadcrumb, articleLd, faqLd]}
-      />
+      <SEO title={seoTitle} description={seoDescription} jsonLd={[breadcrumb, articleLd, faqLd]} />
 
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,21 +136,40 @@ const PillarIncoterms: FC = () => {
 
         <div className="not-prose bg-blue-50 border-l-4 border-accent-500 p-4 rounded my-8">
           <p className="text-sm">
-            Guides associés:&nbsp;
+            {t('pillar_incoterms:links_block.guides_label', 'Related guides:')}&nbsp;
             <LocalizedLink to="guides/fcl-vs-lcl" className="text-accent-700 underline">
-              FCL vs LCL — comment décider ?
+              {t(
+                'pillar_incoterms:links_block.fcl_guide_label',
+                'FCL vs LCL — how to decide?'
+              )}
             </LocalizedLink>
-            &nbsp;| Pages routes:&nbsp;
-            <LocalizedLink to="services/fret-maritime/france-chine" className="text-accent-700 underline">{t('pillar_incoterms:hero_links.china')}</LocalizedLink>
+            &nbsp;| {t('pillar_incoterms:links_block.routes_label', 'Route pages:')}&nbsp;
+            <LocalizedLink
+              to="services/fret-maritime/france-chine"
+              className="text-accent-700 underline"
+            >
+              {t('pillar_incoterms:hero_links.china')}
+            </LocalizedLink>
             ,&nbsp;
-            <LocalizedLink to="services/fret-maritime/france-turquie" className="text-accent-700 underline">{t('pillar_incoterms:hero_links.turkey')}</LocalizedLink>
+            <LocalizedLink
+              to="services/fret-maritime/france-turquie"
+              className="text-accent-700 underline"
+            >
+              {t('pillar_incoterms:hero_links.turkey')}
+            </LocalizedLink>
             ,&nbsp;
-            <LocalizedLink to="services/fret-maritime/france-congo" className="text-accent-700 underline">{t('pillar_incoterms:hero_links.congo')}</LocalizedLink>.
+            <LocalizedLink
+              to="services/fret-maritime/france-congo"
+              className="text-accent-700 underline"
+            >
+              {t('pillar_incoterms:hero_links.congo')}
+            </LocalizedLink>
+            .
           </p>
         </div>
 
-        <h2>FAQ</h2>
-        {(t('pillar_incoterms:faq', { returnObjects: true }) as Array<{ q: string; a: string }>).map((qa, i) => (
+        <h2>{t('pillar_incoterms:faq_title', 'FAQ')}</h2>
+        {faqArray.map((qa, i) => (
           <details key={`faq-${i}`}>
             <summary>{qa.q}</summary>
             <p>{qa.a}</p>

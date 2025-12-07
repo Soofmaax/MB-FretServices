@@ -136,6 +136,7 @@
     "label_duration": "Tempo de trânsito",
     "label_frequency": "Frequência",
     "label_departure": "Partida de",
+    "label_port": "Porto:",
     "cta_prefix": "Orçamento para "
   },
   "destinations_list": [
@@ -201,5 +202,14 @@
       "hero_alt": "Seguro de carga para transporte",
       "services_alt": "Análise das garantias de seguro de carga"
     }
+  },
+  "images": {
+    "hero_alt": "Contentores de transporte marítimo",
+    "services_alt": "Carregamento de contentores de transporte marítimo"
+  },
+  "service_type": "Transporte marítimo",
+  "whatsapp": {
+    "hero_quote_africa": "Olá, gostaria de um orçamento para transporte marítimo para África",
+    "final_quote": "Olá, gostaria de um orçamento para transporte marítimo"
   }
 }
