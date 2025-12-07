@@ -26,30 +26,50 @@ const AirFreight: FC = () => {
   };
   const langTag = langTagMap[lang] || 'fr-FR';
 
-  const airSeoTitle = t('freight:air.seo.title', 'Fret aérien — Rapide et sécurisé | MB Fret Services');
+  const airSeoTitle = t(
+    'freight:air.seo.title',
+    'Air freight — Fast and secure | MB Fret Services'
+  );
   const airSeoDescription = t(
     'freight:air.seo.description',
-    'Solutions de fret aérien B2B: express, sécurisé, traçable. Europe ↔ Afrique/Asie. Porte-à-porte, assurance cargo, conformité IATA.'
+    'B2B air freight solutions: express, secure, traceable. Europe ↔ Africa/Asia. Door-to-door, cargo insurance, IATA compliance.'
   );
 
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: t('navbar:home', 'Accueil'), item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: t('navbar:services', 'Services'), item: SITE_URL + pathForLang('services', lang) },
-      { '@type': 'ListItem', position: 3, name: t('freight:air.breadcrumb_service_name', 'Fret aérien'), item: SITE_URL + pathForLang('services_air_freight', lang) },
+      { '@type': 'ListItem', position: 1, name: t('navbar:home', 'Home'), item: SITE_URL + '/' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: t('navbar:services', 'Services'),
+        item: SITE_URL + pathForLang('services', lang),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: t('freight:air.breadcrumb_service_name', 'Air freight'),
+        item: SITE_URL + pathForLang('services_air_freight', lang),
+      },
     ],
   };
 
   const serviceLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: t('freight:air.service_name', 'Fret aérien B2B – Express et sécurisé'),
-    serviceType: t('freight:air.service_type', 'Fret aérien'),
+    name: t('freight:air.service_name', 'B2B Air Freight – Express and secure'),
+    serviceType: t('freight:air.service_type', 'Air freight'),
     provider: { '@type': 'Organization', name: 'MB Fret Services', url: SITE_URL },
-    areaServed: [{ '@type': 'Place', name: 'Europe' }, { '@type': 'Place', name: 'Afrique' }, { '@type': 'Place', name: 'Asie' }],
-    availableChannel: { '@type': 'ServiceChannel', servicePhone: { '@type': 'ContactPoint', telephone: '+33 7 49 23 55 39' } },
+    areaServed: [
+      { '@type': 'Place', name: 'Europe' },
+      { '@type': 'Place', name: 'Africa' },
+      { '@type': 'Place', name: 'Asia' },
+    ],
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      servicePhone: { '@type': 'ContactPoint', telephone: '+33 7 49 23 55 39' },
+    },
   };
 
   const faqEntities = (t('freight:air.faq', { returnObjects: true }) as Array<{ q: string; a: string }>) || [];
@@ -79,7 +99,7 @@ const AirFreight: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: `${t('freight:air.hero.title', 'Fret aérien')} - MB Fret Services`,
+            name: `${t('freight:air.hero.title', 'Air freight')} - MB Fret Services`,
             inLanguage: langTag,
           },
         ]}
@@ -101,7 +121,7 @@ const AirFreight: FC = () => {
             src="/images/hero-air.jpg"
             webpSrc="/images/hero-air.webp"
             avifSrc="/images/hero-air.avif"
-            alt={t('freight:air.images.hero_alt', 'Avion cargo fret aérien')}
+            alt={t('freight:air.images.hero_alt', 'Air cargo aircraft')}
             width={1600}
             height={900}
             priority
@@ -115,22 +135,22 @@ const AirFreight: FC = () => {
             <Plane size={48} className="text-accent-400 mr-4" aria-hidden="true" />
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                {t('freight:air.hero.title', 'Fret aérien')}
+                {t('freight:air.hero.title', 'Air freight')}
               </h1>
               <p className="text-xl md:text-2xl text-accent-300 font-medium">
-                {t('freight:air.hero.subtitle', 'Priorité, fiabilité, sécurité.')}
+                {t('freight:air.hero.subtitle', 'Priority, reliability, security.')}
               </p>
             </div>
           </div>
           <p className="text-xl md:text-2xl text-gray-200 max-w-4xl leading-relaxed">
             {t(
               'freight:air.hero.intro',
-              'Une solution rapide et sûre pour vos expéditions urgentes, sensibles ou à forte valeur. Nous pilotons la chaîne de bout en bout avec un suivi temps réel.'
+              'A fast and secure solution for urgent, sensitive or high-value shipments. We manage the entire chain end-to-end with real-time tracking.'
             )}
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
-              {t('freight:air.hero.cta_quote', 'Demander un devis')}
+              {t('freight:air.hero.cta_quote', 'Request a quote')}
             </CtaButton>
             <a
               href="https://wa.me/33749235539"
@@ -174,7 +194,7 @@ const AirFreight: FC = () => {
             <p className="text-lg text-gray-700 mb-6">
               {t(
                 'freight:air.services.intro',
-                'Nous opérons sur principaux hubs (CDG, AMS, FRA, IST…) avec options express, consolidation et assurance ad valorem.'
+                'We operate on major hubs (CDG, AMS, FRA, IST…) with express options, consolidation and ad valorem insurance.'
               )}
             </p>
             <div className="space-y-3">
@@ -187,14 +207,14 @@ const AirFreight: FC = () => {
             </div>
             <div className="mt-6">
               <CtaButton href="contact" variant="primary">
-                {t('freight:air.services.cta', 'Obtenir un devis')}
+                {t('freight:air.services.cta', 'Get a quote')}
               </CtaButton>
             </div>
           </div>
           <div className="relative">
             <ResponsiveImage
               src="https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt={t('freight:air.images.services_alt', 'Chargement aérien')}
+              alt={t('freight:air.images.services_alt', 'Air freight loading')}
               width={800}
               height={533}
               className="w-full h-96 object-cover rounded-xl shadow-xl"

@@ -24,11 +24,11 @@ const Services: FC = () => {
 
   const seoTitle = t(
     'services:seo.title',
-    'Nos Services - Fret Maritime, Aérien et Dédouanement | MB Fret Services'
+    'Our services - Sea freight, air freight and customs | MB Fret Services'
   );
   const seoDescription = t(
     'services:seo.description',
-    "Découvrez nos services de transport international : fret maritime vers l'Afrique, fret aérien express, dédouanement professionnel et assurance cargo."
+    'Discover our international transport services: sea freight to Africa, express air freight, professional customs clearance and cargo insurance.'
   );
 
   const langTagMap: Record<string, string> = {
@@ -74,35 +74,35 @@ const Services: FC = () => {
             itemListElement: [
               {
                 '@type': 'Service',
-                name: t('services:maritime.title', 'Fret Maritime'),
+                name: t('services:maritime.title', 'Sea Freight'),
                 description: t(
                   'services:maritime.description',
-                  "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux vers l'Afrique et l'Asie. Nous gérons tous types de marchandises avec un suivi complet."
+                  'Our sea freight expertise lets us offer optimal solutions for large shipments to Africa and Asia. We handle all types of cargo with full tracking.'
                 ),
                 url: siteUrl + pathForLang('services_freight_maritime', lang),
               },
               {
                 '@type': 'Service',
-                name: t('services:air.title', 'Fret Aérien'),
+                name: t('services:air.title', 'Air Freight'),
                 description: t(
                   'services:air.description',
-                  'Le transport aérien est idéal pour vos marchandises de haute valeur, périssables ou urgentes. Notre réseau de partenaires garantit des délais serrés vers toutes destinations.'
+                  'Air transport is ideal for high-value, perishable or urgent goods. Our partner network ensures tight lead times to all destinations.'
                 ),
               },
               {
                 '@type': 'Service',
-                name: t('services:customs.title', 'Dédouanement'),
+                name: t('services:customs.title', 'Customs Clearance'),
                 description: t(
                   'services:customs.description',
-                  'Notre équipe de déclarants en douane agréés vous accompagne dans toutes les formalités administratives. Nous garantissons la conformité réglementaire de vos opérations.'
+                  'Our licensed customs brokers support you with all administrative formalities. We ensure regulatory compliance for your operations.'
                 ),
               },
               {
                 '@type': 'Service',
-                name: t('services:insurance.title', 'Assurance Cargo'),
+                name: t('services:insurance.title', 'Cargo Insurance'),
                 description: t(
                   'services:insurance.description',
-                  "Protégez vos investissements avec nos solutions d'assurance adaptées à chaque type de transport. Couverture complète de l'enlèvement à la livraison finale."
+                  'Protect your investment with insurance solutions adapted to each transport mode. Full coverage from pickup to final delivery.'
                 ),
               },
             ],
@@ -187,33 +187,40 @@ const Services: FC = () => {
                       </div>
                     )}
                     {def.key === 'air' && (
-                      <div className="mb-6">
-                        <LocalizedLink to="services/fret-aerien" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
-                          {t('air.more_link', 'Découvrir le fret aérien')}
-                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                        </LocalizedLink>
-                      </div>
+                     <<div className="mb-6">
+                       <<LocalizedLink
+                          to="services/fret-aerien"
+                          className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
+                        >
+                          {t('air.more_link', 'Discover air freight')}
+                         < ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                      </  LocalizedLink>
+                    </&&div>
                     )}
                     {def.key === 'customs' && (
-                      <div className="mb-6">
-                        <LocalizedLink to="services/dedouanement" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
-                          {t('customs.more_link', 'En savoir plus')}
-                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                        </LocalizedLink>
-                      </div>
+                     <sdiv className="mb-6">
+                       <nLocalizedLink
+                          to="services/dedouanement"
+                          className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
+                        >
+                          {t('customs.more_link', 'Learn more')}
+                         < ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                      </clLocalizedLink>
+                    </  div>
                     )}
                     {def.key === 'insurance' && (
-                      <div className="mb-6">
-                        <LocalizedLink to="services/assurance-cargo" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
-                          {t('insurance.more_link', 'Assurer vos envois')}
-                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                        </LocalizedLink>
-                      </div>
+                     <vdiv className="mb-6">
+                       < LocalizedLink
+                          to="services/assurance-cargo"
+                          className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
+                        >
+                          {t('insurance.more_link', 'Insure your shipments')}
+                         < ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                      </  LocalizedLink>
+                    </  div>
                     )}
 
-                    <CtaButton href="contact" variant="primary">
-                      {t('common:get_quote')}
-                    </CtaButton>
+                   < CtaButton href="contact" variant/CtaButton>
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
@@ -248,7 +255,7 @@ const Services: FC = () => {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
-            {t('services:routesSection.title', 'Routes phares')}
+            {t('services:routesSection.title', 'Key routes')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -259,9 +266,9 @@ const Services: FC = () => {
               const title = t(`services:routesSection.cards.${r.key}.title`);
               const teaser = t(
                 `services:routesSection.cards.${r.key}.teaser`,
-                'FCL/LCL, ports majeurs, délais optimisés, suivi 24/7.'
+                'FCL/LCL, major ports, optimized transit times, 24/7 tracking.'
               );
-              const discover = t('services:routesSection.discover', 'Découvrir');
+              const discover = t('services:routesSection.discover', 'Discover');
 
               return (
                 <div
@@ -303,7 +310,7 @@ const Services: FC = () => {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
-            {t('services:guidesSection.title', 'Guides & Ressources')}
+            {t('services:guidesSection.title', 'Guides & Resources')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
@@ -312,7 +319,7 @@ const Services: FC = () => {
             ].map((g, i) => {
               const title = t(`services:guidesSection.${g.key}.title`);
               const desc = t(`services:guidesSection.${g.key}.desc`);
-              const read = t('services:guidesSection.read', 'Lire le guide');
+              const read = t('services:guidesSection.read', 'Read the guide');
 
               return (
                 <LocalizedLink

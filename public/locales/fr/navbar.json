@@ -4,5 +4,13 @@
   "destinations": "Destinations",
   "contact": "Contact",
   "guides": "Guides",
-  "resources": "Ressources"
+  "resources": "Ressources",
+  "routes": "Routes",
+  "route_france_china": "France ↔ Chine",
+  "route_france_congo": "France ↔ Congo",
+  "route_france_turkey": "France ↔ Turquie",
+  "lang_label": "Langue",
+  "lang_aria": "Changer de langue",
+  "menu_open": "Ouvrir le menu",
+  "menu_close": "Fermer le menu"
 }

@@ -4,5 +4,13 @@
   "destinations": "الوجهات",
   "contact": "اتصل بنا",
   "guides": "أدلة",
-  "resources": "الموارد"
+  "resources": "الموارد",
+  "routes": "الخطوط",
+  "route_france_china": "فرنسا ↔ الصين",
+  "route_france_congo": "فرنسا ↔ الكونغو",
+  "route_france_turkey": "فرنسا ↔ تركيا",
+  "lang_label": "اللغة",
+  "lang_aria": "تغيير اللغة",
+  "menu_open": "فتح القائمة",
+  "menu_close": "إغلاق القائمة"
 }

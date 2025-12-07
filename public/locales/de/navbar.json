@@ -2,5 +2,15 @@
   "home": "Startseite",
   "services": "Leistungen",
   "destinations": "Ziele",
-  "contact": "Kontakt"
+  "contact": "Kontakt",
+  "guides": "Guides",
+  "resources": "Ressourcen",
+  "routes": "Routen",
+  "route_france_china": "Frankreich ↔ China",
+  "route_france_congo": "Frankreich ↔ Kongo",
+  "route_france_turkey": "Frankreich ↔ Türkei",
+  "lang_label": "Sprache",
+  "lang_aria": "Sprache ändern",
+  "menu_open": "Menü öffnen",
+  "menu_close": "Menü schließen"
 }

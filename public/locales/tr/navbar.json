@@ -2,5 +2,15 @@
   "home": "Ana Sayfa",
   "services": "Hizmetler",
   "destinations": "Destinasyonlar",
-  "contact": "İletişim"
+  "contact": "İletişim",
+  "guides": "Rehberler",
+  "resources": "Kaynaklar",
+  "routes": "Rotalar",
+  "route_france_china": "Fransa ↔ Çin",
+  "route_france_congo": "Fransa ↔ Kongo",
+  "route_france_turkey": "Fransa ↔ Türkiye",
+  "lang_label": "Dil",
+  "lang_aria": "Dili değiştir",
+  "menu_open": "Menüyü aç",
+  "menu_close": "Menüyü kapat"
 }

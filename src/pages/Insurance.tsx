@@ -28,18 +28,18 @@ const Insurance: FC = () => {
 
   const seoTitle = t(
     'freight:insurance.seo.title',
-    'Assurance cargo — Couverture ad valorem | MB Fret Services'
+    'Cargo insurance — Ad valorem coverage | MB Fret Services'
   );
   const seoDescription = t(
     'freight:insurance.seo.description',
-    'Assurance transport pour fret maritime/aérien: couverture ad valorem, gestion des sinistres, conseils packaging export. Porte-à-porte.'
+    'Transport insurance for sea/air freight: ad valorem coverage, claims handling, export packaging advice. Door-to-door.'
   );
 
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: t('navbar:home', 'Accueil'), item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 1, name: t('navbar:home', 'Home'), item: SITE_URL + '/' },
       {
         '@type': 'ListItem',
         position: 2,
@@ -49,7 +49,7 @@ const Insurance: FC = () => {
       {
         '@type': 'ListItem',
         position: 3,
-        name: t('freight:insurance.breadcrumb_service_name', 'Assurance cargo'),
+        name: t('freight:insurance.breadcrumb_service_name', 'Cargo insurance'),
         item: SITE_URL + pathForLang('services_insurance', lang),
       },
     ],
@@ -58,13 +58,13 @@ const Insurance: FC = () => {
   const serviceLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: t('freight:insurance.service_name', 'Assurance cargo – couverture ad valorem'),
-    serviceType: t('freight:insurance.service_type', 'Assurance transport'),
+    name: t('freight:insurance.service_name', 'Cargo insurance – ad valorem coverage'),
+    serviceType: t('freight:insurance.service_type', 'Transport insurance'),
     provider: { '@type': 'Organization', name: 'MB Fret Services', url: SITE_URL },
     areaServed: [
       { '@type': 'Place', name: 'Europe' },
-      { '@type': 'Place', name: 'Afrique' },
-      { '@type': 'Place', name: 'Asie' },
+      { '@type': 'Place', name: 'Africa' },
+      { '@type': 'Place', name: 'Asia' },
     ],
   };
 
@@ -94,7 +94,7 @@ const Insurance: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: `${t('freight:insurance.hero.title', 'Assurance cargo')} - MB Fret Services`,
+            name: `${t('freight:insurance.hero.title', 'Cargo insurance')} - MB Fret Services`,
             inLanguage: langTag,
           },
         ]}
@@ -135,12 +135,12 @@ const Insurance: FC = () => {
           <p className="text-xl text-gray-100">
             {t(
               'freight:insurance.hero.subtitle',
-              'Protégez votre supply chain et votre trésorerie grâce à une couverture adaptée à vos flux B2B.'
+              'Protect your supply chain and cash flow with coverage adapted to your B2B flows.'
             )}
           </p>
           <div className="mt-6">
             <CtaButton href="contact" variant="primary">
-              {t('freight:insurance.hero.cta_quote', 'Demander une couverture')}
+              {t('freight:insurance.hero.cta_quote', 'Request coverage')}
             </CtaButton>
           </div>
         </div>
@@ -149,7 +149,7 @@ const Insurance: FC = () => {
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-primary-900 mb-6">
-            {t('freight:insurance.services.title', 'Bénéfices')}
+            {t('freight:insurance.services.title', 'Benefits')}
           </h2>
           <div className="space-y-3">
             {benefits.map((b) => (
@@ -161,10 +161,10 @@ const Insurance: FC = () => {
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
             <CtaButton href="contact" variant="primary">
-              {t('freight:insurance.services.cta_quote', 'Demander une couverture')}
+              {t('freight:insurance.services.cta_quote', 'Request coverage')}
             </CtaButton>
             <CtaButton href="contact" variant="secondary">
-              {t('freight:insurance.services.cta_quote_secondary', 'Obtenir un devis')}
+              {t('freight:insurance.services.cta_quote_secondary', 'Get a quote')}
             </CtaButton>
           </div>
         </div>

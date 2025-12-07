@@ -19,7 +19,7 @@ const LANGS = [
   { code: 'sw', label: 'SW' },
 ];
 
-const SUP = ['fr','en','pt','es','ar','tr','sw','de','it'] as const;
+const SUP = ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'sw', 'de', 'it'] as const;
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,8 @@ const Navbar: FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const params = useParams();
-  const currentLang = params.lng && (SUP as readonly string[]).includes(params.lng) ? params.lng : 'fr';
+  const currentLang =
+    params.lng && (SUP as readonly string[]).includes(params.lng) ? params.lng : 'fr';
   const { t } = useTranslation(['navbar', 'common']);
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Navbar: FC = () => {
     return () => window.removeEventListener('scroll', handleScroll as EventListener);
   }, []);
 
-  // Ferme le menu mobile avec la touche Échap
+  // Close mobile menus with Escape
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -60,21 +61,26 @@ const Navbar: FC = () => {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [isOpen, routesOpen]);
 
-  // Ferme les menus lors d'un changement de route
+  // Close menus when route changes
   useEffect(() => {
     setIsOpen(false);
     setRoutesOpen(false);
   }, [location.pathname]);
 
   const navigationItems = [
-    { name: t('navbar:home', 'Accueil'), href: '' },
-    { name: t('navbar:services', 'Nos Services'), href: 'services' },
+    { name: t('navbar:home', 'Home'), href: '' },
+    { name: t('navbar:services', 'Services'), href: 'services' },
     { name: t('navbar:destinations', 'Destinations'), href: 'destinations' },
     { name: t('navbar:contact', 'Contact'), href: 'contact' },
   ];
 
+  const routesLabel = t('navbar:routes', 'Routes');
+  const routeFranceChina = t('navbar:route_france_china', 'France ↔ China');
+  const routeFranceCongo = t('navbar:route_france_congo', 'France ↔ Congo');
+  const routeFranceTurkey = t('navbar:route_france_turkey', 'France ↔ Turkey');
+
   const isActiveLink = (href: string) => {
-    const lang = (currentLang || 'fr') as typeof SUP[number];
+    const lang = (currentLang || 'fr') as (typeof SUP)[number];
     const localized = localizeTo(href, lang as any);
     return location.pathname === localized;
   };
@@ -90,20 +96,25 @@ const Navbar: FC = () => {
     }
   };
 
+  const getQuoteLabel = t('common:get_quote', 'Get a Quote');
+  const langLabel = t('navbar:lang_label', 'Language');
+  const langAria = t('navbar:lang_aria', 'Change language');
+  const menuOpenLabel = t('navbar:menu_open', 'Open menu');
+  const menuCloseLabel = t('navbar:menu_close', 'Close menu');
+
   return (
     <nav
       role="navigation"
-      aria-label="Navigation principale"
+      aria-label="Main navigation"
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}>
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <LocalizedLink to="" className="flex-shrink-0">
-            <span className="text-2xl font-bold text-primary-900">
-              MB Fret Services
-            </span>
+            <span className="text-2xl font-bold text-primary-900">MB Fret Services</span>
           </LocalizedLink>
 
           {/* Desktop Navigation */}
@@ -132,21 +143,28 @@ const Navbar: FC = () => {
                   aria-expanded={routesOpen}
                   className="inline-flex items-center px-3 py-2 text-sm font-medium text-primary-700 hover:text-accent-700"
                 >
-                  Routes
+                  {routesLabel}
                   <ChevronDown size={16} className="ml-1" aria-hidden="true" />
                 </button>
                 {routesOpen && (
-                  <div
-                    className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50"
-                  >
-                    <LocalizedLink to="services/fret-maritime/france-chine" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
-                      France ↔ Chine
+                  <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50">
+                    <LocalizedLink
+                      to="services/fret-maritime/france-chine"
+                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
+                    >
+                      {routeFranceChina}
                     </LocalizedLink>
-                    <LocalizedLink to="services/fret-maritime/france-congo" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
-                      France ↔ Congo
+                    <LocalizedLink
+                      to="services/fret-maritime/france-congo"
+                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
+                    >
+                      {routeFranceCongo}
                     </LocalizedLink>
-                    <LocalizedLink to="services/fret-maritime/france-turquie" className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50">
-                      France ↔ Turquie
+                    <LocalizedLink
+                      to="services/fret-maritime/france-turquie"
+                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
+                    >
+                      {routeFranceTurkey}
                     </LocalizedLink>
                   </div>
                 )}
@@ -154,20 +172,24 @@ const Navbar: FC = () => {
             </div>
             <div className="ml-6">
               <CtaButton href="contact" variant="primary">
-                {t('common:get_quote', 'Demander un Devis')}
+                {getQuoteLabel}
               </CtaButton>
             </div>
             <div className="ml-4">
-              <label htmlFor="lang" className="sr-only">Langue</label>
+              <label htmlFor="lang" className="sr-only">
+                {langLabel}
+              </label>
               <select
                 id="lang"
                 value={currentLang}
                 onChange={(e) => onLanguageChange(e.target.value)}
                 className="border border-gray-300 rounded-md px-2 py-1 text-sm text-primary-700 hover:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500"
-                aria-label="Changer de langue"
+                aria-label={langAria}
               >
                 {LANGS.map((l) => (
-                  <option key={l.code} value={l.code}>{l.label}</option>
+                  <option key={l.code} value={l.code}>
+                    {l.label}
+                  </option>
                 ))}
               </select>
             </div>
@@ -175,23 +197,27 @@ const Navbar: FC = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-2">
-            <label htmlFor="lang-m" className="sr-only">Langue</label>
+            <label htmlFor="lang-m" className="sr-only">
+              {langLabel}
+            </label>
             <select
               id="lang-m"
               value={currentLang}
               onChange={(e) => onLanguageChange(e.target.value)}
               className="border border-gray-300 rounded-md px-2 py-1 text-sm text-primary-700"
-              aria-label="Changer de langue"
+              aria-label={langAria}
             >
               {LANGS.map((l) => (
-                <option key={l.code} value={l.code}>{l.label}</option>
+                <option key={l.code} value={l.code}>
+                  {l.label}
+                </option>
               ))}
             </select>
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
-              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-label={isOpen ? menuCloseLabel : menuOpenLabel}
               className="inline-flex items-center justify-center p-2 rounded-md text-primary-700 hover:text-accent-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-accent-700"
             >
               {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
@@ -222,21 +248,35 @@ const Navbar: FC = () => {
 
             {/* Mobile routes list */}
             <div className="px-3 pt-3">
-              <p className="text-xs uppercase tracking-wide text-gray-500 mb-2">Routes</p>
-              <LocalizedLink to="services/fret-maritime/france-chine" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded">
-                France ↔ Chine
+              <p className="text-xs uppercase tracking-wide text-gray-500 mb-2">
+                {routesLabel}
+              </p>
+              <LocalizedLink
+                to="services/fret-maritime/france-chine"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
+              >
+                {routeFranceChina}
               </LocalizedLink>
-              <LocalizedLink to="services/fret-maritime/france-congo" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded">
-                France ↔ Congo
+              <LocalizedLink
+                to="services/fret-maritime/france-congo"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
+              >
+                {routeFranceCongo}
               </LocalizedLink>
-              <LocalizedLink to="services/fret-maritime/france-turquie" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded">
-                France ↔ Turquie
+              <LocalizedLink
+                to="services/fret-maritime/france-turquie"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
+              >
+                {routeFranceTurkey}
               </LocalizedLink>
             </div>
 
             <div className="pt-2 px-2">
               <CtaButton href="contact" variant="primary" className="w-full">
-                {t('common:get_quote', 'Demander un Devis')}
+                {getQuoteLabel}
               </CtaButton>
             </div>
           </div>

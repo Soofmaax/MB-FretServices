@@ -2,5 +2,15 @@
   "home": "Home",
   "services": "Servizi",
   "destinations": "Destinazioni",
-  "contact": "Contatti"
+  "contact": "Contatti",
+  "guides": "Guide",
+  "resources": "Risorse",
+  "routes": "Rotte",
+  "route_france_china": "Francia ↔ Cina",
+  "route_france_congo": "Francia ↔ Congo",
+  "route_france_turkey": "Francia ↔ Turchia",
+  "lang_label": "Lingua",
+  "lang_aria": "Cambia lingua",
+  "menu_open": "Apri menu",
+  "menu_close": "Chiudi menu"
 }
