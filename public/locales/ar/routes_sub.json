@@ -1,0 +1,17 @@
+{
+  "labels": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "route_root": "الشحن البحري",
+    "back_to_route": "العودة إلى صفحة الخط",
+    "faq": "الأسئلة الشائعة",
+    "cta_quote": "طلب عرض سعر",
+    "cta_compare_fcl_lcl": "مقارنة FCL/LCL مع خبير",
+    "cta_customs_specialist": "التحدث مع خبير جمركي",
+    "cta_assistance": "طلب مرافقة",
+    "guide_incoterms": "إنكوترمز 2020",
+    "guide_fcl": "فهم FCL مقابل LCL",
+    "see_services": "عرض الخدمات",
+    "view": "عرض"
+  }
+}

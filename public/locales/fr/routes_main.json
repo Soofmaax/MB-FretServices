@@ -18,6 +18,11 @@
     "ready_to_ship_desc": "Devis sous 24h. Experts FCL/LCL. Suivi 24/7.",
     "ports_corridors": "Ports & corridors __ROUTE__"
   },
+  "links": {
+    "fcl_understand": "Comprendre FCL vs LCL",
+    "incoterms_guide": "Comprendre les Incoterms",
+    "fcl_guide_short": "Guide FCL/LCL"
+  },
   "labels": {
     "departures_fr": "Départs France:",
     "arrivals": "Arrivées:",
@@ -67,7 +72,8 @@
     "cta_get_quote": "Demander un devis",
     "cta_get_detailed_quote": "Demander un devis détaillé",
     "cta_build_plan": "Construire mon plan de transport",
-    "cta_whatsapp": "Nous contacter via WhatsApp"
+    "cta_whatsapp": "Nous contacter via WhatsApp",
+    "cbm_note": "À titre indicatif : 20’ ≈ 33 m³, 40’ ≈ 67 m³. Les tolérances et limites de poids/volume dépendent de l’armateur et du service."
   },
   "france_china": {
     "label": "France ↔ Chine",

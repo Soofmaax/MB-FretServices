@@ -1,0 +1,17 @@
+{
+  "labels": {
+    "home": "Home",
+    "services": "Services",
+    "route_root": "Sea freight",
+    "back_to_route": "Back to route page",
+    "faq": "FAQ",
+    "cta_quote": "Request a quote",
+    "cta_compare_fcl_lcl": "Compare FCL/LCL with an expert",
+    "cta_customs_specialist": "Talk to a customs specialist",
+    "cta_assistance": "Request support",
+    "guide_incoterms": "Incoterms 2020",
+    "guide_fcl": "Understand FCL vs LCL",
+    "see_services": "See services",
+    "view": "View"
+  }
+}

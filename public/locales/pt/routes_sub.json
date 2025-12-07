@@ -1,0 +1,17 @@
+{
+  "labels": {
+    "home": "Início",
+    "services": "Serviços",
+    "route_root": "Transporte marítimo",
+    "back_to_route": "Voltar à página da rota",
+    "faq": "FAQ",
+    "cta_quote": "Pedir orçamento",
+    "cta_compare_fcl_lcl": "Comparar FCL/LCL com um especialista",
+    "cta_customs_specialist": "Falar com um especialista em desalfandegamento",
+    "cta_assistance": "Pedir acompanhamento",
+    "guide_incoterms": "Incoterms 2020",
+    "guide_fcl": "Compreender FCL vs LCL",
+    "see_services": "Ver serviços",
+    "view": "Ver"
+  }
+}

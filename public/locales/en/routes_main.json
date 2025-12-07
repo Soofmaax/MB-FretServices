@@ -23,6 +23,11 @@
     "arrivals": "Arrivals:",
     "transit": "Transit:"
   },
+  "links": {
+    "fcl_understand": "Understand FCL vs LCL",
+    "incoterms_guide": "Understand Incoterms",
+    "fcl_guide_short": "FCL/LCL guide"
+  },
   "common": {
     "bullets_ports": [
       "Real-time tracking and milestone visibility.",
@@ -68,6 +73,7 @@
     "cta_get_quote": "Request a quote",
     "cta_get_detailed_quote": "Request a detailed quote",
     "cta_build_plan": "Build my transport plan",
-    "cta_whatsapp": "Contact us on WhatsApp"
+    "cta_whatsapp": "Contact us on WhatsApp",
+    "cbm_note": "Indicative only: 20' ≈ 33 m³, 40' ≈ 67 m³. Tolerances and weight/volume limits depend on carrier and service."
   }
 }
