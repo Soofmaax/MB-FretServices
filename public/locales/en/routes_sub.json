@@ -13,5 +13,416 @@
     "guide_fcl": "Understand FCL vs LCL",
     "see_services": "See services",
     "view": "View"
+  },
+  "china": {
+    "fcl_lcl": {
+      "h1": "FCL vs LCL — France ↔ China",
+      "title": "FCL vs LCL on France ↔ China — Choose the right mode | MB Fret Services",
+      "desc": "Volume thresholds (~13–15 m³), security, costs. Compare FCL and LCL on the France ↔ China corridor and optimise your budget.",
+      "intro": [
+        "FCL (full container) maximises control and reduces handling; LCL (groupage) optimises budget for volumes below ~13–15 m³. The decision must consider volume, value, transit time and cargo sensitivity."
+      ],
+      "sections": [
+        {
+          "h2": "Thresholds, costs and risks",
+          "ul": [
+            "Indicative thresholds: 20’ ≈ 33 m³, 40’ ≈ 67 m³, 40’HC ≈ 76 m³",
+            "Total delivered cost: compare FCL vs LCL (pre/post-carriage, THC, surcharges, insurance, customs)",
+            "Risk: LCL involves consolidation; prioritise export-grade packing and ad valorem insurance"
+          ]
+        },
+        {
+          "h3": "China-specific use cases",
+          "ul": [
+            "Recurring programs: FCL as the primary mode; LCL for prototypes and small batches",
+            "Seasonal peaks (CNY, Q4): secure capacity early and anticipate cut-offs"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the threshold to switch from LCL to FCL?",
+          "a": "Around 13–15 m³ depending on ports and season. Also factor in value, risk and required lead times."
+        },
+        {
+          "q": "Is LCL more risky?",
+          "a": "It includes consolidation/deconsolidation steps. Proper export packing and ad valorem insurance significantly reduce risk."
+        },
+        {
+          "q": "Can we mix LCL and air freight?",
+          "a": "Yes, to meet a critical deadline. We design a multimodal scheme adapted to your constraints."
+        },
+        {
+          "q": "Which FCL container types are available?",
+          "a": "20’, 40’, 40’HC; Reefer/Open Top options after a feasibility study and depending on cargo type."
+        },
+        {
+          "q": "How do I estimate my CBM?",
+          "a": "Length×Width×Height×Quantity / 1,000,000. Use our online CBM calculator."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Customs procedures — France ↔ China",
+      "title": "Customs & documents — France ↔ China | MB Fret Services",
+      "desc": "Key documents, compliance and Incoterms on France ↔ China. Reduce risk with robust documentary control.",
+      "intro": [
+        "Successful customs clearance starts with impeccable documentation (invoice, packing list, BL, certificates). We handle representation, calculation of duties & taxes, and coordination with the terminal/carrier to avoid delays and extra costs."
+      ],
+      "sections": [
+        {
+          "h2": "Documents & Incoterms",
+          "ul": [
+            "Invoice, packing list, BL, certificate of origin (if required) and any specific certificates",
+            "Incoterms: FOB/CIF are common; DAP/DDP for wider door-to-door coverage",
+            "Accurate HS codes: they determine duties & taxes and potential inspections"
+          ]
+        },
+        {
+          "h3": "Frequent pitfalls",
+          "ul": [
+            "Inconsistencies between documents (quantities, weights, descriptions)",
+            "Missed cut-offs (documentary/VGM) and lack of packing proof",
+            "Underestimated insurance compared to actual cargo value"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which documents are required for China?",
+          "a": "Invoice, packing list, BL, certificate of origin if required, plus other certificates depending on the goods."
+        },
+        {
+          "q": "Which Incoterm should I choose?",
+          "a": "FOB/CIF are very common in sea freight; DAP/DDP extend the seller's responsibilities. We advise based on risk, control and budget."
+        },
+        {
+          "q": "Can you act as customs representative?",
+          "a": "Yes. We handle document checks, duties & taxes and coordination with the terminal."
+        },
+        {
+          "q": "How can I avoid delays?",
+          "a": "Anticipate cut-offs, validate HS codes, ensure document quality and maintain proactive communication with the carrier."
+        },
+        {
+          "q": "Is insurance mandatory?",
+          "a": "Ad valorem insurance is strongly recommended. It protects cash flow and business continuity in case of damage or loss."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Document checklist — France ↔ China",
+      "title": "Document checklist — France ↔ China | MB Fret Services",
+      "desc": "The key checklist to ship on France ↔ China: invoice, packing list, BL, certificates and insurance.",
+      "intro": [
+        "Follow this checklist to streamline loading and delivery. It covers preparation, documentation, insurance and coordination with all stakeholders."
+      ],
+      "sections": [
+        {
+          "h2": "Before shipment",
+          "ul": [
+            "Estimate CBM/weight (CBM tool), choose FCL or LCL",
+            "Select port/service (direct vs transhipment)",
+            "Prepare export-grade packing (blocking, strapping, markings)"
+          ]
+        },
+        {
+          "h3": "Documents",
+          "ul": [
+            "Commercial invoice and packing list",
+            "BL (draft to be validated), certificate of origin if required",
+            "Ad valorem insurance: policy and evidence"
+          ]
+        },
+        {
+          "h3": "At port and on arrival",
+          "ul": [
+            "Meet cut-offs, submit VGM",
+            "Coordinate with terminal, delivery time slot, and site constraints",
+            "Customs clearance, release and proof of delivery"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What should I check first?",
+          "a": "Signed invoice/PL, BL draft, required certificates, consignee details and site constraints."
+        },
+        {
+          "q": "How should I document packing?",
+          "a": "Dated photos, appropriate materials and blocking; attach sketches for sensitive cargo if needed."
+        },
+        {
+          "q": "Is a port appointment required?",
+          "a": "It depends on the terminal. We coordinate slots and access instructions."
+        },
+        {
+          "q": "What about insurance?",
+          "a": "Take out ad valorem coverage, clarify exclusions and keep evidence and batch numbers."
+        }
+      ]
+    }
+  },
+  "congo": {
+    "fcl_lcl": {
+      "h1": "FCL vs LCL — France ↔ Congo",
+      "title": "FCL vs LCL on France ↔ Congo — Choose the right mode | MB Fret Services",
+      "desc": "Volume thresholds (~13–15 m³), security, costs. Compare FCL and LCL on the France ↔ Congo corridor.",
+      "intro": [
+        "The FCL/LCL trade-off depends on volume and cargo sensitivity. LCL groupage is very relevant for small shipments to Pointe-Noire; FCL becomes more attractive as volume and value increase."
+      ],
+      "sections": [
+        {
+          "h2": "Thresholds, costs and risks",
+          "ul": [
+            "Compare total delivered cost (pre/post-carriage, THC, surcharges, insurance)",
+            "Switch to FCL to reduce handling when value and sensitivity are higher"
+          ]
+        },
+        {
+          "h3": "Congo-specific use cases",
+          "ul": [
+            "Parcels/pallets: LCL groupage to Pointe-Noire with milestone visibility",
+            "Sensitive equipment: switch to FCL + strict documentation and packing"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the threshold to switch from LCL to FCL?",
+          "a": "Around 13–15 m³, adjusted according to ports and season."
+        },
+        {
+          "q": "Is LCL suitable for parcels?",
+          "a": "Yes, regular groupage with milestone visibility and cut-off estimations."
+        },
+        {
+          "q": "Which insurance do you recommend?",
+          "a": "Ad valorem insurance sized to cargo value and sensitivity."
+        },
+        {
+          "q": "Can we mix LCL and air?",
+          "a": "Yes, to meet a critical deadline. We assess this case by case."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Customs procedures — France ↔ Congo",
+      "title": "Customs & documents — France ↔ Congo | MB Fret Services",
+      "desc": "Required documents, representation and terminal coordination to avoid delays.",
+      "intro": [
+        "We apply rigorous document checks: invoice, packing list, BL, certificate of origin if required, and any goods-specific paperwork. We provide customs representation and support with duties & taxes."
+      ],
+      "sections": [
+        {
+          "h2": "Documents & Incoterms",
+          "ul": [
+            "Invoice/PL/BL, certificate of origin if required",
+            "Incoterms: FOB/CIF/DAP/DDP depending on risk/responsibility split",
+            "Accurate HS codes"
+          ]
+        },
+        {
+          "h3": "Frequent pitfalls",
+          "ul": [
+            "Document inconsistencies",
+            "Missed cut-offs and VGM submissions",
+            "Underestimated insurance"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which documents are required for Congo?",
+          "a": "Invoice, PL, BL, certificate of origin if required, and other documents depending on the cargo."
+        },
+        {
+          "q": "Do you handle customs representation?",
+          "a": "Yes, we provide full representation and coordinate with the terminal."
+        },
+        {
+          "q": "Which Incoterms are common?",
+          "a": "FOB/CIF are popular; DAP/DDP for extended seller responsibility."
+        },
+        {
+          "q": "How can I reduce delays?",
+          "a": "Anticipate cut-offs, ensure document quality and maintain proactive communication."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Document checklist — France ↔ Congo",
+      "title": "Document checklist — France ↔ Congo | MB Fret Services",
+      "desc": "Practical checklist to prepare your shipment to Pointe-Noire.",
+      "intro": [
+        "A structured preparation process helps reduce delays and disputes. Focus on export-grade packing, solid documentary evidence and consistent data."
+      ],
+      "sections": [
+        {
+          "h2": "Before shipment",
+          "ul": [
+            "Estimate CBM/weight",
+            "Choose FCL or LCL",
+            "Select service/port",
+            "Prepare export-quality packaging"
+          ]
+        },
+        {
+          "h3": "Documents",
+          "ul": [
+            "Invoice/PL",
+            "BL (draft), certificate of origin if required",
+            "Insurance policy and evidence"
+          ]
+        },
+        {
+          "h3": "At port and on arrival",
+          "ul": [
+            "Respect cut-offs, submit VGM",
+            "Coordinate with terminal and final delivery",
+            "Customs clearance and proof of delivery"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What should I check first?",
+          "a": "Invoice/PL, BL draft, certificates, consignee details."
+        },
+        {
+          "q": "Is a port appointment required?",
+          "a": "It depends on the terminal; we coordinate time slots."
+        },
+        {
+          "q": "What about insurance?",
+          "a": "Ad valorem coverage is recommended; keep evidence and photos."
+        }
+      ]
+    }
+  },
+  "turkey": {
+    "fcl_lcl": {
+      "h1": "FCL vs LCL — France ↔ Turkey",
+      "title": "FCL vs LCL on France ↔ Turkey — Choose the right mode | MB Fret Services",
+      "desc": "Arbitrate between FCL/LCL on a short/medium-haul corridor with multimodal options.",
+      "intro": [
+        "Short lead times and high sailing frequencies: FCL brings stability and efficiency for recurring flows; LCL and road options fit occasional shipments."
+      ],
+      "sections": [
+        {
+          "h2": "Thresholds, costs and risks",
+          "ul": [
+            "Compare FCL vs LCL on total delivered cost and lead time",
+            "Use multimodal solutions to meet critical milestones"
+          ]
+        },
+        {
+          "h3": "Turkey-specific use cases",
+          "ul": [
+            "Short lead times: FCL for stability; LCL or road for occasional shipments",
+            "Cross-trade: robust multi-country documentation"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the LCL → FCL threshold?",
+          "a": "Around 13–15 m³ depending on context, but the decision also depends on lead times and shipment frequency."
+        },
+        {
+          "q": "Are multimodal solutions relevant?",
+          "a": "Yes: Sea/Road/Air combinations help meet deadlines without disproportionate costs."
+        },
+        {
+          "q": "Is LCL suitable for replenishment?",
+          "a": "Relevant for small campaigns; FCL becomes the preferred option for recurring flows."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Customs procedures — France ↔ Turkey",
+      "title": "Customs & documents — France ↔ Turkey | MB Fret Services",
+      "desc": "Document quality and suitable Incoterms for short lead times.",
+      "intro": [
+        "BL, invoice, packing list; Incoterms adapted (FOB/CIF/DAP/DDP) to your preferred responsibility split. Proper documentation setup and port coordination to avoid delays."
+      ],
+      "sections": [
+        {
+          "h2": "Documents & Incoterms",
+          "ul": [
+            "BL, invoice, PL; certificate of origin if required",
+            "Incoterms: FOB/CIF/DAP/DDP",
+            "Accurate HS codes"
+          ]
+        },
+        {
+          "h3": "Frequent pitfalls",
+          "ul": [
+            "Document inconsistencies",
+            "Poor anticipation of cut-offs",
+            "Underestimated insurance"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which documents are required for Turkey?",
+          "a": "BL, invoice, PL; certificate of origin if required."
+        },
+        {
+          "q": "Which Incoterms are recommended?",
+          "a": "FOB/CIF are common; DAP/DDP depending on the level of control you want."
+        },
+        {
+          "q": "How can I avoid delays?",
+          "a": "Prepare alternative ports, ensure document quality and anticipate cut-offs."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Document checklist — France ↔ Turkey",
+      "title": "Document checklist — France ↔ Turkey | MB Fret Services",
+      "desc": "Checklist to prepare a fast and controlled flow.",
+      "intro": [
+        "Check CBM/weight, ports, documentation and milestones. Coordinate terminal operations and final delivery."
+      ],
+      "sections": [
+        {
+          "h2": "Before shipment",
+          "ul": [
+            "CBM/weight",
+            "Choose FCL or LCL",
+            "Select service/port",
+            "Prepare export-quality packaging"
+          ]
+        },
+        {
+          "h3": "Documents",
+          "ul": [
+            "Invoice/PL",
+            "BL (draft), certificate of origin if required",
+            "Ad valorem insurance"
+          ]
+        },
+        {
+          "h3": "At port and on arrival",
+          "ul": [
+            "Respect cut-offs, submit VGM",
+            "Coordinate with terminal and final delivery",
+            "Customs clearance and proof of delivery"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What should I check first?",
+          "a": "Invoice/PL, BL draft, certificates, milestones."
+        },
+        {
+          "q": "What about insurance?",
+          "a": "Ad valorem coverage is recommended; keep evidence and photos."
+        }
+      ]
+    }
   }
 }

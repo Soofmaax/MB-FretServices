@@ -1,0 +1,306 @@
+{
+  "headings": {
+    "ports_delais": "Portos e prazos",
+    "cbm_calc": "Calculadora CBM (volume)",
+    "costs_modes": "Custos e modos (FCL/LCL)",
+    "customs_docs": "Desalfandegamento & documentação",
+    "insurance_risks": "Seguro & riscos",
+    "why_choose": "Por que escolher-nos em __ROUTE__",
+    "key_services": "Serviços principais",
+    "ops_steps": "Etapas operacionais e boas práticas",
+    "incoterms": "Incoterms & responsabilidades",
+    "delivered_cost": "Cálculo do custo total entregue",
+    "use_cases": "Casos de uso",
+    "checklist": "Checklist de expedição",
+    "advanced_tips": "Dicas operacionais avançadas — __ROUTE__",
+    "faq": "Perguntas frequentes",
+    "ready_to_ship": "Pronto para enviar?",
+    "ready_to_ship_desc": "Orçamento em 24h. Especialistas em FCL/LCL. Acompanhamento 24/7.",
+    "ports_corridors": "Portos & corredores __ROUTE__"
+  },
+  "links": {
+    "fcl_understand": "Compreender FCL vs LCL",
+    "incoterms_guide": "Compreender os Incoterms",
+    "fcl_guide_short": "Guia FCL/LCL"
+  },
+  "labels": {
+    "departures_fr": "Partidas desde França:",
+    "arrivals": "Chegadas:",
+    "transit": "Trânsito:"
+  },
+  "common": {
+    "bullets_ports": [
+      "Acompanhamento em tempo real e visibilidade dos marcos.",
+      "Desalfandegamento e conformidade documental.",
+      "Seguro de carga ad valorem (opcional)."
+    ],
+    "key_services": [
+      "FCL: contentores 20', 40', 40'HC; opções Reefer/Open Top mediante estudo",
+      "LCL (groupagem): partidas regulares, visibilidade dos marcos",
+      "Pré/Pós-transporte (rodoviário/ferroviário) conforme orçamento e prazos",
+      "Gestão documental: BL, fatura, packing list, certificados",
+      "Seguro ad valorem, aconselhamento de embalagem"
+    ],
+    "ops_steps": [
+      "Qualificar a necessidade (volume CBM/peso, sensibilidade da mercadoria, Incoterm desejado)",
+      "Escolher porto e serviço (direto/transbordo), arbitrar FCL/LCL",
+      "Preparar documentação (fatura, PL, certificados) e garantir conformidade (códigos SH)",
+      "Reserva e cut-offs (booking, VGM, cut-off documental)",
+      "Embarque, seguimento e notificações de marcos",
+      "Desalfandegamento na importação, mainlevée, entrega final"
+    ],
+    "ops_best_practices": "Boas práticas: antecipar picos (sazonalidade, feriados), cuidar da embalagem de exportação (calço, cintagem), garantir seguro ad valorem e manter margem nos prazos críticos.",
+    "incoterms_intro": "A escolha do Incoterm influencia o controlo, a repartição de custos e o ponto de transferência de risco. Exemplos comuns: FOB/CIF para fluxos marítimos standard; DAP/DDP para uma experiência porta-a-porta.",
+    "incoterms_list": [
+      "FOB: controlo do comprador sobre o transporte principal; requer maturidade logística",
+      "CIF: previsibilidade orçamental via frete+seguro a cargo do vendedor; menos controlo",
+      "DAP/DDP: responsabilidade alargada do vendedor, fluidez operacional, exigências aduaneiras/fiscais"
+    ],
+    "delivered_cost_list": [
+      "Frete marítimo + sobretaxas (BAF, CAF, PSS)",
+      "THC origem/destino, BL, manuseamentos",
+      "Pré/pós-transporte rodoviário/ferroviário",
+      "Seguro, direitos & impostos, taxas administrativas"
+    ],
+    "delivered_cost_note": "Compare sempre FCL vs LCL com base no custo total entregue e não apenas na tarifa por m³.",
+    "checklist": [
+      "Fatura comercial, packing list, BL (a validar)",
+      "Certificado de origem e documentos específicos (se necessário)",
+      "Seguro ad valorem e fotos da embalagem",
+      "Dados do destinatário, janela de entrega, restrições do local"
+    ],
+    "cta_get_quote": "Pedir orçamento",
+    "cta_get_detailed_quote": "Pedir orçamento detalhado",
+    "cta_build_plan": "Construir o meu plano de transporte",
+    "cta_whatsapp": "Contactar via WhatsApp",
+    "cbm_note": "A título indicativo: 20' ≈ 33 m³, 40' ≈ 67 m³. As tolerâncias e limites de peso/volume dependem da transportadora e do serviço."
+  },
+  "france_china": {
+    "label": "França ↔ China",
+    "title": "Transporte marítimo França ↔ China (FCL & LCL)",
+    "subtitle": "Soluções FCL/LCL fiáveis entre os principais portos franceses (Le Havre, Marselha-Fos, Dunkerque) e hubs chineses (Xangai, Ningbo, Shenzhen, Qingdao).",
+    "transit": "Prazos indicativos: 35–50 dias consoante o itinerário, a época e a congestão.",
+    "ports_from": ["Le Havre", "Marseille-Fos", "Dunkerque"],
+    "ports_to": ["Shanghai", "Ningbo", "Shenzhen", "Qingdao"],
+    "costs": [
+      "No eixo França ↔ China, o FCL torna-se frequentemente mais vantajoso acima de cerca de 13–15 m³: menos manuseamentos, maior segurança e prazos mais estáveis. Abaixo disso, o LCL (groupagem) é um bom alavancador para controlar o orçamento.",
+      "Os preços variam em função da época, do armador e da taxa de ocupação dos navios (BAF/CAF/PSS). Utilize a calculadora de CBM e peça um orçamento para uma estimativa transparente e atualizada."
+    ],
+    "customs": [
+      "Tratamos de BL, fatura, packing list, certificados de origem (se necessário) e controlos de conformidade. Incoterms habituais: FOB/CIF; DAP/DDP para uma cobertura porta-a-porta alargada. Apoio completo ao desalfandegamento."
+    ],
+    "insurance_risks": [
+      "Seguro de carga ad valorem: cobertura desde a partida até à entrega",
+      "Aconselhamento de embalagem de exportação para reduzir danos e litígios",
+      "Visibilidade dos marcos e acompanhamento proativo"
+    ],
+    "why_us": [
+      "Planeamento em torno de picos (CNY, Q4) e serviços alternativos quando necessário",
+      "Opções ferroviárias em complemento para ganhar tempo em fluxos sensíveis",
+      "Rede de armadores e hubs para mitigar os efeitos da congestão"
+    ],
+    "use_cases": [
+      "Programas regulares: FCL para garantir capacidade/prazos; ferrovia pontualmente para acelerar",
+      "Lançamentos de produto: LCL para pilotos, depois passagem a FCL com aumento de volume",
+      "Mercadorias sensíveis: FCL + embalagem profissional + seguro ad valorem"
+    ],
+    "advice": {
+      "planning_title": "Planeamento & capacidade",
+      "planning": [
+        "Antecipar picos de procura (CNY, Q4) e reservar slots com antecedência",
+        "Comparar serviços diretos vs com transbordo consoante o porto chinês",
+        "Prever margem no calendário para absorver congestões e meteorologia"
+      ],
+      "documentation_title": "Documentação & conformidade",
+      "documentation": [
+        "Descrições de produto alinhadas com códigos SH; evitar termos ambíguos",
+        "BL: validar o draft antes da emissão para evitar alterações caras",
+        "Seguro: dimensionar a cobertura conforme o valor e a sensibilidade"
+      ],
+      "kpis_title": "KPIs a acompanhar",
+      "kpis": [
+        "On-time delivery (OTD) porto-a-porto e porta-a-porta",
+        "Taxa de erros documentais",
+        "Diferença entre custo real e orçamento (custo total entregue)"
+      ]
+    },
+    "faq": [
+      {
+        "q": "FCL ou LCL: o que escolher no eixo França–China?",
+        "a": "Acima de cerca de 13–15 m³, o FCL é muitas vezes mais económico e mais seguro (menos manuseamentos). Abaixo disso, o LCL continua pertinente para otimizar o orçamento."
+      },
+      {
+        "q": "Que Incoterms escolher (FOB/CIF/DAP/DDP)?",
+        "a": "FOB/CIF são comuns na China; DAP/DDP oferecem uma tomada a cargo alargada. A escolha depende do nível de controlo e do perfil de risco desejado."
+      },
+      {
+        "q": "Gerem a documentação aduaneira?",
+        "a": "Sim: BL, fatura comercial, packing list, certificados se necessário; além de controlo de conformidade e apoio ao desalfandegamento."
+      },
+      {
+        "q": "O transporte ferroviário pode substituir o marítimo?",
+        "a": "Em certos corredores, o ferroviário oferece cerca de 18–22 dias de trânsito. É um compromisso interessante entre aéreo e marítimo em termos de prazo/custo."
+      },
+      {
+        "q": "Quais as épocas mais críticas?",
+        "a": "Ano Novo Chinês e Q4 antes do Natal. É preferível reservar com antecedência e manter serviços alternativos disponíveis."
+      },
+      {
+        "q": "Propõem seguro de carga?",
+        "a": "Sim, cobertura ad valorem da partida à entrega, com aconselhamento de embalagem para reduzir o risco."
+      }
+    ]
+  },
+  "france_congo": {
+    "label": "França ↔ Congo",
+    "title": "Transporte marítimo França ↔ Congo (FCL & LCL)",
+    "subtitle": "Groupagem LCL e contentores completos para Pointe-Noire, com recolha B2B em França (IDF, Lyon, Marselha) e acompanhamento documental.",
+    "transit": "Prazos indicativos: 20–30 dias consoante partidas, escalas e época.",
+    "ports_from": ["Le Havre", "Marseille-Fos"],
+    "ports_to": ["Pointe-Noire"],
+    "costs": [
+      "Para Pointe-Noire, a groupagem LCL é muito pertinente para pequenos volumes e envios B2B. Acima de cerca de 13–15 m³, o FCL torna-se progressivamente mais competitivo e previsível.",
+      "Os custos incluem sobretaxas marítimas e operações portuárias. Aconselhamos o melhor esquema em função do orçamento e do prazo."
+    ],
+    "customs": [
+      "Controlo documental rigoroso: fatura, PL, BL, certificado de origem se necessário, e documentos específicos à mercadoria. Representação em alfândega e apoio em direitos & impostos."
+    ],
+    "insurance_risks": [
+      "Seguro de carga ad valorem: cobertura da partida à entrega",
+      "Aconselhamento de embalagem de exportação para reduzir danos e litígios",
+      "Visibilidade dos marcos e acompanhamento proativo"
+    ],
+    "why_us": [
+      "Forte experiência em LCL/colis para Pointe-Noire com consolidações regulares",
+      "Recolha B2B nas principais zonas económicas francesas",
+      "Acompanhamento documental e assistência local no desalfandegamento"
+    ],
+    "use_cases": [
+      "Colis/pequenos lotes: LCL para Pointe-Noire com visibilidade dos marcos",
+      "Equipamentos pesados: FCL/Open Top quando adequado, recolha coordenada",
+      "Fluxos de projeto: coordenação documental e apoio local no desalfandegamento"
+    ],
+    "advice": {
+      "planning_title": "Groupagem LCL & visibilidade",
+      "planning": [
+        "Planear consolidações para limitar o tempo de espera entre partidas",
+        "Garantir rastreabilidade clara e etiquetagem dos volumes",
+        "Validar antecipadamente os requisitos documentais locais"
+      ],
+      "documentation_title": "Prevenção de riscos",
+      "documentation": [
+        "Embalagem de exportação reforçada, fotos datadas, selos se necessário",
+        "Optar por FCL quando o valor/volume o justifica para reduzir manuseamentos",
+        "Coordenar recolhas B2B em janelas compatíveis com a receção no terminal"
+      ],
+      "kpis_title": "KPIs a acompanhar",
+      "kpis": [
+        "Taxa de reclamações/danos",
+        "Tempo médio de desalfandegamento",
+        "Cumprimento das janelas de entrega"
+      ]
+    },
+    "faq": [
+      {
+        "q": "O LCL é adequado para o Congo?",
+        "a": "Sim, a groupagem é pertinente para colis/volumes modestos. Operamos consolidações regulares com visibilidade dos marcos."
+      },
+      {
+        "q": "Asseguram a recolha e a embalagem?",
+        "a": "Recolha B2B nos hubs franceses; embalagem de exportação para limitar danos e cumprir requisitos portuários."
+      },
+      {
+        "q": "Que nível de visibilidade existe no seguimento?",
+        "a": "Seguimento em tempo real, atualizações nas etapas chave (embarque, trânsito, chegada) e acompanhamento proativo."
+      },
+      {
+        "q": "Que documentos são exigidos na importação no Congo?",
+        "a": "BL, fatura, PL, certificado de origem se necessário, e documentos específicos à mercadoria. Assistência ao desalfandegamento disponível."
+      },
+      {
+        "q": "Recomendam seguro?",
+        "a": "Sim, é aconselhada uma apólice ad valorem. Dimensionamos a cobertura conforme o valor e a sensibilidade dos bens."
+      },
+      {
+        "q": "Qual o limiar para passar de LCL a FCL para Pointe-Noire?",
+        "a": "À volta de 13–15 m³, o FCL torna-se muitas vezes competitivo e mais previsível; abaixo disso, o LCL continua atrativo."
+      }
+    ]
+  },
+  "france_turkey": {
+    "label": "França ↔ Turquia",
+    "title": "Transporte marítimo França ↔ Turquia (FCL & LCL)",
+    "subtitle": "Ligações regulares com Istambul, Izmir e Mersin. Opções multimodais Mar/Rodovia/Aéreo para prazos curtos e planeamento flexível.",
+    "transit": "Prazos indicativos: 7–15 dias consoante porto e época.",
+    "ports_from": ["Marseille-Fos", "Le Havre"],
+    "ports_to": ["Istanbul", "Izmir", "Mersin"],
+    "costs": [
+      "O eixo França ↔ Turquia beneficia de prazos curtos e frequências elevadas. FCL é ideal para volumes consolidados e fluxos regulares; LCL continua a ser uma alternativa pragmática para envios irregulares.",
+      "Em caso de urgência, soluções multimodais (Mar/Rodovia/Aéreo) permitem cumprir marcos críticos sem explodir os custos."
+    ],
+    "customs": [
+      "BL, fatura, PL; Incoterms adequados (FOB/CIF/DAP/DDP) consoante o nível de responsabilidade desejado. Parametrização documental e coordenação portuária para evitar atrasos."
+    ],
+    "insurance_risks": [
+      "Seguro de carga ad valorem: cobertura da partida à entrega",
+      "Aconselhamento de embalagem de exportação para reduzir danos e litígios",
+      "Visibilidade dos marcos e acompanhamento proativo"
+    ],
+    "why_us": [
+      "Prazos curtos e orquestração multimodal (Mar/Rodovia/Aéreo)",
+      "Estudos de cross-trade e robustez documental",
+      "Seguimento 24/7 e comunicação reativa"
+    ],
+    "use_cases": [
+      "Reabastecimento rápido: LCL ou soluções rodoviárias/multimodais para cumprir janelas apertadas",
+      "Programas recorrentes: FCL com planeamento semanal e slots reservados",
+      "Cross-trade: documentação controlada e parceiros adequados por segmento"
+    ],
+    "advice": {
+      "planning_title": "Multimodal & agilidade",
+      "planning": [
+        "Comparar Mar/Rodovia/Aéreo em função dos marcos; mudar para expresso quando necessário",
+        "Planear partidas frequentes para nivelar a atividade",
+        "Preparar portos turcos alternativos (Izmir/Mersin) conforme a época"
+      ],
+      "documentation_title": "Qualidade documental",
+      "documentation": [
+        "BL/fatura/PL coerentes; antecipar certificados de origem se necessário",
+        "Escolher Incoterms alinhados com o nível de controlo desejado",
+        "Garantir que o seguro está corretamente dimensionado ao risco"
+      ],
+      "kpis_title": "KPIs a acompanhar",
+      "kpis": [
+        "Tempo médio porta-a-porta",
+        "Taxa de não conformidade documental",
+        "Custo total por m³ face ao orçamento"
+      ]
+    },
+    "faq": [
+      {
+        "q": "Quais são os pontos fortes do corredor França–Turquia?",
+        "a": "Prazos curtos, frequências elevadas, boas alternativas multimodais. Ideal para fluxos regulares e cadeias de abastecimento ágeis."
+      },
+      {
+        "q": "Propõem esquemas multimodais?",
+        "a": "Sim: Mar/Rodovia para otimizar o custo, e aéreo para urgências. Orquestramos o mix em função das suas restrições."
+      },
+      {
+        "q": "É possível cross-trade (ex: China→Turquia→Europa/África)?",
+        "a": "Sim, caso a caso com documentação robusta e seleção de armadores/parceiros adequados."
+      },
+      {
+        "q": "Que documentos e Incoterms recomendam?",
+        "a": "BL, fatura, PL; Incoterms (FOB/CIF/DAP/DDP) escolhidos conforme a repartição de risco e responsabilidade desejada."
+      },
+      {
+        "q": "FCL vs LCL na Turquia: o que privilegiar?",
+        "a": "FCL para volumes significativos e prazos mais estáveis; LCL competitivo para envios pequenos ou irregulares."
+      },
+      {
+        "q": "Como gerem o seguro e o risco?",
+        "a": "Recomendamos cobertura ad valorem, mais orientação em embalagem e documentação para evitar litígios e atrasos."
+      }
+    ]
+  }
+}
