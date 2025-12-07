@@ -1,0 +1,73 @@
+{
+  "headings": {
+    "ports_delais": "Ports & lead times",
+    "cbm_calc": "CBM (Volume) calculator",
+    "costs_modes": "Costs & modes (FCL/LCL)",
+    "customs_docs": "Customs & documentation",
+    "insurance_risks": "Insurance & risks",
+    "why_choose": "Why choose us on __ROUTE__",
+    "key_services": "Key services",
+    "ops_steps": "Operational steps and best practices",
+    "incoterms": "Incoterms & responsibilities",
+    "delivered_cost": "Total delivered cost",
+    "use_cases": "Use cases",
+    "checklist": "Shipping checklist",
+    "advanced_tips": "Advanced operational tips — __ROUTE__",
+    "faq": "Frequently asked questions",
+    "ready_to_ship": "Ready to ship?",
+    "ready_to_ship_desc": "Quote within 24 hours. FCL/LCL experts. 24/7 tracking.",
+    "ports_corridors": "Ports & corridors __ROUTE__"
+  },
+  "labels": {
+    "departures_fr": "Departures from France:",
+    "arrivals": "Arrivals:",
+    "transit": "Transit:"
+  },
+  "common": {
+    "bullets_ports": [
+      "Real-time tracking and milestone visibility.",
+      "Customs clearance and documentary compliance.",
+      "Optional ad valorem cargo insurance."
+    ],
+    "key_services": [
+      "FCL: 20', 40', 40'HC; Reefer/Open Top options after feasibility study",
+      "LCL (groupage): regular departures, milestone visibility",
+      "Pre/post-carriage (Road/Rail) depending on budget and lead times",
+      "Document management: BL, invoice, packing list, certificates",
+      "Ad valorem insurance, export packaging advice"
+    ],
+    "ops_steps": [
+      "Qualify the need (CBM/weight, cargo sensitivity, desired Incoterm)",
+      "Select port and service (direct/transshipment), arbitrate FCL/LCL",
+      "Prepare documents (invoice, PL, certificates) and ensure HS-code compliance",
+      "Booking and cut-offs (booking, VGM, documentary cut-off)",
+      "Loading, tracking and milestone notifications",
+      "Import customs clearance, release and final delivery"
+    ],
+    "ops_best_practices": "Best practices: anticipate peaks (seasonality, public holidays), use proper export packaging (blocking, strapping), secure ad valorem insurance and keep a buffer on critical deadlines.",
+    "incoterms_intro": "Incoterms shift control, cost allocation and risk transfer along the chain. Typical patterns: FOB/CIF for standard sea flows; DAP/DDP for door-to-door experience.",
+    "incoterms_list": [
+      "FOB: buyer controls main carriage; requires logistics maturity",
+      "CFR: seller pays main carriage; risk transfers at loading",
+      "CIF: seller pays freight + insurance; risk transfers at loading",
+      "DAP/DDP: extended coverage by seller; import clearance and taxes depending on variant"
+    ],
+    "delivered_cost_list": [
+      "Sea freight + surcharges (BAF, CAF, PSS)",
+      "THC origin/destination, BL, handling",
+      "Pre/post-carriage (road/rail)",
+      "Insurance, duties & taxes, admin fees"
+    ],
+    "delivered_cost_note": "Always compare FCL vs LCL on total delivered cost, not only on the rate per m³.",
+    "checklist": [
+      "Commercial invoice, packing list, BL (to be validated)",
+      "Certificate of origin and specific documents (if required)",
+      "Ad valorem insurance and packaging photos",
+      "Consignee details, delivery time window, site constraints"
+    ],
+    "cta_get_quote": "Request a quote",
+    "cta_get_detailed_quote": "Request a detailed quote",
+    "cta_build_plan": "Build my transport plan",
+    "cta_whatsapp": "Contact us on WhatsApp"
+  }
+}
