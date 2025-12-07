@@ -89,6 +89,47 @@
     ],
     "cta": "Pedir Orçamento Personalizado"
   },
+  "customs": {
+    "seo": {
+      "title": "Desalfandegamento & conformidade — Importação/Exportação | MB Fret Services",
+      "description": "Formalidades aduaneiras de importação/exportação, representação aduaneira, cálculo de direitos & impostos. Assistência documental, Incoterms e conformidade regulamentar."
+    },
+    "breadcrumb_service_name": "Desalfandegamento",
+    "service_name": "Desalfandegamento & conformidade importação/exportação",
+    "service_type": "Desalfandegamento",
+    "faq": [
+      {
+        "q": "Que documentos são indispensáveis?",
+        "a": "Fatura comercial, packing list, documentos de origem, certificados eventuais e autorizações específicas segundo a mercadoria."
+      },
+      {
+        "q": "Prestam representação aduaneira?",
+        "a": "Sim, asseguramos a representação em alfândega, o controlo documental e a conformidade regulamentar para as suas importações e exportações."
+      },
+      {
+        "q": "Podem aconselhar sobre Incoterms?",
+        "a": "Sim, aconselhamos sobre o Incoterm ideal (FOB/CIF/DAP…) segundo o fluxo, a tolerância ao risco e a organização interna."
+      }
+    ],
+    "hero": {
+      "title": "Desalfandegamento",
+      "subtitle": "Proteja os seus fluxos com um controlo documental rigoroso e uma representação aduaneira eficaz.",
+      "cta_quote": "Falar com um especialista"
+    },
+    "points": [
+      "Controlo documental & conformidade",
+      "Representação em alfândega",
+      "Gestão de direitos e impostos",
+      "Apoio em Incoterms e procedimentos"
+    ],
+    "services": {
+      "title": "Serviços",
+      "cta": "Obter uma estimativa"
+    },
+    "images": {
+      "hero_alt": "Desalfandegamento e formalidades documentais"
+    }
+  },
   "destinations": {
     "title": "Destinos de Transporte Marítimo - África",
     "subtitle": "Rotações regulares para os principais portos africanos com prazos otimizados.",
@@ -117,5 +158,48 @@
     "text": "Obtenha o seu orçamento personalizado em menos de 24 horas. Os nossos especialistas analisam as suas necessidades e propõem a solução marítima mais económica.",
     "cta": "Orçamento Transporte Marítimo",
     "whatsapp": "WhatsApp Imediato"
+  },
+  "insurance": {
+    "seo": {
+      "title": "Seguro de carga — Cobertura ad valorem | MB Fret Services",
+      "description": "Seguro de transporte para frete marítimo/aéreo: cobertura ad valorem, gestão de sinistros, aconselhamento sobre embalagem export. Porta-a-porta."
+    },
+    "breadcrumb_service_name": "Seguro de carga",
+    "service_name": "Seguro de carga – cobertura ad valorem",
+    "service_type": "Seguro de transporte",
+    "faq": [
+      {
+        "q": "Porque assegurar o frete marítimo/aéreo?",
+        "a": "Para cobrir riscos de avaria, perda ou roubo. Uma apólice ad valorem protege a sua tesouraria e compromissos B2B."
+      },
+      {
+        "q": "Que cláusulas recomendam?",
+        "a": "Segundo a mercadoria e a rota: Institute Cargo Clauses (A) para uma cobertura ampla, ou convenções específicas (ADR, perecíveis, etc.)."
+      },
+      {
+        "q": "Garantem cobertura porta-a-porta?",
+        "a": "Sim, calibramos a apólice desde a recolha até à entrega, incluindo pré/pós-acheminement."
+      }
+    ],
+    "hero": {
+      "title": "Seguro de carga",
+      "subtitle": "Proteja a sua supply chain e a sua tesouraria com uma cobertura adaptada aos seus fluxos B2B.",
+      "cta_quote": "Pedir cobertura"
+    },
+    "benefits": [
+      "Cobertura ad valorem adaptada aos seus fluxos",
+      "Gestão de sinistros e documentos de prova",
+      "Conselhos sobre proteção/embalagem export",
+      "Integração no orçamento de frete para visibilidade total"
+    ],
+    "services": {
+      "title": "Benefícios",
+      "cta_quote": "Pedir cobertura",
+      "cta_quote_secondary": "Obter orçamento"
+    },
+    "images": {
+      "hero_alt": "Seguro de carga para transporte",
+      "services_alt": "Análise das garantias de seguro de carga"
+    }
   }
 }

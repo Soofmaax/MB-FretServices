@@ -1,0 +1,29 @@
+{
+  "title": "FCL vs LCL — How to decide? | MB Fret Services",
+  "description": "Choosing between FCL and LCL in B2B sea freight: 13–15 m³ thresholds, safety, transit times, costs. Decision method and use cases on France–China/Turkey/Africa routes.",
+  "hero_h1": "FCL vs LCL — Decision method",
+  "hero_intro": "Optimize total cost, safety and time-to-market. A clear method to arbitrate based on your volume, lead times and cargo sensitivity.",
+  "hero_links": {
+    "maritime": "Sea freight",
+    "china": "France ↔ China",
+    "turkey": "France ↔ Turkey",
+    "congo": "France ↔ Congo"
+  },
+  "sections": [],
+  "faq": [
+    {
+      "q": "Which volume threshold justifies switching from LCL to FCL?",
+      "a": "In practice, around 13–15 m³, FCL often becomes more attractive economically and in terms of security. The decision still depends on port, seasonality and lead-time constraints."
+    },
+    {
+      "q": "Is LCL riskier?",
+      "a": "Groupage implies additional handling. Export-grade packaging and ad valorem insurance significantly reduce risk. For sensitive/high-value cargo, FCL remains recommended."
+    },
+    {
+      "q": "Can we mix LCL and air freight to speed up part of the flow?",
+      "a": "Yes, multimodality is a useful lever to meet critical milestones. We calibrate a suitable transport plan with partial consolidation."
+    }
+  ],
+  "cta_compare": "Ready to compare FCL/LCL?",
+  "cta_compare_desc": "Our experts recommend an option based on your volume, risk profile and lead times."
+}

@@ -89,6 +89,47 @@
     ],
     "cta": "Request a Personalized Quote"
   },
+  "customs": {
+    "seo": {
+      "title": "Customs clearance & compliance — Import/Export | MB Fret Services",
+      "description": "Import/export customs formalities, customs representation, duties & taxes calculation. Document assistance, Incoterms and regulatory compliance."
+    },
+    "breadcrumb_service_name": "Customs clearance",
+    "service_name": "Customs clearance & import/export compliance",
+    "service_type": "Customs clearance",
+    "faq": [
+      {
+        "q": "Which documents are essential?",
+        "a": "Commercial invoice, packing list, origin documents, possible certificates and specific authorizations depending on the goods."
+      },
+      {
+        "q": "Do you provide customs representation?",
+        "a": "Yes, we handle customs representation, document control and regulatory compliance for your imports and exports."
+      },
+      {
+        "q": "Can you advise on Incoterms?",
+        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) depending on your flows, risk tolerance and organization."
+      }
+    ],
+    "hero": {
+      "title": "Customs clearance",
+      "subtitle": "Secure your flows with rigorous document control and efficient customs representation.",
+      "cta_quote": "Talk to an expert"
+    },
+    "points": [
+      "Document control & compliance",
+      "Customs representation",
+      "Duties and taxes management",
+      "Incoterms and procedures support"
+    ],
+    "services": {
+      "title": "Services",
+      "cta": "Get an estimate"
+    },
+    "images": {
+      "hero_alt": "Customs clearance and document formalities"
+    }
+  },
   "destinations": {
     "title": "Sea Freight Destinations - Africa",
     "subtitle": "Regular rotations to major African ports with optimized lead times.",
@@ -117,5 +158,48 @@
     "text": "Get your personalized quote in under 24 hours. Our experts analyze your needs and propose the most cost-effective maritime solution.",
     "cta": "Sea Freight Quote",
     "whatsapp": "Instant WhatsApp"
+  },
+  "insurance": {
+    "seo": {
+      "title": "Cargo insurance — Ad valorem coverage | MB Fret Services",
+      "description": "Transport insurance for sea/air freight: ad valorem coverage, claims handling, export packaging advice. Door-to-door."
+    },
+    "breadcrumb_service_name": "Cargo insurance",
+    "service_name": "Cargo insurance – ad valorem coverage",
+    "service_type": "Transport insurance",
+    "faq": [
+      {
+        "q": "Why insure sea/air freight?",
+        "a": "To cover risks of damage, loss or theft. An ad valorem policy protects your cash flow and B2B commitments."
+      },
+      {
+        "q": "Which clauses do you recommend?",
+        "a": "Depending on cargo and route: Institute Cargo Clauses (A) for broad coverage, or specific conventions (ADR, perishables, etc.)."
+      },
+      {
+        "q": "Do you insure door-to-door?",
+        "a": "Yes, we calibrate the policy from pickup to delivery, including pre- and post-carriage."
+      }
+    ],
+    "hero": {
+      "title": "Cargo insurance",
+      "subtitle": "Protect your supply chain and cash flow with coverage adapted to your B2B flows.",
+      "cta_quote": "Request coverage"
+    },
+    "benefits": [
+      "Ad valorem coverage adapted to your flows",
+      "Claims handling and documentary evidence management",
+      "Advice on protection/export packaging",
+      "Integration into freight quote for full visibility"
+    ],
+    "services": {
+      "title": "Benefits",
+      "cta_quote": "Request coverage",
+      "cta_quote_secondary": "Get a quote"
+    },
+    "images": {
+      "hero_alt": "Cargo insurance for transport",
+      "services_alt": "Reviewing cargo insurance coverage"
+    }
   }
 }

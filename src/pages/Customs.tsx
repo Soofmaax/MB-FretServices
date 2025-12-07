@@ -6,66 +6,89 @@ import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { FileText, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 const Customs: FC = () => {
   const SITE_URL = getSiteUrl();
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+  const { t } = useTranslation(['freight', 'navbar']);
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t(
+    'freight:customs.seo.title',
+    'Dédouanement & conformité — Import/Export | MB Fret Services'
+  );
+  const seoDescription = t(
+    'freight:customs.seo.description',
+    'Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité.'
+  );
 
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + pathForLang('services', lang) },
-      { '@type': 'ListItem', position: 3, name: 'Dédouanement', item: SITE_URL + pathForLang('services_customs', lang) },
+      { '@type': 'ListItem', position: 1, name: t('navbar:home', 'Accueil'), item: SITE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: t('navbar:services', 'Services'), item: SITE_URL + pathForLang('services', lang) },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: t('freight:customs.breadcrumb_service_name', 'Dédouanement'),
+        item: SITE_URL + pathForLang('services_customs', lang),
+      },
     ],
   };
 
   const serviceLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Dédouanement & conformité import/export',
-    serviceType: 'Dédouanement',
+    name: t('freight:customs.service_name', 'Dédouanement & conformité import/export'),
+    serviceType: t('freight:customs.service_type', 'Dédouanement'),
     provider: { '@type': 'Organization', name: 'MB Fret Services', url: SITE_URL },
     areaServed: [{ '@type': 'Place', name: 'France' }, { '@type': 'Place', name: 'UE' }],
   };
 
+  const faqEntities = (t('freight:customs.faq', { returnObjects: true }) as Array<{ q: string; a: string }>) || [];
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Quels documents sont indispensables ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Facture commerciale, packing list, documents d’origine, certificats éventuels et autorisations spécifiques selon la marchandise.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Proposez-vous une représentation en douane ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Oui, nous opérons la représentation en douane, le contrôle documentaire et la conformité réglementaire pour vos importations et exportations.' },
-      },
-      {
-        '@type': 'Question',
-        name: 'Pouvez-vous assister sur les Incoterms ?',
-        acceptedAnswer: { '@type': 'Answer', text: 'Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) selon votre flux, votre tolérance au risque et votre organisation.' },
-      },
-    ],
+    mainEntity: faqEntities.map((qa) => ({
+      '@type': 'Question',
+      name: qa.q,
+      acceptedAnswer: { '@type': 'Answer', text: qa.a },
+    })),
   };
 
-  const points = [
-    'Contrôle documentaire & conformité',
-    'Représentation en douane',
-    'Gestion des droits et taxes',
-    'Assistance Incoterms et procédures',
-  ];
+  const points = (t('freight:customs.points', { returnObjects: true }) as string[]) || [];
 
   return (
     <div className="pt-16">
       <SEO
-        title="Dédouanement & conformité — Import/Export | MB Fret Services"
-        description="Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité."
+        title={seoTitle}
+        description={seoDescription}
         ogImage="/og-default.webp"
-        jsonLd={[breadcrumb, serviceLd, faqLd]}
+        jsonLd={[
+          breadcrumb,
+          serviceLd,
+          faqLd,
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `${t('freight:customs.hero.title', 'Dédouanement')} - MB Fret Services`,
+            inLanguage: langTag,
+          },
+        ]}
       />
       <Helmet>
         <link
@@ -84,7 +107,7 @@ const Customs: FC = () => {
             src="/images/hero-customs.jpg"
             webpSrc="/images/hero-customs.webp"
             avifSrc="/images/hero-customs.avif"
-            alt="Dédouanement et formalités documentaires"
+            alt={t('freight:customs.images.hero_alt', 'Dédouanement et formalités documentaires')}
             width={1600}
             height={900}
             priority
@@ -96,20 +119,29 @@ const Customs: FC = () => {
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-6">
             <FileText size={48} className="text-accent-400 mr-4" aria-hidden="true" />
-            <h1 className="text-4xl md:text-5xl font-bold">Dédouanement</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">
+              {t('freight:customs.hero.title', 'Dédouanement')}
+            </h1>
           </div>
           <p className="text-xl text-gray-100">
-            Sécurisez vos flux avec un pilotage documentaire rigoureux et une représentation en douane efficace.
+            {t(
+              'freight:customs.hero.subtitle',
+              'Sécurisez vos flux avec un pilotage documentaire rigoureux et une représentation en douane efficace.'
+            )}
           </p>
           <div className="mt-6">
-            <CtaButton href="contact" variant="primary">Parler à un expert</CtaButton>
+            <CtaButton href="contact" variant="primary">
+              {t('freight:customs.hero.cta_quote', 'Parler à un expert')}
+            </CtaButton>
           </div>
         </div>
       </section>
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary-900 mb-6">Prestations</h2>
+          <h2 className="text-3xl font-bold text-primary-900 mb-6">
+            {t('freight:customs.services.title', 'Prestations')}
+          </h2>
           <div className="space-y-3">
             {points.map((p) => (
               <div key={p} className="flex items-start">
@@ -119,7 +151,9 @@ const Customs: FC = () => {
             ))}
           </div>
           <div className="mt-8">
-            <CtaButton href="contact" variant="primary">Obtenir une estimation</CtaButton>
+            <CtaButton href="contact" variant="primary">
+              {t('freight:customs.services.cta', 'Obtenir une estimation')}
+            </CtaButton>
           </div>
         </div>
       </section>

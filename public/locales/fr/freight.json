@@ -98,6 +98,47 @@
     ],
     "cta": "Demander un Devis Personnalisé"
   },
+  "customs": {
+    "seo": {
+      "title": "Dédouanement & conformité — Import/Export | MB Fret Services",
+      "description": "Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité."
+    },
+    "breadcrumb_service_name": "Dédouanement",
+    "service_name": "Dédouanement & conformité import/export",
+    "service_type": "Dédouanement",
+    "faq": [
+      {
+        "q": "Quels documents sont indispensables ?",
+        "a": "Facture commerciale, packing list, documents d’origine, certificats éventuels et autorisations spécifiques selon la marchandise."
+      },
+      {
+        "q": "Proposez-vous une représentation en douane ?",
+        "a": "Oui, nous opérons la représentation en douane, le contrôle documentaire et la conformité réglementaire pour vos importations et exportations."
+      },
+      {
+        "q": "Pouvez-vous assister sur les Incoterms ?",
+        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) selon votre flux, votre tolérance au risque et votre organisation."
+      }
+    ],
+    "hero": {
+      "title": "Dédouanement",
+      "subtitle": "Sécurisez vos flux avec un pilotage documentaire rigoureux et une représentation en douane efficace.",
+      "cta_quote": "Parler à un expert"
+    },
+    "points": [
+      "Contrôle documentaire & conformité",
+      "Représentation en douane",
+      "Gestion des droits et taxes",
+      "Assistance Incoterms et procédures"
+    ],
+    "services": {
+      "title": "Prestations",
+      "cta": "Obtenir une estimation"
+    },
+    "images": {
+      "hero_alt": "Dédouanement et formalités documentaires"
+    }
+  },
   "destinations": {
     "title": "Destinations Fret Maritime Afrique",
     "subtitle": "Rotations régulières vers les principaux ports africains avec des délais optimisés.",
@@ -126,5 +167,48 @@
     "text": "Obtenez votre devis personnalisé en moins de 24h. Nos experts analysent vos besoins et vous proposent la solution maritime la plus économique.",
     "cta": "Devis Fret Maritime",
     "whatsapp": "WhatsApp Immédiat"
+  },
+  "insurance": {
+    "seo": {
+      "title": "Assurance cargo — Couverture ad valorem | MB Fret Services",
+      "description": "Assurance transport pour fret maritime/aérien: couverture ad valorem, gestion des sinistres, conseils packaging export. Porte-à-porte."
+    },
+    "breadcrumb_service_name": "Assurance cargo",
+    "service_name": "Assurance cargo – couverture ad valorem",
+    "service_type": "Assurance transport",
+    "faq": [
+      {
+        "q": "Pourquoi assurer le fret maritime/aérien ?",
+        "a": "Pour couvrir les risques d’avarie, de perte ou de vol. Une police ad valorem protège votre trésorerie et vos engagements B2B."
+      },
+      {
+        "q": "Quelles clauses recommandez-vous ?",
+        "a": "Selon la marchandise et la route : Institute Cargo Clauses (A) pour une couverture large, ou conventions spécifiques (ADR, périssables, etc.)."
+      },
+      {
+        "q": "Assurez-vous porte-à-porte ?",
+        "a": "Oui, nous calibrons la police du point d’enlèvement à la livraison, incluant pré/post-acheminement."
+      }
+    ],
+    "hero": {
+      "title": "Assurance cargo",
+      "subtitle": "Protégez votre supply chain et votre trésorerie grâce à une couverture adaptée à vos flux B2B.",
+      "cta_quote": "Demander une couverture"
+    },
+    "benefits": [
+      "Couverture ad valorem adaptée",
+      "Gestion de sinistres et preuves documentaires",
+      "Conseils sur la protection/emballage export",
+      "Intégration au devis fret pour une visibilité totale"
+    ],
+    "services": {
+      "title": "Bénéfices",
+      "cta_quote": "Demander une couverture",
+      "cta_quote_secondary": "Obtenir un devis"
+    },
+    "images": {
+      "hero_alt": "Assurance cargo transport",
+      "services_alt": "Analyse des garanties d'assurance cargo"
+    }
   }
 }
