@@ -1,6 +1,10 @@
 {
   "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Legal Notice",
+  "seo_title": "Legal notice | MB Fret Services",
+  "seo_description": "Legal notice of MB Fret Services: legal information, responsibilities, intellectual property and terms of use of the website.",
+  "privacy_seo_title": "Privacy Policy | MB Fret Services",
+  "privacy_seo_description": "Privacy policy and personal data protection for users of the MB Fret Services website.",
   "sections": {
     "info": {
       "heading": "Legal Information",

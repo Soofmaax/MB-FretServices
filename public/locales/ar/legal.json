@@ -1,6 +1,10 @@
 {
   "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "إشعار قانوني",
+  "seo_title": "إشعار قانوني | MB Fret Services",
+  "seo_description": "الإشعار القانوني لـ MB Fret Services: المعلومات القانونية، المسؤوليات، حقوق الملكية الفكرية وشروط استخدام الموقع.",
+  "privacy_seo_title": "سياسة الخصوصية | MB Fret Services",
+  "privacy_seo_description": "سياسة الخصوصية وحماية البيانات الشخصية لمستخدمي موقع MB Fret Services.",
   "sections": {
     "info": {
       "heading": "معلومات قانونية",

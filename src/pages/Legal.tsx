@@ -6,15 +6,35 @@ import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 const Legal: FC = () => {
   const SITE_URL = getSiteUrl();
-  const { t } = useTranslation('legal');
+  const { t } = useTranslation(['legal', 'navbar']);
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
   const legalPath = pathForLang('legal', lang);
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+    zh: 'zh-CN',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t('legal:seo_title', 'Mentions légales | MB Fret Services');
+  const seoDescription = t(
+    'legal:seo_description',
+    "Mentions légales de MB Fret Services : informations légales, responsabilités, propriété intellectuelle et conditions d'utilisation du site."
+  );
 
   return (
     <div className="pt-16">
       <SEO
-        title="Mentions Légales | MB Fret Services"
-        description="Mentions légales de MB Fret Services - Informations légales et conditions d'utilisation du site."
+        title={seoTitle}
+        description={seoDescription}
         robotsContent="noindex,follow"
         jsonLd={[
           {
@@ -24,13 +44,13 @@ const Legal: FC = () => {
               {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'Accueil',
+                name: t('navbar:home', 'Accueil'),
                 item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Mentions légales',
+                name: t('legal:page_title'),
                 item: SITE_URL + legalPath,
               },
             ],
@@ -38,8 +58,8 @@ const Legal: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: 'Mentions légales - MB Fret Services',
-            inLanguage: 'fr-FR',
+            name: `${t('legal:page_title')} - MB Fret Services`,
+            inLanguage: langTag,
           },
         ]}
       />

@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'pt' | 'ar' | 'es' | 'tr' | 'sw' | 'de' | 'it';
+export type Lang = 'fr' | 'en' | 'pt' | 'ar' | 'es' | 'tr' | 'sw' | 'de' | 'it' | 'zh';
 
 export type RouteKey =
   | 'home'

@@ -1,6 +1,10 @@
 {
   "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Aviso Legal",
+  "seo_title": "Aviso legal | MB Fret Services",
+  "seo_description": "Aviso legal da MB Fret Services: informações legais, responsabilidades, propriedade intelectual e condições de utilização do site.",
+  "privacy_seo_title": "Política de privacidade | MB Fret Services",
+  "privacy_seo_description": "Política de privacidade e proteção de dados pessoais para os utilizadores do site MB Fret Services.",
   "sections": {
     "info": {
       "heading": "Informações Legais",

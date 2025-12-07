@@ -6,15 +6,35 @@ import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 const Privacy: FC = () => {
   const SITE_URL = getSiteUrl();
-  const { t } = useTranslation('legal');
+  const { t } = useTranslation(['legal', 'navbar']);
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
   const privacyPath = pathForLang('privacy', lang);
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+    zh: 'zh-CN',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t('legal:privacy_seo_title', 'Politique de confidentialité | MB Fret Services');
+  const seoDescription = t(
+    'legal:privacy_seo_description',
+    'Politique de confidentialité et protection des données personnelles pour MB Fret Services.'
+  );
 
   return (
     <div className="pt-16">
       <SEO
-        title="Politique de Confidentialité | MB Fret Services"
-        description="Politique de confidentialité et protection des données personnelles pour MB Fret Services."
+        title={seoTitle}
+        description={seoDescription}
         robotsContent="noindex,follow"
         jsonLd={[
           {
@@ -24,13 +44,13 @@ const Privacy: FC = () => {
               {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'Accueil',
+                name: t('navbar:home', 'Accueil'),
                 item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Politique de confidentialité',
+                name: t('legal:privacy.heading', 'Politique de confidentialité'),
                 item: SITE_URL + privacyPath,
               },
             ],
@@ -38,8 +58,8 @@ const Privacy: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: 'Politique de confidentialité - MB Fret Services',
-            inLanguage: 'fr-FR',
+            name: `${t('legal:privacy.heading', 'Politique de confidentialité')} - MB Fret Services`,
+            inLanguage: langTag,
           },
         ]}
       />
