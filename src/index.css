@@ -31,6 +31,16 @@
   animation: drift-slow 12s ease-in-out infinite;
 }
 
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-float-slow,
+  .animate-drift-slow {
+    animation: none !important;
+  }
+}
+
 /* Deterministic animation delay utilities to avoid inline styles */
 .animate-delay-0 { animation-delay: 0ms; }
 .animate-delay-150 { animation-delay: 150ms; }

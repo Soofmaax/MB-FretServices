@@ -96,7 +96,7 @@ const Services: FC = () => {
                       </div>
                       <div>
                         <h2 className="text-3xl font-bold text-primary-900">{title}</h2>
-                        <p className="text-accent-500 font-medium">{subtitle}</p>
+                        <p className="text-accent-700 font-medium">{subtitle}</p>
                       </div>
                     </div>
 
@@ -107,7 +107,7 @@ const Services: FC = () => {
                     <ul className="space-y-3 mb-6">
                       {features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
-                          <div className="w-2 h-2 bg-accent-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-accent-700 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}

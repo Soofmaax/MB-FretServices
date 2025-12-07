@@ -1,4 +1,5 @@
 {
+  "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Aviso legal",
   "sections": {
     "info": {
@@ -9,7 +10,8 @@
         "capital_social": "Capital social",
         "siege_social": "Domicilio social",
         "siret": "SIRET",
-        "code_ape": "Código APE"
+        "code_ape": "Código APE",
+        "rc_pro": "Responsabilidad civil profesional"
       }
     },
     "contact": {
@@ -22,8 +24,8 @@
     },
     "hosting": {
       "heading": "Alojamiento",
-      "content_line1": "Este sitio está alojado por [Nombre del proveedor]",
-      "content_line2": "[Dirección del proveedor]"
+      "content_line1": "Este sitio está alojado por {{HEBERGEUR_NOM}}",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
     },
     "ip": {
       "heading": "Propiedad intelectual",

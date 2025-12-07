@@ -204,7 +204,7 @@ const FreightMaritime: FC = () => {
               <div className="space-y-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start">
-                    <CheckCircle size={20} className="text-accent-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
+                    <CheckCircle size={20} className="text-accent-700 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
                     <span className="text-gray-700">{service}</span>
                   </div>
                 ))}
@@ -251,7 +251,7 @@ const FreightMaritime: FC = () => {
                 className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-150' : index === 2 ? 'animate-delay-300' : index === 3 ? 'animate-delay-450' : 'animate-delay-600'}`}
               >
                 <div className="flex items-center mb-6">
-                  <MapPin size={24} className="text-accent-500 mr-3" aria-hidden="true" />
+                  <MapPin size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                   <div>
                     <h3 className="text-2xl font-bold text-primary-900">{destination.country}</h3>
                     <p className="text-gray-700">Port : {destination.port}</p>

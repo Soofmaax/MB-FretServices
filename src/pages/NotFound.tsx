@@ -46,13 +46,13 @@ const NotFound: FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
               <LocalizedLink
                 to=""
-                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-500 text-white hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500 transition-colors"
+                className="inline-flex items-center px-6 py-3 rounded-lg bg-accent-700 text-white hover:bg-accent-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-700 transition-colors"
               >
                 {t('notFound:ui.cta')}
               </LocalizedLink>
               <LocalizedLink
                 to="contact"
-                className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-accent-500 text-accent-600 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-500 transition-colors"
+                className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-accent-500 text-accent-700 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-700 transition-colors"
               >
                 {t('common:get_quote', 'Demander un Devis')}
               </LocalizedLink>

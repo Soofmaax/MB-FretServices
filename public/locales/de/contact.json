@@ -33,6 +33,13 @@
       { "title": "Individuelle Betreuung:", "desc": "Ein fester Ansprechpartner für Ihr Projekt" }
     ]
   },
+  "form": {
+    "name": "Vollständiger Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "submit": "Senden",
+    "gdpr_notice": "Ihre Angaben werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet. Keine automatische Werbung und kein Weiterverkauf Ihrer Daten."
+  },
   "cta": {
     "title": "Bereit, Ihr Projekt zu starten?",
     "text": "Unsere Experten analysieren Ihren Bedarf und schlagen die passendste Logistiklösung vor.",

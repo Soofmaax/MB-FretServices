@@ -8,6 +8,7 @@ const Services = lazy(() => import('./pages/Services'));
 const Destinations = lazy(() => import('./pages/Destinations'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
+const Privacy = lazy(() => import('./pages/Privacy'));
 const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
 const AirFreight = lazy(() => import('./pages/AirFreight'));
 const Customs = lazy(() => import('./pages/Customs'));
@@ -66,6 +67,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="politique-confidentialite"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
               </Suspense>
             }
           />
@@ -224,12 +233,28 @@ function App() {
               </Suspense>
             }
           />
+          <Route
+            path="privacy"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
+              </Suspense>
+            }
+          />
           {/* EN localized slugs (aliases) */}
           <Route
             path="legal-notice"
             element={
               <Suspense fallback={null}>
                 <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="privacy-policy"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
               </Suspense>
             }
           />
@@ -413,6 +438,14 @@ function App() {
             }
           />
           <Route
+            path="politica-privacidade"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
+              </Suspense>
+            }
+          />
+          <Route
             path="servicos/frete-maritimo"
             element={
               <Suspense fallback={null}>
@@ -584,6 +617,14 @@ function App() {
             }
           />
           <Route
+            path="politica-privacidad"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
+              </Suspense>
+            }
+          />
+          <Route
             path="servicios/transporte-maritimo"
             element={
               <Suspense fallback={null}>
@@ -613,6 +654,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <Legal />
+              </Suspense>
+            }
+          />
+          <Route
+            path="gizlilik-politikasi"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
               </Suspense>
             }
           />
@@ -658,6 +707,14 @@ function App() {
             }
           />
           <Route
+            path="informativa-privacy"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
+              </Suspense>
+            }
+          />
+          <Route
             path="servizi/trasporto-marittimo"
             element={
               <Suspense fallback={null}>
@@ -699,6 +756,14 @@ function App() {
             }
           />
           <Route
+            path="datenschutz"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
+              </Suspense>
+            }
+          />
+          <Route
             path="leistungen/seefracht"
             element={
               <Suspense fallback={null}>
@@ -732,6 +797,14 @@ function App() {
             }
           />
           <Route
+            path="sera-ya-faragha"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
+              </Suspense>
+            }
+          />
+          <Route
             path="huduma/usafirishaji-wa-baharini"
             element={
               <Suspense fallback={null}>
@@ -761,6 +834,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="سياسة-الخصوصية"
+            element={
+              <Suspense fallback={null}>
+                <Privacy />
               </Suspense>
             }
           />

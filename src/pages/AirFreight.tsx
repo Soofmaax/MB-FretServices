@@ -126,7 +126,7 @@ const AirFreight: FC = () => {
             {features.map((f, i) => (
               <div key={f.title} className={`bg-white rounded-xl shadow p-6 animate-slide-up ${i ? 'animate-delay-150' : 'animate-delay-0'}`}>
                 <div className="flex items-center mb-4">
-                  <f.icon size={24} className="text-accent-500 mr-3" aria-hidden="true" />
+                  <f.icon size={24} className="text-accent-700 mr-3" aria-hidden="true" />
                   <h3 className="text-xl font-bold text-primary-900">{f.title}</h3>
                 </div>
                 <p className="text-gray-700">{f.text}</p>
@@ -146,7 +146,7 @@ const AirFreight: FC = () => {
             <div className="space-y-3">
               {services.map((s) => (
                 <div className="flex items-start" key={s}>
-                  <CheckCircle size={20} className="text-accent-500 mr-3 mt-1" aria-hidden="true" />
+                  <CheckCircle size={20} className="text-accent-700 mr-3 mt-1" aria-hidden="true" />
                   <span className="text-gray-700">{s}</span>
                 </div>
               ))}

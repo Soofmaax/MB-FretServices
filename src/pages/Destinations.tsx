@@ -90,7 +90,7 @@ const Destinations: FC = () => {
                   >
                     <div className="p-8">
                       <div className="flex items-center mb-6">
-                        <MapPin size={24} className="text-accent-500 mr-3" />
+                        <MapPin size={24} className="text-accent-700 mr-3" />
                         <div>
                           <h3 className="text-2xl font-bold text-primary-900">{country.name}</h3>
                           <p className="text-gray-700">{t('labels.port_principal')} {country.port}</p>
@@ -182,17 +182,17 @@ const Destinations: FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="p-6 bg-gray-50 rounded-lg">
-              <Clock size={40} className="text-accent-500 mx-auto mb-4" />
+              <Clock size={40} className="text-accent-700 mx-auto mb-4" />
               <h3 className="font-semibold text-primary-900 mb-2">{t('other.fast_response')}</h3>
               <p className="text-gray-700 text-sm">{t('other.fast_response_desc')}</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-lg">
-              <MapPin size={40} className="text-accent-500 mx-auto mb-4" />
+              <MapPin size={40} className="text-accent-700 mx-auto mb-4" />
               <h3 className="font-semibold text-primary-900 mb-2">{t('other.global_network')}</h3>
               <p className="text-gray-700 text-sm">{t('other.global_network_desc')}</p>
             </div>
             <div className="p-6 bg-gray-50 rounded-lg">
-              <Ship size={40} className="text-accent-500 mx-auto mb-4" />
+              <Ship size={40} className="text-accent-700 mx-auto mb-4" />
               <h3 className="font-semibold text-primary-900 mb-2">{t('other.tailored')}</h3>
               <p className="text-gray-700 text-sm">{t('other.tailored_desc')}</p>
             </div>

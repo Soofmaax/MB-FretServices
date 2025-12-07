@@ -113,7 +113,7 @@ const Customs: FC = () => {
           <div className="space-y-3">
             {points.map((p) => (
               <div key={p} className="flex items-start">
-                <CheckCircle size={20} className="text-accent-500 mr-3 mt-1" aria-hidden="true" />
+                <CheckCircle size={20} className="text-accent-700 mr-3 mt-1" aria-hidden="true" />
                 <span className="text-gray-700">{p}</span>
               </div>
             ))}

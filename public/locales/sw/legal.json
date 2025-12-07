@@ -1,4 +1,5 @@
 {
+  "__comment": "Template - Remplacer tous les {{PLACEHOLDERS}} par les vraies infos client",
   "page_title": "Ilani ya Kisheria",
   "sections": {
     "info": {
@@ -9,7 +10,8 @@
         "capital_social": "Mtaji wa hisa",
         "siege_social": "Makao makuu",
         "siret": "SIRET",
-        "code_ape": "Msimbo wa APE"
+        "code_ape": "Msimbo wa APE",
+        "rc_pro": "Bima ya uwajibikaji wa kitaaluma"
       }
     },
     "contact": {
@@ -22,8 +24,8 @@
     },
     "hosting": {
       "heading": "Uwekaji Wavuti",
-      "content_line1": "Tovuti hii imehifadhiwa na [Jina la mtoa huduma]",
-      "content_line2": "[Anwani ya mtoa huduma]"
+      "content_line1": "Tovuti hii imehifadhiwa na {{HEBERGEUR_NOM}}",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
     },
     "ip": {
       "heading": "Haki Miliki",

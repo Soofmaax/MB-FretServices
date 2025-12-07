@@ -33,6 +33,13 @@
       { "title": "Acompanhamento personalizado:", "desc": "Um contacto dedicado ao seu projeto" }
     ]
   },
+  "form": {
+    "name": "Nome completo",
+    "email": "Email",
+    "message": "Mensagem",
+    "submit": "Enviar",
+    "gdpr_notice": "As informações fornecidas serão utilizadas apenas para responder ao seu pedido. Não fazemos prospeção automática nem vendemos os seus dados."
+  },
   "cta": {
     "title": "Pronto para iniciar o seu projeto?",
     "text": "Os nossos especialistas estão disponíveis para analisar as suas necessidades e propor a solução logística mais adequada.",

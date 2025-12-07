@@ -51,6 +51,10 @@ Générez des captures et placez‑les dans `public/screenshots`:
 - SSG via Puppeteer postbuild (FR/EN/PT)
 - Détails: voir documentation/ARCHITECTURE.md
 
+## Structure
+- `src/components/ui/` : composants génériques et réutilisables quel que soit le secteur (CTA, hero, images responsives, value props, etc.)
+- `src/components/industry/` : composants spécifiques au métier/logistique (simulateurs, formulaires de devis, pages routes détaillées) à adapter ou remplacer pour un autre secteur (yoga, coiffeur, kiné, etc.)
+
 ## Fonctionnalités clés
 - SEO International:
   - Canonical/hreflang par page

@@ -33,6 +33,13 @@
       { "title": "Follow-up personalizzato:", "desc": "Un referente dedicato al tuo progetto" }
     ]
   },
+  "form": {
+    "name": "Nome e cognome",
+    "email": "Email",
+    "message": "Messaggio",
+    "submit": "Invia",
+    "gdpr_notice": "Le informazioni inserite verranno utilizzate esclusivamente per rispondere alla tua richiesta. Nessun invio automatico di offerte né vendita dei dati."
+  },
   "cta": {
     "title": "Pronto per iniziare il tuo progetto?",
     "text": "I nostri esperti sono disponibili per analizzare le tue esigenze e proporti la soluzione logistica più adatta.",
