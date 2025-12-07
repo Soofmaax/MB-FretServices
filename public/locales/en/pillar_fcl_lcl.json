@@ -1,15 +1,128 @@
 {
   "title": "FCL vs LCL — How to decide? | MB Fret Services",
-  "description": "Choosing between FCL and LCL in B2B sea freight: 13–15 m³ thresholds, safety, transit times, costs. Decision method and use cases on France–China/Turkey/Africa routes.",
+  "description": "Choosing between FCL and LCL in B2B sea freight: 13–15 m³ thresholds, safety, transit times and costs. A practical decision method and use cases on France–China/Turkey/Africa routes.",
   "hero_h1": "FCL vs LCL — Decision method",
-  "hero_intro": "Optimize total cost, safety and time-to-market. A clear method to arbitrate based on your volume, lead times and cargo sensitivity.",
+  "hero_intro": "Optimize total delivered cost, cargo safety and time-to-market. A clear method to arbitrate between FCL and LCL based on volume, deadlines and cargo sensitivity.",
   "hero_links": {
     "maritime": "Sea freight",
     "china": "France ↔ China",
     "turkey": "France ↔ Turkey",
     "congo": "France ↔ Congo"
   },
-  "sections": [],
+  "sections": [
+    {
+      "h2": "Basics: definitions and implications",
+      "p": [
+        "FCL (Full Container Load) means you book a full container for your cargo. You control stuffing, sealing and routing, which generally improves security, traceability and lead-time reliability.",
+        "LCL (Less than Container Load) means your cargo is grouped with other shippers’ cargo. It introduces consolidation and deconsolidation steps, which may increase handling and transit time but keeps costs under control for smaller volumes."
+      ]
+    },
+    {
+      "h2": "Volume and economic thresholds",
+      "p": [
+        "Below roughly 13–15 m³, LCL is usually more competitive: you pay for the volume you actually use and avoid paying for empty container space.",
+        "Above that threshold, FCL quickly becomes attractive in cost per m³ and risk control (fewer handlings, less exposure). The exact switch point still depends on port pair, seasonality and carrier capacity."
+      ]
+    },
+    {
+      "h2": "Decision criteria",
+      "ul": [
+        "Volume/weight — CBM and gross weight: use a CBM calculator to size correctly.",
+        "Cargo value/sensitivity — FCL is often preferred for fragile or high-value goods.",
+        "Lead time — FCL is generally more direct; LCL implies consolidation steps.",
+        "Budget — compare FCL vs LCL on total delivered cost, not only on the ocean rate.",
+        "Internal capabilities — systems, partners and ability to manage bookings and deadlines."
+      ]
+    },
+    {
+      "h2": "Quick method",
+      "ol": [
+        "Estimate CBM (H × L × W × quantity / 1,000,000).",
+        "Compare a total delivered cost scenario FCL vs LCL for the relevant ports and season.",
+        "Arbitrate based on lead-time criticality and acceptable risk level."
+      ]
+    },
+    {
+      "h2": "Detailed costs: compare total delivered cost",
+      "ul": [
+        "Sea freight + surcharges (BAF, CAF, PSS)",
+        "Origin/destination THC, BL/documentation and handling charges",
+        "Pre/post-carriage by road/rail and any storage/demurrage/detention",
+        "Ad valorem insurance, duties & taxes and admin/brokerage fees"
+      ],
+      "p": [
+        "The best option is not always the lowest ocean rate, but the setup that minimises total delivered cost for an acceptable risk level."
+      ]
+    },
+    {
+      "h2": "Risks and packaging",
+      "ul": [
+        "LCL: more handling and transloading, which makes export-grade packaging essential (blocking, bracing, corner protection, clear labelling).",
+        "FCL: reduced mechanical stress thanks to dedicated container; focus on proper stuffing, lashing and ventilation if needed.",
+        "All modes: documentation consistency and proportionate insurance coverage are key to protecting cash flow and resolving any incident."
+      ]
+    },
+    {
+      "h2": "Comparative scenarios (simplified)",
+      "ul": [
+        "Small volume with flexible deadline: LCL with weekly consolidation and basic tracking.",
+        "Medium volume, sensitive goods: FCL 20' with professional packing and ad valorem insurance.",
+        "Large, recurring flows: FCL 40'/40'HC with fixed schedules and reserved slots to stabilise the supply chain."
+      ]
+    },
+    {
+      "h2": "Route-based use cases",
+      "sub": [
+        {
+          "h3": "France ↔ China",
+          "p": [
+            "For planned, high-volume flows, FCL secures capacity and lead times. For test batches and small launches, LCL remains viable provided you anticipate consolidation dates."
+          ]
+        },
+        {
+          "h3": "France ↔ Turkey",
+          "p": [
+            "On this short/medium-haul corridor, LCL is relevant for occasional campaigns and small volumes; FCL quickly becomes the best option for recurring B2B flows with tighter delivery commitments."
+          ]
+        },
+        {
+          "h3": "France ↔ Africa (Congo)",
+          "p": [
+            "LCL groupage is well suited to pallets and parcels collected across France (Paris region, Lyon, Marseille). As value and sensitivity increase, switching to FCL with reinforced export packaging reduces handling and dispute risk."
+          ]
+        }
+      ]
+    },
+    {
+      "h2": "CBM, TEU and sizing",
+      "p": [
+        "A 20' container offers roughly 33 m³ of theoretical volume; a 40' around 67 m³. The effective usable volume depends on cargo type, weight constraints, stacking capability and any dangerous goods requirements. Export-grade packaging and careful palletisation reduce wasted space and the risk of damage."
+      ]
+    },
+    {
+      "h2": "Frequent mistakes",
+      "ul": [
+        "Comparing only the ocean freight without including origin/destination and pre/post-carriage costs.",
+        "Ignoring seasonality and congestion on the route (peak season, holidays, strikes).",
+        "Underestimating the importance of export packaging and appropriate insurance for the cargo profile."
+      ]
+    },
+    {
+      "h2": "Decision checklist",
+      "ul": [
+        "CBM/weight confirmed; cargo sensitivity assessed.",
+        "Ports and services selected; routing and cut-offs clearly understood.",
+        "FCL/LCL scenarios compared on total delivered cost, including pre/post-carriage and local charges.",
+        "Insurance and packaging documented and aligned with the chosen scenario."
+      ]
+    },
+    {
+      "h2": "Related guides",
+      "p": [
+        "Tool: CBM calculator. Guides: Incoterms 2020 and route-specific pages (France–China, France–Turkey, France–Congo)."
+      ]
+    }
+  ],
   "faq": [
     {
       "q": "Which volume threshold justifies switching from LCL to FCL?",
@@ -17,11 +130,11 @@
     },
     {
       "q": "Is LCL riskier?",
-      "a": "Groupage implies additional handling. Export-grade packaging and ad valorem insurance significantly reduce risk. For sensitive/high-value cargo, FCL remains recommended."
+      "a": "Groupage implies additional handling. Export-grade packaging and ad valorem insurance significantly reduce risk. For sensitive or high-value cargo, FCL is usually recommended."
     },
     {
       "q": "Can we mix LCL and air freight to speed up part of the flow?",
-      "a": "Yes, multimodality is a useful lever to meet critical milestones. We calibrate a suitable transport plan with partial consolidation."
+      "a": "Yes, multimodality is a useful lever to meet critical milestones (launch dates, key events). We can design a transport plan that combines LCL by sea with air freight on the most time-critical SKUs."
     }
   ],
   "cta_compare": "Ready to compare FCL/LCL?",
