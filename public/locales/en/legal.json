@@ -50,7 +50,9 @@
     },
     "credits": {
       "heading": "Credits",
-      "content": "Design & development:"
+      "content": "Design & development:",
+      "agency_block": "This website was designed and developed by SMARTER LOGIC WEB, a simplified joint-stock company with a sole shareholder (SASU) with share capital of €500.00, registered with the Trade and Companies Register of Nanterre under number 994 493 757 R.C.S. Nanterre, whose registered office is located at 32 Rue de Paris, 92100 Boulogne-Billancourt, France, domiciled with HelloDom, 878 831 312 R.C.S. Paris.",
+      "contact_agency": "For any issue or request, please contact us via our website:"
     },
     "last_update": "Last update: {{date}}"
   }

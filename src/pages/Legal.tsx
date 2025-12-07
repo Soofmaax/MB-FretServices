@@ -123,9 +123,12 @@ const Legal: FC = () => {
               <section className="mt-8">
                 <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.credits.heading', 'Crédits')}</h2>
                 <p className="text-gray-700 leading-relaxed">
+                  {t('sections.credits.agency_block')}
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-2">
                   {t('sections.credits.content', 'Conception & développement:')}{' '}
                   <a
-                    href="https://smarterlogiqueweb.com"
+                    href="https://smarterlogicweb.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent-600 hover:text-accent-700"
@@ -134,14 +137,17 @@ const Legal: FC = () => {
                   </a>
                 </p>
                 <p className="text-gray-700 leading-relaxed mt-2">
-                  Pour tout problème ou demande, merci de nous contacter via notre site :{' '}
+                  {t(
+                    'sections.credits.contact_agency',
+                    'Pour tout problème ou demande, merci de nous contacter via notre site :'
+                  )}{' '}
                   <a
-                    href="https://smarterlogiqueweb.com"
+                    href="https://smarterlogicweb.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent-600 hover:text-accent-700"
                   >
-                    smarterlogiqueweb.com
+                    smarterlogicweb.com
                   </a>
                 </p>
               </section>

@@ -50,7 +50,9 @@
     },
     "credits": {
       "heading": "Créditos",
-      "content": "Conceção e desenvolvimento:"
+      "content": "Conceção e desenvolvimento:",
+      "agency_block": "Este site foi concebido e desenvolvido pela SMARTER LOGIC WEB, sociedade por ações simplificada unipessoal (SASU) com capital social de 500,00 €, registada no Registo do Comércio e das Sociedades de Nanterre sob o número 994 493 757 R.C.S. Nanterre, com sede em 32 Rue de Paris, 92100 Boulogne-Billancourt, França, domiciliada em comum na HelloDom, 878 831 312 R.C.S. Paris.",
+      "contact_agency": "Para qualquer problema ou pedido, contacte-nos através do nosso site:"
     },
     "last_update": "Última atualização: {{date}}"
   }
