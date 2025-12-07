@@ -11,7 +11,7 @@ const ENV_LANGS = (process.env.SITEMAP_LANGS || process.env.SUP_LANGS || '')
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
-const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it', 'zh'];
 
 // Logical keys -> localized slugs
 const SLUGS = {
@@ -41,6 +41,31 @@ const SLUGS = {
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
   },
   en: {
+    home: '',
+    services: 'services',
+    destinations: 'destinations',
+    contact: 'contact',
+    legal: 'legal-notice',
+    services_freight_maritime: 'services/maritime-freight',
+    services_air_freight: 'services/air-freight',
+    services_customs: 'services/customs-clearance',
+    services_insurance: 'services/cargo-insurance',
+    services_freight_france_china: 'services/maritime-freight/france-china',
+    services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
+    services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
+    services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
+    services_freight_france_china_checklist: 'services/maritime-freight/france-china/checklist',
+    services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
+    services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
+    services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
+    services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
+    services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
+    pillar_incoterms: 'resources/incoterms-2020',
+    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+  },
+  zh: {
     home: '',
     services: 'services',
     destinations: 'destinations',
@@ -252,6 +277,7 @@ const HREFLANG_MAP = {
   sw: 'sw-KE',
   de: 'de-DE',
   it: 'it-IT',
+  zh: 'zh-CN',
 };
 
 const PATH_KEYS = [
