@@ -13,6 +13,7 @@ export type RouteKey =
   | 'services_insurance'
   | 'services_freight_france_china'
   | 'services_freight_france_congo'
+  | 'services_freight_france_angola'
   | 'services_freight_france_turkey'
   | 'services_freight_france_china_fcl_lcl'
   | 'services_freight_france_china_customs'
@@ -40,6 +41,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/assurance-cargo',
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
+    services_freight_france_angola: 'services/fret-maritime/france-angola',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
     services_freight_france_china_fcl_lcl: 'services/fret-maritime/france-chine/fcl-lcl',
     services_freight_france_china_customs: 'services/fret-maritime/france-chine/douane',
@@ -66,6 +68,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
     services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
@@ -92,6 +95,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'servicos/seguro-carga',
     services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',
+    services_freight_france_angola: 'servicos/frete-maritimo/franca-angola',
     services_freight_france_turkey: 'servicos/frete-maritimo/franca-turquia',
     services_freight_france_china_fcl_lcl: 'servicos/frete-maritimo/franca-china/fcl-lcl',
     services_freight_france_china_customs: 'servicos/frete-maritimo/franca-china/despacho-aduaneiro',
@@ -119,6 +123,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
     services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
@@ -145,6 +150,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
     services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
@@ -171,6 +177,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
     services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
@@ -249,6 +256,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
     services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
@@ -275,6 +283,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
     services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
@@ -353,6 +362,11 @@ const FREIGHT_FRANCE_CONGO_ALIASES = new Set<string>([
   'services/fret-maritime/france-congo',
   'services/maritime-freight/france-congo',
   'servicos/frete-maritimo/franca-congo',
+]);
+const FREIGHT_FRANCE_ANGOLA_ALIASES = new Set<string>([
+  'services/fret-maritime/france-angola',
+  'services/maritime-freight/france-angola',
+  'servicos/frete-maritimo/franca-angola',
 ]);
 const FREIGHT_FRANCE_TURKEY_ALIASES = new Set<string>([
   'services/fret-maritime/france-turquie',
@@ -461,6 +475,7 @@ export function keyFromPath(pathname: string): RouteKey {
   // Route main pages
   if (FREIGHT_FRANCE_CHINA_ALIASES.has(rest)) return 'services_freight_france_china';
   if (FREIGHT_FRANCE_CONGO_ALIASES.has(rest)) return 'services_freight_france_congo';
+  if (FREIGHT_FRANCE_ANGOLA_ALIASES.has(rest)) return 'services_freight_france_angola';
   if (FREIGHT_FRANCE_TURKEY_ALIASES.has(rest)) return 'services_freight_france_turkey';
 
   // Route subpages

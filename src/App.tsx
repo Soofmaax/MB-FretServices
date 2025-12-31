@@ -176,6 +176,14 @@ function App() {
             }
           />
           <Route
+            path="services/fret-maritime/france-angola"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
             path="services/fret-maritime/france-turquie"
             element={
               <Suspense fallback={null}>
@@ -352,6 +360,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRouteSubpage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="services/maritime-freight/france-angola"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
               </Suspense>
             }
           />
@@ -539,6 +555,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRouteSubpage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/frete-maritimo/franca-angola"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
               </Suspense>
             }
           />

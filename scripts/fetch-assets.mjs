@@ -217,6 +217,9 @@ async function main() {
 
     // Turkey: rouge profond (différent de Chine)
     await buildTintedFromPath('hero-turkey', basePath, { r: 190, g: 18, b: 60 }); // #be123c
+
+    // Angola: teinte ambrée chaude
+    await buildTintedFromPath('hero-angola', basePath, { r: 245, g: 158, b: 11 }); // #f59e0b
   } catch (e) {
     console.warn('Failed to build tinted route variants:', e?.message || e);
   }
@@ -238,6 +241,9 @@ async function main() {
     const turkeyBase = fs.existsSync(path.join(imagesDir, 'hero-turkey-1600.jpg'))
       ? path.join(imagesDir, 'hero-turkey-1600.jpg')
       : path.join(imagesDir, 'hero-turkey.jpg');
+    const angolaBase = fs.existsSync(path.join(imagesDir, 'hero-angola-1600.jpg'))
+      ? path.join(imagesDir, 'hero-angola-1600.jpg')
+      : path.join(imagesDir, 'hero-angola.jpg');
 
     // Helper: create OG from a base image path
     async function buildOg(name, base) {
@@ -254,6 +260,7 @@ async function main() {
     await buildOg('china', chinaBase);
     await buildOg('congo', congoBase);
     await buildOg('turkey', turkeyBase);
+    await buildOg('angola', angolaBase);
   } catch (e) {
     console.warn('Failed to build OG route images:', e?.message || e);
   }

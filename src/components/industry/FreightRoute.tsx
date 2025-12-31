@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 type RouteKey =
   | 'services_freight_france_china'
   | 'services_freight_france_congo'
+  | 'services_freight_france_angola'
   | 'services_freight_france_turkey';
 
 function detectRouteKey(): RouteKey | null {
@@ -22,6 +23,7 @@ function detectRouteKey(): RouteKey | null {
   if (
     k === 'services_freight_france_china' ||
     k === 'services_freight_france_congo' ||
+    k === 'services_freight_france_angola' ||
     k === 'services_freight_france_turkey'
   ) {
     return k;
@@ -59,6 +61,17 @@ const contentMap: Record<
       { '@type': 'Country', name: 'Congo' },
     ],
   },
+  services_freight_france_angola: {
+    heroBase: 'hero-angola',
+    ports: {
+      from: ['Le Havre', 'Marseille-Fos', 'Anvers', 'Rotterdam'],
+      to: ['Luanda'],
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'Angola' },
+    ],
+  },
   services_freight_france_turkey: {
     heroBase: 'hero-turkey',
     ports: {
@@ -89,6 +102,8 @@ const FreightRoute: FC = () => {
       ? 'france_china'
       : routeKey === 'services_freight_france_congo'
       ? 'france_congo'
+      : routeKey === 'services_freight_france_angola'
+      ? 'france_angola'
       : 'france_turkey';
   const routeLabel = t(`routes_main:${routeId}.label`);
 
@@ -431,6 +446,13 @@ const FreightRoute: FC = () => {
                     <li>Spécificités: visibilité jalons LCL, contrôles douaniers</li>
                   </ul>
                 )}
+                {routeKey === 'services_freight_france_angola' && (
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>France / Europe: Le Havre, Marseille‑Fos, Anvers, Rotterdam</li>
+                    <li>Angola: Luanda</li>
+                    <li>Atouts: rotations régulières, solutions FCL &amp; LCL, expertise douanière Angola</li>
+                  </ul>
+                )}
                 {routeKey === 'services_freight_france_turkey' && (
                   <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>France: Marseille‑Fos, Le Havre</li>
@@ -487,7 +509,7 @@ const FreightRoute: FC = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">{t('routes_main:headings.faq')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {(faq || contentMap[routeKey].faq).map((f, idx) => (
+            {(faq || []).map((f, idx) => (
               <div key={idx} className="bg-white rounded-lg p-6 shadow">
                 <h3 className="text-lg font-semibold text-primary-900 mb-2">{f.q}</h3>
                 <p className="text-gray-700">{f.a}</p>

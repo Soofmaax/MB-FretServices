@@ -37,13 +37,13 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
   const site = getSiteUrl();
   const key = keyFromPath(window.location.pathname);
 
-  const hreflangMap: Recor<<Lang, string> = {
+  const hreflangMap: Record<Lang, string> = {
     fr: 'fr-FR',
     en: 'en-GB',
     pt: 'pt-PT',
     ar: 'ar',
     zh: 'zh-CN',
-    es: 'tr-TR',
+    es: 'es-ES',
     sw: 'sw-KE',
     de: 'de-DE',
     it: 'it-IT',

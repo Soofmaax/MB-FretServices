@@ -77,6 +77,7 @@ const Navbar: FC = () => {
   const routesLabel = t('navbar:routes', 'Routes');
   const routeFranceChina = t('navbar:route_france_china', 'France ↔ China');
   const routeFranceCongo = t('navbar:route_france_congo', 'France ↔ Congo');
+  const routeFranceAngola = t('navbar:route_france_angola', 'France ↔ Angola');
   const routeFranceTurkey = t('navbar:route_france_turkey', 'France ↔ Turkey');
 
   const isActiveLink = (href: string) => {
@@ -159,6 +160,12 @@ const Navbar: FC = () => {
                       className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
                     >
                       {routeFranceCongo}
+                    </LocalizedLink>
+                    <LocalizedLink
+                      to="services/fret-maritime/france-angola"
+                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
+                    >
+                      {routeFranceAngola}
                     </LocalizedLink>
                     <LocalizedLink
                       to="services/fret-maritime/france-turquie"
@@ -264,6 +271,13 @@ const Navbar: FC = () => {
                 className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
               >
                 {routeFranceCongo}
+              </LocalizedLink>
+              <LocalizedLink
+                to="services/fret-maritime/france-angola"
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
+              >
+                {routeFranceAngola}
               </LocalizedLink>
               <LocalizedLink
                 to="services/fret-maritime/france-turquie"

@@ -248,5 +248,77 @@
       { "q": "FCL vs LCL sur la Turquie: que privilégier ?", "a": "FCL pour volumes significatifs et délais plus stables; LCL compétitif pour petits envois ou flux irréguliers." },
       { "q": "Assurance et gestion des risques ?", "a": "Assurance ad valorem recommandée; conseils d’emballage et préparation documentaire pour éviter litiges et retards." }
     ]
+  },
+  "france_angola": {
+    "label": "France ↔ Angola",
+    "title": "Fret maritime France ↔ Angola (FCL & LCL)",
+    "subtitle": "Groupage LCL et conteneurs complets vers Luanda, avec enlèvement B2B en France et Europe et accompagnement documentaire pour l’Angola.",
+    "transit": "Délais indicatifs: 20–25 jours selon port de départ, rotations et saison.",
+    "ports_from": ["Le Havre", "Marseille-Fos", "Anvers", "Rotterdam"],
+    "ports_to": ["Luanda"],
+    "costs": [
+      "Vers Luanda, le LCL (groupage) est particulièrement adapté pour les petits volumes, effets personnels et colis B2B. Au-delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
+      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, THC portuaires, pré/post‑acheminement et droits/taxes à l’import en Angola. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons."
+    ],
+    "customs": [
+      "L’Angola exige une documentation rigoureuse: facture détaillée, packing list, BL, certificat d’origine éventuel et documents spécifiques selon la marchandise. Nous vous accompagnons sur la codification SH, l’estimation des droits et taxes, et la préparation des dossiers pour limiter les contrôles et retards."
+    ],
+    "insurance_risks": [
+      "Assurance cargo ad valorem adaptée à la valeur de vos marchandises",
+      "Conseils d’emballage export (caisses bois, renfort palettes, filmage et calage) pour limiter les avaries",
+      "Visibilité des jalons clé (embarquement, transbordement, arrivée) et relances proactives vers les acteurs locaux"
+    ],
+    "why_us": [
+      "Expérience sur le corridor France/Europe ↔ Luanda, incluant groupage LCL, FCL et véhicules",
+      "Réseau de partenaires portuaires à Anvers/Rotterdam pour optimiser capacités, coûts et délais",
+      "Accompagnement documentaire dédié à l’Angola et coordination avec les interlocuteurs locaux"
+    ],
+    "use_cases": [
+      "Effets personnels et petits volumes B2B: LCL régulier vers Luanda, avec enlèvement B2B possible en France et Benelux",
+      "Machines et équipements: FCL, Open Top ou équipements spéciaux après étude, avec organisation du pré‑acheminement routier",
+      "Véhicules et projets: solutions sur mesure (Ro-Ro ou conteneur), gestion documentaire et coordination livraison sur site"
+    ],
+    "advice": {
+      "planning_title": "Planification Angola & choix du mode",
+      "planning": [
+        "Anticiper les périodes de tension (fin d’année, pics projet) et sécuriser les départs avec un préavis suffisant.",
+        "Comparer les départs depuis la France (Le Havre / Fos) et depuis Anvers/Rotterdam pour optimiser délais et budget.",
+        "Basculer sur FCL dès que la valeur et le volume le justifient pour réduire les manipulations et mieux maîtriser les délais."
+      ],
+      "documentation_title": "Documentation & conformité Angola",
+      "documentation": [
+        "Soigner le détail de la facture (désignation claire, valeur réaliste, origine) pour éviter revalorisations et blocages.",
+        "Valider les exigences locales spécifiques (licences, autorisations, documents techniques) avant expédition.",
+        "Documenter l’emballage (photos datées, numéros de colis) et conserver les preuves nécessaires pour l’assurance."
+      ],
+      "kpis_title": "KPIs à suivre vers l’Angola",
+      "kpis": [
+        "Délai moyen entre arrivée navire et mainlevée à Luanda.",
+        "Taux d’écart entre coût réel et devis (droits/taxes inclus).",
+        "Taux de litiges (avaries, manquants, différends documentaires)."
+      ]
+    },
+    "faq": [
+      {
+        "q": "Le LCL est‑il adapté pour l’Angola ?",
+        "a": "Oui. Le groupage est pertinent pour effets personnels, petits lots et colis professionnels. Nous opérons des départs réguliers vers Luanda avec visibilité sur les jalons."
+      },
+      {
+        "q": "À partir de quel volume passer de LCL à FCL vers Luanda ?",
+        "a": "En pratique, le FCL devient souvent intéressant au‑delà d’environ 13–15 m³, en tenant compte du coût total livré et de la sensibilité de la marchandise."
+      },
+      {
+        "q": "Quels documents sont requis pour l’Angola ?",
+        "a": "Facture commerciale détaillée, packing list, BL, certificats d’origine ou spécifiques selon la marchandise, et documents exigés par les autorités angolaises. Nous vous guidons sur cette check‑list."
+      },
+      {
+        "q": "Pouvez‑vous gérer des véhicules ou des effets personnels ?",
+        "a": "Oui, sous réserve d’étude de faisabilité: véhicules en conteneur ou Ro‑Ro, effets personnels en LCL ou FCL. Nous clarifions en amont les contraintes douanières et réglementaires."
+      },
+      {
+        "q": "Recommandez‑vous une assurance pour l’Angola ?",
+        "a": "Oui, une police ad valorem est fortement recommandée sur cette destination. Nous dimensionnons la couverture avec vous et vous aidons à documenter l’emballage pour limiter les litiges."
+      }
+    ]
   }
 }
