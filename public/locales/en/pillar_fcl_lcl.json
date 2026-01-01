@@ -1,13 +1,12 @@
 {
   "title": "FCL vs LCL — How to decide? | MB Fret Services",
-  "description": "Choosing between FCL and LCL in B2B sea freight: 13–15 m³ thresholds, safety, transit times and costs. A practical decision method and use cases on France–China/Turkey/Africa routes.",
+  "description": "Choosing between FCL and LCL in B2B sea freight: 13–15 m³ thresholds, safety, transit times and costs. A practical decision method and use cases on the France–Congo and France–Angola routes.",
   "hero_h1": "FCL vs LCL — Decision method",
   "hero_intro": "Optimize total delivered cost, cargo safety and time-to-market. A clear method to arbitrate between FCL and LCL based on volume, deadlines and cargo sensitivity.",
   "hero_links": {
     "maritime": "Sea freight",
-    "china": "France ↔ China",
-    "turkey": "France ↔ Turkey",
-    "congo": "France ↔ Congo"
+    "congo": "France ↔ Congo",
+    "angola": "France ↔ Angola"
   },
   "sections": [
     {
@@ -74,21 +73,15 @@
       "h2": "Route-based use cases",
       "sub": [
         {
-          "h3": "France ↔ China",
+          "h3": "France ↔ Congo",
           "p": [
-            "For planned, high-volume flows, FCL secures capacity and lead times. For test batches and small launches, LCL remains viable provided you anticipate consolidation dates."
+            "LCL groupage is well suited to small volumes (parcels, pallets, personal effects) with pickup options across France. As value or sensitivity increase, switching to FCL reduces handling and helps secure both lead times and service quality."
           ]
         },
         {
-          "h3": "France ↔ Turkey",
+          "h3": "France ↔ Angola",
           "p": [
-            "On this short/medium-haul corridor, LCL is relevant for occasional campaigns and small volumes; FCL quickly becomes the best option for recurring B2B flows with tighter delivery commitments."
-          ]
-        },
-        {
-          "h3": "France ↔ Africa (Congo)",
-          "p": [
-            "LCL groupage is well suited to pallets and parcels collected across France (Paris region, Lyon, Marseille). As value and sensitivity increase, switching to FCL with reinforced export packaging reduces handling and dispute risk."
+            "LCL works well for parcels, baggage or test shipments; FCL quickly becomes the preferred option as soon as you combine international moves, B2B cargo and possibly vehicles or motorbikes within the same container, supported by ad valorem insurance."
           ]
         }
       ]

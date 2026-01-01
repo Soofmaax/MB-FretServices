@@ -85,7 +85,7 @@ const PillarFCLvsLCL: FC = () => {
 
   const heroLinks = t('pillar_fcl_lcl:hero_links', {
     returnObjects: true,
-  }) as { maritime: string; china: string; turkey: string; congo: string };
+  }) as { maritime: string; congo: string; angola: string };
 
   return (
     <div className="pt-16">
@@ -119,7 +119,7 @@ const PillarFCLvsLCL: FC = () => {
               to="services/fret-maritime/france-angola"
               className="underline text-accent-300"
             >
-              {t('navbar:route_france_angola', 'France–Angola')}
+              {heroLinks?.angola ?? t('navbar:route_france_angola', 'France–Angola')}
             </LocalizedLink>
           </div>
         </div>
