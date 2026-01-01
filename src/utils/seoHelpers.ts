@@ -5,8 +5,7 @@ export const DEFAULT_SITE_NAME = 'MB Fret Services';
 
 // Prefer env-defined OG image (can be /og-default.webp), else external fallback
 export const DEFAULT_OG_IMAGE =
-  (import.meta.env?.VITE_OG_IMAGE as string | undefined) ||
-  'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1600';
+  (import.meta.env?.VITE_OG_IMAGE as string | undefined) || '/logo-mbfs.png';
 
 const ENV_SUP_LANGS = (import.meta.env?.VITE_SUP_LANGS as string | undefined)
   ? (import.meta.env.VITE_SUP_LANGS as string).split(',').map((s) => s.trim()).filter(Boolean)
