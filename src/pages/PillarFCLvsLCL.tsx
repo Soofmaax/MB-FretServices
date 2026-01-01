@@ -192,6 +192,13 @@ const PillarFCLvsLCL: FC = () => {
             >
               {t('navbar:route_france_angola', 'France–Angola')}
             </LocalizedLink>
+            <LocalizedLink
+              to="contact"
+              state={{ source: 'pillar_fcl_lcl' }}
+              className="text-accent-700 underline"
+            >
+              {t('pillar_fcl_lcl:cta_contact', 'Parler à un expert FCL/LCL')}
+            </LocalizedLink>
           </div>
         </div>
       </article>

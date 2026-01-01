@@ -14,15 +14,21 @@ const Contact: FC = () => {
   const location = useLocation();
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
 
-  const fromPricingGuide =
-    (location.state as { source?: string } | null | undefined)?.source ===
-    'pillar_container_prices';
+  const source = (location.state as { source?: string } | null | undefined)?.source;
 
   const defaultMessage =
-    fromPricingGuide && lang === 'fr'
-      ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
-      : fromPricingGuide
-      ? "Hello, I’m coming from the guide about the cost of a 20'/40' container to Congo / Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
+    source === 'pillar_container_prices'
+      ? lang === 'fr'
+        ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
+        : "Hello, I’m coming from the guide about the cost of a 20'/40' container to Congo / Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
+      : source === 'pillar_fcl_lcl'
+      ? lang === 'fr'
+        ? "Bonjour, je viens du guide FCL vs LCL. Voici mon projet (volume approximatif, type de marchandises, destination, contraintes de délais) pour que vous puissiez me conseiller sur le bon mode :"
+        : "Hello, I’m coming from the FCL vs LCL guide. Here is my project (approximate volume, cargo type, destination, time constraints) so you can advise on the best mode:"
+      : source === 'pillar_incoterms'
+      ? lang === 'fr'
+        ? "Bonjour, je viens du guide Incoterms 2020. Voici mon flux (origine, destination, type de marchandise, mode de transport) pour que vous puissiez me recommander l’Incoterm adapté :"
+        : "Hello, I’m coming from the Incoterms 2020 guide. Here is my flow (origin, destination, cargo type, transport mode) so you can recommend the appropriate Incoterm:"
       : '';
 
   const langTagMap: Record<string, string> = {

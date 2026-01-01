@@ -142,5 +142,6 @@
     { "q": "Peut-on mixer LCL et aérien pour accélérer une partie du flux ?", "a": "Oui, la multimodalité permet de respecter vos jalons clés. Nous calibrons un plan de transport adapté avec consolidation partielle." }
   ],
   "cta_compare": "Prêt à comparer FCL/LCL ?",
-  "cta_compare_desc": "Nos experts recommandent une option selon votre volume, votre risque et vos délais."
+  "cta_compare_desc": "Nos experts recommandent une option selon votre volume, votre risque et vos délais.",
+  "cta_contact": "Parler à un expert FCL/LCL"
 }

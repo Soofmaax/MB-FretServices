@@ -171,6 +171,27 @@ const PillarIncoterms: FC = () => {
             <p>{qa.a}</p>
           </details>
         ))}
+
+        <div className="not-prose mt-10">
+          <h3 className="text-xl font-semibold text-primary-900">
+            {t('pillar_incoterms:cta_title', 'Besoin d’aide pour choisir vos Incoterms ?')}
+          </h3>
+          <p className="text-gray-700">
+            {t(
+              'pillar_incoterms:cta_desc',
+              'Nous vous aidons à aligner Incoterms, assurance et douane sur vos flux France ↔ Congo/Angola.'
+            )}
+          </p>
+          <div className="mt-3 flex gap-3 flex-wrap">
+            <LocalizedLink
+              to="contact"
+              state={{ source: 'pillar_incoterms' }}
+              className="inline-flex items-center px-4 py-2 rounded-lg bg-primary-900 text-white hover:bg-primary-800 text-sm font-semibold"
+            >
+              {t('pillar_incoterms:cta_label', 'Parler à un expert Incoterms')}
+            </LocalizedLink>
+          </div>
+        </div>
       </article>
     </div>
   );
