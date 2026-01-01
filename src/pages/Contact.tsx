@@ -94,6 +94,12 @@ const Contact: FC = () => {
         : 'Quote request – Air freight service'
       : '';
 
+  const subject =
+    subjectLabel ||
+    (lang === 'fr'
+      ? 'Demande de devis transport international'
+      : 'International freight quote request');
+
   const langTagMap: Record<string, string> = {
     fr: 'fr-FR',
     en: 'en-GB',

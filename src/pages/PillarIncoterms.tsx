@@ -5,6 +5,20 @@ import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { useTranslation } from 'react-i18next';
 
+type IncotermSubSection = {
+  h3?: string;
+  p?: string[];
+  ul?: string[];
+};
+
+type IncotermSection = {
+  h2?: string;
+  p?: string[];
+  ul?: string[];
+  ol?: string[];
+  sub?: IncotermSubSection[];
+};
+
 const PillarIncoterms: FC = () => {
   const SITE_URL = getSiteUrl();
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
@@ -79,33 +93,9 @@ const PillarIncoterms: FC = () => {
     })),
   };
 
-  type SubSection = {
-    h3?: string;
-    p?: string[];
-    ul?: string[];
-  };
-
-  type Section = {
-    h2?: string;
-    p?: string[];
-    ul?: string[];
-    ol?: string[];
-    sub?: SubSection[];
-  };
-
   const sections = t('pillar_incoterms:sections', {
     returnObjects: true,
-  }) as Section[];d = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqArray.map((qa) => ({
-      '@type': 'Question',
-      name: qa.q,
-      acceptedAnswer: { '@type': 'Answer', text: qa.a },
-    })),
-  };
-
-  const sections = t('pillar_incoterms:sections', { returnObjects: true }) as Array<any>;
+  }) as IncotermSection[];
 
   return (
     <div className="pt-16">
@@ -146,16 +136,16 @@ const PillarIncoterms: FC = () => {
             )}
             {(sec.ol || []).length > 0 && (
               <ol>
-                {sec.ol?.map((li, i) => <li key={`ol-${idx}-${i}`}>{li}</li>)}
+                {sec.ol.map((li: string, i: number) => <li key={`ol-${idx}-${i}`}>{li}</li>)}
               </ol>
             )}
-            {(sec.sub || []).map((sub, i) => (
+            {(sec.sub || []).map((sub: IncotermSubSection, i: number) => (
               <div key={`sub-${idx}-${i}`}>
                 {sub.h3 && <h3>{sub.h3}</h3>}
-                {(sub.p || []).map((p, j) => <p key={`subp-${idx}-${i}-${j}`}>{p}</p>)}
+                {(sub.p || []).map((p: string, j: number) => <p key={`subp-${idx}-${i}-${j}`}>{p}</p>)}
                 {(sub.ul || []).length > 0 && (
                   <ul>
-                    {sub.ul?.map((li, j) => <li key={`subul-${idx}-${i}-${j}`}>{li}</li>)}
+                    {sub.ul.map((li: string, j: number) => <li key={`subul-${idx}-${i}-${j}`}>{li}</li>)}
                   </ul>
                 )}
               </div>
