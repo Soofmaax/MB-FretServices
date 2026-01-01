@@ -1,8 +1,9 @@
 import type { FC, ComponentType } from 'react';
-import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight } from 'lucide-react';
+import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight, Home, Car, Package } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import ResponsiveImage from '../components/ResponsiveImage';
+import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
@@ -85,9 +86,11 @@ const FreightMaritime: FC = () => {
 
   const lclBlocks = (lcl.blocks || []) as Array<{ title?: string; bullets?: string[] }>;
 
-  const rawCosts = t('freight:costs', {
+  const fclHint = t('freight:fcl_lcl_hint', {
     returnObjects: true,
-  }) as unknown;
+  }) as { title?: string; text?: string; cta?: string };
+
+  const rawCosts;
 
   const costs =
     rawCosts && typeof rawCosts === 'object'
@@ -480,7 +483,7 @@ const FreightMaritime: FC = () => {
           )}
 
           {lcl.cta_title && (
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center mb-10">
               <h3 className="text-2xl font-bold text-primary-900 mb-4">
                 {lcl.cta_title}
               </h3>
@@ -492,6 +495,34 @@ const FreightMaritime: FC = () => {
               <CtaButton href="contact" variant="primary" className="px-8 py-4 text-lg">
                 {lcl.cta_label || t('freight:services.cta')}
               </CtaButton>
+            </div>
+          )}
+
+          {(lang === 'fr' || lang === 'en') && fclHint?.title && (
+            <div className="max-w-4xl mx-auto mt-4">
+              <div className="bg-primary-900 text-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-full bg-accent-500/90 flex items-center justify-center">
+                  <Ship size={22} className="text-white" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-semibold mb-2">
+                    {fclHint.title}
+                  </h3>
+                  {fclHint.text && (
+                    <p className="text-sm md:text-base text-gray-100 mb-3">
+                      {fclHint.text}
+                    </p>
+                  )}
+                  {fclHint.cta && (
+                    <LocalizedLink
+                      to="guides/fcl-vs-lcl"
+                      className="inline-flex items-center text-sm md:text-base font-semibold text-accent-200 hover:text-accent-100 underline"
+                    >
+                      {fclHint.cta}
+                    </LocalizedLink>
+                  )}
+                </div>
+              </div>
             </div>
           )}
         </div>

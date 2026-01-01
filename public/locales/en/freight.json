@@ -175,6 +175,11 @@
     "cta_text": "Tell us your approximate volume, departure ports, destination and shipment frequency. We build a tailor-made LCL solution for international moves, B2B cargo, vehicles or spare parts.",
     "cta_label": "Request an LCL Quote"
   },
+  "fcl_lcl_hint": {
+    "title": "FCL, LCL and container sizes at a glance",
+    "text": "Need a refresher on FCL/LCL thresholds and typical volumes for 20' and 40' containers? Check our detailed FCL vs LCL guide before finalising your option.",
+    "cta": "Read the FCL vs LCL guide"
+  },
   "costs": {
     "title": "How we build your sea freight rates",
     "intro": "Our sea freight quotes are based on objective parameters (volume, weight, trade lane, seasonality, carrier capacity and cargo type) to stay aligned with the market while securing your flows.",
@@ -326,7 +331,7 @@
         "Keep the original packaging and do not destroy damaged items before the insurer or appointed surveyor has given clearance.",
         "Cooperate with the appointed surveyor (if any) and keep us updated so we can defend your interests with the insurer."
       ]
-    }
+    },
     "images": {
       "hero_alt": "Cargo insurance for transport",
       "services_alt": "Reviewing cargo insurance coverage"

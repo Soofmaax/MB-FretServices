@@ -175,6 +175,11 @@
     "cta_text": "Indiquez-nous votre volume approximatif, vos ports d’origine, votre destination et votre fréquence d’expédition. Nous construisons une solution LCL sur mesure pour vos déménagements, envois B2B, véhicules ou pièces détachées.",
     "cta_label": "Demander un devis LCL"
   },
+  "fcl_lcl_hint": {
+    "title": "FCL, LCL et tailles de conteneurs en bref",
+    "text": "Besoin d’un rappel sur les seuils FCL/LCL et les volumes typiques d’un conteneur 20’ ou 40’ ? Consultez notre guide détaillé FCL vs LCL avant de valider votre solution.",
+    "cta": "Voir le guide FCL vs LCL"
+  },
   "costs": {
     "title": "Les coûts de l’expédition par fret maritime",
     "intro": "Nos cotations s’appuient sur des paramètres objectifs (volume, poids, axes, saisonnalité, capacité des navires, type de marchandise) pour rester cohérentes avec le marché tout en sécurisant vos flux.",
@@ -314,7 +319,7 @@
         "Conserver l’emballage d’origine et ne pas détruire les pièces endommagées avant accord de l’assureur ou de l’expert.",
         "Collaborer avec l’expert désigné (si nécessaire) et nous tenir informés de toute évolution afin que nous puissions défendre au mieux vos intérêts auprès de l’assureur."
       ]
-    }
+    },
     "images": {
       "hero_alt": "Assurance cargo transport",
       "services_alt": "Analyse des garanties d'assurance cargo"
