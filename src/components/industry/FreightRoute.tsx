@@ -136,6 +136,13 @@ const FreightRoute: FC = () => {
   const adviceKpis = t(`routes_main:${routeId}.advice.kpis`, { returnObjects: true }) as string[];
   const faq = t(`routes_main:${routeId}.faq`, { returnObjects: true }) as Array&lt;{ q: string; a: string }&gt;;
 
+  const servicesBlock =
+    routeId === 'france_angola' &amp;&amp; (lang === 'fr' || lang === 'en')
+      ? (t('routes_main:france_angola.services_block', {
+          returnObjects: true,
+        }) as { title?: string; intro?: string; items?: string[] })
+      : null;
+
   const howItWorks = t('freight:how_it_works', {
     returnObjects: true,
   }) as {
@@ -471,6 +478,24 @@ const FreightRoute: FC = () => {
           </div>
         </div>
       </section>
+
+      {servicesBlock && Array.isArray(servicesBlock.items) && servicesBlock.items.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+              {servicesBlock.title}
+            </h2>
+            {servicesBlock.intro && (
+              <p className="text-lg text-gray-700 mb-6">{servicesBlock.intro}</p>
+            )}
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+              {servicesBlock.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Section: Étapes, Incoterms, Cas d'usage, Checklist (contenu étendu) */}
       <section className="py-16 lg:py-24 bg-white">
