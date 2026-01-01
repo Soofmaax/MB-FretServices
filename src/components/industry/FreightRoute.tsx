@@ -232,8 +232,8 @@ const FreightRoute: FC = () => {
           rel="preload"
           as="image"
           href={`/images/${c.heroBase}-1200.jpg`}
-          imagesrcset={`/images/${c.heroBase}-800.jpg 800w, /images/${c.heroBase}-1200.jpg 1200w, /images/${c.heroBase}-1600.jpg 1600w`}
-          imagesizes="100vw"
+          imageSrcSet={`/images/${c.heroBase}-800.jpg 800w, /images/${c.heroBase}-1200.jpg 1200w, /images/${c.heroBase}-1600.jpg 1600w`}
+          imageSizes="100vw"
         />
       </Helmet>
 

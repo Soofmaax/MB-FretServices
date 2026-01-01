@@ -109,8 +109,8 @@ const AirFreight: FC = () => {
           rel="preload"
           as="image"
           href="/images/hero-air-1200.jpg"
-          imagesrcset="/images/hero-air-800.jpg 800w, /images/hero-air-1200.jpg 1200w, /images/hero-air-1600.jpg 1600w"
-          imagesizes="100vw"
+          imageSrcSet="/images/hero-air-800.jpg 800w, /images/hero-air-1200.jpg 1200w, /images/hero-air-1600.jpg 1600w"
+          imageSizes="100vw"
         />
       </Helmet>
 
@@ -172,20 +172,23 @@ const AirFreight: FC = () => {
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((f, i) => (
-              <div
-                key={f.title}
-                className={`bg-white rounded-xl shadow p-6 animate-slide-up ${
-                  i ? 'animate-delay-150' : 'animate-delay-0'
-                }`}
-              >
-                <div className="flex items-center mb-4">
-                  <f.icon size={24} className="text-accent-700 mr-3" aria-hidden="true" />
-                  <h3 className="text-xl font-bold text-primary-900">{f.title}</h3>
+            {features.map((f, i) => {
+              const Icon = i === 0 ? Plane : CheckCircle;
+              return (
+                <div
+                  key={f.title}
+                  className={`bg-white rounded-xl shadow p-6 animate-slide-up ${
+                    i ? 'animate-delay-150' : 'animate-delay-0'
+                  }`}
+                >
+                  <div className="flex items-center mb-4">
+                    <Icon size={24} className="text-accent-700 mr-3" aria-hidden="true" />
+                    <h3 className="text-xl font-bold text-primary-900">{f.title}</h3>
+                  </div>
+                  <p className="text-gray-700">{f.text}</p>
                 </div>
-                <p className="text-gray-700">{f.text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

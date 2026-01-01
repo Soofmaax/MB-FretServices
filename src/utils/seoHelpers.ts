@@ -44,6 +44,7 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
     ar: 'ar',
     zh: 'zh-CN',
     es: 'es-ES',
+    tr: 'tr-TR',
     sw: 'sw-KE',
     de: 'de-DE',
     it: 'it-IT',

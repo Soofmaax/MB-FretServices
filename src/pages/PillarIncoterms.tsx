@@ -129,23 +129,31 @@ const PillarIncoterms: FC = () => {
           <div key={`sec-${idx}`}>
             {sec.h2 && <h2>{sec.h2}</h2>}
             {(sec.p || []).map((p, i) => <p key={`p-${idx}-${i}`}>{p}</p>)}
-            {(sec.ul || []).length > 0 && (
+            {sec.ul && sec.ul.length > 0 && (
               <ul>
-                {sec.ul?.map((li, i) => <li key={`ul-${idx}-${i}`}>{li}</li>)}
+                {sec.ul.map((li, i) => (
+                  <li key={`ul-${idx}-${i}`}>{li}</li>
+                ))}
               </ul>
             )}
-            {(sec.ol || []).length > 0 && (
+            {sec.ol && sec.ol.length > 0 && (
               <ol>
-                {sec.ol.map((li: string, i: number) => <li key={`ol-${idx}-${i}`}>{li}</li>)}
+                {sec.ol.map((li: string, i: number) => (
+                  <li key={`ol-${idx}-${i}`}>{li}</li>
+                ))}
               </ol>
             )}
             {(sec.sub || []).map((sub: IncotermSubSection, i: number) => (
               <div key={`sub-${idx}-${i}`}>
                 {sub.h3 && <h3>{sub.h3}</h3>}
-                {(sub.p || []).map((p: string, j: number) => <p key={`subp-${idx}-${i}-${j}`}>{p}</p>)}
-                {(sub.ul || []).length > 0 && (
+                {(sub.p || []).map((p: string, j: number) => (
+                  <p key={`subp-${idx}-${i}-${j}`}>{p}</p>
+                ))}
+                {sub.ul && sub.ul.length > 0 && (
                   <ul>
-                    {sub.ul.map((li: string, j: number) => <li key={`subul-${idx}-${i}-${j}`}>{li}</li>)}
+                    {sub.ul.map((li: string, j: number) => (
+                      <li key={`subul-${idx}-${i}-${j}`}>{li}</li>
+                    ))}
                   </ul>
                 )}
               </div>

@@ -110,8 +110,8 @@ const Insurance: FC = () => {
           rel="preload"
           as="image"
           href="/images/hero-insurance-1200.jpg"
-          imagesrcset="/images/hero-insurance-800.jpg 800w, /images/hero-insurance-1200.jpg 1200w, /images/hero-insurance-1600.jpg 1600w"
-          imagesizes="100vw"
+          imageSrcSet="/images/hero-insurance-800.jpg 800w, /images/hero-insurance-1200.jpg 1200w, /images/hero-insurance-1600.jpg 1600w"
+          imageSizes="100vw"
         />
       </Helmet>
 

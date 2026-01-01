@@ -101,8 +101,8 @@ const Customs: FC = () => {
           rel="preload"
           as="image"
           href="/images/hero-customs-1200.jpg"
-          imagesrcset="/images/hero-customs-800.jpg 800w, /images/hero-customs-1200.jpg 1200w, /images/hero-customs-1600.jpg 1600w"
-          imagesizes="100vw"
+          imageSrcSet="/images/hero-customs-800.jpg 800w, /images/hero-customs-1200.jpg 1200w, /images/hero-customs-1600.jpg 1600w"
+          imageSizes="100vw"
         />
       </Helmet>
 
