@@ -422,9 +422,13 @@ const FreightRoute: FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">{t('routes_main:headings.costs_modes')} — {routeLabel}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
+                {t('routes_main:headings.costs_modes')} — {routeLabel}
+              </h2>
               {(costsParas || []).map((p, i) => (
-                <p key={i} className="text-lg text-gray-700 mb-4">{p}</p>
+                <p key={i} className="text-lg text-gray-700 mb-4">
+                  {p}
+                </p>
               ))}
 
               <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
@@ -457,12 +461,18 @@ const FreightRoute: FC = () => {
 
             <div>
               <div className="bg-white rounded-xl p-6 shadow">
-                <h3 className="text-2xl font-bold text-primary-900 mb-4">{t('routes_main:headings.customs_docs')}</h3>
+                <h3 className="text-2xl font-bold text-primary-900 mb-4">
+                  {t('routes_main:headings.customs_docs')}
+                </h3>
                 {(customsParas || []).map((p, i) => (
-                  <p key={i} className="text-gray-700 mb-4">{p}</p>
+                  <p key={i} className="text-gray-700 mb-4">
+                    {p}
+                  </p>
                 ))}
 
-                <h4 className="text-lg font-semibold text-primary-900 mb-2">{t('routes_main:headings.insurance_risks')}</h4>
+                <h4 className="text-lg font-semibold text-primary-900 mb-2">
+                  {t('routes_main:headings.insurance_risks')}
+                </h4>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   {(insuranceRisks || []).map((li, i) => (
                     <li key={i}>{li}</li>
@@ -498,7 +508,8 @@ const FreightRoute: FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {servicesBlock && Array.isArray(servicesBlock.items) && servicesBlock.items.length > 0 && (
         <section className="py-16 bg-white">
