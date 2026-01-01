@@ -137,8 +137,8 @@ const FreightRoute: FC = () => {
   const faq = t(`routes_main:${routeId}.faq`, { returnObjects: true }) as Array&lt;{ q: string; a: string }&gt;;
 
   const servicesBlock =
-    routeId === 'france_angola' &amp;&amp; (lang === 'fr' || lang === 'en')
-      ? (t('routes_main:france_angola.services_block', {
+    lang === 'fr' || lang === 'en'
+      ? (t(`routes_main:${routeId}.services_block`, {
           returnObjects: true,
         }) as { title?: string; intro?: string; items?: string[] })
       : null;

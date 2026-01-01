@@ -171,6 +171,19 @@
       "Export packaging advice to reduce damage and disputes",
       "Milestone visibility and proactive follow-up"
     ],
+    "services_block": {
+      "title": "End-to-end logistics services for your shipments to Congo (Pointe-Noire)",
+      "intro": "For your flows to Pointe-Noire, we do more than just book a container: we coordinate the whole logistics chain from France and Europe to the Congolese port, including:",
+      "items": [
+        "Pick-up and delivery of partial loads (pallets, cartons, small B2B lots, personal effects) across France and the Benelux.",
+        "Pre- and post-carriage for FCL containers to the departure port and from Pointe-Noire port, organising road transport where feasible via our partner network.",
+        "Transport documentation management (ocean bill of lading, packing list, commercial invoice, certificate of origin and cargo-specific documents).",
+        "Export customs clearance in France and support with import formalities in Congo through our local partners.",
+        "LCL sea freight services to Pointe-Noire for intermediate volumes, with consolidation and warehousing options in France or the Benelux before departure.",
+        "Handling of export, import and, on a case-by-case basis, cross-trade operations involving Congo.",
+        "Assistance with local specific requirements (documents, certificates, port constraints) in coordination with actors present in Pointe-Noire."
+      ]
+    },
     "why_us": [
       "Strong expertise in LCL/parcel flows to Pointe-Noire with regular consolidations",
       "B2B pickup in France's main economic hubs",
