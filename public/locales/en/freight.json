@@ -312,6 +312,16 @@
       "cta_quote": "Request coverage",
       "cta_quote_secondary": "Get a quote"
     },
+    "claims": {
+      "title": "In case of a claim: the right steps",
+      "steps": [
+        "Inspect the container and cargo as soon as it is opened and take clear photos of any damage or shortages (inside/outside, package numbers, seals).",
+        "Write detailed, precise reservations on the delivery document or BL, indicating which packages are affected and the nature of the damage.",
+        "Inform us as soon as possible and send the key documents: BL, commercial invoice, packing list, photos, written reservations and any survey report.",
+        "Keep the original packaging and do not destroy damaged items before the insurer or appointed surveyor has given clearance.",
+        "Cooperate with the appointed surveyor (if any) and keep us updated so we can defend your interests with the insurer."
+      ]
+    }
     "images": {
       "hero_alt": "Cargo insurance for transport",
       "services_alt": "Reviewing cargo insurance coverage"

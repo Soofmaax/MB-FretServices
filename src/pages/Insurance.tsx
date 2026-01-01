@@ -69,11 +69,11 @@ const Insurance: FC = () => {
     ],
   };
 
-  const faqEntities = (t('freight:insurance.faq', { returnObjects: true }) as Array<{ q: string; a: string }>) || [];
+  const faqEntities = (t('freight:insurance.faq', { returnObjects: true }) as Array&lt;{ q: string; a: string }&gt;) || [];
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqEntities.map((qa) => ({
+    mainEntity: faqEntities.map((qa) =&gt; ({
       '@type': 'Question',
       name: qa.q,
       acceptedAnswer: { '@type': 'Answer', text: qa.a },
@@ -81,6 +81,10 @@ const Insurance: FC = () => {
   };
 
   const benefits = (t('freight:insurance.benefits', { returnObjects: true }) as string[]) || [];
+
+  const claims = t('freight:insurance.claims', {
+    returnObjects: true,
+  }) as { title?: string; steps?: string[] };
 
   return (
     <div className="pt-16">
@@ -170,6 +174,21 @@ const Insurance: FC = () => {
           </div>
         </div>
       </section>
+
+      {claims?.steps && claims.steps.length > 0 && (
+        <section className="py-12 lg:py-16 bg-gray-50 border-t border-gray-200">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
+              {claims.title || t('freight:insurance.claims.title')}
+            </h2>
+            <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+              {claims.steps.map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
     </div>
   );
 };

@@ -300,6 +300,16 @@
       "cta_quote": "Demander une couverture",
       "cta_quote_secondary": "Obtenir un devis"
     },
+    "claims": {
+      "title": "En cas de sinistre : les bons réflexes",
+      "steps": [
+        "Vérifier immédiatement l’état du conteneur et du chargement à l’ouverture et prendre des photos claires des avaries ou manquants (intérieur/extérieur, numéros de colis, scellés).",
+        "Émettre des réserves précises et motivées sur le document de livraison ou le BL, en indiquant les colis concernés et la nature des dommages.",
+        "Nous informer dans les meilleurs délais et nous transmettre les documents clés : BL, facture commerciale, liste de colisage, photos, réserves émises, constat éventuel.",
+        "Conserver l’emballage d’origine et ne pas détruire les pièces endommagées avant accord de l’assureur ou de l’expert.",
+        "Collaborer avec l’expert désigné (si nécessaire) et nous tenir informés de toute évolution afin que nous puissions défendre au mieux vos intérêts auprès de l’assureur."
+      ]
+    }
     "images": {
       "hero_alt": "Assurance cargo transport",
       "services_alt": "Analyse des garanties d'assurance cargo"
