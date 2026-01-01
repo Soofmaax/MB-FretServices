@@ -72,7 +72,6 @@
     "from": "الانطلاق: __FROM_COUNTRY__ — __FROM_CITY__",
     "to": "الوجهة: __TO_COUNTRY__ — __TO_CITY__",
     "frequency": "التكرار: __FREQUENCY__",
-    "contact_heading": "بيانات الاتصال:",
     "company": " - الشركة: __COMPANY__",
     "name": " - الاسم: __NAME__",
     "email": " - البريد الإلكتروني: __EMAIL__",
