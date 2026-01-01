@@ -8,6 +8,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { trackPageview } from '../analytics';
 import CookieConsent from './CookieConsent';
+import ScrollTopButton from './ui/ScrollTopButton';
 
 type Params = {
   lng?: string;
@@ -61,6 +62,7 @@ const LangLayout: FC<{ children?: ReactNode }> = () => {
           <Footer />
         </Suspense>
       </div>
+      <ScrollTopButton />
       <Suspense fallback={null}>
         <CookieConsent />
       </Suspense>
