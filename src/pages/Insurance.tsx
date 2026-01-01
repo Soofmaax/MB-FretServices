@@ -28,11 +28,11 @@ const Insurance: FC = () => {
 
   const seoTitle = t(
     'freight:insurance.seo.title',
-    'Cargo insurance — Ad valorem coverage | MB Fret Services'
+    'Cargo insurance — FCL/LCL containers to Congo and Angola | MB Fret Services'
   );
   const seoDescription = t(
     'freight:insurance.seo.description',
-    'Transport insurance for sea/air freight: ad valorem coverage, claims handling, export packaging advice. Door-to-door.'
+    'Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Congo and France ↔ Angola corridors. Claims handling and export packaging advice.'
   );
 
   const breadcrumb = {
