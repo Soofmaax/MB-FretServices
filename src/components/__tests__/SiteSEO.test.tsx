@@ -3,6 +3,14 @@ import { HelmetProvider } from 'react-helmet-async';
 import { render } from '@testing-library/react';
 import SiteSEO from '../SiteSEO';
 
+type HelmetTags = { toString(): string };
+
+type HelmetTestContext = {
+  helmet?: {
+    script?: HelmetTags;
+  };
+};
+
 describe('SiteSEO', () => {
   it('injects organization, website and localBusiness JSON-LD', () => {
     // Simulate env
@@ -12,15 +20,19 @@ describe('SiteSEO', () => {
       VITE_SITE_URL: 'https://mb-fretservices.com',
     };
 
-    const helmetContext: Record<string, unknown> = {};
+    const helmetContext: HelmetTestContext = {};
     render(
       <HelmetProvider context={helmetContext}>
         <SiteSEO />
       </HelmetProvider>
     );
 
-    const helmet = (helmetContext as any).helmet;
-    const scriptStr = helmet.script.toString();
+    const helmet = helmetContext.helmet;
+    if (!helmet) {
+      throw new Error('Helmet context not populated by HelmetProvider');
+    }
+
+    const scriptStr = helmet.script?.toString() ?? '';
 
     expect(scriptStr).toContain('"@type":"Organization"');
     expect(scriptStr).toContain('"@type":"WebSite"');

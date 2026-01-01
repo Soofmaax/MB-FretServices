@@ -3,9 +3,20 @@ import { HelmetProvider } from 'react-helmet-async';
 import { render } from '@testing-library/react';
 import SEO from '../SEO';
 
+type HelmetTags = { toString(): string };
+
+type HelmetTestContext = {
+  helmet?: {
+    title?: HelmetTags;
+    meta?: HelmetTags;
+    link?: HelmetTags;
+    script?: HelmetTags;
+  };
+};
+
 describe('SEO component', () => {
   it('injects basic meta and canonical', () => {
-    const helmetContext: Record<string, unknown> = {};
+    const helmetContext: HelmetTestContext = {};
     render(
       <HelmetProvider context={helmetContext}>
         <SEO
@@ -16,12 +27,16 @@ describe('SEO component', () => {
       </HelmetProvider>
     );
 
-    const helmet = (helmetContext as any).helmet;
-    const titleStr = helmet.title.toString();
-    const metaStr = helmet.meta.toString();
-    const linkStr = helmet.link.toString();
+    const helmet = helmetContext.helmet;
+    if (!helmet) {
+      throw new Error('Helmet context not populated by HelmetProvider');
+    }
 
-    expect(titleStr).toContain('<title>Test Title</title>');
+    const titleStr = helmet.title?.toString() ?? '';
+    const metaStr = helmet.meta?.toString() ?? '';
+    const linkStr = helmet.link?.toString() ?? '';
+
+    expect(titleStr).toContain('&lt;title&gt;Test Title&lt;/title&gt;');
     expect(metaStr).toContain('name="description"');
     expect(metaStr).toContain('content="Test Description"');
 
@@ -30,7 +45,7 @@ describe('SEO component', () => {
   });
 
   it('injects JSON-LD structured data when provided', () => {
-    const helmetContext: Record<string, unknown> = {};
+    const helmetContext: HelmetTestContext = {};
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
@@ -43,8 +58,12 @@ describe('SEO component', () => {
       </HelmetProvider>
     );
 
-    const helmet = (helmetContext as any).helmet;
-    const scriptStr = helmet.script.toString();
+    const helmet = helmetContext.helmet;
+    if (!helmet) {
+      throw new Error('Helmet context not populated by HelmetProvider');
+    }
+
+    const scriptStr = helmet.script?.toString() ?? '';
 
     // One JSON-LD script with our content
     expect(scriptStr).toContain('type="application/ld+json"');
