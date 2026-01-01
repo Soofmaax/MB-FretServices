@@ -118,8 +118,6 @@ const FreightRoute: FC = () => {
   const costsParas = t(`routes_main:${routeId}.costs`, { returnObjects: true }) as string[];
   const customsParas = t(`routes_main:${routeId}.customs`, { returnObjects: true }) as string[];
   const insuranceRisks = t(`routes_main:${routeId}.insurance_risks`, { returnObjects: true }) as string[];
-  const whyUsBullets = t(`routes_main:${routeId}.why_us`, { returnObjects: true }) as string[];
-  const keyServices = t('routes_main:common.key_services', { returnObjects: true }) as string[];
   const opsSteps = t('routes_main:common.ops_steps', { returnObjects: true }) as string[];
   const opsBest = t('routes_main:common.ops_best_practices');
   const incotermsIntro = t('routes_main:common.incoterms_intro');
