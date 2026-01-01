@@ -4,6 +4,43 @@
   "service_label": "نوع الخدمة",
   "service_LCL": "LCL",
   "service_FCL": "FCL",
+  "client_type": {
+    "label": "نوع العميل",
+    "business": "شركة",
+    "individual": "فرد",
+    "association": "جمعية / منظمة"
+  },
+  "shipment_types": {
+    "label": "ما الذي ترغب في إرساله؟",
+    "moving": "نقل دولي / أغراض شخصية",
+    "b2b": "بضائع B2B (منصات، كراتين، مستهلكات، قطع غيار...)",
+    "vehicles": "مركبات (سيارات، شاحنات خفيفة، دفع رباعي…)",
+    "motorbikes": "دراجات نارية (على عجلات، بدون تفكيك قدر الإمكان)",
+    "machines": "آلات / معدات",
+    "none": "غير محدد"
+  },
+  "volume_band": {
+    "label": "الحجم التقريبي (إذا كنت لا تعرف الأبعاد بدقة)",
+    "band_1_3": "من 1 إلى 3 م³",
+    "band_3_5": "من 3 إلى 5 م³",
+    "band_5_7": "من 5 إلى 7 م³",
+    "band_7_10": "من 7 إلى 10 م³",
+    "band_10_plus": "أكثر من 10 م³",
+    "band_unknown": "لا أعرف",
+    "none": "غير محدد"
+  },
+  "meta": {
+    "declared_value_label": "القيمة التقريبية للبضاعة (لأغراض التأمين)",
+    "from_country_label": "بلد الانطلاق",
+    "from_city_label": "مدينة / موقع الانطلاق",
+    "to_country_label": "بلد الوصول",
+    "to_city_label": "مدينة / موقع الوصول"
+  },
+  "frequency": {
+    "label": "تكرار الشحنات",
+    "oneoff": "شحنة واحدة",
+    "regular": "شحنات منتظمة"
+  },
   "step1_next": "متابعة",
   "length_label": "الطول (سم)",
   "width_label": "العرض (سم)",
@@ -28,6 +65,13 @@
     "qty": " - الكمية: __QTY__",
     "weight": " - الوزن الإجمالي (كغ): __WEIGHT__",
     "volume": " - الحجم التقديري: __CBM__ م³",
+    "client_type": "نوع العميل: __TYPE__",
+    "shipment_types": "نوع (أنواع) الشحنة: __TYPES__",
+    "volume_band": "شريحة الحجم التقديري: __BAND__",
+    "declared_value": "القيمة التقريبية: __VALUE__",
+    "from": "الانطلاق: __FROM_COUNTRY__ — __FROM_CITY__",
+    "to": "الوجهة: __TO_COUNTRY__ — __TO_CITY__",
+    "frequency": "التكرار: __FREQUENCY__",
     "contact_heading": "بيانات الاتصال:",
     "company": " - الشركة: __COMPANY__",
     "name": " - الاسم: __NAME__",

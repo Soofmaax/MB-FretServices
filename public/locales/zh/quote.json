@@ -4,6 +4,43 @@
   "service_label": "服务类型",
   "service_LCL": "LCL 拼箱",
   "service_FCL": "FCL 整箱",
+  "client_type": {
+    "label": "您是",
+    "business": "企业",
+    "individual": "个人",
+    "association": "协会 / 组织"
+  },
+  "shipment_types": {
+    "label": "您要运输的是什么？",
+    "moving": "国际搬家 / 私人物品",
+    "b2b": "B2B 货物（托盘、纸箱、耗材、配件等）",
+    "vehicles": "车辆（轿车、商用车、越野车…）",
+    "motorbikes": "摩托车（整车上轮，无需拆卸时）",
+    "machines": "机器 / 设备",
+    "none": "未说明"
+  },
+  "volume_band": {
+    "label": "预估体积（如果您不知道精确尺寸）",
+    "band_1_3": "1–3 立方米",
+    "band_3_5": "3–5 立方米",
+    "band_5_7": "5–7 立方米",
+    "band_7_10": "7–10 立方米",
+    "band_10_plus": "大于 10 立方米",
+    "band_unknown": "不清楚",
+    "none": "未说明"
+  },
+  "meta": {
+    "declared_value_label": "货物预估申报价值（用于保险）",
+    "from_country_label": "起运国家",
+    "from_city_label": "起运城市 / 地点",
+    "to_country_label": "目的国家",
+    "to_city_label": "目的城市 / 地点"
+  },
+  "frequency": {
+    "label": "发运频率",
+    "oneoff": "一次性",
+    "regular": "定期"
+  },
   "step1_next": "继续",
   "length_label": "长度（cm）",
   "width_label": "宽度（cm）",
@@ -28,6 +65,13 @@
     "qty": " - 件数：__QTY__",
     "weight": " - 总重量（kg）：__WEIGHT__",
     "volume": " - 预估体积：__CBM__ m³",
+    "client_type": "客户类型：__TYPE__",
+    "shipment_types": "发运类型：__TYPES__",
+    "volume_band": "预估体积区间：__BAND__",
+    "declared_value": "预估申报价值：__VALUE__",
+    "from": "起运地：__FROM_COUNTRY__ — __FROM_CITY__",
+    "to": "目的地：__TO_COUNTRY__ — __TO_CITY__",
+    "frequency": "发运频率：__FREQUENCY__",
     "contact_heading": "联系方式：",
     "company": " - 公司：__COMPANY__",
     "name": " - 联系人：__NAME__",

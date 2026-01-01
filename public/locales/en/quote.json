@@ -4,6 +4,43 @@
   "service_label": "Service type",
   "service_LCL": "LCL",
   "service_FCL": "FCL",
+  "client_type": {
+    "label": "You are",
+    "business": "Business",
+    "individual": "Individual",
+    "association": "Association / NGO"
+  },
+  "shipment_types": {
+    "label": "What do you want to ship?",
+    "moving": "International move / personal effects",
+    "b2b": "B2B goods (pallets, boxes, consumables, spare parts...)",
+    "vehicles": "Vehicles (cars, vans, 4x4…)",
+    "motorbikes": "Motorbikes (on wheels, without dismantling when possible)",
+    "machines": "Machines / equipment",
+    "none": "Not specified"
+  },
+  "volume_band": {
+    "label": "Approximate volume (if you don't know the exact dimensions)",
+    "band_1_3": "1 to 3 m³",
+    "band_3_5": "3 to 5 m³",
+    "band_5_7": "5 to 7 m³",
+    "band_7_10": "7 to 10 m³",
+    "band_10_plus": "more than 10 m³",
+    "band_unknown": "I don't know",
+    "none": "Not specified"
+  },
+  "meta": {
+    "declared_value_label": "Approximate declared value (for insurance)",
+    "from_country_label": "Departure country",
+    "from_city_label": "Departure city / place",
+    "to_country_label": "Destination country",
+    "to_city_label": "Destination city / place"
+  },
+  "frequency": {
+    "label": "Shipment frequency",
+    "oneoff": "One-off",
+    "regular": "Regular"
+  },
   "step1_next": "Continue",
   "length_label": "Length (cm)",
   "width_label": "Width (cm)",
@@ -28,6 +65,13 @@
     "qty": " - Quantity: __QTY__",
     "weight": " - Total weight (kg): __WEIGHT__",
     "volume": " - Estimated volume: __CBM__ m³",
+    "client_type": "Client type: __TYPE__",
+    "shipment_types": "Shipment types: __TYPES__",
+    "volume_band": "Volume band: __BAND__",
+    "declared_value": "Approximate declared value: __VALUE__",
+    "from": "From: __FROM_COUNTRY__ — __FROM_CITY__",
+    "to": "To: __TO_COUNTRY__ — __TO_CITY__",
+    "frequency": "Frequency: __FREQUENCY__",
     "contact_heading": "Contact:",
     "company": " - Company: __COMPANY__",
     "name": " - Name: __NAME__",

@@ -4,6 +4,43 @@
   "service_label": "Tipo de serviço",
   "service_LCL": "LCL",
   "service_FCL": "FCL",
+  "client_type": {
+    "label": "Você é",
+    "business": "Empresa",
+    "individual": "Particular",
+    "association": "Associação / ONG"
+  },
+  "shipment_types": {
+    "label": "O que pretende enviar?",
+    "moving": "Mudança internacional / efeitos pessoais",
+    "b2b": "Mercadorias B2B (paletes, caixas, consumíveis, peças...)",
+    "vehicles": "Veículos (carros, comerciais, 4x4…)",
+    "motorbikes": "Motos (sobre rodas, sem desmontagem sempre que possível)",
+    "machines": "Máquinas / equipamentos",
+    "none": "Não especificado"
+  },
+  "volume_band": {
+    "label": "Volume estimado (se não souber as dimensões exatas)",
+    "band_1_3": "1 a 3 m³",
+    "band_3_5": "3 a 5 m³",
+    "band_5_7": "5 a 7 m³",
+    "band_7_10": "7 a 10 m³",
+    "band_10_plus": "mais de 10 m³",
+    "band_unknown": "não sei",
+    "none": "Não especificado"
+  },
+  "meta": {
+    "declared_value_label": "Valor aproximado da mercadoria (para o seguro)",
+    "from_country_label": "País de partida",
+    "from_city_label": "Cidade / local de partida",
+    "to_country_label": "País de destino",
+    "to_city_label": "Cidade / local de destino"
+  },
+  "frequency": {
+    "label": "Frequência dos envios",
+    "oneoff": "Pontual",
+    "regular": "Regular"
+  },
   "step1_next": "Continuar",
   "length_label": "Comprimento (cm)",
   "width_label": "Largura (cm)",
@@ -28,6 +65,13 @@
     "qty": " - Quantidade: __QTY__",
     "weight": " - Peso total (kg): __WEIGHT__",
     "volume": " - Volume estimado: __CBM__ m³",
+    "client_type": "Tipo de cliente: __TYPE__",
+    "shipment_types": "Tipo(s) de envio: __TYPES__",
+    "volume_band": "Faixa de volume estimado: __BAND__",
+    "declared_value": "Valor aproximado: __VALUE__",
+    "from": "Partida: __FROM_COUNTRY__ — __FROM_CITY__",
+    "to": "Destino: __TO_COUNTRY__ — __TO_CITY__",
+    "frequency": "Frequência: __FREQUENCY__",
     "contact_heading": "Contacto:",
     "company": " - Empresa: __COMPANY__",
     "name": " - Nome: __NAME__",

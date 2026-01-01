@@ -4,6 +4,43 @@
   "service_label": "Type de service",
   "service_LCL": "LCL",
   "service_FCL": "FCL",
+  "client_type": {
+    "label": "Vous êtes",
+    "business": "Entreprise",
+    "individual": "Particulier",
+    "association": "Association"
+  },
+  "shipment_types": {
+    "label": "Ce que vous souhaitez expédier",
+    "moving": "Déménagement / effets personnels",
+    "b2b": "Marchandises B2B (palettes, cartons, consommables, pièces...)",
+    "vehicles": "Véhicules (voitures, utilitaires, 4x4…)",
+    "motorbikes": "Motos (sur leurs roues, sans démontage lorsque c’est possible)",
+    "machines": "Machines / équipements",
+    "none": "Non précisé"
+  },
+  "volume_band": {
+    "label": "Volume estimé (si vous ne connaissez pas les dimensions exactes)",
+    "band_1_3": "1 à 3 m³",
+    "band_3_5": "3 à 5 m³",
+    "band_5_7": "5 à 7 m³",
+    "band_7_10": "7 à 10 m³",
+    "band_10_plus": "plus de 10 m³",
+    "band_unknown": "je ne sais pas",
+    "none": "Non précisé"
+  },
+  "meta": {
+    "declared_value_label": "Valeur approximative de la marchandise (pour l’assurance)",
+    "from_country_label": "Pays de départ",
+    "from_city_label": "Ville / lieu de départ",
+    "to_country_label": "Pays de destination",
+    "to_city_label": "Ville / lieu de destination"
+  },
+  "frequency": {
+    "label": "Fréquence des expéditions",
+    "oneoff": "Ponctuelle",
+    "regular": "Régulière"
+  },
   "step1_next": "Continuer",
   "length_label": "Longueur (cm)",
   "width_label": "Largeur (cm)",
@@ -28,6 +65,13 @@
     "qty": " - Quantité : __QTY__",
     "weight": " - Poids total (kg) : __WEIGHT__",
     "volume": " - Volume estimé : __CBM__ m³",
+    "client_type": "Type de client : __TYPE__",
+    "shipment_types": "Type(s) d'envoi : __TYPES__",
+    "volume_band": "Tranche de volume estimé : __BAND__",
+    "declared_value": "Valeur approximative : __VALUE__",
+    "from": "Départ : __FROM_COUNTRY__ — __FROM_CITY__",
+    "to": "Destination : __TO_COUNTRY__ — __TO_CITY__",
+    "frequency": "Fréquence : __FREQUENCY__",
     "contact_heading": "Contact :",
     "company": " - Société : __COMPANY__",
     "name": " - Nom : __NAME__",
