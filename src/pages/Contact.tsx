@@ -204,6 +204,32 @@ const Contact: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 text-center">
             {t('hero.title')}
           </h2>
+          {source && (
+            <div className="mb-6 rounded-lg border border-accent-200 bg-accent-50 px-4 py-3 text-sm text-primary-900">
+              <p className="font-semibold mb-1">
+                {source === 'pillar_container_prices'
+                  ? t(
+                      'contact:source_banner.container_prices',
+                      "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola."
+                    )
+                  : source === 'pillar_fcl_lcl'
+                  ? t(
+                      'contact:source_banner.fcl_lcl',
+                      'Vous venez du guide FCL vs LCL.'
+                    )
+                  : t(
+                      'contact:source_banner.incoterms',
+                      'Vous venez du guide Incoterms 2020.'
+                    )}
+              </p>
+              <p className="text-gray-700">
+                {t(
+                  'contact:source_banner.cta',
+                  'Les informations ci-dessous nous aideront à affiner votre devis.'
+                )}
+              </p>
+            </div>
+          )}
           <form
             name="contact"
             data-netlify="true"

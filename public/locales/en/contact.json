@@ -37,6 +37,12 @@
       { "title": "Personalized follow-up:", "desc": "A dedicated contact for your project" }
     ]
   },
+  "source_banner": {
+    "container_prices": "You are coming from the guide on the cost of a 20'/40' container to Congo / Angola.",
+    "fcl_lcl": "You are coming from the FCL vs LCL guide.",
+    "incoterms": "You are coming from the Incoterms 2020 guide.",
+    "cta": "The details below will help us refine your quote."
+  },
   "form": {
     "name": "Full name",
     "email": "Email",
