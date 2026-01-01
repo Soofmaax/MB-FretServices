@@ -114,8 +114,13 @@ const Navbar: FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <LocalizedLink to="" className="flex-shrink-0">
-            <span className="text-2xl font-bold text-primary-900">MB Fret Services</span>
+          <LocalizedLink to="" className="flex items-center gap-2 flex-shrink-0">
+            <img
+              src="/logo-mbfs.png"
+              alt="MB Fret Services - Angola France"
+              className="h-10 w-10 rounded-full"
+            />
+            <span className="text-lg sm:text-2xl font-bold text-primary-900">MB Fret Services</span>
           </LocalizedLink>
 
           {/* Desktop Navigation */}
