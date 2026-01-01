@@ -121,8 +121,6 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
-            const core = require('@actions/core');
-            const { context, github } = require('@actions/github');
             const reportPath = path.join(process.cwd(), 'audit-report.md');
             const summaryPath = path.join(process.cwd(), 'audit-summary.json');
             const body = fs.existsSync(reportPath) ? fs.readFileSync(reportPath, 'utf8') : 'Audit report not found.';
