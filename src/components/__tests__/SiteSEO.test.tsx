@@ -1,18 +1,10 @@
 import { describe, it, expect } from 'vitest';
 import { HelmetProvider } from 'react-helmet-async';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import SiteSEO from '../SiteSEO';
 
-type HelmetTags = { toString(): string };
-
-type HelmetTestContext = {
-  helmet?: {
-    script?: HelmetTags;
-  };
-};
-
 describe('SiteSEO', () => {
-  it('injects organization, website and localBusiness JSON-LD', () => {
+  it('injects organization, website and localBusiness JSON-LD', async () => {
     // Simulate env
     const meta = import.meta as unknown as { env: Record<string, unknown> };
     meta.env = {
@@ -20,22 +12,34 @@ describe('SiteSEO', () => {
       VITE_SITE_URL: 'https://mb-fretservices.com',
     };
 
-    const helmetContext: HelmetTestContext = {};
     render(
-      <HelmetProvider context={helmetContext}>
+      <HelmetProvider>
         <SiteSEO />
       </HelmetProvider>
     );
 
-    const helmet = helmetContext.helmet;
-    if (!helmet) {
-      throw new Error('Helmet context not populated by HelmetProvider');
-    }
+    await waitFor(() => {
+      const scripts = Array.from(
+        document.head.querySelectorAll('script[type="application/ld+json"]')
+      );
 
-    const scriptStr = helmet.script?.toString() ?? '';
+      expect(scripts.length).toBeGreaterThanOrEqual(3);
 
-    expect(scriptStr).toContain('"@type":"Organization"');
-    expect(scriptStr).toContain('"@type":"WebSite"');
-    expect(scriptStr).toContain('"@type":"LocalBusiness"');
+      const contents = scripts.map((s) => s.textContent ?? '');
+
+      const hasOrganization = contents.some((c) =>
+        c.includes('"@type":"Organization"')
+      );
+      const hasWebsite = contents.some((c) =>
+        c.includes('"@type":"WebSite"')
+      );
+      const hasLocalBusiness = contents.some((c) =>
+        c.includes('"@type":"LocalBusiness"')
+      );
+
+      expect(hasOrganization).toBe(true);
+      expect(hasWebsite).toBe(true);
+      expect(hasLocalBusiness).toBe(true);
+    });
   });
 });
