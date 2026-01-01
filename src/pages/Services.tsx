@@ -1,5 +1,5 @@
 import type { FC, ComponentType } from 'react';
-import { Ship, Plane, FileText, Shield, ArrowRight } from 'lucide-react';
+import { Ship, FileText, Shield, ArrowRight } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import LocalizedLink from '../components/LocalizedLink';
@@ -8,7 +8,7 @@ import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 
-type ServiceKey = 'maritime' | 'air' | 'customs' | 'insurance';
+type ServiceKey = 'maritime' | 'customs' | 'insurance';
 
 const Services: FC = () => {
   const { t } = useTranslation(['services', 'common', 'navbar']);
@@ -17,18 +17,17 @@ const Services: FC = () => {
 
   const serviceDefs: Array<{ icon: ComponentType<{ size?: number | string; className?: string }>; key: ServiceKey }> = [
     { icon: Ship, key: 'maritime' },
-    { icon: Plane, key: 'air' },
     { icon: FileText, key: 'customs' },
     { icon: Shield, key: 'insurance' },
   ];
 
   const seoTitle = t(
     'services:seo.title',
-    'Our services - Sea freight, air freight and customs | MB Fret Services'
+    'Our services - Sea freight, customs and cargo insurance | MB Fret Services'
   );
   const seoDescription = t(
     'services:seo.description',
-    'Discover our international transport services: sea freight to Africa, express air freight, professional customs clearance and cargo insurance.'
+    'Discover our international transport services: sea freight to Central Africa (Congo, Angola), professional customs clearance and cargo insurance.'
   );
 
   const langTagMap: Record<string, string> = {
@@ -80,14 +79,6 @@ const Services: FC = () => {
                   'Our sea freight expertise lets us offer optimal solutions for large shipments to Africa and Asia. We handle all types of cargo with full tracking.'
                 ),
                 url: siteUrl + pathForLang('services_freight_maritime', lang),
-              },
-              {
-                '@type': 'Service',
-                name: t('services:air.title', 'Air Freight'),
-                description: t(
-                  'services:air.description',
-                  'Air transport is ideal for high-value, perishable or urgent goods. Our partner network ensures tight lead times to all destinations.'
-                ),
               },
               {
                 '@type': 'Service',
@@ -185,17 +176,6 @@ const Services: FC = () => {
                           className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
                         >
                           {t('maritime.more_link')}
-                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                        </LocalizedLink>
-                      </div>
-                    )}
-                    {def.key === 'air' && (
-                      <div className="mb-6">
-                        <LocalizedLink
-                          to="services/fret-aerien"
-                          className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
-                        >
-                          {t('air.more_link', 'Discover air freight')}
                           <ArrowRight size={16} className="ml-1" aria-hidden="true" />
                         </LocalizedLink>
                       </div>

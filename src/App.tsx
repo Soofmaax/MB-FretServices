@@ -10,7 +10,6 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
-const AirFreight = lazy(() => import('./pages/AirFreight'));
 const Customs = lazy(() => import('./pages/Customs'));
 const Insurance = lazy(() => import('./pages/Insurance'));
 const FreightRoute = lazy(() => import('./pages/FreightRoute'));
@@ -86,14 +85,8 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="services/fret-aerien"
-            element={
-              <Suspense fallback={null}>
-                <AirFreight />
-              </Suspense>
-            }
-          />
+          {/* Air freight page disabled for now to avoid confusion; maritime is the primary focus */}
+
           <Route
             path="services/dedouanement"
             element={
@@ -210,14 +203,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="services/air-freight"
-            element={
-              <Suspense fallback={null}>
-                <AirFreight />
-              </Suspense>
-            }
-          />
+          {/* Air freight international slug disabled; main services are sea freight, customs and insurance */}
           <Route
             path="services/customs-clearance"
             element={
@@ -341,14 +327,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="servicos/frete-aereo"
-            element={
-              <Suspense fallback={null}>
-                <AirFreight />
-              </Suspense>
-            }
-          />
+          {/* PT air freight slug disabled for now */}
           <Route
             path="servicos/despacho-aduaneiro"
             element={
