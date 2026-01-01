@@ -450,7 +450,7 @@ const Contact: FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="mailto:contact@mb-fretservices.com?subject=Demande de devis transport international"
+              href={`mailto:contact@mb-fretservices.com?subject=${encodeURIComponent(subject)}`}
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-lg bg-accent-700 text-white hover:bg-accent-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Mail size={20} className="mr-2" aria-hidden="true" />
