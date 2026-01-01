@@ -5,12 +5,13 @@
   },
   "seo": {
     "title": "Sea Freight, Air Freight & Customs Services | MB Fret Services",
-    "description": "Overview of our international transport services: sea freight (FCL/LCL) to Africa & Asia, express air freight, customs clearance and cargo insurance for B2B flows."
+    "description": "Overview of our international transport services: sea freight (FCL/LCL) to Africa (Congo, Angola), express air freight, customs clearance and cargo insurance for B2B flows."
   },
   "maritime": {
     "title": "Sea Freight",
     "subtitle": "Cost-effective solutions for large volumes",
-    "description": "Our sea freight expertise lets us offer optimal solutions for large shipments to Africa and Asia. We handle all types of cargo with full tracking.",
+    "description": "Our sea freight expertise lets us offer optimal solutions for large shipments to Africa (Congo, Angola). We handle all types of cargo with full trackin_codeg.new"</,
+ng.",
     "features": [
       "20' and 40' containers (FCL)",
       "Groupage (LCL) for small volumes",
@@ -19,7 +20,7 @@
       "Port-to-port or door-to-door service",
       "Real-time tracking via web platform"
     ],
-    "destinations": "Key destinations: Congo, Angola, Côte d'Ivoire, Cameroon",
+    "destinations": "Key destinations: Congo, Angola",
     "more_link": "Learn more about sea freight"
   },
   "air": {
@@ -34,7 +35,7 @@
       "Real-time GPS tracking",
       "All-risk insurance included"
     ],
-    "destinations": "Served: China, Turkey, Morocco, Tunisia, Central African countries"
+    "destinations": "Served: Congo, Angola and Central African countries"
   },
   "customs": {
     "title": "Customs Clearance",
@@ -77,17 +78,13 @@
     "title": "Key routes",
     "discover": "Discover",
     "cards": {
-      "france_china": {
-        "title": "France ↔ China",
-        "teaser": "FCL/LCL, major ports, optimized transit times, 24/7 tracking."
-      },
       "france_congo": {
         "title": "France ↔ Congo",
         "teaser": "FCL/LCL, major ports, optimized transit times, 24/7 tracking."
       },
-      "france_turkey": {
-        "title": "France ↔ Turkey",
-        "teaser": "FCL/LCL, major ports, optimized transit times, 24/7 tracking."
+      "france_angola": {
+        "title": "France ↔ Angola",
+        "teaser": "FCL/LCL, regular departures to Luanda, controlled lead times and 24/7 tracking."
       }
     }
   },
@@ -96,7 +93,7 @@
     "read": "Read the guide",
     "incoterms": {
       "title": "Incoterms 2020 — Complete guide",
-      "desc": "Understand responsibilities, costs and risks (FOB, CIF, DAP...). Practical cases China/Turkey."
+      "desc": "Understand responsibilities, costs and risks (FOB, CIF, DAP...). Practical cases on Africa flows (Congo, Angola)."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — How to decide?",

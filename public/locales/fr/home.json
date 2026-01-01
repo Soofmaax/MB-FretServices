@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "MB Fret Services – Fret maritime & aérien Europe–Afrique–Asie",
-    "description": "Transitaire français B2B. Fret maritime & aérien entre l’Europe, l’Afrique et l’Asie (France–Chine, France–Congo, France–Turquie), dédouanement et assurance cargo."
+    "title": "MB Fret Services – Fret maritime & aérien Europe–Afrique",
+    "description": "Transitaire français B2B. Fret maritime & aérien entre l’Europe et l’Afrique (France–Congo, France–Angola), dédouanement et assurance cargo."
   },
   "valueProps": {
     "title": "Pourquoi choisir MB Fret Services ?",
@@ -9,7 +9,7 @@
     "items": [
       {
         "title": "Fret Maritime",
-        "description": "Solutions économiques pour vos envois volumineux vers l'Afrique et l'Asie avec suivi en temps réel.",
+        "description": "Solutions économiques pour vos envois volumineux vers l'Afrique (Congo, Angola) avec suivi en temps réel.",
         "features": ["Conteneurs 20' et 40'", "FCL et LCL", "Port à port ou porte à porte"]
       },
       {
@@ -40,18 +40,6 @@
       "city": "Luanda",
       "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
       "routes": ["Maritime depuis Anvers", "Aérien depuis Marseille"]
-    },
-    {
-      "country": "Chine",
-      "city": "Shanghai",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Maritime transpacifique", "Aérien direct"]
-    },
-    {
-      "country": "Turquie",
-      "city": "Istanbul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Transport routier", "Aérien depuis Lyon"]
     }
   ],
   "final_cta_title": "Prêt à expédier vos marchandises ?",

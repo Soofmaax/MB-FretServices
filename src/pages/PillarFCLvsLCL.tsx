@@ -78,7 +78,7 @@ const PillarFCLvsLCL: FC = () => {
   );
   const seoDescription = t(
     'pillar_fcl_lcl:description',
-    'Choisir entre FCL et LCL en B2B maritime: seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage routes France–Chine/Turquie/Afrique.'
+    'Choisir entre FCL et LCL en B2B maritime: seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage sur les routes France–Congo et France–Angola.'
   );
 
   const sections = (t('pillar_fcl_lcl:sections', { returnObjects: true }) as Section[]) || [];
@@ -110,22 +110,16 @@ const PillarFCLvsLCL: FC = () => {
               {heroLinks?.maritime ?? 'Fret maritime'}
             </LocalizedLink>
             <LocalizedLink
-              to="services/fret-maritime/france-chine"
-              className="underline text-accent-300"
-            >
-              {heroLinks?.china ?? 'France–Chine'}
-            </LocalizedLink>
-            <LocalizedLink
-              to="services/fret-maritime/france-turquie"
-              className="underline text-accent-300"
-            >
-              {heroLinks?.turkey ?? 'France–Turquie'}
-            </LocalizedLink>
-            <LocalizedLink
               to="services/fret-maritime/france-congo"
               className="underline text-accent-300"
             >
               {heroLinks?.congo ?? 'France–Congo'}
+            </LocalizedLink>
+            <LocalizedLink
+              to="services/fret-maritime/france-angola"
+              className="underline text-accent-300"
+            >
+              {t('navbar:route_france_angola', 'France–Angola')}
             </LocalizedLink>
           </div>
         </div>
@@ -187,22 +181,16 @@ const PillarFCLvsLCL: FC = () => {
           </p>
           <div className="mt-3 flex gap-3 flex-wrap">
             <LocalizedLink
-              to="services/fret-maritime/france-chine"
-              className="text-accent-700 underline"
-            >
-              {heroLinks?.china ?? 'France–Chine'}
-            </LocalizedLink>
-            <LocalizedLink
-              to="services/fret-maritime/france-turquie"
-              className="text-accent-700 underline"
-            >
-              {heroLinks?.turkey ?? 'France–Turquie'}
-            </LocalizedLink>
-            <LocalizedLink
               to="services/fret-maritime/france-congo"
               className="text-accent-700 underline"
             >
               {heroLinks?.congo ?? 'France–Congo'}
+            </LocalizedLink>
+            <LocalizedLink
+              to="services/fret-maritime/france-angola"
+              className="text-accent-700 underline"
+            >
+              {t('navbar:route_france_angola', 'France–Angola')}
             </LocalizedLink>
           </div>
         </div>

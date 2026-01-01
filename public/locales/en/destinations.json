@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Destinations - Transport to Africa, Asia and Europe | MB Fret Services",
-    "description": "International transport to Congo, Angola, China, Turkey. Sea and air routes from France. Personalized quote within 24 hours."
+    "title": "Destinations - Transport to Africa | MB Fret Services",
+    "description": "International transport to Congo and Angola. Sea and air routes from France. Personalized quote within 24 hours."
   },
   "hero": {
     "title": "Our Global Destinations",
@@ -35,32 +35,6 @@
           "maritime": { "from": "Antwerp, Rotterdam", "duration": "20–25 days", "frequency": "Bi-weekly" },
           "aerien": { "from": "Paris CDG, Marseille", "duration": "7–9 hours", "frequency": "5x/week" },
           "specialites": ["Medical equipment", "Construction", "Electronics"]
-        }
-      ]
-    },
-    {
-      "name": "Asia",
-      "countries": [
-        {
-          "name": "China",
-          "capital": "Beijing",
-          "port": "Shanghai, Shenzhen",
-          "maritime": { "from": "Le Havre, Hamburg", "duration": "30–35 days", "frequency": "Daily" },
-          "aerien": { "from": "Paris CDG, Lyon", "duration": "10–12 hours", "frequency": "Daily" },
-          "specialites": ["Textile import", "Electronics", "Machinery"]
-        }
-      ]
-    },
-    {
-      "name": "Middle East",
-      "countries": [
-        {
-          "name": "Turkey",
-          "capital": "Ankara",
-          "port": "Istanbul, Izmir",
-          "maritime": { "from": "Marseille, Genoa", "duration": "5–7 days", "frequency": "3x/week" },
-          "aerien": { "from": "Paris CDG, Lyon, Nice", "duration": "3–4 hours", "frequency": "Daily" },
-          "specialites": ["Textile", "Agri-food", "Automotive"]
         }
       ]
     }

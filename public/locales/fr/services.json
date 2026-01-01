@@ -5,12 +5,12 @@
   },
   "seo": {
     "title": "Fret maritime, fret aérien & dédouanement | MB Fret Services",
-    "description": "Panorama de nos services de transport international : fret maritime (FCL/LCL) vers l’Afrique & l’Asie, fret aérien express, dédouanement et assurance cargo pour vos flux B2B."
+    "description": "Panorama de nos services de transport international : fret maritime (FCL/LCL) vers l’Afrique (Congo, Angola), fret aérien express, dédouanement et assurance cargo pour vos flux B2B."
   },
   "maritime": {
     "title": "Fret Maritime",
     "subtitle": "Solutions économiques pour gros volumes",
-    "description": "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux vers l'Afrique et l'Asie. Nous gérons tous types de marchandises avec un suivi complet.",
+    "description": "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux vers l'Afrique (Congo, Angola). Nous gérons tous types de marchandises avec un suivi complet.",
     "features": [
       "Conteneurs 20' et 40' (FCL)",
       "Groupage (LCL) pour petits volumes",
@@ -19,7 +19,7 @@
       "Service port à port ou porte à porte",
       "Suivi en temps réel via plateforme web"
     ],
-    "destinations": "Principales destinations : Congo, Angola, Côte d'Ivoire, Cameroun",
+    "destinations": "Principales destinations : Congo, Angola",
     "more_link": "En savoir plus sur le fret maritime"
   },
   "air": {
@@ -34,7 +34,7 @@
       "Suivi GPS en temps réel",
       "Assurance tous risques incluse"
     ],
-    "destinations": "Desservi : Chine, Turquie, Maroc, Tunisie, pays d'Afrique centrale"
+    "destinations": "Desservi : Congo, Angola et pays d'Afrique centrale"
   },
   "customs": {
     "title": "Dédouanement",
@@ -77,17 +77,13 @@
     "title": "Routes phares",
     "discover": "Découvrir",
     "cards": {
-      "france_china": {
-        "title": "France ↔ Chine",
-        "teaser": "FCL/LCL, ports majeurs, délais optimisés, suivi 24/7."
-      },
       "france_congo": {
         "title": "France ↔ Congo",
         "teaser": "FCL/LCL, ports majeurs, délais optimisés, suivi 24/7."
       },
-      "france_turkey": {
-        "title": "France ↔ Turquie",
-        "teaser": "FCL/LCL, ports majeurs, délais optimisés, suivi 24/7."
+      "france_angola": {
+        "title": "France ↔ Angola",
+        "teaser": "FCL/LCL, départs réguliers vers Luanda, délais maîtrisés et suivi 24/7."
       }
     }
   },
@@ -96,7 +92,7 @@
     "read": "Lire le guide",
     "incoterms": {
       "title": "Incoterms 2020 — Guide complet",
-      "desc": "Comprendre responsabilités/coûts/risques (FOB, CIF, DAP...). Cas pratiques Chine/Turquie."
+      "desc": "Comprendre responsabilités/coûts/risques (FOB, CIF, DAP...). Cas pratiques sur les flux Afrique (Congo, Angola)."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — Comment décider ?",

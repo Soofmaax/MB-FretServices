@@ -112,38 +112,6 @@ function App() {
           />
           {/* FR route-specific pages */}
           <Route
-            path="services/fret-maritime/france-chine"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-chine/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-chine/douane"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-chine/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
             path="services/fret-maritime/france-congo"
             element={
               <Suspense fallback={null}>
@@ -180,38 +148,6 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie/douane"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
               </Suspense>
             }
           />
@@ -300,38 +236,6 @@ function App() {
           />
           {/* EN + default international slugs for route-specific pages (also used by es/tr/sw/de/it/ar) */}
           <Route
-            path="services/maritime-freight/france-china"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-china/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-china/customs"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-china/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
             path="services/maritime-freight/france-congo"
             element={
               <Suspense fallback={null}>
@@ -368,38 +272,6 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey/customs"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
               </Suspense>
             }
           />
@@ -495,38 +367,6 @@ function App() {
           />
           {/* PT route-specific pages */}
           <Route
-            path="servicos/frete-maritimo/franca-china"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-china/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-china/despacho-aduaneiro"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-china/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
             path="servicos/frete-maritimo/franca-congo"
             element={
               <Suspense fallback={null}>
@@ -563,38 +403,6 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia/despacho-aduaneiro"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
               </Suspense>
             }
           />

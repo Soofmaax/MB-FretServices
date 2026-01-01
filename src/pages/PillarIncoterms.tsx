@@ -29,7 +29,7 @@ const PillarIncoterms: FC = () => {
   );
   const seoDescription = t(
     'pillar_incoterms:description',
-    'Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks, and practical cases on China/Turkey/Congo routes.'
+    'Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks, and practical cases on Congo/Angola routes.'
   );
 
   const breadcrumb = {
@@ -92,14 +92,17 @@ const PillarIncoterms: FC = () => {
             {t('pillar_incoterms:hero_intro')}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <LocalizedLink to="services/fret-maritime/france-chine" className="underline text-accent-300">
-              {t('pillar_incoterms:hero_links.china')}
-            </LocalizedLink>
-            <LocalizedLink to="services/fret-maritime/france-turquie" className="underline text-accent-300">
-              {t('pillar_incoterms:hero_links.turkey')}
-            </LocalizedLink>
-            <LocalizedLink to="services/fret-maritime/france-congo" className="underline text-accent-300">
+            <LocalizedLink
+              to="services/fret-maritime/france-congo"
+              className="underline text-accent-300"
+            >
               {t('pillar_incoterms:hero_links.congo')}
+            </LocalizedLink>
+            <LocalizedLink
+              to="services/fret-maritime/france-angola"
+              className="underline text-accent-300"
+            >
+              {t('navbar:route_france_angola', 'France ↔ Angola')}
             </LocalizedLink>
           </div>
         </div>
@@ -145,24 +148,17 @@ const PillarIncoterms: FC = () => {
             </LocalizedLink>
             &nbsp;| {t('pillar_incoterms:links_block.routes_label', 'Route pages:')}&nbsp;
             <LocalizedLink
-              to="services/fret-maritime/france-chine"
-              className="text-accent-700 underline"
-            >
-              {t('pillar_incoterms:hero_links.china')}
-            </LocalizedLink>
-            ,&nbsp;
-            <LocalizedLink
-              to="services/fret-maritime/france-turquie"
-              className="text-accent-700 underline"
-            >
-              {t('pillar_incoterms:hero_links.turkey')}
-            </LocalizedLink>
-            ,&nbsp;
-            <LocalizedLink
               to="services/fret-maritime/france-congo"
               className="text-accent-700 underline"
             >
               {t('pillar_incoterms:hero_links.congo')}
+            </LocalizedLink>
+            ,&nbsp;
+            <LocalizedLink
+              to="services/fret-maritime/france-angola"
+              className="text-accent-700 underline"
+            >
+              {t('navbar:route_france_angola', 'France ↔ Angola')}
             </LocalizedLink>
             .
           </p>

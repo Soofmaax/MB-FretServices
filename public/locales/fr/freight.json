@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Fret maritime France–Afrique – Conteneurs FCL & LCL | MB Fret Services",
-    "description": "Fret maritime professionnel depuis les ports français & européens vers l’Afrique (Congo, Angola, Côte d’Ivoire, Cameroun). Conteneurs 20' & 40', FCL et LCL. Devis gratuit sous 24h et plus de 15 ans d’expertise."
+    "description": "Fret maritime professionnel depuis les ports français & européens vers l’Afrique (Congo, Angola). Conteneurs 20' & 40', FCL et LCL. Devis gratuit sous 24h et plus de 15 ans d’expertise."
   },
   "hero": {
     "title": "Fret Maritime vers l'Afrique",
@@ -13,7 +13,7 @@
   "air": {
     "seo": {
       "title": "Fret aérien — Rapide et sécurisé | MB Fret Services",
-      "description": "Solutions de fret aérien B2B: express, sécurisé, traçable. Europe ↔ Afrique/Asie. Porte-à-porte, assurance cargo, conformité IATA."
+      "description": "Solutions de fret aérien B2B: express, sécurisé, traçable. Europe ↔ Afrique. Porte-à-porte, assurance cargo, conformité IATA."
     },
     "breadcrumb_service_name": "Fret aérien",
     "service_name": "Fret aérien B2B – Express et sécurisé",
@@ -24,7 +24,7 @@
         "a": "Marchandises à forte valeur, périssables ou urgentes. Le fret aérien minimise le temps de transit et l’exposition aux risques."
       },
       {
-        "q": "Quels délais typiques en Europe ↔ Afrique/Asie ?",
+        "q": "Quels délais typiques en Europe ↔ Afrique ?",
         "a": "Selon les hubs et la saison : 1–5 jours porte-à-aéroport, 3–8 jours porte-à-porte. Nous proposons des solutions express sur demande."
       },
       {
@@ -150,9 +150,7 @@
   },
   "destinations_list": [
     { "country": "Congo", "port": "Pointe-Noire", "duration": "18-22 jours", "frequency": "Hebdomadaire", "departure": "Le Havre, Anvers" },
-    { "country": "Angola", "port": "Luanda", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire", "departure": "Anvers, Rotterdam" },
-    { "country": "Côte d'Ivoire", "port": "Abidjan", "duration": "12-15 jours", "frequency": "Quotidien", "departure": "Le Havre, Marseille" },
-    { "country": "Cameroun", "port": "Douala", "duration": "15-18 jours", "frequency": "Bi-hebdomadaire", "departure": "Anvers, Hambourg" }
+    { "country": "Angola", "port": "Luanda", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire", "departure": "Anvers, Rotterdam" }
   ],
   "faq": {
     "title": "Questions Fréquentes - Fret Maritime",
