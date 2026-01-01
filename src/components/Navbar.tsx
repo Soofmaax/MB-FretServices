@@ -5,7 +5,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import CtaButton from './CtaButton';
 import LocalizedLink from './LocalizedLink';
 import { useTranslation } from 'react-i18next';
-import { localizeTo } from '../utils/paths';
+import { localizeTo, type Lang } from '../utils/paths';
 
 const LANGS = [
   { code: 'fr', label: 'FR' },
@@ -80,8 +80,7 @@ const Navbar: FC = () => {
   const routeFranceAngola = t('navbar:route_france_angola', 'France ↔ Angola');
 
   const isActiveLink = (href: string) => {
-    const lang = (currentLang || 'fr') as (typeof SUP)[number];
-    const localized = localizeTo(href, lang as any);
+    const localized = localizeTo(href, currentLang);
     return location.pathname === localized;
   };
 
