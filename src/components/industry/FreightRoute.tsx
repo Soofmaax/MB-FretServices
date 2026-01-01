@@ -413,16 +413,27 @@ const FreightRoute: FC = () => {
                 <p key={i} className="text-lg text-gray-700 mb-4">{p}</p>
               ))}
 
-              <div className="mt-6">
+              <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
                 <CtaButton href="contact" variant="primary">
                   {t('routes_main:common.cta_get_quote')}
                 </CtaButton>
-                <LocalizedLink
-                  to="guides/fcl-vs-lcl"
-                  className="ml-4 text-accent-600 hover:text-accent-700 font-medium"
-                >
-                  {t('routes_main:links.fcl_understand', 'Understand FCL vs LCL')}
-                </LocalizedLink>
+                <div className="flex flex-wrap gap-3">
+                  <LocalizedLink
+                    to="guides/fcl-vs-lcl"
+                    className="text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t('routes_main:links.fcl_understand', 'Understand FCL vs LCL')}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    to="guides/prix-conteneur-congo-angola"
+                    className="text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t(
+                      'routes_main:links.pricing_guide',
+                      "Container price guide 20'/40' Congo / Angola"
+                    )}
+                  </LocalizedLink>
+                </div>
               </div>
             </div>
 

@@ -198,6 +198,10 @@
       }
     ]
   },
+  "costs_guide": {
+    "hint": "For more detail on budgeting, see our guide dedicated to the cost of 20'/40' containers to Congo and Angola.",
+    "cta": "Container price guide 20'/40' Congo / Angola"
+  },
   "customs": {
     "seo": {
       "title": "Customs clearance & compliance — Container flows France ↔ Africa (Congo, Angola) | MB Fret Services",

@@ -547,20 +547,46 @@ const FreightMaritime: FC = () => {
               {costCards.map((card, index) => (
                 <div
                   key={card.title || index}
-                  className="bg-gray-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up"
+                  className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
                 >
                   {card.title && (
-                    <h3 className="text-xl font-bold text-primary-900 mb-4">
+                    <h3 className="text-xl font-semibold text-primary-900 mb-3">
                       {card.title}
                     </h3>
                   )}
                   {card.text && (
-                    <p className="text-gray-700 leading-relaxed">
-                      {card.text}
-                    </p>
+                    <p className="text-gray-700 leading-relaxed">{card.text}</p>
                   )}
                 </div>
               ))}
+            </div>
+
+            {(lang === 'fr' || lang === 'en') && (
+              <div className="mt-10 max-w-3xl mx-auto text-center">
+                <p className="text-gray-700 mb-3">
+                  {t(
+                    'freight:costs_guide.hint',
+                    lang === 'fr'
+                      ? "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers le Congo et l’Angola."
+                      : 'For more detail on budgeting, see our guide dedicated to the cost of 20\'/40\' containers to Congo and Angola.'
+                  )}
+                </p>
+                <LocalizedLink
+                  to="guides/prix-conteneur-congo-angola"
+                  className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-primary-900 text-white hover:bg-primary-800 text-sm font-semibold"
+                >
+                  {t(
+                    'freight:costs_guide.cta',
+                    lang === 'fr'
+                      ? "Guide prix conteneur 20' / 40' Congo / Angola"
+                      : "Container price guide 20'/40' Congo / Angola"
+                  )}
+                </LocalizedLink>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
             </div>
           </div>
         </section>
