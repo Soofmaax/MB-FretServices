@@ -77,16 +77,8 @@
     "title": "Rotas principais",
     "discover": "Descobrir",
     "cards": {
-      "france_china": {
-        "title": "França ↔ China",
-        "teaser": "FCL/LCL, portos principais, prazos otimizados, rastreamento 24/7."
-      },
       "france_congo": {
         "title": "França ↔ Congo",
-        "teaser": "FCL/LCL, portos principais, prazos otimizados, rastreamento 24/7."
-      },
-      "france_turkey": {
-        "title": "França ↔ Turquia",
         "teaser": "FCL/LCL, portos principais, prazos otimizados, rastreamento 24/7."
       }
     }
