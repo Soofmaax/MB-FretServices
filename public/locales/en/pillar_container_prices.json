@@ -96,6 +96,10 @@
       "a": "There is no single fixed rate because the cost depends on the container type (20'/40'), ports, season, cargo nature and the services included (pre/post-carriage, customs, insurance). In practice, a 20' or 40' FCL represents a budget of several thousand euros: we always break down our quotes by cost element so you clearly understand your total delivered cost."
     },
     {
+      "q": "Can you give an idea of price without committing to a fixed rate?",
+      "a": "We can share typical scenarios (for example: small LCL shipment of 3–5 pallets, full 20' FCL move, 40' FCL B2B flows) and explain which cost elements are involved, but we deliberately do not publish catalogue prices. Rate levels move too quickly (seasonality, carrier capacity, surcharges, ports) for a generic figure to stay reliable. The most useful method is to share your concrete project so we can build a detailed, realistic budget line by line."
+    },
+    {
       "q": "Why can two container quotes look very different?",
       "a": "Because they may not cover the same scope: some are purely port-to-port, while others include pickup, customs formalities, insurance and sometimes delivery at destination. We systematically clarify what is included and what remains at your charge to avoid misunderstandings."
     },
