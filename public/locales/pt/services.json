@@ -3,6 +3,10 @@
     "title": "Os Nossos Serviços de Transporte Internacional",
     "subtitle": "Logística internacional ponta-a-ponta adaptada às suas necessidades. Do transporte marítimo económico ao transporte aéreo expresso, gerimos a sua carga de A a Z."
   },
+  "seo": {
+    "title": "Os nossos serviços - Transporte marítimo, aéreo e desalfandegamento | MB Fret Services",
+    "description": "Descubra os nossos serviços de transporte internacional: transporte marítimo para África, transporte aéreo expresso, desalfandegamento profissional e seguro de carga."
+  },
   "maritime": {
     "title": "Transporte Marítimo",
     "subtitle": "Soluções económicas para grandes volumes",
@@ -68,5 +72,27 @@
     "text": "Cada projeto logístico é único. Os nossos especialistas analisam as suas necessidades para propor a solução mais adequada e económica.",
     "consultation": "Consulta Gratuita",
     "whatsapp": "Chat WhatsApp"
+  },
+  "routesSection": {
+    "title": "Rotas principais",
+    "discover": "Descobrir",
+    "cards": {
+      "france_congo": {
+        "title": "França ↔ Congo",
+        "teaser": "FCL/LCL, portos principais, prazos otimizados, rastreamento 24/7."
+      }
+    }
+  },
+  "guidesSection": {
+    "title": "Guias & Recursos",
+    "read": "Ler o guia",
+    "incoterms": {
+      "title": "Incoterms 2020 — Guia completo",
+      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos China/Turquia."
+    },
+    "fcl_lcl": {
+      "title": "FCL vs LCL — Como decidir?",
+      "desc": "Limiares de volume (≈13–15 m³), segurança, prazos e multimodalidade. Método e casos de uso."
+    }
   }
 }

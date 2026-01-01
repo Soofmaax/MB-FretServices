@@ -1,31 +1,131 @@
 {
   "seo": {
-    "title": "Sea Freight to Africa - FCL LCL Container Transport | MB Fret Services",
-    "description": "Professional sea freight to Africa: Congo, Angola, Côte d'Ivoire. 20' and 40' containers, FCL and LCL. Free quote within 24h. 15 years of expertise."
+    "title": "Africa freight forwarder & sea freight France–Africa – FCL & LCL containers | MB Fret Services",
+    "description": "Sea freight services from French & European ports to Africa (Congo, Angola). 20' & 40' containers, FCL and LCL, international moves, vehicles and B2B cargo. European and African partner network, in‑house customs support and cargo insurance. Free quote within 24h and 15+ years of expertise."
   },
   "hero": {
     "title": "Sea Freight to Africa",
-    "subtitle": "FCL and LCL container solutions",
-    "intro": "Professional sea transport to major African ports. 20' and 40' containers, LCL groupage, vehicles and special cargo. Regular rotations from French and European ports.",
-    "cta_quote": "Free Sea Freight Quote",
+    "subtitle": "Africa freight forwarder – FCL and LCL container solutions to Congo and Angola",
+    "intro": "Africa freight forwarder and professional sea transport from France and Europe to Central Africa, with a focus on the France–Angola and France–Congo corridors. 20' and 40' containers, LCL groupage, international moves, vehicles and motorbikes on wheels where regulations allow. Tailor‑made sea freight services with integrated customs, handling, storage, insurance and tracking.",
+    "cta_quote": "Get a Sea Freight Quote",
     "cta_whatsapp": "WhatsApp Direct"
   },
+  "how_it_works": {
+    "title": "How does it work?",
+    "subtitle": "A simple process: quote within 24h, FCL/LCL recommendation and optional door-to-door handling.",
+    "items": [
+      {
+        "title": "Detailed quote in under 24 hours",
+        "text": "Tell us about your project (volume, destination, cargo type) and we send a clear, structured proposal within 24 hours."
+      },
+      {
+        "title": "Choosing the right FCL / LCL option",
+        "text": "We compare full containers (FCL) and LCL groupage to optimize your cost based on volumes, lead times and operational constraints."
+      },
+      {
+        "title": "Pickup and door-to-door delivery",
+        "text": "We can arrange pickup at your home or warehouse, pre-carriage to the port and, depending on the country, delivery at destination."
+      }
+    ]
+  },
+  "air": {
+    "seo": {
+      "title": "Air Freight – Fast & Secure B2B Transport | MB Fret Services",
+      "description": "B2B air freight solutions in Europe–Africa: express, secure and traceable shipments. Door-to-door options, cargo insurance and IATA-compliant handling."
+    },
+    "breadcrumb_service_name": "Air freight",
+    "service_name": "B2B Air Freight – Express and secure",
+    "service_type": "Air freight",
+    "faq": [
+      {
+        "q": "Which goods are suitable for air freight?",
+        "a": "High-value, perishable or urgent goods. Air freight minimizes transit time and exposure to risk."
+      },
+      {
+        "q": "What are typical lead times Europe ↔ Africa?",
+        "a": "Depending on hubs and season: 1–5 days door-to-airport, 3–8 days door-to-door. We offer express options on request."
+      },
+      {
+        "q": "Do you provide cargo insurance for air freight?",
+        "a": "Yes. Ad valorem coverage is recommended; we advise based on the shipment’s value, nature and criticality."
+      }
+    ],
+    "hero": {
+      "title": "Air freight",
+      "subtitle": "Priority, reliability, security.",
+      "intro": "A fast and secure solution for urgent, sensitive or high-value shipments. We manage the entire chain end-to-end with real-time tracking.",
+      "cta_quote": "Request a quote",
+      "cta_whatsapp": "WhatsApp"
+    },
+    "features": [
+      {
+        "title": "Express lead times",
+        "text": "Priority handling, regular flights, express options for urgent shipments."
+      },
+      {
+        "title": "Enhanced security",
+        "text": "Traceability, document control and insurance adapted to cargo value."
+      }
+    ],
+    "services": {
+      "title": "Services",
+      "intro": "We operate on major hubs (CDG, AMS, FRA, IST…) with express options, consolidation and ad valorem insurance.",
+      "list": [
+        "Door-to-airport and door-to-door",
+        "Document control and IATA compliance",
+        "Air packing and securing",
+        "24/7 tracking and notifications"
+      ],
+      "cta": "Get a quote"
+    },
+    "images": {
+      "hero_alt": "Air cargo aircraft",
+      "services_alt": "Air freight loading"
+    }
+  },
   "why": {
-    "title": "Why choose our sea freight?",
-    "subtitle": "Recognized expertise in sea transport to Africa with solutions for all your needs."
+    "title": "Why choose MB Fret Services for your sea freight?",
+    "subtitle": "Africa freight forwarder with recognized expertise in sea transport from France to Africa, focusing on the France–Angola and France–Congo corridors and delivering tailor‑made solutions for your flows. Partner network across French & European ports and Central Africa, in‑house customs support, fast response times, competitive rates and a sustainable approach to your supply chain."
   },
   "advantages": [
-    { "title": "Maritime Expertise", "description": "Over 15 years of experience in sea transport to Africa" },
-    { "title": "Controlled Lead Times", "description": "Regular rotations and optimized transit times" },
-    { "title": "Guaranteed Security", "description": "Cargo insurance and real-time tracking of your goods" }
+    {
+      "title": "Maritime Expertise",
+      "description": "Over 15 years of experience in sea transport to Central Africa (Angola, Congo) with dedicated support for your projects."
+    },
+    {
+      "title": "Controlled Lead Times",
+      "description": "Fast response to your enquiries, regular rotations and optimized transit times on key France–Africa corridors."
+    },
+    {
+      "title": "Guaranteed Security",
+      "description": "Secure shipments with adapted cargo insurance and transparent communication throughout the journey."
+    }
   ],
+  "segments": {
+    "title": "International moves, vehicles or cargo?",
+    "subtitle": "A dedicated team for your personal and business projects to Central Africa (Congo, Angola).",
+    "items": [
+      {
+        "title": "International moves",
+        "text": "Personal effects, furniture, boxes and equipment: tailored solutions for full or partial moves from France to Africa."
+      },
+      {
+        "title": "Vehicles & rolling equipment",
+        "text": "Cars, 4x4s, vans, trucks and machinery: loading in containers or on Ro-Ro vessels when feasible."
+      },
+      {
+        "title": "Cargo & B2B flows",
+        "text": "Pallets, bulk cargo, spare parts, machines and consumables: FCL/LCL solutions for regular or one-off flows."
+      }
+    ]
+  },
   "services": {
-    "title": "Our Sea Freight Services",
-    "subtitle": "Comprehensive maritime solutions for all types of cargo. From pickup to delivery, we manage your freight from A to Z.",
+    "title": "Our sea freight services",
+    "subtitle": "Comprehensive sea freight services France–Africa (FCL &amp; LCL) for international moves, B2B cargo, vehicles, motorbikes and machinery. From pickup to delivery, we manage your freight from A to Z (handling, palletization, storage, customs, cargo insurance) on the France–Angola and France–Congo corridors. A full container (FCL) is often the best option when you need to ship a large volume of personal effects, often together with one or two vehicles in a single shipment. We handle pallets, cartons, dry bulk, heavy or out‑of‑gauge cargo in dry, reefer, open‑top or flat containers depending on your needs.",
     "list": [
       "20' and 40' containers (FCL - Full Container Load)",
       "Maritime groupage (LCL - Less than Container Load)",
-      "Transport of new and used vehicles",
+      "Transport of new and used vehicles (Ro-Ro or container, depending on feasibility)",
       "Industrial machines and heavy equipment",
       "Dangerous goods (IMO)",
       "Refrigerated containers (reefer)",
@@ -34,24 +134,149 @@
     ],
     "cta": "Request a Personalized Quote"
   },
+  "lcl": {
+    "title": "LCL sea freight to Africa",
+    "subtitle": "Consolidation service from France and Europe to Congo and Angola.",
+    "blocks": [
+      {
+        "title": "Optimize your costs without filling a full container",
+        "bullets": [
+          "You only pay for the volume you actually use in the container.",
+          "Ideal for shipments of around 1–15 m³, without waiting to build a full FCL.",
+          "More cost-effective than air freight for small and regular shipments."
+        ]
+      },
+      {
+        "title": "Keep flexibility and regular departures",
+        "bullets": [
+          "Regular LCL departures from French and Benelux ports to Pointe-Noire and Luanda.",
+          "Possibility to mix occasional LCL and FCL as soon as your volumes increase.",
+          "Advance booking on the main France–Congo and France–Angola corridors."
+        ]
+      },
+      {
+        "title": "Gain visibility on your groupage flows",
+        "bullets": [
+          "Tracking of key milestones: CFS drop-off, consolidation, loading on vessel, arrival at destination port.",
+          "Proactive communication in case of delay, inspection or transit disruption.",
+          "Simple overview of volumes, frequency, costs and average lead times by destination."
+        ]
+      },
+      {
+        "title": "Include customs and insurance in your LCL flows",
+        "bullets": [
+          "Import/export customs clearance in Congo and Angola, with tailored documentary support.",
+          "Possibility to insure your LCL shipments on an ad valorem basis from the very first cubic meter.",
+          "Guidance on export packing to reduce risks in groupage."
+        ]
+      }
+    ],
+    "cta_title": "Planning an LCL shipment to Africa (Congo, Angola)?",
+    "cta_text": "Tell us your approximate volume, departure ports, destination and shipment frequency. We build a tailor-made LCL solution for international moves, B2B cargo, vehicles or spare parts.",
+    "cta_label": "Request an LCL Quote"
+  },
+  "fcl_lcl_hint": {
+    "title": "FCL, LCL and container sizes at a glance",
+    "text": "Need a refresher on FCL/LCL thresholds and typical volumes for 20' and 40' containers? Check our detailed FCL vs LCL guide before finalising your option.",
+    "cta": "Read the FCL vs LCL guide"
+  },
+  "costs": {
+    "title": "How we build your sea freight rates",
+    "intro": "Our sea freight quotes are based on objective parameters (volume, weight, trade lane, seasonality, carrier capacity and cargo type) to stay aligned with the market while securing your flows.",
+    "cards": [
+      {
+        "title": "Which factors drive the price?",
+        "text": "Volume (m³) and weight, departure and arrival ports, service type (FCL or LCL), cargo nature (standard, dangerous goods, reefer), seasonality and available capacity with carriers. Based on this, we select the most suitable service for your budget and lead times."
+      },
+      {
+        "title": "How to get an accurate quote?",
+        "text": "The more complete your request, the more accurate the quote: cargo description, volume or dimensions, total weight, origin/destination country and city, preferred Incoterm, approximate value and time constraints. We use this information to compare several FCL/LCL options and departure ports (France/Benelux)."
+      },
+      {
+        "title": "How to avoid unexpected price increases?",
+        "text": "We clearly detail what is included in our offer (sea freight, surcharges, THC, pre‑/post‑carriage) and the validity period of the quote. Upfront, a clear Incoterm choice and compliant documentation help reduce costly surprises linked to storage, inspections or customs."
+      }
+    ]
+  },
+  "costs_guide": {
+    "hint": "For more detail on budgeting, see our guide dedicated to the cost of 20'/40' containers to Congo and Angola.",
+    "cta": "Container price guide 20'/40' Congo / Angola"
+  },
+  "customs": {
+    "seo": {
+      "title": "Customs clearance & compliance — Container flows France ↔ Africa (Congo, Angola) | MB Fret Services",
+      "description": "Import/export customs clearance for your FCL/LCL containers, customs representation and duties & taxes calculation on France ↔ Africa (Congo, Angola) flows. Document assistance, Incoterms guidance and regulatory compliance across the entire chain."
+    },
+    "breadcrumb_service_name": "Customs clearance",
+    "service_name": "Customs clearance & import/export compliance",
+    "service_type": "Customs clearance",
+    "faq": [
+      {
+        "q": "Which documents are essential?",
+        "a": "Detailed commercial invoice, packing list, origin documents, possible certificates and specific authorizations depending on the goods (vehicles, machinery, regulated cargo, etc.)."
+      },
+      {
+        "q": "Do you provide customs representation?",
+        "a": "Yes, we handle customs representation, document control and operational follow-up for your FCL/LCL containers, and can provide duties & taxes simulations when feasible."
+      },
+      {
+        "q": "Can you advise on Incoterms?",
+        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) based on your container flows, risk tolerance and logistics setup on the Congo/Angola side."
+      }
+    ],
+    "hero": {
+      "title": "Customs clearance",
+      "subtitle": "France–Africa customs clearance: secure your FCL/LCL container flows to Congo and Angola with controlled documentation and efficient customs representation.",
+      "cta_quote": "Talk to an expert"
+    },
+    "points": [
+      "Export document control in France (invoice, packing list, BL, certificates) for your FCL/LCL containers.",
+      "Customs representation and tariff classification, with duties & taxes simulations for Congo and Angola where possible.",
+      "Incoterms (FOB/CIF/DAP…) support tailored to your container flows.",
+      "Coordination with local counterparts to anticipate documentation requirements in Pointe-Noire and Luanda."
+    ],
+    "services": {
+      "title": "Services",
+      "cta": "Get an estimate"
+    },
+    "links": {
+      "maritime_hint": "Need to combine customs clearance, sea freight and cargo insurance on the same corridor?",
+      "maritime": "Sea freight France–Africa (Congo, Angola)",
+      "insurance": "Cargo insurance for FCL/LCL containers"
+    },
+    "images": {
+      "hero_alt": "Customs clearance and document formalities"
+    }
+  },
   "destinations": {
     "title": "Sea Freight Destinations - Africa",
-    "subtitle": "Regular rotations to major African ports with optimized lead times.",
+    "subtitle": "Regular rotations (weekly or bi-weekly departures) to major Central African ports with optimized lead times.",
     "label_duration": "Transit time",
     "label_frequency": "Frequency",
     "label_departure": "Departure from",
+    "label_port": "Port:",
     "cta_prefix": "Quote to "
   },
   "destinations_list": [
-    { "country": "Congo", "port": "Pointe-Noire", "duration": "18–22 days", "frequency": "Weekly", "departure": "Le Havre, Antwerp" },
-    { "country": "Angola", "port": "Luanda", "duration": "20–25 days", "frequency": "Bi-weekly", "departure": "Antwerp, Rotterdam" },
-    { "country": "Côte d'Ivoire", "port": "Abidjan", "duration": "12–15 days", "frequency": "Daily", "departure": "Le Havre, Marseille" },
-    { "country": "Cameroon", "port": "Douala", "duration": "15–18 days", "frequency": "Bi-weekly", "departure": "Antwerp, Hamburg" }
+    {
+      "country": "Republic of the Congo",
+      "port": "Pointe-Noire",
+      "duration": "18–22 days",
+      "frequency": "Weekly",
+      "departure": "Le Havre, Antwerp"
+    },
+    {
+      "country": "Angola",
+      "port": "Luanda",
+      "duration": "20–25 days",
+      "frequency": "Bi-weekly",
+      "departure": "Antwerp, Rotterdam"
+    }
   ],
   "faq": {
     "title": "Frequently Asked Questions - Sea Freight",
     "q1": "What is the difference between FCL and LCL?",
-    "a1": "FCL (Full Container Load): you rent a full container (20' or 40') exclusively for your goods. LCL (Less than Container Load): your goods share a container with other shippers, ideal for small volumes.",
+    "a1": "FCL (Full Container Load): you rent a full container (20' or 40') exclusively for your goods. It is well suited to full international moves or large volumes of personal effects, often including one or",
     "q2": "Which documents are required for sea freight?",
     "a2": "Commercial invoice, packing list, Bill of Lading, certificate of origin if required, and documents specific to the nature of the goods (health certificates, etc.).",
     "q3": "How can I track my container in transit?",
@@ -62,5 +287,72 @@
     "text": "Get your personalized quote in under 24 hours. Our experts analyze your needs and propose the most cost-effective maritime solution.",
     "cta": "Sea Freight Quote",
     "whatsapp": "Instant WhatsApp"
+  },
+  "insurance": {
+    "seo": {
+      "title": "Cargo insurance — FCL/LCL containers to Congo and Angola | MB Fret Services",
+      "description": "Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Congo and France ↔ Angola corridors. Claims handling, export packaging advice and integration into your freight quote for a clear view of total delivered cost."
+    },
+    "breadcrumb_service_name": "Cargo insurance",
+    "service_name": "Cargo insurance – ad valorem coverage",
+    "service_type": "Transport insurance",
+    "faq": [
+      {
+        "q": "Why insure a container to Congo or Angola?",
+        "a": "To cover risks of damage, loss or theft on high-value and sensitive flows (international moves, vehicles, B2B cargo). An ad valorem policy protects your cash flow and contractual commitments along the whole journey."
+      },
+      {
+        "q": "Which shipments should be prioritised for insurance?",
+        "a": "International moves (personal effects, furniture), vehicles and motorbikes, machinery, as well as high-value B2B lots (equipment, spare parts, sensitive products). We size coverage according to cargo type and risk level."
+      },
+      {
+        "q": "Do you provide door-to-door coverage?",
+        "a": "Yes, we calibrate the policy from pickup to final delivery (pre/post-carriage, ocean legs), and advise on packaging and documentation (photos, notations) to make any potential claim easier to defend."
+      }
+    ],
+    "hero": {
+      "title": "Cargo insurance",
+      "subtitle": "Secure your FCL/LCL containers to Congo and Angola with ad valorem coverage tailored to international moves, B2B cargo, vehicles and motorbikes.",
+      "cta_quote": "Request coverage"
+    },
+    "benefits": [
+      "Ad valorem coverage sized to the value and nature of your cargo (international moves, B2B goods, vehicles, motorbikes).",
+      "Claims handling and support on documentary evidence (photos, notations, reports) to protect your interests.",
+      "Advice on export packaging and container securing (blocking, strapping, crating, protection).",
+      "Insurance integrated into the freight quote to give you a clear view of total delivered cost on France ↔ Congo/Angola flows."
+    ],
+    "services": {
+      "title": "Benefits",
+      "cta_quote": "Request coverage",
+      "cta_quote_secondary": "Get a quote"
+    },
+    "claims": {
+      "title": "In case of a claim: the right steps",
+      "steps": [
+        "Inspect the container and cargo as soon as it is opened and take clear photos of any damage or shortages (inside/outside, package numbers, seals).",
+        "Write detailed, precise reservations on the delivery document or BL, indicating which packages are affected and the nature of the damage.",
+        "Inform us as soon as possible and send the key documents: BL, commercial invoice, packing list, photos, written reservations and any survey report.",
+        "Keep the original packaging and do not destroy damaged items before the insurer or appointed surveyor has given clearance.",
+        "Cooperate with the appointed surveyor (if any) and keep us updated so we can defend your interests with the insurer."
+      ]
+    },
+    "images": {
+      "hero_alt": "Cargo insurance for transport",
+      "services_alt": "Reviewing cargo insurance coverage"
+    }
+  },
+  "links": {
+    "customs_insurance_hint": "Need customs clearance and cargo insurance on the same corridor?",
+    "customs_service": "France–Africa customs clearance (Congo, Angola)",
+    "insurance_service": "Cargo insurance for FCL/LCL containers"
+  },
+  "images": {
+    "hero_alt": "Sea freight containers",
+    "services_alt": "Loading of sea freight containers"
+  },
+  "service_type": "Sea freight",
+  "whatsapp": {
+    "hero_quote_africa": "Hello, I would like a quote for sea freight to Africa",
+    "final_quote": "Hello, I would like a quote for sea freight"
   }
 }

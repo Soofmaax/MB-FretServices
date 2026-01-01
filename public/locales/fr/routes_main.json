@@ -18,6 +18,14 @@
     "ready_to_ship_desc": "Devis sous 24h. Experts FCL/LCL. Suivi 24/7.",
     "ports_corridors": "Ports & corridors __ROUTE__"
   },
+  "links": {
+    "fcl_understand": "Comprendre FCL vs LCL",
+    "incoterms_guide": "Comprendre les Incoterms",
+    "fcl_guide_short": "Guide FCL/LCL",
+    "pricing_guide": "Guide prix conteneur 20' / 40' Congo / Angola",
+    "customs_service": "Voir notre service de dédouanement France–Afrique",
+    "insurance_service": "Voir notre service d’assurance cargo"
+  },
   "labels": {
     "departures_fr": "Départs France:",
     "arrivals": "Arrivées:",
@@ -26,8 +34,8 @@
   "common": {
     "bullets_ports": [
       "Suivi en temps réel et visibilité des jalons.",
-      "Dédouanement et conformité documentaire.",
-      "Assurance cargo ad valorem (optionnelle)."
+      "Dédouanement et conformité documentaire incluses dans nos schémas France–Afrique.",
+      "Assurance cargo ad valorem proposée de manière systématique sur vos flux FCL/LCL."
     ],
     "key_services": [
       "FCL: 20’, 40’, 40’HC; options Reefer/Open Top selon étude",
@@ -67,94 +75,54 @@
     "cta_get_quote": "Demander un devis",
     "cta_get_detailed_quote": "Demander un devis détaillé",
     "cta_build_plan": "Construire mon plan de transport",
-    "cta_whatsapp": "Nous contacter via WhatsApp"
-  },
-  "france_china": {
-    "label": "France ↔ Chine",
-    "title": "Fret maritime France ↔ Chine (FCL & LCL)",
-    "subtitle": "Solutions FCL/LCL fiables entre les principaux ports français (Le Havre, Marseille-Fos, Dunkerque) et les hubs chinois (Shanghai, Ningbo, Shenzhen, Qingdao).",
-    "transit": "Délais indicatifs: 35–50 jours selon l'itinéraire, la saison et la congestion.",
-    "ports_from": ["Le Havre", "Marseille-Fos", "Dunkerque"],
-    "ports_to": ["Shanghai", "Ningbo", "Shenzhen", "Qingdao"],
-    "costs": [
-      "Sur l’axe France ↔ Chine, le FCL devient souvent optimal au‑delà d’environ 13–15 m³: moins de manipulations, sécurité renforcée et délais plus stables. En‑dessous, le LCL (groupage) est un bon levier pour contenir les coûts.",
-      "Les prix varient selon la saison, l’armateur et la charge des navires (BAF/CAF/PSS). Utilisez le Calculateur CBM et demandez un devis pour une estimation transparente et à jour."
-    ],
-    "customs": [
-      "Nous gérons BL, facture, liste de colisage, certificats d’origine (si requis) et contrôles conformité. Incoterms courants: FOB/CIF; DAP/DDP pour une prise en charge élargie. Assistance dédouanement incluse."
-    ],
-    "insurance_risks": [
-      "Assurance cargo ad valorem: couverture du départ à la livraison",
-      "Conseils d’emballage export pour réduire avaries et litiges",
-      "Visibilité des jalons et relances proactives"
-    ],
-    "why_us": [
-      "Planification sur pics (CNY, Q4) et alternatives de service",
-      "Options rail en complément pour gagner du temps quand nécessaire",
-      "Réseau d’armateurs et hubs pour lisser les congestions"
-    ],
-    "use_cases": [
-      "Séries régulières: FCL pour sécuriser délais/capacité; rail ponctuel pour accélérer",
-      "Lancements produits: LCL pour pilotes puis bascule FCL dès montée en volume",
-      "Marchandises sensibles: FCL + emballage pro + assurance ad valorem"
-    ],
-    "advice": {
-      "planning_title": "Planification & capacité",
-      "planning": [
-        "Anticiper les hausses de demande (CNY, Q4) et réserver des slots",
-        "Comparer services directs vs transbordements selon le port chinois",
-        "Prévoir une marge calendrier pour absorber congestions et météo"
-      ],
-      "documentation_title": "Documentation & conformité",
-      "documentation": [
-        "Descriptions produits alignées codes SH; éviter les libellés ambigus",
-        "BL: vérifier brouillon (draft) avant émission pour éviter corrections coûteuses",
-        "Assurance: calibrer couverture selon la valeur et la sensibilité"
-      ],
-      "kpis_title": "KPIs à suivre",
-      "kpis": [
-        "OTD (on-time delivery) port à port et porte à porte",
-        "Taux d’anomalies documentaires",
-        "Écart coût réel vs devis (coût total livré)"
-      ]
-    },
-    "faq": [
-      { "q": "FCL ou LCL: que choisir sur l’axe France–Chine ?", "a": "Au‑delà de ~13–15 m³, le FCL est souvent plus économique et plus sûr (moins de manipulations). En‑dessous, le LCL reste pertinent pour optimiser le budget." },
-      { "q": "Quels Incoterms privilégier (FOB/CIF/DAP/DDP) ?", "a": "FOB/CIF restent courants sur la Chine; DAP/DDP offrent une prise en charge élargie. Le choix dépend du contrôle voulu et du profil de risque." },
-      { "q": "Gérez‑vous la documentation douanière ?", "a": "Oui: BL, facture commerciale, liste de colisage, certificats éventuels; plus contrôle conformité et assistance dédouanement." },
-      { "q": "Le fret ferroviaire peut‑il remplacer le maritime ?", "a": "Pour certains corridors, le rail offre ~18–22 jours de transit. C’est un compromis vitesse/coût intéressant entre l’aérien et le maritime." },
-      { "q": "Quelles périodes sont les plus tendues ?", "a": "Le Nouvel An chinois et le Q4 avant Noël. Mieux vaut réserver en amont et conserver des alternatives de service." },
-      { "q": "Proposez‑vous une assurance cargo ?", "a": "Oui, couverture ad valorem du départ à la livraison, avec conseils d’emballage pour réduire le risque." }
-    ]
+    "cta_whatsapp": "Nous contacter via WhatsApp",
+    "cbm_note": "À titre indicatif : 20’ ≈ 33 m³, 40’ ≈ 67 m³. Les tolérances et limites de poids/volume dépendent de l’armateur et du service."
   },
   "france_congo": {
     "label": "France ↔ Congo",
-    "title": "Fret maritime France ↔ Congo (FCL & LCL)",
-    "subtitle": "Groupage LCL et conteneurs complets vers Pointe‑Noire, avec ramassage B2B en France (IDF, Lyon, Marseille) et accompagnement documentaire.",
+    "title": "Transport & fret maritime France ↔ Congo (Pointe‑Noire) – Groupage, déménagement, véhicules",
+    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
     "transit": "Délais indicatifs: 20–30 jours selon départs, escales et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos"],
     "ports_to": ["Pointe‑Noire"],
     "costs": [
-      "Vers Pointe‑Noire, le groupage LCL est très pertinent pour les petits volumes et colis B2B. Au‑delà de ~13–15 m³, le FCL devient progressivement plus compétitif et plus prévisible.",
-      "Les coûts tiennent compte des surcharges maritimes et des opérations portuaires. Nous vous guidons sur le meilleur schéma selon le budget et l’échéance."
+      "Vers Pointe‑Noire, le groupage LCL est très pertinent pour les petits volumes, effets personnels, bagages et colis B2B. Au‑delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
+      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, opérations portuaires (THC), pré/post‑acheminement et droits/taxes à l’import au Congo. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons.",
+      "Que vous expédiiez des effets personnels, des colis e‑commerce, des palettes industrielles ou un déménagement complet avec véhicules, nous construisons un schéma de coût transparent en expliquant clairement ce qui est inclus (fret, surcharges, manutentions, pré/post‑acheminement, droits et taxes estimés)."
     ],
     "customs": [
-      "Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur les droits & taxes."
+      "Contrôle documentaire rigoureux: facture détaillée, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur les droits & taxes avec des correspondants locaux à Pointe‑Noire."
     ],
     "insurance_risks": [
       "Assurance cargo ad valorem: couverture du départ à la livraison",
       "Conseils d’emballage export pour réduire avaries et litiges",
       "Visibilité des jalons et relances proactives"
     ],
+    "services_block": {
+      "title": "Services logistiques complets pour vos expéditions vers le Congo (Pointe‑Noire)",
+      "intro": "Pour vos flux vers Pointe‑Noire, nous ne nous contentons pas de réserver un conteneur : nous coordonnons l’ensemble de la chaîne logistique depuis la France et l’Europe jusqu’au port congolais, notamment :",
+      "items": [
+        "Enlèvements et livraisons de lots partiels (palettes, cartons, petits lots B2B, effets personnels) en France et au Benelux.",
+        "Pré- et post-acheminement de conteneurs FCL jusqu’au port de départ puis depuis le port de Pointe‑Noire, avec organisation des transports routiers lorsque cela est possible via notre réseau de partenaires.",
+        "Gestion de la documentation de transport (connaissement maritime, packing list, facture commerciale, certificat d’origine et documents spécifiques selon la nature des marchandises).",
+        "Formalités en douane export en France et accompagnement pour les formalités import au Congo via nos correspondants locaux.",
+        "Services de groupage maritime LCL vers Pointe‑Noire pour les volumes intermédiaires, avec possibilités de consolidation et d’entreposage en France ou au Benelux avant départ.",
+        "Gestion de flux d’export, d’import et, sur étude, d’opérations de cross trade impliquant le Congo.",
+        "Accompagnement sur les exigences locales spécifiques (documents, certificats, contraintes portuaires) en coordination avec les acteurs présents à Pointe‑Noire."
+      ]
+    },
     "why_us": [
-      "Forte expertise LCL/colis vers Pointe‑Noire avec consolidations régulières",
-      "Ramassage B2B dans les principaux hubs français",
-      "Accompagnement documentaire et dédouanement local"
+      "Positionnement dédié sur le corridor France–Congo pour colis, marchandises B2B, déménagements, véhicules et motos.",
+      "Forte expertise LCL/colis vers Pointe‑Noire avec consolidations régulières.",
+      "Ramassage B2B dans les principaux hubs français et, sur étude, en Benelux.",
+      "Accompagnement documentaire et dédouanement local via des partenaires implantés à Pointe‑Noire."
     ],
     "use_cases": [
-      "Colis/petits lots: LCL groupé vers Pointe‑Noire avec visibilité des jalons",
-      "Équipements lourds: FCL/Open Top selon étude, ramassage orchestré",
-      "Flux projet: coordination documentaire et assistance locale au dédouanement"
+      "Déménagements internationaux et effets personnels (cartons, mobilier, affaires de famille) en LCL ou FCL vers Pointe‑Noire, avec options de ramassage en France et Benelux.",
+      "Colis/petits lots: LCL groupé vers Pointe‑Noire avec visibilité des jalons et suivi proactif.",
+      "Expéditions B2B (palettes, pièces détachées, consommables, équipements) en LCL ou FCL selon volume et régularité des flux.",
+      "Équipements lourds et machines: FCL/Open Top ou équipements spéciaux après étude, avec ramassage orchestré.",
+      "Véhicules et motos: solutions sur mesure (Ro‑Ro ou conteneur) selon faisabilité, avec gestion documentaire et coordination à l’arrivée."
     ],
     "advice": {
       "planning_title": "Groupage LCL & visibilité",
@@ -182,65 +150,116 @@
       { "q": "Suivi et notifications: quel niveau de visibilité ?", "a": "Suivi en temps réel, mises à jour aux étapes clés (embarquement, transit, arrivée) et relances proactives." },
       { "q": "Quelles pièces sont requises à l’import au Congo ?", "a": "BL, facture, PL, certificat d’origine si requis, et documents spécifiques selon la marchandise. Assistance au dédouanement disponible." },
       { "q": "Recommandez‑vous une assurance ?", "a": "Oui, une police ad valorem est conseillée. Nous calibrons la couverture selon la valeur et la sensibilité des biens." },
-      { "q": "FCL vs LCL vers Pointe‑Noire: seuil de bascule ?", "a": "Autour de 13–15 m³, le FCL devient souvent compétitif et plus prévisible; en‑dessous, le LCL reste intéressant." }
+      { "q": "FCL vs LCL vers Pointe‑Noire: seuil de bascule ?", "a": "Autour de 13–15 m³, le FCL devient souvent compétitif et plus prévisible; en‑dessous, le LCL reste intéressant." },
+      {
+        "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers Pointe‑Noire ?",
+        "a": "Le coût d’un conteneur (20' ou 40') vers Pointe‑Noire dépend du port de départ (Le Havre, Fos, Benelux), de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance cargo). Nous détaillons toujours nos devis par poste (fret, surcharges, THC, droits & taxes estimés) afin que vous ayez une vision claire du coût total livré."
+      },
+      {
+        "q": "Quel délai prévoir pour un déménagement complet France → Congo ?",
+        "a": "En moyenne, il faut compter 20 à 30 jours de transit maritime vers Pointe‑Noire, auxquels s’ajoutent l’enlèvement, la mise en conteneur, le passage portuaire et le dédouanement à l’arrivée. Nous recommandons de prévoir une marge pour les contrôles éventuels et de nous contacter dès que vos dates approximatives de départ sont connues."
+      },
+      {
+        "q": "Proposez‑vous un pack déménagement + véhicule + assurance pour le Congo ?",
+        "a": "Oui, nous pouvons étudier un schéma combinant conteneur FCL (effets personnels + 1 ou 2 véhicules), dédouanement et assurance cargo ad valorem. L’objectif est de vous proposer un package lisible (conteneur, services portuaires, formalités, couverture) plutôt qu’un simple tarif « port à port » difficile à comparer."
+      }
     ]
   },
-  "france_turkey": {
-    "label": "France ↔ Turquie",
-    "title": "Fret maritime France ↔ Turquie (FCL & LCL)",
-    "subtitle": "Liaisons régulières avec Istanbul, Izmir et Mersin. Options multimodales Mer/Route/Air pour des délais courts et une planification souple.",
-    "transit": "Délais indicatifs: 7–15 jours selon port et saison.",
-    "ports_from": ["Marseille-Fos", "Le Havre"],
-    "ports_to": ["Istanbul", "Izmir", "Mersin"],
+  "france_angola": {
+    "label": "France ↔ Angola",
+    "title": "Transport & fret maritime France ↔ Angola (Luanda) – Groupage, déménagement, véhicules et motos",
+    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous travaillons avec plusieurs armateurs majeurs pour privilégier la qualité de service, la fiabilité des délais et un budget cohérent plutôt qu’un simple prix « le plus bas ».",
+    "transit": "Délais indicatifs: 20–25 jours selon port de départ, rotations et saison.",
+    "ports_from": ["Le Havre", "Marseille-Fos", "Anvers", "Rotterdam"],
+    "ports_to": ["Luanda"],
     "costs": [
-      "France ↔ Turquie bénéficie de délais courts et de fréquences élevées. FCL pour volumes consolidés et régularité; LCL reste une alternative pragmatique pour des flux irréguliers.",
-      "En cas d’urgence, des options multimodales (Mer/Route/Air) permettent de respecter des jalons critiques sans exploser les coûts."
+      "Vers Luanda, le groupage maritime LCL est particulièrement adapté pour les petits volumes, effets personnels, bagages et colis B2B. Au-delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
+      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, THC portuaires, pré/post‑acheminement et droits/taxes à l’import en Angola. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons.",
+      "Que vous expédiiez des vêtements, des colis e‑commerce, des palettes industrielles ou un déménagement complet avec véhicules, nous construisons un schéma de coût transparent en expliquant clairement ce qui est inclus (fret, surcharges, manutentions, pré/post‑acheminement, droits et taxes estimés)."
     ],
     "customs": [
-      "BL, facture, PL; Incoterms adaptés (FOB/CIF/DAP/DDP) selon partage des responsabilités. Paramétrage documentaire et coordination portuaire pour éviter retards."
+      "L’Angola exige une documentation rigoureuse: facture détaillée, packing list, BL, certificat d’origine éventuel et documents spécifiques selon la marchandise. Nous vous accompagnons sur la codification SH, l’estimation des droits et taxes, et la préparation des dossiers pour limiter les contrôles et retards."
     ],
     "insurance_risks": [
-      "Assurance cargo ad valorem: couverture du départ à la livraison",
-      "Conseils d’emballage export pour réduire avaries et litiges",
-      "Visibilité des jalons et relances proactives"
+      "Assurance cargo ad valorem adaptée à la valeur de vos marchandises",
+      "Conseils d’emballage export (caisses bois, renfort palettes, filmage et calage) pour limiter les avaries",
+      "Visibilité des jalons clé (embarquement, transbordement, arrivée) et relances proactives vers les acteurs locaux"
     ],
+    "services_block": {
+      "title": "Services logistiques complets pour vos expéditions vers l’Angola (Luanda)",
+      "intro": "Pour vos flux vers Luanda, nous ne nous contentons pas de réserver un conteneur : nous coordonnons l’ensemble de la chaîne logistique depuis la France et l’Europe jusqu’au port angolais, notamment :",
+      "items": [
+        "Enlèvements et livraisons de lots partiels (palettes, cartons, effets personnels, petites expéditions B2B) en France et au Benelux.",
+        "Pré- et post-acheminement de conteneurs FCL jusqu’au port de départ puis depuis le port de Luanda, avec organisation des transports routiers lorsque cela est possible via notre réseau de partenaires.",
+        "Gestion de la documentation de transport (connaissement maritime, packing list, facture commerciale et attestations spécifiques selon la nature des marchandises).",
+        "Formalités en douane export en France et accompagnement pour les formalités import en Angola via nos correspondants locaux.",
+        "Services de groupage maritime LCL vers Luanda pour les volumes intermédiaires, avec possibilités de consolidation et d’entreposage en France ou au Benelux avant départ.",
+        "Gestion de flux d’export, d’import et, sur étude, d’opérations de cross trade impliquant l’Angola.",
+        "Accompagnement pour la préparation des certificats d’embarquement exigés par les autorités angolaises, en coordination avec des partenaires implantés près des principaux ports du pays."
+      ]
+    },
     "why_us": [
-      "Délais courts et orchestration multimodale (Mer/Route/Air)",
-      "Études cross‑trade et verrouillage documentaire",
-      "Suivi 24/7 et communication réactive"
+      "Positionnement dédié sur le corridor France–Angola pour tous vos envois (marchandises B2B, déménagements, véhicules et motos).",
+      "Expérience sur le corridor France/Europe ↔ Luanda, incluant groupage LCL, FCL et véhicules.",
+      "Réseau de partenaires portuaires à Anvers/Rotterdam pour optimiser capacités, coûts et délais.",
+      "Accompagnement documentaire dédié à l’Angola et coordination avec les interlocuteurs locaux."
     ],
     "use_cases": [
-      "Réassort rapide: LCL ou route/multimodal pour tenir des fenêtres serrées",
-      "Programmes récurrents: FCL avec planification hebdo et slots réservés",
-      "Cross‑trade: verrouillage documentaire, partenaires adaptés par segment"
+      "Déménagements internationaux et effets personnels (cartons, mobilier, affaires de famille) en LCL ou FCL vers Luanda, avec options de ramassage en France et Benelux.",
+      "Expéditions textiles et prêt‑à‑porter (cartons, balles, accessoires) pour le commerce et le e‑commerce vers l’Angola.",
+      "Expéditions B2B (palettes, pièces détachées, consommables, équipements) en LCL ou FCL selon volume et régularité des flux.",
+      "Machines et équipements: FCL, Open Top ou équipements spéciaux après étude, avec organisation du pré‑acheminement routier.",
+      "Véhicules et motos: solutions sur mesure (Ro-Ro ou conteneur) avec chargement sur roues sans démontage lorsque c’est possible, gestion documentaire et coordination livraison sur site."
     ],
     "advice": {
-      "planning_title": "Multimodal & réactivité",
+      "planning_title": "Planification Angola & choix du mode",
       "planning": [
-        "Comparer Mer/Route/Air selon jalons; basculer en express si nécessaire",
-        "Programmer des départs fréquents pour lisser l’activité",
-        "Préparer alternatives portuaires (Izmir/Mersin) selon période"
+        "Anticiper les périodes de tension (fin d’année, pics projet) et sécuriser les départs avec un préavis suffisant.",
+        "Comparer les départs depuis la France (Le Havre / Fos) et depuis Anvers/Rotterdam pour optimiser délais et budget.",
+        "Basculer sur FCL dès que la valeur et le volume le justifient pour réduire les manipulations et mieux maîtriser les délais."
       ],
-      "documentation_title": "Qualité documentaire",
+      "documentation_title": "Documentation & conformité Angola",
       "documentation": [
-        "BL/facture/PL cohérents; anticiper certificats d’origine si requis",
-        "Incoterms adaptés au niveau de contrôle désiré",
-        "Assurance correctement dimensionnée au risque"
+        "Soigner le détail de la facture (désignation claire, valeur réaliste, origine) pour éviter revalorisations et blocages.",
+        "Valider les exigences locales spécifiques (licences, autorisations, documents techniques) avant expédition.",
+        "Documenter l’emballage (photos datées, numéros de colis) et conserver les preuves nécessaires pour l’assurance."
       ],
-      "kpis_title": "KPIs à suivre",
+      "kpis_title": "KPIs à suivre vers l’Angola",
       "kpis": [
-        "Délai moyen door-to-door",
-        "Taux de non-conformité documentaire",
-        "Coût total par m³ vs budget"
+        "Délai moyen entre arrivée navire et mainlevée à Luanda.",
+        "Taux d’écart entre coût réel et devis (droits/taxes inclus).",
+        "Taux de litiges (avaries, manquants, différends documentaires)."
       ]
     },
     "faq": [
-      { "q": "Quelles sont les forces du corridor France–Turquie ?", "a": "Délais courts, fréquences élevées, bonnes alternatives multimodales. Idéal pour flux réguliers et chaînes d’approvisionnement réactives." },
-      { "q": "Proposez‑vous des schémas multimodaux ?", "a": "Oui: Mer/Route pour optimiser le coût; recours à l’aérien en cas d’urgence; orchestration selon vos contraintes." },
-      { "q": "Le cross‑trade est‑il possible (ex: Chine→Turquie→Europe/Afrique) ?", "a": "Oui, étude au cas par cas avec verrouillage documentaire et sélection d’armateurs/partenaires." },
-      { "q": "Quels documents et Incoterms recommandez‑vous ?", "a": "BL, facture, PL; Incoterms au choix (FOB/CIF/DAP/DDP) selon partage des responsabilités et du risque." },
-      { "q": "FCL vs LCL sur la Turquie: que privilégier ?", "a": "FCL pour volumes significatifs et délais plus stables; LCL compétitif pour petits envois ou flux irréguliers." },
-      { "q": "Assurance et gestion des risques ?", "a": "Assurance ad valorem recommandée; conseils d’emballage et préparation documentaire pour éviter litiges et retards." }
+      {
+        "q": "Le LCL est‑il adapté pour l’Angola ?",
+        "a": "Oui. Le groupage est pertinent pour effets personnels, petits lots et colis professionnels. Nous opérons des départs réguliers vers Luanda avec visibilité sur les jalons."
+      },
+      {
+        "q": "À partir de quel volume passer de LCL à FCL vers Luanda ?",
+        "a": "En pratique, le FCL devient souvent intéressant au‑delà d’environ 13–15 m³, en tenant compte du coût total livré et de la sensibilité de la marchandise."
+      },
+      {
+        "q": "Quels documents sont requis pour l’Angola ?",
+        "a": "Facture commerciale détaillée, packing list, BL, certificats d’origine ou spécifiques selon la marchandise, et documents exigés par les autorités angolaises. Nous vous guidons sur cette check‑list."
+      },
+      {
+        "q": "Pouvez‑vous gérer des véhicules ou des effets personnels ?",
+        "a": "Oui, sous réserve d’étude de faisabilité : véhicules en conteneur ou Ro‑Ro, motos sur leurs roues sans démontage lorsque c’est possible, effets personnels en LCL ou FCL. Nous clarifions en amont les contraintes douanières et réglementaires."
+      },
+      {
+        "q": "Recommandez‑vous une assurance pour l’Angola ?",
+        "a": "Oui, une police ad valorem est fortement recommandée sur cette destination. Nous dimensionnons la couverture avec vous et vous aidons à documenter l’emballage pour limiter les litiges."
+      },
+      {
+        "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers Luanda ?",
+        "a": "Le coût d’un conteneur (20' ou 40') vers Luanda dépend du port de départ (Le Havre, Fos, Anvers, Rotterdam), de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance cargo). Nous vous remettons des devis détaillés par postes (fret, surcharges, THC, droits & taxes estimés) pour que vous maîtrisiez le coût total livré."
+      },
+      {
+        "q": "Quel délai prévoir pour un déménagement complet France → Angola ?",
+        "a": "En moyenne, il faut compter 20 à 25 jours de transit maritime vers Luanda, auxquels s’ajoutent l’enlèvement, la mise en conteneur, les opérations portuaires et le dédouanement à l’arrivée. Nous recommandons de prévoir une marge pour les contrôles éventuels et de planifier votre déménagement dès que vos dates approximatives sont connues."
+      }
     ]
   }
 }

@@ -2,5 +2,14 @@
   "home": "Accueil",
   "services": "Nos Services",
   "destinations": "Destinations",
-  "contact": "Contact"
+  "contact": "Contact",
+  "guides": "Guides",
+  "resources": "Ressources",
+  "routes": "Routes",
+  "route_france_congo": "France ↔ Congo",
+  "route_france_angola": "France ↔ Angola",
+  "lang_label": "Langue",
+  "lang_aria": "Changer de langue",
+  "menu_open": "Ouvrir le menu",
+  "menu_close": "Fermer le menu"
 }

@@ -10,12 +10,12 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Legal = lazy(() => import('./pages/Legal'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const FreightMaritime = lazy(() => import('./pages/FreightMaritime'));
-const AirFreight = lazy(() => import('./pages/AirFreight'));
 const Customs = lazy(() => import('./pages/Customs'));
 const Insurance = lazy(() => import('./pages/Insurance'));
 const FreightRoute = lazy(() => import('./pages/FreightRoute'));
 const PillarIncoterms = lazy(() => import('./pages/PillarIncoterms'));
 const PillarFCLvsLCL = lazy(() => import('./pages/PillarFCLvsLCL'));
+const PillarContainerPricing = lazy(() => import('./pages/PillarContainerPricing'));
 const FreightRouteSubpage = lazy(() => import('./pages/FreightRouteSubpage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -86,14 +86,8 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="services/fret-aerien"
-            element={
-              <Suspense fallback={null}>
-                <AirFreight />
-              </Suspense>
-            }
-          />
+          {/* Air freight page disabled for now to avoid confusion; maritime is the primary focus */}
+
           <Route
             path="services/dedouanement"
             element={
@@ -111,38 +105,6 @@ function App() {
             }
           />
           {/* FR route-specific pages */}
-          <Route
-            path="services/fret-maritime/france-chine"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-chine/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-chine/douane"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-chine/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
           <Route
             path="services/fret-maritime/france-congo"
             element={
@@ -176,34 +138,10 @@ function App() {
             }
           />
           <Route
-            path="services/fret-maritime/france-turquie"
+            path="services/fret-maritime/france-angola"
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie/douane"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-turquie/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
               </Suspense>
             }
           />
@@ -217,10 +155,10 @@ function App() {
             }
           />
           <Route
-            path="guides/fcl-vs-lcl"
+            path="guides/prix-conteneur-congo-angola"
             element={
               <Suspense fallback={null}>
-                <PillarFCLvsLCL />
+                <PillarContainerPricing />
               </Suspense>
             }
           />
@@ -266,14 +204,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="services/air-freight"
-            element={
-              <Suspense fallback={null}>
-                <AirFreight />
-              </Suspense>
-            }
-          />
+          {/* Air freight international slug disabled; main services are sea freight, customs and insurance */}
           <Route
             path="services/customs-clearance"
             element={
@@ -291,38 +222,6 @@ function App() {
             }
           />
           {/* EN + default international slugs for route-specific pages (also used by es/tr/sw/de/it/ar) */}
-          <Route
-            path="services/maritime-freight/france-china"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-china/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-china/customs"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-china/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
           <Route
             path="services/maritime-freight/france-congo"
             element={
@@ -356,34 +255,10 @@ function App() {
             }
           />
           <Route
-            path="services/maritime-freight/france-turkey"
+            path="services/maritime-freight/france-angola"
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey/customs"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-turkey/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
               </Suspense>
             }
           />
@@ -401,6 +276,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <PillarFCLvsLCL />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guides/container-prices-congo-angola"
+            element={
+              <Suspense fallback={null}>
+                <PillarContainerPricing />
               </Suspense>
             }
           />
@@ -453,14 +336,7 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="servicos/frete-aereo"
-            element={
-              <Suspense fallback={null}>
-                <AirFreight />
-              </Suspense>
-            }
-          />
+          {/* PT air freight slug disabled for now */}
           <Route
             path="servicos/despacho-aduaneiro"
             element={
@@ -478,38 +354,6 @@ function App() {
             }
           />
           {/* PT route-specific pages */}
-          <Route
-            path="servicos/frete-maritimo/franca-china"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-china/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-china/despacho-aduaneiro"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-china/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
           <Route
             path="servicos/frete-maritimo/franca-congo"
             element={
@@ -543,34 +387,10 @@ function App() {
             }
           />
           <Route
-            path="servicos/frete-maritimo/franca-turquia"
+            path="servicos/frete-maritimo/franca-angola"
             element={
               <Suspense fallback={null}>
                 <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia/despacho-aduaneiro"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-turquia/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
               </Suspense>
             }
           />
@@ -588,6 +408,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <PillarFCLvsLCL />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guias/precos-conteiner-congo-angola"
+            element={
+              <Suspense fallback={null}>
+                <PillarContainerPricing />
               </Suspense>
             }
           />

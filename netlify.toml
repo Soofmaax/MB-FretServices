@@ -6,12 +6,12 @@
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
   # Fast deployment defaults (can be widened later)
-  VITE_LANG_INDEX = "fr,en"
-  VITE_SUP_LANGS = "fr,en"
+  VITE_LANG_INDEX = "fr,en,pt,ar,zh"
+  VITE_SUP_LANGS = "fr,en,pt,ar,zh"
   # Build-time script controls (limit heavy tasks)
-  SITEMAP_LANGS = "fr,en"
+  SITEMAP_LANGS = "fr,en,pt,ar,zh"
   PRERENDER_LANGS = "fr,en"
-  AI_TXT_LANGS = "fr,en"
+  AI_TXT_LANGS = "fr,en,pt,ar,zh"
   # Skip i18n translation during Netlify build; run via GitHub Action instead
   I18N_SKIP = "1"
   # Optional: skip Puppeteer prerender completely if needed

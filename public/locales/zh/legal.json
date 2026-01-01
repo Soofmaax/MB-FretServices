@@ -1,0 +1,63 @@
+{
+  "__comment": "模板 —— 请用客户的真实法律信息替换所有 {{PLACEHOLDERS}} 占位符",
+  "page_title": "法律声明",
+  "seo_title": "法律声明 | MB Fret Services",
+  "seo_description": "MB Fret Services 网站的法律声明：法律信息、责任说明、知识产权及网站使用条款。",
+  "privacy_seo_title": "隐私政策 | MB Fret Services",
+  "privacy_seo_description": "MB Fret Services 网站用户的隐私政策及个人数据保护说明。",
+  "sections": {
+    "info": {
+      "heading": "法律信息",
+      "labels": {
+        "raison_sociale": "公司名称",
+        "forme_juridique": "法律形式",
+        "capital_social": "注册资本",
+        "siege_social": "注册地址",
+        "siret": "SIRET 编号",
+        "code_ape": "APE 行业代码",
+        "rc_pro": "职业责任保险"
+      }
+    },
+    "contact": {
+      "heading": "联系信息",
+      "labels": {
+        "telephone": "电话",
+        "email": "电子邮件",
+        "adresse": "地址"
+      }
+    },
+    "hosting": {
+      "heading": "网站托管",
+      "content_line1": "本网站由 {{HEBERGEUR_NOM}} 提供托管服务",
+      "content_line2": "{{HEBERGEUR_ADRESSE}}"
+    },
+    "ip": {
+      "heading": "知识产权",
+      "content": "本网站整体受法国及国际版权和知识产权法律的保护。保留所有复制与展示权利。"
+    },
+    "terms": {
+      "heading": "使用条款",
+      "content": "使用本网站即表示您完全接受下述通用使用条款。本使用条款可能随时被修改或补充。"
+    },
+    "privacy": {
+      "heading": "个人数据保护",
+      "content1": "根据 1978 年 1 月 6 日修订的《信息与自由法》及《通用数据保护条例》（GDPR），您有权访问、更正、携带及删除与您有关的个人数据。",
+      "content2": "如需行使上述权利，请通过以下地址联系我们：contact@mb-fretservices.com"
+    },
+    "cookies": {
+      "heading": "Cookies",
+      "content": "本网站使用 Cookie 以改善用户体验并生成访问统计。继续浏览即表示您同意使用这些 Cookie。"
+    },
+    "liability": {
+      "heading": "责任限制",
+      "content": "MB Fret Services 将尽力提供尽可能准确的信息。但对于遗漏、不准确或更新延迟所造成的后果（无论来自本公司还是第三方合作伙伴），公司概不承担责任。"
+    },
+    "credits": {
+      "heading": "制作信息",
+      "content": "设计与开发：",
+      "agency_block": "本网站由 SMARTER LOGIC WEB 设计与开发，该公司为单人股东简化股份公司（SASU），注册资本 500,00 €，在楠泰尔商事法院注册号为 994 493 757 R.C.S. Nanterre，注册地址：32 Rue de Paris, 92100 Boulogne-Billancourt, France，并在 HelloDom（878 831 312 R.C.S. Paris）处登记地址托管服务。",
+      "contact_agency": "如有任何技术问题或请求，请通过我们的网站与我们联系："
+    },
+    "last_update": "最后更新日期：{{date}}"
+  }
+}

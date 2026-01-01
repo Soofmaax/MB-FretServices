@@ -1,0 +1,154 @@
+{
+  "labels": {
+    "home": "Home",
+    "services": "Services",
+    "route_root": "Sea freight",
+    "back_to_route": "Back to route page",
+    "faq": "FAQ",
+    "cta_quote": "Request a quote",
+    "cta_compare_fcl_lcl": "Compare FCL/LCL with an expert",
+    "cta_customs_specialist": "Talk to a customs specialist",
+    "cta_assistance": "Request support",
+    "guide_incoterms": "Incoterms 2020",
+    "guide_fcl": "Understand FCL vs LCL",
+    "see_services": "See services",
+    "view": "View"
+  },
+  "congo": {
+    "fcl_lcl": {
+      "h1": "FCL vs LCL — France ↔ Congo",
+      "title": "FCL vs LCL on France ↔ Congo — Choose the right mode | MB Fret Services",
+      "desc": "Volume thresholds (~13–15 m³), security, costs. Compare FCL and LCL on the France ↔ Congo corridor.",
+      "intro": [
+        "The FCL/LCL trade-off depends on volume and cargo sensitivity. LCL groupage is very relevant for small shipments to Pointe-Noire; FCL becomes more attractive as volume and value increase."
+      ],
+      "sections": [
+        {
+          "h2": "Thresholds, costs and risks",
+          "ul": [
+            "Compare total delivered cost (pre/post-carriage, THC, surcharges, insurance)",
+            "Switch to FCL to reduce handling when value and sensitivity are higher"
+          ]
+        },
+        {
+          "h3": "Congo-specific use cases",
+          "ul": [
+            "Parcels/pallets: LCL groupage to Pointe-Noire with milestone visibility",
+            "Sensitive equipment: switch to FCL + strict documentation and packing"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What is the threshold to switch from LCL to FCL?",
+          "a": "Around 13–15 m³, adjusted according to ports and season."
+        },
+        {
+          "q": "Is LCL suitable for parcels?",
+          "a": "Yes, regular groupage with milestone visibility and cut-off estimations."
+        },
+        {
+          "q": "Which insurance do you recommend?",
+          "a": "Ad valorem insurance sized to cargo value and sensitivity."
+        },
+        {
+          "q": "Can we mix LCL and air?",
+          "a": "Yes, to meet a critical deadline. We assess this case by case."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Customs procedures — France ↔ Congo",
+      "title": "Customs & documents — France ↔ Congo | MB Fret Services",
+      "desc": "Required documents, representation and terminal coordination to avoid delays.",
+      "intro": [
+        "We apply rigorous document checks: invoice, packing list, BL, certificate of origin if required, and any goods-specific paperwork. We provide customs representation and support with duties & taxes."
+      ],
+      "sections": [
+        {
+          "h2": "Documents & Incoterms",
+          "ul": [
+            "Invoice/PL/BL, certificate of origin if required",
+            "Incoterms: FOB/CIF/DAP/DDP depending on risk/responsibility split",
+            "Accurate HS codes"
+          ]
+        },
+        {
+          "h3": "Frequent pitfalls",
+          "ul": [
+            "Document inconsistencies",
+            "Missed cut-offs and VGM submissions",
+            "Underestimated insurance"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Which documents are required for Congo?",
+          "a": "Invoice, PL, BL, certificate of origin if required, and other documents depending on the cargo."
+        },
+        {
+          "q": "Do you handle customs representation?",
+          "a": "Yes, we provide full representation and coordinate with the terminal."
+        },
+        {
+          "q": "Which Incoterms are common?",
+          "a": "FOB/CIF are popular; DAP/DDP for extended seller responsibility."
+        },
+        {
+          "q": "How can I reduce delays?",
+          "a": "Anticipate cut-offs, ensure document quality and maintain proactive communication."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Document checklist — France ↔ Congo",
+      "title": "Document checklist — France ↔ Congo | MB Fret Services",
+      "desc": "Practical checklist to prepare your shipment to Pointe-Noire.",
+      "intro": [
+        "A structured preparation process helps reduce delays and disputes. Focus on export-grade packing, solid documentary evidence and consistent data."
+      ],
+      "sections": [
+        {
+          "h2": "Before shipment",
+          "ul": [
+            "Estimate CBM/weight",
+            "Choose FCL or LCL",
+            "Select service/port",
+            "Prepare export-quality packaging"
+          ]
+        },
+        {
+          "h3": "Documents",
+          "ul": [
+            "Invoice/PL",
+            "BL (draft), certificate of origin if required",
+            "Insurance policy and evidence"
+          ]
+        },
+        {
+          "h3": "At port and on arrival",
+          "ul": [
+            "Respect cut-offs, submit VGM",
+            "Coordinate with terminal and final delivery",
+            "Customs clearance and proof of delivery"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What should I check first?",
+          "a": "Invoice/PL, BL draft, certificates, consignee details."
+        },
+        {
+          "q": "Is a port appointment required?",
+          "a": "It depends on the terminal; we coordinate time slots."
+        },
+        {
+          "q": "What about insurance?",
+          "a": "Ad valorem coverage is recommended; keep evidence and photos."
+        }
+      ]
+    }
+  }
+}

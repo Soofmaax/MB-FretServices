@@ -54,7 +54,7 @@ const NotFound: FC = () => {
                 to="contact"
                 className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-accent-500 text-accent-700 hover:bg-accent-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent-700 transition-colors"
               >
-                {t('common:get_quote', 'Demander un Devis')}
+                {t('common:get_quote', 'Get a Quote')}
               </LocalizedLink>
             </div>
 

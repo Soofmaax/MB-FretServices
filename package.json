@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/translate-missing.mjs && node scripts/fetch-assets.mjs",
+    "prebuild": "node scripts/fetch-assets.mjs",
     "build": "vite build",
     "postbuild": "node scripts/generate-sitemap.mjs && node scripts/generate-robots.mjs && node scripts/generate-ai-txt.mjs && node scripts/ssg-prerender.mjs",
     "lint": "eslint .",

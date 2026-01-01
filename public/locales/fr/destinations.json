@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Destinations - Transport vers l'Afrique | MB Fret Services",
+    "description": "Transport international vers le Congo et l'Angola. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+  },
   "hero": {
     "title": "Nos Destinations Mondiales",
     "subtitle": "Réseau étendu de partenaires logistiques pour connecter vos marchés. Routes optimisées et fréquences adaptées à vos besoins commerciaux."
@@ -31,32 +35,6 @@
           "maritime": { "from": "Anvers, Rotterdam", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire" },
           "aerien": { "from": "Paris CDG, Marseille", "duration": "7-9 heures", "frequency": "5x/semaine" },
           "specialites": ["Matériel médical", "BTP", "Électronique"]
-        }
-      ]
-    },
-    {
-      "name": "Asie",
-      "countries": [
-        {
-          "name": "Chine",
-          "capital": "Beijing",
-          "port": "Shanghai, Shenzhen",
-          "maritime": { "from": "Le Havre, Hambourg", "duration": "30-35 jours", "frequency": "Quotidien" },
-          "aerien": { "from": "Paris CDG, Lyon", "duration": "10-12 heures", "frequency": "Quotidien" },
-          "specialites": ["Import textile", "Électronique", "Machines"]
-        }
-      ]
-    },
-    {
-      "name": "Proche-Orient",
-      "countries": [
-        {
-          "name": "Turquie",
-          "capital": "Ankara",
-          "port": "Istanbul, Izmir",
-          "maritime": { "from": "Marseille, Gênes", "duration": "5-7 jours", "frequency": "3x/semaine" },
-          "aerien": { "from": "Paris CDG, Lyon, Nice", "duration": "3-4 heures", "frequency": "Quotidien" },
-          "specialites": ["Textile", "Agroalimentaire", "Automobile"]
         }
       ]
     }

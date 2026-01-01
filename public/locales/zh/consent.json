@@ -1,0 +1,11 @@
+{
+  "title": "Cookie 设置",
+  "desc": "我们使用部分可选 Cookie 用于改进您的使用体验（统计与易用性），以及在适用情况下展示个性化内容。如果您拒绝，我们只会使用必要的 Cookie。您可以随时通过“管理 Cookie”修改选择。",
+  "privacy_note": "更多信息请参阅我们的隐私政策。",
+  "privacy_link": "隐私政策",
+  "accept": "接受",
+  "refuse": "拒绝",
+  "manage": "管理 Cookie",
+  "analytics_label": "统计与体验优化（Google Analytics、Microsoft Clarity）",
+  "save": "保存设置"
+}

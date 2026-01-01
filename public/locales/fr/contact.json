@@ -1,7 +1,11 @@
 {
+  "seo": {
+    "title": "Contact - Devis Gratuit Déménagement & Fret Maritime | MB Fret Services",
+    "description": "Contactez MB Fret Services pour un devis gratuit. Déménagements internationaux, envoi de véhicules et d’effets personnels vers le Congo et l’Angola, ainsi que solutions pour professionnels. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
+  },
   "hero": {
-    "title": "Contactez nos Experts",
-    "subtitle": "Besoin d'un devis ou de conseils ? Notre équipe vous répond sous 24h. Parlons de votre projet logistique."
+    "title": "Contactez MB Fret Services",
+    "subtitle": "Besoin d'un devis ou de conseils pour un déménagement, l’envoi d’un véhicule ou de quelques m³ d’effets personnels ? Notre équipe vous répond sous 24h."
   },
   "methods": {
     "email": "Email",
@@ -17,24 +21,24 @@
   },
   "guide": {
     "title": "Comment obtenir votre devis ?",
-    "intro": "Pour vous proposer la meilleure solution, nous avons besoin de quelques informations sur votre projet.",
+    "intro": "Pour vous proposer la meilleure solution, nous avons besoin de quelques informations sur votre projet (déménagement, véhicule, effets personnels ou marchandises professionnelles).",
     "info_title": "Informations nécessaires",
     "items": [
       {
-        "title": "Type de marchandise :",
-        "desc": "Nature, poids, dimensions, valeur"
+        "title": "Type d’envoi :",
+        "desc": "Déménagement / effets personnels, véhicule, colis, palettes, marchandises B2B…"
       },
       {
         "title": "Origine et destination :",
-        "desc": "Adresses précises d'enlèvement et livraison"
+        "desc": "Adresses précises d'enlèvement et de livraison (pays, ville, étage si besoin)"
       },
       {
         "title": "Délais souhaités :",
-        "desc": "Date d'expédition et réception"
+        "desc": "Date d'expédition et de réception, éventuelles contraintes de planning"
       },
       {
         "title": "Services additionnels :",
-        "desc": "Assurance, dédouanement, livraison"
+        "desc": "Assurance, dédouanement, livraison porte-à-porte, emballage si nécessaire"
       }
     ],
     "commitment_title": "Notre engagement",
@@ -57,16 +61,31 @@
       }
     ]
   },
+  "source_banner": {
+    "container_prices": "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola.",
+    "fcl_lcl": "Vous venez du guide FCL vs LCL.",
+    "incoterms": "Vous venez du guide Incoterms 2020.",
+    "route_congo": "Vous venez de la page route France ↔ Congo (Pointe‑Noire).",
+    "route_angola": "Vous venez de la page route France ↔ Angola (Luanda).",
+    "service_freight_maritime": "Vous venez de la page Fret maritime (conteneurs FCL/LCL vers l’Afrique).",
+    "service_customs": "Vous venez de la page Dédouanement & conformité France ↔ Afrique.",
+    "service_insurance": "Vous venez de la page Assurance cargo pour vos conteneurs FCL/LCL.",
+    "service_air_freight": "Vous venez de la page Fret aérien.",
+    "cta": "Les informations ci-dessous nous aideront à affiner votre devis."
+  },
   "form": {
     "name": "Nom complet",
     "email": "Email",
     "message": "Message",
     "submit": "Envoyer",
-    "gdpr_notice": "Les informations saisies sont utilisées exclusivement pour répondre à votre demande de contact. Aucun démarchage automatique ni revente de vos données."
+    "gdpr_notice": "Les informations saisies sont utilisées exclusivement pour répondre à votre demande de contact. Aucun démarchage automatique ni revente de vos données.",
+    "success": "Merci, nous vous répondrons sous 24h.",
+    "error": "Une erreur est survenue. Merci de réessayer ou de nous contacter directement par email ou téléphone.",
+    "submitting": "Envoi en cours..."
   },
   "cta": {
-    "title": "Prêt à démarrer votre projet ?",
-    "text": "Nos experts sont disponibles pour analyser vos besoins et vous proposer la solution logistique la plus adaptée.",
+    "title": "Prêt à démarrer votre déménagement ou votre envoi ?",
+    "text": "Nos experts sont disponibles pour analyser votre situation (déménagement, véhicule, effets personnels, petit lot professionnel) et vous proposer la solution la plus adaptée à votre budget et à vos délais.",
     "email": "Envoyer un Email",
     "whatsapp": "WhatsApp Direct",
     "call": "Appeler Maintenant"

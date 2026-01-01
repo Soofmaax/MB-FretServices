@@ -1,0 +1,60 @@
+{
+  "seo": {
+    "title": "MB Fret Services - 欧洲、亚洲与非洲之间的国际运输",
+    "description": "MB Fret Services：您的国际运输专家。海运与空运覆盖非洲、亚洲和欧洲，并提供清关及一体化物流服务。"
+  },
+  "valueProps": {
+    "title": "为什么选择 MB Fret Services？",
+    "subtitle": "我们结合专业经验、数字化工具和全球网络，为您提供真正贴合需求的运输解决方案。",
+    "items": [
+      {
+        "title": "海运服务",
+        "description": "面向非洲和亚洲的大宗货物经济型解决方案，支持全程实时跟踪。",
+        "features": ["20' 与 40' 集装箱", "FCL 整箱与 LCL 拼箱", "港到港或门到门服务"]
+      },
+      {
+        "title": "空运服务",
+        "description": "适用于紧急与高价值货物的快速安全运输。",
+        "features": ["快速派送", "温控运输", "全程 GPS 实时跟踪"]
+      },
+      {
+        "title": "清关服务",
+        "description": "全面的海关流程专业能力，助力您的国际贸易顺利通关。",
+        "features": ["进出口申报", "法规合规", "行政支持"]
+      }
+    ]
+  },
+  "destinations_title": "主要服务目的地",
+  "destinations_subtitle": "我们覆盖全球重点市场，并针对不同地区和货物类型提供差异化方案。",
+  "destinations_more": "查看所有目的地",
+  "destinations_need_specific": "有特定目的地需求？欢迎联系我们进行评估。",
+  "showcase": [
+    {
+      "country": "刚果",
+      "city": "Pointe-Noire",
+      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["从勒阿弗尔出发的海运", "从巴黎 CDG 出发的空运"]
+    },
+    {
+      "country": "安哥拉",
+      "city": "罗安达",
+      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["从安特卫普出发的海运", "从马赛出发的空运"]
+    },
+    {
+      "country": "中国",
+      "city": "上海",
+      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["跨太平洋航线海运", "直飞空运"]
+    },
+    {
+      "country": "土耳其",
+      "city": "伊斯坦布尔",
+      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "routes": ["公路运输", "从里昂出发的空运"]
+    }
+  ],
+  "final_cta_title": "准备好发货了吗？",
+  "final_cta_text": "24 小时内获取个性化报价。我们的专家将在您的物流项目全程为您提供支持。",
+  "whatsapp": "通过 WhatsApp 联系我们"
+}

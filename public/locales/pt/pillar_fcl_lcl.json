@@ -1,0 +1,29 @@
+{
+  "title": "FCL vs LCL — Como decidir? | MB Fret Services",
+  "description": "Escolher entre FCL e LCL no transporte marítimo B2B: limiares de 13–15 m³, segurança, prazos e custos. Método de decisão e casos de uso nas rotas França–China/Turquia/África.",
+  "hero_h1": "FCL vs LCL — Método de decisão",
+  "hero_intro": "Otimize o custo total, a segurança e o time-to-market. Um método claro para arbitrar em função do volume, dos prazos e da sensibilidade da mercadoria.",
+  "hero_links": {
+    "maritime": "Transporte marítimo",
+    "china": "França ↔ China",
+    "turkey": "França ↔ Turquia",
+    "congo": "França ↔ Congo"
+  },
+  "sections": [],
+  "faq": [
+    {
+      "q": "A partir de que volume faz sentido passar de LCL para FCL?",
+      "a": "Na prática, à volta de 13–15 m³, o FCL torna‑se muitas vezes mais interessante em termos económicos e de segurança. A decisão depende ainda do porto, da sazonalidade e das restrições de prazo."
+    },
+    {
+      "q": "O LCL é mais arriscado?",
+      "a": "O groupage implica mais manuseamentos. Uma embalagem export adequada e um seguro ad valorem reduzem fortemente o risco. Para mercadorias sensíveis ou de alto valor, o FCL continua recomendado."
+    },
+    {
+      "q": "É possível combinar LCL e transporte aéreo para acelerar parte do fluxo?",
+      "a": "Sim, a multimodalidade é uma alavanca útil para cumprir marcos críticos. Calibramos um plano de transporte adequado com consolidação parcial."
+    }
+  ],
+  "cta_compare": "Pronto para comparar FCL/LCL?",
+  "cta_compare_desc": "Os nossos especialistas recomendam uma opção em função do seu volume, do risco e dos prazos."
+}

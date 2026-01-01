@@ -7,6 +7,7 @@ interface CtaButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
   className?: string;
   onClick?: () => void;
+  state?: unknown;
 }
 
 const CtaButton: FC<CtaButtonProps> = ({ 
@@ -14,7 +15,8 @@ const CtaButton: FC<CtaButtonProps> = ({
   children, 
   variant = 'primary', 
   className = '',
-  onClick 
+  onClick,
+  state
 }) => {
   const baseClasses = "inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
   
@@ -29,6 +31,7 @@ const CtaButton: FC<CtaButtonProps> = ({
   return (
     <LocalizedLink 
       to={href} 
+      state={state}
       className={buttonClasses}
       onClick={onClick}
     >

@@ -1,27 +1,31 @@
 {
+  "seo": {
+    "title": "MB Fret Services – Déménagements internationaux & fret maritime France–Congo / France–Angola",
+    "description": "Transitaire français pour particuliers et professionnels, spécialisé sur les corridors France–Congo et France–Angola. Déménagements internationaux, envoi de véhicules et de motos, effets personnels en groupage maritime ou en conteneur complet (FCL/LCL), avec dédouanement et assurance cargo pour une vision claire du coût total livré."
+  },
   "valueProps": {
     "title": "Pourquoi choisir MB Fret Services ?",
-    "subtitle": "Nous combinons expertise, technologie et réseau mondial pour offrir des solutions de transport adaptées à vos besoins spécifiques.",
+    "subtitle": "Transitaire pour particuliers et professionnels basé en France, avec un focus sur l’Afrique centrale (Congo, Angola). Nous aidons les familles, la diaspora et les petites entreprises à expédier déménagements, effets personnels, véhicules et marchandises, en combinant fret maritime, dédouanement et assurance cargo du devis à la livraison.",
     "items": [
       {
         "title": "Fret Maritime",
-        "description": "Solutions économiques pour vos envois volumineux vers l'Afrique et l'Asie avec suivi en temps réel.",
+        "description": "Fret maritime France–Afrique centrale (Congo, Angola) en conteneurs FCL et groupage LCL, pour déménagements, effets personnels, véhicules et, en complément, flux B2B, avec suivi en temps réel.",
         "features": ["Conteneurs 20' et 40'", "FCL et LCL", "Port à port ou porte à porte"]
       },
       {
-        "title": "Fret Aérien",
-        "description": "Transport rapide et sécurisé pour vos marchandises urgentes et de haute valeur.",
-        "features": ["Livraison express", "Température contrôlée", "Suivi GPS en continu"]
+        "title": "Dédouanement",
+        "description": "Dédouanement import/export France–Afrique pour vos conteneurs FCL/LCL, sécurisation documentaire, calcul droits & taxes et accompagnement sur le choix des Incoterms.",
+        "features": ["Déclarations douanières", "Conformité réglementaire", "Support administratif"]
       },
       {
-        "title": "Dédouanement",
-        "description": "Expertise complète en procédures douanières pour faciliter vos échanges internationaux.",
-        "features": ["Déclarations douanières", "Conformité réglementaire", "Support administratif"]
+        "title": "Assurance cargo",
+        "description": "Assurance ad valorem pour vos conteneurs (déménagements, marchandises B2B, véhicules, motos) vers le Congo et l’Angola, intégrée à vos devis pour une vision claire du coût total livré.",
+        "features": ["Couverture ad valorem", "Gestion de sinistres", "Conseils emballage export"]
       }
     ]
   },
   "destinations_title": "Nos Destinations Principales",
-  "destinations_subtitle": "Nous desservons les principaux marchés mondiaux avec des solutions adaptées à chaque région et type de marchandise.",
+  "destinations_subtitle": "Nous desservons en priorité l’Afrique centrale (Congo, Angola) depuis la France et l’Europe, avec des solutions adaptées aux déménagements, effets personnels et véhicules, ainsi qu’aux flux B2B.",
   "destinations_more": "Voir toutes nos destinations",
   "destinations_need_specific": "Besoin d'une destination spécifique ? Nous étudions toutes les demandes.",
   "showcase": [
@@ -36,21 +40,9 @@
       "city": "Luanda",
       "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
       "routes": ["Maritime depuis Anvers", "Aérien depuis Marseille"]
-    },
-    {
-      "country": "Chine",
-      "city": "Shanghai",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Maritime transpacifique", "Aérien direct"]
-    },
-    {
-      "country": "Turquie",
-      "city": "Istanbul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Transport routier", "Aérien depuis Lyon"]
     }
   ],
-  "final_cta_title": "Prêt à expédier vos marchandises ?",
-  "final_cta_text": "Obtenez un devis personnalisé en moins de 24h. Notre équipe d'experts vous accompagne à chaque étape de votre projet logistique.",
+  "final_cta_title": "Prêt à expédier vos effets personnels ou votre véhicule ?",
+  "final_cta_text": "Obtenez un devis personnalisé en moins de 24h. Que vous prépariez un déménagement international, l’envoi d’une voiture ou d’une moto, ou quelques m³ d’effets personnels, nous vous proposons une solution de transport fiable avec des tarifs cohérents avec le marché et un accompagnement à chaque étape. Les professionnels et petites entreprises bénéficient des mêmes standards de suivi.",
   "whatsapp": "Nous contacter via WhatsApp"
 }

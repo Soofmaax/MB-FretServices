@@ -10,20 +10,14 @@ import QuoteForm from './QuoteForm';
 import LocalizedLink from '../LocalizedLink';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { Clock, Ship, MapPin, Home, Car, Package } from 'lucide-react';
 
-type RouteKey =
-  | 'services_freight_france_china'
-  | 'services_freight_france_congo'
-  | 'services_freight_france_turkey';
+type RouteKey = 'services_freight_france_congo' | 'services_freight_france_angola';
 
 function detectRouteKey(): RouteKey | null {
   if (typeof window === 'undefined') return null;
   const k = keyFromPath(window.location.pathname);
-  if (
-    k === 'services_freight_france_china' ||
-    k === 'services_freight_france_congo' ||
-    k === 'services_freight_france_turkey'
-  ) {
+  if (k === 'services_freight_france_congo' || k === 'services_freight_france_angola') {
     return k;
   }
   return null;
@@ -32,128 +26,32 @@ function detectRouteKey(): RouteKey | null {
 const contentMap: Record<
   RouteKey,
   {
-    title: string;
-    subtitle: string;
     heroBase: string;
     ports: { from: string[]; to: string[] };
-    transit: string;
-    faq: Array<{ q: string; a: string }>;
     areaServed: Array<{ '@type': 'Country'; name: string }>;
   }
 > = {
-  services_freight_france_china: {
-    title: "Fret maritime France ↔ Chine (FCL & LCL)",
-    subtitle:
-      "Solutions FCL/LCL fiables entre les principaux ports français (Le Havre, Marseille-Fos, Dunkerque) et les hubs chinois (Shanghai, Ningbo, Shenzhen, Qingdao).",
-    heroBase: 'hero-china',
-    ports: {
-      from: ['Le Havre', 'Marseille-Fos', 'Dunkerque'],
-      to: ['Shanghai', 'Ningbo', 'Shenzhen', 'Qingdao'],
-    },
-    transit: "Délais indicatifs: 35–50 jours selon l'itinéraire, la saison et la congestion.",
-    faq: [
-      {
-        q: 'FCL ou LCL: que choisir sur l’axe France–Chine ?',
-        a: "Au‑delà de ~13–15 m³, le FCL est souvent plus économique et plus sûr (moins de manipulations). En‑dessous, le LCL reste pertinent pour optimiser le budget.",
-      },
-      {
-        q: 'Quels Incoterms privilégier (FOB/CIF/DAP/DDP) ?',
-        a: "FOB/CIF restent courants sur la Chine; DAP/DDP offrent une prise en charge élargie. Le choix dépend du contrôle voulu et du profil de risque.",
-      },
-      {
-        q: 'Gérez‑vous la documentation douanière ?',
-        a: "Oui: BL, facture commerciale, liste de colisage, certificats éventuels; plus contrôle conformité et assistance dédouanement.",
-      },
-      {
-        q: 'Le fret ferroviaire peut‑il remplacer le maritime ?',
-        a: "Pour certains corridors, le rail offre ~18–22 jours de transit. C’est un compromis vitesse/coût intéressant entre l’aérien et le maritime.",
-      },
-      {
-        q: 'Quelles périodes sont les plus tendues ?',
-        a: "Le Nouvel An chinois et le Q4 avant Noël. Mieux vaut réserver en amont et conserver des alternatives de service.",
-      },
-      {
-        q: 'Proposez‑vous une assurance cargo ?',
-        a: "Oui, couverture ad valorem du départ à la livraison, avec conseils d’emballage pour réduire le risque.",
-      },
-    ],
-    areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Country', name: 'China' }],
-  },
   services_freight_france_congo: {
-    title: "Fret maritime France ↔ Congo (FCL & LCL)",
-    subtitle:
-      "Groupage LCL et conteneurs complets vers Pointe‑Noire, avec ramassage B2B en France (IDF, Lyon, Marseille) et accompagnement documentaire.",
     heroBase: 'hero-congo',
     ports: {
       from: ['Le Havre', 'Marseille-Fos'],
       to: ['Pointe‑Noire'],
     },
-    transit: 'Délais indicatifs: 20–30 jours selon départs, escales et saison.',
-    faq: [
-      {
-        q: 'Le LCL est‑il adapté pour le Congo ?',
-        a: "Oui, le groupage est pertinent pour colis/volumes modestes. Nous opérons des consolidations régulières avec visibilité sur les jalons.",
-      },
-      {
-        q: 'Assurez‑vous le ramassage et l’emballage ?',
-        a: "Ramassage B2B dans les hubs français; emballage export pour limiter les avaries et respecter les exigences portuaires.",
-      },
-      {
-        q: 'Suivi et notifications: quel niveau de visibilité ?',
-        a: "Suivi en temps réel, mises à jour aux étapes clés (embarquement, transit, arrivée) et relances proactives.",
-      },
-      {
-        q: 'Quelles pièces sont requises à l’import au Congo ?',
-        a: "BL, facture, PL, certificat d’origine si requis, et documents spécifiques selon la marchandise. Assistance au dédouanement disponible.",
-      },
-      {
-        q: 'Recommandez‑vous une assurance ?',
-        a: "Oui, une police ad valorem est conseillée. Nous calibrons la couverture selon la valeur et la sensibilité des biens.",
-      },
-      {
-        q: 'FCL vs LCL vers Pointe‑Noire: seuil de bascule ?',
-        a: "Autour de 13–15 m³, le FCL devient souvent compétitif et plus prévisible; en‑dessous, le LCL reste intéressant.",
-      },
+    areaServed: [
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'Congo' },
     ],
-    areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Country', name: 'Congo' }],
   },
-  services_freight_france_turkey: {
-    title: "Fret maritime France ↔ Turquie (FCL & LCL)",
-    subtitle:
-      "Liaisons régulières avec Istanbul, Izmir et Mersin. Options multimodales Mer/Route/Air pour des délais courts et une planification souple.",
-    heroBase: 'hero-turkey',
+  services_freight_france_angola: {
+    heroBase: 'hero-angola',
     ports: {
-      from: ['Marseille-Fos', 'Le Havre'],
-      to: ['Istanbul', 'Izmir', 'Mersin'],
+      from: ['Le Havre', 'Marseille-Fos', 'Anvers', 'Rotterdam'],
+      to: ['Luanda'],
     },
-    transit: 'Délais indicatifs: 7–15 jours selon port et saison.',
-    faq: [
-      {
-        q: 'Quelles sont les forces du corridor France–Turquie ?',
-        a: "Délais courts, fréquences élevées, bonnes alternatives multimodales. Idéal pour flux réguliers et chaînes d’approvisionnement réactives.",
-      },
-      {
-        q: 'Proposez‑vous des schémas multimodaux ?',
-        a: "Oui: Mer/Route pour optimiser le coût; recours à l’aérien en cas d’urgence; orchestration selon vos contraintes.",
-      },
-      {
-        q: 'Le cross‑trade est‑il possible (ex: Chine→Turquie→Europe/Afrique) ?',
-        a: "Oui, étude au cas par cas avec verrouillage documentaire et sélection d’armateurs/partenaires.",
-      },
-      {
-        q: 'Quels documents et Incoterms recommandez‑vous ?',
-        a: "BL, facture, PL; Incoterms au choix (FOB/CIF/DAP/DDP) selon partage des responsabilités et du risque.",
-      },
-      {
-        q: 'FCL vs LCL sur la Turquie: que privilégier ?',
-        a: "FCL pour volumes significatifs et délais plus stables; LCL compétitif pour petits envois ou flux irréguliers.",
-      },
-      {
-        q: 'Assurance et gestion des risques ?',
-        a: "Assurance ad valorem recommandée; conseils d’emballage et préparation documentaire pour éviter litiges et retards.",
-      },
+    areaServed: [
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'Angola' },
     ],
-    areaServed: [{ '@type': 'Country', name: 'France' }, { '@type': 'Country', name: 'Turkey' }],
   },
 };
 
@@ -161,7 +59,7 @@ const FreightRoute: FC = () => {
   const routeKey = detectRouteKey();
   const SITE_URL = getSiteUrl();
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
-  const { t } = useTranslation(['routes_main', 'common']);
+  const { t } = useTranslation(['routes_main', 'routes_sub', 'navbar', 'common', 'freight']);
 
   if (!routeKey) {
     return null;
@@ -169,12 +67,7 @@ const FreightRoute: FC = () => {
 
   const c = contentMap[routeKey];
   const ogImagePath = `/images/og-${c.heroBase.replace('hero-', '')}.webp`;
-  const routeId =
-    routeKey === 'services_freight_france_china'
-      ? 'france_china'
-      : routeKey === 'services_freight_france_congo'
-      ? 'france_congo'
-      : 'france_turkey';
+  const routeId = routeKey === 'services_freight_france_congo' ? 'france_congo' : 'france_angola';
   const routeLabel = t(`routes_main:${routeId}.label`);
 
   // Localized content (titles, subtitles, lists)
@@ -187,8 +80,6 @@ const FreightRoute: FC = () => {
   const costsParas = t(`routes_main:${routeId}.costs`, { returnObjects: true }) as string[];
   const customsParas = t(`routes_main:${routeId}.customs`, { returnObjects: true }) as string[];
   const insuranceRisks = t(`routes_main:${routeId}.insurance_risks`, { returnObjects: true }) as string[];
-  const whyUsBullets = t(`routes_main:${routeId}.why_us`, { returnObjects: true }) as string[];
-  const keyServices = t('routes_main:common.key_services', { returnObjects: true }) as string[];
   const opsSteps = t('routes_main:common.ops_steps', { returnObjects: true }) as string[];
   const opsBest = t('routes_main:common.ops_best_practices');
   const incotermsIntro = t('routes_main:common.incoterms_intro');
@@ -203,18 +94,55 @@ const FreightRoute: FC = () => {
   const adviceDocs = t(`routes_main:${routeId}.advice.documentation`, { returnObjects: true }) as string[];
   const adviceKpisTitle = t(`routes_main:${routeId}.advice.kpis_title`);
   const adviceKpis = t(`routes_main:${routeId}.advice.kpis`, { returnObjects: true }) as string[];
-  const faq = t(`routes_main:${routeId}.faq`, { returnObjects: true }) as Array<{ q: string; a: string }>;
+  const faq = t(`routes_main:${routeId}.faq`, {
+    returnObjects: true,
+  }) as Array<{ q: string; a: string }>;
+
+  const servicesBlock =
+    lang === 'fr' || lang === 'en'
+      ? (t(`routes_main:${routeId}.services_block`, {
+          returnObjects: true,
+        }) as { title?: string; intro?: string; items?: string[] })
+      : null;
+
+  const howItWorks = t('freight:how_it_works', {
+    returnObjects: true,
+  }) as {
+    title?: string;
+    subtitle?: string;
+    items?: Array<{ title?: string; text?: string }>;
+  };
+  const howItems = Array.isArray(howItWorks.items) ? howItWorks.items : [];
+
+  const segments = t('freight:segments', {
+    returnObjects: true,
+  }) as {
+    title?: string;
+    subtitle?: string;
+    items?: Array<{ title?: string; text?: string }>;
+  };
+  const segmentItems = Array.isArray(segments.items) ? segments.items : [];
 
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL + '/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: SITE_URL + pathForLang('services', lang) },
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: t('navbar:home', 'Home'),
+        item: SITE_URL + '/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: t('navbar:services', 'Services'),
+        item: SITE_URL + pathForLang('services', lang),
+      },
       {
         '@type': 'ListItem',
         position: 3,
-        name: 'Fret maritime',
+        name: t('routes_sub:labels.route_root', 'Sea freight'),
         item: SITE_URL + pathForLang('services_freight_maritime', lang),
       },
     ],
@@ -223,8 +151,8 @@ const FreightRoute: FC = () => {
   const serviceLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: c.title,
-    serviceType: 'Fret maritime',
+    name: titleT || routeLabel,
+    serviceType: t('freight:service_type', 'Sea freight'),
     areaServed: c.areaServed,
     provider: {
       '@type': 'Organization',
@@ -233,10 +161,17 @@ const FreightRoute: FC = () => {
     },
   };
 
+  const contactSource =
+    routeKey === 'services_freight_france_congo'
+      ? 'route_france_congo'
+      : routeKey === 'services_freight_france_angola'
+      ? 'route_france_angola'
+      : undefined;
+
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: (faq || c.faq).map((f) => ({
+    mainEntity: (faq || []).map((f) => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -246,8 +181,11 @@ const FreightRoute: FC = () => {
   return (
     <div className="pt-16">
       <SEO
-        title={`${titleT} — Devis Rapide & Délais Garantis | MB Fret Services`}
-        description={`${subtitleT} ${transitT} ${t('routes_main:headings.ready_to_ship_desc')}`}
+        title={`${titleT} — Fast quote & reliable lead times | MB Fret Services`}
+        description={`${subtitleT} ${transitT} ${t(
+          'routes_main:headings.ready_to_ship_desc',
+          'Quote within 24 hours. FCL/LCL experts. 24/7 tracking.'
+        )}`}
         ogImage={ogImagePath}
         jsonLd={[breadcrumb, serviceLd, faqLd]}
       />
@@ -256,8 +194,8 @@ const FreightRoute: FC = () => {
           rel="preload"
           as="image"
           href={`/images/${c.heroBase}-1200.jpg`}
-          imagesrcset={`/images/${c.heroBase}-800.jpg 800w, /images/${c.heroBase}-1200.jpg 1200w, /images/${c.heroBase}-1600.jpg 1600w`}
-          imagesizes="100vw"
+          imageSrcSet={`/images/${c.heroBase}-800.jpg 800w, /images/${c.heroBase}-1200.jpg 1200w, /images/${c.heroBase}-1600.jpg 1600w`}
+          imageSizes="100vw"
         />
       </Helmet>
 
@@ -268,7 +206,7 @@ const FreightRoute: FC = () => {
             src={`/images/${c.heroBase}.jpg`}
             webpSrc={`/images/${c.heroBase}.webp`}
             avifSrc={`/images/${c.heroBase}.avif`}
-            alt={c.title}
+            alt={titleT || routeLabel}
             width={1600}
             height={900}
             sizes="100vw"
@@ -283,7 +221,12 @@ const FreightRoute: FC = () => {
           <p className="text-xl md:text-2xl text-accent-300 font-medium mt-2">{subtitleT}</p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+            <CtaButton
+              href="contact"
+              variant="primary"
+              className="text-lg px-8 py-4"
+              state={contactSource ? { source: contactSource } : undefined}
+            >
               {t('routes_main:common.cta_get_quote')}
             </CtaButton>
             <a
@@ -297,6 +240,53 @@ const FreightRoute: FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Comment ça marche ? */}
+      {howItems.length > 0 && (
+        <section className="py-10 bg-white border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-900">
+                {howItWorks.title}
+              </h2>
+              <p className="text-gray-600 text-base md:text-lg max-w-xl">
+                {howItWorks.subtitle ||
+                  t(
+                    'freight:how_it_works.subtitle',
+                    'Simple process: fast quote, FCL/LCL recommendation and optional door-to-door handling.'
+                  )}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {howItems.map((item, index) => {
+                const Icon = index === 0 ? Clock : index === 1 ? Ship : MapPin;
+                return (
+                  <div
+                    key={item.title || index}
+                    className="bg-gray-50 rounded-xl px-6 py-5 shadow-sm flex items-start gap-4"
+                  >
+                    <div className="w-11 h-11 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
+                      <Icon size={22} className="text-accent-700" aria-hidden="true" />
+                    </div>
+                    <div>
+                      {item.title && (
+                        <h3 className="text-base md:text-lg font-semibold text-primary-900 mb-1">
+                          {item.title}
+                        </h3>
+                      )}
+                      {item.text && (
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                          {item.text}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -329,81 +319,175 @@ const FreightRoute: FC = () => {
 
           <div>
             <div className="bg-gray-50 rounded-xl p-6 shadow">
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">{t('routes_main:headings.cbm_calc')}</h3>
+              <h3 className="text-2xl font-bold text-primary-900 mb-4">
+                {t('routes_main:headings.cbm_calc')}
+              </h3>
               <CBMCalculator />
               <p className="text-sm text-gray-500 mt-3">
-                À titre indicatif: 20’ ≈ 33 m³, 40’ ≈ 67 m³. Les tolérances et limites de poids/volume dépendent de
-                l’armateur et du service.
+                {t(
+                  'routes_main:common.cbm_note',
+                  "Indicative only: 20' ≈ 33 m³, 40' ≈ 67 m³. Tolerances and weight/volume limits depend on carrier and service."
+                )}
               </p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Déménagement / Véhicule / Marchandises */}
+      {segmentItems.length > 0 && (
+        <section className="py-12 bg-white border-t border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-3">
+                {segments.title}
+              </h2>
+              {segments.subtitle && (
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                  {segments.subtitle}
+                </p>
+              )}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {segmentItems.map((item, index) => {
+                const Icon = index === 0 ? Home : index === 1 ? Car : Package;
+                return (
+                  <div
+                    key={item.title || index}
+                    className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-primary-900/90 flex items-center justify-center mx-auto mb-5">
+                      <Icon size={26} className="text-white" aria-hidden="true" />
+                    </div>
+                    {item.title && (
+                      <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                        {item.title}
+                      </h3>
+                    )}
+                    {item.text && (
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                        {item.text}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Section: Coûts & modes / Douane / Assurance / USP */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">{t('routes_main:headings.costs_modes')} — {routeLabel}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
+                {t('routes_main:headings.costs_modes')} — {routeLabel}
+              </h2>
               {(costsParas || []).map((p, i) => (
-                <p key={i} className="text-lg text-gray-700 mb-4">{p}</p>
+                <p key={i} className="text-lg text-gray-700 mb-4">
+                  {p}
+                </p>
               ))}
 
-              <div className="mt-6">
-                <CtaButton href="contact" variant="primary">{t('routes_main:common.cta_get_quote')}</CtaButton>
-                <LocalizedLink to="guides/fcl-vs-lcl" className="ml-4 text-accent-600 hover:text-accent-700 font-medium">Comprendre FCL vs LCL</LocalizedLink>
+              <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
+                <CtaButton
+                  href="contact"
+                  variant="primary"
+                  state={contactSource ? { source: contactSource } : undefined}
+                >
+                  {t('routes_main:common.cta_get_quote')}
+                </CtaButton>
+                <div className="flex flex-wrap gap-3">
+                  <LocalizedLink
+                    to="guides/fcl-vs-lcl"
+                    className="text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t('routes_main:links.fcl_understand', 'Understand FCL vs LCL')}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    to="guides/prix-conteneur-congo-angola"
+                    className="text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t(
+                      'routes_main:links.pricing_guide',
+                      "Container price guide 20'/40' Congo / Angola"
+                    )}
+                  </LocalizedLink>
+                </div>
               </div>
             </div>
 
             <div>
               <div className="bg-white rounded-xl p-6 shadow">
-                <h3 className="text-2xl font-bold text-primary-900 mb-4">{t('routes_main:headings.customs_docs')}</h3>
+                <h3 className="text-2xl font-bold text-primary-900 mb-4">
+                  {t('routes_main:headings.customs_docs')}
+                </h3>
                 {(customsParas || []).map((p, i) => (
-                  <p key={i} className="text-gray-700 mb-4">{p}</p>
+                  <p key={i} className="text-gray-700 mb-4">
+                    {p}
+                  </p>
                 ))}
 
-                <h4 className="text-lg font-semibold text-primary-900 mb-2">{t('routes_main:headings.insurance_risks')}</h4>
+                <h4 className="text-lg font-semibold text-primary-900 mb-2">
+                  {t('routes_main:headings.insurance_risks')}
+                </h4>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   {(insuranceRisks || []).map((li, i) => (
                     <li key={i}>{li}</li>
                   ))}
                 </ul>
 
-                <div className="mt-6">
-                  <LocalizedLink to="documentation/incoterms-2020" className="text-accent-600 hover:text-accent-700 font-medium">
-                    Guide Incoterms 2020
+                <div className="mt-6 space-y-2">
+                  <LocalizedLink
+                    to="documentation/incoterms-2020"
+                    className="block text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t('routes_main:links.incoterms_guide', 'Understand Incoterms')}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    to={pathForLang('services_customs', lang)}
+                    className="block text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t(
+                      'routes_main:links.customs_service',
+                      'View our France–Africa customs clearance service'
+                    )}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    to={pathForLang('services_insurance', lang)}
+                    className="block text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t(
+                      'routes_main:links.insurance_service',
+                      'View our cargo insurance service'
+                    )}
                   </LocalizedLink>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">
-                {t('routes_main:headings.why_choose').replace('__ROUTE__', routeLabel)}
-              </h3>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                {(whyUsBullets || []).map((li, i) => (
-                  <li key={i}>{li}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">{t('routes_main:headings.key_services')}</h3>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                {(keyServices || []).map((li, i) => (
-                  <li key={i}>{li}</li>
-                ))}
-              </ul>
-              <div className="mt-6">
-                <CtaButton href="contact" variant="primary">{t('routes_main:common.cta_get_quote')}</CtaButton>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
+
+      {servicesBlock && Array.isArray(servicesBlock.items) && servicesBlock.items.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+              {servicesBlock.title}
+            </h2>
+            {servicesBlock.intro && (
+              <p className="text-lg text-gray-700 mb-6">{servicesBlock.intro}</p>
+            )}
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+              {servicesBlock.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Section: Étapes, Incoterms, Cas d'usage, Checklist (contenu étendu) */}
       <section className="py-16 lg:py-24 bg-white">
@@ -457,9 +541,18 @@ const FreightRoute: FC = () => {
               </ul>
 
               <div className="mt-8">
-                <CtaButton href="contact" variant="primary">{t('routes_main:common.cta_get_detailed_quote')}</CtaButton>
-                <LocalizedLink to="documentation/incoterms-2020" className="ml-4 text-accent-600 hover:text-accent-700 font-medium">
-                  Comprendre les Incoterms
+                <CtaButton
+                  href="contact"
+                  variant="primary"
+                  state={contactSource ? { source: contactSource } : undefined}
+                >
+                  {t('routes_main:common.cta_get_detailed_quote')}
+                </CtaButton>
+                <LocalizedLink
+                  to="documentation/incoterms-2020"
+                  className="ml-4 text-accent-600 hover:text-accent-700 font-medium"
+                >
+                  {t('routes_main:links.incoterms_guide', 'Understand Incoterms')}
                 </LocalizedLink>
               </div>
             </div>
@@ -469,13 +562,6 @@ const FreightRoute: FC = () => {
                 <h3 className="text-2xl font-bold text-primary-900 mb-3">
                   {t('routes_main:headings.ports_corridors').replace('__ROUTE__', routeLabel)}
                 </h3>
-                {routeKey === 'services_freight_france_china' && (
-                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                    <li>France: Le Havre, Marseille‑Fos, Dunkerque</li>
-                    <li>Chine: Shanghai, Ningbo, Shenzhen, Qingdao</li>
-                    <li>Services: directs vs transbordement selon saison/capacité</li>
-                  </ul>
-                )}
                 {routeKey === 'services_freight_france_congo' && (
                   <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>France: Le Havre, Marseille‑Fos</li>
@@ -483,16 +569,19 @@ const FreightRoute: FC = () => {
                     <li>Spécificités: visibilité jalons LCL, contrôles douaniers</li>
                   </ul>
                 )}
-                {routeKey === 'services_freight_france_turkey' && (
+                {routeKey === 'services_freight_france_angola' && (
                   <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                    <li>France: Marseille‑Fos, Le Havre</li>
-                    <li>Turquie: Istanbul, Izmir, Mersin</li>
-                    <li>Atouts: délais courts, options route/multimodal</li>
+                    <li>France / Europe: Le Havre, Marseille‑Fos, Anvers, Rotterdam</li>
+                    <li>Angola: Luanda</li>
+                    <li>Atouts: rotations régulières, solutions FCL &amp; LCL, expertise douanière Angola</li>
                   </ul>
                 )}
                 <div className="mt-6">
-                  <LocalizedLink to="guides/fcl-vs-lcl" className="text-accent-600 hover:text-accent-700 font-medium">
-                    Guide FCL/LCL
+                  <LocalizedLink
+                    to="guides/fcl-vs-lcl"
+                    className="text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t('routes_main:links.fcl_guide_short', 'FCL/LCL guide')}
                   </LocalizedLink>
                 </div>
               </div>
@@ -536,7 +625,7 @@ const FreightRoute: FC = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">{t('routes_main:headings.faq')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {(faq || contentMap[routeKey].faq).map((f, idx) => (
+            {(faq || []).map((f, idx) => (
               <div key={idx} className="bg-white rounded-lg p-6 shadow">
                 <h3 className="text-lg font-semibold text-primary-900 mb-2">{f.q}</h3>
                 <p className="text-gray-700">{f.a}</p>
@@ -545,51 +634,49 @@ const FreightRoute: FC = () => {
           </div>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {routeKey === 'services_freight_france_china' && (
-              <>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">FCL vs LCL — France ↔ Chine</h3>
-                  <LocalizedLink to="services/fret-maritime/france-chine/fcl-lcl" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">Douane — France ↔ Chine</h3>
-                  <LocalizedLink to="services/fret-maritime/france-chine/douane" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">Checklist documentaire — France ↔ Chine</h3>
-                  <LocalizedLink to="services/fret-maritime/france-chine/checklist" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
-                </div>
-              </>
-            )}
             {routeKey === 'services_freight_france_congo' && (
               <>
                 <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">FCL vs LCL — France ↔ Congo</h3>
-                  <LocalizedLink to="services/fret-maritime/france-congo/fcl-lcl" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                  <h3 className="font-semibold text-primary-900 mb-2">
+                    {t(
+                      'routes_sub:congo.fcl_lcl.h1',
+                      'FCL vs LCL — France ↔ Congo'
+                    )}
+                  </h3>
+                  <LocalizedLink
+                    to="services/fret-maritime/france-congo/fcl-lcl"
+                    className="text-accent-600 hover:text-accent-700"
+                  >
+                    {t('routes_sub:labels.view', 'View')}
+                  </LocalizedLink>
                 </div>
                 <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">Douane — France ↔ Congo</h3>
-                  <LocalizedLink to="services/fret-maritime/france-congo/douane" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                  <h3 className="font-semibold text-primary-900 mb-2">
+                    {t(
+                      'routes_sub:congo.customs.h1',
+                      'Customs procedures — France ↔ Congo'
+                    )}
+                  </h3>
+                  <LocalizedLink
+                    to="services/fret-maritime/france-congo/douane"
+                    className="text-accent-600 hover:text-accent-700"
+                  >
+                    {t('routes_sub:labels.view', 'View')}
+                  </LocalizedLink>
                 </div>
                 <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">Checklist — France ↔ Congo</h3>
-                  <LocalizedLink to="services/fret-maritime/france-congo/checklist" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
-                </div>
-              </>
-            )}
-            {routeKey === 'services_freight_france_turkey' && (
-              <>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">FCL vs LCL — France ↔ Turquie</h3>
-                  <LocalizedLink to="services/fret-maritime/france-turquie/fcl-lcl" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">Douane — France ↔ Turquie</h3>
-                  <LocalizedLink to="services/fret-maritime/france-turquie/douane" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">Checklist — France ↔ Turquie</h3>
-                  <LocalizedLink to="services/fret-maritime/france-turquie/checklist" className="text-accent-600 hover:text-accent-700">Consulter</LocalizedLink>
+                  <h3 className="font-semibold text-primary-900 mb-2">
+                    {t(
+                      'routes_sub:congo.checklist.h1',
+                      'Document checklist — France ↔ Congo'
+                    )}
+                  </h3>
+                  <LocalizedLink
+                    to="services/fret-maritime/france-congo/checklist"
+                    className="text-accent-600 hover:text-accent-700"
+                  >
+                    {t('routes_sub:labels.view', 'View')}
+                  </LocalizedLink>
                 </div>
               </>
             )}
@@ -601,7 +688,12 @@ const FreightRoute: FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">{t('routes_main:headings.ready_to_ship')}</h2>
           <p className="text-gray-200 mb-6">{t('routes_main:headings.ready_to_ship_desc')}</p>
-          <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+          <CtaButton
+            href="contact"
+            variant="primary"
+            className="text-lg px-8 py-4"
+            state={contactSource ? { source: contactSource } : undefined}
+          >
             {t('routes_main:common.cta_get_quote')}
           </CtaButton>
         </div>

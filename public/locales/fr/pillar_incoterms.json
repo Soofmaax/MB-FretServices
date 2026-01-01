@@ -8,6 +8,16 @@
     "turkey": "France ↔ Turquie",
     "congo": "France ↔ Congo"
   },
+  "breadcrumb_label": "Incoterms 2020",
+  "faq_title": "FAQ",
+  "links_block": {
+    "guides_label": "Guides associés:",
+    "routes_label": "Pages routes:",
+    "fcl_guide_label": "FCL vs LCL — comment décider ?"
+  },
+  "cta_title": "Besoin d’aide pour choisir vos Incoterms ?",
+  "cta_desc": "Nous vous aidons à aligner Incoterms, assurance et douane sur vos flux France ↔ Congo/Angola.",
+  "cta_label": "Parler à un expert Incoterms",
   "sections": [
     {
       "h2": "Pourquoi les Incoterms sont stratégiques en B2B",

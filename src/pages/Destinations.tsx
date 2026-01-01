@@ -20,16 +20,38 @@ type Region = {
 
 const Destinations: FC = () => {
   const SITE_URL = getSiteUrl();
-  const { t } = useTranslation('destinations');
+  const { t } = useTranslation(['destinations', 'navbar']);
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+
+  const langTagMap: Record<string, string> = {
+    fr: 'fr-FR',
+    en: 'en-GB',
+    pt: 'pt-PT',
+    ar: 'ar',
+    es: 'es-ES',
+    tr: 'tr-TR',
+    sw: 'sw-KE',
+    de: 'de-DE',
+    it: 'it-IT',
+  };
+  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const seoTitle = t(
+    'destinations:seo.title',
+    'Destinations - Transport vers Afrique, Asie et Europe | MB Fret Services'
+  );
+  const seoDescription = t(
+    'destinations:seo.description',
+    'Transport international vers Congo, Angola, Chine, Turquie. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h.'
+  );
 
   const regions = t('regions', { returnObjects: true }) as Region[];
 
   return (
     <div className="pt-16">
       <SEO
-        title="Destinations - Transport vers Afrique, Asie et Europe | MB Fret Services"
-        description="Transport international vers Congo, Angola, Chine, Turquie. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+        title={seoTitle}
+        description={seoDescription}
         jsonLd={[
           {
             '@context': 'https://schema.org',
@@ -38,13 +60,13 @@ const Destinations: FC = () => {
               {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'Accueil',
+                name: t('navbar:home', 'Accueil'),
                 item: SITE_URL + '/',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Destinations',
+                name: t('navbar:destinations', 'Destinations'),
                 item: SITE_URL + pathForLang('destinations', lang),
               },
             ],
@@ -52,8 +74,8 @@ const Destinations: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: 'Destinations - MB Fret Services',
-            inLanguage: 'fr-FR',
+            name: `${t('navbar:destinations', 'Destinations')} - MB Fret Services`,
+            inLanguage: langTag,
           },
         ]}
       />

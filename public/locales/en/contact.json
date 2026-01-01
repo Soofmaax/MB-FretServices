@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Contact - Free international transport quote | MB Fret Services",
+    "description": "Contact MB Fret Services for a free quote. Experts in sea and air freight. WhatsApp, email or phone. Reply within 24 hours guaranteed."
+  },
   "hero": {
     "title": "Contact Our Experts",
     "subtitle": "Need a quote or advice? Our team replies within 24 hours. Let's discuss your logistics project."
@@ -33,12 +37,27 @@
       { "title": "Personalized follow-up:", "desc": "A dedicated contact for your project" }
     ]
   },
+  "source_banner": {
+    "container_prices": "You are coming from the guide on the cost of a 20'/40' container to Congo / Angola.",
+    "fcl_lcl": "You are coming from the FCL vs LCL guide.",
+    "incoterms": "You are coming from the Incoterms 2020 guide.",
+    "route_congo": "You are coming from the France ↔ Congo (Pointe-Noire) route page.",
+    "route_angola": "You are coming from the France ↔ Angola (Luanda) route page.",
+    "service_freight_maritime": "You are coming from the Sea freight service page (FCL/LCL containers to Africa).",
+    "service_customs": "You are coming from the Customs & compliance service page for France ↔ Africa flows.",
+    "service_insurance": "You are coming from the Cargo insurance service page for your FCL/LCL containers.",
+    "service_air_freight": "You are coming from the Air freight service page.",
+    "cta": "The details below will help us refine your quote."
+  },
   "form": {
     "name": "Full name",
     "email": "Email",
     "message": "Message",
     "submit": "Send",
-    "gdpr_notice": "The information you provide will only be used to reply to your enquiry. No automated marketing or resale of your data."
+    "gdpr_notice": "The information you provide will only be used to reply to your enquiry. No automated marketing or resale of your data.",
+    "success": "Thank you, we will get back to you within 24 hours.",
+    "error": "An error occurred. Please try again or contact us directly by email or phone.",
+    "submitting": "Sending..."
   },
   "cta": {
     "title": "Ready to start your project?",

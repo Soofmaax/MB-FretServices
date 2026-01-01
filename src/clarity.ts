@@ -7,20 +7,25 @@
 
 declare global {
   interface Window {
-    clarity?: ((...args: unknown[]) => void) & { q?: unknown[] };
+    clarity?: ClarityFn;
+  }
+}
+
+type ClarityFn = ((...args: unknown[]) => void) & { q?: unknown[] };
+
+function getDoNotTrack(): string | null {
+  try {
+    const nav = navigator as Navigator & { msDoNotTrack?: string; doNotTrack?: string };
+    const win = window as Window & { doNotTrack?: string };
+    return nav.doNotTrack ?? win.doNotTrack ?? nav.msDoNotTrack ?? null;
+  } catch {
+    return null;
   }
 }
 
 function shouldTrack(): boolean {
-  try {
-    const dnt =
-      (navigator as any).doNotTrack ||
-      (window as any).doNotTrack ||
-      (navigator as any).msDoNotTrack;
-    if (dnt === '1' || dnt === 'yes') return false;
-  } catch {
-    // ignore
-  }
+  const dnt = getDoNotTrack();
+  if (dnt === '1' || dnt === 'yes') return false;
   return true;
 }
 
@@ -31,9 +36,9 @@ export function initClarity() {
 
   // Stub window.clarity to queue calls until the script loads
   if (!window.clarity) {
-    const fn = function clarity(this: any) {
-      (fn.q = fn.q || []).push(arguments);
-    } as unknown as ((...args: unknown[]) => void) & { q?: unknown[] };
+    const fn: ClarityFn = (...args: unknown[]) => {
+      (fn.q = fn.q || []).push(args);
+    };
     window.clarity = fn;
   }
 

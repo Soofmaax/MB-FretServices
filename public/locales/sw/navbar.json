@@ -2,5 +2,14 @@
   "home": "Mwanzo",
   "services": "Huduma",
   "destinations": "Vituo",
-  "contact": "Mawasiliano"
+  "contact": "Mawasiliano",
+  "guides": "Mwongozo",
+  "resources": "Rasilimali",
+  "routes": "Njia",
+  "route_france_congo": "Ufaransa ↔ Kongo",
+  "route_france_angola": "Ufaransa ↔ Angola",
+  "lang_label": "Lugha",
+  "lang_aria": "Badilisha lugha",
+  "menu_open": "Fungua menyu",
+  "menu_close": "Funga menyu"
 }

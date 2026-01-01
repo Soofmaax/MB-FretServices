@@ -1,0 +1,162 @@
+{
+  "title": "Incoterms 2020 — Guia completo (FOB, CIF…) | MB Fret Services",
+  "description": "Compreenda os Incoterms 2020 para o transporte marítimo B2B: responsabilidades, custos, riscos e casos práticos em rotas China/Turquia/Congo. Escolha entre FOB e CIF e avalie o impacto em seguro e prazos.",
+  "hero_h1": "Incoterms 2020 — Guia completo B2B",
+  "hero_intro": "Domine a repartição de custos e riscos no transporte marítimo. Casos práticos aplicados às suas rotas chave (França–China, França–Turquia, França–Congo) para decisões de compra mais informadas.",
+  "hero_links": {
+    "china": "França ↔ China",
+    "turkey": "França ↔ Turquia",
+    "congo": "França ↔ Congo"
+  },
+  "breadcrumb_label": "Incoterms 2020",
+  "faq_title": "FAQ",
+  "links_block": {
+    "guides_label": "Guias relacionados:",
+    "routes_label": "Páginas de rotas:",
+    "fcl_guide_label": "FCL vs LCL — como decidir?"
+  },
+  "sections": [
+    {
+      "h2": "Porque os Incoterms são estratégicos em B2B",
+      "p": [
+        "Os Incoterms definem a repartição de responsabilidades, riscos e custos entre vendedor e comprador ao longo da cadeia logística. Em contexto B2B, influenciam o nível de controlo operacional, a visibilidade sobre custos e o alinhamento contratual com parceiros (fornecedores, transitários, seguradoras).",
+        "Uma leitura clara dos Incoterms ajuda a prevenir litígios, otimizar o preço final e acelerar decisões. Num contexto de volatilidade tarifária, o objetivo não é apenas “pagar menos”, mas garantir fiabilidade e previsibilidade suficientes para manter os fluxos a funcionar."
+      ]
+    },
+    {
+      "h2": "Panorâmica dos Incoterms 2020 relevantes para marítimo",
+      "ul": [
+        "EXW (Ex Works) — O vendedor disponibiliza a mercadoria nas suas instalações. O comprador assume transporte, formalidades e risco desde a recolha.",
+        "FCA (Free Carrier) — O vendedor entrega a mercadoria ao transportador do comprador num local acordado.",
+        "FOB (Free On Board) — Específico para marítimo: risco transfere-se para o comprador no embarque no porto de partida.",
+        "CFR (Cost and Freight) — O vendedor paga o frete até ao porto de chegada; o risco transfere-se no embarque.",
+        "CIF (Cost, Insurance and Freight) — O vendedor paga frete + seguro mínimo até ao porto de chegada.",
+        "DAP/DPU/DDP — Entrega no destino até às instalações do destinatário (consoante a variante), com responsabilidades alargadas do vendedor."
+      ]
+    },
+    {
+      "h2": "FOB vs CIF: arbitrar entre controlo e previsibilidade",
+      "p": [
+        "FOB dá ao comprador controlo sobre o transporte principal (escolha do armador, contratos, seguimento). Pode gerar poupanças e melhor desempenho se a organização tiver maturidade logística.",
+        "CIF oferece previsibilidade orçamental (frete e seguro a cargo do vendedor) e reduz a carga de coordenação do lado do comprador, à custa de menos controlo direto sobre o transporte."
+      ]
+    },
+    {
+      "h2": "Glossário de responsabilidades (simplificado)",
+      "ul": [
+        "Entrega: ponto em que o vendedor entrega formalmente a mercadoria ao comprador (definido pelo Incoterm)",
+        "Transferência de risco: momento exato em que o risco passa do vendedor para o comprador",
+        "Custos principais: frete marítimo e sobretaxas (BAF/CAF/PSS)",
+        "Formalidades aduaneiras: responsabilidades na exportação/importação consoante o Incoterm escolhido",
+        "Seguro: recomendada cobertura ad valorem para proteger a tesouraria"
+      ]
+    },
+    {
+      "h2": "Matriz de responsabilidades (versão textual)",
+      "p": [
+        "Regra geral: FOB/CFR/CIF transferem o risco no embarque; DAP/DPU/DDP deslocam o ponto de entrega para o país de destino; EXW/FCA colocam grande parte das responsabilidades a montante no comprador."
+      ],
+      "ul": [
+        "FOB: vendedor trata da exportação; comprador paga transporte principal e seguro; risco transfere-se no embarque",
+        "CFR: vendedor trata da exportação + transporte principal; risco transfere-se no embarque para o comprador",
+        "CIF: vendedor trata de exportação + frete + seguro; risco transfere-se no embarque para o comprador",
+        "DAP: vendedor suporta transporte até ao local de destino; formalidades de importação a cargo do comprador",
+        "DDP: vendedor assume toda a cadeia até à entrega, incluindo direitos e impostos"
+      ]
+    },
+    {
+      "h2": "Casos práticos e rotas chave",
+      "sub": [
+        {
+          "h3": "França ↔ China",
+          "p": [
+            "Os tempos de trânsito variam (Le Havre/Marselha-Fos ↔ Xangai/Ningbo/Shenzhen). Em fluxos regulares, FOB é adequado para importadores experientes capazes de negociar o frete e otimizar o CBM. CIF traz conforto administrativo quando a prioridade é rapidez de execução e visibilidade orçamental."
+          ]
+        },
+        {
+          "h3": "França ↔ Turquia",
+          "p": [
+            "Num eixo de curta/média distância, a flexibilidade (multimodal Mar/Rodovia/Aéreo) é essencial. CIF pode simplificar a coordenação entre vários intervenientes. FOB mantém-se pertinente se pretender afinar o equilíbrio entre prazos e custos."
+          ]
+        },
+        {
+          "h3": "França ↔ Congo",
+          "p": [
+            "Nos fluxos para África Ocidental/Central, a qualidade documental e o conhecimento das realidades aduaneiras locais são críticos. CIF pode reduzir custos “ocultos” de coordenação; FOB permite a compradores experientes controlar diretamente armadores e horários."
+          ]
+        }
+      ]
+    },
+    {
+      "h2": "Impacto em seguro e conformidade",
+      "p": [
+        "Em CIF, a cobertura mínima das Institute Cargo Clauses (C) nem sempre é suficiente. Em contexto B2B, recomenda-se seguro ad valorem para proteger a continuidade do negócio.",
+        "A conformidade documental (fatura, packing list, certificados de origem) deve estar perfeitamente alinhada com o Incoterm para limitar riscos aduaneiros."
+      ]
+    },
+    {
+      "h2": "Erros frequentes e como evitá-los",
+      "ul": [
+        "Confundir ponto de entrega com ponto de transferência de risco",
+        "Não ajustar o seguro quando o risco passa cedo (FOB/CFR)",
+        "Incoerências documentais (quantidades, pesos, descrições) que geram atrasos",
+        "Escolha de um Incoterm que não reflete a maturidade logística interna"
+      ]
+    },
+    {
+      "h2": "Processo de decisão (passo a passo)",
+      "ol": [
+        "Avaliar capacidades internas (recursos, sistemas, parceiros)",
+        "Comparar cenários (FOB/CIF/DAP) com base no custo total entregue e no risco",
+        "Verificar adequação documental e cobertura de seguro",
+        "Fixar o Incoterm no contrato e comunicá-lo a todas as partes envolvidas"
+      ]
+    },
+    {
+      "h2": "Boas práticas",
+      "ul": [
+        "Avaliar a maturidade logística interna (recursos, sistemas, parceiros).",
+        "Analisar a sensibilidade a prazo/custo/risco por rota, mercadoria e sazonalidade.",
+        "Comparar cenários quantificados FOB vs CIF incluindo seguro e custos ocultos (pré/pós-transporte).",
+        "Investir em rastreabilidade e seguimento 24/7 para reforçar a satisfação dos clientes internos."
+      ]
+    },
+    {
+      "h2": "Guias e páginas de rotas relacionadas",
+      "p": [
+        "Guias relacionados: FCL vs LCL — como decidir?",
+        "Páginas de rotas: França–China, França–Turquia, França–Congo."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "FOB vs CIF: qual a diferença na prática?",
+      "a": "FOB: o vendedor suporta custos/risco até ao embarque. CIF: inclui custo, seguro e frete até ao porto de chegada. Em B2B, CIF oferece previsibilidade sobre o custo total, enquanto FOB dá mais controlo ao importador."
+    },
+    {
+      "q": "Que Incoterms devo privilegiar para importações da China?",
+      "a": "FOB e CIF são os mais usados. A escolha depende do nível de controlo desejado, da capacidade de gerir o transporte principal e das necessidades de seguro."
+    },
+    {
+      "q": "Os Incoterms influenciam o desalfandegamento?",
+      "a": "Não alteram a regulamentação, mas definem quem é responsável pelas formalidades e em que momento."
+    },
+    {
+      "q": "Os Incoterms impactam a responsabilidade em caso de avaria?",
+      "a": "Sim. Determinam o ponto em que o risco passa do vendedor para o comprador. Uma boa apólice de seguro e provas documentais são essenciais."
+    },
+    {
+      "q": "Posso alterar o Incoterm durante a negociação?",
+      "a": "Sim, desde que isso fique claro no contrato e que os impactos em preço, prazos e seguro sejam considerados."
+    },
+    {
+      "q": "FOB e FCA são intercambiáveis?",
+      "a": "Não. FCA é mais adequado para transportes não marítimos até à entrega ao transportador; FOB é específico para transporte marítimo, com transferência de risco no embarque."
+    },
+    {
+      "q": "DDP é sempre recomendável?",
+      "a": "É confortável para o comprador, mas exigente para o vendedor (fiscalidade, importação). Deve ser usado apenas quando existem capacidades locais sólidas."
+    }
+  ]
+}

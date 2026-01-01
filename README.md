@@ -185,7 +185,7 @@ Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines
 ## Développé par
 Développé par **SmarterLogicWeb**.
 
-Pour en savoir plus ou pour nous contacter, visitez notre site: https://smarterlogiqueweb.com.
+Pour en savoir plus ou pour nous contacter, visitez notre site: https://smarterlogicweb.com.
 
 - Branding & Identité Visuelle
 - Développement Front‑End

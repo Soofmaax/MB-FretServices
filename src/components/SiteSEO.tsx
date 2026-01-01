@@ -10,7 +10,7 @@ const SiteSEO: FC = () => {
   const BING = (import.meta.env?.VITE_BING_VERIFICATION as string | undefined) || '';
 
   const PHONE = '+33 7 49 23 55 39';
-  const DEV = { '@type': 'Organization', name: 'SmarterLogic Web', url: 'https://smarterlogiqueweb.com' };
+  const DEV = { '@type': 'Organization', name: 'SmarterLogic Web', url: 'https://smarterlogicweb.com' };
 
   const ogImgAbs = DEFAULT_OG_IMAGE.startsWith('http')
     ? DEFAULT_OG_IMAGE
