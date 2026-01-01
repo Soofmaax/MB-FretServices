@@ -199,6 +199,13 @@ const FreightRoute: FC = () => {
     },
   };
 
+  const contactSource =
+    routeKey === 'services_freight_france_congo'
+      ? 'route_france_congo'
+      : routeKey === 'services_freight_france_angola'
+      ? 'route_france_angola'
+      : undefined;
+
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -252,7 +259,12 @@ const FreightRoute: FC = () => {
           <p className="text-xl md:text-2xl text-accent-300 font-medium mt-2">{subtitleT}</p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+            <CtaButton
+              href="contact"
+              variant="primary"
+              className="text-lg px-8 py-4"
+              state={contactSource ? { source: contactSource } : undefined}
+            >
               {t('routes_main:common.cta_get_quote')}
             </CtaButton>
             <a
@@ -414,7 +426,11 @@ const FreightRoute: FC = () => {
               ))}
 
               <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3">
-                <CtaButton href="contact" variant="primary">
+                <CtaButton
+                  href="contact"
+                  variant="primary"
+                  state={contactSource ? { source: contactSource } : undefined}
+                >
                   {t('routes_main:common.cta_get_quote')}
                 </CtaButton>
                 <div className="flex flex-wrap gap-3">
@@ -552,7 +568,11 @@ const FreightRoute: FC = () => {
               </ul>
 
               <div className="mt-8">
-                <CtaButton href="contact" variant="primary">
+                <CtaButton
+                  href="contact"
+                  variant="primary"
+                  state={contactSource ? { source: contactSource } : undefined}
+                >
                   {t('routes_main:common.cta_get_detailed_quote')}
                 </CtaButton>
                 <LocalizedLink
@@ -801,7 +821,12 @@ const FreightRoute: FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">{t('routes_main:headings.ready_to_ship')}</h2>
           <p className="text-gray-200 mb-6">{t('routes_main:headings.ready_to_ship_desc')}</p>
-          <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+          <CtaButton
+            href="contact"
+            variant="primary"
+            className="text-lg px-8 py-4"
+            state={contactSource ? { source: contactSource } : undefined}
+          >
             {t('routes_main:common.cta_get_quote')}
           </CtaButton>
         </div>

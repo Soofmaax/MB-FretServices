@@ -41,6 +41,8 @@
     "container_prices": "You are coming from the guide on the cost of a 20'/40' container to Congo / Angola.",
     "fcl_lcl": "You are coming from the FCL vs LCL guide.",
     "incoterms": "You are coming from the Incoterms 2020 guide.",
+    "route_congo": "You are coming from the France ↔ Congo (Pointe-Noire) route page.",
+    "route_angola": "You are coming from the France ↔ Angola (Luanda) route page.",
     "cta": "The details below will help us refine your quote."
   },
   "form": {

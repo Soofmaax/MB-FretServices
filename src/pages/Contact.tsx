@@ -213,14 +213,23 @@ const Contact: FC = () => {
                       "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola."
                     )
                   : source === 'pillar_fcl_lcl'
+                  ? t('contact:source_banner.fcl_lcl', 'Vous venez du guide FCL vs LCL.')
+                  : source === 'pillar_incoterms'
                   ? t(
-                      'contact:source_banner.fcl_lcl',
-                      'Vous venez du guide FCL vs LCL.'
-                    )
-                  : t(
                       'contact:source_banner.incoterms',
                       'Vous venez du guide Incoterms 2020.'
-                    )}
+                    )
+                  : source === 'route_france_congo'
+                  ? t(
+                      'contact:source_banner.route_congo',
+                      'Vous venez de la page route France ↔ Congo (Pointe‑Noire).'
+                    )
+                  : source === 'route_france_angola'
+                  ? t(
+                      'contact:source_banner.route_angola',
+                      'Vous venez de la page route France ↔ Angola (Luanda).'
+                    )
+                  : ''}
               </p>
               <p className="text-gray-700">
                 {t(

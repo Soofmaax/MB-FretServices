@@ -65,6 +65,8 @@
     "container_prices": "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola.",
     "fcl_lcl": "Vous venez du guide FCL vs LCL.",
     "incoterms": "Vous venez du guide Incoterms 2020.",
+    "route_congo": "Vous venez de la page route France ↔ Congo (Pointe‑Noire).",
+    "route_angola": "Vous venez de la page route France ↔ Angola (Luanda).",
     "cta": "Les informations ci-dessous nous aideront à affiner votre devis."
   },
   "form": {
