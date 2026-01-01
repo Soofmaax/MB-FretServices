@@ -88,11 +88,11 @@
   ],
   "services": {
     "title": "Nos services de fret maritime",
-    "subtitle": "Solutions complètes de transport maritime France–Afrique (FCL & LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur les corridors France–Angola et France–Congo.",
+    "subtitle": "Solutions complètes de transport maritime France–Afrique (FCL & LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur les corridors France–Angola et France–Congo. Le conteneur complet (FCL) est idéal lorsque vous expédiez un volume important d’effets personnels, souvent avec un ou deux véhicules sur un même envoi.",
     "list": [
       "Conteneurs 20' et 40' (FCL - Full Container Load)",
       "Groupage maritime (LCL - Less than Container Load)",
-      "Transport de véhicules neufs et d'occasion",
+      "Transport de véhicules neufs et d'occasion (Ro-Ro ou conteneur selon faisabilité)",
       "Machines industrielles et équipements lourds",
       "Marchandises dangereuses (IMO)",
       "Conteneurs frigorifiques (reefer)",
@@ -217,7 +217,7 @@
   "faq": {
     "title": "Questions Fréquentes - Fret Maritime",
     "q1": "Quelle est la différence entre FCL et LCL ?",
-    "a1": "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, idéal pour les petits volumes.",
+    "a1": "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. C’est particulièrement adapté à un déménagement complet ou à l’envoi d’un grand volume d’effets personnels, souvent avec un véhicule ou deux dans le même envoi. LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, ce qui est idéal pour les petits volumes ou des envois plus ponctuels.",
     "q2": "Quels documents sont nécessaires pour le fret maritime ?",
     "a2": "Facture commerciale, liste de colisage, connaissement maritime (Bill of Lading), certificat d'origine si requis, et documents spécifiques selon la nature des marchandises (certificats sanitaires, etc.).",
     "q3": "Comment suivre mon conteneur en transit ?",
