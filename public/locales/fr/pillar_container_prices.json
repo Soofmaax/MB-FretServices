@@ -1,0 +1,118 @@
+{
+  "title": "Prix d’un conteneur 20' / 40' vers le Congo et l’Angola | MB Fret Services",
+  "description": "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Afrique centrale (Congo, Angola) : type de conteneur, ports, FCL/LCL, saison, services inclus. Exemples de configurations, conseils et méthode pour obtenir un budget réaliste sans mauvaises surprises.",
+  "hero_h1": "Prix d’un conteneur 20' / 40' vers le Congo et l’Angola",
+  "hero_intro": "Pas de \"prix catalogue\" unique pour un conteneur : le budget dépend du volume réel, du type de conteneur, des ports utilisés, de la saison et des services inclus (pré/post‑acheminement, douane, assurance). Ce guide vous aide à comprendre les leviers qui font varier le prix afin de construire un budget réaliste pour vos envois vers le Congo et l’Angola.",
+  "hero_links": {
+    "maritime": "Fret maritime",
+    "congo": "France ↔ Congo",
+    "angola": "France ↔ Angola"
+  },
+  "sections": [
+    {
+      "h2": "Pourquoi il n’existe pas de « prix catalogue » pour un conteneur ?",
+      "p": [
+        "Les tarifs maritimes sont volatils : ils varient selon la saison, les capacités des armateurs, les ports d’embarquement et d’arrivée, le type de conteneur et la nature de la marchandise. Un prix affiché hors contexte donne souvent une illusion de simplicité, mais ne reflète pas votre réalité (effets personnels, véhicules, flux B2B, contraintes de délai…).",
+        "L’objectif n’est donc pas de trouver un prix standard, mais d’obtenir une cotation structurée, qui détaille les postes de coût (fret, surcharges, THC, pré/post‑acheminement, douane, assurance) pour que vous puissiez comparer et décider en connaissance de cause."
+      ]
+    },
+    {
+      "h2": "Les paramètres qui font varier le prix de votre conteneur",
+      "ul": [
+        "Le type de conteneur : 20' ou 40', Dry, High Cube, Reefer, Open Top, Flat Rack… chaque configuration a un coût différent.",
+        "Les ports de départ et d’arrivée : Le Havre, Fos, Anvers, Rotterdam vers Pointe‑Noire ou Luanda, avec des surcharges variables selon les lignes.",
+        "Le service FCL ou LCL : conteneur complet réservé pour vous ou groupage partagé avec d’autres expéditeurs.",
+        "La saisonnalité et la capacité : haute saison, fêtes, congés, congestions portuaires et grèves impactent les niveaux de prix.",
+        "La nature de la marchandise : standard, dangereuse (IMO), réfrigérée, volumineuse, sensible ou de forte valeur.",
+        "Les services additionnels : enlèvement, manutention, mise sur palettes, stockage temporaire, douane export/import, assurance cargo ad valorem."
+      ]
+    },
+    {
+      "h2": "Exemples de configurations typiques (sans chiffres fixes)",
+      "p": [
+        "Les exemples ci‑dessous ne constituent pas des tarifs, mais des configurations fréquentes que nous traitons. Ils permettent de visualiser comment le budget se construit."
+      ],
+      "ul": [
+        "Petit volume LCL (3–5 palettes d’effets personnels ou de marchandises B2B) : un envoi en groupage maritime sur un départ régulier depuis un port français ou du Benelux vers Pointe‑Noire ou Luanda. Vous payez uniquement le volume utilisé dans le conteneur partagé.",
+        "Déménagement complet en 20' FCL avec effets personnels + éventuellement un véhicule : un conteneur scellé, géré de bout en bout, qui intègre souvent l’enlèvement, la mise en conteneur, le fret, la douane export et l’assurance sur la valeur déclarée.",
+        "Conteneur 40' FCL pour flux B2B volumineux : palettes de marchandises, pièces détachées, consommables, parfois une machine ou un véhicule, avec un schéma de transport régulier et un travail sur la stabilité des tarifs dans le temps."
+      ]
+    },
+    {
+      "h2": "Spécificités France → Congo (Pointe‑Noire)",
+      "p": [
+        "Sur la route France → Congo, le choix du port de départ (Le Havre, Fos, Anvers…) et la combinaison pré/post‑acheminement influencent fortement le budget final. Les rotations vers Pointe‑Noire sont régulières, mais les niveaux tarifaires dépendent des compagnies, des alliances et des périodes de pointe.",
+        "Pour un déménagement complet ou un projet à forte valeur, il est essentiel d’anticiper : définir la fenêtre de départ, regrouper vos volumes, valider le type de conteneur et caler la documentation (BL, douane, assurance) pour éviter les surcoûts de stockage ou de surestaries."
+      ]
+    },
+    {
+      "h2": "Spécificités France → Angola (Luanda)",
+      "p": [
+        "Vers Luanda, l’accès au port et les solutions de pré/post‑acheminement depuis la France ou le Benelux (Anvers, Rotterdam) jouent un rôle clé dans le budget. Le marché est très sensible à la nature des marchandises (véhicules, déménagement, lots B2B) et à la qualité des services portuaires.",
+        "Les projets combinant effets personnels, cartons, mobilier et parfois un ou deux véhicules dans un même conteneur 20' ou 40' nécessitent une étude précise : remplissage, arrimage, valeur assurée et exigences douanières angolaises doivent être intégrés dès la phase de devis."
+      ]
+    },
+    {
+      "h2": "FCL vs LCL : impact direct sur le budget",
+      "p": [
+        "En‑dessous de 13–15 m³ environ, le groupage LCL reste souvent plus intéressant : vous payez uniquement le volume occupé, au prix de quelques manipulations supplémentaires et parfois d’un transit légèrement plus long.",
+        "Au‑delà, le FCL (20' ou 40') devient progressivement la solution la plus pertinente : coût par m³ plus faible, moins de ruptures de charge, sécurisation des déménagements complets, des véhicules et des marchandises sensibles."
+      ],
+      "ul": [
+        "LCL : adapté aux petits volumes, aux essais de marché ou aux flux ponctuels. Très souple, mais exige un emballage export solide.",
+        "FCL : incontournable pour les déménagements complets, les véhicules/motos, les machines et les flux réguliers à forte valeur."
+      ]
+    },
+    {
+      "h2": "Comment obtenir une cotation claire et exploitable ?",
+      "ol": [
+        "Lister vos volumes (m³ ou dimensions + poids), la nature des biens (effets personnels, marchandises, véhicules) et la destination précise (ville/pays).",
+        "Préciser si vous envisagez un départ en LCL ou FCL ou si vous souhaitez un conseil sur le meilleur schéma.",
+        "Indiquer les services attendus : enlèvement, mise sur palettes, chargement en conteneur, dédouanement, assurance, livraison éventuelle.",
+        "Demander un devis détaillé par poste (fret, surcharges, THC, pré/post‑acheminement, douane, assurance) avec une durée de validité clairement indiquée.",
+        "Comparer les scénarios FCL/LCL en coût total livré plutôt que sur un simple tarif « port à port »."
+      ]
+    },
+    {
+      "h2": "Erreurs fréquentes à éviter",
+      "ul": [
+        "Se focaliser sur un prix « tout fait » trouvé en ligne sans vérifier ce qui est réellement inclus.",
+        "Comparer des devis qui n’ont pas le même périmètre (port à port vs porte à porte, avec ou sans douane/assurance).",
+        "Sous‑estimer l’impact de la saisonnalité, des congestions et des surcharges temporaires sur certains ports.",
+        "Ignorer l’emballage export et l’assurance, qui conditionnent la protection de vos biens en cas d’incident."
+      ]
+    },
+    {
+      "h2": "Guides & pages associés",
+      "p": [
+        "Guides associés : FCL vs LCL — comment décider ?, Incoterms 2020.",
+        "Pages services : Fret maritime vers l’Afrique, France ↔ Congo, France ↔ Angola, Dédouanement, Assurance cargo."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien coûte un conteneur 20' ou 40' vers le Congo ou l’Angola ?",
+      "a": "Il n’existe pas de tarif unique car le prix dépend du type de conteneur (20'/40'), des ports, de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance). Concrètement, un 20' ou un 40' FCL représente un budget de plusieurs milliers d’euros : nous détaillons toujours nos devis par poste pour que vous compreniez ce qui compose le coût total livré."
+    },
+    {
+      "q": "Pourquoi deux devis conteneur peuvent-ils être très différents ?",
+      "a": "Parce qu’ils ne couvrent pas forcément le même périmètre : certains sont uniquement port à port, d’autres incluent enlèvement, formalités douanières, assurance, voire livraison à destination. Nous clarifions systématiquement ce qui est inclus et ce qui reste à votre charge pour éviter les malentendus."
+    },
+    {
+      "q": "LCL est-il toujours moins cher qu’un 20' FCL ?",
+      "a": "Pour de petits volumes (quelques m³), le groupage LCL est généralement plus économique. Mais dès que votre volume augmente ou que vous combinez déménagements, véhicules et marchandises, un 20' FCL peut devenir plus intéressant en coût par m³ et en sécurisation de votre projet."
+    },
+    {
+      "q": "Peut-on combiner déménagement et véhicule dans un même conteneur ?",
+      "a": "Oui, sous réserve d’étude de faisabilité et des contraintes réglementaires du pays de destination. Ce type de projet a un impact direct sur le budget (encombrement, poids, assurance, douane), d’où l’importance d’une cotation sur mesure plutôt qu’un prix standard."
+    },
+    {
+      "q": "Comment éviter les mauvaises surprises de prix (THC, surestaries, etc.) ?",
+      "a": "En demandant un devis détaillé par poste et en clarifiant la durée de validité de l’offre, les conditions de stockage, les délais de franchise au port et les responsabilités de chaque partie. Notre rôle de transitaire est justement de vous aider à anticiper ces coûts potentiels."
+    }
+  ],
+  "cta_title": "Prêt à construire votre budget conteneur vers le Congo ou l’Angola ?",
+  "cta_desc": "Transmettez‑nous votre projet (volume approximatif, type de biens, port ou ville de départ, destination, services souhaités). Nous vous remettons une cotation détaillée et lisible pour vos conteneurs 20' ou 40', en LCL ou FCL.",
+  "cta_label": "Demander une étude de prix"
+}

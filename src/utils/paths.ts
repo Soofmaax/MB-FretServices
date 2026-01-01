@@ -25,7 +25,8 @@ export type RouteKey =
   | 'services_freight_france_turkey_customs'
   | 'services_freight_france_turkey_checklist'
   | 'pillar_incoterms'
-  | 'pillar_fcl_lcl';
+  | 'pillar_fcl_lcl'
+  | 'pillar_container_prices';
 
 const SLUGS: Record<Lang, Record<RouteKey, string>> = {
   fr: {
@@ -54,6 +55,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/fret-maritime/france-turquie/checklist',
     pillar_incoterms: 'documentation/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/prix-conteneur-congo-angola',
   },
   en: {
     home: '',
@@ -81,6 +83,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   pt: {
     home: '',
@@ -108,6 +111,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'servicos/frete-maritimo/franca-turquia/checklist',
     pillar_incoterms: 'documentacao/incoterms-2020',
     pillar_fcl_lcl: 'guias/fcl-vs-lcl',
+    pillar_container_prices: 'guias/precos-conteiner-congo-angola',
   },
   // New languages use international slugs (English) by default
   ar: {
@@ -136,6 +140,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   es: {
     home: '',
@@ -163,6 +168,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   tr: {
     home: '',
@@ -190,6 +196,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   sw: {
     home: '',
@@ -216,6 +223,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   de: {
     home: '',
@@ -242,6 +250,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   it: {
     home: '',
@@ -269,6 +278,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   zh: {
     home: '',
@@ -296,6 +306,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
 };
 
@@ -433,6 +444,11 @@ const PILLAR_FCL_LCL_ALIASES = new Set<string>([
   'guides/fcl-vs-lcl',
   'guias/fcl-vs-lcl',
 ]);
+const PILLAR_CONTAINER_PRICES_ALIASES = new Set<string>([
+  'guides/prix-conteneur-congo-angola',
+  'guides/container-prices-congo-angola',
+  'guias/precos-conteiner-congo-angola',
+]);
 
 function stripBase(pathname: string): string {
   const base = (import.meta.env?.BASE_URL as string) || '/';
@@ -493,6 +509,7 @@ export function keyFromPath(pathname: string): RouteKey {
 
   if (PILLAR_INCOTERMS_ALIASES.has(rest)) return 'pillar_incoterms';
   if (PILLAR_FCL_LCL_ALIASES.has(rest)) return 'pillar_fcl_lcl';
+  if (PILLAR_CONTAINER_PRICES_ALIASES.has(rest)) return 'pillar_container_prices';
 
   // default to home
   return 'home';

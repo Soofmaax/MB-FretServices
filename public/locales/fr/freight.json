@@ -181,22 +181,26 @@
     "cta": "Voir le guide FCL vs LCL"
   },
   "costs": {
-    "title": "Les coûts de l’expédition par fret maritime",
-    "intro": "Nos cotations s’appuient sur des paramètres objectifs (volume, poids, axes, saisonnalité, capacité des navires, type de marchandise) pour rester cohérentes avec le marché tout en sécurisant vos flux.",
+    "title": "Comment nous construisons vos tarifs maritimes",
+    "intro": "Nos devis de fret maritime s’appuient sur des paramètres objectifs (volume, poids, route, saisonnalité, capacité des armateurs, type de marchandise) pour rester cohérents avec le marché tout en sécurisant vos flux.",
     "cards": [
       {
-        "title": "Quels paramètres influencent le prix ?",
-        "text": "Volume (m³) et poids, ports de départ et d’arrivée, type de service (FCL ou LCL), nature de la marchandise (standard, dangereuse, reefer), saisonnalité et niveau de capacité disponible chez les armateurs. Sur cette base, nous sélectionnons le service le plus adapté à votre budget et à vos délais."
+        "title": "Quels facteurs font varier le prix ?",
+        "text": "Le volume (m³) et le poids, les ports de départ et d’arrivée, le type de service (FCL ou LCL), la nature de la marchandise (standard, dangereuse, frigorifique), la saisonnalité et la capacité disponible chez les armateurs. À partir de ces éléments, nous sélectionnons le service le plus adapté à votre budget et à vos délais."
       },
       {
-        "title": "Comment obtenir une cotation précise ?",
-        "text": "Plus votre demande est complète, plus le devis est précis : description des marchandises, volume ou dimensions, poids total, pays/ville de départ et de destination, Incoterm souhaité, valeur approximative et contraintes de délai. Nous utilisons ces éléments pour comparer plusieurs options FCL/LCL et ports de départ (France/Benelux)."
+        "title": "Comment obtenir un devis précis ?",
+        "text": "Plus votre demande est complète, plus le devis est précis : description de la marchandise, volume ou dimensions, poids total, pays et ville d’origine/destination, Incoterm souhaité, valeur approximative, contraintes de délai. Nous utilisons ces informations pour comparer plusieurs scénarios FCL/LCL et ports de départ (France/Benelux)."
       },
       {
-        "title": "Comment éviter les hausses de prix inattendues ?",
-        "text": "Nous détaillons ce qui est inclus dans notre offre (fret maritime, surcharges, THC, pré‑/post‑acheminement) et la durée de validité du devis. En amont, un choix clair d’Incoterm et une documentation conforme permettent de limiter les surcoûts de stockage, de contrôle ou de douane."
+        "title": "Comment éviter les mauvaises surprises ?",
+        "text": "Nous détaillons clairement ce qui est inclus dans notre offre (fret, surcharges, THC, pré/post‑acheminement) et la durée de validité du devis. En amont, un choix d’Incoterm clair et une documentation conforme permettent de réduire les surcoûts (stockage, inspections, aléas douaniers)."
       }
     ]
+  },
+  "costs_guide": {
+    "hint": "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers le Congo et l’Angola.",
+    "cta": "Guide prix conteneur 20' / 40' Congo / Angola"
   },
   "customs": {
     "seo": {

@@ -15,6 +15,7 @@ const Insurance = lazy(() => import('./pages/Insurance'));
 const FreightRoute = lazy(() => import('./pages/FreightRoute'));
 const PillarIncoterms = lazy(() => import('./pages/PillarIncoterms'));
 const PillarFCLvsLCL = lazy(() => import('./pages/PillarFCLvsLCL'));
+const PillarContainerPricing = lazy(() => import('./pages/PillarContainerPricing'));
 const FreightRouteSubpage = lazy(() => import('./pages/FreightRouteSubpage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -154,10 +155,10 @@ function App() {
             }
           />
           <Route
-            path="guides/fcl-vs-lcl"
+            path="guides/prix-conteneur-congo-angola"
             element={
               <Suspense fallback={null}>
-                <PillarFCLvsLCL />
+                <PillarContainerPricing />
               </Suspense>
             }
           />
@@ -275,6 +276,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <PillarFCLvsLCL />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guides/container-prices-congo-angola"
+            element={
+              <Suspense fallback={null}>
+                <PillarContainerPricing />
               </Suspense>
             }
           />
@@ -399,6 +408,14 @@ function App() {
             element={
               <Suspense fallback={null}>
                 <PillarFCLvsLCL />
+              </Suspense>
+            }
+          />
+          <Route
+            path="guias/precos-conteiner-congo-angola"
+            element={
+              <Suspense fallback={null}>
+                <PillarContainerPricing />
               </Suspense>
             }
           />

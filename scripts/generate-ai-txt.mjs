@@ -61,6 +61,7 @@ const SLUGS = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   zh: {
     home: '',
@@ -279,18 +280,30 @@ function readEnvSiteUrl() {
 
 function buildPages(siteUrl) {
   const pages = [];
+  const includedKeys = new Set([
+    'home',
+    'services',
+    'destinations',
+    'contact',
+    'legal',
+    'services_freight_maritime',
+    'services_customs',
+    'services_insurance',
+    'services_freight_france_congo',
+    'services_freight_france_congo_fcl_lcl',
+    'services_freight_france_congo_customs',
+    'services_freight_france_congo_checklist',
+    'services_freight_france_angola',
+    'pillar_incoterms',
+    'pillar_fcl_lcl',
+    'pillar_container_prices',
+  ]);
   for (const lng of SUP_LANGS) {
     const sl = SLUGS[lng];
     const entries = Object.entries(sl);
     for (const [key, slug] of entries) {
       // Only include primary logical pages + key route pages (including subpages)
-      if (![
-        'home','services','destinations','contact','legal',
-        'services_freight_maritime','services_customs','services_insurance',
-        'services_freight_france_congo','services_freight_france_congo_fcl_lcl','services_freight_france_congo_customs','services_freight_france_congo_checklist',
-        'services_freight_france_angola',
-        'pillar_incoterms','pillar_fcl_lcl'
-      ].includes(key)) continue;
+      if (!includedKeys.has(key)) continue;
       const path = `/${lng}${slug ? `/${slug}` : ''}`;
       const url = new URL(path, siteUrl).href.replace(/\/$/, '');
       pages.push({ lang: lng, key, url });

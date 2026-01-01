@@ -40,6 +40,7 @@ const SLUGS = {
     services_freight_france_turkey_checklist: 'services/fret-maritime/france-turquie/checklist',
     pillar_incoterms: 'documentation/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/prix-conteneur-congo-angola',
   },
   en: {
     home: '',
@@ -65,6 +66,7 @@ const SLUGS = {
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
+    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   zh: {
     home: '',
@@ -297,6 +299,7 @@ const PATH_KEYS = [
   'services_freight_france_angola',
   'pillar_incoterms',
   'pillar_fcl_lcl',
+  'pillar_container_prices',
   'destinations',
   'contact',
   'legal',
