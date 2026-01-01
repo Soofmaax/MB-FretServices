@@ -30,12 +30,12 @@
     {
       "h2": "Exemples de configurations typiques (sans chiffres fixes)",
       "p": [
-        "Les exemples ci‑dessous ne constituent pas des tarifs, mais des configurations fréquentes que nous traitons. Ils permettent de visualiser comment le budget se construit."
+        "Les exemples ci‑dessous ne constituent pas des tarifs, mais des configurations fréquentes que nous traitons sur les axes France → Congo/Angola. Ils vous donnent des scénarios de budget typiques pour visualiser comment le coût total se construit, sans indiquer de montant précis."
       ],
       "ul": [
-        "Petit volume LCL (3–5 palettes d’effets personnels ou de marchandises B2B) : un envoi en groupage maritime sur un départ régulier depuis un port français ou du Benelux vers Pointe‑Noire ou Luanda. Vous payez uniquement le volume utilisé dans le conteneur partagé.",
-        "Déménagement complet en 20' FCL avec effets personnels + éventuellement un véhicule : un conteneur scellé, géré de bout en bout, qui intègre souvent l’enlèvement, la mise en conteneur, le fret, la douane export et l’assurance sur la valeur déclarée.",
-        "Conteneur 40' FCL pour flux B2B volumineux : palettes de marchandises, pièces détachées, consommables, parfois une machine ou un véhicule, avec un schéma de transport régulier et un travail sur la stabilité des tarifs dans le temps."
+        "Exemple 1 – petit volume LCL (3–5 palettes d’effets personnels ou de marchandises B2B) : un envoi en groupage maritime sur un départ régulier depuis un port français ou du Benelux vers Pointe‑Noire ou Luanda. Vous payez uniquement le volume utilisé dans le conteneur partagé.",
+        "Exemple 2 – déménagement complet en 20' FCL avec effets personnels + éventuellement un véhicule : un conteneur scellé, géré de bout en bout, qui intègre souvent l’enlèvement, la mise en conteneur, le fret, la douane export et l’assurance sur la valeur déclarée.",
+        "Exemple 3 – conteneur 40' FCL pour flux B2B volumineux : palettes de marchandises, pièces détachées, consommables, parfois une machine ou un véhicule, avec un schéma de transport régulier et un travail sur la stabilité des tarifs dans le temps."
       ]
     },
     {

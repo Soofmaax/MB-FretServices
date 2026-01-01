@@ -71,6 +71,7 @@ const Navbar: FC = () => {
     { name: t('navbar:home', 'Home'), href: '' },
     { name: t('navbar:services', 'Services'), href: 'services' },
     { name: t('navbar:destinations', 'Destinations'), href: 'destinations' },
+    { name: t('navbar:guides', 'Guides'), href: 'guides/fcl-vs-lcl' },
     { name: t('navbar:contact', 'Contact'), href: 'contact' },
   ];
 
