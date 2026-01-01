@@ -134,7 +134,7 @@ const VOLUME_BANDS: { key: VolumeBandKey; labelKey: string; fallback: string }[]
   {
     key: 'band_unknown',
     labelKey: 'quote:volume_band.band_unknown',
-    fallback: \"I don't know\",
+    fallback: "I don't know",
   },
 ];
 
@@ -526,7 +526,7 @@ const QuoteForm: FC<Props> = ({ defaultRoute = null }) => {
             <label className="block text-sm text-gray-700 mb-1">
               {t(
                 'quote:volume_band.label',
-                \"Approximate volume (if you don't know the exact dimensions)\"
+                "Approximate volume (if you don't know the exact dimensions)"
               )}
             </label>
             <div className="flex flex-wrap gap-2">

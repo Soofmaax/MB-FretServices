@@ -69,11 +69,12 @@ const Insurance: FC = () => {
     ],
   };
 
-  const faqEntities = (t('freight:insurance.faq', { returnObjects: true }) as Array&lt;{ q: string; a: string }&gt;) || [];
+  const faqEntities =
+    (t('freight:insurance.faq', { returnObjects: true }) as Array<{ q: string; a: string }>) || [];
   const faqLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqEntities.map((qa) =&gt; ({
+    mainEntity: faqEntities.map((qa) => ({
       '@type': 'Question',
       name: qa.q,
       acceptedAnswer: { '@type': 'Answer', text: qa.a },

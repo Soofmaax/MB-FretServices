@@ -134,7 +134,9 @@ const FreightRoute: FC = () => {
   const adviceDocs = t(`routes_main:${routeId}.advice.documentation`, { returnObjects: true }) as string[];
   const adviceKpisTitle = t(`routes_main:${routeId}.advice.kpis_title`);
   const adviceKpis = t(`routes_main:${routeId}.advice.kpis`, { returnObjects: true }) as string[];
-  const faq = t(`routes_main:${routeId}.faq`, { returnObjects: true }) as Array&lt;{ q: string; a: string }&gt;;
+  const faq = t(`routes_main:${routeId}.faq`, {
+    returnObjects: true,
+  }) as Array<{ q: string; a: string }>;
 
   const servicesBlock =
     lang === 'fr' || lang === 'en'
@@ -148,7 +150,7 @@ const FreightRoute: FC = () => {
   }) as {
     title?: string;
     subtitle?: string;
-    items?: Array&lt;{ title?: string; text?: string }&gt;;
+    items?: Array<{ title?: string; text?: string }>;
   };
   const howItems = Array.isArray(howItWorks.items) ? howItWorks.items : [];
 
@@ -157,7 +159,7 @@ const FreightRoute: FC = () => {
   }) as {
     title?: string;
     subtitle?: string;
-    items?: Array&lt;{ title?: string; text?: string }&gt;;
+    items?: Array<{ title?: string; text?: string }>;
   };
   const segmentItems = Array.isArray(segments.items) ? segments.items : [];
 

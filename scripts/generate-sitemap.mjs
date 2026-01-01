@@ -101,7 +101,6 @@ const SLUGS = {
     legal: 'aviso-legal',
     services_freight_maritime: 'servicos/frete-maritimo',
     services_customs: 'servicos/despacho-aduaneiro',
-    services_insurance: 'servicos/seguro-ca_code,
     services_insurance: 'servicos/seguro-carga',
     services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_congo: 'servicos/frete-maritimo/franca-congo',

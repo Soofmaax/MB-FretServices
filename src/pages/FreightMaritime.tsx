@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 type Advantage = {
-  icon: ComponentType&lt;{ size?: number | string; className?: string; 'aria-hidden'?: boolean }&gt;;
+  icon: ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>;
   title: string;
   description: string;
 };
@@ -90,7 +90,9 @@ const FreightMaritime: FC = () => {
     returnObjects: true,
   }) as { title?: string; text?: string; cta?: string };
 
-  const rawCosts;
+  const rawCosts = t('freight:costs', {
+    returnObjects: true,
+  });
 
   const costs =
     rawCosts && typeof rawCosts === 'object'
@@ -582,7 +584,7 @@ const FreightMaritime: FC = () => {
                     'freight:costs_guide.hint',
                     lang === 'fr'
                       ? "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers le Congo et l’Angola."
-                      : 'For more detail on budgeting, see our guide dedicated to the cost of 20\'/40\' containers to Congo and Angola.'
+                      : "For more detail on budgeting, see our guide dedicated to the cost of 20'/40' containers to Congo and Angola."
                   )}
                 </p>
                 <LocalizedLink
@@ -598,10 +600,6 @@ const FreightMaritime: FC = () => {
                 </LocalizedLink>
               </div>
             )}
-          </div>
-        </section>
-      )}
-            </div>
           </div>
         </section>
       )}
