@@ -306,7 +306,7 @@
   "france_angola": {
     "label": "França ↔ Angola",
     "title": "Transporte marítimo França ↔ Angola (FCL & LCL)",
-    "subtitle": "Groupagem LCL e contentores completos para Luanda, com recolha B2B em França e Europa e apoio documental específico para Angola.",
+    "subtitle": "Especializados em groupagem LCL, contentores completos FCL, mudanças internacionais e transporte de veículos/motos para Luanda a partir de França e da Europa (França/Benelux), para empresas e particulares.",
     "transit": "Prazos indicativos: 20–25 dias consoante porto de partida, rota e época.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Antuérpia", "Roterdão"],
     "ports_to": ["Luanda"],
@@ -323,14 +323,16 @@
       "Visibilidade dos marcos chave (embarque, transbordo, chegada) e acompanhamento proativo com os intervenientes locais"
     ],
     "why_us": [
-      "Experiência no corredor França/Europa ↔ Luanda, incluindo LCL, FCL e transporte de veículos",
-      "Rede de parceiros em Antuérpia/Roterdão para otimizar capacidade, custos e prazos",
-      "Apoio documental dedicado a Angola e coordenação com interlocutores locais"
-    ],
-    "use_cases": [
-      "Efeitos pessoais e pequenos envios B2B: partidas LCL regulares para Luanda, com recolha B2B possível em França e Benelux",
-      "Máquinas e equipamentos: FCL, Open Top ou equipamentos especiais após estudo, com organização do pré-transporte rodoviário",
-      "Veículos e projetos: soluções à medida (Ro-Ro ou contentor), gestão documental e coordenação de entrega em obra"
+      "Posicionamento dedicado no corredor França–Angola para todos os tipos de envio (carga B2B, mudanças internacionais, veículos e motos).",
+      "Experiência no corredor França/Europa ↔ Luanda, incluindo LCL, FCL e transporte de veículos.",
+      "Rede de parceiros em Antuérpia/Roterdão para optimizar capacidade, custos e prazos.",
+      "Apoio documental específico para Angola e coordenação com interlocutores locais."
+    new]</,
+   "use_cases": [
+      "Mudanças internacionais e efeitos pessoais (caixas, mobiliário, bens de família) em LCL ou FCL para Luanda, com opções de recolha em França e Benelux.",
+      "Envios B2B (paletes, peças sobresselentes, consumíveis, equipamentos) em LCL ou FCL conforme volume e regularidade dos fluxos.",
+      "Máquinas e equipamentos: FCL, Open Top ou equipamentos especiais após estudo, com organização do pré-transporte rodoviário.",
+      "Veículos e motos: soluções à medida (Ro-Ro ou contentor) com carregamento sobre rodas, sem desmontagem sempre que possível, gestão documental e coordenação da entrega em obra."
     ],
     "advice": {
       "planning_title": "Planeamento Angola & escolha de modo",

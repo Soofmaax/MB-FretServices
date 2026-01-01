@@ -307,7 +307,7 @@
   "france_angola": {
     "label": "France ↔ Angola",
     "title": "Sea freight France ↔ Angola (FCL & LCL)",
-    "subtitle": "LCL groupage and full containers to Luanda, with B2B pickup in France and Europe and dedicated documentation support for Angola.",
+    "subtitle": "Specialised in LCL groupage, FCL full containers, international moves and vehicle/motorbike shipping to Luanda from France and Europe (France/Benelux), for both businesses and individuals.",
     "transit": "Indicative transit times: 20–25 days depending on port of departure, rotations and season.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Antwerp", "Rotterdam"],
     "ports_to": ["Luanda"],
@@ -324,14 +324,16 @@
       "Visibility on key milestones (loading, transhipment, arrival) and proactive follow-up with local stakeholders"
     ],
     "why_us": [
-      "Experience on the France/Europe ↔ Luanda corridor, covering LCL groupage, FCL and vehicles",
-      "Partner network in Antwerp/Rotterdam to optimise capacity, costs and transit times",
-      "Route-specific documentation support for Angola and coordination with local counterparts"
+      "Dedicated positioning on the France–Angola corridor for all types of shipments (B2B cargo, international moves, vehicles and motorbikes).",
+      "Experience on the France/Europe ↔ Luanda corridor, covering LCL groupage, FCL and vehicles.",
+      "Partner network in Antwerp/Rotterdam to optimise capacity, costs and transit times.",
+      "Route-specific documentation support for Angola and coordination with local counterparts."
     ],
     "use_cases": [
-      "Personal effects and small B2B shipments: regular LCL departures to Luanda, with possible B2B pickup in France and Benelux",
-      "Machinery and equipment: FCL, Open Top or special equipment after feasibility study, with organised road pre-carriage",
-      "Vehicles and project cargo: tailored Ro-Ro or container solutions, documentation management and coordinated delivery on site"
+      "International moves and personal effects (boxes, furniture, household goods) in LCL or FCL to Luanda, with pickup options in France and the Benelux.",
+      "B2B shipments (pallets, spare parts, consumables, equipment) in LCL or FCL depending on volume and flow regularity.",
+      "Machinery and equipment: FCL, Open Top or special equipment after feasibility study, with organised road pre-carriage.",
+      "Vehicles and motorbikes: tailored Ro-Ro or container solutions with on-wheels loading without dismantling whenever possible, documentation management and coordinated delivery on site."
     ],
     "advice": {
       "planning_title": "Planning Angola & mode selection",
@@ -368,7 +370,7 @@
       },
       {
         "q": "Can you handle vehicles or personal effects?",
-        "a": "Yes, subject to feasibility review: vehicles in containers or Ro-Ro, personal effects in LCL or FCL. We clarify customs and regulatory constraints upfront."
+        "a": "Yes, subject to feasibility review: vehicles in containers or Ro-Ro, motorbikes on their wheels without dismantling whenever possible, personal effects in LCL or FCL. We clarify customs and regulatory constraints upfront."
       },
       {
         "q": "Do you recommend insurance for Angola?",
