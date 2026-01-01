@@ -7,12 +7,13 @@ type Props = {
   className?: string;
   children: ReactNode;
   onClick?: () => void;
+  state?: unknown;
   'aria-current'?: 'page' | undefined;
 };
 
 const SUP_LANGS: Lang[] = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
 
-const LocalizedLink: FC<Props> = ({ to, className, children, onClick, ...rest }) => {
+const LocalizedLink: FC<Props> = ({ to, className, children, onClick, state, ...rest }) => {
   const { lng } = useParams();
   const lang = (lng && SUP_LANGS.includes(lng as Lang)) ? (lng as Lang) : 'fr';
 
@@ -20,7 +21,7 @@ const LocalizedLink: FC<Props> = ({ to, className, children, onClick, ...rest })
   const href = localizeTo(to, lang);
 
   return (
-    <Link to={href} className={className} onClick={onClick} {...rest}>
+    <Link to={href} state={state} className={className} onClick={onClick} {...rest}>
       {children}
     </Link>
   );

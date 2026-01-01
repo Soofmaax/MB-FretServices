@@ -1,5 +1,6 @@
 import type { FC, FormEvent } from 'react';
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
@@ -10,7 +11,19 @@ const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation(['contact', 'navbar']);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const location = useLocation();
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+
+  const fromPricingGuide =
+    (location.state as { source?: string } | null | undefined)?.source ===
+    'pillar_container_prices';
+
+  const defaultMessage =
+    fromPricingGuide && lang === 'fr'
+      ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
+      : fromPricingGuide
+      ? "Hello, I’m coming from the guide about the cost of a 20'/40' container to Congo / Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
+      : '';
 
   const langTagMap: Record<string, string> = {
     fr: 'fr-FR',

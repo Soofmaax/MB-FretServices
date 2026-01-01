@@ -204,6 +204,7 @@ const PillarContainerPricing: FC = () => {
           <div className="mt-3 flex gap-3 flex-wrap">
             <LocalizedLink
               to="contact"
+              state={{ source: 'pillar_container_prices' }}
               className="inline-flex items-center px-4 py-2 rounded-lg bg-primary-900 text-white hover:bg-primary-800 text-sm font-semibold"
             >
               {ctaLabel}
