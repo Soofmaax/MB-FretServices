@@ -1,12 +1,12 @@
 {
   "seo": {
     "title": "Fret maritime France–Afrique – Conteneurs FCL & LCL | MB Fret Services",
-    "description": "Fret maritime professionnel depuis les ports français & européens vers l’Afrique (Congo, Angola). Conteneurs 20' & 40', FCL et LCL. Devis gratuit sous 24h et plus de 15 ans d’expertise."
+    "description": "Fret maritime professionnel depuis les ports français & européens vers l’Afrique (Congo, Angola). Conteneurs 20' & 40', FCL et LCL, déménagements, véhicules et marchandises B2B. Devis gratuit sous 24h et plus de 15 ans d’expertise."
   },
   "hero": {
     "title": "Fret Maritime vers l'Afrique",
     "subtitle": "Solutions conteneurs FCL et LCL",
-    "intro": "Transport maritime professionnel vers les principaux ports africains. Conteneurs 20' et 40', groupage LCL, véhicules et marchandises spéciales. Rotations régulières depuis les ports français et européens.",
+    "intro": "Transport maritime professionnel depuis la France et l'Europe vers l’Afrique centrale, avec un focus sur les corridors France–Angola et France–Congo. Conteneurs 20' et 40', groupage LCL, déménagements internationaux, véhicules et motos sur leurs roues lorsque la réglementation le permet.",
     "cta_quote": "Devis Fret Maritime Gratuit",
     "cta_whatsapp": "WhatsApp Direct"
   },
@@ -66,6 +66,9 @@
     }
   },
   "why": {
+    "title": "Pourquoi choisir MB Fret Services pour votre fret maritime ?",
+    "subtitle": "Expertise reconnue dans le transport maritime France–Afrique, avec un focus sur les corridors France–Angola et France–Congo et des solutions adaptées à tous vos besoins.",
+    "items": [": {
     "title": "Pourquoi choisir notre fret maritime ?",
     "subtitle": "Expertise reconnue dans le transport maritime vers l'Afrique avec des solutions adaptées à tous vos besoins."
   },
@@ -84,8 +87,8 @@
     }
   ],
   "services": {
-    "title": "Nos Services de Fret Maritime",
-    "subtitle": "Solutions complètes de transport maritime adaptées à tous types de marchandises. De l'enlèvement à la livraison, nous gérons votre fret de A à Z.",
+    "title": "Nos services de fret maritime",
+    "subtitle": "Solutions complètes de transport maritime pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z sur les corridors France–Angola et France–Congo.",
     "list": [
       "Conteneurs 20' et 40' (FCL - Full Container Load)",
       "Groupage maritime (LCL - Less than Container Load)",
@@ -163,7 +166,7 @@
   },
   "final": {
     "title": "Prêt à expédier par fret maritime ?",
-    "text": "Obtenez votre devis personnalisé en moins de 24h. Nos experts analysent vos besoins et vous proposent la solution maritime la plus économique.",
+    "text": "Obtenez votre devis personnalisé en moins de 24h pour un envoi France → Afrique (Angola, Congo). Nos experts analysent votre projet (déménagement, marchandises, véhicules, motos…) et vous proposent la solution maritime la plus économique et la plus sûre.",
     "cta": "Devis Fret Maritime",
     "whatsapp": "WhatsApp Immédiat"
   },

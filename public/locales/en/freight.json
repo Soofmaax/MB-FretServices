@@ -1,13 +1,13 @@
 {
   "seo": {
     "title": "Sea Freight France–Africa – FCL & LCL Containers | MB Fret Services",
-    "description": "Professional sea freight from French & European ports to Africa (Congo, Angola). 20' & 40' containers, FCL and LCL. Free quote within 24h and 15+ years of expertise."
+    "description": "Professional sea freight from French & European ports to Africa (Congo, Angola). 20' & 40' containers, FCL and LCL, international moves, vehicles and B2B cargo. Free quote within 24h and 15+ years of expertise."
   },
   "hero": {
     "title": "Sea Freight to Africa",
     "subtitle": "FCL and LCL container solutions",
-    "intro": "Professional sea transport to major African ports. 20' and 40' containers, LCL groupage, vehicles and special cargo. Regular rotations from French and European ports.",
-    "cta_quote": "Free Sea Freight Quote",
+    "intro": "Professional sea transport from France and Europe to Central Africa, with a focus on the France–Angola and France–Congo corridors. 20' and 40' containers, LCL groupage, international moves, vehicles and motorbikes on wheels where regulations allow.",
+    "cta_quote": "Get a Sea Freight Quote",
     "cta_whatsapp": "WhatsApp Direct"
   },
   "air": {
@@ -66,6 +66,9 @@
     }
   },
   "why": {
+    "title": "Why choose MB Fret Services for your sea freight?",
+    "subtitle": "Recognized expertise in sea transport from France to Africa, with a focus on the France–Angola and France–Congo corridors and solutions tailored to all your needs.",
+    "items": [": {
     "title": "Why choose our sea freight?",
     "subtitle": "Recognized expertise in sea transport to Africa with solutions for all your needs."
   },
@@ -75,8 +78,8 @@
     { "title": "Guaranteed Security", "description": "Cargo insurance and real-time tracking of your goods" }
   ],
   "services": {
-    "title": "Our Sea Freight Services",
-    "subtitle": "Comprehensive maritime solutions for all types of cargo. From pickup to delivery, we manage your freight from A to Z.",
+    "title": "Our sea freight services",
+    "subtitle": "Comprehensive sea freight solutions for international moves, B2B cargo, vehicles, motorbikes and machinery. From pickup to delivery, we manage your freight from A to Z on the France–Angola and France–Congo corridors.",
     "list": [
       "20' and 40' containers (FCL - Full Container Load)",
       "Maritime groupage (LCL - Less than Container Load)",
@@ -140,10 +143,18 @@
     "cta_prefix": "Quote to "
   },
   "destinations_list": [
-    { "country": "Congo", "port": "Pointe-Noire", "duration": "18–22 days", "frequency": "Weekly", "departure": "Le Havre, Antwerp" },
-    { "country": "Angola", "port": "Luanda", "duration": "20–25 days", "frequency": "Bi-weekly", "departure": "Antwerp, Rotterdam" },
-    { "country": "Côte d'Ivoire", "port": "Abidjan", "duration": "12–15 days", "frequency": "Daily", "departure": "Le Havre, Marseille" },
-    { "country": "Cameroon", "port": "Douala", "duration": "15–18 days", "frequency": "Bi-weekly", "departure": "Antwerp, Hamburg" }
+    {
+      "country": "Republic of the Congo",
+      "city": "Pointe-Noire",
+      "tagline": "Maritime gateway for Central Africa",
+      "detail": "Regular departures to Pointe-Noire for containers, LCL groupage and vehicles."
+    },
+    {
+      "country": "Angola",
+      "city": "Luanda",
+      "tagline": "Strategic corridor for Angola",
+      "detail": "Sea freight solutions from France and Europe to Luanda, Angola’s main port."
+    }
   ],
   "faq": {
     "title": "Frequently Asked Questions - Sea Freight",
