@@ -133,6 +133,24 @@
     "cta_text": "Tell us your approximate volume, departure ports, destination and shipment frequency. We build a tailor-made LCL solution for international moves, B2B cargo, vehicles or spare parts.",
     "cta_label": "Request an LCL Quote"
   },
+  "costs": {
+    "title": "How we build your sea freight rates",
+    "intro": "Our sea freight quotes are based on objective parameters (volume, weight, trade lane, seasonality, carrier capacity and cargo type) to stay aligned with the market while securing your flows.",
+    "cards": [
+      {
+        "title": "Which factors drive the price?",
+        "text": "Volume (m³) and weight, departure and arrival ports, service type (FCL or LCL), cargo nature (standard, dangerous goods, reefer), seasonality and available capacity with carriers. Based on this, we select the most suitable service for your budget and lead times."
+      },
+      {
+        "title": "How to get an accurate quote?",
+        "text": "The more complete your request, the more accurate the quote: cargo description, volume or dimensions, total weight, origin/destination country and city, preferred Incoterm, approximate value and time constraints. We use this information to compare several FCL/LCL options and departure ports (France/Benelux)."
+      },
+      {
+        "title": "How to avoid unexpected price increases?",
+        "text": "We clearly detail what is included in our offer (sea freight, surcharges, THC, pre‑/post‑carriage) and the validity period of the quote. Upfront, a clear Incoterm choice and compliant documentation help reduce costly surprises linked to storage, inspections or customs."
+      }
+    ]
+  },
   "customs": {
     "seo": {
       "title": "Customs clearance & compliance — Import/Export | MB Fret Services",

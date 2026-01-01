@@ -68,6 +68,21 @@ const FreightMaritime: FC = () => {
 
   const lclBlocks = (lcl.blocks || []) as Array<{ title?: string; bullets?: string[] }>;
 
+  const rawCosts = t('freight:costs', {
+    returnObjects: true,
+  }) as unknown;
+
+  const costs =
+    rawCosts && typeof rawCosts === 'object'
+      ? (rawCosts as {
+          title?: string;
+          intro?: string;
+          cards?: Array<{ title?: string; text?: string }>;
+        })
+      : { title: '', intro: '', cards: [] };
+
+  const costCards = Array.isArray(costs.cards) ? costs.cards : [];
+
   const faqData = t('freight:faq', {
     returnObjects: true,
   }) as {
@@ -358,6 +373,44 @@ const FreightMaritime: FC = () => {
           )}
         </div>
       </section>
+
+      {/* Coûts & méthodes de cotation */}
+      {costCards.length > 0 && (
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+                {costs.title}
+              </h2>
+              {costs.intro && (
+                <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  {costs.intro}
+                </p>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {costCards.map((card, index) => (
+                <div
+                  key={card.title || index}
+                  className="bg-gray-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up"
+                >
+                  {card.title && (
+                    <h3 className="text-xl font-bold text-primary-900 mb-4">
+                      {card.title}
+                    </h3>
+                  )}
+                  {card.text && (
+                    <p className="text-gray-700 leading-relaxed">
+                      {card.text}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Destinations principales */}
       <section className="py-16 lg:py-24 bg-gray-50">
