@@ -55,6 +55,45 @@ const Contact: FC = () => {
         : "Hello, I’m coming from the Air freight service page. Here is my project (cargo type, approximate weight/volume, departure airport, arrival airport, desired lead times):"
       : '';
 
+  const subjectLabel =
+    source === 'pillar_container_prices'
+      ? lang === 'fr'
+        ? "Demande via guide prix conteneur 20'/40' Congo / Angola"
+        : "Request via container price guide 20'/40' Congo / Angola"
+      : source === 'pillar_fcl_lcl'
+      ? lang === 'fr'
+        ? 'Demande via guide FCL vs LCL'
+        : 'Request via FCL vs LCL guide'
+      : source === 'pillar_incoterms'
+      ? lang === 'fr'
+        ? 'Demande via guide Incoterms 2020'
+        : 'Request via Incoterms 2020 guide'
+      : source === 'route_france_congo'
+      ? lang === 'fr'
+        ? 'Demande de devis — Route France ↔ Congo (Pointe‑Noire)'
+        : 'Quote request – France ↔ Congo (Pointe-Noire) route'
+      : source === 'route_france_angola'
+      ? lang === 'fr'
+        ? 'Demande de devis — Route France ↔ Angola (Luanda)'
+        : 'Quote request – France ↔ Angola (Luanda) route'
+      : source === 'service_freight_maritime'
+      ? lang === 'fr'
+        ? 'Demande de devis — Service Fret maritime (Afrique)'
+        : 'Quote request – Sea freight service (Africa)'
+      : source === 'service_customs'
+      ? lang === 'fr'
+        ? 'Demande — Service Dédouanement & conformité'
+        : 'Request – Customs & compliance service'
+      : source === 'service_insurance'
+      ? lang === 'fr'
+        ? 'Demande — Service Assurance cargo FCL/LCL'
+        : 'Request – Cargo insurance service (FCL/LCL)'
+      : source === 'service_air_freight'
+      ? lang === 'fr'
+        ? 'Demande de devis — Service Fret aérien'
+        : 'Quote request – Air freight service'
+      : '';
+
   const langTagMap: Record<string, string> = {
     fr: 'fr-FR',
     en: 'en-GB',
