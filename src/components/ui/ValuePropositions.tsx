@@ -1,12 +1,13 @@
-import type { FC, ComponentType } from 'react';
+import type { FC } from 'react';
 import { Ship, Plane, Shield } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 type PropItem = {
   title: string;
   description: string;
   features: string[];
-  icon: ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>;
+  icon: LucideIcon;
 };
 
 const ValuePropositions: FC = () => {
@@ -17,7 +18,7 @@ const ValuePropositions: FC = () => {
     description: string;
     features: string[];
   }>).map((it, idx) => {
-    const iconMap: Record<number, ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>> = {
+    const iconMap: Record<number, LucideIcon> = {
       0: Ship,
       1: Plane,
       2: Shield,

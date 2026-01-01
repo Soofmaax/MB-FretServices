@@ -1,5 +1,6 @@
-import type { FC, ComponentType } from 'react';
+import type { FC } from 'react';
 import { Ship, Clock, Shield, MapPin, CheckCircle, ArrowRight, Home, Car, Package } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import ResponsiveImage from '../components/ResponsiveImage';
@@ -9,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 type Advantage = {
-  icon: ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>;
+  icon: LucideIcon;
   title: string;
   description: string;
 };
