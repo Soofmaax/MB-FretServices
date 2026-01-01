@@ -85,10 +85,7 @@
   },
   "why": {
     "title": "Why choose MB Fret Services for your sea freight?",
-    "subtitle": "Africa freight forwarder with recognized expertise in sea transport from France to Africa, focusing on the France–Angola and France–Congo corridors and delivering tailor‑made solutions for your flows. Partner network across French & European ports and Central Africa, in‑house customs support, fast response times, competitive rates and a sustainable approach to your supply chain.",
-    "items": [": {
-    "title": "Why choose our sea freight?",
-    "subtitle": "Recognized expertise in sea transport to Africa with solutions for all your needs."
+    "subtitle": "Africa freight forwarder with recognized expertise in sea transport from France to Africa, focusing on the France–Angola and France–Congo corridors and delivering tailor‑made solutions for your flows. Partner network across French & European ports and Central Africa, in‑house customs support, fast response times, competitive rates and a sustainable approach to your supply chain."
   },
   "advantages": [
     {
@@ -249,15 +246,17 @@
   "destinations_list": [
     {
       "country": "Republic of the Congo",
-      "city": "Pointe-Noire",
-      "tagline": "Maritime gateway for Central Africa",
-      "detail": "Regular departures to Pointe-Noire for containers, LCL groupage and vehicles."
+      "port": "Pointe-Noire",
+      "duration": "18–22 days",
+      "frequency": "Weekly",
+      "departure": "Le Havre, Antwerp"
     },
     {
       "country": "Angola",
-      "city": "Luanda",
-      "tagline": "Strategic corridor for Angola",
-      "detail": "Sea freight solutions from France and Europe to Luanda, Angola’s main port."
+      "port": "Luanda",
+      "duration": "20–25 days",
+      "frequency": "Bi-weekly",
+      "departure": "Antwerp, Rotterdam"
     }
   ],
   "faq": {
