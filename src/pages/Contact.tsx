@@ -29,6 +29,14 @@ const Contact: FC = () => {
       ? lang === 'fr'
         ? "Bonjour, je viens du guide Incoterms 2020. Voici mon flux (origine, destination, type de marchandise, mode de transport) pour que vous puissiez me recommander l’Incoterm adapté :"
         : "Hello, I’m coming from the Incoterms 2020 guide. Here is my flow (origin, destination, cargo type, transport mode) so you can recommend the appropriate Incoterm:"
+      : source === 'route_france_congo'
+      ? lang === 'fr'
+        ? "Bonjour, je viens de la page route France ↔ Congo (Pointe‑Noire). Voici mon projet (type d’envoi : déménagement, marchandises, véhicule…, volume approximatif en m³ ou nombre de palettes, ville de départ, ville d’arrivée, délais souhaités) :"
+        : "Hello, I’m coming from the France ↔ Congo (Pointe-Noire) route page. Here is my project (shipment type: move, cargo, vehicle…, approximate volume in m³ or number of pallets, departure city, arrival city, desired lead times):"
+      : source === 'route_france_angola'
+      ? lang === 'fr'
+        ? "Bonjour, je viens de la page route France ↔ Angola (Luanda). Voici mon projet (type d’envoi : déménagement, marchandises, véhicule…, volume approximatif en m³ ou nombre de palettes, ville de départ, ville d’arrivée, délais souhaités) :"
+        : "Hello, I’m coming from the France ↔ Angola (Luanda) route page. Here is my project (shipment type: move, cargo, vehicle…, approximate volume in m³ or number of pallets, departure city, arrival city, desired lead times):"
       : '';
 
   const langTagMap: Record<string, string> = {
