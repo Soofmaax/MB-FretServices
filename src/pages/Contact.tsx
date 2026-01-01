@@ -311,6 +311,8 @@ const Contact: FC = () => {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
+            {subjectLabel && <input type="hidden" name="subject" value={subjectLabel} />}
+            {source && <input type="hidden" name="source" value={source} />}
             <div className="space-y-6">
               <div>
                 <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">

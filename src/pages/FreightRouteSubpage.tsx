@@ -142,13 +142,13 @@ const FreightRouteSubpage: FC = () => {
             <p key={`intro-${i}`} className="text-lg text-gray-700 mb-6">{p}</p>
           ))}
 
-          {(subData?.sections || []).map((sec: any, idx: number) => (
+          {(subData?.sections || []).map((sec, idx) => (
             <div key={`sec-${idx}`} className="mb-4">
               {sec.h2 && <h2 className="text-2xl font-bold text-primary-900 mb-3">{sec.h2}</h2>}
               {sec.h3 && <h3 className="text-xl font-semibold text-primary-900 mt-6 mb-2">{sec.h3}</h3>}
               {Array.isArray(sec.ul) && (
                 <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                  {sec.ul.map((li: string, i: number) => <li key={`li-${idx}-${i}`}>{li}</li>)}
+                  {sec.ul.map((li, i) => <li key={`li-${idx}-${i}`}>{li}</li>)}
                 </ul>
               )}
             </div>
