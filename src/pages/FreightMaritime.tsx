@@ -395,10 +395,27 @@ const FreightMaritime: FC = () => {
                 ))}
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 space-y-2">
                 <CtaButton href="contact" variant="primary">
                   {t('freight:services.cta')}
                 </CtaButton>
+                <p className="text-sm text-gray-600">
+                  {t('freight:links.customs_insurance_hint', 'Need customs clearance and cargo insurance on the same corridor?')}
+                  {' '}
+                  <LocalizedLink
+                    to="services/dedouanement"
+                    className="text-accent-700 hover:text-accent-800 font-medium"
+                  >
+                    {t('freight:links.customs_service', 'Customs clearance France–Africa')}
+                  </LocalizedLink>
+                  {' • '}
+                  <LocalizedLink
+                    to="services/assurance-cargo"
+                    className="text-accent-700 hover:text-accent-800 font-medium"
+                  >
+                    {t('freight:links.insurance_service', 'Cargo insurance for FCL/LCL containers')}
+                  </LocalizedLink>
+                </p>
               </div>
             </div>
 

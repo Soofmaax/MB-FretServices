@@ -448,48 +448,28 @@ const FreightRoute: FC = () => {
                     {t('routes_main:links.incoterms_guide', 'Understand Incoterms')}
                   </LocalizedLink>
                   <LocalizedLink
-                    to="services/customs"
+                    to={pathForLang('services_customs', lang)}
                     className="block text-accent-600 hover:text-accent-700 font-medium"
                   >
-                    {t('routes_main:links.customs_service', 'View our France–Africa customs clearance service')}
+                    {t(
+                      'routes_main:links.customs_service',
+                      'View our France–Africa customs clearance service'
+                    )}
                   </LocalizedLink>
                   <LocalizedLink
-                    to="services/insurance"
+                    to={pathForLang('services_insurance', lang)}
                     className="block text-accent-600 hover:text-accent-700 font-medium"
                   >
-                    {t('routes_main:links.insurance_service', 'View our cargo insurance service')}
+                    {t(
+                      'routes_main:links.insurance_service',
+                      'View our cargo insurance service'
+                    )}
                   </LocalizedLink>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">
-                {t('routes_main:headings.why_choose').replace('__ROUTE__', routeLabel)}
-              </h3>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                {(whyUsBullets || []).map((li, i) => (
-                  <li key={i}>{li}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">{t('routes_main:headings.key_services')}</h3>
-              <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                {(keyServices || []).map((li, i) => (
-                  <li key={i}>{li}</li>
-                ))}
-              </ul>
-              <div className="mt-6">
-                <CtaButton href="contact" variant="primary">{t('routes_main:common.cta_get_quote')}</CtaButton>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
       {servicesBlock && Array.isArray(servicesBlock.items) && servicesBlock.items.length > 0 && (
         <section className="py-16 bg-white">

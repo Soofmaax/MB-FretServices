@@ -315,6 +315,11 @@
       "services_alt": "Analyse des garanties d'assurance cargo"
     }
   },
+  "links": {
+    "customs_insurance_hint": "Besoin de gérer douane et assurance sur le même corridor ?",
+    "customs_service": "Dédouanement France–Afrique (Congo, Angola)",
+    "insurance_service": "Assurance cargo pour conteneurs FCL/LCL"
+  },
   "images": {
     "hero_alt": "Conteneurs de fret maritime",
     "services_alt": "Chargement de conteneurs de fret maritime"
