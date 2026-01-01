@@ -3,11 +3,7 @@ import type { FC } from 'react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type RouteKey =
-  | 'services_freight_france_china'
-  | 'services_freight_france_congo'
-  | 'services_freight_france_angola'
-  | 'services_freight_france_turkey';
+type RouteKey = 'services_freight_france_congo' | 'services_freight_france_angola';
 
 type ClientType = 'business' | 'individual' | 'association';
 
@@ -38,11 +34,6 @@ type Props = {
 
 const ROUTES: { key: RouteKey; labelKey: string; fallback: string }[] = [
   {
-    key: 'services_freight_france_china',
-    labelKey: 'routes_main:france_china.label',
-    fallback: 'France ↔ China',
-  },
-  {
     key: 'services_freight_france_congo',
     labelKey: 'routes_main:france_congo.label',
     fallback: 'France ↔ Congo',
@@ -51,11 +42,6 @@ const ROUTES: { key: RouteKey; labelKey: string; fallback: string }[] = [
     key: 'services_freight_france_angola',
     labelKey: 'routes_main:france_angola.label',
     fallback: 'France ↔ Angola',
-  },
-  {
-    key: 'services_freight_france_turkey',
-    labelKey: 'routes_main:france_turkey.label',
-    fallback: 'France ↔ Turkey',
   },
 ];
 

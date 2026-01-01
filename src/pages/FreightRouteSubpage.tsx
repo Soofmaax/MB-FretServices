@@ -7,28 +7,16 @@ import LocalizedLink from '../components/LocalizedLink';
 import { useTranslation } from 'react-i18next';
 
 type SubTopic = 'fcl_lcl' | 'customs' | 'checklist';
-type Country = 'china' | 'congo' | 'turkey';
+type Country = 'congo';
 
 function resolveContextFromKey(k: RouteKey): { country: Country; sub: SubTopic; parentKey: RouteKey } | null {
   switch (k) {
-    case 'services_freight_france_china_fcl_lcl':
-      return { country: 'china', sub: 'fcl_lcl', parentKey: 'services_freight_france_china' };
-    case 'services_freight_france_china_customs':
-      return { country: 'china', sub: 'customs', parentKey: 'services_freight_france_china' };
-    case 'services_freight_france_china_checklist':
-      return { country: 'china', sub: 'checklist', parentKey: 'services_freight_france_china' };
     case 'services_freight_france_congo_fcl_lcl':
       return { country: 'congo', sub: 'fcl_lcl', parentKey: 'services_freight_france_congo' };
     case 'services_freight_france_congo_customs':
       return { country: 'congo', sub: 'customs', parentKey: 'services_freight_france_congo' };
     case 'services_freight_france_congo_checklist':
       return { country: 'congo', sub: 'checklist', parentKey: 'services_freight_france_congo' };
-    case 'services_freight_france_turkey_fcl_lcl':
-      return { country: 'turkey', sub: 'fcl_lcl', parentKey: 'services_freight_france_turkey' };
-    case 'services_freight_france_turkey_customs':
-      return { country: 'turkey', sub: 'customs', parentKey: 'services_freight_france_turkey' };
-    case 'services_freight_france_turkey_checklist':
-      return { country: 'turkey', sub: 'checklist', parentKey: 'services_freight_france_turkey' };
     default:
       return null;
   }

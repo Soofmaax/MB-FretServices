@@ -12,21 +12,12 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Clock, Ship, MapPin, Home, Car, Package } from 'lucide-react';
 
-type RouteKey =
-  | 'services_freight_france_china'
-  | 'services_freight_france_congo'
-  | 'services_freight_france_angola'
-  | 'services_freight_france_turkey';
+type RouteKey = 'services_freight_france_congo' | 'services_freight_france_angola';
 
 function detectRouteKey(): RouteKey | null {
   if (typeof window === 'undefined') return null;
   const k = keyFromPath(window.location.pathname);
-  if (
-    k === 'services_freight_france_china' ||
-    k === 'services_freight_france_congo' ||
-    k === 'services_freight_france_angola' ||
-    k === 'services_freight_france_turkey'
-  ) {
+  if (k === 'services_freight_france_congo' || k === 'services_freight_france_angola') {
     return k;
   }
   return null;
@@ -40,17 +31,6 @@ const contentMap: Record<
     areaServed: Array<{ '@type': 'Country'; name: string }>;
   }
 > = {
-  services_freight_france_china: {
-    heroBase: 'hero-china',
-    ports: {
-      from: ['Le Havre', 'Marseille-Fos', 'Dunkerque'],
-      to: ['Shanghai', 'Ningbo', 'Shenzhen', 'Qingdao'],
-    },
-    areaServed: [
-      { '@type': 'Country', name: 'France' },
-      { '@type': 'Country', name: 'China' },
-    ],
-  },
   services_freight_france_congo: {
     heroBase: 'hero-congo',
     ports: {
@@ -73,17 +53,6 @@ const contentMap: Record<
       { '@type': 'Country', name: 'Angola' },
     ],
   },
-  services_freight_france_turkey: {
-    heroBase: 'hero-turkey',
-    ports: {
-      from: ['Marseille-Fos', 'Le Havre'],
-      to: ['Istanbul', 'Izmir', 'Mersin'],
-    },
-    areaServed: [
-      { '@type': 'Country', name: 'France' },
-      { '@type': 'Country', name: 'Turkey' },
-    ],
-  },
 };
 
 const FreightRoute: FC = () => {
@@ -98,14 +67,7 @@ const FreightRoute: FC = () => {
 
   const c = contentMap[routeKey];
   const ogImagePath = `/images/og-${c.heroBase.replace('hero-', '')}.webp`;
-  const routeId =
-    routeKey === 'services_freight_france_china'
-      ? 'france_china'
-      : routeKey === 'services_freight_france_congo'
-      ? 'france_congo'
-      : routeKey === 'services_freight_france_angola'
-      ? 'france_angola'
-      : 'france_turkey';
+  const routeId = routeKey === 'services_freight_france_congo' ? 'france_congo' : 'france_angola';
   const routeLabel = t(`routes_main:${routeId}.label`);
 
   // Localized content (titles, subtitles, lists)
@@ -600,13 +562,6 @@ const FreightRoute: FC = () => {
                 <h3 className="text-2xl font-bold text-primary-900 mb-3">
                   {t('routes_main:headings.ports_corridors').replace('__ROUTE__', routeLabel)}
                 </h3>
-                {routeKey === 'services_freight_france_china' && (
-                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                    <li>France: Le Havre, Marseille‑Fos, Dunkerque</li>
-                    <li>Chine: Shanghai, Ningbo, Shenzhen, Qingdao</li>
-                    <li>Services: directs vs transbordement selon saison/capacité</li>
-                  </ul>
-                )}
                 {routeKey === 'services_freight_france_congo' && (
                   <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>France: Le Havre, Marseille‑Fos</li>
@@ -619,13 +574,6 @@ const FreightRoute: FC = () => {
                     <li>France / Europe: Le Havre, Marseille‑Fos, Anvers, Rotterdam</li>
                     <li>Angola: Luanda</li>
                     <li>Atouts: rotations régulières, solutions FCL &amp; LCL, expertise douanière Angola</li>
-                  </ul>
-                )}
-                {routeKey === 'services_freight_france_turkey' && (
-                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                    <li>France: Marseille‑Fos, Le Havre</li>
-                    <li>Turquie: Istanbul, Izmir, Mersin</li>
-                    <li>Atouts: délais courts, options route/multimodal</li>
                   </ul>
                 )}
                 <div className="mt-6">
@@ -686,52 +634,6 @@ const FreightRoute: FC = () => {
           </div>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {routeKey === 'services_freight_france_china' && (
-              <>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:china.fcl_lcl.h1',
-                      'FCL vs LCL — France ↔ China'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-chine/fcl-lcl"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:china.customs.h1',
-                      'Customs procedures — France ↔ China'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-chine/douane"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:china.checklist.h1',
-                      'Document checklist — France ↔ China'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-chine/checklist"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-              </>
-            )}
             {routeKey === 'services_freight_france_congo' && (
               <>
                 <div className="bg-white rounded-lg p-5 shadow">
@@ -771,52 +673,6 @@ const FreightRoute: FC = () => {
                   </h3>
                   <LocalizedLink
                     to="services/fret-maritime/france-congo/checklist"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-              </>
-            )}
-            {routeKey === 'services_freight_france_turkey' && (
-              <>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:turkey.fcl_lcl.h1',
-                      'FCL vs LCL — France ↔ Turkey'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-turquie/fcl-lcl"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:turkey.customs.h1',
-                      'Customs procedures — France ↔ Turkey'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-turquie/douane"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:turkey.checklist.h1',
-                      'Document checklist — France ↔ Turkey'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-turquie/checklist"
                     className="text-accent-600 hover:text-accent-700"
                   >
                     {t('routes_sub:labels.view', 'View')}
