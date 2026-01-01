@@ -5,27 +5,27 @@
   },
   "valueProps": {
     "title": "Pourquoi choisir MB Fret Services ?",
-    "subtitle": "Transitaire B2B spécialisé Europe–Afrique, avec un focus opérationnel sur l’Afrique centrale (Congo, Angola) : expertise, réactivité et réseau de partenaires pour des solutions de transport sur mesure à des tarifs justes et transparents.",
+    "subtitle": "Transitaire B2B Europe–Afrique basé en France, avec un focus opérationnel sur l’Afrique centrale (Congo, Angola). Nous combinons fret maritime, fret aérien, douane et assurance cargo pour construire des solutions sur mesure, lisibles et durables pour vos flux.",
     "items": [
       {
         "title": "Fret Maritime",
-        "description": "Solutions économiques pour vos envois volumineux vers l'Afrique (Congo, Angola) avec suivi en temps réel.",
+        "description": "Fret maritime France–Afrique centrale (Congo, Angola) en conteneurs FCL et groupage LCL, pour déménagements, véhicules et flux B2B, avec suivi en temps réel.",
         "features": ["Conteneurs 20' et 40'", "FCL et LCL", "Port à port ou porte à porte"]
       },
       {
         "title": "Fret Aérien",
-        "description": "Transport rapide et sécurisé pour vos marchandises urgentes et de haute valeur.",
+        "description": "Liaisons aériennes Europe ↔ Afrique pour vos marchandises urgentes ou à forte valeur, en complément du maritime sur les corridors France–Congo et France–Angola.",
         "features": ["Livraison express", "Température contrôlée", "Suivi GPS en continu"]
       },
       {
         "title": "Dédouanement",
-        "description": "Expertise complète en procédures douanières pour faciliter vos échanges internationaux.",
+        "description": "Dédouanement import/export France–Afrique, sécurisation documentaire, calcul droits & taxes et accompagnement sur le choix des Incoterms.",
         "features": ["Déclarations douanières", "Conformité réglementaire", "Support administratif"]
       }
     ]
   },
   "destinations_title": "Nos Destinations Principales",
-  "destinations_subtitle": "Nous desservons les principaux marchés mondiaux avec des solutions adaptées à chaque région et type de marchandise.",
+  "destinations_subtitle": "Nous desservons en priorité l’Afrique centrale (Congo, Angola) depuis la France et l’Europe, avec des solutions adaptées aux déménagements, véhicules et flux B2B.",
   "destinations_more": "Voir toutes nos destinations",
   "destinations_need_specific": "Besoin d'une destination spécifique ? Nous étudions toutes les demandes.",
   "showcase": [
