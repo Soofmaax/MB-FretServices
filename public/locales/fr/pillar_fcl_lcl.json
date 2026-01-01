@@ -24,6 +24,14 @@
       ]
     },
     {
+      "h2": "3 palettes, 5 palettes… LCL ou FCL ?",
+      "p": [
+        "Pour des volumes modestes (par exemple 1 à 5 palettes, quelques m³), il est souvent contre‑productif de réserver un conteneur complet: vous payez beaucoup d’espace vide.",
+        "Dans ces cas‑là, le LCL (groupage) est adapté: vos palettes sont consolidées avec d’autres expéditeurs, vous ne payez que le volume réellement utilisé, au prix de manipulations supplémentaires et d’un transit parfois un peu plus long.",
+        "Dès que votre volume se rapproche de 13–15 m³ (ou que la valeur/fragilité est élevée), il devient pertinent d’étudier une bascule vers un 20’ FCL: coût par m³ plus intéressant, moins de manipulations, meilleures garanties en cas de déménagement international ou de marchandises sensibles."
+      ]
+    },
+    {
       "h2": "Critères de décision",
       "ul": [
         "Volume/poids — CBM et masse; utilisez le calculateur CBM.",
@@ -90,6 +98,18 @@
       "h2": "CBM, TEU et dimensionnement",
       "p": [
         "20’ ≈ 33 m³, 40’ ≈ 67 m³. Le taux de chargement utile dépend du type de marchandise et des contraintes (poids, ADR, empilement). Optimisez l’emballage export pour limiter l’espace perdu et les avaries."
+      ]
+    },
+    {
+      "h2": "Conteneurs 20’ et 40’ : volumes utiles et palettes",
+      "p": [
+        "Les valeurs ci‑dessous sont des ordres de grandeur pour dimensionner votre flux; le chargement réel dépend toujours du type de marchandise, de l’emballage et des contraintes de poids."
+      ],
+      "ul": [
+        "Conteneur 20’ dry: ≈ 33 m³ utiles; jusqu’à ~11 palettes Europe 80×120 cm ou 10 palettes 100×120 cm au sol; charge brute typique jusqu’à 18–20 tonnes.",
+        "Conteneur 40’ dry: ≈ 67 m³ utiles; jusqu’à ~23 palettes 80×120 cm ou 20 palettes 100×120 cm au sol; charge brute typique jusqu’à 26–28 tonnes.",
+        "Conteneur 40’ High Cube (40’HC): volume légèrement supérieur (≈ 76 m³), utile pour les marchandises volumineuses mais légères.",
+        "Conteneurs Reefer, Open Top, Flat Rack ou citerne: disponibles sur étude pour des projets spécifiques (température dirigée, sur‑dimensionné, vrac liquide, etc.)."
       ]
     },
     {

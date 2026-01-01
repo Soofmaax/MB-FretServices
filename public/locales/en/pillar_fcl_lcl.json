@@ -24,6 +24,14 @@
       ]
     },
     {
+      "h2": "3 pallets, 5 pallets… LCL or FCL?",
+      "p": [
+        "For modest volumes (for example 1 to 5 pallets, only a few cubic metres), booking a full container is often sub‑optimal: you end up paying for a lot of empty space.",
+        "In such cases, LCL/groupage is usually the right fit: your pallets are consolidated with other shippers’ cargo, and you only pay for the volume you actually use, with a bit more handling and sometimes a slightly longer transit time.",
+        "As your volume approaches the 13–15 m³ range (or if cargo value/fragility is high), it becomes relevant to study a switch to a 20' FCL: lower cost per m³, fewer handlings, better control for international moves or sensitive goods."
+      ]
+    },
+    {
       "h2": "Decision criteria",
       "ul": [
         "Volume/weight — CBM and gross weight: use a CBM calculator to size correctly.",
@@ -90,6 +98,18 @@
       "h2": "CBM, TEU and sizing",
       "p": [
         "A 20' container offers roughly 33 m³ of theoretical volume; a 40' around 67 m³. The effective usable volume depends on cargo type, weight constraints, stacking capability and any dangerous goods requirements. Export-grade packaging and careful palletisation reduce wasted space and the risk of damage."
+      ]
+    },
+    {
+      "h2": "20' and 40' containers: usable volume and pallets",
+      "p": [
+        "The figures below are indicative, to help you size your flows; actual loading always depends on cargo type, packaging and weight limitations."
+      ],
+      "ul": [
+        "20' dry container: roughly 33 m³ usable; up to about 11 Euro-pallets 80×120 cm or 10 pallets 100×120 cm on the floor; typical gross payload up to 18–20 tonnes.",
+        "40' dry container: roughly 67 m³ usable; up to about 23 pallets 80×120 cm or 20 pallets 100×120 cm on the floor; typical gross payload up to 26–28 tonnes.",
+        "40' High Cube (40'HC): slightly higher volume (≈ 76 m³), useful for light but bulky cargo.",
+        "Reefer, Open Top, Flat Rack and tank containers: available on a case-by-case basis for specific projects (temperature-controlled cargo, over-dimensioned pieces, bulk liquids, etc.)."
       ]
     },
     {
