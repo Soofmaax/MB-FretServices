@@ -705,9 +705,11 @@ const FreightMaritime: FC = () => {
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-primary-900 to-primary-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA Final - bandeau inspiré d'Everest Projet */}
+      <section className="relative py-16 lg:py-24 bg-gradient-to-br from-primary-900 via-primary-900 to-primary-800 text-white overflow-hidden">
+        {/* léger overlay décoratif */}
+        <div className="pointer-events-none absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_#fb923c_0,_transparent_50%),radial-gradient(circle_at_bottom,_#0f172a_0,_transparent_55%)]" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('freight:final.title')}
           </h2>
@@ -715,7 +717,7 @@ const FreightMaritime: FC = () => {
             {t('freight:final.text')}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <CtaButton
               href="contact"
               variant="primary"
