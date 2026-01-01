@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 
 type Advantage = {
-  icon: ComponentType<{ size?: number | string; className?: string; 'aria-hidden'?: boolean }>;
+  icon: ComponentType&lt;{ size?: number | string; className?: string; 'aria-hidden'?: boolean }&gt;;
   title: string;
   description: string;
 };
@@ -54,6 +54,23 @@ const FreightMaritime: FC = () => {
   const destinations = t('freight:destinations_list', { returnObjects: true }) as Destination[];
 
   const services = t('freight:services.list', { returnObjects: true }) as string[];
+
+  const howItWorks = t('freight:how_it_works', {
+    returnObjects: true,
+  }) as {
+    title?: string;
+    items?: Array<{ title?: string; text?: string }>;
+  };
+  const howItems = Array.isArray(howItWorks.items) ? howItWorks.items : [];
+
+  const segments = t('freight:segments', {
+    returnObjects: true,
+  }) as {
+    title?: string;
+    subtitle?: string;
+    items?: Array<{ title?: string; text?: string }>;
+  };
+  const segmentItems = Array.isArray(segments.items) ? segments.items : [];
 
   const lcl = t('freight:lcl', {
     returnObjects: true,
@@ -239,6 +256,52 @@ const FreightMaritime: FC = () => {
         </div>
       </section>
 
+      {/* Comment ça marche ? */}
+      {howItems.length > 0 && (
+        <section className="py-10 bg-white border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-900">
+                {howItWorks.title}
+              </h2>
+              <p className="text-gray-600 text-base md:text-lg max-w-xl">
+                {t(
+                  'freight:how_it_works.subtitle',
+                  "Simple process: fast quote, FCL/LCL recommendation and optional door-to-door handling."
+                )}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {howItems.map((item, index) => {
+                const Icon = index === 0 ? Clock : index === 1 ? Ship : MapPin;
+                return (
+                  <div
+                    key={item.title || index}
+                    className="bg-gray-50 rounded-xl px-6 py-5 shadow-sm flex items-start gap-4"
+                  >
+                    <div className="w-11 h-11 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
+                      <Icon size={22} className="text-accent-700" aria-hidden="true" />
+                    </div>
+                    <div>
+                      {item.title && (
+                        <h3 className="text-base md:text-lg font-semibold text-primary-900 mb-1">
+                          {item.title}
+                        </h3>
+                      )}
+                      {item.text && (
+                        <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                          {item.text}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Avantages */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -267,6 +330,49 @@ const FreightMaritime: FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Déménagement / Véhicule / Marchandises */}
+      {segmentItems.length > 0 && (
+        <section className="py-12 bg-white border-t border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-3">
+                {segments.title}
+              </h2>
+              {segments.subtitle && (
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                  {segments.subtitle}
+                </p>
+              )}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {segmentItems.map((item, index) => {
+                const Icon = index === 0 ? Home : index === 1 ? Car : Package;
+                return (
+                  <div
+                    key={item.title || index}
+                    className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-primary-900/90 flex items-center justify-center mx-auto mb-5">
+                      <Icon size={26} className="text-white" aria-hidden="true" />
+                    </div>
+                    {item.title && (
+                      <h3 className="text-lg font-semibold text-primary-900 mb-3">
+                        {item.title}
+                      </h3>
+                    )}
+                    {item.text && (
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                        {item.text}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Services détaillés */}
       <section className="py-16 lg:py-24 bg-white">

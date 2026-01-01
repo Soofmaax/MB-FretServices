@@ -10,6 +10,24 @@
     "cta_quote": "Get a Sea Freight Quote",
     "cta_whatsapp": "WhatsApp Direct"
   },
+  "how_it_works": {
+    "title": "How does it work?",
+    "subtitle": "A simple process: quote within 24h, FCL/LCL recommendation and optional door-to-door handling.",
+    "items": [
+      {
+        "title": "Detailed quote in under 24 hours",
+        "text": "Tell us about your project (volume, destination, cargo type) and we send a clear, structured proposal within 24 hours."
+      },
+      {
+        "title": "Choosing the right FCL / LCL option",
+        "text": "We compare full containers (FCL) and LCL groupage to optimize your cost based on volumes, lead times and operational constraints."
+      },
+      {
+        "title": "Pickup and door-to-door delivery",
+        "text": "We can arrange pickup at your home or warehouse, pre-carriage to the port and, depending on the country, delivery at destination."
+      }
+    ]
+  },
   "air": {
     "seo": {
       "title": "Air Freight – Fast & Secure B2B Transport | MB Fret Services",
@@ -86,6 +104,24 @@
       "description": "Secure shipments with adapted cargo insurance and transparent communication throughout the journey."
     }
   ],
+  "segments": {
+    "title": "International moves, vehicles or cargo?",
+    "subtitle": "A dedicated team for your personal and business projects to Central Africa (Congo, Angola).",
+    "items": [
+      {
+        "title": "International moves",
+        "text": "Personal effects, furniture, boxes and equipment: tailored solutions for full or partial moves from France to Africa."
+      },
+      {
+        "title": "Vehicles & rolling equipment",
+        "text": "Cars, 4x4s, vans, trucks and machinery: loading in containers or on Ro-Ro vessels when feasible."
+      },
+      {
+        "title": "Cargo & B2B flows",
+        "text": "Pallets, bulk cargo, spare parts, machines and consumables: FCL/LCL solutions for regular or one-off flows."
+      }
+    ]
+  },
   "services": {
     "title": "Our sea freight services",
     "subtitle": "Comprehensive sea freight services France–Africa (FCL &amp; LCL) for international moves, B2B cargo, vehicles, motorbikes and machinery. From pickup to delivery, we manage your freight from A to Z (handling, palletization, storage, customs, cargo insurance) on the France–Angola and France–Congo corridors. A full container (FCL) is often the best option when you need to ship a large volume of personal effects, often together with one or two vehicles in a single shipment. We handle pallets, cartons, dry bulk, heavy or out‑of‑gauge cargo in dry, reefer, open‑top or flat containers depending on your needs.",

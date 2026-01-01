@@ -10,6 +10,24 @@
     "cta_quote": "Devis Fret Maritime Gratuit",
     "cta_whatsapp": "WhatsApp Direct"
   },
+  "how_it_works": {
+    "title": "Comment ça marche ?",
+    "subtitle": "Un process simple : devis en moins de 24h, recommandation FCL/LCL et enlèvement porte-à-porte si besoin.",
+    "items": [
+      {
+        "title": "Devis détaillé en moins de 24h",
+        "text": "Vous nous transmettez votre projet (volume, destination, type de marchandises) et nous vous répondons sous 24h avec une proposition claire et structurée."
+      },
+      {
+        "title": "Choix FCL / LCL le plus adapté",
+        "text": "Nous comparons conteneur complet (FCL) et groupage (LCL) pour optimiser votre coût en fonction de vos volumes, de vos délais et de vos contraintes opérationnelles."
+      },
+      {
+        "title": "Enlèvement et livraison porte-à-porte",
+        "text": "Nous pouvons organiser l’enlèvement chez vous ou dans vos entrepôts, le pré-acheminement jusqu’au port et, selon les pays, une livraison à destination."
+      }
+    ]
+  },
   "air": {
     "seo": {
       "title": "Fret aérien — Rapide et sécurisé | MB Fret Services",
@@ -86,6 +104,24 @@
       "description": "Expéditions sécurisées, assurance cargo adaptée et communication transparente tout au long du transit."
     }
   ],
+  "segments": {
+    "title": "Déménagement, véhicules ou marchandises ?",
+    "subtitle": "Une équipe dédiée pour vos projets personnels et professionnels vers l’Afrique centrale (Congo, Angola).",
+    "items": [
+      {
+        "title": "Déménagement international",
+        "text": "Effets personnels, mobilier, cartons et équipements : solutions adaptées pour un déménagement complet ou partiel France → Afrique."
+      },
+      {
+        "title": "Véhicules & matériel roulant",
+        "text": "Voitures, 4x4, utilitaires, camions ou engins : chargement en conteneur ou sur navire roulier lorsque c’est possible."
+      },
+      {
+        "title": "Marchandises & B2B",
+        "text": "Palettes, vrac, pièces détachées, machines et consommables : solutions FCL/LCL pour vos flux réguliers ou ponctuels."
+      }
+    ]
+  },
   "services": {
     "title": "Nos services de fret maritime",
     "subtitle": "Solutions complètes de transport maritime France–Afrique (FCL &amp; LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur les corridors France–Angola et France–Congo. Le conteneur complet (FCL) est idéal lorsque vous expédiez un volume important d’effets personnels, souvent avec un ou deux véhicules sur un même envoi. Nous traitons vos palettes, cartons, vrac sec, colis lourds ou hors gabarit en conteneurs dry, reefer, open top ou flat selon vos besoins.",
