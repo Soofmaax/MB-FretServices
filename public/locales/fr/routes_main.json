@@ -81,7 +81,7 @@
   "france_congo": {
     "label": "France ↔ Congo",
     "title": "Transport & fret maritime France ↔ Congo (Pointe‑Noire) – Groupage, déménagement, véhicules",
-    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
+    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
     "transit": "Délais indicatifs: 20–30 jours selon départs, escales et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos"],
     "ports_to": ["Pointe‑Noire"],
@@ -168,7 +168,7 @@
   "france_angola": {
     "label": "France ↔ Angola",
     "title": "Transport & fret maritime France ↔ Angola (Luanda) – Groupage, déménagement, véhicules et motos",
-    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous travaillons avec plusieurs armateurs majeurs pour privilégier la qualité de service, la fiabilité des délais et un budget cohérent plutôt qu’un simple prix « le plus bas ».",
+    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous travaillons avec plusieurs armateurs majeurs pour privilégier la qualité de service, la fiabilité des délais et un budget cohérent plutôt qu’un simple prix « le plus bas ».",
     "transit": "Délais indicatifs: 20–25 jours selon port de départ, rotations et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Anvers", "Rotterdam"],
     "ports_to": ["Luanda"],
