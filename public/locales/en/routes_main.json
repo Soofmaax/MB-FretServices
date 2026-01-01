@@ -324,6 +324,19 @@
       "Export packaging advice (wooden crates, reinforced pallets, wrapping and blocking) to reduce damage",
       "Visibility on key milestones (loading, transhipment, arrival) and proactive follow-up with local stakeholders"
     ],
+    "services_block": {
+      "title": "End-to-end logistics services for your shipments to Angola (Luanda)",
+      "intro": "For your Angola flows, we do more than just book a container: we coordinate the whole logistics chain from France and Europe to Luanda port, including:",
+      "items": [
+        "Pick-up and delivery of partial loads (pallets, cartons, personal effects, small B2B shipments) across France and the Benelux.",
+        "Pre- and post-carriage for FCL containers to the departure port and from Luanda port, organising road transport where feasible via our partner network.",
+        "Transport documentation management (ocean bill of lading, packing list, commercial invoice and specific certificates required by the cargo type).",
+        "Export customs clearance in France and support with import formalities in Angola through our local partners.",
+        "LCL sea freight services to Luanda for intermediate volumes, with consolidation and warehousing options in France or the Benelux before departure.",
+        "Handling of export, import and, on a case-by-case basis, cross-trade operations involving Angola.",
+        "Assistance with the preparation of shipping certificates required by Angolan authorities, in coordination with partners located near the country’s main ports."
+      ]
+    },
     "why_us": [
       "Dedicated positioning on the France–Angola corridor for all types of shipments (B2B cargo, international moves, vehicles and motorbikes).",
       "Experience on the France/Europe ↔ Luanda corridor, covering LCL groupage, FCL and vehicles.",
