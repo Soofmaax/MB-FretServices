@@ -4,7 +4,7 @@ import CtaButton from '../components/CtaButton';
 import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
-import { Plane, Clock, Shield, CheckCircle } from 'lucide-react';
+import { Plane, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 

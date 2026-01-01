@@ -93,21 +93,32 @@ const FreightRouteSubpage: FC = () => {
   if (!ctx) return null;
 
   const parentUrl = SITE_URL + pathForLang(ctx.parentKey, lang);
-  const subData = t(`routes_sub:${ctx.country}.${ctx.sub}`, { returnObjects: true }) as any;
+
+  type SubData = {
+    title?: string;
+    desc?: string;
+    h1?: string;
+    intro?: string[];
+    sections?: Array<{ h2?: string; h3?: string; ul?: string[] }>;
+    faq?: Array<{ q: string; a: string }>;
+  };
+
+  const subData = t(`routes_sub:${ctx.country}.${ctx.sub}`, {
+    returnObjects: true,
+  }) as SubData;
   const labels = t('routes_sub:labels', { returnObjects: true }) as Record<string, string>;
   const ogImage = `/images/og-${ctx.country}.webp`;
   const faqEntities = (subData?.faq || []) as Array<{ q: string; a: string }>;
-  const jsonLd =
-    typeof window !== 'undefined'
-      ? buildJsonLd(
-          SITE_URL,
-          langPath,
-          parentUrl,
-          labels,
-          subData?.h1 || '',
-          faqEntities.map((f: any) => ({ name: f.q, text: f.a }))
-        )
-      : [];
+  const jsonLd = (typeof window !== 'undefined'
+    ? buildJsonLd(
+        SITE_URL,
+        langPath,
+        parentUrl,
+        labels,
+        subData?.h1 || '',
+        faqEntities.map((f) => ({ name: f.q, text: f.a }))
+      )
+    : []) as Array<Record<string, unknown>>;
 
   return (
     <div className="pt-16">
@@ -115,8 +126,8 @@ const FreightRouteSubpage: FC = () => {
         title={subData?.title || ''}
         description={subData?.desc || ''}
         ogImage={ogImage}
-        jsonLd={jsonLd as any}
-      />
+        jsonLd={jsonLd}
+    _code    />
 
       <section className="py-12 lg:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

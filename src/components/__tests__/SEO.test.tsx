@@ -5,7 +5,7 @@ import SEO from '../SEO';
 
 describe('SEO component', () => {
   it('injects basic meta and canonical', () => {
-    const helmetContext: any = {};
+    const helmetContext: Record<string, unknown> = {};
     render(
       <HelmetProvider context={helmetContext}>
         <SEO
@@ -31,7 +31,7 @@ describe('SEO component', () => {
   });
 
   it('injects JSON-LD with CSP nonce', () => {
-    const helmetContext: any = {};
+    const helmetContext: Record<string, unknown> = {};
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': 'WebPage',

@@ -6,12 +6,13 @@ import SiteSEO from '../SiteSEO';
 describe('SiteSEO', () => {
   it('injects organization/website/localBusiness JSON-LD with nonce', () => {
     // Simulate env
-    (import.meta as any).env = {
-      ...(import.meta as any).env,
+    const meta = import.meta as unknown as { env: Record<string, unknown> };
+    meta.env = {
+      ...meta.env,
       VITE_SITE_URL: 'https://mb-fretservices.com',
     };
 
-    const helmetContext: any = {};
+    const helmetContext: Record<string, unknown> = {};
     render(
       <HelmetProvider context={helmetContext}>
         <SiteSEO />

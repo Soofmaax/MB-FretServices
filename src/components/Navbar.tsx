@@ -28,8 +28,10 @@ const Navbar: FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const params = useParams();
-  const currentLang =
-    params.lng && (SUP as readonly string[]).includes(params.lng) ? params.lng : 'fr';
+  const currentLang: Lang =
+    params.lng && (SUP as readonly string[]).includes(params.lng)
+      ? (params.lng as Lang)
+      : 'fr';
   const { t } = useTranslation(['navbar', 'common']);
 
   useEffect(() => {

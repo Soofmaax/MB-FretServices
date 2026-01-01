@@ -122,7 +122,9 @@ const Contact: FC = () => {
     try {
       const form = e.currentTarget;
       const formData = new FormData(form);
-      const body = new URLSearchParams(formData as any).toString();
+      const body = new URLSearchParams(
+        Array.from(formData.entries()).map(([key, value]) => [key, String(value)])
+      ).toString();
 
       const response = await fetch('/', {
         method: 'POST',
@@ -345,6 +347,7 @@ const Contact: FC = () => {
                   name="message"
                   rows={5}
                   required
+                  defaultValue={defaultMessage}
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-accent-700 focus:ring-2 focus:ring-accent-700"
                 />
               </div>

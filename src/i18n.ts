@@ -46,7 +46,7 @@ i18n
     // Enable React Suspense for on-demand namespace loading (components are rendered under Suspense boundaries)
     react: {
       useSuspense: true,
-    } as any,
+    },
   });
 
 export default i18n;
