@@ -244,6 +244,18 @@
       {
         "q": "When should we switch from LCL to FCL towards Pointe-Noire?",
         "a": "Around 13–15 m³, FCL often becomes competitive and more predictable; below that, LCL remains attractive."
+      },
+      {
+        "q": "How much does it cost to ship a 20' or 40' container to Pointe-Noire?",
+        "a": "The cost of a 20' or 40' container to Pointe-Noire depends on the departure port (Le Havre, Fos, Benelux), season, cargo type and the services included (pre/post-carriage, customs, cargo insurance). We always provide itemised quotes (ocean freight, surcharges, THC, estimated duties & taxes) so you have a clear view of total delivered cost."
+      },
+      {
+        "q": "Which lead time should we plan for a full move from France to Congo?",
+        "a": "On average, you should allow 20–30 days of sea transit to Pointe-Noire, plus time for pickup, stuffing, port operations and customs clearance on arrival. We recommend planning a buffer for potential inspections and to contact us as soon as your approximate departure dates are known."
+      },
+      {
+        "q": "Do you offer a combined move + vehicle + insurance package for Congo?",
+        "a": "Yes, we can design a scheme combining an FCL container (personal effects + 1 or 2 vehicles), customs clearance and ad valorem cargo insurance. The goal is to give you a clear package (container, port services, formalities, coverage) rather than a bare \"port-to-port\" rate that is hard to compare."
       }
     ]
   },
@@ -409,6 +421,14 @@
       {
         "q": "Do you recommend insurance for Angola?",
         "a": "Yes, an ad valorem policy is strongly recommended on this corridor. We help size coverage and document packaging to reduce disputes."
+      },
+      {
+        "q": "How much does it cost to ship a 20' or 40' container to Luanda?",
+        "a": "The cost of a 20' or 40' container to Luanda depends on the departure port (Le Havre, Fos, Antwerp, Rotterdam), season, cargo type and the services included (pre/post-carriage, customs, cargo insurance). We provide detailed, itemised quotes (ocean freight, surcharges, THC, estimated duties & taxes) so you have a clear view of total delivered cost."
+      },
+      {
+        "q": "Which lead time should we plan for a full move from France to Angola?",
+        "a": "On average, you should allow 20–25 days of sea transit to Luanda, plus time for pickup, stuffing, port operations and customs clearance on arrival. We recommend planning a buffer for potential inspections and scheduling your move as soon as your approximate dates are known."
       }
     ]
   }

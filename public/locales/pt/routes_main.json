@@ -224,6 +224,18 @@
       {
         "q": "Qual o limiar para passar de LCL a FCL para Pointe-Noire?",
         "a": "À volta de 13–15 m³, o FCL torna-se muitas vezes competitivo e mais previsível; abaixo disso, o LCL continua atrativo."
+      },
+      {
+        "q": "Quanto custa enviar um contentor de 20' ou 40' para Pointe-Noire?",
+        "a": "O custo de um contentor de 20' ou 40' para Pointe-Noire depende do porto de partida (Le Havre, Fos, Benelux), da época, do perfil da mercadoria e dos serviços incluídos (pré/pós-transporte, desalfandegamento, seguro de carga). Detalhamos sempre os nossos orçamentos por rubrica (frete, sobretaxas, taxas portuárias, direitos & impostos estimados) para lhe dar uma visão clara do custo total entregue."
+      },
+      {
+        "q": "Que prazo devo prever para uma mudança completa França → Congo?",
+        "a": "Em média, conte com 20–30 dias de trânsito marítimo para Pointe-Noire, aos quais se juntam a recolha, o enchimento do contentor, as operações portuárias e o desalfandegamento à chegada. Recomendamos prever uma margem para eventuais controlos e contactar-nos assim que tiver uma ideia aproximada das datas de partida."
+      },
+      {
+        "q": "Propõem um pack mudança + veículo + seguro para o Congo?",
+        "a": "Sim, podemos estudar um esquema que combine um contentor FCL (efeitos pessoais + 1 ou 2 veículos), desalfandegamento e seguro de carga ad valorem. O objetivo é oferecer-lhe um pacote claro (contentor, serviços portuários, formalidades, cobertura) em vez de um simples preço \"porto a porto\" difícil de comparar."
       }
     ]
   },
@@ -327,8 +339,8 @@
       "Experiência no corredor França/Europa ↔ Luanda, incluindo LCL, FCL e transporte de veículos.",
       "Rede de parceiros em Antuérpia/Roterdão para optimizar capacidade, custos e prazos.",
       "Apoio documental específico para Angola e coordenação com interlocutores locais."
-    new]</,
-   "use_cases": [
+    ],
+    "use_cases": [
       "Mudanças internacionais e efeitos pessoais (caixas, mobiliário, bens de família) em LCL ou FCL para Luanda, com opções de recolha em França e Benelux.",
       "Envios B2B (paletes, peças sobresselentes, consumíveis, equipamentos) em LCL ou FCL conforme volume e regularidade dos fluxos.",
       "Máquinas e equipamentos: FCL, Open Top ou equipamentos especiais após estudo, com organização do pré-transporte rodoviário.",
@@ -374,6 +386,18 @@
       {
         "q": "Recomendam seguro para Angola?",
         "a": "Sim, uma apólice ad valorem é vivamente recomendada neste corredor. Ajudamos a dimensionar a cobertura e a documentar a embalagem para limitar litígios."
+      },
+      {
+        "q": "Quanto custa enviar um contentor de 20' ou 40' para Luanda?",
+        "a": "O custo de um contentor de 20' ou 40' para Luanda depende do porto de partida (Le Havre, Fos, Antuérpia, Roterdão), da época, do tipo de mercadoria e dos serviços incluídos (pré/pós-transporte, desalfandegamento, seguro de carga). Detalhamos sempre os nossos orçamentos por rubrica (frete, sobretaxas, taxas portuárias, direitos & impostos estimados) para lhe dar uma visão transparente do custo total entregue."
+      },
+      {
+        "q": "Que prazo devo prever para uma mudança completa França → Angola?",
+        "a": "Em média, conte com 20–25 dias de trânsito marítimo para Luanda, aos quais se juntam a recolha, o enchimento do contentor, as operações portuárias e o desalfandegamento no destino. Recomendamos prever uma margem para eventuais controlos e contactar-nos cedo, assim que tiver uma ideia aproximada da data de partida."
+      },
+      {
+        "q": "Propõem um pack mudança + veículo + seguro para Angola?",
+        "a": "Sim, podemos estudar um esquema que combine um contentor FCL (efeitos pessoais + 1 ou 2 veículos), desalfandegamento e seguro de carga ad valorem. O objetivo é oferecer-lhe um pacote claro de ponta a ponta (contentor, serviços portuários, formalidades, cobertura) em vez de um simples preço \"porto a porto\" que não reflete o seu orçamento real."
       }
     ]
   }

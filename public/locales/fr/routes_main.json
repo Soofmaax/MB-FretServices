@@ -208,9 +208,18 @@
       { "q": "Quelles pièces sont requises à l’import au Congo ?", "a": "BL, facture, PL, certificat d’origine si requis, et documents spécifiques selon la marchandise. Assistance au dédouanement disponible." },
       { "q": "Recommandez‑vous une assurance ?", "a": "Oui, une police ad valorem est conseillée. Nous calibrons la couverture selon la valeur et la sensibilité des biens." },
       { "q": "FCL vs LCL vers Pointe‑Noire: seuil de bascule ?", "a": "Autour de 13–15 m³, le FCL devient souvent compétitif et plus prévisible; en‑dessous, le LCL reste intéressant." },
-      { "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers Pointe‑Noire ?", "a": "Le coût d’un conteneur (20' ou 40') vers Pointe‑Noire dépend du port de départ (Le Havre, Fos, Benelux), de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance cargo). Nous détaillons toujours nos devis par poste (fret, surcharges, THC, droits & taxes estimés) afin que vous ayez une vision claire du coût total livré." },
-      { "q": "Quel délai prévoir pour un déménagement complet France → Congo ?", "a": "En moyenne, il faut compter 20 à 30 jours de transit maritime vers Pointe‑Noire, auxquels s’ajoutent l’enlèvement, la mise en conteneur, le passage portuaire et le dédouanement à l’arrivée. Nous recommandons de prévoir une marge pour les contrôles éventuels et de nous contacter dès que vos dates approximatives de départ sont connues." },
-      { "q": "Proposez‑vous un pack déménagement + véhicule + assurance pour le Congo ?", "a": "Oui, nous pouvons étudier un schéma combinant conteneur FCL (effets personnels + 1 ou 2 véhicules), dédouanement et assurance cargo ad valorem. L’objectif est de vous proposer un package lisible (conteneur, services portuaires, formalités, couverture) plutôt qu’un simple tarif « port à port » difficile à comparer." }
+      {
+        "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers Pointe‑Noire ?",
+        "a": "Le coût d’un conteneur (20' ou 40') vers Pointe‑Noire dépend du port de départ (Le Havre, Fos, Benelux), de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance cargo). Nous détaillons toujours nos devis par poste (fret, surcharges, THC, droits & taxes estimés) afin que vous ayez une vision claire du coût total livré."
+      },
+      {
+        "q": "Quel délai prévoir pour un déménagement complet France → Congo ?",
+        "a": "En moyenne, il faut compter 20 à 30 jours de transit maritime vers Pointe‑Noire, auxquels s’ajoutent l’enlèvement, la mise en conteneur, le passage portuaire et le dédouanement à l’arrivée. Nous recommandons de prévoir une marge pour les contrôles éventuels et de nous contacter dès que vos dates approximatives de départ sont connues."
+      },
+      {
+        "q": "Proposez‑vous un pack déménagement + véhicule + assurance pour le Congo ?",
+        "a": "Oui, nous pouvons étudier un schéma combinant conteneur FCL (effets personnels + 1 ou 2 véhicules), dédouanement et assurance cargo ad valorem. L’objectif est de vous proposer un package lisible (conteneur, services portuaires, formalités, couverture) plutôt qu’un simple tarif « port à port » difficile à comparer."
+      }
     ]
   },
   "france_turkey": {
@@ -357,6 +366,14 @@
       {
         "q": "Recommandez‑vous une assurance pour l’Angola ?",
         "a": "Oui, une police ad valorem est fortement recommandée sur cette destination. Nous dimensionnons la couverture avec vous et vous aidons à documenter l’emballage pour limiter les litiges."
+      },
+      {
+        "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers Luanda ?",
+        "a": "Le coût d’un conteneur (20' ou 40') vers Luanda dépend du port de départ (Le Havre, Fos, Anvers, Rotterdam), de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance cargo). Nous vous remettons des devis détaillés par postes (fret, surcharges, THC, droits & taxes estimés) pour que vous maîtrisiez le coût total livré."
+      },
+      {
+        "q": "Quel délai prévoir pour un déménagement complet France → Angola ?",
+        "a": "En moyenne, il faut compter 20 à 25 jours de transit maritime vers Luanda, auxquels s’ajoutent l’enlèvement, la mise en conteneur, les opérations portuaires et le dédouanement à l’arrivée. Nous recommandons de prévoir une marge pour les contrôles éventuels et de planifier votre déménagement dès que vos dates approximatives sont connues."
       }
     ]
   }
