@@ -135,17 +135,18 @@
   },
   "france_congo": {
     "label": "France ↔ Congo",
-    "title": "Fret maritime France ↔ Congo (FCL & LCL)",
-    "subtitle": "Groupage LCL et conteneurs complets vers Pointe‑Noire, avec ramassage B2B en France (IDF, Lyon, Marseille) et accompagnement documentaire.",
+    "title": "Transport & fret maritime France ↔ Congo (Pointe‑Noire) – Groupage, déménagement, véhicules",
+    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
     "transit": "Délais indicatifs: 20–30 jours selon départs, escales et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos"],
     "ports_to": ["Pointe‑Noire"],
     "costs": [
-      "Vers Pointe‑Noire, le groupage LCL est très pertinent pour les petits volumes et colis B2B. Au‑delà de ~13–15 m³, le FCL devient progressivement plus compétitif et plus prévisible.",
-      "Les coûts tiennent compte des surcharges maritimes et des opérations portuaires. Nous vous guidons sur le meilleur schéma selon le budget et l’échéance."
+      "Vers Pointe‑Noire, le groupage LCL est très pertinent pour les petits volumes, effets personnels, bagages et colis B2B. Au‑delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
+      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, opérations portuaires (THC), pré/post‑acheminement et droits/taxes à l’import au Congo. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons.",
+      "Que vous expédiiez des effets personnels, des colis e‑commerce, des palettes industrielles ou un déménagement complet avec véhicules, nous construisons un schéma de coût transparent en expliquant clairement ce qui est inclus (fret, surcharges, manutentions, pré/post‑acheminement, droits et taxes estimés)."
     ],
     "customs": [
-      "Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur les droits & taxes."
+      "Contrôle documentaire rigoureux: facture détaillée, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur les droits & taxes avec des correspondants locaux à Pointe‑Noire."
     ],
     "insurance_risks": [
       "Assurance cargo ad valorem: couverture du départ à la livraison",
@@ -166,14 +167,17 @@
       ]
     },
     "why_us": [
-      "Forte expertise LCL/colis vers Pointe‑Noire avec consolidations régulières",
-      "Ramassage B2B dans les principaux hubs français",
-      "Accompagnement documentaire et dédouanement local"
+      "Positionnement dédié sur le corridor France–Congo pour colis, marchandises B2B, déménagements, véhicules et motos.",
+      "Forte expertise LCL/colis vers Pointe‑Noire avec consolidations régulières.",
+      "Ramassage B2B dans les principaux hubs français et, sur étude, en Benelux.",
+      "Accompagnement documentaire et dédouanement local via des partenaires implantés à Pointe‑Noire."
     ],
     "use_cases": [
-      "Colis/petits lots: LCL groupé vers Pointe‑Noire avec visibilité des jalons",
-      "Équipements lourds: FCL/Open Top selon étude, ramassage orchestré",
-      "Flux projet: coordination documentaire et assistance locale au dédouanement"
+      "Déménagements internationaux et effets personnels (cartons, mobilier, affaires de famille) en LCL ou FCL vers Pointe‑Noire, avec options de ramassage en France et Benelux.",
+      "Colis/petits lots: LCL groupé vers Pointe‑Noire avec visibilité des jalons et suivi proactif.",
+      "Expéditions B2B (palettes, pièces détachées, consommables, équipements) en LCL ou FCL selon volume et régularité des flux.",
+      "Équipements lourds et machines: FCL/Open Top ou équipements spéciaux après étude, avec ramassage orchestré.",
+      "Véhicules et motos: solutions sur mesure (Ro‑Ro ou conteneur) selon faisabilité, avec gestion documentaire et coordination à l’arrivée."
     ],
     "advice": {
       "planning_title": "Groupage LCL & visibilité",

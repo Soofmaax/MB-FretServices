@@ -154,20 +154,21 @@
   },
   "france_congo": {
     "label": "France ↔ Congo",
-    "title": "Sea freight France ↔ Congo (FCL & LCL)",
-    "subtitle": "LCL groupage and full containers to Pointe-Noire, with B2B pickup in France (Paris region, Lyon, Marseille) and full documentary support.",
+    "title": "Sea transport & freight France ↔ Congo (Pointe-Noire) – Groupage, moves, vehicles",
+    "subtitle": "LCL groupage, FCL full containers, international moves and vehicle/motorbike shipping to Pointe-Noire from France and Europe (France/Benelux), for both businesses and individuals, including parcels, baggage and personal effects in containers or groupage. As a France‑based freight forwarder, we prioritise reliable and transparent schemes on the France–Congo corridor rather than purely chasing the lowest nominal rate.",
     "transit": "Indicative transit times: 20–30 days depending on departures, stops and season.",
     "ports_from": ["Le Havre", "Marseille-Fos"],
     "ports_to": ["Pointe-Noire"],
     "costs": [
-      "To Pointe-Noire, LCL groupage is very relevant for small volumes and B2B parcels. Above roughly 13–15 m³, FCL gradually becomes more competitive and predictable.",
-      "Costs include maritime surcharges and port operations. We advise you on the best scheme according to budget and deadlines."
+      "To Pointe-Noire, LCL (groupage) is particularly relevant for small volumes, personal effects, baggage and B2B parcels. Above roughly 13–15 m³, FCL usually becomes more competitive and offers more predictable lead times.",
+      "Costs should be assessed as total delivered cost: sea freight, surcharges, port THC, pre/post-carriage and duties/taxes on import into Congo. We help you arbitrate between LCL/FCL and departure ports (France/Benelux) according to your budget and milestones.",
+      "Whether you are shipping personal effects, e‑commerce parcels, industrial pallets or a full move with vehicles, we build a transparent cost breakdown and clearly explain what is included (freight, surcharges, handling, pre/post‑carriage, estimated duties and taxes)."
     ],
     "customs": [
-      "Strict documentary control: invoice, packing list, BL, certificate of origin if required, and any product-specific documents. Customs representation and support on duties & taxes."
+      "Strict and detailed documentation control: commercial invoice, packing list, BL, certificate of origin where required, and cargo-specific documents. Customs representation and support on duties & taxes with local counterparts in Pointe-Noire."
     ],
     "insurance_risks": [
-      "Ad valorem cargo insurance: coverage from departure to delivery",
+      "Ad valorem cargo insurance sized to the value of your goods",
       "Export packaging advice to reduce damage and disputes",
       "Milestone visibility and proactive follow-up"
     ],
@@ -185,14 +186,17 @@
       ]
     },
     "why_us": [
-      "Strong expertise in LCL/parcel flows to Pointe-Noire with regular consolidations",
-      "B2B pickup in France's main economic hubs",
-      "Documentary coaching and local customs assistance"
+      "Dedicated positioning on the France–Congo corridor for parcels, B2B cargo, international moves, vehicles and motorbikes.",
+      "Strong expertise in LCL/parcel flows to Pointe-Noire with regular consolidations.",
+      "B2B pickup in France's main economic hubs and, on request, in the Benelux.",
+      "Documentary coaching and local customs assistance via partners based in Pointe-Noire."
     ],
     "use_cases": [
-      "Parcels/small lots: LCL groupage to Pointe-Noire with milestone visibility",
-      "Heavy equipment: FCL/Open Top when relevant, with orchestrated pickup",
-      "Project cargo: documentary coordination and local customs assistance"
+      "International moves and personal effects (boxes, furniture, household goods) in LCL or FCL to Pointe-Noire, with pickup options in France and the Benelux.",
+      "Parcels/small lots: LCL groupage to Pointe-Noire with visibility on milestones and proactive follow-up.",
+      "B2B shipments (pallets, spare parts, consumables, equipment) in LCL or FCL depending on volume and flow regularity.",
+      "Heavy equipment and machinery: FCL/Open Top or special equipment after feasibility study, with orchestrated pickup.",
+      "Vehicles and motorbikes: tailor-made Ro-Ro or container solutions where feasible, with documentation management and coordination upon arrival."
     ],
     "advice": {
       "planning_title": "LCL groupage & visibility",
