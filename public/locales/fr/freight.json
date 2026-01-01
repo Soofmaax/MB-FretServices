@@ -195,8 +195,8 @@
   },
   "customs": {
     "seo": {
-      "title": "Dédouanement & conformité — Import/Export | MB Fret Services",
-      "description": "Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité."
+      "title": "Dédouanement & conformité — Flux conteneurs France ↔ Afrique (Congo, Angola) | MB Fret Services",
+      "description": "Dédouanement import/export pour vos conteneurs FCL/LCL, représentation en douane et calcul des droits & taxes sur vos flux France ↔ Afrique (Congo, Angola). Assistance documentaire, choix d’Incoterms et conformité réglementaire sur toute la chaîne, en lien avec vos opérateurs au Congo et en Angola."
     },
     "breadcrumb_service_name": "Dédouanement",
     "service_name": "Dédouanement & conformité import/export",
@@ -204,27 +204,27 @@
     "faq": [
       {
         "q": "Quels documents sont indispensables ?",
-        "a": "Facture commerciale, packing list, documents d’origine, certificats éventuels et autorisations spécifiques selon la marchandise."
+        "a": "Facture commerciale détaillée, packing list, documents d’origine, certificats éventuels et autorisations spécifiques selon la marchandise (véhicules, machines, marchandises réglementées…)."
       },
       {
         "q": "Proposez-vous une représentation en douane ?",
-        "a": "Oui, nous opérons la représentation en douane, le contrôle documentaire et la conformité réglementaire pour vos importations et exportations."
+        "a": "Oui. Nous assurons la représentation en douane, le contrôle documentaire et le suivi des opérations pour vos conteneurs FCL/LCL, avec simulation des droits & taxes lorsque cela est possible."
       },
       {
         "q": "Pouvez-vous assister sur les Incoterms ?",
-        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) selon votre flux, votre tolérance au risque et votre organisation."
+        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) en fonction de vos flux conteneurs, de votre tolérance au risque et de l’organisation logistique côté Congo/Angola."
       }
     ],
     "hero": {
       "title": "Dédouanement",
-      "subtitle": "Sécurisez vos flux avec un pilotage documentaire rigoureux et une représentation en douane efficace.",
+      "subtitle": "Dédouanement France–Afrique : sécurisez vos conteneurs FCL/LCL vers le Congo et l’Angola avec une documentation maîtrisée et une représentation en douane efficace.",
       "cta_quote": "Parler à un expert"
     },
     "points": [
-      "Contrôle documentaire & conformité",
-      "Représentation en douane",
-      "Gestion des droits et taxes",
-      "Assistance Incoterms et procédures"
+      "Contrôle documentaire export France (facture, packing list, BL, certificats) pour vos conteneurs FCL/LCL.",
+      "Représentation en douane et classement tarifaire, avec simulation des droits & taxes pour le Congo et l’Angola lorsque c’est possible.",
+      "Accompagnement sur le choix des Incoterms (FOB/CIF/DAP…) adaptés à vos flux conteneurs.",
+      "Coordination avec nos correspondants locaux pour anticiper les exigences documentaires à Pointe‑Noire et Luanda."
     ],
     "services": {
       "title": "Prestations",

@@ -195,8 +195,8 @@
   },
   "customs": {
     "seo": {
-      "title": "Customs clearance & compliance — Import/Export | MB Fret Services",
-      "description": "Import/export customs formalities, customs representation, duties & taxes calculation. Document assistance, Incoterms and regulatory compliance."
+      "title": "Customs clearance & compliance — Container flows France ↔ Africa (Congo, Angola) | MB Fret Services",
+      "description": "Import/export customs clearance for your FCL/LCL containers, customs representation and duties & taxes calculation on France ↔ Africa (Congo, Angola) flows. Document assistance, Incoterms guidance and regulatory compliance across the entire chain."
     },
     "breadcrumb_service_name": "Customs clearance",
     "service_name": "Customs clearance & import/export compliance",
@@ -204,27 +204,27 @@
     "faq": [
       {
         "q": "Which documents are essential?",
-        "a": "Commercial invoice, packing list, origin documents, possible certificates and specific authorizations depending on the goods."
+        "a": "Detailed commercial invoice, packing list, origin documents, possible certificates and specific authorizations depending on the goods (vehicles, machinery, regulated cargo, etc.)."
       },
       {
         "q": "Do you provide customs representation?",
-        "a": "Yes, we handle customs representation, document control and regulatory compliance for your imports and exports."
+        "a": "Yes. We handle customs representation, document control and operational follow-up for your FCL/LCL containers, and can provide duties & taxes simulations when feasible."
       },
       {
         "q": "Can you advise on Incoterms?",
-        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) depending on your flows, risk tolerance and organization."
+        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) based on your container flows, risk tolerance and logistics setup on the Congo/Angola side."
       }
     ],
     "hero": {
       "title": "Customs clearance",
-      "subtitle": "Secure your flows with rigorous document control and efficient customs representation.",
+      "subtitle": "France–Africa customs clearance: secure your FCL/LCL container flows to Congo and Angola with controlled documentation and efficient customs representation.",
       "cta_quote": "Talk to an expert"
     },
     "points": [
-      "Document control & compliance",
-      "Customs representation",
-      "Duties and taxes management",
-      "Incoterms and procedures support"
+      "Export document control in France (invoice, packing list, BL, certificates) for your FCL/LCL containers.",
+      "Customs representation and tariff classification, with duties & taxes simulations for Congo and Angola where possible.",
+      "Incoterms (FOB/CIF/DAP…) support tailored to your container flows.",
+      "Coordination with local counterparts to anticipate documentation requirements in Pointe-Noire and Luanda."
     ],
     "services": {
       "title": "Services",

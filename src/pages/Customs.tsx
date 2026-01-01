@@ -28,11 +28,11 @@ const Customs: FC = () => {
 
   const seoTitle = t(
     'freight:customs.seo.title',
-    'Dédouanement & conformité — Import/Export | MB Fret Services'
+    'Dédouanement & conformité — Flux conteneurs France ↔ Afrique (Congo, Angola) | MB Fret Services'
   );
   const seoDescription = t(
     'freight:customs.seo.description',
-    'Formalités douanières import/export, représentation en douane, calcul droits & taxes. Assistance documentaire, Incoterms et conformité.'
+    'Dédouanement import/export pour vos conteneurs FCL/LCL, représentation en douane et calcul des droits & taxes sur vos flux France ↔ Afrique (Congo, Angola). Assistance documentaire, Incoterms et conformité sur toute la chaîne.'
   );
 
   const breadcrumb = {
@@ -56,7 +56,12 @@ const Customs: FC = () => {
     name: t('freight:customs.service_name', 'Dédouanement & conformité import/export'),
     serviceType: t('freight:customs.service_type', 'Dédouanement'),
     provider: { '@type': 'Organization', name: 'MB Fret Services', url: SITE_URL },
-    areaServed: [{ '@type': 'Place', name: 'France' }, { '@type': 'Place', name: 'UE' }],
+    areaServed: [
+      { '@type': 'Place', name: 'France' },
+      { '@type': 'Place', name: 'European Union' },
+      { '@type': 'Place', name: 'Republic of the Congo' },
+      { '@type': 'Place', name: 'Angola' },
+    ],
   };
 
   const faqEntities = (t('freight:customs.faq', { returnObjects: true }) as Array<{ q: string; a: string }>) || [];
