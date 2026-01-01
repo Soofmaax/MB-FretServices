@@ -290,10 +290,8 @@ function buildPages(siteUrl) {
       if (![
         'home','services','destinations','contact','legal',
         'services_freight_maritime','services_air_freight','services_customs','services_insurance',
-        'services_freight_france_china','services_freight_france_china_fcl_lcl','services_freight_france_china_customs','services_freight_france_china_checklist',
         'services_freight_france_congo','services_freight_france_congo_fcl_lcl','services_freight_france_congo_customs','services_freight_france_congo_checklist',
         'services_freight_france_angola',
-        'services_freight_france_turkey','services_freight_france_turkey_fcl_lcl','services_freight_france_turkey_customs','services_freight_france_turkey_checklist',
         'pillar_incoterms','pillar_fcl_lcl'
       ].includes(key)) continue;
       const path = `/${lng}${slug ? `/${slug}` : ''}`;
@@ -316,13 +314,12 @@ function aiTxt(siteUrl) {
   lines.push(`  url: ${siteUrl}`);
   lines.push(`  description: >-`);
   lines.push(`    MB Fret Services propose des solutions de transport international (fret maritime FCL/LCL, fret aérien),`);
-  lines.push(`    dédouanement et assurance cargo depuis l'Europe vers l'Afrique et l'Asie. Devis sous 24 h.`);
+  lines.push(`    dédouanement et assurance cargo depuis l'Europe vers l'Afrique (Congo, Angola). Devis sous 24 h.`);
   lines.push(`  languages: [${SUP_LANGS.join(', ')}]`);
-  lines.push(`  topics: [logistics, freight, maritime, air, customs, shipping, africa, asia, europe]`);
-  lines.push(`  target_audience: B2B & particuliers expédiant des marchandises vers l'Afrique et l'Asie depuis l'Europe`);
+  lines.push(`  topics: [logistics, freight, maritime, air, customs, shipping, africa, europe]`);
+  lines.push(`  target_audience: B2B & particuliers expédiant des marchandises vers l'Afrique (Congo, Angola) depuis l'Europe`);
   lines.push(`  service_regions:`);
-  lines.push(`    - Africa: [Congo, Angola, Côte d'Ivoire, Cameroun]`);
-  lines.push(`    - Asia: [China, Turkey]`);
+  lines.push(`    - Africa: [Congo, Angola]`);
   lines.push(`  contact:`);
   lines.push(`    email: contact@mb-fretservices.com`);
   lines.push(`    phone: "+33 7 49 23 55 39"`);

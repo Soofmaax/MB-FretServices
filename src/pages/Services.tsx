@@ -180,47 +180,52 @@ const Services: FC = () => {
 
                     {def.key === 'maritime' && (
                       <div className="mb-6">
-                        <LocalizedLink to="services/fret-maritime" className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
+                        <LocalizedLink
+                          to="services/fret-maritime"
+                          className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
+                        >
                           {t('maritime.more_link')}
                           <ArrowRight size={16} className="ml-1" aria-hidden="true" />
                         </LocalizedLink>
                       </div>
                     )}
                     {def.key === 'air' && (
-                     <<div className="mb-6">
-                       <<LocalizedLink
+                      <div className="mb-6">
+                        <LocalizedLink
                           to="services/fret-aerien"
                           className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
                         >
                           {t('air.more_link', 'Discover air freight')}
-                         < ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                      </  LocalizedLink>
-                    </&&div>
+                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                        </LocalizedLink>
+                      </div>
                     )}
                     {def.key === 'customs' && (
-                     <sdiv className="mb-6">
-                       <nLocalizedLink
+                      <div className="mb-6">
+                        <LocalizedLink
                           to="services/dedouanement"
                           className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
                         >
                           {t('customs.more_link', 'Learn more')}
-                         < ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                      </clLocalizedLink>
-                    </  div>
+                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                        </LocalizedLink>
+                      </div>
                     )}
                     {def.key === 'insurance' && (
-                     <vdiv className="mb-6">
-                       < LocalizedLink
+                      <div className="mb-6">
+                        <LocalizedLink
                           to="services/assurance-cargo"
                           className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
                         >
                           {t('insurance.more_link', 'Insure your shipments')}
-                         < ArrowRight size={16} className="ml-1" aria-hidden="true" />
-                      </  LocalizedLink>
-                    </  div>
+                          <ArrowRight size={16} className="ml-1" aria-hidden="true" />
+                        </LocalizedLink>
+                      </div>
                     )}
 
-                   < CtaButton href="contact" variant/CtaButton>
+                    <CtaButton href="contact" variant="primary">
+                      {t('common:get_quote', 'Get a Quote')}
+                    </CtaButton>
                   </div>
 
                   <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
@@ -251,22 +256,34 @@ const Services: FC = () => {
         </div>
       </section>
 
-      {/* Key Maritime Routes (Hard silo hubs) */}
+      {/* Key Maritime Routes */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
             {t('services:routesSection.title', 'Key routes')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { key: 'france_china' as const, to: 'services/fret-maritime/france-chine', img: '906982' },
-              { key: 'france_congo' as const, to: 'services/fret-maritime/france-congo', img: '416978' },
-              { key: 'france_turkey' as const, to: 'services/fret-maritime/france-turquie', img: '723240' },
+              {
+                key: 'france_congo' as const,
+                to: 'services/fret-maritime/france-congo',
+                img: '416978',
+              },
+              {
+                key: 'france_angola' as const,
+                to: 'services/fret-maritime/france-angola',
+                img: '906982',
+              },
             ].map((r, i) => {
-              const title = t(`services:routesSection.cards.${r.key}.title`);
+              const fallbackTitle = r.key === 'france_congo' ? 'France ↔ Congo' : 'France ↔ Angola';
+              const fallbackTeaser =
+                r.key === 'france_congo'
+                  ? 'Sea freight France–Congo (FCL/LCL), Pointe-Noire, optimized transit times and 24/7 tracking.'
+                  : 'Sea freight France–Angola (FCL/LCL), departures from France/Benelux to Luanda with controlled lead times.';
+              const title = t(`services:routesSection.cards.${r.key}.title`, fallbackTitle);
               const teaser = t(
                 `services:routesSection.cards.${r.key}.teaser`,
-                'FCL/LCL, major ports, optimized transit times, 24/7 tracking.'
+                fallbackTeaser
               );
               const discover = t('services:routesSection.discover', 'Discover');
 
@@ -274,7 +291,7 @@ const Services: FC = () => {
                 <div
                   key={r.key}
                   className={`bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all animate-slide-up ${
-                    i === 1 ? 'animate-delay-150' : i === 2 ? 'animate-delay-300' : 'animate-delay-0'
+                    i === 1 ? 'animate-delay-150' : 'animate-delay-0'
                   }`}
                 >
                   <LocalizedLink to={r.to} className="block group">
@@ -285,7 +302,7 @@ const Services: FC = () => {
                         width={800}
                         height={300}
                         className="w-full h-full object-cover"
-                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent"></div>
                     </div>

@@ -75,10 +75,8 @@ const Navbar: FC = () => {
   ];
 
   const routesLabel = t('navbar:routes', 'Routes');
-  const routeFranceChina = t('navbar:route_france_china', 'France ↔ China');
   const routeFranceCongo = t('navbar:route_france_congo', 'France ↔ Congo');
   const routeFranceAngola = t('navbar:route_france_angola', 'France ↔ Angola');
-  const routeFranceTurkey = t('navbar:route_france_turkey', 'France ↔ Turkey');
 
   const isActiveLink = (href: string) => {
     const lang = (currentLang || 'fr') as (typeof SUP)[number];
@@ -150,12 +148,6 @@ const Navbar: FC = () => {
                 {routesOpen && (
                   <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50">
                     <LocalizedLink
-                      to="services/fret-maritime/france-chine"
-                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
-                    >
-                      {routeFranceChina}
-                    </LocalizedLink>
-                    <LocalizedLink
                       to="services/fret-maritime/france-congo"
                       className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
                     >
@@ -166,12 +158,6 @@ const Navbar: FC = () => {
                       className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
                     >
                       {routeFranceAngola}
-                    </LocalizedLink>
-                    <LocalizedLink
-                      to="services/fret-maritime/france-turquie"
-                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
-                    >
-                      {routeFranceTurkey}
                     </LocalizedLink>
                   </div>
                 )}
@@ -259,13 +245,6 @@ const Navbar: FC = () => {
                 {routesLabel}
               </p>
               <LocalizedLink
-                to="services/fret-maritime/france-chine"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
-              >
-                {routeFranceChina}
-              </LocalizedLink>
-              <LocalizedLink
                 to="services/fret-maritime/france-congo"
                 onClick={() => setIsOpen(false)}
                 className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
@@ -278,13 +257,6 @@ const Navbar: FC = () => {
                 className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
               >
                 {routeFranceAngola}
-              </LocalizedLink>
-              <LocalizedLink
-                to="services/fret-maritime/france-turquie"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
-              >
-                {routeFranceTurkey}
               </LocalizedLink>
             </div>
 
