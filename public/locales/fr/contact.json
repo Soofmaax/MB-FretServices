@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Contact - Devis Gratuit Transport International | MB Fret Services",
-    "description": "Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
+    "title": "Contact - Devis Gratuit Déménagement & Fret Maritime | MB Fret Services",
+    "description": "Contactez MB Fret Services pour un devis gratuit. Déménagements internationaux, envoi de véhicules et d’effets personnels vers le Congo et l’Angola, ainsi que solutions pour professionnels. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
   },
   "hero": {
-    "title": "Contactez nos Experts",
-    "subtitle": "Besoin d'un devis ou de conseils ? Notre équipe vous répond sous 24h. Parlons de votre projet logistique."
+    "title": "Contactez MB Fret Services",
+    "subtitle": "Besoin d'un devis ou de conseils pour un déménagement, l’envoi d’un véhicule ou de quelques m³ d’effets personnels ? Notre équipe vous répond sous 24h."
   },
   "methods": {
     "email": "Email",
@@ -21,24 +21,24 @@
   },
   "guide": {
     "title": "Comment obtenir votre devis ?",
-    "intro": "Pour vous proposer la meilleure solution, nous avons besoin de quelques informations sur votre projet.",
+    "intro": "Pour vous proposer la meilleure solution, nous avons besoin de quelques informations sur votre projet (déménagement, véhicule, effets personnels ou marchandises professionnelles).",
     "info_title": "Informations nécessaires",
     "items": [
       {
-        "title": "Type de marchandise :",
-        "desc": "Nature, poids, dimensions, valeur"
+        "title": "Type d’envoi :",
+        "desc": "Déménagement / effets personnels, véhicule, colis, palettes, marchandises B2B…"
       },
       {
         "title": "Origine et destination :",
-        "desc": "Adresses précises d'enlèvement et livraison"
+        "desc": "Adresses précises d'enlèvement et de livraison (pays, ville, étage si besoin)"
       },
       {
         "title": "Délais souhaités :",
-        "desc": "Date d'expédition et réception"
+        "desc": "Date d'expédition et de réception, éventuelles contraintes de planning"
       },
       {
         "title": "Services additionnels :",
-        "desc": "Assurance, dédouanement, livraison"
+        "desc": "Assurance, dédouanement, livraison porte-à-porte, emballage si nécessaire"
       }
     ],
     "commitment_title": "Notre engagement",
@@ -84,8 +84,8 @@
     "submitting": "Envoi en cours..."
   },
   "cta": {
-    "title": "Prêt à démarrer votre projet ?",
-    "text": "Nos experts sont disponibles pour analyser vos besoins et vous proposer la solution logistique la plus adaptée.",
+    "title": "Prêt à démarrer votre déménagement ou votre envoi ?",
+    "text": "Nos experts sont disponibles pour analyser votre situation (déménagement, véhicule, effets personnels, petit lot professionnel) et vous proposer la solution la plus adaptée à votre budget et à vos délais.",
     "email": "Envoyer un Email",
     "whatsapp": "WhatsApp Direct",
     "call": "Appeler Maintenant"
