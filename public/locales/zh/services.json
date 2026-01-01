@@ -77,16 +77,8 @@
     "title": "重点航线",
     "discover": "了解详情",
     "cards": {
-      "france_china": {
-        "title": "法国 ↔ 中国",
-        "teaser": "FCL/LCL，多大港口挂靠，优化时效，24/7 实时跟踪。"
-      },
       "france_congo": {
         "title": "法国 ↔ 刚果",
-        "teaser": "FCL/LCL，多大港口挂靠，优化时效，24/7 实时跟踪。"
-      },
-      "france_turkey": {
-        "title": "法国 ↔ 土耳其",
         "teaser": "FCL/LCL，多大港口挂靠，优化时效，24/7 实时跟踪。"
       }
     }

@@ -14,54 +14,7 @@
     "see_services": "Vedi i servizi",
     "view": "Consultare"
   },
-  "china": {
-    "fcl_lcl": {
-      "h1": "FCL vs LCL — Francia ↔ Cina",
-      "title": "FCL vs LCL sulla rotta Francia ↔ Cina — Scegliere la modalità giusta | MB Fret Services",
-      "desc": "Soglie volumetriche (~13–15 m³), sicurezza, costi. Confronta FCL e LCL sull’asse Francia ↔ Cina e ottimizza il tuo budget.",
-      "intro": [
-        "L’FCL (contenitore completo) massimizza il controllo e limita le movimentazioni; l’LCL (groupage) ottimizza il budget per volumi inferiori a ~13–15 m³. La scelta deve tenere conto di volume, valore, tempi e sensibilità della merce."
-      ],
-      "sections": [
-        {
-          "h2": "Soglie, costi e rischi",
-          "ul": [
-            "Soglie indicative: 20’ ≈ 33 m³, 40’ ≈ 67 m³, 40’HC ≈ 76 m³",
-            "Costo totale: confrontare FCL e LCL (previo/post-trasporto, THC, sovraccarichi, assicurazione, dazi)",
-            "Rischio: l’LCL implica consolidamento; privilegiare imballo export e assicurazione ad valorem"
-          ]
-        },
-        {
-          "h3": "Casi d’uso Cina",
-          "ul": [
-            "Programmi ricorrenti: FCL prioritario; LCL per prototipi o piccole serie",
-            "Picchi stagionali (Capodanno cinese, Q4): assicurare capacità e anticipare i cut‑off"
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "q": "Qual è la soglia per passare da LCL a FCL?",
-          "a": "Intorno ai 13–15 m³ a seconda di porti e stagione. Bisogna valutare anche valore, rischio e tempi di consegna."
-        },
-        {
-          "q": "L’LCL è più rischioso?",
-          "a": "Sì, perché prevede consolidamento/deconsolidamento. Imballaggio export + assicurazione ad valorem riducono sensibilmente il rischio."
-        },
-        {
-          "q": "È possibile combinare LCL e aereo?",
-          "a": "Sì, per rispettare una scadenza critica. Possiamo progettare uno schema multimodale adatto al tuo caso."
-        },
-        {
-          "q": "Quali tipi di container FCL sono disponibili?",
-          "a": "20’, 40’, 40’HC; opzioni Reefer/Open Top in base a uno studio di fattibilità e alla natura della merce."
-        },
-        {
-          "q": "Come stimare il mio CBM?",
-          "a": "Lunghezza × Larghezza × Altezza × Quantità / 1 000 000. Puoi utilizzare il nostro calcolatore CBM online."
-        }
-      ]
-    },
+  
     "customs": {
       "h1": "Procedure doganali — Francia ↔ Cina",
       "title": "Dogana e documenti — Francia ↔ Cina | MB Fret Services",
@@ -300,61 +253,7 @@
       ]
     }
   },
-  "turkey": {
-    "fcl_lcl": {
-      "h1": "FCL vs LCL — Francia ↔ Turchia",
-      "title": "FCL vs LCL sulla rotta Francia ↔ Turchia — Scegliere la modalità giusta | MB Fret Services",
-      "desc": "Arbitrare FCL/LCL su una rotta a corto/medio raggio con opzioni multimodali.",
-      "intro": [
-        "Tempi brevi e frequenze elevate: l’FCL è ideale per flussi ricorrenti e stabili; l’LCL e il trasporto stradale sono adatti a spedizioni occasionali o di piccolo volume."
-      ],
-      "sections": [
-        {
-          "h2": "Soglie, costi e rischi",
-          "ul": [
-            "Confrontare FCL e LCL sul costo totale consegnato e sui tempi",
-            "Usare soluzioni multimodali per rispettare le scadenze critiche"
-          ]
-        },
-        {
-          "h3": "Casi d’uso Turchia",
-          "ul": [
-            "Tempi brevi: FCL per stabilità; LCL o strada per spedizioni occasionali",
-            "Cross‑trade: documentazione multi‑paese robusta"
-          ]
-        }
-      ],
-      "faq": [
-        {
-          "q": "Qual è la soglia per passare da LCL a FCL?",
-          "a": "Di solito intorno a 13–15 m³ a seconda del contesto; la decisione dipende anche dai tempi e dalla frequenza delle spedizioni."
-        },
-        {
-          "q": "Le soluzioni multimodali sono rilevanti?",
-          "a": "Sì: combinazioni mare/strada/aereo aiutano a rispettare le scadenze senza far esplodere i costi."
-        },
-        {
-          "q": "L’LCL è adatto al rifornimento?",
-          "a": "È pertinente per piccole campagne; l’FCL diventa la soluzione preferibile quando i flussi sono ricorrenti."
-        }
-      ]
-    },
-    "customs": {
-      "h1": "Procedure doganali — Francia ↔ Turchia",
-      "title": "Dogana e documenti — Francia ↔ Turchia | MB Fret Services",
-      "desc": "Qualità documentale e Incoterms adeguati per tempi di consegna brevi.",
-      "intro": [
-        "Gestiamo BL, fattura e packing list; consigliamo Incoterms (FOB/CIF/DAP/DDP) in funzione del riparto di responsabilità. Un buon setup documentale e il coordinamento portuale aiutano a evitare ritardi."
-      ],
-      "sections": [
-        {
-          "h2": "Documenti e Incoterms",
-          "ul": [
-            "BL, fattura, packing list; certificato di origine se richiesto",
-            "Incoterms: FOB/CIF/DAP/DDP",
-            "Codici HS accurati"
-          ]
-        },
+  
         {
           "h3": "Errori frequenti",
           "ul": [
