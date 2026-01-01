@@ -26,7 +26,9 @@
   "links": {
     "fcl_understand": "Understand FCL vs LCL",
     "incoterms_guide": "Understand Incoterms",
-    "fcl_guide_short": "FCL/LCL guide"
+    "fcl_guide_short": "FCL/LCL guide",
+    "customs_service": "View our France–Africa customs clearance service",
+    "insurance_service": "View our cargo insurance service"
   },
   "common": {
     "bullets_ports": [

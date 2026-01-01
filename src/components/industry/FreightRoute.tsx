@@ -440,12 +440,24 @@ const FreightRoute: FC = () => {
                   ))}
                 </ul>
 
-                <div className="mt-6">
+                <div className="mt-6 space-y-2">
                   <LocalizedLink
                     to="documentation/incoterms-2020"
-                    className="text-accent-600 hover:text-accent-700 font-medium"
+                    className="block text-accent-600 hover:text-accent-700 font-medium"
                   >
                     {t('routes_main:links.incoterms_guide', 'Understand Incoterms')}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    to="services/customs"
+                    className="block text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t('routes_main:links.customs_service', 'View our France–Africa customs clearance service')}
+                  </LocalizedLink>
+                  <LocalizedLink
+                    to="services/insurance"
+                    className="block text-accent-600 hover:text-accent-700 font-medium"
+                  >
+                    {t('routes_main:links.insurance_service', 'View our cargo insurance service')}
                   </LocalizedLink>
                 </div>
               </div>
