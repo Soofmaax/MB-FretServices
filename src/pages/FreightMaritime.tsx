@@ -55,6 +55,19 @@ const FreightMaritime: FC = () => {
 
   const services = t('freight:services.list', { returnObjects: true }) as string[];
 
+  const lcl = t('freight:lcl', {
+    returnObjects: true,
+  }) as {
+    title?: string;
+    subtitle?: string;
+    blocks?: Array<{ title?: string; bullets?: string[] }>;
+    cta_title?: string;
+    cta_text?: string;
+    cta_label?: string;
+  };
+
+  const lclBlocks = (lcl.blocks || []) as Array<{ title?: string; bullets?: string[] }>;
+
   const faqData = t('freight:faq', {
     returnObjects: true,
   }) as {
@@ -270,7 +283,7 @@ const FreightMaritime: FC = () => {
 
             <div className="relative">
               <ResponsiveImage
-                src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800"
                 alt={t('freight:images.services_alt', 'Loading of sea freight containers')}
                 width={800}
                 height={533}
@@ -280,6 +293,69 @@ const FreightMaritime: FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/30 to-transparent rounded-xl"></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* LCL - Service de consolidation */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+              {lcl.title || t('freight:hero.subtitle')}
+            </h2>
+            {lcl.subtitle && (
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                {lcl.subtitle}
+              </p>
+            )}
+          </div>
+
+          {lclBlocks.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {lclBlocks.map((block, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
+                >
+                  {block.title && (
+                    <h3 className="text-xl font-bold text-primary-900 mb-4">
+                      {block.title}
+                    </h3>
+                  )}
+                  {block.bullets && (
+                    <ul className="space-y-3">
+                      {block.bullets.map((bullet, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <CheckCircle
+                            size={18}
+                            className="text-accent-700 mr-3 mt-1 flex-shrink-0"
+                            aria-hidden="true"
+                          />
+                          <span className="text-gray-700">{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {lcl.cta_title && (
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-2xl font-bold text-primary-900 mb-4">
+                {lcl.cta_title}
+              </h3>
+              {lcl.cta_text && (
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  {lcl.cta_text}
+                </p>
+              )}
+              <CtaButton href="contact" variant="primary" className="px-8 py-4 text-lg">
+                {lcl.cta_label || t('freight:services.cta')}
+              </CtaButton>
+            </div>
+          )}
         </div>
       </section>
 

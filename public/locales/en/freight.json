@@ -92,6 +92,47 @@
     ],
     "cta": "Request a Personalized Quote"
   },
+  "lcl": {
+    "title": "LCL sea freight to Africa",
+    "subtitle": "Consolidation service from France and Europe to Congo and Angola.",
+    "blocks": [
+      {
+        "title": "Optimize your costs without filling a full container",
+        "bullets": [
+          "You only pay for the volume you actually use in the container.",
+          "Ideal for shipments of around 1–15 m³, without waiting to build a full FCL.",
+          "More cost-effective than air freight for small and regular shipments."
+        ]
+      },
+      {
+        "title": "Keep flexibility and regular departures",
+        "bullets": [
+          "Regular LCL departures from French and Benelux ports to Pointe-Noire and Luanda.",
+          "Possibility to mix occasional LCL and FCL as soon as your volumes increase.",
+          "Advance booking on the main France–Congo and France–Angola corridors."
+        ]
+      },
+      {
+        "title": "Gain visibility on your groupage flows",
+        "bullets": [
+          "Tracking of key milestones: CFS drop-off, consolidation, loading on vessel, arrival at destination port.",
+          "Proactive communication in case of delay, inspection or transit disruption.",
+          "Simple overview of volumes, frequency, costs and average lead times by destination."
+        ]
+      },
+      {
+        "title": "Include customs and insurance in your LCL flows",
+        "bullets": [
+          "Import/export customs clearance in Congo and Angola, with tailored documentary support.",
+          "Possibility to insure your LCL shipments on an ad valorem basis from the very first cubic meter.",
+          "Guidance on export packing to reduce risks in groupage."
+        ]
+      }
+    ],
+    "cta_title": "Planning an LCL shipment to Africa (Congo, Angola)?",
+    "cta_text": "Tell us your approximate volume, departure ports, destination and shipment frequency. We build a tailor-made LCL solution for international moves, B2B cargo, vehicles or spare parts.",
+    "cta_label": "Request an LCL Quote"
+  },
   "customs": {
     "seo": {
       "title": "Customs clearance & compliance — Import/Export | MB Fret Services",

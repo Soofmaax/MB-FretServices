@@ -89,6 +89,47 @@
     ],
     "cta": "Pedir Orçamento Personalizado"
   },
+  "lcl": {
+    "title": "Fret LCL para África",
+    "subtitle": "Serviço de consolidação marítima a partir da França e da Europa para o Congo e Angola.",
+    "blocks": [
+      {
+        "title": "Otimize os custos sem encher um contentor completo",
+        "bullets": [
+          "Paga apenas o volume realmente utilizado dentro do contentor.",
+          "Ideal para volumes na ordem de 1 a 15 m³, sem esperar para fechar um FCL.",
+          "Alternativa mais económica ao transporte aéreo para pequenos lotes e expedições regulares."
+        ]
+      },
+      {
+        "title": "Manter flexibilidade e saídas regulares",
+        "bullets": [
+          "Saídas LCL regulares a partir de portos franceses e do Benelux para Pointe-Noire e Luanda.",
+          "Possibilidade de alternar entre LCL pontual e FCL assim que os volumes aumentam.",
+          "Reservas antecipadas nos principais corredores França–Congo e França–Angola."
+        ]
+      },
+      {
+        "title": "Ganhar visibilidade sobre os seus groupages",
+        "bullets": [
+          "Acompanhamento das etapas chave: entrada em CFS, consolidação, embarque e chegada ao porto de destino.",
+          "Comunicação proactiva em caso de atraso, inspeção ou imprevisto no trânsito.",
+          "Visão simples de volumes, frequência, custos e prazos médios por destino."
+        ]
+      },
+      {
+        "title": "Integrar desalfandegamento e seguro nos envios LCL",
+        "bullets": [
+          "Desalfandegamento de importação/exportação no Congo e em Angola, com aconselhamento documental dedicado.",
+          "Possibilidade de segurar envios LCL em base ad valorem desde o primeiro metro cúbico.",
+          "Apoio na embalagem para exportação a fim de reduzir riscos no groupage."
+        ]
+      }
+    ],
+    "cta_title": "Um projeto LCL para África (Congo, Angola)?",
+    "cta_text": "Indique-nos o volume aproximado, portos de origem, destino e frequência de envio. Construímos uma solução LCL à medida para mudanças internacionais, envios B2B, veículos ou peças sobressalentes.",
+    "cta_label": "Pedir Orçamento LCL"
+  },
   "customs": {
     "seo": {
       "title": "Desalfandegamento & conformidade — Importação/Exportação | MB Fret Services",

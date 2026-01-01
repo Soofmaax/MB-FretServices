@@ -101,6 +101,47 @@
     ],
     "cta": "Demander un Devis Personnalisé"
   },
+  "lcl": {
+    "title": "Fret LCL vers l’Afrique",
+    "subtitle": "Service de consolidation maritime depuis la France et l’Europe vers le Congo et l’Angola.",
+    "blocks": [
+      {
+        "title": "Optimiser vos coûts sans remplir un conteneur",
+        "bullets": [
+          "Vous ne payez que le volume réellement utilisé dans le conteneur.",
+          "Idéal pour des volumes de 1 à 15 m³ sans attendre de remplir un FCL complet.",
+          "Alternative plus économique que l’aérien pour les petits lots et les envois réguliers."
+        ]
+      },
+      {
+        "title": "Conserver flexibilité et régularité",
+        "bullets": [
+          "Départs LCL réguliers depuis les ports français et du Benelux vers Pointe‑Noire et Luanda.",
+          "Possibilité d’alterner LCL ponctuel et FCL dès que vos volumes augmentent.",
+          "Réservation anticipée sur les principaux corridors France–Congo et France–Angola."
+        ]
+      },
+      {
+        "title": "Gagner en visibilité sur vos groupages",
+        "bullets": [
+          "Suivi des étapes clés : dépôt en CFS, consolidation, embarquement, arrivée portuaire.",
+          "Communication proactive en cas de retard, de contrôle ou d’aléa de transit.",
+          "Tableau de bord simple : volumes, fréquence, coûts et délais moyens par destination."
+        ]
+      },
+      {
+        "title": "Intégrer douane et assurance dans vos envois LCL",
+        "bullets": [
+          "Dédouanement import/export sur le Congo et l’Angola, avec conseil documentaire adapté.",
+          "Possibilité d’assurer vos envois LCL en ad valorem dès le premier m³.",
+          "Accompagnement sur l’emballage export pour limiter les risques en groupage."
+        ]
+      }
+    ],
+    "cta_title": "Un projet LCL vers l’Afrique (Congo, Angola) ?",
+    "cta_text": "Indiquez-nous votre volume approximatif, vos ports d’origine, votre destination et votre fréquence d’expédition. Nous construisons une solution LCL sur mesure pour vos déménagements, envois B2B, véhicules ou pièces détachées.",
+    "cta_label": "Demander un devis LCL"
+  },
   "customs": {
     "seo": {
       "title": "Dédouanement & conformité — Import/Export | MB Fret Services",
