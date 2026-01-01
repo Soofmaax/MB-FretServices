@@ -10,6 +10,24 @@
     "cta_quote": "Orçamento Marítimo Gratuito",
     "cta_whatsapp": "WhatsApp Direto"
   },
+  "how_it_works": {
+    "title": "Como funciona?",
+    "subtitle": "Um processo simples: orçamento em menos de 24h, recomendação FCL/LCL e recolha porta‑a‑porta se necessário.",
+    "items": [
+      {
+        "title": "Orçamento detalhado em menos de 24h",
+        "text": "Envie‑nos o seu projeto (volume, destino, tipo de mercadoria) e respondemos em menos de 24 horas com uma proposta clara e estruturada."
+      },
+      {
+        "title": "Escolha entre FCL e LCL mais adequada",
+        "text": "Comparamos contentor completo (FCL) e groupage (LCL) para otimizar o seu custo em função dos volumes, prazos e constrangimentos operacionais."
+      },
+      {
+        "title": "Recolha e entrega porta‑a‑porta",
+        "text": "Podemos organizar a recolha na sua morada ou armazém, o pré‑transporte até ao porto e, consoante o país, a entrega no destino final."
+      }
+    ]
+  },
   "air": {
     "seo": {
       "title": "Transporte aéreo — Rápido e seguro | MB Fret Services",
@@ -74,6 +92,24 @@
     { "title": "Prazos Controlados", "description": "Rotações regulares e tempos de trânsito otimizados" },
     { "title": "Segurança Garantida", "description": "Seguro de carga e rastreamento em tempo real das suas mercadorias" }
   ],
+  "segments": {
+    "title": "Mudança, veículos ou mercadorias?",
+    "subtitle": "Uma equipa dedicada aos seus projetos pessoais e profissionais para a África Central (Congo, Angola).",
+    "items": [
+      {
+        "title": "Mudança internacional",
+        "text": "Efeitos pessoais, mobiliário, caixas e equipamentos: soluções adaptadas para uma mudança completa ou parcial França → África."
+      },
+      {
+        "title": "Veículos e material rolante",
+        "text": "Automóveis, 4x4, comerciais, camiões ou máquinas: carregamento em contentor ou navio Ro‑Ro sempre que possível."
+      },
+      {
+        "title": "Mercadorias e fluxos B2B",
+        "text": "Paletes, carga a granel, peças sobressalentes, máquinas e consumíveis: soluções FCL/LCL para fluxos regulares ou pontuais."
+      }
+    ]
+  },
   "services": {
     "title": "Os Nossos Serviços de Transporte Marítimo",
     "subtitle": "Soluções marítimas completas para todos os tipos de mercadorias. Da recolha à entrega, gerimos o seu frete de A a Z.",
