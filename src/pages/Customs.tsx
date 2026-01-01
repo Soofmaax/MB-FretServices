@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import SEO from '../components/SEO';
 import CtaButton from '../components/CtaButton';
 import ResponsiveImage from '../components/ResponsiveImage';
+import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { FileText, CheckCircle } from 'lucide-react';
@@ -155,10 +156,29 @@ const Customs: FC = () => {
               </div>
             ))}
           </div>
-          <div className="mt-8">
+          <div className="mt-8 space-y-2">
             <CtaButton href="contact" variant="primary">
               {t('freight:customs.services.cta', 'Obtenir une estimation')}
             </CtaButton>
+            <p className="text-sm text-gray-600">
+              {t(
+                'freight:customs.links.maritime_hint',
+                'Need to combine customs clearance with sea freight and cargo insurance on the same corridor?'
+              )}{' '}
+              <LocalizedLink
+                to={pathForLang('services_freight_maritime', lang)}
+                className="text-accent-700 hover:text-accent-800 font-medium"
+              >
+                {t('freight:customs.links.maritime', 'Sea freight France–Africa (Congo, Angola)')}
+              </LocalizedLink>
+              {' • '}
+              <LocalizedLink
+                to={pathForLang('services_insurance', lang)}
+                className="text-accent-700 hover:text-accent-800 font-medium"
+              >
+                {t('freight:customs.links.insurance', 'Cargo insurance for FCL/LCL containers')}
+              </LocalizedLink>
+            </p>
           </div>
         </div>
       </section>

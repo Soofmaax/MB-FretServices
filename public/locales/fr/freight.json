@@ -230,6 +230,11 @@
       "title": "Prestations",
       "cta": "Obtenir une estimation"
     },
+    "links": {
+      "maritime_hint": "Besoin de combiner dédouanement, fret maritime et assurance cargo sur le même corridor ?",
+      "maritime": "Fret maritime France–Afrique (Congo, Angola)",
+      "insurance": "Assurance cargo pour conteneurs FCL/LCL"
+    },
     "images": {
       "hero_alt": "Dédouanement et formalités documentaires"
     }

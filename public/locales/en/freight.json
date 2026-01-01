@@ -208,7 +208,7 @@
       },
       {
         "q": "Do you provide customs representation?",
-        "a": "Yes. We handle customs representation, document control and operational follow-up for your FCL/LCL containers, and can provide duties & taxes simulations when feasible."
+        "a": "Yes, we handle customs representation, document control and operational follow-up for your FCL/LCL containers, and can provide duties & taxes simulations when feasible."
       },
       {
         "q": "Can you advise on Incoterms?",
@@ -229,6 +229,11 @@
     "services": {
       "title": "Services",
       "cta": "Get an estimate"
+    },
+    "links": {
+      "maritime_hint": "Need to combine customs clearance, sea freight and cargo insurance on the same corridor?",
+      "maritime": "Sea freight France–Africa (Congo, Angola)",
+      "insurance": "Cargo insurance for FCL/LCL containers"
     },
     "images": {
       "hero_alt": "Customs clearance and document formalities"
