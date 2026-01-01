@@ -251,13 +251,13 @@
   },
   "france_angola": {
     "label": "France ↔ Angola",
-    "title": "Fret maritime France ↔ Angola (FCL & LCL)",
-    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers.",
+    "title": "Transport & fret maritime France ↔ Angola (Luanda) – Groupage, déménagement, véhicules et motos",
+    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage.",
     "transit": "Délais indicatifs: 20–25 jours selon port de départ, rotations et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Anvers", "Rotterdam"],
     "ports_to": ["Luanda"],
     "costs": [
-      "Vers Luanda, le LCL (groupage) est particulièrement adapté pour les petits volumes, effets personnels et colis B2B. Au-delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
+      "Vers Luanda, le groupage maritime LCL est particulièrement adapté pour les petits volumes, effets personnels, bagages et colis B2B. Au-delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
       "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, THC portuaires, pré/post‑acheminement et droits/taxes à l’import en Angola. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons."
     ],
     "customs": [
