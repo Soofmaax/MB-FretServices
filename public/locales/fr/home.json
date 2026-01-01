@@ -5,7 +5,7 @@
   },
   "valueProps": {
     "title": "Pourquoi choisir MB Fret Services ?",
-    "subtitle": "Transitaire B2B Europe–Afrique basé en France, avec un focus opérationnel sur l’Afrique centrale (Congo, Angola). Nous combinons fret maritime, fret aérien, douane et assurance cargo pour construire des solutions sur mesure, lisibles et durables pour vos flux.",
+    "subtitle": "Transitaire B2B Europe–Afrique basé en France, avec un focus opérationnel sur l’Afrique centrale (Congo, Angola). Nous combinons fret maritime, dédouanement et assurance cargo pour construire des solutions sur mesure, lisibles et durables pour vos flux, du devis à la livraison.",
     "items": [
       {
         "title": "Fret Maritime",
@@ -13,14 +13,14 @@
         "features": ["Conteneurs 20' et 40'", "FCL et LCL", "Port à port ou porte à porte"]
       },
       {
-        "title": "Fret Aérien",
-        "description": "Liaisons aériennes Europe ↔ Afrique pour vos marchandises urgentes ou à forte valeur, en complément du maritime sur les corridors France–Congo et France–Angola.",
-        "features": ["Livraison express", "Température contrôlée", "Suivi GPS en continu"]
+        "title": "Dédouanement",
+        "description": "Dédouanement import/export France–Afrique pour vos conteneurs FCL/LCL, sécurisation documentaire, calcul droits & taxes et accompagnement sur le choix des Incoterms.",
+        "features": ["Déclarations douanières", "Conformité réglementaire", "Support administratif"]
       },
       {
-        "title": "Dédouanement",
-        "description": "Dédouanement import/export France–Afrique, sécurisation documentaire, calcul droits & taxes et accompagnement sur le choix des Incoterms.",
-        "features": ["Déclarations douanières", "Conformité réglementaire", "Support administratif"]
+        "title": "Assurance cargo",
+        "description": "Assurance ad valorem pour vos conteneurs (déménagements, marchandises B2B, véhicules, motos) vers le Congo et l’Angola, intégrée à vos devis pour une vision claire du coût total livré.",
+        "features": ["Couverture ad valorem", "Gestion de sinistres", "Conseils emballage export"]
       }
     ]
   },

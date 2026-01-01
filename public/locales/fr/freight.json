@@ -264,36 +264,36 @@
   },
   "insurance": {
     "seo": {
-      "title": "Assurance cargo — Couverture ad valorem | MB Fret Services",
-      "description": "Assurance transport pour fret maritime/aérien: couverture ad valorem, gestion des sinistres, conseils packaging export. Porte-à-porte."
+      "title": "Assurance cargo — Conteneurs FCL/LCL vers le Congo et l’Angola | MB Fret Services",
+      "description": "Assurance transport ad valorem pour vos conteneurs FCL/LCL (déménagements, marchandises B2B, véhicules, motos) sur les corridors France ↔ Congo et France ↔ Angola. Gestion des sinistres, conseils d’emballage export et intégration au devis pour une visibilité complète du coût total livré."
     },
     "breadcrumb_service_name": "Assurance cargo",
     "service_name": "Assurance cargo – couverture ad valorem",
     "service_type": "Assurance transport",
     "faq": [
       {
-        "q": "Pourquoi assurer le fret maritime/aérien ?",
-        "a": "Pour couvrir les risques d’avarie, de perte ou de vol. Une police ad valorem protège votre trésorerie et vos engagements B2B."
+        "q": "Pourquoi assurer un conteneur vers le Congo ou l’Angola ?",
+        "a": "Pour couvrir les risques d’avarie, de perte ou de vol sur des flux à forte valeur et à forte sensibilité (déménagements, véhicules, marchandises B2B). Une police ad valorem protège votre trésorerie et vos engagements contractuels tout au long du trajet."
       },
       {
-        "q": "Quelles clauses recommandez-vous ?",
-        "a": "Selon la marchandise et la route : Institute Cargo Clauses (A) pour une couverture large, ou conventions spécifiques (ADR, périssables, etc.)."
+        "q": "Quelles marchandises sont prioritaires à assurer ?",
+        "a": "Les déménagements (effets personnels, mobilier), les véhicules et motos, les machines, ainsi que les lots B2B à forte valeur (équipements, pièces détachées, produits sensibles). Nous ajustons la couverture selon le type de marchandise et le niveau de risque."
       },
       {
         "q": "Assurez-vous porte-à-porte ?",
-        "a": "Oui, nous calibrons la police du point d’enlèvement à la livraison, incluant pré/post-acheminement."
+        "a": "Oui, nous calibrons la police du point d’enlèvement à la livraison finale (pré/post‑acheminement, traversées maritimes), avec des conseils d’emballage et de documentation (photos, réserves) pour faciliter toute gestion de sinistre éventuel."
       }
     ],
     "hero": {
       "title": "Assurance cargo",
-      "subtitle": "Protégez votre supply chain et votre trésorerie grâce à une couverture adaptée à vos flux B2B.",
+      "subtitle": "Sécurisez vos conteneurs FCL/LCL vers le Congo et l’Angola avec une assurance ad valorem adaptée à vos déménagements, marchandises B2B, véhicules et motos.",
       "cta_quote": "Demander une couverture"
     },
     "benefits": [
-      "Couverture ad valorem adaptée",
-      "Gestion de sinistres et preuves documentaires",
-      "Conseils sur la protection/emballage export",
-      "Intégration au devis fret pour une visibilité totale"
+      "Couverture ad valorem ajustée à la valeur et à la nature de vos biens (déménagements, marchandises B2B, véhicules, motos).",
+      "Gestion des sinistres et assistance sur les preuves documentaires (photos, réserves, rapports) pour défendre vos intérêts.",
+      "Conseils sur l’emballage et la sécurisation export de vos conteneurs (calage, cerclage, caisses, protection).",
+      "Intégration de l’assurance au devis de fret pour une vision claire du coût total livré sur vos flux France ↔ Congo/Angola."
     ],
     "services": {
       "title": "Bénéfices",

@@ -62,9 +62,10 @@ const Insurance: FC = () => {
     serviceType: t('freight:insurance.service_type', 'Transport insurance'),
     provider: { '@type': 'Organization', name: 'MB Fret Services', url: SITE_URL },
     areaServed: [
-      { '@type': 'Place', name: 'Europe' },
-      { '@type': 'Place', name: 'Africa' },
-      { '@type': 'Place', name: 'Asia' },
+      { '@type': 'Place', name: 'France' },
+      { '@type': 'Place', name: 'European Union' },
+      { '@type': 'Place', name: 'Republic of the Congo' },
+      { '@type': 'Place', name: 'Angola' },
     ],
   };
 

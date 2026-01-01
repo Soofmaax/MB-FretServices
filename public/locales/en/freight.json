@@ -276,36 +276,36 @@
   },
   "insurance": {
     "seo": {
-      "title": "Cargo insurance — Ad valorem coverage | MB Fret Services",
-      "description": "Transport insurance for sea/air freight: ad valorem coverage, claims handling, export packaging advice. Door-to-door."
+      "title": "Cargo insurance — FCL/LCL containers to Congo and Angola | MB Fret Services",
+      "description": "Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Congo and France ↔ Angola corridors. Claims handling, export packaging advice and integration into your freight quote for a clear view of total delivered cost."
     },
     "breadcrumb_service_name": "Cargo insurance",
     "service_name": "Cargo insurance – ad valorem coverage",
     "service_type": "Transport insurance",
     "faq": [
       {
-        "q": "Why insure sea/air freight?",
-        "a": "To cover risks of damage, loss or theft. An ad valorem policy protects your cash flow and B2B commitments."
+        "q": "Why insure a container to Congo or Angola?",
+        "a": "To cover risks of damage, loss or theft on high-value and sensitive flows (international moves, vehicles, B2B cargo). An ad valorem policy protects your cash flow and contractual commitments along the whole journey."
       },
       {
-        "q": "Which clauses do you recommend?",
-        "a": "Depending on cargo and route: Institute Cargo Clauses (A) for broad coverage, or specific conventions (ADR, perishables, etc.)."
+        "q": "Which shipments should be prioritised for insurance?",
+        "a": "International moves (personal effects, furniture), vehicles and motorbikes, machinery, as well as high-value B2B lots (equipment, spare parts, sensitive products). We size coverage according to cargo type and risk level."
       },
       {
-        "q": "Do you insure door-to-door?",
-        "a": "Yes, we calibrate the policy from pickup to delivery, including pre- and post-carriage."
+        "q": "Do you provide door-to-door coverage?",
+        "a": "Yes, we calibrate the policy from pickup to final delivery (pre/post-carriage, ocean legs), and advise on packaging and documentation (photos, notations) to make any potential claim easier to defend."
       }
     ],
     "hero": {
       "title": "Cargo insurance",
-      "subtitle": "Protect your supply chain and cash flow with coverage adapted to your B2B flows.",
+      "subtitle": "Secure your FCL/LCL containers to Congo and Angola with ad valorem coverage tailored to international moves, B2B cargo, vehicles and motorbikes.",
       "cta_quote": "Request coverage"
     },
     "benefits": [
-      "Ad valorem coverage adapted to your flows",
-      "Claims handling and documentary evidence management",
-      "Advice on protection/export packaging",
-      "Integration into freight quote for full visibility"
+      "Ad valorem coverage sized to the value and nature of your cargo (international moves, B2B goods, vehicles, motorbikes).",
+      "Claims handling and support on documentary evidence (photos, notations, reports) to protect your interests.",
+      "Advice on export packaging and container securing (blocking, strapping, crating, protection).",
+      "Insurance integrated into the freight quote to give you a clear view of total delivered cost on France ↔ Congo/Angola flows."
     ],
     "services": {
       "title": "Benefits",

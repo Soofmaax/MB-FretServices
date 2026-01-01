@@ -5,7 +5,7 @@
   },
   "valueProps": {
     "title": "Why choose MB Fret Services?",
-    "subtitle": "France‑based Europe–Africa B2B freight forwarder with an operational focus on Central Africa (Congo, Angola). We combine sea freight, air freight, customs and cargo insurance to build clear, sustainable, tailor‑made solutions for your flows.",
+    "subtitle": "France‑based Europe–Africa B2B freight forwarder with an operational focus on Central Africa (Congo, Angola). We combine sea freight, customs clearance and cargo insurance to build clear, sustainable, tailor‑made solutions for your flows, from quote to delivery.",
     "items": [
       {
         "title": "Sea Freight",
@@ -13,14 +13,14 @@
         "features": ["20' and 40' containers", "FCL and LCL", "Port-to-port or door-to-door"]
       },
       {
-        "title": "Air Freight",
-        "description": "Europe ↔ Africa air corridors for urgent or high‑value goods, as a complement to sea freight on the France–Congo and France–Angola routes.",
-        "features": ["Express delivery", "Temperature controlled", "Continuous GPS tracking"]
+        "title": "Customs clearance",
+        "description": "Import/export customs clearance between France/Europe and Africa for your FCL/LCL containers, with document control, duties & taxes calculation and Incoterms guidance.",
+        "features": ["Customs declarations", "Regulatory compliance", "Administrative support"]
       },
       {
-        "title": "Customs Clearance",
-        "description": "Import/export customs clearance between France/Europe and Africa, with document control, duties & taxes calculation and Incoterms guidance.",
-        "features": ["Customs declarations", "Regulatory compliance", "Administrative support"]
+        "title": "Cargo insurance",
+        "description": "Ad valorem insurance for your containers (international moves, B2B cargo, vehicles, motorbikes) to Congo and Angola, integrated into your quotes for a clear view of total delivered cost.",
+        "features": ["Ad valorem coverage", "Claims handling", "Export packaging advice"]
       }
     ]
   },
