@@ -238,7 +238,12 @@ const FreightMaritime: FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+              <CtaButton
+                href="contact"
+                variant="primary"
+                className="text-lg px-8 py-4"
+                state={{ source: 'service_freight_maritime' }}
+              >
                 {t('freight:hero.cta_quote')}
               </CtaButton>
               <a
@@ -399,7 +404,11 @@ const FreightMaritime: FC = () => {
               </div>
 
               <div className="mt-8 space-y-2">
-                <CtaButton href="contact" variant="primary">
+                <CtaButton
+                  href="contact"
+                  variant="primary"
+                  state={{ source: 'service_freight_maritime' }}
+                >
                   {t('freight:services.cta')}
                 </CtaButton>
                 <p className="text-sm text-gray-600">
@@ -492,7 +501,12 @@ const FreightMaritime: FC = () => {
                   {lcl.cta_text}
                 </p>
               )}
-              <CtaButton href="contact" variant="primary" className="px-8 py-4 text-lg">
+              <CtaButton
+                href="contact"
+                variant="primary"
+                className="px-8 py-4 text-lg"
+                state={{ source: 'service_freight_maritime' }}
+              >
                 {lcl.cta_label || t('freight:services.cta')}
               </CtaButton>
             </div>
@@ -703,7 +717,12 @@ const FreightMaritime: FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+            <CtaButton
+              href="contact"
+              variant="primary"
+              className="text-lg px-8 py-4"
+              state={{ source: 'service_freight_maritime' }}
+            >
               {t('freight:final.cta')}
             </CtaButton>
             <a

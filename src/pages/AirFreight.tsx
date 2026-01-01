@@ -149,7 +149,12 @@ const AirFreight: FC = () => {
             )}
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <CtaButton href="contact" variant="primary" className="text-lg px-8 py-4">
+            <CtaButton
+              href="contact"
+              variant="primary"
+              className="text-lg px-8 py-4"
+              state={{ source: 'service_air_freight' }}
+            >
               {t('freight:air.hero.cta_quote', 'Request a quote')}
             </CtaButton>
             <a
@@ -206,7 +211,11 @@ const AirFreight: FC = () => {
               ))}
             </div>
             <div className="mt-6">
-              <CtaButton href="contact" variant="primary">
+              <CtaButton
+                href="contact"
+                variant="primary"
+                state={{ source: 'service_air_freight' }}
+              >
                 {t('freight:air.services.cta', 'Get a quote')}
               </CtaButton>
             </div>

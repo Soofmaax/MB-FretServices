@@ -37,6 +37,22 @@ const Contact: FC = () => {
       ? lang === 'fr'
         ? "Bonjour, je viens de la page route France ↔ Angola (Luanda). Voici mon projet (type d’envoi : déménagement, marchandises, véhicule…, volume approximatif en m³ ou nombre de palettes, ville de départ, ville d’arrivée, délais souhaités) :"
         : "Hello, I’m coming from the France ↔ Angola (Luanda) route page. Here is my project (shipment type: move, cargo, vehicle…, approximate volume in m³ or number of pallets, departure city, arrival city, desired lead times):"
+      : source === 'service_freight_maritime'
+      ? lang === 'fr'
+        ? "Bonjour, je viens de la page Fret maritime (conteneurs FCL/LCL vers l’Afrique). Voici mon projet (type d’envoi, pays/port de départ, pays/port d’arrivée, volume approximatif en m³ ou nombre de palettes, délais souhaités) :"
+        : "Hello, I’m coming from the Sea freight service page (FCL/LCL containers to Africa). Here is my project (shipment type, origin country/port, destination country/port, approximate volume in m³ or number of pallets, desired lead times):"
+      : source === 'service_customs'
+      ? lang === 'fr'
+        ? "Bonjour, je viens de la page Dédouanement & conformité France ↔ Afrique. Merci de préciser s’il s’agit d’une importation ou d’une exportation, le pays de départ, le pays d’arrivée, le type de marchandise, la valeur, l’Incoterm envisagé et vos contraintes de délais :"
+        : "Hello, I’m coming from the Customs & compliance service page for France ↔ Africa flows. Please specify whether this is an import or export, origin country, destination country, cargo type, value, intended Incoterm and your lead-time constraints:"
+      : source === 'service_insurance'
+      ? lang === 'fr'
+        ? "Bonjour, je viens de la page Assurance cargo pour conteneurs FCL/LCL. Merci d’indiquer le type d’envoi (déménagement, marchandises, véhicules…), la valeur assurée souhaitée, le pays/port de départ, le pays/port d’arrivée et les dates estimées d’expédition :"
+        : "Hello, I’m coming from the Cargo insurance service page for FCL/LCL containers. Please indicate shipment type (move, cargo, vehicles…), desired insured value, origin country/port, destination country/port and estimated shipping dates:"
+      : source === 'service_air_freight'
+      ? lang === 'fr'
+        ? "Bonjour, je viens de la page Fret aérien. Voici mon projet (type de marchandise, poids/volume approximatif, aéroport de départ, aéroport d’arrivée, délais souhaités) :"
+        : "Hello, I’m coming from the Air freight service page. Here is my project (cargo type, approximate weight/volume, departure airport, arrival airport, desired lead times):"
       : '';
 
   const langTagMap: Record<string, string> = {

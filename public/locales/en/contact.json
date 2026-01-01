@@ -43,6 +43,10 @@
     "incoterms": "You are coming from the Incoterms 2020 guide.",
     "route_congo": "You are coming from the France ↔ Congo (Pointe-Noire) route page.",
     "route_angola": "You are coming from the France ↔ Angola (Luanda) route page.",
+    "service_freight_maritime": "You are coming from the Sea freight service page (FCL/LCL containers to Africa).",
+    "service_customs": "You are coming from the Customs & compliance service page for France ↔ Africa flows.",
+    "service_insurance": "You are coming from the Cargo insurance service page for your FCL/LCL containers.",
+    "service_air_freight": "You are coming from the Air freight service page.",
     "cta": "The details below will help us refine your quote."
   },
   "form": {

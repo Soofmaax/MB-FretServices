@@ -144,7 +144,11 @@ const Insurance: FC = () => {
             )}
           </p>
           <div className="mt-6">
-            <CtaButton href="contact" variant="primary">
+            <CtaButton
+              href="contact"
+              variant="primary"
+              state={{ source: 'service_insurance' }}
+            >
               {t('freight:insurance.hero.cta_quote', 'Request coverage')}
             </CtaButton>
           </div>
@@ -165,10 +169,18 @@ const Insurance: FC = () => {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-4">
-            <CtaButton href="contact" variant="primary">
+            <CtaButton
+              href="contact"
+              variant="primary"
+              state={{ source: 'service_insurance' }}
+            >
               {t('freight:insurance.services.cta_quote', 'Request coverage')}
             </CtaButton>
-            <CtaButton href="contact" variant="secondary">
+            <CtaButton
+              href="contact"
+              variant="secondary"
+              state={{ source: 'service_insurance' }}
+            >
               {t('freight:insurance.services.cta_quote_secondary', 'Get a quote')}
             </CtaButton>
           </div>
