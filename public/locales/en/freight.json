@@ -67,15 +67,24 @@
   },
   "why": {
     "title": "Why choose MB Fret Services for your sea freight?",
-    "subtitle": "Africa freight forwarder with recognized expertise in sea transport from France to Africa, focusing on the France–Angola and France–Congo corridors and delivering tailor‑made solutions for your flows. Partner network across French & European ports and Central Africa, in‑house customs support and a sustainable approach to your supply chain.",
+    "subtitle": "Africa freight forwarder with recognized expertise in sea transport from France to Africa, focusing on the France–Angola and France–Congo corridors and delivering tailor‑made solutions for your flows. Partner network across French & European ports and Central Africa, in‑house customs support, fast response times, competitive rates and a sustainable approach to your supply chain.",
     "items": [": {
     "title": "Why choose our sea freight?",
     "subtitle": "Recognized expertise in sea transport to Africa with solutions for all your needs."
   },
   "advantages": [
-    { "title": "Maritime Expertise", "description": "Over 15 years of experience in sea transport to Africa" },
-    { "title": "Controlled Lead Times", "description": "Regular rotations and optimized transit times" },
-    { "title": "Guaranteed Security", "description": "Cargo insurance and real-time tracking of your goods" }
+    {
+      "title": "Maritime Expertise",
+      "description": "Over 15 years of experience in sea transport to Central Africa (Angola, Congo) with dedicated support for your projects."
+    },
+    {
+      "title": "Controlled Lead Times",
+      "description": "Fast response to your enquiries, regular rotations and optimized transit times on key France–Africa corridors."
+    },
+    {
+      "title": "Guaranteed Security",
+      "description": "Secure shipments with adapted cargo insurance and transparent communication throughout the journey."
+    }
   ],
   "services": {
     "title": "Our sea freight services",
