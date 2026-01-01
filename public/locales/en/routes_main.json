@@ -307,13 +307,14 @@
   "france_angola": {
     "label": "France ↔ Angola",
     "title": "Sea freight France ↔ Angola (FCL & LCL)",
-    "subtitle": "Specialised in LCL groupage, FCL full containers, international moves and vehicle/motorbike shipping to Luanda from France and Europe (France/Benelux), for both businesses and individuals.",
+    "subtitle": "Specialised in LCL groupage, FCL full containers, international moves and vehicle/motorbike shipping to Luanda from France and Europe (France/Benelux), for both businesses and individuals, including parcels, baggage and personal effects in containers or groupage. As a France‑based freight forwarder working with multiple ocean carriers, we prioritise service quality, reliable lead times and coherent pricing rather than purely “cheapest at any cost” rates.",
     "transit": "Indicative transit times: 20–25 days depending on port of departure, rotations and season.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Antwerp", "Rotterdam"],
     "ports_to": ["Luanda"],
     "costs": [
       "To Luanda, LCL (groupage) is particularly relevant for small volumes, personal effects and B2B parcels. Above roughly 13–15 m³, FCL usually becomes more competitive and offers more predictable lead times.",
-      "Costs should be assessed as total delivered cost: sea freight, surcharges, port THC, pre/post-carriage and duties/taxes on import into Angola. We help you arbitrate between LCL/FCL and French/Benelux departure ports according to your budget and deadlines."
+      "Costs should be assessed as total delivered cost: sea freight, surcharges, port THC, pre/post-carriage and duties/taxes on import into Angola. We help you arbitrate between LCL/FCL and French/Benelux departure ports according to your budget and deadlines.",
+      "Whether you are shipping garments, e‑commerce parcels, industrial pallets or a full move with vehicles, we build a transparent cost breakdown and clearly explain what is included (freight, surcharges, handling, pre/post‑carriage, estimated duties and taxes)."
     ],
     "customs": [
       "Angola requires strict documentation: detailed commercial invoice, packing list, BL, certificate of origin where applicable and cargo-specific documents. We assist with HS classification, duty/tax estimates and file preparation to reduce inspections and delays."
@@ -331,6 +332,7 @@
     ],
     "use_cases": [
       "International moves and personal effects (boxes, furniture, household goods) in LCL or FCL to Luanda, with pickup options in France and the Benelux.",
+      "Textile and ready-to-wear shipments (cartons, bales, accessories) for retail and e‑commerce flows into Angola.",
       "B2B shipments (pallets, spare parts, consumables, equipment) in LCL or FCL depending on volume and flow regularity.",
       "Machinery and equipment: FCL, Open Top or special equipment after feasibility study, with organised road pre-carriage.",
       "Vehicles and motorbikes: tailored Ro-Ro or container solutions with on-wheels loading without dismantling whenever possible, documentation management and coordinated delivery on site."

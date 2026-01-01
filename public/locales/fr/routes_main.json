@@ -252,13 +252,14 @@
   "france_angola": {
     "label": "France ↔ Angola",
     "title": "Transport & fret maritime France ↔ Angola (Luanda) – Groupage, déménagement, véhicules et motos",
-    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage.",
+    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour professionnels et particuliers, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous travaillons avec plusieurs armateurs majeurs pour privilégier la qualité de service, la fiabilité des délais et un budget cohérent plutôt qu’un simple prix « le plus bas ».",
     "transit": "Délais indicatifs: 20–25 jours selon port de départ, rotations et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Anvers", "Rotterdam"],
     "ports_to": ["Luanda"],
     "costs": [
       "Vers Luanda, le groupage maritime LCL est particulièrement adapté pour les petits volumes, effets personnels, bagages et colis B2B. Au-delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
-      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, THC portuaires, pré/post‑acheminement et droits/taxes à l’import en Angola. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons."
+      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, THC portuaires, pré/post‑acheminement et droits/taxes à l’import en Angola. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons.",
+      "Que vous expédiiez des vêtements, des colis e‑commerce, des palettes industrielles ou un déménagement complet avec véhicules, nous construisons un schéma de coût transparent en expliquant clairement ce qui est inclus (fret, surcharges, manutentions, pré/post‑acheminement, droits et taxes estimés)."
     ],
     "customs": [
       "L’Angola exige une documentation rigoureuse: facture détaillée, packing list, BL, certificat d’origine éventuel et documents spécifiques selon la marchandise. Nous vous accompagnons sur la codification SH, l’estimation des droits et taxes, et la préparation des dossiers pour limiter les contrôles et retards."
@@ -276,6 +277,7 @@
     ],
     "use_cases": [
       "Déménagements internationaux et effets personnels (cartons, mobilier, affaires de famille) en LCL ou FCL vers Luanda, avec options de ramassage en France et Benelux.",
+      "Expéditions textiles et prêt‑à‑porter (cartons, balles, accessoires) pour le commerce et le e‑commerce vers l’Angola.",
       "Expéditions B2B (palettes, pièces détachées, consommables, équipements) en LCL ou FCL selon volume et régularité des flux.",
       "Machines et équipements: FCL, Open Top ou équipements spéciaux après étude, avec organisation du pré‑acheminement routier.",
       "Véhicules et motos: solutions sur mesure (Ro-Ro ou conteneur) avec chargement sur roues sans démontage lorsque c’est possible, gestion documentaire et coordination livraison sur site."
