@@ -11,7 +11,7 @@ const ENV_LANGS = (process.env.SITEMAP_LANGS || process.env.SUP_LANGS || '')
   .split(',')
   .map((s) =&gt; s.trim())
   .filter(Boolean);
-const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar', 'zh'];
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar'];
 
 // Logical keys -> localized slugs
 const SLUGS = {

@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpBackend from 'i18next-http-backend';
 
 // Languages supported (primary)
-export const SUPPORTED_LANGS = ['fr', 'en', 'pt', 'ar', 'zh'] as const;
+export const SUPPORTED_LANGS = ['fr', 'en', 'pt', 'ar'] as const;
 export type SupportedLang = (typeof SUPPORTED_LANGS)[number];
 
 // Compute absolute load path for locales that respects Vite BASE_URL and current origin.

@@ -9,7 +9,7 @@ const ENV_LANGS = (process.env.AI_TXT_LANGS || process.env.SITEMAP_LANGS || proc
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
-const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it', 'zh'];
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar'];
 
 const SLUGS = {
   fr: {

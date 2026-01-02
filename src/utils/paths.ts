@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'pt' | 'ar' | 'zh';
+export type Lang = 'fr' | 'en' | 'pt' | 'ar';
 
 export type RouteKey =
   | 'home'
@@ -115,34 +115,6 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
   },
   // New languages use international slugs (English) by default
   ar: {
-    home: '',
-    services: 'services',
-    destinations: 'destinations',
-    contact: 'contact',
-    legal: 'legal',
-    privacy: 'privacy',
-    services_freight_maritime: 'services/maritime-freight',
-    services_air_freight: 'services/air-freight',
-    services_customs: 'services/customs-clearance',
-    services_insurance: 'services/cargo-insurance',
-    services_freight_france_china: 'services/maritime-freight/france-china',
-    services_freight_france_congo: 'services/maritime-freight/france-congo',
-    services_freight_france_angola: 'services/maritime-freight/france-angola',
-    services_freight_france_turkey: 'services/maritime-freight/france-turkey',
-    services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
-    services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
-    services_freight_france_china_checklist: 'services/maritime-freight/france-china/checklist',
-    services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
-    services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
-    services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
-    services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
-    services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
-    services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
-    pillar_incoterms: 'resources/incoterms-2020',
-    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
-    pillar_container_prices: 'guides/container-prices-congo-angola',
-  },
-  zh: {
     home: '',
     services: 'services',
     destinations: 'destinations',
@@ -325,7 +297,7 @@ function stripBase(pathname: string): string {
 export function detectLangFromPath(pathname: string): Lang {
   const p = stripBase(pathname);
   const seg = p.split('/').filter(Boolean)[0];
-  if (['fr','en','pt','ar','zh'].includes(seg || '')) return seg as Lang;
+  if (['fr','en','pt','ar'].includes(seg || '')) return seg as Lang;
   return 'fr';
 }
 
@@ -333,7 +305,7 @@ export function keyFromPath(pathname: string): RouteKey {
   const p = stripBase(pathname);
   const parts = p.split('/').filter(Boolean);
   // drop language segment if present
-  if (['fr','en','pt','ar','zh'].includes(parts[0])) {
+  if (['fr','en','pt','ar'].includes(parts[0])) {
     parts.shift();
   }
   const rest = parts.join('/');

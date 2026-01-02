@@ -12,10 +12,9 @@ const LANGS = [
   { code: 'en', label: 'EN' },
   { code: 'pt', label: 'PT' },
   { code: 'ar', label: 'AR' },
-  { code: 'zh', label: 'ZH' },
 ];
 
-const SUP = ['fr', 'en', 'pt', 'ar', 'zh'] as const;
+const SUP = ['fr', 'en', 'pt', 'ar'] as const;
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
