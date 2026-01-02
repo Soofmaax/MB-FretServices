@@ -9,7 +9,8 @@ const ENV_LANGS = (process.env.AI_TXT_LANGS || process.env.SITEMAP_LANGS || proc
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean);
-const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar'];
+// AI metadata only for the three active languages
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt'];
 
 const SLUGS = {
   fr: {

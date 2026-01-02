@@ -1,4 +1,4 @@
-export type Lang = 'fr' | 'en' | 'pt' | 'ar';
+export type Lang = 'fr' | 'en' | 'pt';
 
 export type RouteKey =
   | 'home'
@@ -96,31 +96,6 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     pillar_incoterms: 'documentacao/incoterms-2020',
     pillar_fcl_lcl: 'guias/fcl-vs-lcl',
     pillar_container_prices: 'guias/precos-conteiner-congo-angola',
-  },
-  // New languages use international slugs (English) by default
-  ar: {
-    home: '',
-    services: 'services',
-    destinations: 'destinations',
-    contact: 'contact',
-    legal: 'legal',
-    privacy: 'privacy',
-    services_freight_maritime: 'services/maritime-freight',
-    services_air_freight: 'services/air-freight',
-    services_customs: 'services/customs-clearance',
-    services_insurance: 'services/cargo-insurance',
-    services_freight_france_china: 'services/maritime-freight/france-china',
-    services_freight_france_congo: 'services/maritime-freight/france-congo',
-    services_freight_france_angola: 'services/maritime-freight/france-angola',
-    services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
-    services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
-    services_freight_france_china_checklist: 'services/maritime-freight/france-china/checklist',
-    services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
-    services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
-    services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
-    pillar_incoterms: 'resources/incoterms-2020',
-    pillar_fcl_lcl: 'guides/fcl-vs-lcl',
-    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
 };
 
@@ -256,7 +231,7 @@ function stripBase(pathname: string): string {
 export function detectLangFromPath(pathname: string): Lang {
   const p = stripBase(pathname);
   const seg = p.split('/').filter(Boolean)[0];
-  if (['fr','en','pt','ar'].includes(seg || '')) return seg as Lang;
+  if (['fr','en','pt'].includes(seg || '')) return seg as Lang;
   return 'fr';
 }
 

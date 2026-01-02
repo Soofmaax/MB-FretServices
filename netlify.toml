@@ -5,13 +5,13 @@
 [build.environment]
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
-  # Fast deployment defaults (can be widened later)
-  VITE_LANG_INDEX = "fr,en,pt,ar"
-  VITE_SUP_LANGS = "fr,en,pt,ar"
+  # Fast deployment defaults: only three active languages
+  VITE_LANG_INDEX = "fr,en,pt"
+  VITE_SUP_LANGS = "fr,en,pt"
   # Build-time script controls (limit heavy tasks)
-  SITEMAP_LANGS = "fr,en,pt,ar"
+  SITEMAP_LANGS = "fr,en,pt"
   PRERENDER_LANGS = "fr,en"
-  AI_TXT_LANGS = "fr,en,pt,ar"
+  AI_TXT_LANGS = "fr,en,pt"
   # Skip i18n translation during Netlify build; run via GitHub Action instead
   I18N_SKIP = "1"
   # Optional: skip Puppeteer prerender completely if needed
@@ -33,8 +33,7 @@
   status = 302
   conditions = {Country = ["US", "GB", "IE", "CA", "AU", "NZ", "NG", "ZA"]}
 
-# Arabic-speaking audience (North Africa & Middle East)
-[[redirects]]
+# Default: French for all remaining countries (including Northrects]]
   from = "/"
   to = "/ar"
   status = 302

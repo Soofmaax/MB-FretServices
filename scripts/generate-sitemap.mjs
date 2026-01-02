@@ -9,9 +9,10 @@ const root = path.resolve(projectRoot, '..');
 // Use SITEMAP_LANGS or SUP_LANGS env as comma-separated list, e.g. "fr,en"
 const ENV_LANGS = (process.env.SITEMAP_LANGS || process.env.SUP_LANGS || '')
   .split(',')
-  .map((s) =&gt; s.trim())
+  .map((s) => s.trim())
   .filter(Boolean);
-const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt', 'ar'];
+// Sitemap only for the three active languages
+const SUP_LANGS = ENV_LANGS.length ? ENV_LANGS : ['fr', 'en', 'pt'];
 
 // Logical keys -> localized slugs
 const SLUGS = {
