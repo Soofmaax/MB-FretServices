@@ -20,6 +20,11 @@
 # SEO 301 redirects (must appear before SPA fallback)
 # Legacy root-level paths
 [[redirects]]
+  from = "/"
+  to = "/fr"
+  status = 301
+
+[[redirects]]
   from = "/fret-maritime"
   to = "/fr/services/fret-maritime"
   status = 301
