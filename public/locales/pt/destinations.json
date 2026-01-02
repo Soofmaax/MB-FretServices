@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Destinos - Transporte para a África Central | MB Fret Services",
-    "description": "Transporte internacional para Congo, Angola e Turquia. Rotas marítimas e aéreas a partir de França. Orçamento personalizado em 24h."
+    "description": "Transporte internacional para Congo e Angola. Rotas marítimas e aéreas a partir de França. Orçamento personalizado em 24h."
   },
   "hero": {
     "title": "Os Nossos Destinos Globais",
@@ -35,19 +35,6 @@
           "maritime": { "from": "Antuérpia, Roterdão", "duration": "20–25 dias", "frequency": "Bissemanal" },
           "aerien": { "from": "Paris CDG, Marselha", "duration": "7–9 horas", "frequency": "5x/semana" },
           "specialites": ["Equipamento médico", "Construção", "Eletrónica"]
-        }
-      ]
-    },
-    {
-      "name": "Médio Oriente",
-      "countries": [
-        {
-          "name": "Turquia",
-          "capital": "Ancara",
-          "port": "Istambul, Izmir",
-          "maritime": { "from": "Marselha, Génova", "duration": "5–7 dias", "frequency": "3x/semana" },
-          "aerien": { "from": "Paris CDG, Lyon, Nice", "duration": "3–4 horas", "frequency": "Diária" },
-          "specialites": ["Têxtil", "Agroalimentar", "Automóvel"]
         }
       ]
     }

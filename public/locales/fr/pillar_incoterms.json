@@ -1,8 +1,8 @@
 {
   "title": "Incoterms 2020 — Guide complet (FOB, CIF…) | MB Fret Services",
-  "description": "Comprendre les Incoterms 2020 pour le fret maritime B2B: responsabilités, coûts, risques, cas pratiques Congo/Angola/Turquie. Choix FOB vs CIF, impacts assurance et délais.",
+  "description": "Comprendre les Incoterms 2020 pour le fret maritime B2B: responsabilités, coûts, risques, cas pratiques Congo/Angola. Choix FOB vs CIF, impacts assurance et délais.",
   "hero_h1": "Incoterms 2020 — Guide complet B2B",
-  "hero_intro": "Maîtrisez la répartition des coûts et des risques en fret maritime. Des cas pratiques appliqués à vos routes clés (France–Congo, France–Angola, France–Turquie) pour des décisions d’achat éclairées.",
+  "hero_intro": "Maîtrisez la répartition des coûts et des risques en fret maritime. Des cas pratiques appliqués à vos routes clés (France–Congo, France–Angola) pour des décisions d’achat éclairées.",
   "hero_links": {
     "china": "France ↔ Chine",
     "turkey": "France ↔ Turquie",
@@ -77,9 +77,9 @@
           ]
         },
         {
-          "h3": "France ↔ Turquie",
+          "h3": "France ↔ Congo",
           "p": [
-            "Axe court/moyen-courrier: la flexibilité (multimodal mer/route/air) est primordiale. CIF peut simplifier la coordination multi-acteurs. FOB reste pertinent si vous maîtrisez le flux et souhaitez arbitrer finement délais/coûts."
+            "Sur l’axe France–Congo, la qualité documentaire et la maîtrise des spécificités douanières locales sont déterminantes. CIF peut réduire les coûts de coordination “cachés”, tandis que FOB permet aux acheteurs aguerris de garder la main sur le choix des armateurs et des plannings."
           ]
         }
       ]
@@ -122,7 +122,7 @@
       "h2": "Guides associés & pages routes",
       "p": [
         "Guides associés: FCL vs LCL — comment décider ?",
-        "Pages routes: France–Congo, France–Angola, France–Turquie."
+        "Pages routes: France–Congo, France–Angola."
       ]
     }
   ],

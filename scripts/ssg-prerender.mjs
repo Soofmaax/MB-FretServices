@@ -31,10 +31,6 @@ const ROUTES = [
   '/fr/services/fret-maritime/france-congo/fcl-lcl',
   '/fr/services/fret-maritime/france-congo/douane',
   '/fr/services/fret-maritime/france-congo/checklist',
-  '/fr/services/fret-maritime/france-turquie',
-  '/fr/services/fret-maritime/france-turquie/fcl-lcl',
-  '/fr/services/fret-maritime/france-turquie/douane',
-  '/fr/services/fret-maritime/france-turquie/checklist',
   '/fr/documentation/incoterms-2020',
   '/fr/guides/fcl-vs-lcl',
   // EN
@@ -49,10 +45,6 @@ const ROUTES = [
   '/en/services/maritime-freight/france-congo/fcl-lcl',
   '/en/services/maritime-freight/france-congo/customs',
   '/en/services/maritime-freight/france-congo/checklist',
-  '/en/services/maritime-freight/france-turkey',
-  '/en/services/maritime-freight/france-turkey/fcl-lcl',
-  '/en/services/maritime-freight/france-turkey/customs',
-  '/en/services/maritime-freight/france-turkey/checklist',
   '/en/resources/incoterms-2020',
   '/en/guides/fcl-vs-lcl',
   // PT
@@ -67,10 +59,6 @@ const ROUTES = [
   '/pt/servicos/frete-maritimo/franca-congo/fcl-lcl',
   '/pt/servicos/frete-maritimo/franca-congo/despacho-aduaneiro',
   '/pt/servicos/frete-maritimo/franca-congo/checklist',
-  '/pt/servicos/frete-maritimo/franca-turquia',
-  '/pt/servicos/frete-maritimo/franca-turquia/fcl-lcl',
-  '/pt/servicos/frete-maritimo/franca-turquia/despacho-aduaneiro',
-  '/pt/servicos/frete-maritimo/franca-turquia/checklist',
   '/pt/documentacao/incoterms-2020',
   '/pt/guias/fcl-vs-lcl',
   // ES
@@ -81,7 +69,6 @@ const ROUTES = [
   '/es/services/customs-clearance',
   '/es/services/cargo-insurance',
   '/es/services/maritime-freight/france-congo',
-  '/es/services/maritime-freight/france-turkey',
   '/es/resources/incoterms-2020',
   '/es/guides/fcl-vs-lcl',
   // TR
@@ -92,7 +79,6 @@ const ROUTES = [
   '/tr/services/customs-clearance',
   '/tr/services/cargo-insurance',
   '/tr/services/maritime-freight/france-congo',
-  '/tr/services/maritime-freight/france-turkey',
   '/tr/resources/incoterms-2020',
   '/tr/guides/fcl-vs-lcl',
   // DE
@@ -103,7 +89,6 @@ const ROUTES = [
   '/de/services/customs-clearance',
   '/de/services/cargo-insurance',
   '/de/services/maritime-freight/france-congo',
-  '/de/services/maritime-freight/france-turkey',
   '/de/resources/incoterms-2020',
   '/de/guides/fcl-vs-lcl',
   // IT
@@ -114,7 +99,6 @@ const ROUTES = [
   '/it/services/customs-clearance',
   '/it/services/cargo-insurance',
   '/it/services/maritime-freight/france-congo',
-  '/it/services/maritime-freight/france-turkey',
   '/it/resources/incoterms-2020',
   '/it/guides/fcl-vs-lcl',
   // SW
@@ -125,7 +109,6 @@ const ROUTES = [
   '/sw/services/customs-clearance',
   '/sw/services/cargo-insurance',
   '/sw/services/maritime-freight/france-congo',
-  '/sw/services/maritime-freight/france-turkey',
   '/sw/resources/incoterms-2020',
   '/sw/guides/fcl-vs-lcl',
   // AR
@@ -136,7 +119,6 @@ const ROUTES = [
   '/ar/services/customs-clearance',
   '/ar/services/cargo-insurance',
   '/ar/services/maritime-freight/france-congo',
-  '/ar/services/maritime-freight/france-turkey',
   '/ar/resources/incoterms-2020',
   '/ar/guides/fcl-vs-lcl',
 ];

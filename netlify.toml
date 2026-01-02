@@ -103,6 +103,52 @@
   to = "/pt/servicos/frete-maritimo"
   status = 301
 
+# Legacy France–Turkey route URLs: redirect to generic maritime pages
+[[redirects]]
+  from = "/fr/services/fret-maritime/france-turquie*"
+  to = "/fr/services/fret-maritime"
+  status = 301
+
+[[redirects]]
+  from = "/en/services/maritime-freight/france-turkey*"
+  to = "/en/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/pt/servicos/frete-maritimo/franca-turquia*"
+  to = "/pt/servicos/frete-maritimo"
+  status = 301
+
+[[redirects]]
+  from = "/es/services/maritime-freight/france-turkey*"
+  to = "/es/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/tr/services/maritime-freight/france-turkey*"
+  to = "/tr/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/de/services/maritime-freight/france-turkey*"
+  to = "/de/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/it/services/maritime-freight/france-turkey*"
+  to = "/it/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/sw/services/maritime-freight/france-turkey*"
+  to = "/sw/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/ar/services/maritime-freight/france-turkey*"
+  to = "/ar/services/maritime-freight"
+  status = 301
+
 # SPA fallback: route all other paths to index.html
 [[redirects]]
   from = "/*"

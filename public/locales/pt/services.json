@@ -34,7 +34,7 @@
       "Rastreamento GPS em tempo real",
       "Seguro contra todos os riscos incluído"
     ],
-    "destinations": "Servido: Turquia, Marrocos, Tunísia, países de África Central"
+    "destinations": "Servido: Marrocos, Tunísia, países de África Central"
   },
   "customs": {
     "title": "Desalfandegamento",
@@ -88,7 +88,7 @@
     "read": "Ler o guia",
     "incoterms": {
       "title": "Incoterms 2020 — Guia completo",
-      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos em fluxos para o Congo, Angola e Turquia."
+      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos em fluxos para o Congo e Angola."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — Como decidir?",
