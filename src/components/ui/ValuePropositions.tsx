@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { Ship, Plane, Shield } from 'lucide-react';
+import { Ship, MapPin, Shield } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useInViewAnimation } from './useInViewAnimation';
@@ -23,7 +23,7 @@ const ValuePropositions: FC = () => {
   }>).map((it, idx) => {
     const iconMap: Record<number, LucideIcon> = {
       0: Ship,
-      1: Plane,
+      1: MapPin,
       2: Shield,
     };
     return { ...it, icon: iconMap[idx] || Ship } as PropItem;
