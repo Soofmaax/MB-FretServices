@@ -22,20 +22,6 @@
     "destinations": "Vituo vikuu: Kongo, Angola, Ivory Coast, Cameroon",
     "more_link": "Zaidi kuhusu usafiri wa baharini"
   },
-  "air": {
-    "title": "Usafiri wa Anga",
-    "subtitle": "Kasi na uaminifu kwa dharura zako",
-    "description": "Usafiri wa anga ni bora kwa mizigo ya thamani kubwa, inayoharibika au ya dharura. Mtandao wetu wa washirika unahakikisha muda mfupi wa utoaji kuelekea vituo vyote.",
-    "features": [
-      "Express 24–48 h kwa vituo vya msingi",
-      "Usafiri wenye udhibiti wa joto",
-      "Mizigo dhaifu na ya thamani kubwa",
-      "Nyaraka na sampuli",
-      "Ufuatiliaji wa GPS wa wakati halisi",
-      "Bima ya hatari zote imejumuishwa"
-    ],
-    "destinations": "Inahudumiwa: China, Uturuki, Morocco, Tunisia, nchi za Afrika ya Kati"
-  },
   "customs": {
     "title": "Ushuru wa Forodha",
     "subtitle": "Utaalamu kamili wa kiutawala",

@@ -22,20 +22,6 @@
     "destinations": "Principales destinations : Congo, Angola",
     "more_link": "En savoir plus sur le fret maritime"
   },
-  "air": {
-    "title": "Fret Aérien",
-    "subtitle": "Rapidité et fiabilité pour vos urgences",
-    "description": "Le transport aérien est idéal pour vos marchandises de haute valeur, périssables ou urgentes. Notre réseau de partenaires garantit des délais serrés vers toutes destinations.",
-    "features": [
-      "Express 24-48h vers destinations principales",
-      "Transport sous température contrôlée",
-      "Marchandises fragiles et précieuses",
-      "Documents et échantillons",
-      "Suivi GPS en temps réel",
-      "Assurance tous risques incluse"
-    ],
-    "destinations": "Desservi : Congo, Angola et pays d'Afrique centrale"
-  },
   "customs": {
     "title": "Dédouanement",
     "subtitle": "Expertise administrative complète",

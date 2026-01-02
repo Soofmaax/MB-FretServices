@@ -28,61 +28,6 @@
       }
     ]
   },
-  "air": {
-    "seo": {
-      "title": "Air Freight – Fast & Secure B2B Transport | MB Fret Services",
-      "description": "B2B air freight solutions in Europe–Africa: express, secure and traceable shipments. Door-to-door options, cargo insurance and IATA-compliant handling."
-    },
-    "breadcrumb_service_name": "Air freight",
-    "service_name": "B2B Air Freight – Express and secure",
-    "service_type": "Air freight",
-    "faq": [
-      {
-        "q": "Which goods are suitable for air freight?",
-        "a": "High-value, perishable or urgent goods. Air freight minimizes transit time and exposure to risk."
-      },
-      {
-        "q": "What are typical lead times Europe ↔ Africa?",
-        "a": "Depending on hubs and season: 1–5 days door-to-airport, 3–8 days door-to-door. We offer express options on request."
-      },
-      {
-        "q": "Do you provide cargo insurance for air freight?",
-        "a": "Yes. Ad valorem coverage is recommended; we advise based on the shipment’s value, nature and criticality."
-      }
-    ],
-    "hero": {
-      "title": "Air freight",
-      "subtitle": "Priority, reliability, security.",
-      "intro": "A fast and secure solution for urgent, sensitive or high-value shipments. We manage the entire chain end-to-end with real-time tracking.",
-      "cta_quote": "Request a quote",
-      "cta_whatsapp": "WhatsApp"
-    },
-    "features": [
-      {
-        "title": "Express lead times",
-        "text": "Priority handling, regular flights, express options for urgent shipments."
-      },
-      {
-        "title": "Enhanced security",
-        "text": "Traceability, document control and insurance adapted to cargo value."
-      }
-    ],
-    "services": {
-      "title": "Services",
-      "intro": "We operate on major hubs (CDG, AMS, FRA, IST…) with express options, consolidation and ad valorem insurance.",
-      "list": [
-        "Door-to-airport and door-to-door",
-        "Document control and IATA compliance",
-        "Air packing and securing",
-        "24/7 tracking and notifications"
-      ],
-      "cta": "Get a quote"
-    },
-    "images": {
-      "hero_alt": "Air cargo aircraft",
-      "services_alt": "Air freight loading"
-    }
-  },
   "why": {
     "title": "Why choose MB Fret Services for your sea freight?",
     "subtitle": "Africa freight forwarder with recognized expertise in sea transport from France to Africa, focusing on the France–Angola and France–Congo corridors and delivering tailor‑made solutions for your flows. Partner network across French & European ports and Central Africa, in‑house customs support, fast response times, competitive rates and a sustainable approach to your supply chain."

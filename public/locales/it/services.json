@@ -22,20 +22,6 @@
     "destinations": "Destinazioni principali: Congo, Angola, Costa d’Avorio, Camerun",
     "more_link": "Approfondisci il trasporto marittimo"
   },
-  "air": {
-    "title": "Trasporto Aereo",
-    "subtitle": "Velocità e affidabilità per le urgenze",
-    "description": "Il trasporto aereo è ideale per merci di alto valore, deperibili o urgenti. La nostra rete di partner garantisce tempi stretti verso tutte le destinazioni.",
-    "features": [
-      "Express 24–48 h verso le principali destinazioni",
-      "Trasporto a temperatura controllata",
-      "Merci fragili e di alto valore",
-      "Documenti e campioni",
-      "Tracciamento GPS in tempo reale",
-      "Assicurazione all risk inclusa"
-    ],
-    "destinations": "Copertura: Cina, Turchia, Marocco, Tunisia, paesi dell’Africa centrale"
-  },
   "customs": {
     "title": "Sdoganamento",
     "subtitle": "Competenza amministrativa completa",

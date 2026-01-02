@@ -22,20 +22,6 @@
     "destinations": "Destinos clave: Congo, Angola, Costa de Marfil, Camerún",
     "more_link": "Más información sobre transporte marítimo"
   },
-  "air": {
-    "title": "Transporte Aéreo",
-    "subtitle": "Rapidez y fiabilidad para sus urgencias",
-    "description": "El transporte aéreo es ideal para mercancías de alto valor, perecederas o urgentes. Nuestra red de socios garantiza plazos ajustados a todos los destinos.",
-    "features": [
-      "Exprés 24–48h a destinos principales",
-      "Transporte con temperatura controlada",
-      "Mercancías frágiles y de alto valor",
-      "Documentos y muestras",
-      "Seguimiento GPS en tiempo real",
-      "Seguro a todo riesgo incluido"
-    ],
-    "destinations": "Servido: China, Turquía, Marruecos, Túnez, países de África Central"
-  },
   "customs": {
     "title": "Despacho de Aduanas",
     "subtitle": "Experiencia administrativa integral",

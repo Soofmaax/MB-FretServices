@@ -28,61 +28,6 @@
       }
     ]
   },
-  "air": {
-    "seo": {
-      "title": "Transporte aéreo — Rápido e seguro | MB Fret Services",
-      "description": "Soluções de transporte aéreo B2B: expresso, seguro, rastreável. Europa ↔ África/Ásia. Porta-a-porta, seguro de carga, conformidade IATA."
-    },
-    "breadcrumb_service_name": "Transporte aéreo",
-    "service_name": "Transporte aéreo B2B – Expresso e seguro",
-    "service_type": "Transporte aéreo",
-    "faq": [
-      {
-        "q": "Que mercadorias são adequadas para transporte aéreo?",
-        "a": "Mercadorias de alto valor, perecíveis ou urgentes. O transporte aéreo reduz o tempo de trânsito e a exposição ao risco."
-      },
-      {
-        "q": "Quais os prazos típicos Europa ↔ África/Ásia?",
-        "a": "Consoante os hubs e a época: 1–5 dias porta-a-aeroporto, 3–8 dias porta-a-porta. Disponibilizamos opções expresso mediante pedido."
-      },
-      {
-        "q": "Oferecem seguro de carga para o aéreo?",
-        "a": "Sim. Uma cobertura ad valorem é recomendada; aconselhamos em função do valor, natureza e criticidade do envio."
-      }
-    ],
-    "hero": {
-      "title": "Transporte aéreo",
-      "subtitle": "Prioridade, fiabilidade, segurança.",
-      "intro": "Uma solução rápida e segura para expedições urgentes, sensíveis ou de alto valor. Gerimos toda a cadeia de ponta a ponta com rastreamento em tempo real.",
-      "cta_quote": "Pedir orçamento",
-      "cta_whatsapp": "WhatsApp"
-    },
-    "features": [
-      {
-        "title": "Prazos expressos",
-        "text": "Tratamento prioritário, voos regulares, opções expresso para as suas urgências."
-      },
-      {
-        "title": "Segurança reforçada",
-        "text": "Rastreabilidade, controlo documental e seguro adaptado ao valor."
-      }
-    ],
-    "services": {
-      "title": "Serviços",
-      "intro": "Operamos nos principais hubs (CDG, AMS, FRA, IST…) com opções expresso, consolidação e seguro ad valorem.",
-      "list": [
-        "Porta-a-aeroporto e porta-a-porta",
-        "Controlo documental e conformidade IATA",
-        "Embalagem aérea e segurança de carga",
-        "Rastreamento 24/7 e notificações"
-      ],
-      "cta": "Obter orçamento"
-    },
-    "images": {
-      "hero_alt": "Aeronave de carga aérea",
-      "services_alt": "Carregamento aéreo"
-    }
-  },
   "why": {
     "title": "Porquê escolher o nosso transporte marítimo?",
     "subtitle": "Perícia reconhecida no transporte marítimo para África com soluções adaptadas a todas as suas necessidades."

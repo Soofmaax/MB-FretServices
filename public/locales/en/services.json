@@ -22,20 +22,6 @@
     "destinations": "Key destinations: Congo, Angola",
     "more_link": "Learn more about sea freight"
   },
-  "air": {
-    "title": "Air Freight",
-    "subtitle": "Speed and reliability for urgent shipments",
-    "description": "Air transport is ideal for high-value, perishable or urgent goods. Our partner network ensures tight lead times to all destinations.",
-    "features": [
-      "Express 24–48h to key destinations",
-      "Temperature-controlled transport",
-      "Fragile and high-value goods",
-      "Documents and samples",
-      "Real-time GPS tracking",
-      "All-risk insurance included"
-    ],
-    "destinations": "Served: Congo, Angola and Central African countries"
-  },
   "customs": {
     "title": "Customs Clearance",
     "subtitle": "Comprehensive administrative expertise",

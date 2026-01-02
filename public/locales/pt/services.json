@@ -22,20 +22,6 @@
     "destinations": "Principais destinos: Congo, Angola, Costa do Marfim, Camarões",
     "more_link": "Saiba mais sobre transporte marítimo"
   },
-  "air": {
-    "title": "Transporte Aéreo",
-    "subtitle": "Rapidez e fiabilidade para as suas urgências",
-    "description": "O transporte aéreo é ideal para mercadorias de alto valor, perecíveis ou urgentes. A nossa rede de parceiros garante prazos apertados para todos os destinos.",
-    "features": [
-      "Expresso 24–48h para destinos principais",
-      "Transporte com temperatura controlada",
-      "Mercadorias frágeis e de alto valor",
-      "Documentos e amostras",
-      "Rastreamento GPS em tempo real",
-      "Seguro contra todos os riscos incluído"
-    ],
-    "destinations": "Servido: Marrocos, Tunísia, países de África Central"
-  },
   "customs": {
     "title": "Desalfandegamento",
     "subtitle": "Perícia administrativa completa",

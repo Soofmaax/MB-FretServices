@@ -22,20 +22,6 @@
     "destinations": "Başlıca destinasyonlar: Kongo, Angola, Fildişi Sahili, Kamerun",
     "more_link": "Deniz taşımacılığı hakkında daha fazlası"
   },
-  "air": {
-    "title": "Hava Taşımacılığı",
-    "subtitle": "Acil gönderiler için hız ve güvenilirlik",
-    "description": "Hava taşımacılığı, yüksek değerli, hassas veya acil kargolar için idealdir. İş ortaklarımızın ağı tüm destinasyonlara kısa sürelerde teslimat sağlar.",
-    "features": [
-      "Başlıca destinasyonlara 24–48 saatte ekspres",
-      "Sıcaklık kontrollü taşıma",
-      "Kırılgan ve yüksek değerli kargolar",
-      "Belgeler ve numuneler",
-      "Gerçek zamanlı GPS takibi",
-      "Tüm risklere karşı sigorta dahil"
-    ],
-    "destinations": "Hizmet verilen: Çin, Türkiye, Fas, Tunus, Orta Afrika ülkeleri"
-  },
   "customs": {
     "title": "Gümrükleme",
     "subtitle": "Kapsamlı idari uzmanlık",

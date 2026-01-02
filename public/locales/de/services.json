@@ -22,20 +22,6 @@
     "destinations": "Wichtige Ziele: Kongo, Angola, Elfenbeinküste, Kamerun",
     "more_link": "Mehr zur Seefracht"
   },
-  "air": {
-    "title": "Luftfracht",
-    "subtitle": "Schnelligkeit und Zuverlässigkeit für Dringendes",
-    "description": "Lufttransport ist ideal für hochwertige, verderbliche oder eilige Güter. Unser Partnernetz gewährleistet kurze Laufzeiten zu allen Zielen.",
-    "features": [
-      "Express 24–48 h zu Hauptzielen",
-      "Temperaturgeführter Transport",
-      "Empfindliche und hochwertige Güter",
-      "Dokumente und Proben",
-      "GPS-Tracking in Echtzeit",
-      "All-Risk-Versicherung inklusive"
-    ],
-    "destinations": "Bedient: China, Türkei, Marokko, Tunesien, Zentralafrika"
-  },
   "customs": {
     "title": "Zollabfertigung",
     "subtitle": "Umfassende administrative Expertise",
