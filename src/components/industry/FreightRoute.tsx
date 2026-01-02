@@ -178,10 +178,16 @@ const FreightRoute: FC = () => {
     })),
   };
 
-  // Placeholder image for recent departures: currently reuse hero image.
-  // When real photos are available, you can replace this path with e.g.
-  // `/images/departs/france-congo-first.jpg` or `/images/departs/france-angola-first.jpg`.
-  const recentDepartureImage = `/images/${c.heroBase}.jpg`;
+  // Placeholder image for recent departures:
+  // We point to dedicated paths so you can simply drop your own photos later
+  // without changing the routes in the code.
+  // Create these files under `public/images/departs/`:
+  // - france-congo-first.jpg
+  // - france-angola-first.jpg
+  const recentDepartureImage =
+    routeKey === 'services_freight_france_congo'
+      ? '/images/departs/france-congo-first.jpg'
+      : '/images/departs/france-angola-first.jpg';
 
   return (
     <div className="pt-16">
