@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Destinations - Transport to Africa | MB Fret Services",
-    "description": "International transport to Congo and Angola. Sea and air routes from France. Personalized quote within 24 hours."
+    "title": "Destinations - Sea freight to Africa | MB Fret Services",
+    "description": "Containerised sea freight to Congo and Angola. Regular departures from France and Europe, optimized lead times and personalized quotes within 24 hours."
   },
   "hero": {
-    "title": "Our Global Destinations",
-    "subtitle": "Extensive network of logistics partners to connect your markets. Optimized routes and frequencies adapted to your business needs."
+    "title": "Our Main Destinations",
+    "subtitle": "Regular sea freight services to Central Africa (Congo, Angola) from France and Europe, with schedules adapted to your needs."
   },
   "labels": {
     "port_principal": "Main port:",
@@ -25,7 +25,6 @@
           "capital": "Brazzaville",
           "port": "Pointe-Noire",
           "maritime": { "from": "Le Havre, Antwerp", "duration": "18–22 days", "frequency": "Weekly" },
-          "aerien": { "from": "Paris CDG, Lyon", "duration": "6–8 hours", "frequency": "Daily" },
           "specialites": ["Vehicles", "Industrial machinery", "Food products"]
         },
         {
@@ -33,7 +32,6 @@
           "capital": "Luanda",
           "port": "Luanda",
           "maritime": { "from": "Antwerp, Rotterdam", "duration": "20–25 days", "frequency": "Bi-weekly" },
-          "aerien": { "from": "Paris CDG, Marseille", "duration": "7–9 hours", "frequency": "5x/week" },
           "specialites": ["Medical equipment", "Construction", "Electronics"]
         }
       ]

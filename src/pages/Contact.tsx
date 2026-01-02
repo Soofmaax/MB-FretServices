@@ -115,11 +115,11 @@ const Contact: FC = () => {
 
   const seoTitle = t(
     'contact:seo.title',
-    'Contact - Devis Gratuit Transport International | MB Fret Services'
+    'Contact - Devis Gratuit Fret Maritime & Déménagement international | MB Fret Services'
   );
   const seoDescription = t(
     'contact:seo.description',
-    'Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
+    'Contactez MB Fret Services pour un devis gratuit. Spécialiste du fret maritime en conteneurs (FCL/LCL), des déménagements internationaux et de l’envoi de véhicules vers le Congo et l’Angola. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
   );
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {

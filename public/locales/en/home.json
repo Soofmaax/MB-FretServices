@@ -30,16 +30,16 @@
   "destinations_need_specific": "Need a specific destination? We assess all requests.",
   "showcase": [
     {
-      "country": "Congo",
+      "country": "Republic of the Congo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Sea freight from Le Havre", "Air freight from Paris CDG"]
+      "image": "https://images.pexels.com/photos/2516033/pexels-photo-2516033.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "routes": ["Sea freight from Le Havre", "Sea freight from Antwerp"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Sea freight from Antwerp", "Air freight from Marseille"]
+      "image": "https://images.pexels.com/photos/4475924/pexels-photo-4475924.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "routes": ["Sea freight from Antwerp", "Sea freight from Rotterdam"]
     }
   ],
   "final_cta_title": "Ready to ship your goods?",

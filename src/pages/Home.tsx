@@ -33,7 +33,7 @@ const Home: FC = () => {
   );
   const seoDescription = t(
     'home:seo.description',
-    'MB Fret Services: your international transport specialist. Sea and air freight to Africa, Asia and Europe. Customs clearance and integrated logistics.'
+    'MB Fret Services: your international transport specialist. Sea freight in containers (FCL/LCL) from France and Europe to Africa, with customs clearance and cargo insurance.'
   );
 
   return (

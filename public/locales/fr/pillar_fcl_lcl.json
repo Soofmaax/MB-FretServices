@@ -139,7 +139,7 @@
   "faq": [
     { "q": "Quel seuil de volume pour passer du LCL au FCL ?", "a": "Autour de 13–15 m³, le FCL devient souvent plus intéressant économiquement et en sécurité. L’arbitrage dépend du port, de la saisonnalité et des délais." },
     { "q": "Le LCL est-il plus risqué ?", "a": "Le groupage implique des manipulations supplémentaires. Un emballage export et une assurance ad valorem réduisent fortement le risque. Pour des marchandises sensibles, FCL recommandé." },
-    { "q": "Peut-on mixer LCL et aérien pour accélérer une partie du flux ?", "a": "Oui, la multimodalité permet de respecter vos jalons clés. Nous calibrons un plan de transport adapté avec consolidation partielle." }
+    { "q": "Peut-on mixer LCL et d’autres modes pour accélérer une partie du flux ?", "a": "Oui, combiner le LCL maritime avec d’autres solutions logistiques peut aider à tenir des jalons critiques (lancements, événements). Nous étudions ces scénarios au cas par cas pour sécuriser l’ensemble du flux conteneurisé." }
   ],
   "cta_compare": "Prêt à comparer FCL/LCL ?",
   "cta_compare_desc": "Nos experts recommandent une option selon votre volume, votre risque et vos délais.",

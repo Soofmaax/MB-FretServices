@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Destinations - Transport vers l'Afrique | MB Fret Services",
-    "description": "Transport international vers le Congo et l'Angola. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+    "title": "Destinations - Fret maritime vers l'Afrique | MB Fret Services",
+    "description": "Fret maritime en conteneurs vers le Congo et l'Angola. Départs réguliers depuis la France et l'Europe, délais optimisés et devis personnalisé sous 24h."
   },
   "hero": {
-    "title": "Nos Destinations Mondiales",
-    "subtitle": "Réseau étendu de partenaires logistiques pour connecter vos marchés. Routes optimisées et fréquences adaptées à vos besoins commerciaux."
+    "title": "Nos Destinations principales",
+    "subtitle": "Lignes maritimes régulières vers l’Afrique centrale (Congo, Angola) depuis la France et l’Europe, avec des fréquences adaptées à vos besoins."
   },
   "labels": {
     "port_principal": "Port principal :",
@@ -25,7 +25,6 @@
           "capital": "Brazzaville",
           "port": "Pointe-Noire",
           "maritime": { "from": "Le Havre, Anvers", "duration": "18-22 jours", "frequency": "Hebdomadaire" },
-          "aerien": { "from": "Paris CDG, Lyon", "duration": "6-8 heures", "frequency": "Quotidien" },
           "specialites": ["Véhicules", "Machines industrielles", "Produits alimentaires"]
         },
         {
@@ -33,7 +32,6 @@
           "capital": "Luanda",
           "port": "Luanda",
           "maritime": { "from": "Anvers, Rotterdam", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire" },
-          "aerien": { "from": "Paris CDG, Marseille", "duration": "7-9 heures", "frequency": "5x/semaine" },
           "specialites": ["Matériel médical", "BTP", "Électronique"]
         }
       ]

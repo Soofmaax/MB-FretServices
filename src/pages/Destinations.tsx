@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { MapPin, Clock, Ship, Plane } from 'lucide-react';
+import { MapPin, Clock, Ship } from 'lucide-react';
 import CtaButton from '../components/CtaButton';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
@@ -13,7 +13,6 @@ type Region = {
     capital?: string;
     port: string;
     maritime: { from: string; duration: string; frequency: string };
-    aerien: { from: string; duration: string; frequency: string };
     specialites: string[];
   }>;
 };
@@ -38,11 +37,11 @@ const Destinations: FC = () => {
 
   const seoTitle = t(
     'destinations:seo.title',
-    'Destinations - Transport vers Afrique, Asie et Europe | MB Fret Services'
+    'Destinations - Fret maritime vers l’Afrique | MB Fret Services'
   );
   const seoDescription = t(
     'destinations:seo.description',
-    'Transport international vers Congo, Angola, Chine, Turquie. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h.'
+    'Fret maritime en conteneurs vers le Congo et l’Angola. Routes régulières depuis la France et l’Europe, délais optimisés et devis personnalisé sous 24h.'
   );
 
   const regions = t('regions', { returnObjects: true }) as Region[];
@@ -141,27 +140,7 @@ const Destinations: FC = () => {
                         </div>
                       </div>
 
-                      {/* Transport Aérien */}
-                      <div className="mb-6 p-4 bg-orange-50 rounded-lg">
-                        <div className="flex items-center mb-3">
-                          <Plane size={20} className="text-accent-600 mr-2" />
-                          <h4 className="font-semibold text-accent-900">{t('labels.air')}</h4>
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-                          <div>
-                            <span className="text-gray-700">{t('labels.depart')}</span>
-                            <p className="font-medium">{country.aerien.from}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-700">{t('labels.duree')}</span>
-                            <p className="font-medium">{country.aerien.duration}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-700">{t('labels.frequence')}</span>
-                            <p className="font-medium">{country.aerien.frequency}</p>
-                          </div>
-                        </div>
-                      </div>
+                      
 
                       {/* Spécialités */}
                       <div className="mb-6">
