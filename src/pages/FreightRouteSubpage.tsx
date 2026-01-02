@@ -76,6 +76,7 @@ const FreightRouteSubpage: FC = () => {
   const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
   const langPath = `/${lang}`;
   const { t } = useTranslation(['routes_sub']);
+  const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
 
   const k = typeof window !== 'undefined' ? keyFromPath(window.location.pathname) : 'home';
   const ctx = resolveContextFromKey(k as RouteKey);
@@ -108,8 +109,6 @@ const FreightRouteSubpage: FC = () => {
         faqEntities.map((f) => ({ name: f.q, text: f.a }))
       )
     : []) as Array<Record<string, unknown>>;
-
-  const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
 
   return (
     <div className="pt-16">

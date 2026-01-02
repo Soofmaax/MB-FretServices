@@ -138,7 +138,9 @@ jobs:
             const path = require('path');
             const reportPath = path.join(process.cwd(), 'audit-report.md');
             const summaryPath = path.join(process.cwd(), 'audit-summary.json');
-            const body = fs.existsExists ? fs.readFileSync(reportPath, 'utf8') : 'Audit report not found.';
+            const body = fs.existsSync(reportPath)
+              ? fs.readFileSync(reportPath, 'utf8')
+              : 'Audit report not found.';
             const summary = fs.existsSync(summaryPath)
               ? JSON.parse(fs.readFileSync(summaryPath, 'utf8'))
               : {};
