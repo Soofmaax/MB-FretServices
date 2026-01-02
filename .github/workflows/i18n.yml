@@ -32,7 +32,8 @@ jobs:
         env:
           # Optional: provide DeepL for higher quality; otherwise LibreTranslate will be used
           # DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-          I18N_TARGET_LANGS: en,pt,es,tr,de,it,sw,ar
+          # Only keep active site languages (source = fr, targets = en, pt)
+          I18N_TARGET_LANGS: en,pt
           I18N_CONCURRENCY: 3
         run: npm run i18n:sync
 
