@@ -4,6 +4,7 @@ import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { useTranslation } from 'react-i18next';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type Section = {
   h2?: string;
@@ -87,12 +88,20 @@ const PillarFCLvsLCL: FC = () => {
     returnObjects: true,
   }) as { maritime: string; congo: string; angola: string };
 
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
+
   return (
     <div className="pt-16">
       <SEO title={seoTitle} description={seoDescription} jsonLd={[breadcrumb, articleLd, faqLd]} />
 
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={heroRef}
+          className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h1 className="text-4xl md:text-5xl font-bold">
             {t('pillar_fcl_lcl:hero_h1', 'FCL vs LCL — Méthode de décision')}
           </h1>
@@ -125,7 +134,12 @@ const PillarFCLvsLCL: FC = () => {
         </div>
       </section>
 
-      <article className="prose prose-lg max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article
+        ref={articleRef}
+        className={`prose prose-lg max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-all duration-700 ${
+          articleInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+      >
         {sections.map((section, idx) => (
           <div key={idx}>
             {section.h2 && <h2>{section.h2}</h2>}

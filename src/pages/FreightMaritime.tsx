@@ -8,6 +8,7 @@ import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type Advantage = {
   icon: LucideIcon;
@@ -118,6 +119,13 @@ const FreightMaritime: FC = () => {
     a3?: string;
   };
 
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: howRef, inView: howInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: advantagesRef, inView: advantagesInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: lclRef, inView: lclInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: destinationsRef, inView: destinationsInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: finalRef, inView: finalInView } = useInViewAnimation<HTMLDivElement>();
+
   return (
     <div className="pt-16">
       <SEO
@@ -223,8 +231,9 @@ const FreightMaritime: FC = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="animate-fade-in">
-            <div className="flex items-center mb-6">
+         <<div
+            ref={heroRef}
+            className={`transition-allems-center mb-6">
               <Ship size={48} className="text-accent-400 mr-4" aria-hidden="true" />
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -270,8 +279,12 @@ const FreightMaritime: FC = () => {
       {/* Comment ça marche ? */}
       {howItems.length > 0 && (
         <section className="py-10 bg-white border-b border-gray-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+          <div ref={howRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              className={`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 transition-all duration-700 ${
+                howInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+            >
               <h2 className="text-2xl md:text-3xl font-bold text-primary-900">
                 {howItWorks.title}
               </h2>
@@ -288,7 +301,13 @@ const FreightMaritime: FC = () => {
                 return (
                   <div
                     key={item.title || index}
-                    className="bg-gray-50 rounded-xl px-6 py-5 shadow-sm flex items-start gap-4"
+                    className={`bg-gray-50 rounded-xl px-6 py-5 shadow-sm flex items-start gap-4 transition-all duration-700 ${
+                      howInView
+                        ? `animate-slide-up opacity-100 translate-y-0 ${
+                            index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-150' : 'animate-delay-300'
+                          }`
+                        : 'opacity-0 translate-y-4'
+                    }`}
                   >
                     <div className="w-11 h-11 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
                       <Icon size={22} className="text-accent-700" aria-hidden="true" />
@@ -315,8 +334,12 @@ const FreightMaritime: FC = () => {
 
       {/* Avantages */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div ref={advantagesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className={`text-center mb-16 transition-all duration-700 ${
+              advantagesInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {t('why.title')}
             </h2>
@@ -329,7 +352,13 @@ const FreightMaritime: FC = () => {
             {advantages.map((advantage, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : 'animate-delay-400'}`}
+                className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                  advantagesInView
+                    ? `animate-slide-up opacity-100 translate-y-0 ${
+                        index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : 'animate-delay-400'
+                      }`
+                    : 'opacity-0 translate-y-4'
+                }`}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center">
                   <advantage.icon size={32} className="text-white" aria-hidden="true" />
@@ -451,8 +480,12 @@ const FreightMaritime: FC = () => {
 
       {/* LCL - Service de consolidation */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div ref={lclRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className={`text-center mb-12 transition-all duration-700 ${
+              lclInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {lcl.title || t('freight:hero.subtitle')}
             </h2>
@@ -468,7 +501,13 @@ const FreightMaritime: FC = () => {
               {lclBlocks.map((block, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
+                  className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-700 ${
+                    lclInView
+                      ? `animate-slide-up opacity-100 translate-y-0 ${
+                          index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : 'animate-delay-400'
+                        }`
+                      : 'opacity-0 translate-y-4'
+                  }`}
                 >
                   {block.title && (
                     <h3 className="text-xl font-bold text-primary-900 mb-4">
@@ -495,7 +534,11 @@ const FreightMaritime: FC = () => {
           )}
 
           {lcl.cta_title && (
-            <div className="max-w-3xl mx-auto text-center mb-10">
+            <div
+              className={`max-w-3xl mx-auto text-center mb-10 transition-all duration-700 ${
+                lclInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+            >
               <h3 className="text-2xl font-bold text-primary-900 mb-4">
                 {lcl.cta_title}
               </h3>
@@ -607,8 +650,12 @@ const FreightMaritime: FC = () => {
 
       {/* Destinations principales */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div ref={destinationsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className={`text-center mb-16 transition-all duration-700 ${
+              destinationsInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
               {t('freight:destinations.title')}
             </h2>
@@ -621,7 +668,21 @@ const FreightMaritime: FC = () => {
             {destinations.map((destination, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-slide-up ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-150' : index === 2 ? 'animate-delay-300' : index === 3 ? 'animate-delay-450' : 'animate-delay-600'}`}
+                className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-700 ${
+                  destinationsInView
+                    ? `animate-slide-up opacity-100 translate-y-0 ${
+                        index === 0
+                          ? 'animate-delay-0'
+                          : index === 1
+                          ? 'animate-delay-150'
+                          : index === 2
+                          ? 'animate-delay-300'
+                          : index === 3
+                          ? 'animate-delay-450'
+                          : 'animate-delay-600'
+                      }`
+                    : 'opacity-0 translate-y-4'
+                }`}
               >
                 <div className="flex items-center mb-6">
                   <MapPin size={24} className="text-accent-700 mr-3" aria-hidden="true" />
@@ -709,7 +770,12 @@ const FreightMaritime: FC = () => {
       <section className="relative py-16 lg:py-24 bg-gradient-to-br from-primary-900 via-primary-900 to-primary-800 text-white overflow-hidden">
         {/* léger overlay décoratif */}
         <div className="pointer-events-none absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_#fb923c_0,_transparent_50%),radial-gradient(circle_at_bottom,_#0f172a_0,_transparent_55%)]" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+        <div
+          ref={finalRef}
+          className={`relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ${
+            finalInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('freight:final.title')}
           </h2>
@@ -717,7 +783,7 @@ const FreightMaritime: FC = () => {
             {t('freight:final.text')}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CtaButton
               href="contact"
               variant="primary"

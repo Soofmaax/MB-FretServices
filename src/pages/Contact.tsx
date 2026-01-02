@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath } from '../utils/paths';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -122,6 +123,12 @@ const Contact: FC = () => {
     'Contactez MB Fret Services pour un devis gratuit. Spécialiste du fret maritime en conteneurs (FCL/LCL), des déménagements internationaux et de l’envoi de véhicules vers le Congo et l’Angola. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
   );
 
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: methodsRef, inView: methodsInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: formRef, inView: formInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: guideRef, inView: guideInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: ctaRef, inView: ctaInView } = useInViewAnimation<HTMLDivElement>();
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
@@ -184,7 +191,12 @@ const Contact: FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
+          <div
+            ref={heroRef}
+            className={`text-center transition-all duration-700 ${
+              heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t('hero.title')}
             </h1>
@@ -197,10 +209,16 @@ const Contact: FC = () => {
 
       {/* Contact Methods */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={methodsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Email */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group">
+            <div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-0'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Mail size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -217,7 +235,13 @@ const Contact: FC = () => {
             </div>
 
             {/* Téléphone */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-200">
+            <div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-200'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Phone size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -234,8 +258,11 @@ const Contact: FC = () => {
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-400">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+           <<div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-400'
+                  : 'opacity-0              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.whatsapp')}</h3>
@@ -253,8 +280,10 @@ const Contact: FC = () => {
             </div>
 
             {/* Bureau */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-600">
-              <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+           <<div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                               <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MapPin size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.office')}</h3>
@@ -271,7 +300,12 @@ const Contact: FC = () => {
 
       {/* Formulaire de contact */}
       <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={formRef}
+          className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            formInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 text-center">
             {t('hero.title')}
           </h2>
@@ -388,7 +422,12 @@ const Contact: FC = () => {
 
       {/* Guide pour demande de devis */}
       <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={guideRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            guideInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
               {t('guide.title')}
@@ -440,7 +479,12 @@ const Contact: FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          ref={ctaRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ${
+            ctaInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('cta.title')}
           </h2>

@@ -4,6 +4,7 @@ import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { useTranslation } from 'react-i18next';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type IncotermSubSection = {
   h3?: string;
@@ -97,12 +98,20 @@ const PillarIncoterms: FC = () => {
     returnObjects: true,
   }) as IncotermSection[];
 
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
+
   return (
     <div className="pt-16">
       <SEO title={seoTitle} description={seoDescription} jsonLd={[breadcrumb, articleLd, faqLd]} />
 
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={heroRef}
+          className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h1 className="text-4xl md:text-5xl font-bold">{t('pillar_incoterms:hero_h1')}</h1>
           <p className="mt-4 text-xl text-gray-100">
             {t('pillar_incoterms:hero_intro')}
@@ -124,7 +133,12 @@ const PillarIncoterms: FC = () => {
         </div>
       </section>
 
-      <article className="prose prose-lg max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article
+        ref={articleRef}
+        className={`prose prose-lg max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-all duration-700 ${
+          articleInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+      >
         {sections.map((sec, idx) => (
           <div key={`sec-${idx}`}>
             {sec.h2 && <h2>{sec.h2}</h2>}

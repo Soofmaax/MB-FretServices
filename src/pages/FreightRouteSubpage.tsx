@@ -5,6 +5,7 @@ import { detectLangFromPath, keyFromPath, pathForLang, type RouteKey } from '../
 import CtaButton from '../components/CtaButton';
 import LocalizedLink from '../components/LocalizedLink';
 import { useTranslation } from 'react-i18next';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type SubTopic = 'fcl_lcl' | 'customs' | 'checklist';
 type Country = 'congo';
@@ -108,6 +109,8 @@ const FreightRouteSubpage: FC = () => {
       )
     : []) as Array<Record<string, unknown>>;
 
+  const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
+
   return (
     <div className="pt-16">
       <SEO
@@ -118,7 +121,12 @@ const FreightRouteSubpage: FC = () => {
       />
 
       <section className="py-12 lg:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={articleRef}
+          className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            articleInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <p className="text-sm text-gray-500 mb-2">
             <a href={parentUrl} className="text-accent-600 hover:text-accent-700">
               {labels?.back_to_route || 'Back to route page'}

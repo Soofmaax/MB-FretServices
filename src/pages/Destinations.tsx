@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type Region = {
   name: string;
@@ -46,6 +47,10 @@ const Destinations: FC = () => {
 
   const regions = t('regions', { returnObjects: true }) as Region[];
 
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: regionsRef, inView: regionsInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: otherRef, inView: otherInView } = useInViewAnimation<HTMLDivElement>();
+
   return (
     <div className="pt-16">
       <SEO
@@ -81,7 +86,12 @@ const Destinations: FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
+          <div
+            ref={heroRef}
+            className={`text-center transition-all duration-700 ${
+              heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t('hero.title')}
             </h1>
@@ -94,10 +104,14 @@ const Destinations: FC = () => {
 
       {/* Routes par région */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={regionsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {regions.map((region, regionIndex) => (
             <div key={regionIndex} className="mb-16 last:mb-0">
-              <div className="text-center mb-12">
+              <div
+                className={`text-center mb-12 transition-all duration-700 ${
+                  regionsInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+              >
                 <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
                   {region.name}
                 </h2>
@@ -107,7 +121,19 @@ const Destinations: FC = () => {
                 {region.countries.map((country, countryIndex) => (
                   <div
                     key={countryIndex}
-                    className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 animate-slide-up ${countryIndex === 0 ? 'animate-delay-0' : countryIndex === 1 ? 'animate-delay-200' : countryIndex === 2 ? 'animate-delay-400' : 'animate-delay-600'}`}
+                    className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-700 ${
+                      regionsInView
+                        ? `animate-slide-up opacity-100 translate-y-0 ${
+                            countryIndex === 0
+                              ? 'animate-delay-0'
+                              : countryIndex === 1
+                              ? 'animate-delay-200'
+                              : countryIndex === 2
+                              ? 'animate-delay-400'
+                              : 'animate-delay-600'
+                          }`
+                        : 'opacity-0 translate-y-4'
+                    }`}
                   >
                     <div className="p-8">
                       <div className="flex items-center mb-6">
@@ -173,7 +199,12 @@ const Destinations: FC = () => {
 
       {/* Autres destinations */}
       <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          ref={otherRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ${
+            otherInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
             {t('other.not_listed_title')}
           </h2>

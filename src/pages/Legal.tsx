@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 const Legal: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -29,6 +30,8 @@ const Legal: FC = () => {
     'legal:seo_description',
     "Mentions légales de MB Fret Services : informations légales, responsabilités, propriété intellectuelle et conditions d'utilisation du site."
   );
+
+  const { ref: contentRef, inView: contentInView } = useInViewAnimation<HTMLDivElement>();
 
   return (
     <div className="pt-16">
@@ -64,7 +67,12 @@ const Legal: FC = () => {
         ]}
       />
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={contentRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            contentInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <div className="bg-white rounded-xl shadow-lg p-8 lg:p-12">
             <h1 className="text-4xl font-bold text-primary-900 mb-8">
               {t('page_title')}
