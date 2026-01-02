@@ -178,6 +178,11 @@ const FreightRoute: FC = () => {
     })),
   };
 
+  // Placeholder image for recent departures: currently reuse hero image.
+  // When real photos are available, you can replace this path with e.g.
+  // `/images/departs/france-congo-first.jpg` or `/images/departs/france-angola-first.jpg`.
+  const recentDepartureImage = `/images/${c.heroBase}.jpg`;
+
   return (
     <div className="pt-16">
       <SEO
@@ -680,6 +685,46 @@ const FreightRoute: FC = () => {
                 </div>
               </>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Bloc \"Nos premiers départs\" / \"Recent departures\" */}
+      <section className="py-12 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
+            {t('routes_main:headings.recent_departures', 'Nos premiers départs')}
+          </h2>
+          <p className="text-gray-700 mb-6">
+            {t(
+              'routes_main:headings.recent_departures_desc',
+              \"Nous afficherons ici les photos de nos premiers conteneurs au départ de la France vers __ROUTE__.\"
+            ).replace('__ROUTE__', routeLabel)}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 rounded-xl shadow-sm overflow-hidden">
+              <div className="relative h-56 bg-gray-100">
+                <ResponsiveImage
+                  src={recentDepartureImage}
+                  alt={t(
+                    'routes_main:headings.recent_departures_alt',
+                    'Photo de conteneur récent sur le corridor'
+                  ).replace('__ROUTE__', routeLabel)}
+                  width={800}
+                  height={450}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600">
+                  {t(
+                    'routes_main:headings.recent_departures_note',
+                    'Dès que vos premiers conteneurs seront partis, vous pourrez remplacer cette image par vos propres photos (chargement, scellés, départ portuaire).'
+                  )}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
