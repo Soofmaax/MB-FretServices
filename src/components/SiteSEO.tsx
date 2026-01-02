@@ -38,7 +38,7 @@ const SiteSEO: FC = () => {
         url: 'https://wa.me/33749235539',
         contactType: 'customer service',
         areaServed: ['FR', 'EU', 'AF', 'AS'],
-        availableLanguage: ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'de', 'it', 'sw'],
+        availableLanguage: ['fr', 'en', 'pt', 'ar', 'zh'],
       },
     ],
   };

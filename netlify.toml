@@ -21,8 +21,14 @@
 # Legacy root-level paths
 [[redirects]]
   from = "/"
+  to = "/pt"
+  status = 302
+  conditions = {Country = ["AO"]}
+
+[[redirects]]
+  from = "/"
   to = "/fr"
-  status = 301
+  status = 302
 
 [[redirects]]
   from = "/fret-maritime"

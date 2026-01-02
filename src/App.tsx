@@ -23,7 +23,7 @@ function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <Routes>
-        {/* Default language redirect */}
+        {/* Default language redirect (server also redirects / -> /fr, with Angola geolocated to /pt) */}
         <Route path="/" element={<Navigate to="/fr" replace />} />
         {/* Legacy redirect for old slug without language */}
         <Route path="/fret-maritime" element={<Navigate to="/fr/services/fret-maritime" replace />} />
