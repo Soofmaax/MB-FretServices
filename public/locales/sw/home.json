@@ -32,26 +32,14 @@
     {
       "country": "Kongo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Baharini kutoka Le Havre", "Kwa ndege kutoka Paris CDG"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["Baharini kutoka Le Havre", "Baharini kutoka Antwerp"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Baharini kutoka Antwerp", "Kwa ndege kutoka Marseille"]
-    },
-    {
-      "country": "China",
-      "city": "Shanghai",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Njia ya baharini ya Trans-Pacific", "Kwa ndege moja kwa moja"]
-    },
-    {
-      "country": "Uturuki",
-      "city": "Istanbul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Usafiri wa barabara", "Kwa ndege kutoka Lyon"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Baharini kutoka Antwerp", "Baharini kutoka Rotterdam"]
     }
   ],
   "final_cta_title": "Uko tayari kusafirisha mizigo yako?",

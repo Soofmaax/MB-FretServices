@@ -32,26 +32,14 @@
     {
       "country": "Congo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Marittimo da Le Havre", "Aereo da Parigi CDG"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["Marittimo da Le Havre", "Marittimo da Anversa"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Marittimo da Anversa", "Aereo da Marsiglia"]
-    },
-    {
-      "country": "Cina",
-      "city": "Shanghai",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Rotta marittima transpacifica", "Aereo diretto"]
-    },
-    {
-      "country": "Turchia",
-      "city": "Istanbul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Trasporto su strada", "Aereo da Lione"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Marittimo da Anversa", "Marittimo da Rotterdam"]
     }
   ],
   "final_cta_title": "Pronto a spedire le tue merci?",

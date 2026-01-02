@@ -32,13 +32,13 @@
     {
       "country": "Congo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/2516033/pexels-photo-2516033.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "image": "/images/hero-congo.jpg",
       "routes": ["Maritime depuis Le Havre", "Maritime depuis Anvers"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/4475924/pexels-photo-4475924.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "image": "/images/hero-angola.jpg",
       "routes": ["Maritime depuis Anvers", "Maritime depuis Rotterdam"]
     }
   ],

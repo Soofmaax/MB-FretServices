@@ -74,7 +74,7 @@ const DestinationsShowcase: FC = () => {
           </p>
           <LocalizedLink
             to="destinations"
-            className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium transition-colors duration-200"
+            className="inline-flex items-center text-accent-700 hover:text-accent-800 font-medium underline underline-offset-4 transition-colors duration-200"
           >
             {t('destinations_more')}
             <ArrowRight size={18} className="ml-2" aria-hidden="true" />

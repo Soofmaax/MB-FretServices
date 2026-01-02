@@ -32,26 +32,14 @@
     {
       "country": "الكونغو",
       "city": "بوانت‑نوار",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["بحريًا من لو هافر", "جويًا من باريس CDG"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["بحريًا من لو هافر", "بحريًا من أنتويرب"]
     },
     {
       "country": "أنغولا",
       "city": "لواندا",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["بحريًا من أنتويرب", "جويًا من مرسيليا"]
-    },
-    {
-      "country": "الصين",
-      "city": "شنغهاي",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["مسار بحري عبر الهادئ", "رحلات جوية مباشرة"]
-    },
-    {
-      "country": "تركيا",
-      "city": "إسطنبول",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["نقل بري", "جويًا من ليون"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["بحريًا من أنتويرب", "بحريًا من مرسيليا/روتردام"]
     }
   ],
   "final_cta_title": "هل أنت مستعد لشحن بضاعتك؟",

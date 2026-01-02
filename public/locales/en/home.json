@@ -32,13 +32,13 @@
     {
       "country": "Republic of the Congo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/2516033/pexels-photo-2516033.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "image": "/images/hero-congo.jpg",
       "routes": ["Sea freight from Le Havre", "Sea freight from Antwerp"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/4475924/pexels-photo-4475924.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "image": "/images/hero-angola.jpg",
       "routes": ["Sea freight from Antwerp", "Sea freight from Rotterdam"]
     }
   ],

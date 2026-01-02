@@ -32,26 +32,14 @@
     {
       "country": "Congo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Marítimo a partir de Le Havre", "Aéreo a partir de Paris CDG"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["Marítimo a partir de Le Havre", "Marítimo a partir de Antuérpia"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Marítimo a partir de Antuérpia", "Aéreo a partir de Marselha"]
-    },
-    {
-      "country": "China",
-      "city": "Xangai",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Rota marítima transpacífico", "Aéreo direto"]
-    },
-    {
-      "country": "Turquia",
-      "city": "Istambul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Transporte rodoviário", "Aéreo a partir de Lyon"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Marítimo a partir de Antuérpia", "Marítimo a partir de Roterdão"]
     }
   ],
   "final_cta_title": "Pronto para enviar a sua mercadoria?",

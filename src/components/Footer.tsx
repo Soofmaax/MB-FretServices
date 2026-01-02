@@ -21,7 +21,7 @@ const Footer: FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-accent-400">{t('footer:brand')}</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-100 leading-relaxed">
               {t('footer:about')}
             </p>
             <div className="flex space-x-4">
@@ -86,27 +86,27 @@ const Footer: FC = () => {
             <h4 className="text-lg font-semibold text-accent-400">{t('footer:nav_title')}</h4>
             <ul className="space-y-2">
               <li>
-                <LocalizedLink to="" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="" className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2">
                   {t('footer:home')}
                 </LocalizedLink>
               </li>
               <li>
-                <LocalizedLink to="services" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="services" className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2">
                   {t('footer:services')}
                 </LocalizedLink>
               </li>
               <li>
-                <LocalizedLink to="destinations" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="destinations" className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2">
                   {t('footer:destinations')}
                 </LocalizedLink>
               </li>
               <li>
-                <LocalizedLink to="contact" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="contact" className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2">
                   {t('footer:contact')}
                 </LocalizedLink>
               </li>
               <li>
-                <LocalizedLink to="legal" className="text-gray-300 hover:text-accent-400 transition-colors duration-200">
+                <LocalizedLink to="legal" className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2">
                   {t('footer:legal')}
                 </LocalizedLink>
               </li>
@@ -115,7 +115,7 @@ const Footer: FC = () => {
               <button
                 type="button"
                 onClick={openCookieManager}
-                className="text-sm text-gray-500 hover:text-accent-400 underline underline-offset-4"
+                className="text-sm text-gray-200 hover:text-accent-300 underline underline-offset-4"
               >
                 {t('consent:manage', 'Gérer les cookies')}
               </button>
@@ -130,7 +130,7 @@ const Footer: FC = () => {
                 <Mail size={18} className="text-accent-400 flex-shrink-0" aria-hidden="true" />
                 <a
                   href="mailto:contact@mb-fretservices.com"
-                  className="text-gray-300 hover:text-accent-400 transition-colors duration-200"
+                  className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2"
                 >
                   contact@mb-fretservices.com
                 </a>
@@ -139,7 +139,7 @@ const Footer: FC = () => {
                 <Phone size={18} className="text-accent-400 flex-shrink-0" aria-hidden="true" />
                 <a
                   href="tel:+33749235539"
-                  className="text-gray-300 hover:text-accent-400 transition-colors duration-200"
+                  className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2"
                 >
                   +33 7 49 23 55 39
                 </a>
@@ -150,14 +150,14 @@ const Footer: FC = () => {
                   href="https://wa.me/33749235539"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-accent-400 transition-colors duration-200"
+                  className="text-gray-100 hover:text-accent-300 transition-colors duration-200 underline-offset-2"
                 >
                   {t('footer:whatsapp_label')}
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-accent-400 flex-shrink-0 mt-1" aria-hidden="true" />
-                <span className="text-gray-300">
+                <span className="text-gray-100">
                   {t('footer:city')}
                 </span>
               </li>
@@ -166,21 +166,21 @@ const Footer: FC = () => {
         </div>
 
         <div className="border-t border-primary-800 mt-8 pt-8 text-center">
-          <p className="text-gray-300">
+          <p className="text-gray-200">
             © {new Date().getFullYear()} MB Fret Services. {t('footer:rights')}
           </p>
-          <p className="text-gray-300 mt-2">
+          <p className="text-gray-200 mt-2">
             {t('footer:credits', 'Conception & développement:')}{' '}
             <a
               href="https://smarterlogicweb.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent-400 hover:text-accent-300"
+              className="text-accent-300 hover:text-accent-200 underline underline-offset-2"
             >
               SmarterLogic Web
             </a>
           </p>
-          <p className="text-gray-400 mt-1 text-sm">
+          <p className="text-gray-300 mt-1 text-sm">
             © 2025 — Développé avec <span aria-hidden="true">❤️</span> par <strong>SmarterLogicWeb</strong>
           </p>
         </div>

@@ -68,7 +68,7 @@ async function buildVariants(name, srcUrl) {
   if (!fs.existsSync(path.join(imagesDir, `${name}.jpg`))) {
     await sharp(buffer)
       .resize({ width: 1200 })
-      .jpeg({ quality: 82, progressive: true })
+      .jpeg({ quality: 75, progressive: true })
       .toFile(path.join(imagesDir, `${name}.jpg`));
   }
 
@@ -78,13 +78,13 @@ async function buildVariants(name, srcUrl) {
     const avifOut = path.join(imagesDir, `${name}-${w}.avif`);
 
     if (!fs.existsSync(jpgOut)) {
-      await sharp(buffer).resize({ width: w }).jpeg({ quality: 82, progressive: true }).toFile(jpgOut);
+      await sharp(buffer).resize({ width: w }).jpeg({ quality: 75, progressive: true }).toFile(jpgOut);
     }
     if (!fs.existsSync(webpOut)) {
-      await sharp(buffer).resize({ width: w }).webp({ quality: 80 }).toFile(webpOut);
+      await sharp(buffer).resize({ width: w }).webp({ quality: 70 }).toFile(webpOut);
     }
     if (!fs.existsSync(avifOut)) {
-      await sharp(buffer).resize({ width: w }).avif({ quality: 50 }).toFile(avifOut);
+      await sharp(buffer).resize({ width: w }).avif({ quality: 40 }).toFile(avifOut);
     }
   }
 }
@@ -140,7 +140,7 @@ async function buildTintedFromPath(name, basePath, tintColor) {
 
   // Base fallback 1200 jpg
   if (!fs.existsSync(path.join(imagesDir, `${name}.jpg`))) {
-    await sharp(basePath).resize({ width: 1200 }).tint(tintColor).jpeg({ quality: 82, progressive: true }).toFile(path.join(imagesDir, `${name}.jpg`));
+    await sharp(basePath).resize({ width: 1200 }).tint(tintColor).jpeg({ quality: 75, progressive: true }).toFile(path.join(imagesDir, `${name}.jpg`));
   }
 
   for (const w of sizes) {
@@ -149,13 +149,13 @@ async function buildTintedFromPath(name, basePath, tintColor) {
     const avifOut = path.join(imagesDir, `${name}-${w}.avif`);
 
     if (!fs.existsSync(jpgOut)) {
-      await sharp(basePath).resize({ width: w }).tint(tintColor).jpeg({ quality: 82, progressive: true }).toFile(jpgOut);
+      await sharp(basePath).resize({ width: w }).tint(tintColor).jpeg({ quality: 75, progressive: true }).toFile(jpgOut);
     }
     if (!fs.existsSync(webpOut)) {
-      await sharp(basePath).resize({ width: w }).tint(tintColor).webp({ quality: 80 }).toFile(webpOut);
+      await sharp(basePath).resize({ width: w }).tint(tintColor).webp({ quality: 70 }).toFile(webpOut);
     }
     if (!fs.existsSync(avifOut)) {
-      await sharp(basePath).resize({ width: w }).tint(tintColor).avif({ quality: 50 }).toFile(avifOut);
+      await sharp(basePath).resize({ width: w }).tint(tintColor).avif({ quality: 40 }).toFile(avifOut);
     }
   }
 }

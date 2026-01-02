@@ -32,26 +32,14 @@
     {
       "country": "刚果",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["从勒阿弗尔出发的海运", "从巴黎 CDG 出发的空运"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["从勒阿弗尔出发的海运", "从安特卫普出发的海运"]
     },
     {
       "country": "安哥拉",
       "city": "罗安达",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["从安特卫普出发的海运", "从马赛出发的空运"]
-    },
-    {
-      "country": "中国",
-      "city": "上海",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["跨太平洋航线海运", "直飞空运"]
-    },
-    {
-      "country": "土耳其",
-      "city": "伊斯坦布尔",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["公路运输", "从里昂出发的空运"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["从安特卫普出发的海运", "从鹿特丹出发的海运"]
     }
   ],
   "final_cta_title": "准备好发货了吗？",

@@ -32,26 +32,14 @@
     {
       "country": "Congo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Marítimo desde Le Havre", "Aéreo desde París CDG"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["Marítimo desde Le Havre", "Marítimo desde Amberes"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Marítimo desde Amberes", "Aéreo desde Marsella"]
-    },
-    {
-      "country": "China",
-      "city": "Shanghái",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Ruta marítima transpacífica", "Aéreo directo"]
-    },
-    {
-      "country": "Turquía",
-      "city": "Estambul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Transporte por carretera", "Aéreo desde Lyon"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Marítimo desde Amberes", "Marítimo desde Róterdam"]
     }
   ],
   "final_cta_title": "¿Listo para enviar sus mercancías?",

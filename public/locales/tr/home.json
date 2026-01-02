@@ -32,26 +32,14 @@
     {
       "country": "Kongo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Le Havre'den denizyolu", "Paris CDG'den havayolu"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["Le Havre'den denizyolu", "Anvers'ten denizyolu"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Anvers'ten denizyolu", "Marsilya'dan havayolu"]
-    },
-    {
-      "country": "Çin",
-      "city": "Şanghay",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Pasifik aşırı deniz rotası", "Doğrudan hava"]
-    },
-    {
-      "country": "Türkiye",
-      "city": "İstanbul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Kara taşımacılığı", "Lyon'dan havayolu"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Anvers'ten denizyolu", "Rotterdam'dan denizyolu"]
     }
   ],
   "final_cta_title": "Yüklerinizi göndermeye hazır mısınız?",

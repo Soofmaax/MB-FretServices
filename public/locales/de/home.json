@@ -32,26 +32,14 @@
     {
       "country": "Kongo",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Seefracht ab Le Havre", "Luftfracht ab Paris CDG"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["Seefracht ab Le Havre", "Seefracht ab Antwerpen"]
     },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Seefracht ab Antwerpen", "Luftfracht ab Marseille"]
-    },
-    {
-      "country": "China",
-      "city": "Shanghai",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Transpazifische Seeroute", "Direkte Luftverbindung"]
-    },
-    {
-      "country": "Türkei",
-      "city": "Istanbul",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Straßentransport", "Luftfracht ab Lyon"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Seefracht ab Antwerpen", "Seefracht ab Rotterdam"]
     }
   ],
   "final_cta_title": "Bereit, Ihre Waren zu versenden?",
