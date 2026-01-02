@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "MB Fret Services – Sea Freight France–Congo & France–Angola | FCL & LCL Containers",
-    "description": "French B2B freight forwarder with 15+ years of experience, specialised in the France–Congo and France–Angola corridors. Sea freight in 20' and 40' containers (FCL/LCL), international moves, vehicle and motorbike shipping, maritime groupage, customs clearance and cargo insurance for your import‑export projects."
+    "description": "French freight forwarder specialised in the France–Congo and France–Angola corridors. Sea freight in 20' and 40' containers (FCL/LCL), international moves, vehicle and motorbike shipping, maritime groupage, customs clearance and cargo insurance for your import‑export projects."
   },
   "valueProps": {
     "title": "Why choose MB Fret Services?",
@@ -42,6 +42,24 @@
       "routes": ["Sea freight from Antwerp", "Sea freight from Rotterdam"]
     }
   ],
+  "commitments": {
+    "title": "Our commitments from day one",
+    "subtitle": "A young company, with clear standards on responsiveness, focus and communication.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Response to your quote or contact request within 24 business hours, with a first human conversation to clarify your project."
+      },
+      {
+        "label": "2 corridors",
+        "description": "A deliberate focus on the France–Congo (Pointe‑Noire) and France–Angola (Luanda) routes, to stay specialised rather than generic."
+      },
+      {
+        "label": "3 channels",
+        "description": "Reach us the way you prefer: WhatsApp, phone or email – no anonymous platform in the middle."
+      }
+    ]
+  },
   "final_cta_title": "Ready to ship your goods?",
   "final_cta_text": "Get a personalized quote in under 24 hours. Our experts analyse your needs to propose a reliable transport solution, with market‑aligned pricing and support at every step of your logistics project.",
   "whatsapp": "Contact us on WhatsApp"

@@ -42,6 +42,24 @@
       "routes": ["Marítimo a partir de Antuérpia", "Marítimo a partir de Roterdão"]
     }
   ],
+  "commitments": {
+    "title": "Os nossos compromissos desde o primeiro dia",
+    "subtitle": "Uma empresa jovem, mas com padrões claros de rapidez de resposta, especialização e comunicação.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Resposta ao seu pedido de orçamento ou contacto em menos de 24 horas úteis, com um primeiro contacto humano para clarificar o seu projeto."
+      },
+      {
+        "label": "2 corredores",
+        "description": "Foco assumido nas rotas França–Congo (Pointe‑Noire) e França–Angola (Luanda), para permanecer especialista e não generalista."
+      },
+      {
+        "label": "3 canais",
+        "description": "Pode falar connosco como preferir: WhatsApp, telefone ou email, sem plataforma anónima entre si e a equipa."
+      }
+    ]
+  },
   "final_cta_title": "Pronto para enviar a sua mercadoria?",
   "final_cta_text": "Obtenha um orçamento personalizado em menos de 24 horas. Os nossos especialistas acompanham-no em todas as etapas do seu projeto logístico.",
   "whatsapp": "Contacte-nos no WhatsApp"

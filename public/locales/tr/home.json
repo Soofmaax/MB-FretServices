@@ -42,6 +42,24 @@
       "routes": ["Anvers'ten denizyolu", "Rotterdam'dan denizyolu"]
     }
   ],
+  "commitments": {
+    "title": "İlk günden itibaren taahhütlerimiz",
+    "subtitle": "Genç bir şirketiz, ancak yanıt süresi, uzmanlaşma ve iletişim konusunda net standartlarımız var.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Teklif veya iletişim talebinize 24 iş saati içinde yanıt veriyoruz ve projenizi netleştirmek için ilk insan temasını sağlıyoruz."
+      },
+      {
+        "label": "2 koridor",
+        "description": "Fransa–Kongo (Pointe‑Noire) ve Fransa–Angola (Luanda) hatlarına odaklanarak genelci değil, uzman kalmayı tercih ediyoruz."
+      },
+      {
+        "label": "3 kanal",
+        "description": "Bize en rahat ettiğiniz şekilde ulaşın: WhatsApp, telefon veya e‑posta – arada anonim bir platform olmadan."
+      }
+    ]
+  },
   "final_cta_title": "Yüklerinizi göndermeye hazır mısınız?",
   "final_cta_text": "24 saatten kısa sürede kişisel teklif alın. Uzmanlarımız lojistik projenizin her aşamasında yanınızdadır.",
   "whatsapp": "WhatsApp üzerinden bize ulaşın"

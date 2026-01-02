@@ -42,6 +42,24 @@
       "routes": ["Seefracht ab Antwerpen", "Seefracht ab Rotterdam"]
     }
   ],
+  "commitments": {
+    "title": "Unsere Zusagen ab dem ersten Tag",
+    "subtitle": "Ein junges Unternehmen mit klaren Standards bei Reaktionszeit, Spezialisierung und Kommunikation.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Antwort auf Ihre Angebots- oder Kontaktanfrage innerhalb von 24 Arbeitsstunden – mit einem ersten persönlichen Austausch, um Ihr Projekt zu präzisieren."
+      },
+      {
+        "label": "2 Korridore",
+        "description": "Ein bewusstes Augenmerk auf die Routen Frankreich–Kongo (Pointe‑Noire) und Frankreich–Angola (Luanda), um spezialisiert statt beliebig zu bleiben."
+      },
+      {
+        "label": "3 Kanäle",
+        "description": "Sie erreichen uns, wie es Ihnen am liebsten ist: per WhatsApp, Telefon oder E‑Mail – ohne anonyme Plattform dazwischen."
+      }
+    ]
+  },
   "final_cta_title": "Bereit, Ihre Waren zu versenden?",
   "final_cta_text": "Erhalten Sie innerhalb von 24 Stunden ein individuelles Angebot. Unsere Experten begleiten Sie bei jedem Schritt Ihres Logistikprojekts.",
   "whatsapp": "Kontakt per WhatsApp"

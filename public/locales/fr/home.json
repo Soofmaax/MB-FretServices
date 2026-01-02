@@ -42,6 +42,24 @@
       "routes": ["Maritime depuis Anvers", "Maritime depuis Rotterdam"]
     }
   ],
+  "commitments": {
+    "title": "Nos engagements dès aujourd’hui",
+    "subtitle": "Une jeune société, mais avec des standards clairs sur la réactivité, la spécialisation et la communication.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Réponse à votre demande de devis ou de contact en moins de 24 heures ouvrées, avec un premier échange humain pour clarifier votre projet."
+      },
+      {
+        "label": "2 corridors",
+        "description": "Un focus assumé sur les routes France–Congo (Pointe-Noire) et France–Angola (Luanda), pour rester spécialiste plutôt que généraliste."
+      },
+      {
+        "label": "3 canaux",
+        "description": "Vous nous contactez comme vous préférez : WhatsApp, téléphone ou email, sans passer par une plateforme anonyme."
+      }
+    ]
+  },
   "final_cta_title": "Prêt à expédier vos effets personnels ou votre véhicule ?",
   "final_cta_text": "Obtenez un devis personnalisé en moins de 24h. Que vous prépariez un déménagement international, l’envoi d’une voiture ou d’une moto, ou quelques m³ d’effets personnels, nous vous proposons une solution de transport fiable avec des tarifs cohérents avec le marché et un accompagnement à chaque étape. Les professionnels et petites entreprises bénéficient des mêmes standards de suivi.",
   "whatsapp": "Nous contacter via WhatsApp"

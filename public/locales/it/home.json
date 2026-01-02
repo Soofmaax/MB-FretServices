@@ -42,6 +42,24 @@
       "routes": ["Marittimo da Anversa", "Marittimo da Rotterdam"]
     }
   ],
+  "commitments": {
+    "title": "I nostri impegni fin dal primo giorno",
+    "subtitle": "Un'azienda giovane, con standard chiari su tempi di risposta, specializzazione e comunicazione.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Risposta alla tua richiesta di preventivo o di contatto in meno di 24 ore lavorative, con un primo confronto diretto per chiarire il progetto."
+      },
+      {
+        "label": "2 corridoi",
+        "description": "Focus dichiarato sulle rotte Francia–Congo (Pointe‑Noire) e Francia–Angola (Luanda), per rimanere specialisti e non generalisti."
+      },
+      {
+        "label": "3 canali",
+        "description": "Puoi contattarci come preferisci: WhatsApp, telefono o email, senza piattaforme anonime tra te e il team."
+      }
+    ]
+  },
   "final_cta_title": "Pronto a spedire le tue merci?",
   "final_cta_text": "Ottieni un preventivo personalizzato in meno di 24 ore. I nostri esperti ti accompagnano in ogni fase del progetto logistico.",
   "whatsapp": "Contattaci su WhatsApp"

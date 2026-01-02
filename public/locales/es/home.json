@@ -42,6 +42,24 @@
       "routes": ["Marítimo desde Amberes", "Marítimo desde Róterdam"]
     }
   ],
+  "commitments": {
+    "title": "Nuestros compromisos desde el primer día",
+    "subtitle": "Una empresa joven, con estándares claros de rapidez de respuesta, especialización y comunicación.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Respuesta a su solicitud de presupuesto o contacto en menos de 24 horas hábiles, con un primer intercambio humano para aclarar su proyecto."
+      },
+      {
+        "label": "2 corredores",
+        "description": "Un enfoque decidido en las rutas Francia–Congo (Pointe‑Noire) y Francia–Angola (Luanda), para seguir siendo especialistas y no generalistas."
+      },
+      {
+        "label": "3 canales",
+        "description": "Puede comunicarse con nosotros como prefiera: WhatsApp, teléfono o correo electrónico, sin plataforma anónima de por medio."
+      }
+    ]
+  },
   "final_cta_title": "¿Listo para enviar sus mercancías?",
   "final_cta_text": "Obtenga un presupuesto personalizado en menos de 24 horas. Nuestros expertos le acompañan en cada etapa de su proyecto logístico.",
   "whatsapp": "Contactarnos por WhatsApp"

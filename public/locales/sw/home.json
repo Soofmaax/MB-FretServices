@@ -42,6 +42,24 @@
       "routes": ["Baharini kutoka Antwerp", "Baharini kutoka Rotterdam"]
     }
   ],
+  "commitments": {
+    "title": "Ahadi zetu tangu siku ya kwanza",
+    "subtitle": "Kampuni changa, lakini yenye viwango wazi vya mwitikio wa haraka, utaalam na mawasiliano.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Jibu kwa ombi lako la nukuu au la mawasiliano ndani ya saa 24 za kazi, pamoja na mazungumzo ya kwanza ya kibinadamu ili kufafanua mradi wako."
+      },
+      {
+        "label": "Koridori 2",
+        "description": "Mkazo maalum kwenye njia za Ufaransa–Kongo (Pointe‑Noire) na Ufaransa–Angola (Luanda), ili tubaki wataalamu badala ya kuwa wa jumla."
+      },
+      {
+        "label": "Njia 3 za mawasiliano",
+        "description": "Unaweza kuwasiliana nasi kwa njia yoyote unayoipenda: WhatsApp, simu au barua pepe – bila jukwaa lisilojulikana kati yako na timu."
+      }
+    ]
+  },
   "final_cta_title": "Uko tayari kusafirisha mizigo yako?",
   "final_cta_text": "Pata nukuu ya kibinafsi ndani ya saa 24. Wataalamu wetu watakuongoza katika kila hatua ya mradi wako wa vifaa.",
   "whatsapp": "Wasiliana nasi kupitia WhatsApp"
