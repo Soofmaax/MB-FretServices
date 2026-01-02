@@ -18,6 +18,7 @@ const root = path.resolve(projectRoot, '..');
 const distDir = path.join(root, 'dist');
 
 const ROUTES = [
+  '/',
   // FR
   '/fr',
   '/fr/services',
