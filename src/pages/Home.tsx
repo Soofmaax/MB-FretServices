@@ -29,7 +29,7 @@ const Home: FC = () => {
 
   const seoTitle = t(
     'home:seo.title',
-    'MB Fret Services - International transport between Europe, Asia and Africa'
+    'MB Fret Services - International transport between Europe and Africa'
   );
   const seoDescription = t(
     'home:seo.description',

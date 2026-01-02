@@ -10,7 +10,7 @@
   "maritime": {
     "title": "Transporte Marítimo",
     "subtitle": "Soluções económicas para grandes volumes",
-    "description": "A nossa experiência em transporte marítimo permite-nos oferecer soluções ideais para envios volumosos para África e Ásia. Gerimos todo o tipo de mercadorias com rastreamento completo.",
+    "description": "A nossa experiência em transporte marítimo permite-nos oferecer soluções ideais para envios volumosos para a África Central (Congo, Angola). Gerimos todo o tipo de mercadorias com rastreamento completo.",
     "features": [
       "Contentores de 20' e 40' (FCL)",
       "Groupage (LCL) para pequenos volumes",
@@ -34,7 +34,7 @@
       "Rastreamento GPS em tempo real",
       "Seguro contra todos os riscos incluído"
     ],
-    "destinations": "Servido: China, Turquia, Marrocos, Tunísia, países de África Central"
+    "destinations": "Servido: Turquia, Marrocos, Tunísia, países de África Central"
   },
   "customs": {
     "title": "Desalfandegamento",
@@ -88,7 +88,7 @@
     "read": "Ler o guia",
     "incoterms": {
       "title": "Incoterms 2020 — Guia completo",
-      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos China/Turquia."
+      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos em fluxos para o Congo, Angola e Turquia."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — Como decidir?",

@@ -87,6 +87,22 @@
   to = "/pt/servicos/frete-maritimo"
   status = 301
 
+# Legacy France–China route URLs: redirect to generic maritime pages
+[[redirects]]
+  from = "/fr/services/fret-maritime/france-chine*"
+  to = "/fr/services/fret-maritime"
+  status = 301
+
+[[redirects]]
+  from = "/en/services/maritime-freight/france-china*"
+  to = "/en/services/maritime-freight"
+  status = 301
+
+[[redirects]]
+  from = "/pt/servicos/frete-maritimo/franca-china*"
+  to = "/pt/servicos/frete-maritimo"
+  status = 301
+
 # SPA fallback: route all other paths to index.html
 [[redirects]]
   from = "/*"

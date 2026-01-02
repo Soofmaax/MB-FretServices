@@ -1,8 +1,8 @@
 {
   "title": "Incoterms 2020 — Complete guide (FOB, CIF…) | MB Fret Services",
-  "description": "Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks and practical cases on China/Turkey/Congo. Choose between FOB and CIF, and measure impacts on insurance and lead times.",
+  "description": "Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks and practical cases on Congo/Angola/Turkey. Choose between FOB and CIF, and measure impacts on insurance and lead times.",
   "hero_h1": "Incoterms 2020 — Complete B2B guide",
-  "hero_intro": "Master cost and risk allocation in sea freight. Practical use cases applied to your key routes (France–China, France–Turkey, France–Congo) for better purchasing decisions.",
+  "hero_intro": "Master cost and risk allocation in sea freight. Practical use cases applied to your key routes (France–Congo, France–Angola, France–Turkey) for better purchasing decisions.",
   "hero_links": {
     "china": "France ↔ China",
     "turkey": "France ↔ Turkey",
@@ -71,9 +71,9 @@
       "h2": "Practical cases and key routes",
       "sub": [
         {
-          "h3": "France ↔ China",
+          "h3": "France ↔ Angola",
           "p": [
-            "Transit times vary (Le Havre/Marseille-Fos ↔ Shanghai/Ningbo/Shenzhen). For regular flows, FOB suits experienced importers who can negotiate freight and optimise CBM. CIF brings administrative comfort when speed of execution and budget visibility are priorities."
+            "Transit times vary (Le Havre/Antwerp ↔ Luanda). For regular flows to Angola, FOB suits experienced importers who can negotiate freight and optimise CBM. CIF brings administrative comfort when speed of execution and budget visibility are priorities."
           ]
         },
         {
@@ -128,7 +128,7 @@
       "h2": "Related guides & route pages",
       "p": [
         "Related guides: FCL vs LCL — how to decide?",
-        "Route pages: France–China, France–Turkey, France–Congo."
+        "Route pages: France–Congo, France–Angola, France–Turkey."
       ]
     }
   ],
@@ -138,7 +138,7 @@
       "a": "FOB: the seller bears costs/risks up to loading on board. CIF: includes cost, insurance and freight to the port of arrival. In B2B, CIF offers predictability on total cost, while FOB offers more control for the importer."
     },
     {
-      "q": "Which Incoterms should I prefer for imports from China?",
+      "q": "Which Incoterms should I prefer for imports from Central Africa (Congo/Angola)?",
       "a": "FOB and CIF are the most commonly used. The choice depends on desired control, ability to manage main carriage, and insurance needs."
     },
     {
