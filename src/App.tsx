@@ -318,7 +318,7 @@ function App() {
           <Route
             path="guias/precos-conteiner-angola"
             element={
-             < Suspense fallback={null={null}>
+              <Suspense fallback={null}>
                 <PillarContainerPricing />
               </Suspense>
             }

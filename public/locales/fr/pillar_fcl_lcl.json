@@ -80,12 +80,6 @@
       "h2": "Cas d’usage par route",
       "sub": [
         {
-          "h3": "France ↔ Congo",
-          "p": [
-            "Groupages LCL pertinents pour les petits volumes (colis, palettes, effets personnels) avec ramassage possible sur plusieurs hubs en France. Dès que la valeur ou le volume augmentent, basculer au FCL réduit les manipulations et sécurise délais et qualité."
-          ]
-        },
-        {
           "h3": "France ↔ Angola",
           "p": [
             "LCL efficace pour colis, bagages ou envois tests; le FCL devient la solution privilégiée dès que vous combinez déménagements, marchandises B2B et éventuellement véhicules ou motos dans un même conteneur, avec une assurance ad valorem dédiée."

@@ -19,7 +19,7 @@
       "h2": "Key parameters that drive your container cost",
       "ul": [
         "Container type: 20' or 40', Dry, High Cube, Reefer, Open Top, Flat Rack… each setup has a different cost structure.",
-        "Departure and arrival ports: Le Havre, Fos, Antwerp, Rotterdam to Pointe-Noire or Luanda, with varying surcharges depending on trade lanes and carriers.",
+        "Departure and arrival ports: Le Havre, Fos, Antwerp, Rotterdam to Luanda, with varying surcharges depending on trade lanes and carriers.",
         "FCL vs LCL service: a full container reserved for you, or LCL groupage shared with other shippers.",
         "Seasonality and capacity: peak seasons, holidays, port congestion and strikes have a direct impact on rate levels.",
         "Cargo nature: standard, dangerous goods (IMO), reefer, bulky, sensitive or high-value cargo.",
@@ -108,7 +108,7 @@
       "a": "By requesting a quote broken down by cost element and clarifying the quote validity, storage conditions, free time at port and each party’s responsibilities. As your freight forwarder, our role is precisely to help you anticipate those potential extra costs."
     }
   ],
-  "cta_title": "Ready to build your container budget to Congo or Angola?",
+  "cta_title": "Ready to build your container budget to Angola?",
   "cta_desc": "Tell us about your project (approximate volume, cargo types, departure port or city, destination, required services). We provide a detailed, readable quote for your 20' or 40' containers, in LCL or FCL.",
   "cta_label": "Request a pricing study"
 }

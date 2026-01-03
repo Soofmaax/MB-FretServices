@@ -11,11 +11,7 @@ export type RouteKey =
   | 'services_air_freight'
   | 'services_customs'
   | 'services_insurance'
-  | 'services_freight_france_china'
   | 'services_freight_france_angola'
-  | 'services_freight_france_china_fcl_lcl'
-  | 'services_freight_france_china_customs'
-  | 'services_freight_france_china_checklist'
   | 'pillar_incoterms'
   | 'pillar_fcl_lcl'
   | 'pillar_container_prices';
@@ -32,11 +28,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_air_freight: 'services/fret-aerien',
     services_customs: 'services/dedouanement',
     services_insurance: 'services/assurance-cargo',
-    services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_angola: 'services/fret-maritime/france-angola',
-    services_freight_france_china_fcl_lcl: 'services/fret-maritime/france-chine/fcl-lcl',
-    services_freight_france_china_customs: 'services/fret-maritime/france-chine/douane',
-    services_freight_france_china_checklist: 'services/fret-maritime/france-chine/checklist',
     pillar_incoterms: 'documentation/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
     pillar_container_prices: 'guides/prix-conteneur-angola',
@@ -52,11 +44,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
     services_insurance: 'services/cargo-insurance',
-    services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
-    services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
-    services_freight_france_china_customs: 'services/maritime-freight/france-china/customs',
-    services_freight_france_china_checklist: 'services/maritime-freight/france-china/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
     pillar_container_prices: 'guides/container-prices-angola',
@@ -72,11 +60,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_air_freight: 'servicos/frete-aereo',
     services_customs: 'servicos/despacho-aduaneiro',
     services_insurance: 'servicos/seguro-carga',
-    services_freight_france_china: 'servicos/frete-maritimo/franca-china',
     services_freight_france_angola: 'servicos/frete-maritimo/franca-angola',
-    services_freight_france_china_fcl_lcl: 'servicos/frete-maritimo/franca-china/fcl-lcl',
-    services_freight_france_china_customs: 'servicos/frete-maritimo/franca-china/despacho-aduaneiro',
-    services_freight_france_china_checklist: 'servicos/frete-maritimo/franca-china/checklist',
     pillar_incoterms: 'documentacao/incoterms-2020',
     pillar_fcl_lcl: 'guias/fcl-vs-lcl',
     pillar_container_prices: 'guias/precos-conteiner-angola',
@@ -118,7 +102,7 @@ const FREIGHT_ALIASES = new Set([
   'servizi/trasporto-marittimo',
   'leistungen/seefracht',
   'huduma/usafirishaji-wa-baharini',
-  'خدمات/الشحن-البحري'
+  'خدمات/الشحن-البحري',
 ]);
 const AIR_ALIASES = new Set([
   'services/fret-aerien',
@@ -137,32 +121,10 @@ const INSURANCE_ALIASES = new Set([
 ]);
 
 // Route-specific maritime pages aliases (multi-lang)
-const FREIGHT_FRANCE_CHINA_ALIASES = new Set<string>([
-  'services/fret-maritime/france-chine',
-  'services/maritime-freight/france-china',
-  'servicos/frete-maritimo/franca-china',
-]);
 const FREIGHT_FRANCE_ANGOLA_ALIASES = new Set<string>([
   'services/fret-maritime/france-angola',
   'services/maritime-freight/france-angola',
   'servicos/frete-maritimo/franca-angola',
-]);
-
-// Subpages per route (FCL/LCL, Customs, Checklist) – only France–China kept for backward compatibility
-const FR_CHINA_FCL_ALIASES = new Set<string>([
-  'services/fret-maritime/france-chine/fcl-lcl',
-  'services/maritime-freight/france-china/fcl-lcl',
-  'servicos/frete-maritimo/franca-china/fcl-lcl',
-]);
-const FR_CHINA_CUSTOMS_ALIASES = new Set<string>([
-  'services/fret-maritime/france-chine/douane',
-  'services/maritime-freight/france-china/customs',
-  'servicos/frete-maritimo/franca-china/despacho-aduaneiro',
-]);
-const FR_CHINA_CHECKLIST_ALIASES = new Set<string>([
-  'services/fret-maritime/france-chine/checklist',
-  'services/maritime-freight/france-china/checklist',
-  'servicos/frete-maritimo/franca-china/checklist',
 ]);
 
 // Pillar pages aliases (multi-lang)
@@ -179,10 +141,6 @@ const PILLAR_CONTAINER_PRICES_ALIASES = new Set<string>([
   'guides/prix-conteneur-angola',
   'guides/container-prices-angola',
   'guias/precos-conteiner-angola',
-  // Backward-compatible legacy slugs
-  'guides/prix-conteneur-congo-angola',
-  'guides/container-prices-congo-angola',
-  'guias/precos-conteiner-congo-angola',
 ]);
 
 function stripBase(pathname: string): string {
@@ -224,13 +182,7 @@ export function keyFromPath(pathname: string): RouteKey {
   if (INSURANCE_ALIASES.has(rest)) return 'services_insurance';
 
   // Route main pages
-  if (FREIGHT_FRANCE_CHINA_ALIASES.has(rest)) return 'services_freight_france_china';
   if (FREIGHT_FRANCE_ANGOLA_ALIASES.has(rest)) return 'services_freight_france_angola';
-
-  // Route subpages
-  if (FR_CHINA_FCL_ALIASES.has(rest)) return 'services_freight_france_china_fcl_lcl';
-  if (FR_CHINA_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_china_customs';
-  if (FR_CHINA_CHECKLIST_ALIASES.has(rest)) return 'services_freight_france_china_checklist';
 
   if (PILLAR_INCOTERMS_ALIASES.has(rest)) return 'pillar_incoterms';
   if (PILLAR_FCL_LCL_ALIASES.has(rest)) return 'pillar_fcl_lcl';
@@ -249,7 +201,7 @@ export function pathForLang(key: RouteKey, lang: Lang): string {
  * Transform a generic "to" value into the localized path.
  * Accepts:
  * - '' | '/' | 'services' | 'destinations' | 'contact' | 'legal'
- * - nested: 'services/fret-maritime', 'services/fret-maritime/france-chine'
+ * - nested: 'services/fret-maritime'
  * - pillars: 'documentation/incoterms-2020', 'guides/fcl-vs-lcl'
  */
 export function localizeTo(to: string, lang: Lang): string {

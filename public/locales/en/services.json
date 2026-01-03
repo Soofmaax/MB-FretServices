@@ -63,10 +63,6 @@
     "title": "Key routes",
     "discover": "Discover",
     "cards": {
-      "france_congo": {
-        "title": "France ↔ Congo",
-        "teaser": "FCL/LCL, major ports, optimized transit times, 24/7 tracking."
-      },
       "france_angola": {
         "title": "France ↔ Angola",
         "teaser": "FCL/LCL, regular departures to Luanda, controlled lead times and 24/7 tracking."
@@ -78,7 +74,7 @@
     "read": "Read the guide",
     "incoterms": {
       "title": "Incoterms 2020 — Complete guide",
-      "desc": "Understand responsibilities, costs and risks (FOB, CIF, DAP...). Practical cases on Africa flows (Congo, Angola)."
+      "desc": "Understand responsibilities, costs and risks (FOB, CIF, DAP...). Practical cases on Africa flows (Angola)."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — How to decide?",

@@ -4,9 +4,7 @@
   "hero_h1": "Incoterms 2020 — Complete B2B guide",
   "hero_intro": "Master cost and risk allocation in sea freight. Practical use cases applied to your key routes (France–Angola) for better purchasing decisions.",
   "hero_links": {
-    "china": "France ↔ China",
-    "turkey": "France ↔ Turkey",
-    "congo": "France ↔ Congo"
+    "angola": "France ↔ Angola"
   },
   "breadcrumb_label": "Incoterms 2020",
   "faq_title": "FAQ",
@@ -16,7 +14,7 @@
     "fcl_guide_label": "FCL vs LCL — how to decide?"
   },
   "cta_title": "Need help choosing your Incoterms?",
-  "cta_desc": "We help you align Incoterms, insurance and customs with your France ↔ Congo/Angola flows.",
+  "cta_desc": "We help you align Incoterms, insurance and customs with your France ↔ Angola flows.",
   "cta_label": "Talk to an Incoterms expert",
   "sections": [
     {
@@ -75,12 +73,6 @@
           "p": [
             "Transit times vary (Le Havre/Antwerp ↔ Luanda). For regular flows to Angola, FOB suits experienced importers who can negotiate freight and optimise CBM. CIF brings administrative comfort when speed of execution and budget visibility are priorities."
           ]
-        },
-        {
-          "h3": "France ↔ Congo",
-          "p": [
-            "On flows to West/Central Africa, documentation quality and local customs know-how are critical. CIF can reduce “hidden” coordination costs; FOB allows experienced buyers to control carriers and schedules more directly."
-          ]
         }
       ]
     },
@@ -122,7 +114,7 @@
       "h2": "Related guides & route pages",
       "p": [
         "Related guides: FCL vs LCL — how to decide?",
-        "Route pages: France–Congo, France–Angola."
+        "Route page: France–Angola."
       ]
     }
   ],
@@ -132,7 +124,7 @@
       "a": "FOB: the seller bears costs/risks up to loading on board. CIF: includes cost, insurance and freight to the port of arrival. In B2B, CIF offers predictability on total cost, while FOB offers more control for the importer."
     },
     {
-      "q": "Which Incoterms should I prefer for imports from Central Africa (Congo/Angola)?",
+      "q": "Which Incoterms should I prefer for imports on the France–Angola corridor?",
       "a": "FOB and CIF are the most commonly used. The choice depends on desired control, ability to manage main carriage, and insurance needs."
     },
     {

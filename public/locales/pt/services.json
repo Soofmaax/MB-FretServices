@@ -1,16 +1,16 @@
 {
   "hero": {
     "title": "Os Nossos Serviços de Transporte Internacional",
-    "subtitle": "Logística internacional ponta-a-ponta centrada no transporte marítimo em contentores para a África Central (Congo, Angola): FCL/LCL, desalfandegamento e seguro de carga para os seus envios."
+    "subtitle": "Logística internacional ponta-a-ponta centrada no transporte marítimo em contentores no corredor França–Angola: FCL/LCL, desalfandegamento e seguro de carga para os seus envios."
   },
   "seo": {
     "title": "Os nossos serviços – Transporte marítimo, desalfandegamento & seguro de carga | MB Fret Services",
-    "description": "Descubra os nossos serviços de transporte internacional: transporte marítimo em contentores (FCL/LCL) para o Congo e Angola, desalfandegamento profissional e seguro de carga para os seus fluxos B2B e pessoais."
+    "description": "Descubra os nossos serviços de transporte internacional: transporte marítimo em contentores (FCL/LCL) para Angola, desalfandegamento profissional e seguro de carga para os seus fluxos B2B e pessoais."
   },
   "maritime": {
     "title": "Transporte Marítimo",
     "subtitle": "Soluções económicas para grandes volumes",
-    "description": "A nossa experiência em transporte marítimo permite-nos oferecer soluções ideais para envios volumosos para a África Central (Congo, Angola). Gerimos todo o tipo de mercadorias com rastreamento completo.",
+    "description": "A nossa experiência em transporte marítimo permite-nos oferecer soluções ideais para envios volumosos entre a França (Paris / Normandia via Le Havre) e Angola (Luanda). Gerimos todo o tipo de mercadorias com rastreamento completo.",
     "features": [
       "Contentores de 20' e 40' (FCL)",
       "Groupage (LCL) para pequenos volumes",
@@ -19,7 +19,7 @@
       "Serviço porto-a-porto ou porta-a-porta",
       "Rastreamento em tempo real via plataforma web"
     ],
-    "destinations": "Principais destinos: Congo, Angola, Costa do Marfim, Camarões",
+    "destinations": "Destino principal: Angola (Luanda)",
     "more_link": "Saiba mais sobre transporte marítimo"
   },
   "customs": {
@@ -63,9 +63,9 @@
     "title": "Rotas principais",
     "discover": "Descobrir",
     "cards": {
-      "france_congo": {
-        "title": "França ↔ Congo",
-        "teaser": "FCL/LCL, portos principais, prazos otimizados, rastreamento 24/7."
+      "france_angola": {
+        "title": "França ↔ Angola",
+        "teaser": "FCL/LCL, partidas regulares para Luanda, prazos controlados e rastreamento 24/7."
       }
     }
   },
@@ -74,7 +74,7 @@
     "read": "Ler o guia",
     "incoterms": {
       "title": "Incoterms 2020 — Guia completo",
-      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos em fluxos para o Congo e Angola."
+      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos em fluxos entre a França e Angola."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — Como decidir?",

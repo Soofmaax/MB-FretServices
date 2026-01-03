@@ -19,7 +19,7 @@
       "h2": "Les paramètres qui font varier le prix de votre conteneur",
       "ul": [
         "Le type de conteneur : 20' ou 40', Dry, High Cube, Reefer, Open Top, Flat Rack… chaque configuration a un coût différent.",
-        "Les ports de départ et d’arrivée : Le Havre, Fos, Anvers, Rotterdam vers Pointe‑Noire ou Luanda, avec des surcharges variables selon les lignes.",
+        "Les ports de départ et d’arrivée : Le Havre, Fos, Anvers, Rotterdam vers Luanda, avec des surcharges variables selon les lignes.",
         "Le service FCL ou LCL : conteneur complet réservé pour vous ou groupage partagé avec d’autres expéditeurs.",
         "La saisonnalité et la capacité : haute saison, fêtes, congés, congestions portuaires et grèves impactent les niveaux de prix.",
         "La nature de la marchandise : standard, dangereuse (IMO), réfrigérée, volumineuse, sensible ou de forte valeur.",
@@ -108,7 +108,7 @@
       "a": "En demandant un devis détaillé par poste et en clarifiant la durée de validité de l’offre, les conditions de stockage, les délais de franchise au port et les responsabilités de chaque partie. Notre rôle de transitaire est justement de vous aider à anticiper ces coûts potentiels."
     }
   ],
-  "cta_title": "Prêt à construire votre budget conteneur vers le Congo ou l’Angola ?",
+  "cta_title": "Prêt à construire votre budget conteneur vers l’Angola ?",
   "cta_desc": "Transmettez‑nous votre projet (volume approximatif, type de biens, port ou ville de départ, destination, services souhaités). Nous vous remettons une cotation détaillée et lisible pour vos conteneurs 20' ou 40', en LCL ou FCL.",
   "cta_label": "Demander une étude de prix"
 }

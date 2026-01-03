@@ -60,7 +60,7 @@
       "DAP/DDP: prise en charge étendue, fluidité opérationnelle, exigences douane/fiscalité"
     ],
     "delivered_cost_list": [
-      "Sea freight + surcharges (BAF, CAF, PSS)",
+      "Fret maritime + surcharges (BAF, CAF, PSS)",
       "THC origine/destination, BL, manutentions",
       "Pré/post‑acheminement route/fer",
       "Assurance, droits & taxes, frais de dossier"
@@ -77,93 +77,6 @@
     "cta_build_plan": "Construire mon plan de transport",
     "cta_whatsapp": "Nous contacter via WhatsApp",
     "cbm_note": "À titre indicatif : 20’ ≈ 33 m³, 40’ ≈ 67 m³. Les tolérances et limites de poids/volume dépendent de l’armateur et du service."
-  },
-  "france_congo": {
-    "label": "France ↔ Congo",
-    "title": "Transport & fret maritime France ↔ Congo (Pointe‑Noire) – Groupage, déménagement, véhicules",
-    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
-    "transit": "Délais indicatifs: 20–30 jours selon départs, escales et saison.",
-    "ports_from": ["Le Havre", "Marseille-Fos"],
-    "ports_to": ["Pointe‑Noire"],
-    "costs": [
-      "Vers Pointe‑Noire, le groupage LCL est très pertinent pour les petits volumes, effets personnels, bagages et colis B2B. Au‑delà d’environ 13–15 m³, le FCL devient généralement plus compétitif et plus prévisible en termes de délais.",
-      "Les coûts doivent s’analyser en coût total livré: fret maritime, surcharges, opérations portuaires (THC), pré/post‑acheminement et droits/taxes à l’import au Congo. Nous arbitrons avec vous entre LCL/FCL et ports de départ (France/Benelux) selon votre budget et vos jalons.",
-      "Que vous expédiiez des effets personnels, des colis e‑commerce, des palettes industrielles ou un déménagement complet avec véhicules, nous construisons un schéma de coût transparent en expliquant clairement ce qui est inclus (fret, surcharges, manutentions, pré/post‑acheminement, droits et taxes estimés)."
-    ],
-    "customs": [
-      "Contrôle documentaire rigoureux: facture détaillée, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur les droits & taxes avec des correspondants locaux à Pointe‑Noire."
-    ],
-    "insurance_risks": [
-      "Assurance cargo ad valorem: couverture du départ à la livraison",
-      "Conseils d’emballage export pour réduire avaries et litiges",
-      "Visibilité des jalons et relances proactives"
-    ],
-    "services_block": {
-      "title": "Services logistiques complets pour vos expéditions vers le Congo (Pointe‑Noire)",
-      "intro": "Pour vos flux vers Pointe‑Noire, nous ne nous contentons pas de réserver un conteneur : nous coordonnons l’ensemble de la chaîne logistique depuis la France et l’Europe jusqu’au port congolais, notamment :",
-      "items": [
-        "Enlèvements et livraisons de lots partiels (palettes, cartons, petits lots B2B, effets personnels) en France et au Benelux.",
-        "Pré- et post-acheminement de conteneurs FCL jusqu’au port de départ puis depuis le port de Pointe‑Noire, avec organisation des transports routiers lorsque cela est possible via notre réseau de partenaires.",
-        "Gestion de la documentation de transport (connaissement maritime, packing list, facture commerciale, certificat d’origine et documents spécifiques selon la nature des marchandises).",
-        "Formalités en douane export en France et accompagnement pour les formalités import au Congo via nos correspondants locaux.",
-        "Services de groupage maritime LCL vers Pointe‑Noire pour les volumes intermédiaires, avec possibilités de consolidation et d’entreposage en France ou au Benelux avant départ.",
-        "Gestion de flux d’export, d’import et, sur étude, d’opérations de cross trade impliquant le Congo.",
-        "Accompagnement sur les exigences locales spécifiques (documents, certificats, contraintes portuaires) en coordination avec les acteurs présents à Pointe‑Noire."
-      ]
-    },
-    "why_us": [
-      "Positionnement dédié sur le corridor France–Congo pour colis, marchandises B2B, déménagements, véhicules et motos.",
-      "Forte expertise LCL/colis vers Pointe‑Noire avec consolidations régulières.",
-      "Ramassage B2B dans les principaux hubs français et, sur étude, en Benelux.",
-      "Accompagnement documentaire et dédouanement local via des partenaires implantés à Pointe‑Noire."
-    ],
-    "use_cases": [
-      "Déménagements internationaux et effets personnels (cartons, mobilier, affaires de famille) en LCL ou FCL vers Pointe‑Noire, avec options de ramassage en France et Benelux.",
-      "Colis/petits lots: LCL groupé vers Pointe‑Noire avec visibilité des jalons et suivi proactif.",
-      "Expéditions B2B (palettes, pièces détachées, consommables, équipements) en LCL ou FCL selon volume et régularité des flux.",
-      "Équipements lourds et machines: FCL/Open Top ou équipements spéciaux après étude, avec ramassage orchestré.",
-      "Véhicules et motos: solutions sur mesure (Ro‑Ro ou conteneur) selon faisabilité, avec gestion documentaire et coordination à l’arrivée."
-    ],
-    "advice": {
-      "planning_title": "Groupage LCL & visibilité",
-      "planning": [
-        "Planifier les consolidations pour limiter l’attente entre départs",
-        "Assurer une traçabilité claire des colis et étiquetages",
-        "Valider en amont les exigences documentaires locales"
-      ],
-      "documentation_title": "Prévention des risques",
-      "documentation": [
-        "Emballage export renforcé, photos datées, scellés si nécessaire",
-        "Choisir FCL dès que la valeur/volume le justifie pour réduire manipulations",
-        "Coordonner le ramassage B2B sur des créneaux compatibles réception terminal"
-      ],
-      "kpis_title": "KPIs à suivre",
-      "kpis": [
-        "Taux de réclamations/avarie",
-        "Délai moyen de dédouanement",
-        "Respect des créneaux de livraison"
-      ]
-    },
-    "faq": [
-      { "q": "Le LCL est‑il adapté pour le Congo ?", "a": "Oui, le groupage est pertinent pour colis/volumes modestes. Nous opérons des consolidations régulières avec visibilité sur les jalons." },
-      { "q": "Assurez‑vous le ramassage et l’emballage ?", "a": "Ramassage B2B dans les hubs français; emballage export pour limiter les avaries et respecter les exigences portuaires." },
-      { "q": "Suivi et notifications: quel niveau de visibilité ?", "a": "Suivi en temps réel, mises à jour aux étapes clés (embarquement, transit, arrivée) et relances proactives." },
-      { "q": "Quelles pièces sont requises à l’import au Congo ?", "a": "BL, facture, PL, certificat d’origine si requis, et documents spécifiques selon la marchandise. Assistance au dédouanement disponible." },
-      { "q": "Recommandez‑vous une assurance ?", "a": "Oui, une police ad valorem est conseillée. Nous calibrons la couverture selon la valeur et la sensibilité des biens." },
-      { "q": "FCL vs LCL vers Pointe‑Noire: seuil de bascule ?", "a": "Autour de 13–15 m³, le FCL devient souvent compétitif et plus prévisible; en‑dessous, le LCL reste intéressant." },
-      {
-        "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers Pointe‑Noire ?",
-        "a": "Le coût d’un conteneur (20' ou 40') vers Pointe‑Noire dépend du port de départ (Le Havre, Fos, Benelux), de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance cargo). Nous détaillons toujours nos devis par poste (fret, surcharges, THC, droits & taxes estimés) afin que vous ayez une vision claire du coût total livré."
-      },
-      {
-        "q": "Quel délai prévoir pour un déménagement complet France → Congo ?",
-        "a": "En moyenne, il faut compter 20 à 30 jours de transit maritime vers Pointe‑Noire, auxquels s’ajoutent l’enlèvement, la mise en conteneur, le passage portuaire et le dédouanement à l’arrivée. Nous recommandons de prévoir une marge pour les contrôles éventuels et de nous contacter dès que vos dates approximatives de départ sont connues."
-      },
-      {
-        "q": "Proposez‑vous un pack déménagement + véhicule + assurance pour le Congo ?",
-        "a": "Oui, nous pouvons étudier un schéma combinant conteneur FCL (effets personnels + 1 ou 2 véhicules), dédouanement et assurance cargo ad valorem. L’objectif est de vous proposer un package lisible (conteneur, services portuaires, formalités, couverture) plutôt qu’un simple tarif « port à port » difficile à comparer."
-      }
-    ]
   },
   "france_angola": {
     "label": "France ↔ Angola",

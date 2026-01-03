@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Destinos - Transporte marítimo em contentores para Congo e Angola | MB Fret Services",
-    "description": "Transporte marítimo em contentores FCL/LCL da França e Europa para o Congo e Angola. Rotas marítimas regulares, prazos otimizados e orçamento personalizado em 24 horas."
+    "title": "Destinos - Transporte marítimo em contentores para Angola | MB Fret Services",
+    "description": "Transporte marítimo em contentores FCL/LCL da França e Europa para Angola. Rotas marítimas regulares, prazos otimizados e orçamento personalizado em 24 horas."
   },
   "hero": {
-    "title": "Destinos de Transporte Marítimo para a África Central",
-    "subtitle": "Rotas marítimas regulares em contentores FCL/LCL para o Congo e Angola a partir de portos franceses e europeus, com prazos otimizados e frequências adaptadas às suas necessidades."
+    "title": "Destino Angola (Luanda)",
+    "subtitle": "Rotas marítimas regulares em contentores FCL/LCL entre a França (Paris / Normandia via Le Havre) e Luanda, com prazos otimizados e frequências adaptadas às suas necessidades."
   },
   "labels": {
     "port_principal": "Porto principal:",
@@ -18,26 +18,32 @@
   },
   "regions": [
     {
-      "name": "África Central",
+      "name": "África Austral",
       "countries": [
-        {
-          "name": "Congo",
-          "capital": "Brazzaville",
-          "port": "Pointe-Noire",
-          "maritime": { "from": "Le Havre, Antuérpia", "duration": "18–22 dias", "frequency": "Semanal" },
-          "aerien": { "from": "Paris CDG, Lyon", "duration": "6–8 horas", "frequency": "Diária" },
-          "specialites": ["Veículos", "Máquinas industriais", "Produtos alimentares"]
-        },
         {
           "name": "Angola",
           "capital": "Luanda",
           "port": "Luanda",
-          "maritime": { "from": "Antuérpia, Roterdão", "duration": "20–25 dias", "frequency": "Bissemanal" },
-          "aerien": { "from": "Paris CDG, Marselha", "duration": "7–9 horas", "frequency": "5x/semana" },
-          "specialites": ["Equipamento médico", "Construção", "Eletrónica"]
+          "maritime": { "from": "Le Havre, Antuérpia, Roterdão", "duration": "20–25 dias", "frequency": "Semanal ou bi‑semanal" },
+          "specialites": ["Mudanças internacionais", "Veículos & motos", "Fluxos B2B"]
         }
       ]
     }
+  ],
+  "other": {
+    "not_listed_title": "Destino não listado?",
+    "not_listed_text": "A nossa rede de parceiros permite-nos estudar qualquer destino. Contacte-nos para uma análise personalizada do seu projeto.",
+    "fast_response": "Resposta Rápida",
+    "fast_response_desc": "Orçamento em 24h para qualquer destino",
+    "global_network": "Rede Global",
+    "global_network_desc": "Parceiros em mais de 50 países",
+    "tailored": "Soluções à Medida",
+    "tailored_desc": "Adaptadas às suas restrições específicas",
+    "cta_study": "Estudar o meu Destino",
+    "cta_whatsapp": "WhatsApp Directo",
+    "cta_for": "Pedir Orçamento para {{country}}"
+  }
+}
   ],
   "other": {
     "not_listed_title": "Destino não listado?",

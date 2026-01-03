@@ -80,12 +80,6 @@
       "h2": "Route-based use cases",
       "sub": [
         {
-          "h3": "France ↔ Congo",
-          "p": [
-            "LCL groupage is well suited to small volumes (parcels, pallets, personal effects) with pickup options across France. As value or sensitivity increase, switching to FCL reduces handling and helps secure both lead times and service quality."
-          ]
-        },
-        {
           "h3": "France ↔ Angola",
           "p": [
             "LCL works well for parcels, baggage or test shipments; FCL quickly becomes the preferred option as soon as you combine international moves, B2B cargo and possibly vehicles or motorbikes within the same container, supported by ad valorem insurance."
@@ -131,7 +125,7 @@
     {
       "h2": "Related guides",
       "p": [
-        "Tool: CBM calculator. Guides: Incoterms 2020 and route-specific pages (France–Congo, France–Angola)."
+        "Tool: CBM calculator. Guides: Incoterms 2020 and the France–Angola route page."
       ]
     }
   ],
