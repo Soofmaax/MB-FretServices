@@ -163,10 +163,9 @@ const FreightRoute: FC = () => {
   };
 
   // Placeholder image for recent departures:
-  // We point to dedicated paths so you can simply drop your own photos later
+  // We point to a dedicated path so you can simply drop your own photo later
   // without changing the routes in the code.
-  // Create these files under `public/images/departs/`:
-  // - france-congo-first.jpg
+  // Create this file under `public/images/departs/`:
   // - france-angola-first.jpg
   const recentDepartureImage = '/images/departs/france-angola-first.jpg';
 
