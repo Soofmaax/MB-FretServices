@@ -5,21 +5,21 @@
   },
   "valueProps": {
     "title": "Porquê escolher a MB Fret Services?",
-    "subtitle": "Combinamos experiência, tecnologia e uma rede global para oferecer soluções de transporte adaptadas às suas necessidades.",
+    "subtitle": "Transitário francês especializado em transporte marítimo em contentores para a África Central (Congo, Angola), com soluções claras para particulares e empresas.",
     "items": [
       {
         "title": "Transporte Marítimo",
-        "description": "Soluções económicas para envios volumosos para a África Central (Congo, Angola) com rastreamento em tempo real.",
+        "description": "Soluções económicas em contentores FCL/LCL a partir de portos franceses e europeus para o Congo e Angola, com rastreamento em tempo real.",
         "features": ["Contentores 20' e 40'", "FCL e LCL", "Porto a porto ou porta a porta"]
       },
       {
-        "title": "Transporte Aéreo",
-        "description": "Transporte rápido e seguro para mercadorias urgentes e de alto valor.",
-        "features": ["Entrega expressa", "Temperatura controlada", "Rastreamento GPS contínuo"]
+        "title": "Seguro de carga",
+        "description": "Cobertura ad valorem para mudanças, mercadorias B2B, veículos e motos nos corredores França–Congo e França–Angola, integrada no seu orçamento para uma visão clara do custo total entregue.",
+        "features": ["Cobertura ad valorem", "Gestão de sinistros", "Conselhos sobre embalagem para exportação"]
       },
       {
         "title": "Desalfandegamento",
-        "description": "Perícia completa em procedimentos aduaneiros para facilitar o seu comércio internacional.",
+        "description": "Perícia completa em procedimentos aduaneiros para facilitar o seu comércio internacional e as suas mudanças para a África Central.",
         "features": ["Declarações aduaneiras", "Conformidade regulamentar", "Apoio administrativo"]
       }
     ]
