@@ -27,12 +27,6 @@ const Destinations: FC = () => {
     fr: 'fr-FR',
     en: 'en-GB',
     pt: 'pt-PT',
-    ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
   };
   const langTag = langTagMap[lang] || 'fr-FR';
 
