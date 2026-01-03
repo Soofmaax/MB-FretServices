@@ -131,16 +131,16 @@
   ],
   "faq": [
     {
-      "q": "Which volume threshold justifies switching from LCL to FCL?",
-      "a": "In practice, around 13–15 m³, FCL often becomes more attractive economically and in terms of security. The decision still depends on port, seasonality and lead-time constraints."
+      "q": "I’m a company: FCL or LCL for my pallets and B2B cargo on the France–Angola corridor?",
+      "a": "For B2B flows, we start by estimating your volume (in m³ or number of pallets), weight, regularity and cargo sensitivity. Below roughly 13–15 m³, LCL is usually more attractive: you pay only for the volume you really use, at the cost of a bit more handling. As soon as volumes grow or cargo is high-value/sensitive, 20' or 40' FCL often becomes more relevant in cost per m³, lead-time control and risk management."
     },
     {
-      "q": "Is LCL riskier?",
-      "a": "Groupage implies additional handling. Export-grade packaging and ad valorem insurance significantly reduce risk. For sensitive or high-value cargo, FCL is usually recommended."
+      "q": "I’m moving to Angola: FCL or LCL for my personal effects and vehicle?",
+      "a": "For an international move, we assess your volume of personal effects (boxes, furniture, appliances, etc.) and whether a car or motorbike is included. For a small volume without a vehicle, LCL can be sufficient. As soon as you approach the 13–15 m³ range or combine personal effects and a vehicle in one shipment, a 20' or 40' FCL is usually the best option: one sealed container with packing, loading, ad valorem insurance and formalities integrated."
     },
     {
-      "q": "Can we mix LCL and other modes to speed up part of the flow?",
-      "a": "Yes, multimodality can be a useful lever to meet critical milestones (launch dates, key events). We can study scenarios that combine LCL by sea with other logistics solutions while keeping your container flows under control."
+      "q": "Which volume threshold do you usually recommend to switch from LCL to FCL?",
+      "a": "As a rule of thumb, around 13–15 m³ is where FCL often becomes more attractive, both for B2B pallets and for moves. However, the actual threshold also depends on ports, seasonality (peak season, congestion) and cargo value/sensitivity: we always compare FCL/LCL scenarios on total delivered cost before recommending an option."
     }
   ],
   "cta_compare": "Ready to compare FCL/LCL?",

@@ -1,4 +1,18 @@
 {
   "title": "Preço de um contentor 20' / 40' para Angola | MB Fret Services",
-  "description": "Entenda o que faz variar o preço de um contentor 20' ou 40' entre a França e Angola para cargas B2B e mudanças internacionais: tipo de contentor, portos, FCL/LCL, sazonalidade e serviços incluídos. Exemplos de configurações e método para construir um orçamento realista sem más surpresas."
+  "description": "Entenda o que faz variar o preço de um contentor 20' ou 40' entre a França e Angola para cargas B2B e mudanças internacionais: tipo de contentor, portos, FCL/LCL, sazonalidade e serviços incluídos. Exemplos de configurações e método para construir um orçamento realista sem más surpresas.",
+  "faq": [
+    {
+      "q": "Sou uma empresa: como é calculado o preço de um contentor 20' ou 40' para os meus fluxos B2B França–Angola?",
+      "a": "No contexto B2B, o custo de um contentor depende do tipo de contentor (20'/40', dry, high cube, reefer), dos portos de partida/chegada, da sazonalidade, da natureza da mercadoria e dos serviços incluídos (pré/pós‑transporte, manuseamento, desalfandegamento, seguro). O orçamento chega rapidamente a vários milhares de euros. Em vez de um preço único, detalhamos cada rubrica (frete, sobretaxas, THC, pré/pós, alfândega, seguro) para que compreenda e controle o seu custo total entregue."
+    },
+    {
+      "q": "Estou a preparar uma mudança para Angola: que orçamento devo prever para um contentor 20' ou 40'?",
+      "a": "Não existe uma tarifa única, pois o preço depende do seu volume real (efeitos pessoais, mobiliário, caixas), da eventual presença de um veículo e dos serviços desejados (recolha, embalagem, carregamento, alfândega, seguro). Uma mudança completa em contentor FCL 20' ou 40' representa normalmente um orçamento de vários milhares de euros. A abordagem mais eficaz é partilhar o seu projeto (volume estimado, cidade de partida, destino, serviços) para construirmos consigo um orçamento realista, rubrica por rubrica."
+    },
+    {
+      "q": "Porque é que dois orçamentos de contentor podem ser tão diferentes?",
+      "a": "Porque nem sempre cobrem o mesmo perímetro: alguns são apenas porto‑a‑porto, outros incluem recolha, formalidades aduaneiras, seguro e, por vezes, entrega no destino. Esclarecemos sistematicamente o que está incluído e o que fica a seu cargo para evitar mal‑entendidos e permitir uma comparação justa entre propostas."
+    }
+  ]
 }
