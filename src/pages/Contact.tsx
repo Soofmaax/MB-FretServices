@@ -105,12 +105,6 @@ const Contact: FC = () => {
     fr: 'fr-FR',
     en: 'en-GB',
     pt: 'pt-PT',
-    ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
   };
   const langTag = langTagMap[lang] || 'fr-FR';
 
@@ -258,11 +252,14 @@ const Contact: FC = () => {
             </div>
 
             {/* WhatsApp */}
-           <<div
+            <div
               className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
                 methodsInView
                   ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-400'
-                  : 'opacity-0              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.whatsapp')}</h3>
@@ -280,10 +277,14 @@ const Contact: FC = () => {
             </div>
 
             {/* Bureau */}
-           <<div
+            <div
               className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
                 methodsInView
-                               <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-600'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MapPin size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.office')}</h3>

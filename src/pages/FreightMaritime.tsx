@@ -231,9 +231,13 @@ const FreightMaritime: FC = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-         <<div
+          <div
             ref={heroRef}
-            className={`transition-allems-center mb-6">
+            className={`max-w-4xl transition-all duration-700 ${
+              heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
+            <div className="flex items-center mb-6">
               <Ship size={48} className="text-accent-400 mr-4" aria-hidden="true" />
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">

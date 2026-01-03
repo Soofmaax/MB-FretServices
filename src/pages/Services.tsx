@@ -133,8 +133,8 @@ const Services: FC = () => {
       </section>
 
       {/* Services Grid */}
-     <<section className="py-16 lg:py-24 bg-gray-50">
-       <<div ref={servicesRef} className="max-w-7xl mx-auto px-4
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div ref={servicesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {serviceDefs.map((def, index) => {
               const Icon = def.icon;
@@ -143,6 +143,7 @@ const Services: FC = () => {
               const description = t(`${def.key}.description`);
               const features = t(`${def.key}.features`, { returnObjects: true }) as string[];
               const destinations = t(`${def.key}.destinations`);
+
               return (
                 <div
                   key={def.key}
@@ -234,13 +235,9 @@ const Services: FC = () => {
                     <div className="relative rounded-xl overflow-hidden shadow-xl">
                       <ResponsiveImage
                         src={`https://images.pexels.com/photos/${
-                          index === 0 ? '906982' :
-                          index === 1 ? '723240' :
-                          index === 2 ? '7681091' : '416978'
+                          index === 0 ? '906982' : index === 1 ? '723240' : index === 2 ? '7681091' : '416978'
                         }/pexels-photo-${
-                          index === 0 ? '906982' :
-                          index === 1 ? '723240' :
-                          index === 2 ? '7681091' : '416978'
+                          index === 0 ? '906982' : index === 1 ? '723240' : index === 2 ? '7681091' : '416978'
                         }.jpeg?auto=compress&cs=tinysrgb&w=800`}
                         alt={`Service ${title}`}
                         width={800}

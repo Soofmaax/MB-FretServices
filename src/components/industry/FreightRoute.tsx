@@ -704,7 +704,7 @@ const FreightRoute: FC = () => {
           <p className="text-gray-700 mb-6">
             {t(
               'routes_main:headings.recent_departures_desc',
-              \"Nous afficherons ici les photos de nos premiers conteneurs au départ de la France vers __ROUTE__.\"
+              "Nous afficherons ici les photos de nos premiers conteneurs au départ de la France vers __ROUTE__."
             ).replace('__ROUTE__', routeLabel)}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
