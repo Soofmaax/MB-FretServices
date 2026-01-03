@@ -60,7 +60,7 @@ const SEO: FC<SEOProps> = ({
 
   const robotsMeta = robotsContent ?? (effectiveNoindex ? 'noindex,nofollow' : 'index,follow');
 
-  const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+  const dir = 'ltr';
 
   return (
     <Helmet htmlAttributes={{ lang: currentLang, dir }}>
