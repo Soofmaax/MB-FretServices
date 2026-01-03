@@ -20,8 +20,8 @@ const Contact: FC = () => {
   const defaultMessage =
     source === 'pillar_container_prices'
       ? lang === 'fr'
-        ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
-        : "Hello, I’m coming from the guide about the cost of a 20'/40' container to Congo / Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
+        ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
+        : "Hello, I’m coming from the guide about the cost of a 20'/40' container to Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
       : source === 'pillar_fcl_lcl'
       ? lang === 'fr'
         ? "Bonjour, je viens du guide FCL vs LCL. Voici mon projet (volume approximatif, type de marchandises, destination, contraintes de délais) pour que vous puissiez me conseiller sur le bon mode :"
@@ -59,8 +59,8 @@ const Contact: FC = () => {
   const subjectLabel =
     source === 'pillar_container_prices'
       ? lang === 'fr'
-        ? "Demande via guide prix conteneur 20'/40' Congo / Angola"
-        : "Request via container price guide 20'/40' Congo / Angola"
+        ? "Demande via guide prix conteneur 20'/40' Angola"
+        : "Request via container price guide 20'/40' Angola"
       : source === 'pillar_fcl_lcl'
       ? lang === 'fr'
         ? 'Demande via guide FCL vs LCL'
@@ -114,7 +114,7 @@ const Contact: FC = () => {
   );
   const seoDescription = t(
     'contact:seo.description',
-    'Contactez MB Fret Services pour un devis gratuit. Spécialiste du fret maritime en conteneurs (FCL/LCL), des déménagements internationaux et de l’envoi de véhicules vers le Congo et l’Angola. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
+    'Contactez MB Fret Services pour un devis gratuit. Spécialiste du fret maritime en conteneurs (FCL/LCL), des déménagements internationaux et de l’envoi de véhicules vers l’Angola. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
   );
 
   const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();

@@ -399,12 +399,12 @@ const FreightRoute: FC = () => {
                     {t('routes_main:links.fcl_understand', 'Understand FCL vs LCL')}
                   </LocalizedLink>
                   <LocalizedLink
-                    to="guides/prix-conteneur-congo-angola"
+                    to="guides/prix-conteneur-angola"
                     className="text-accent-600 hover:text-accent-700 font-medium"
                   >
                     {t(
                       'routes_main:links.pricing_guide',
-                      "Container price guide 20'/40' Congo / Angola"
+                      "Container price guide 20'/40' Angola"
                     )}
                   </LocalizedLink>
                 </div>
@@ -606,7 +606,9 @@ const FreightRoute: FC = () => {
 
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">{t('routes_main:headings.faq')}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
+            {t('routes_main:headings.faq')}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {(faq || []).map((f, idx) => (
               <div key={idx} className="bg-white rounded-lg p-6 shadow">
@@ -614,48 +616,6 @@ const FreightRoute: FC = () => {
                 <p className="text-gray-700">{f.a}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4"></div>
-        </div>
-      </section>
-
-      {/* Bloc \"Nos premiers départs\" / \"Recent departures\" */}
-      <section className="py-12 bg-white border-t border-gray-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">
-            {t('routes_main:headings.recent_departures', 'Nos premiers départs')}
-          </h2>
-          <p className="text-gray-700 mb-6">
-            {t(
-              'routes_main:headings.recent_departures_desc',
-              "Nous afficherons ici les photos de nos premiers conteneurs au départ de la France vers __ROUTE__."
-            ).replace('__ROUTE__', routeLabel)}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-50 rounded-xl shadow-sm overflow-hidden">
-              <div className="relative h-56 bg-gray-100">
-                <ResponsiveImage
-                  src={recentDepartureImage}
-                  alt={t(
-                    'routes_main:headings.recent_departures_alt',
-                    'Photo de conteneur récent sur le corridor'
-                  ).replace('__ROUTE__', routeLabel)}
-                  width={800}
-                  height={450}
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="p-4">
-                <p className="text-sm text-gray-600">
-                  {t(
-                    'routes_main:headings.recent_departures_note',
-                    'Dès que vos premiers conteneurs seront partis, vous pourrez remplacer cette image par vos propres photos (chargement, scellés, départ portuaire).'
-                  )}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

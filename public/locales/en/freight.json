@@ -35,7 +35,7 @@
   "advantages": [
     {
       "title": "Maritime Expertise",
-      "description": "Dedicated expertise in sea transport to Central Africa (Angola, Congo), with tailored support for your projects."
+      "description": "Dedicated expertise in sea transport from France to Angola, with tailored support for your projects."
     },
     {
       "title": "Controlled Lead Times",
@@ -110,7 +110,7 @@
       {
         "title": "Include customs and insurance in your LCL flows",
         "bullets": [
-          "Import/export customs clearance in Congo and Angola, with tailored documentary support.",
+          "Import/export customs clearance in Angola, with tailored documentary support.",
           "Possibility to insure your LCL shipments on an ad valorem basis from the very first cubic meter.",
           "Guidance on export packing to reduce risks in groupage."
         ]
@@ -166,7 +166,7 @@
       },
       {
         "q": "Can you advise on Incoterms?",
-        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) based on your container flows, risk tolerance and logistics setup on the Congo/Angola side."
+        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) based on your container flows, risk tolerance and logistics setup on the Angola side."
       }
     ],
     "hero": {
@@ -186,7 +186,7 @@
     },
     "links": {
       "maritime_hint": "Need to combine customs clearance, sea freight and cargo insurance on the same corridor?",
-      "maritime": "Sea freight France–Angica (Congo, Angola)",
+      "maritime": "Sea freight France–Angola",
       "insurance": "Cargo insurance for FCL/LCL containers"
     },
     "images": {
@@ -236,7 +236,7 @@
     "service_type": "Transport insurance",
     "faq": [
       {
-        "q": "Why insure a container to Congo or Angola?",
+        "q": "Why insure a container to Angola?",
         "a": "To cover risks of damage, loss or theft on high-value and sensitive flows (international moves, vehicles, B2B cargo). An ad valorem policy protects your cash flow and contractual commitments along the whole journey."
       },
       {
@@ -250,7 +250,7 @@
     ],
     "hero": {
       "title": "Cargo insurance",
-      "subtitle": "Secure your FCL/LCL containers to Congo and Angola with ad valorem coverage tailored to international moves, B2B cargo, vehicles and motorbikes.",
+      "subtitle": "Secure your FCL/LCL containers to Angola with ad valorem coverage tailored to international moves, B2B cargo, vehicles and motorbikes.",
       "cta_quote": "Request coverage"
     },
     "benefits": [

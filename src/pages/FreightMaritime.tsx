@@ -37,11 +37,11 @@ const FreightMaritime: FC = () => {
 
   const seoTitle = t(
     'freight:seo.title',
-    "Sea Freight to Africa - FCL LCL Container Transport | MB Fret Services"
+    'Sea freight France–Angola – FCL & LCL containers | MB Fret Services'
   );
   const seoDescription = t(
     'freight:seo.description',
-    "Professional sea freight to Africa: Congo, Angola, Côte d'Ivoire. 20' and 40' containers, FCL and LCL. Free quote within 24h. 15 years of expertise."
+    "Professional sea freight from France to Angola. 20' and 40' containers, FCL and LCL, for international moves, vehicles and B2B cargo. Free detailed quote within 24 hours."
   );
 
   const advData = t('freight:advantages', {
@@ -160,7 +160,7 @@ const FreightMaritime: FC = () => {
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: t('freight:hero.title', 'Sea Freight to Africa'),
+            name: t('freight:hero.title', 'Sea Freight France–Angola'),
             serviceType: t('freight:service_type', 'Sea freight'),
             provider: {
               '@type': 'Organization',
@@ -168,9 +168,9 @@ const FreightMaritime: FC = () => {
               url: SITE_URL,
             },
             areaServed: [
-        { '@type': 'Country', name: 'Congo' },
-        { '@type': 'Country', name: 'Angola' },
-      ],
+              { '@type': 'Country', name: 'France' },
+              { '@type': 'Country', name: 'Angola' },
+            ],
             availableChannel: {
               '@type': 'ServiceChannel',
               serviceLocation: { '@type': 'Place', name: 'France and Europe' },
@@ -631,19 +631,19 @@ const FreightMaritime: FC = () => {
                   {t(
                     'freight:costs_guide.hint',
                     lang === 'fr'
-                      ? "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers le Congo et l’Angola."
-                      : "For more detail on budgeting, see our guide dedicated to the cost of 20'/40' containers to Congo and Angola."
+                      ? "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers l’Angola."
+                      : "For more detail on budgeting, see our guide dedicated to the cost of 20'/40' containers to Angola."
                   )}
                 </p>
                 <LocalizedLink
-                  to="guides/prix-conteneur-congo-angola"
+                  to="guides/prix-conteneur-angola"
                   className="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-primary-900 text-white hover:bg-primary-800 text-sm font-semibold"
                 >
                   {t(
                     'freight:costs_guide.cta',
                     lang === 'fr'
-                      ? "Guide prix conteneur 20' / 40' Congo / Angola"
-                      : "Container price guide 20'/40' Congo / Angola"
+                      ? "Guide prix conteneur 20' / 40' Angola"
+                      : "Container price guide 20'/40' Angola"
                   )}
                 </LocalizedLink>
               </div>

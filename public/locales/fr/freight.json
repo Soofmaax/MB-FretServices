@@ -35,7 +35,7 @@
   "advantages": [
     {
       "title": "Expertise Maritime",
-      "description": "Expertise dédiée dans le transport maritime vers l'Afrique centrale (Angola, Congo) et un accompagnement personnalisé de vos projets."
+      "description": "Expertise dédiée dans le transport maritime depuis la France vers l’Angola et un accompagnement personnalisé de vos projets."
     },
     {
       "title": "Délais Maîtrisés",
@@ -48,7 +48,7 @@
   ],
   "segments": {
     "title": "Déménagement, véhicules ou marchandises ?",
-    "subtitle": "Une équipe dédiée pour vos projets personnels et professionnels vers l’Afrique centrale (Congo, Angola).",
+    "subtitle": "Une équipe dédiée pour vos projets personnels et professionnels entre la France et l’Angola.",
     "items": [
       {
         "title": "Déménagement international",
@@ -66,7 +66,7 @@
   },
   "services": {
     "title": "Nos services de fret maritime",
-    "subtitle": "Solutions complètes de transport maritime France–Afrique (FCL &amp; LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur les corridors France–Angola et France–Congo. Le conteneur complet (FCL) est idéal lorsque vous expédiez un volume important d’effets personnels, souvent avec un ou deux véhicules sur un même envoi. Nous traitons vos palettes, cartons, vrac sec, colis lourds ou hors gabarit en conteneurs dry, reefer, open top ou flat selon vos besoins.",
+    "subtitle": "Solutions complètes de transport maritime France–Angola (FCL &amp; LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur le corridor France–Angola. Le conteneur complet (FCL) est idéal lorsque vous expédiez un volume important d’effets personnels, souvent avec un ou deux véhicules sur un même envoi. Nous traitons vos palettes, cartons, vrac sec, colis lourds ou hors gabarit en conteneurs dry, reefer, open top ou flat selon vos besoins.",
     "list": [
       "Conteneurs 20' et 40' (FCL - Full Container Load)",
       "Groupage maritime (LCL - Less than Container Load)",
@@ -81,7 +81,7 @@
   },
   "lcl": {
     "title": "Fret LCL vers l’Angola",
-    "subtitle": "Service de consolidation maritime depuis la France et l’Europe vers Luandango et l’Angola.",
+    "subtitle": "Service de consolidation maritime depuis la France et l’Europe vers Luanda, en Angola.",
     "blocks": [
       {
         "title": "Optimiser vos coûts sans remplir un conteneur",
@@ -110,7 +110,7 @@
       {
         "title": "Intégrer douane et assurance dans vos envois LCL",
         "bullets": [
-          "Dédouanement import/export sur le Congo et l’Angola, avec conseil documentaire adapté.",
+          "Dédouanement import/export en Angola, avec conseil documentaire adapté.",
           "Possibilité d’assurer vos envois LCL en ad valorem dès le premier m³.",
           "Accompagnement sur l’emballage export pour limiter les risques en groupage."
         ]
@@ -166,7 +166,7 @@
       },
       {
         "q": "Pouvez-vous assister sur les Incoterms ?",
-        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) en fonction de vos flux conteneurs, de votre tolérance au risque et de l’organisation logistique côté Congo/Angola."
+        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) en fonction de vos flux conteneurs, de votre tolérance au risque et de l’organisation logistique côté Angola."
       }
     ],
     "hero": {
@@ -186,7 +186,7 @@
     },
     "links": {
       "maritime_hint": "Besoin de combiner dédouanement, fret maritime et assurance cargo sur le même corridor ?",
-      "maritime": "Fret maritime France–Afrique (Congo, Angola)",
+      "maritime": "Fret maritime France–Angola",
       "insurance": "Assurance cargo pour conteneurs FCL/LCL"
     },
     "images": {
@@ -230,7 +230,7 @@
     "service_type": "Assurance transport",
     "faq": [
       {
-        "q": "Pourquoi assurer un conteneur vers le Congo ou l’Angola ?",
+        "q": "Pourquoi assurer un conteneur vers l’Angola ?",
         "a": "Pour couvrir les risques d’avarie, de perte ou de vol sur des flux à forte valeur et à forte sensibilité (déménagements, véhicules, marchandises B2B). Une police ad valorem protège votre trésorerie et vos engagements contractuels tout au long du trajet."
       },
       {
@@ -275,7 +275,7 @@
   },
   "links": {
     "customs_insurance_hint": "Besoin de gérer douane et assurance sur le même corridor ?",
-    "customs_service": "Dédouanement France–Afrique (Congo, Angola)",
+    "customs_service": "Dédouanement France–Angola",
     "insurance_service": "Assurance cargo pour conteneurs FCL/LCL"
   },
   "images": {

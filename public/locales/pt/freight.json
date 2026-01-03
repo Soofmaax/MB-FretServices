@@ -72,7 +72,7 @@
   },
   "lcl": {
     "title": "Fret LCL para Angola",
-    "subtitle": "Serviço de consolidação marítima a partir da França e da Europa para o Congo e Angola.",
+    "subtitle": "Serviço de consolidação marítima a partir da França e da Europa para Angola.",
     "blocks": [
       {
         "title": "Otimize os custos sem encher um contentor completo",
@@ -101,7 +101,7 @@
       {
         "title": "Integrar desalfandegamento e seguro nos envios LCL",
         "bullets": [
-          "Desalfandegamento de importação/exportação no Congo e em Angola, com aconselhamento documental dedicado.",
+          "Desalfandegamento de importação/exportação em Angola, com aconselhamento documental dedicado.",
           "Possibilidade de segurar envios LCL em base ad valorem desde o primeiro metro cúbico.",
           "Apoio na embalagem para exportação a fim de reduzir riscos no groupage."
         ]
@@ -113,8 +113,8 @@
   },
   "customs": {
     "seo": {
-      "title": "Desalfandegamento & conformidade — Fluxos de contentores França ↔ África (Congo, Angola) | MB Fret Services",
-      "description": "Desalfandegamento de importação/exportação para contentores FCL/LCL nos corredores França ↔ Congo e França ↔ Angola. Representação aduaneira, cálculo de direitos & impostos, assistência documental e aconselhamento em Incoterms."
+      "title": "Desalfandegamento & conformidade — Fluxos de contentores França ↔ Angola | MB Fret Services",
+      "description": "Desalfandegamento de importação/exportação para contentores FCL/LCL no corredor França ↔ Angola. Representação aduaneira, cálculo de direitos & impostos, assistência documental e aconselhamento em Incoterms."
     },
     "breadcrumb_service_name": "Desalfandegamento",
     "service_name": "Desalfandegamento & conformidade importação/exportação",
@@ -162,10 +162,13 @@
     "cta_prefix": "Orçamento para "
   },
   "destinations_list": [
-    { "country": "Congo", "port": "Pointe-Noire", "duration": "18–22 dias", "frequency": "Semanal", "departure": "Le Havre, Antuérpia" },
-    { "country": "Angola", "port": "Luanda", "duration": "20–25 dias", "frequency": "Bissemanal", "departure": "Antuérpia, Roterdão" },
-    { "country": "Costa do Marfim", "port": "Abidjan", "duration": "12–15 dias", "frequency": "Diária", "departure": "Le Havre, Marselha" },
-    { "country": "Camarões", "port": "Douala", "duration": "15–18 dias", "frequency": "Bissemanal", "departure": "Antuérpia, Hamburgo" }
+    {
+      "country": "Angola",
+      "port": "Luanda",
+      "duration": "20–25 dias",
+      "frequency": "Bissemanal",
+      "departure": "Le Havre, Marseille-Fos, Antuérpia, Roterdão"
+    }
   ],
   "faq": {
     "title": "Perguntas Frequentes - Transporte Marítimo",
@@ -184,8 +187,8 @@
   },
   "insurance": {
     "seo": {
-      "title": "Seguro de carga — Contentores FCL/LCL para o Congo e Angola | MB Fret Services",
-      "description": "Seguro de transporte ad valorem para contentores FCL/LCL (mudanças internacionais, cargas B2B, veículos, motos) nos corredores França ↔ Congo e França ↔ Angola. Gestão de sinistros, aconselhamento sobre embalagem para exportação e integração no orçamento de frete para uma visão clara do custo total entregue."
+      "title": "Seguro de carga — Contentores FCL/LCL para Angola | MB Fret Services",
+      "description": "Seguro de transporte ad valorem para contentores FCL/LCL (mudanças internacionais, cargas B2B, veículos, motos) no corredor França ↔ Angola. Gestão de sinistros, aconselhamento sobre embalagem para exportação e integração no orçamento de frete para uma visão clara do custo total entregue."
     },
     "breadcrumb_service_name": "Seguro de carga",
     "service_name": "Seguro de carga – cobertura ad valorem",
