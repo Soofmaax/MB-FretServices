@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Destinos - Transporte marítimo em contentores para Angola | MB Fret Services",
-    "description": "Transporte marítimo em contentores FCL/LCL da França e Europa para Angola. Rotas marítimas regulares, prazos otimizados e orçamento personalizado em 24 horas."
+    "description": "Transporte marítimo em contentores FCL/LCL da França (Paris / Normandia via Le Havre) para Angola (Luanda). Rotas marítimas regulares, prazos otimizados e orçamento personalizado em 24 horas."
   },
   "hero": {
     "title": "Destino Angola (Luanda)",
@@ -24,7 +24,11 @@
           "name": "Angola",
           "capital": "Luanda",
           "port": "Luanda",
-          "maritime": { "from": "Le Havre, Antuérpia, Roterdão", "duration": "20–25 dias", "frequency": "Semanal ou bi‑semanal" },
+          "maritime": {
+            "from": "Le Havre, Antuérpia, Roterdão",
+            "duration": "20–25 dias",
+            "frequency": "Semanal ou bi‑semanal"
+          },
           "specialites": ["Mudanças internacionais", "Veículos & motos", "Fluxos B2B"]
         }
       ]
@@ -33,21 +37,6 @@
   "other": {
     "not_listed_title": "Destino não listado?",
     "not_listed_text": "A nossa rede de parceiros permite-nos estudar qualquer destino. Contacte-nos para uma análise personalizada do seu projeto.",
-    "fast_response": "Resposta Rápida",
-    "fast_response_desc": "Orçamento em 24h para qualquer destino",
-    "global_network": "Rede Global",
-    "global_network_desc": "Parceiros em mais de 50 países",
-    "tailored": "Soluções à Medida",
-    "tailored_desc": "Adaptadas às suas restrições específicas",
-    "cta_study": "Estudar o meu Destino",
-    "cta_whatsapp": "WhatsApp Directo",
-    "cta_for": "Pedir Orçamento para {{country}}"
-  }
-}
-  ],
-  "other": {
-    "not_listed_title": "Destino não listado?",
-    "not_listed_text": "A nossa rede global permite-nos estudar qualquer destino. Contacte-nos para uma análise personalizada do seu projeto.",
     "fast_response": "Resposta Rápida",
     "fast_response_desc": "Orçamento em 24h para qualquer destino",
     "global_network": "Rede Global",
