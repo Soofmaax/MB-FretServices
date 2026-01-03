@@ -2,7 +2,7 @@
   "title": "Incoterms 2020 — Guide complet (FOB, CIF…) | MB Fret Services",
   "description": "Comprendre les Incoterms 2020 pour le fret maritime B2B: responsabilités, coûts, risques, cas pratiques sur le corridor France–Angola. Choix FOB vs CIF, impacts assurance et délais.",
   "hero_h1": "Incoterms 2020 — Guide complet B2B",
-  "hero_intro": "Maîtrisez la répartition des coûts et des risques en fret maritime. Des cas pratiques appliqués à vos routes clés (France–Angola) pour des décisions d’achat éclairées.",
+  "hero_intro": "Maîtrisez la répartition des coûts et des risques en fret maritime B2B. Des cas pratiques appliqués à vos flux conteneurs France–Angola pour des décisions d’achat éclairées, que vous soyez importateur, industriel ou PME.",
   "hero_links": {
     "angola": "France ↔ Angola"
   },
@@ -120,7 +120,7 @@
   ],
   "faq": [
     { "q": "FOB ou CIF : quelle différence en pratique ?", "a": "FOB: le vendeur supporte les coûts/risques jusqu’à l’embarquement. CIF: inclut coût, assurance et fret jusqu’au port d’arrivée. En B2B, CIF apporte de la prévisibilité sur le coût total, FOB offre plus de contrôle à l’importateur." },
-    { "q": "Quels Incoterms privilégier pour une importation sur l’axe France–Angola ?", "a": "FOB et CIF sont les plus utilisés. Le choix dépend du contrôle souhaité, de la capacité à gérer la logistique principale, et des besoins d’assurance." },
+    { "q": "Quels Incoterms privilégier pour une importation sur l’axe France–Angola ?", "a": "En pratique, la majorité des importations B2B sur l’axe France–Angola se fait en FOB ou en CIF. FOB convient aux importateurs aguerris qui souhaitent choisir leur armateur, négocier directement leurs tarifs et piloter le transit. CIF apporte davantage de confort aux entreprises qui privilégient la prévisibilité budgétaire et un interlocuteur unique côté vendeur. Dans tous les cas, nous comparons plusieurs scénarios (FOB, CFR, CIF, voire DAP) sur le coût total livré de vos flux conteneurs avant de vous recommander un schéma." },
     { "q": "Les Incoterms influencent-ils le dédouanement ?", "a": "Ils ne changent pas la réglementation, mais déterminent qui prend en charge les démarches et à quel moment." },
     { "q": "Les Incoterms impactent-ils la responsabilité en cas d’avarie ?", "a": "Oui. Ils déterminent le point de transfert des risques. La bonne police d’assurance et la preuve documentaire sont clés." },
     { "q": "Peut-on changer d’Incoterm en cours de négociation ?", "a": "Oui, s’il est consigné contractuellement et que les effets sont intégrés dans le prix, le planning et les assurances." },
