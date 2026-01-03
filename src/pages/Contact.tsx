@@ -308,7 +308,7 @@ const Contact: FC = () => {
                 {source === 'pillar_container_prices'
                   ? t(
                       'contact:source_banner.container_prices',
-                      "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola."
+                      "Vous venez du guide sur le prix d'un conteneur 20'/40' vers l’Angola."
                     )
                   : source === 'pillar_fcl_lcl'
                   ? t('contact:source_banner.fcl_lcl', 'Vous venez du guide FCL vs LCL.')

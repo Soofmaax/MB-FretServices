@@ -30,11 +30,11 @@ const Customs: FC = () => {
 
   const seoTitle = t(
     'freight:customs.seo.title',
-    'Dédouanement & conformité — Flux conteneurs France ↔ Afrique (Congo, Angola) | MB Fret Services'
+    'Dédouanement & conformité — Flux conteneurs France ↔ Angola | MB Fret Services'
   );
   const seoDescription = t(
     'freight:customs.seo.description',
-    'Dédouanement import/export pour vos conteneurs FCL/LCL, représentation en douane et calcul des droits & taxes sur vos flux France ↔ Afrique (Congo, Angola). Assistance documentaire, Incoterms et conformité sur toute la chaîne.'
+    'Dédouanement import/export pour vos conteneurs FCL/LCL, représentation en douane et calcul des droits & taxes sur vos flux France ↔ Angola. Assistance documentaire, Incoterms et conformité sur toute la chaîne.'
   );
 
   const breadcrumb = {
@@ -61,7 +61,6 @@ const Customs: FC = () => {
     areaServed: [
       { '@type': 'Place', name: 'France' },
       { '@type': 'Place', name: 'European Union' },
-      { '@type': 'Place', name: 'Republic of the Congo' },
       { '@type': 'Place', name: 'Angola' },
     ],
   };
@@ -189,7 +188,7 @@ const Customs: FC = () => {
                 to={pathForLang('services_freight_maritime', lang)}
                 className="text-accent-700 hover:text-accent-800 font-medium"
               >
-                {t('freight:customs.links.maritime', 'Sea freight France–Africa (Congo, Angola)')}
+                {t('freight:customs.links.maritime', 'Sea freight France–Angola')}
               </LocalizedLink>
               {' • '}
               <LocalizedLink

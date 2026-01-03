@@ -54,7 +54,7 @@ const PillarContainerPricing: FC = () => {
         position: 3,
         name: t(
           'pillar_container_prices:breadcrumb_label',
-          "Prix d'un conteneur 20' / 40' vers le Congo et l’Angola"
+          "Prix d'un conteneur 20' / 40' vers l’Angola"
         ),
         item: SITE_URL + pathForLang('pillar_container_prices', lang),
       },
@@ -66,7 +66,7 @@ const PillarContainerPricing: FC = () => {
     '@type': 'Article',
     headline: t(
       'pillar_container_prices:hero_h1',
-      "Prix d'un conteneur 20' / 40' vers le Congo et l’Angola"
+      "Prix d'un conteneur 20' / 40' vers l’Angola"
     ),
     author: { '@type': 'Organization', name: 'MB Fret Services' },
     publisher: { '@type': 'Organization', name: 'MB Fret Services' },

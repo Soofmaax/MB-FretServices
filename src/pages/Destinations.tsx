@@ -36,7 +36,7 @@ const Destinations: FC = () => {
   );
   const seoDescription = t(
     'destinations:seo.description',
-    'Fret maritime en conteneurs vers le Congo et l’Angola. Routes régulières depuis la France et l’Europe, délais optimisés et devis personnalisé sous 24h.'
+    'Fret maritime en conteneurs vers l’Angola. Routes régulières depuis la France et l’Europe, délais optimisés et devis personnalisé sous 24h.'
   );
 
   const regions = t('regions', { returnObjects: true }) as Region[];

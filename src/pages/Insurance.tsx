@@ -29,11 +29,11 @@ const Insurance: FC = () => {
 
   const seoTitle = t(
     'freight:insurance.seo.title',
-    'Cargo insurance — FCL/LCL containers to Congo and Angola | MB Fret Services'
+    'Cargo insurance — FCL/LCL containers to Angola | MB Fret Services'
   );
   const seoDescription = t(
     'freight:insurance.seo.description',
-    'Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Congo and France ↔ Angola corridors. Claims handling and export packaging advice.'
+    'Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Angola corridor. Claims handling and export packaging advice.'
   );
 
   const breadcrumb = {
@@ -65,7 +65,6 @@ const Insurance: FC = () => {
     areaServed: [
       { '@type': 'Place', name: 'France' },
       { '@type': 'Place', name: 'European Union' },
-      { '@type': 'Place', name: 'Republic of the Congo' },
       { '@type': 'Place', name: 'Angola' },
     ],
   };
