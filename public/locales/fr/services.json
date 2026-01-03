@@ -1,16 +1,16 @@
 {
   "hero": {
     "title": "Nos Services de Transport International",
-    "subtitle": "Solutions complètes de logistique internationale centrées sur le fret maritime vers l’Afrique centrale (Congo, Angola) : conteneurs FCL/LCL, dédouanement et assurance cargo pour vos flux."
+    "subtitle": "Solutions complètes de logistique internationale centrées sur le fret maritime France–Angola : conteneurs FCL/LCL, dédouanement et assurance cargo pour vos flux."
   },
   "seo": {
-    "title": "Fret maritime France–Congo & France–Angola, dédouanement & assurance cargo | MB Fret Services",
-    "description": "Panorama de nos services : fret maritime en conteneurs (FCL/LCL) vers le Congo et l’Angola, dédouanement et assurance cargo pour vos flux B2B et personnels."
+    "title": "Fret maritime France–Angola, dédouanement & assurance cargo | MB Fret Services",
+    "description": "Panorama de nos services : fret maritime en conteneurs (FCL/LCL) vers l’Angola, dédouanement et assurance cargo pour vos flux B2B et personnels."
   },
   "maritime": {
     "title": "Fret Maritime",
     "subtitle": "Solutions économiques pour gros volumes",
-    "description": "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux vers l'Afrique (Congo, Angola). Nous gérons tous types de marchandises avec un suivi complet.",
+    "description": "Notre expertise en transport maritime nous permet de proposer des solutions optimales pour vos envois volumineux entre la France (Paris / Normandie via Le Havre) et l’Angola (Luanda). Nous gérons tous types de marchandises avec un suivi complet.",
     "features": [
       "Conteneurs 20' et 40' (FCL)",
       "Groupage (LCL) pour petits volumes",
@@ -19,7 +19,7 @@
       "Service port à port ou porte à porte",
       "Suivi en temps réel via plateforme web"
     ],
-    "destinations": "Principales destinations : Congo, Angola",
+    "destinations": "Principale destination : Angola (Luanda)",
     "more_link": "En savoir plus sur le fret maritime"
   },
   "customs": {

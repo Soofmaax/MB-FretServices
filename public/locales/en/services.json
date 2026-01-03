@@ -1,16 +1,16 @@
 {
   "hero": {
     "title": "Our International Transport Services",
-    "subtitle": "End-to-end international logistics focused on sea freight to Central Africa (Congo, Angola): FCL/LCL containers, customs clearance and cargo insurance for your flows."
+    "subtitle": "End-to-end international logistics focused on sea freight on the France–Angola corridor: FCL/LCL containers, customs clearance and cargo insurance for your flows."
   },
   "seo": {
-    "title": "Sea freight France–Congo & France–Angola, customs & cargo insurance | MB Fret Services",
-    "description": "Overview of our services: containerised sea freight (FCL/LCL) to Congo and Angola, professional customs clearance and cargo insurance for both B2B and personal flows."
+    "title": "Sea freight France–Angola, customs & cargo insurance | MB Fret Services",
+    "description": "Overview of our services: containerised sea freight (FCL/LCL) to Angola, professional customs clearance and cargo insurance for both B2B and personal flows."
   },
   "maritime": {
     "title": "Sea Freight",
     "subtitle": "Cost-effective solutions for large volumes",
-    "description": "Our sea freight expertise lets us offer optimal solutions for large shipments to Africa (Congo, Angola). We handle all types of cargo with full tracking.",
+    "description": "Our sea freight expertise lets us offer optimal solutions for large shipments between France (Paris / Normandy via Le Havre) and Angola (Luanda). We handle all types of cargo with full tracking.",
     "features": [
       "20' and 40' containers (FCL)",
       "Groupage (LCL) for small volumes",
@@ -19,7 +19,7 @@
       "Port-to-port or door-to-door service",
       "Real-time tracking via web platform"
     ],
-    "destinations": "Key destinations: Congo, Angola",
+    "destinations": "Key destination: Angola (Luanda)",
     "more_link": "Learn more about sea freight"
   },
   "customs": {

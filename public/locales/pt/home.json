@@ -1,45 +1,42 @@
 {
   "seo": {
-    "title": "MB Fret Services – Transporte marítimo em contentores França–Congo & França–Angola",
-    "description": "Transitário francês especializado em transporte marítimo em contentores (FCL/LCL) da França e Europa para o Congo e Angola. Mudanças internacionais, envio de veículos e cargas B2B, com desalfandegamento e seguro de carga incluídos e orçamento em menos de 24 horas."
+    "title": "MB Fret Services – Transporte marítimo em contentores França–Angola",
+    "description": "Transitário francês baseado entre Paris e a Normandia, especializado no corredor França–Angola. Transporte marítimo em contentores (FCL/LCL) entre a França (Paris / Normandia via Le Havre) e Luanda, para mudanças internacionais, envio de veículos e cargas B2B, com desalfandegamento e seguro de carga incluídos e orçamento em menos de 24 horas."
   },
   "valueProps": {
     "title": "Porquê escolher a MB Fret Services?",
-    "subtitle": "Transitário francês especializado em transporte marítimo em contentores para a África Central (Congo, Angola), com soluções claras para particulares e empresas.",
+    "subtitle": "Transitário francês especializado no corredor França–Angola. Ajudamos famílias, diáspora e pequenas empresas a expedir mudanças, efeitos pessoais, veículos e mercadorias entre Paris / Normandia e Luanda, combinando transporte marítimo, desalfandegamento e seguro de carga do orçamento à entrega.",
     "items": [
       {
         "title": "Transporte Marítimo",
-        "description": "Soluções económicas em contentores FCL/LCL a partir de portos franceses e europeus para o Congo e Angola, com rastreamento em tempo real.",
+        "description": "Soluções económicas de transporte marítimo França–Angola em contentores FCL/LCL a partir da França (Paris / Normandia via Le Havre) para Luanda, para mudanças, efeitos pessoais, veículos e fluxos B2B, com rastreamento em tempo real.",
         "features": ["Contentores 20' e 40'", "FCL e LCL", "Porto a porto ou porta a porta"]
       },
       {
         "title": "Seguro de carga",
-        "description": "Cobertura ad valorem para mudanças, mercadorias B2B, veículos e motos nos corredores França–Congo e França–Angola, integrada no seu orçamento para uma visão clara do custo total entregue.",
+        "description": "Cobertura ad valorem para mudanças, mercadorias B2B, veículos e motos com destino a Angola, integrada no seu orçamento para uma visão clara do custo total entregue.",
         "features": ["Cobertura ad valorem", "Gestão de sinistros", "Conselhos sobre embalagem para exportação"]
       },
       {
         "title": "Desalfandegamento",
-        "description": "Perícia completa em procedimentos aduaneiros para facilitar o seu comércio internacional e as suas mudanças para a África Central.",
+        "description": "Perícia completa em procedimentos aduaneiros para facilitar o seu comércio internacional e as suas mudanças entre a França e Angola.",
         "features": ["Declarações aduaneiras", "Conformidade regulamentar", "Apoio administrativo"]
       }
     ]
   },
-  "destinations_title": "Os nossos Destinos Principais",
-  "destinations_subtitle": "Servimos os principais mercados globais com soluções adaptadas a cada região e tipo de carga.",
-  "destinations_more": "Ver todos os destinos",
-  "destinations_need_specific": "Precisa de um destino específico? Analisamos todos os pedidos.",
+  "destinations_title": "O nosso destino prioritário",
+  "destinations_subtitle": "Centramos os nossos meios no corredor França–Angola (Luanda) a partir da França (Paris / Normandia via Le Havre), com soluções adaptadas a mudanças internacionais, efeitos pessoais, veículos e fluxos B2B.",
+  "destinations_more": "Ver detalhes do destino",
+  "destinations_need_specific": "Um projeto específico para Angola? Analisamos cada pedido em detalhe.",
   "showcase": [
-    {
-      "country": "Congo",
-      "city": "Pointe-Noire",
-      "image": "/images/hero-congo.jpg",
-      "routes": ["Marítimo a partir de Le Havre", "Marítimo a partir de Antuérpia"]
-    },
     {
       "country": "Angola",
       "city": "Luanda",
       "image": "/images/hero-angola.jpg",
-      "routes": ["Marítimo a partir de Antuérpia", "Marítimo a partir de Roterdão"]
+      "routes": [
+        "Marítimo a partir de Le Havre (via Paris / Normandia)",
+        "Marítimo a partir de Antuérpia / Roterdão consoante as partidas"
+      ]
     }
   ],
   "commitments": {

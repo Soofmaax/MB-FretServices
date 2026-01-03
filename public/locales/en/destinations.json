@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Destinations – Containerised sea freight to Congo and Angola | MB Fret Services",
-    "description": "Containerised sea freight to Congo and Angola. Regular departures from France and Europe, optimized lead times and personalized quotes within 24 hours."
+    "title": "Destination – Containerised sea freight to Angola | MB Fret Services",
+    "description": "Containerised sea freight between France (Paris / Normandy via Le Havre) and Angola (Luanda). Regular departures, optimized lead times and personalized quotes within 24 hours."
   },
   "hero": {
-    "title": "Our Main Destinations",
-    "subtitle": "Regular sea freight services to Central Africa (Congo, Angola) from France and Europe, with schedules adapted to your needs."
+    "title": "Destination Angola (Luanda)",
+    "subtitle": "Regular sea freight services on the France–Angola corridor from France (Paris / Normandy via Le Havre) to Luanda, with schedules adapted to your needs."
   },
   "labels": {
     "port_principal": "Main port:",
@@ -18,21 +18,14 @@
   },
   "regions": [
     {
-      "name": "Central Africa",
+      "name": "Southern Africa",
       "countries": [
-        {
-          "name": "Congo",
-          "capital": "Brazzaville",
-          "port": "Pointe-Noire",
-          "maritime": { "from": "Le Havre, Antwerp", "duration": "18–22 days", "frequency": "Weekly" },
-          "specialites": ["Vehicles", "Industrial machinery", "Food products"]
-        },
         {
           "name": "Angola",
           "capital": "Luanda",
           "port": "Luanda",
-          "maritime": { "from": "Antwerp, Rotterdam", "duration": "20–25 days", "frequency": "Bi-weekly" },
-          "specialites": ["Medical equipment", "Construction", "Electronics"]
+          "maritime": { "from": "Le Havre, Antwerp, Rotterdam", "duration": "20–25 days", "frequency": "Weekly or bi-weekly" },
+          "specialites": ["International moves", "Vehicles & motorbikes", "B2B cargo"]
         }
       ]
     }

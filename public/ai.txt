@@ -3,13 +3,13 @@ site:
   name: MB Fret Services
   url: https://mb-fretservices.com
   description: >-
-    MB Fret Services propose principalement des solutions de transport international par fret maritime FCL/LCL,
-    avec dédouanement et assurance cargo depuis l'Europe vers l'Afrique (Congo, Angola). Devis sous 24 h.
-  languages: [fr, en, pt, es, ar, tr, de, it, sw]
-  topics: [logistics, freight, maritime, customs, shipping, africa, europe]
-  target_audience: B2B & particuliers expédiant des marchandises vers l'Afrique (Congo, Angola) depuis l'Europe
+    MB Fret Services propose des solutions de transport international par fret maritime FCL/LCL,
+    avec dédouanement et assurance cargo entre la France (Paris / Normandie) et l'Angola (Luanda). Devis sous 24 h.
+  languages: [fr, en, pt]
+  topics: [logistics, freight, maritime, customs, shipping, angola, france]
+  target_audience: B2B & particuliers expédiant des marchandises entre la France (Paris / Normandie) et l'Angola (Luanda)
   service_regions:
-    - Africa: [Congo, Angola]
+    - Africa: [Angola]
   contact:
     email: contact@mb-fretservices.com
     phone: "+33 7 49 23 55 39"
@@ -194,8 +194,9 @@ site:
       url: https://mb-fretservices.com/sw/legal
 
   examples:
-    - query: "expédier un conteneur 20' vers Pointe-Noire"
-      suggest: "https://mb-fretservices.com/fr/services/fret-maritime"
+    - query: "expédier un conteneur 20' depuis la région parisienne vers Luanda"
+      suggest: "https://mb-fretservices.com/fr/services/fret-marit_codeimnewe</"
+e"
     - query: "prix fret maritime Le Havre vers Luanda"
       suggest: "https://mb-fretservices.com/fr/services/fret-maritime"
     - query: "dédouanement import machines en France"

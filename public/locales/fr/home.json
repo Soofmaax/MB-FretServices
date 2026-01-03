@@ -1,62 +1,56 @@
 {
   "seo": {
-    "title": "MB Fret Services – Déménagements internationaux & fret maritime France–Congo / France–Angola",
-    "description": "Transitaire français pour particuliers et professionnels, spécialisé sur les corridors France–Congo et France–Angola. Déménagements internationaux, envoi de véhicules et de motos, effets personnels en groupage maritime ou en conteneur complet (FCL/LCL), avec dédouanement et assurance cargo pour une vision claire du coût total livré."
+    "title": "MB Fret Services \u2013 D\u00e9m\u00e9nagements internationaux & fret maritime France\u2013Angola",
+    "description": "Transitaire fran\u00e7ais bas\u00e9 entre Paris et la Normandie, sp\u00e9cialis\u00e9 sur le corridor France\u2013Angola. D\u00e9m\u00e9nagements internationaux, envoi de v\u00e9hicules et de motos, effets personnels en groupage maritime ou en conteneur complet (FCL/LCL) entre la France (Paris / Normandie via Le Havre) et Luanda, avec d\u00e9douanement et assurance cargo pour une vision claire du co\u00fbt total livr\u00e9."
   },
   "valueProps": {
     "title": "Pourquoi choisir MB Fret Services ?",
-    "subtitle": "Transitaire pour particuliers et professionnels basé en France, avec un focus sur l’Afrique centrale (Congo, Angola). Nous aidons les familles, la diaspora et les petites entreprises à expédier déménagements, effets personnels, véhicules et marchandises, en combinant fret maritime, dédouanement et assurance cargo du devis à la livraison.",
+    "subtitle": "Transitaire pour particuliers et professionnels bas\u00e9 en France, sp\u00e9cialis\u00e9 sur le corridor France\u2013Angola. Nous aidons les familles, la diaspora et les petites entreprises \u00e0 exp\u00e9dier d\u00e9m\u00e9nagements, effets personnels, v\u00e9hicules et marchandises entre Paris / Normandie et Luanda, en combinant fret maritime, d\u00e9douanement et assurance cargo du devis \u00e0 la livraison.",
     "items": [
       {
         "title": "Fret Maritime",
-        "description": "Fret maritime France–Afrique centrale (Congo, Angola) en conteneurs FCL et groupage LCL, pour déménagements, effets personnels, véhicules et, en complément, flux B2B, avec suivi en temps réel.",
-        "features": ["Conteneurs 20' et 40'", "FCL et LCL", "Port à port ou porte à porte"]
+        "description": "Fret maritime France\u2013Angola en conteneurs FCL et groupage LCL depuis la France (Paris / Normandie via Le Havre) vers Luanda, pour d\u00e9m\u00e9nagements, effets personnels, v\u00e9hicules et, en compl\u00e9ment, flux B2B, avec suivi en temps r\u00e9el.",
+        "features": ["Conteneurs 20' et 40'", "FCL et LCL", "Port \u00e0 port ou porte \u00e0 porte"]
       },
       {
-        "title": "Dédouanement",
-        "description": "Dédouanement import/export France–Afrique pour vos conteneurs FCL/LCL, sécurisation documentaire, calcul droits & taxes et accompagnement sur le choix des Incoterms.",
-        "features": ["Déclarations douanières", "Conformité réglementaire", "Support administratif"]
+        "title": "D\u00e9douanement",
+        "description": "D\u00e9douanement import/export France\u2013Angola pour vos conteneurs FCL/LCL, s\u00e9curisation documentaire, calcul droits & taxes et accompagnement sur le choix des Incoterms.",
+        "features": ["D\u00e9clarations douani\u00e8res", "Conformit\u00e9 r\u00e9glementaire", "Support administratif"]
       },
       {
         "title": "Assurance cargo",
-        "description": "Assurance ad valorem pour vos conteneurs (déménagements, marchandises B2B, véhicules, motos) vers le Congo et l’Angola, intégrée à vos devis pour une vision claire du coût total livré.",
+        "description": "Assurance ad valorem pour vos conteneurs (d\u00e9m\u00e9nagements, marchandises B2B, v\u00e9hicules, motos) vers l\u2019Angola, int\u00e9gr\u00e9e \u00e0 vos devis pour une vision claire du co\u00fbt total livr\u00e9.",
         "features": ["Couverture ad valorem", "Gestion de sinistres", "Conseils emballage export"]
       }
     ]
   },
-  "destinations_title": "Nos Destinations Principales",
-  "destinations_subtitle": "Nous desservons en priorité l’Afrique centrale (Congo, Angola) depuis la France et l’Europe, avec des solutions adaptées aux déménagements, effets personnels et véhicules, ainsi qu’aux flux B2B.",
-  "destinations_more": "Voir toutes nos destinations",
-  "destinations_need_specific": "Besoin d'une destination spécifique ? Nous étudions toutes les demandes.",
+  "destinations_title": "Notre Destination Prioritaire",
+  "destinations_subtitle": "Nous concentrons nos moyens sur le corridor France\u2013Angola (Luanda) depuis la France (Paris / Normandie via Le Havre), avec des solutions adapt\u00e9es aux d\u00e9m\u00e9nagements, effets personnels, v\u00e9hicules et flux B2B.",
+  "destinations_more": "Voir nos informations destination",
+  "destinations_need_specific": "Un projet particulier vers l\u2019Angola ? Nous \u00e9tudions chaque demande en d\u00e9tail.",
   "showcase": [
-    {
-      "country": "Congo",
-      "city": "Pointe-Noire",
-      "image": "/images/hero-congo.jpg",
-      "routes": ["Maritime depuis Le Havre", "Maritime depuis Anvers"]
-    },
     {
       "country": "Angola",
       "city": "Luanda",
       "image": "/images/hero-angola.jpg",
-      "routes": ["Maritime depuis Anvers", "Maritime depuis Rotterdam"]
+      "routes": ["Maritime depuis Le Havre (via Paris / Normandie)", "Maritime depuis Anvers / Rotterdam selon les d\u00e9parts"]
     }
   ],
   "commitments": {
-    "title": "Nos engagements dès aujourd’hui",
-    "subtitle": "Une jeune société, mais avec des standards clairs sur la réactivité, la spécialisation et la communication.",
+    "title": "Nos engagements d\u00e8s aujourd\u2019hui",
+    "subtitle": "Une jeune soci\u00e9t\u00e9, mais avec des standards clairs sur la r\u00e9activit\u00e9, la sp\u00e9cialisation et la communication.",
     "items": [
       {
         "label": "< 24 h",
-        "description": "Réponse à votre demande de devis ou de contact en moins de 24 heures ouvrées, avec un premier échange humain pour clarifier votre projet."
+        "description": "R\u00e9ponse \u00e0 votre demande de devis ou de contact en moins de 24 heures ouvr\u00e9es, avec un premier \u00e9change humain pour clarifier votre projet."
       },
       {
-        "label": "2 corridors",
-        "description": "Un focus assumé sur les routes France–Congo (Pointe-Noire) et France–Angola (Luanda), pour rester spécialiste plutôt que généraliste."
+        "label": "1 corridor",
+        "description": "Un focus assum\u00e9 sur la route France\u2013Angola (Luanda), pour rester sp\u00e9cialiste plut\u00f4t que g\u00e9n\u00e9raliste."
       },
       {
         "label": "3 canaux",
-        "description": "Vous nous contactez comme vous préférez : WhatsApp, téléphone ou email, sans passer par une plateforme anonyme."
+        "description": "Vous nous contactez comme vous pr\u00e9f\u00e9rez : WhatsApp, t\u00e9l\u00e9phone ou email, sans passer par une plateforme anonyme."
       }
     ]
   },
