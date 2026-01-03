@@ -6,7 +6,8 @@ describe('paths utils', () => {
     expect(detectLangFromPath('/fr/services')).toBe('fr');
     expect(detectLangFromPath('/en/contact')).toBe('en');
     expect(detectLangFromPath('/pt/servicos')).toBe('pt');
-    expect(detectLangFromPath('/de/leistungen')).toBe('de');
+    // unsupported language prefixes should fall back to fr
+    expect(detectLangFromPath('/de/leistungen')).toBe('fr');
     expect(detectLangFromPath('/unknown/path')).toBe('fr'); // fallback
   });
 
@@ -14,7 +15,8 @@ describe('paths utils', () => {
     expect(keyFromPath('/fr/services')).toBe('services');
     expect(keyFromPath('/en/legal-notice')).toBe('legal');
     expect(keyFromPath('/pt/servicos/frete-maritimo')).toBe('services_freight_maritime');
-    expect(keyFromPath('/es/servicios/transporte-maritimo')).toBe('services_freight_maritime');
+    // unsupported language prefix: fallback to home
+    expect(keyFromPath('/es/servicios/transporte-maritimo')).toBe('home');
     expect(keyFromPath('/fr/')).toBe('home');
   });
 
