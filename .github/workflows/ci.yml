@@ -33,7 +33,7 @@ jobs:
         run: npm install --no-fund --no-audit
 
       - name: Lint
-        run: npm run _codelinewn</t
+        run: npm run lint
 
       - name: Unit Tests
         env:
