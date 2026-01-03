@@ -23,7 +23,6 @@ const SLUGS = {
     contact: 'contact',
     legal: 'mentions-legales',
     services_freight_maritime: 'services/fret-maritime',
-    services_air_freight: 'services/fret-aerien',
     services_customs: 'services/dedouanement',
     services_insurance: 'services/assurance-cargo',
     services_freight_france_angola: 'services/fret-maritime/france-angola',
@@ -65,13 +64,6 @@ const HREFLANG_MAP = {
   fr: 'fr-FR',
   en: 'en-GB',
   pt: 'pt-PT',
-  ar: 'ar',
-  es: 'es-ES',
-  tr: 'tr-TR',
-  sw: 'sw-KE',
-  de: 'de-DE',
-  it: 'it-IT',
-  zh: 'zh-CN',
 };
 
 const PATH_KEYS = [
@@ -133,7 +125,7 @@ function priorityFor(pathname) {
     '/services': { changefreq: 'weekly', priority: '0.8' },
     '/services/fret-maritime': { changefreq: 'weekly', priority: '0.8' },
     '/services/maritime-freight': { changefreq: 'weekly', priority: '0.8' },
-    '/services/air-freight': { changefreq: 'weekly', priority: '0.7' },
+    
     '/services/customs-clearance': { changefreq: 'weekly', priority: '0.7' },
     '/services/cargo-insurance': { changefreq: 'weekly', priority: '0.7' },
     '/destinations': { changefreq: 'weekly', priority: '0.8' },
@@ -143,7 +135,7 @@ function priorityFor(pathname) {
     '/legal-notice': { changefreq: 'yearly', priority: '0.3' },
     '/servicos': { changefreq: 'weekly', priority: '0.8' },
     '/servicos/frete-maritimo': { changefreq: 'weekly', priority: '0.8' },
-    '/servicos/frete-aereo': { changefreq: 'weekly', priority: '0.7' },
+    
     '/servicos/despacho-aduaneiro': { changefreq: 'weekly', priority: '0.7' },
     '/servicos/seguro-carga': { changefreq: 'weekly', priority: '0.7' },
     '/destinos': { changefreq: 'weekly', priority: '0.8' },
