@@ -121,16 +121,16 @@
     "service_type": "Desalfandegamento",
     "faq": [
       {
-        "q": "Que documentos são indispensáveis?",
-        "a": "Fatura comercial, packing list, documentos de origem, certificados eventuais e autorizações específicas segundo a mercadoria."
+        "q": "Sou uma empresa: podem tratar do desalfandegamento dos meus fluxos de contentores França–Angola?",
+        "a": "Sim. Asseguramos a representação aduaneira para contentores FCL/LCL, preparamos e submetemos as declarações de importação/exportação, verificamos a conformidade documental e ajudamos na classificação pautal e no cálculo de direitos & impostos. Coordenamos também com os nossos correspondentes em Luanda para antecipar as exigências locais."
       },
       {
-        "q": "Prestam representação aduaneira?",
-        "a": "Sim, asseguramos a representação em alfândega, o controlo documental e a conformidade regulamentar para as suas importações e exportações."
+        "q": "Estou a mudar‑me para Angola: ajudam‑me nas formalidades aduaneiras dos meus bens pessoais e do meu veículo?",
+        "a": "Sim. Indicamos antecipadamente os documentos necessários (inventário detalhado, comprovativos de residência, documentos do veículo, etc.), verificamos a coerência do seu dossier e trabalhamos com os nossos parceiros para facilitar as formalidades de exportação e importação. O objetivo é limitar bloqueios e custos de parqueamento ligados à alfândega."
       },
       {
-        "q": "Podem aconselhar sobre Incoterms?",
-        "a": "Sim, aconselhamos sobre o Incoterm ideal (FOB/CIF/DAP…) segundo o fluxo, a tolerância ao risco e a organização interna."
+        "q": "Que documentos devo preparar para evitar atrasos?",
+        "a": "No mínimo: fatura ou inventário valorado, lista de embalagem, documentos de origem, títulos de propriedade dos veículos, documento de identificação e, se for o caso, certificados ou autorizações específicas. Fornecemos uma lista adaptada ao seu caso (B2B ou mudança internacional) e verificamos o dossier antes da submissão à alfândega."
       }
     ],
     "hero": {
@@ -195,16 +195,16 @@
     "service_type": "Seguro de transporte",
     "faq": [
       {
-        "q": "Porque assegurar o frete marítimo/aéreo?",
-        "a": "Para cobrir riscos de avaria, perda ou roubo. Uma apólice ad valorem protege a sua tesouraria e compromissos B2B."
+        "q": "Sou uma empresa: que tipo de seguro recomendam para os meus contentores França–Angola?",
+        "a": "Para fluxos B2B, recomendamos em geral uma cobertura ad valorem baseada no valor da mercadoria + frete, com cláusulas do tipo Institute Cargo Clauses (A) ou equivalente. Ajustamos a apólice segundo a natureza dos bens (máquinas, peças sobressalentes, produtos sensíveis) e o nível de risco, podendo incluir pré/pós‑acheminement e operações de manuseamento."
       },
       {
-        "q": "Que cláusulas recomendam?",
-        "a": "Segundo a mercadoria e a rota: Institute Cargo Clauses (A) para uma cobertura ampla, ou convenções específicas (ADR, perecíveis, etc.)."
+        "q": "Estou a mudar‑me ou a enviar um veículo para Angola: devo segurar o meu contentor?",
+        "a": "Sim, é altamente recomendável. Uma mudança internacional ou o envio de um veículo representa um investimento importante, e a responsabilidade standard dos transportadores é muitas vezes inferior ao valor real em caso de dano ou perda. Um seguro ad valorem dedicado protege o valor real dos seus efeitos pessoais, carro ou moto durante toda a rota França–Angola."
       },
       {
-        "q": "Garantem cobertura porta-a-porta?",
-        "a": "Sim, calibramos a apólice desde a recolha até à entrega, incluindo pré/pós-acheminement."
+        "q": "Como funciona na prática a gestão de um sinistro?",
+        "a": "Em caso de dano, orientamo‑lo sobre os passos essenciais: reservas na receção, fotos, conservação das embalagens, recolha de documentos (BL, fatura, inventário, etc.). Centralizamos o dossier, articulamos com a seguradora e, se necessário, com o perito nomeado, para defender os seus interesses até à liquidação do sinistro."
       }
     ],
     "hero": {

@@ -157,16 +157,16 @@
     "service_type": "Customs clearance",
     "faq": [
       {
-        "q": "Which documents are essential?",
-        "a": "Detailed commercial invoice, packing list, origin documents, possible certificates and specific authorizations depending on the goods (vehicles, machinery, regulated cargo, etc.)."
+        "q": "I’m a company: can you handle customs clearance for my France–Angola container flows?",
+        "a": "Yes. We act as your customs representative for FCL/LCL containers, prepare and file import/export declarations, check documentary compliance and assist with tariff classification and duties & taxes calculations. We also coordinate with our counterparts in Luanda to anticipate local requirements."
       },
       {
-        "q": "Do you provide customs representation?",
-        "a": "Yes, we handle customs representation, document control and operational follow-up for your FCL/LCL containers, and can provide duties & taxes simulations when feasible."
+        "q": "I’m moving to Angola: can you help with customs formalities for my personal effects and vehicle?",
+        "a": "Yes. We tell you in advance which documents are required (detailed inventory, proof of residence, vehicle documents, etc.), check the consistency of your file and work with our partners to smooth export and import formalities. The goal is to limit delays and storage costs linked to customs."
       },
       {
-        "q": "Can you advise on Incoterms?",
-        "a": "Yes, we help you choose the optimal Incoterm (FOB/CIF/DAP…) based on your container flows, risk tolerance and logistics setup on the Angola side."
+        "q": "Which documents should I prepare to avoid delays?",
+        "a": "As a minimum: commercial invoice or valued inventory, packing list, origin documents, vehicle ownership documents, ID and, where relevant, specific certificates or permits. We provide a checklist adapted to your situation (B2B or international move) and review your file before submission to customs."
       }
     ],
     "hero": {
@@ -236,16 +236,16 @@
     "service_type": "Transport insurance",
     "faq": [
       {
-        "q": "Why insure a container to Angola?",
-        "a": "To cover risks of damage, loss or theft on high-value and sensitive flows (international moves, vehicles, B2B cargo). An ad valorem policy protects your cash flow and contractual commitments along the whole journey."
+        "q": "I’m a company: which type of insurance do you recommend for my France–Angola containers?",
+        "a": "For B2B flows, we usually recommend ad valorem coverage based on cargo value + freight, with clauses similar to Institute Cargo Clauses (A) or equivalent. We size the policy according to the nature of the goods (machinery, spare parts, sensitive products) and the risk level, and can include pre/post‑carriage and handling operations."
       },
       {
-        "q": "Which shipments should be prioritised for insurance?",
-        "a": "International moves (personal effects, furniture), vehicles and motorbikes, machinery, as well as high-value B2B lots (equipment, spare parts, sensitive products). We size coverage according to cargo type and risk level."
+        "q": "I’m moving or shipping a vehicle to Angola: should I insure my container?",
+        "a": "Yes, strongly recommended. An international move or vehicle shipment is a major investment, and standard carrier liability is often far below the actual value in case of damage or loss. A dedicated ad valorem policy secures the real value of your personal effects, car or motorbike along the whole France–Angola journey."
       },
       {
-        "q": "Do you provide door-to-door coverage?",
-        "a": "Yes, we calibrate the policy from pickup to final delivery (pre/post-carriage, ocean legs), and advise on packaging and documentation (photos, notations) to make any potential claim easier to defend."
+        "q": "How is a claim handled in practice?",
+        "a": "In case of damage, we guide you through the key steps: reservations on delivery, photos, keeping packaging, collecting documents (BL, invoice, inventory, etc.). We centralise your file, liaise with the insurer and, where applicable, the appointed surveyor, to defend your interests until the claim is settled."
       }
     ],
     "hero": {

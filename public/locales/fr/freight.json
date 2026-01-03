@@ -157,16 +157,16 @@
     "service_type": "Dédouanement",
     "faq": [
       {
-        "q": "Quels documents sont indispensables ?",
-        "a": "Facture commerciale détaillée, packing list, documents d’origine, certificats éventuels et autorisations spécifiques selon la marchandise (véhicules, machines, marchandises réglementées…)."
+        "q": "Je suis une entreprise : pouvez-vous gérer le dédouanement de mes flux conteneurs France–Angola ?",
+        "a": "Oui. Nous assurons la représentation en douane pour vos conteneurs FCL/LCL, préparons et déposons les déclarations import/export, vérifions la conformité documentaire et vous accompagnons sur la classification tarifaire et le calcul des droits & taxes. Nous coordonnons également avec nos correspondants à Luanda pour anticiper les exigences locales."
       },
       {
-        "q": "Proposez-vous une représentation en douane ?",
-        "a": "Oui. Nous assurons la représentation en douane, le contrôle documentaire et le suivi des opérations pour vos conteneurs FCL/LCL, avec simulation des droits & taxes lorsque cela est possible."
+        "q": "Je déménage vers l’Angola : m’aidez-vous pour les formalités douanières de mes effets personnels et de mon véhicule ?",
+        "a": "Oui. Nous vous indiquons en amont les documents nécessaires (inventaire détaillé, justificatifs de résidence, documents véhicule, etc.), vérifions la cohérence de votre dossier et travaillons avec nos partenaires pour fluidifier les formalités à l’export comme à l’import. L’objectif est de limiter les blocages et les frais de stationnement liés à la douane."
       },
       {
-        "q": "Pouvez-vous assister sur les Incoterms ?",
-        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) en fonction de vos flux conteneurs, de votre tolérance au risque et de l’organisation logistique côté Angola."
+        "q": "Quels documents dois-je prévoir pour éviter les blocages ?",
+        "a": "Au minimum : facture ou inventaire valorisé, liste de colisage, documents d’origine, titres de propriété des véhicules, pièces d’identité et, selon les cas, certificats ou autorisations spécifiques. Nous vous fournissons une liste adaptée à votre cas (B2B ou déménagement) et vérifions votre dossier avant dépôt en douane."
       }
     ],
     "hero": {
@@ -230,16 +230,16 @@
     "service_type": "Assurance transport",
     "faq": [
       {
-        "q": "Pourquoi assurer un conteneur vers l’Angola ?",
-        "a": "Pour couvrir les risques d’avarie, de perte ou de vol sur des flux à forte valeur et à forte sensibilité (déménagements, véhicules, marchandises B2B). Une police ad valorem protège votre trésorerie et vos engagements contractuels tout au long du trajet."
+        "q": "Je suis une entreprise : quel type d’assurance recommandez-vous pour mes conteneurs France–Angola ?",
+        "a": "Pour les flux B2B, nous recommandons en général une couverture ad valorem sur la valeur marchandise + fret, basée sur des clauses de type Institute Cargo Clauses (A) ou équivalent. Nous ajustons la police selon la nature des biens (machines, pièces détachées, marchandises sensibles) et le niveau de risque, en intégrant si besoin les pré/post‑acheminements et les opérations de manutention."
       },
       {
-        "q": "Quelles marchandises sont prioritaires à assurer ?",
-        "a": "Les déménagements (effets personnels, mobilier), les véhicules et motos, les machines, ainsi que les lots B2B à forte valeur (équipements, pièces détachées, produits sensibles). Nous ajustons la couverture selon le type de marchandise et le niveau de risque."
+        "q": "Je déménage ou j’envoie un véhicule vers l’Angola : dois‑je assurer mon conteneur ?",
+        "a": "Oui, c’est fortement conseillé. Un déménagement ou l’envoi d’un véhicule représente un investissement important et les conventions de transport standard limitent fortement l’indemnisation en cas d’avarie ou de perte. Une assurance ad valorem dédiée permet de couvrir la valeur réelle de vos effets personnels, de votre voiture ou de votre moto pendant tout le trajet France–Angola."
       },
       {
-        "q": "Assurez-vous porte-à-porte ?",
-        "a": "Oui, nous calibrons la police du point d’enlèvement à la livraison finale (pré/post‑acheminement, traversées maritimes), avec des conseils d’emballage et de documentation (photos, réserves) pour faciliter toute gestion de sinistre éventuel."
+        "q": "Comment se déroule la gestion d’un sinistre ?",
+        "a": "En cas de dommage, nous vous guidons sur les bons réflexes : réserves à l’arrivée, photos, conservation des emballages, collecte des documents (BL, facture, inventaire…). Nous centralisons votre dossier, échangeons avec l’assureur et, le cas échéant, l’expert mandaté afin de défendre au mieux vos intérêts jusqu’au règlement du sinistre."
       }
     ],
     "hero": {
