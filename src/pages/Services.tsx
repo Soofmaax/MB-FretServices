@@ -44,11 +44,29 @@ const Services: FC = () => {
   };
   const langTag = langTagMap[lang] || 'fr-FR';
 
+  const faqEntities =
+    (t('services:faq', {
+      returnObjects: true,
+    }) as Array<{ q: string; a: string }>) || [];
+
   const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
   const { ref: servicesRef, inView: servicesInView } = useInViewAnimation<HTMLDivElement>();
   const { ref: routesRef, inView: routesInView } = useInViewAnimation<HTMLDivElement>();
   const { ref: guidesRef, inView: guidesInView } = useInViewAnimation<HTMLDivElement>();
   const { ref: ctaRef, inView: ctaInView } = useInViewAnimation<HTMLDivElement>();
+
+  const faqLd =
+    faqEntities.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqEntities.map((qa) => ({
+            '@type': 'Question',
+            name: qa.q,
+            acceptedAnswer: { '@type': 'Answer', text: qa.a },
+          })),
+        }
+      : null;
 
   return (
     <div className="pt-16">
@@ -105,13 +123,14 @@ const Services: FC = () => {
               },
             ],
           },
+          faqLd || undefined,
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
             name: `${t('navbar:services', 'Services')} - MB Fret Services`,
             inLanguage: langTag,
           },
-        ]}
+        ].filter(Boolean)}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
@@ -365,6 +384,34 @@ const Services: FC = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqEntities.length > 0 && (
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+                {t('services:faq_title', 'FAQ')}
+              </h2>
+            </div>
+            <div className="space-y-6">
+              {faqEntities.map((qa, index) => (
+                <details
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
+                  <summary className="cursor-pointer text-lg font-semibold text-primary-900">
+                    {qa.q}
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed whitespace-pre-line">
+                    {qa.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-white">

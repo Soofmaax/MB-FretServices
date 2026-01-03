@@ -80,5 +80,20 @@
       "title": "FCL vs LCL — How to decide?",
       "desc": "Volume thresholds (≈13–15 m³), safety, lead times and multimodal transport. Method and use cases."
     }
-  }
+  },
+  "faq_title": "FAQ — Companies & international moves",
+  "faq": [
+    {
+      "q": "I’m a company: which services do you provide on the France–Angola corridor?",
+      "a": "We support companies across the whole chain: containerised sea freight FCL/LCL, pickup and pre/post‑carriage organisation, import/export customs clearance, ad valorem cargo insurance and proactive tracking. Whether you ship a few pallets, a full container or recurring flows, we design a solution adapted to your cost, lead-time and risk constraints."
+    },
+    {
+      "q": "I’m planning an international move to Angola: where should I start?",
+      "a": "Reach out with an estimate of your volume (in m³ or number of items), your departure city and your destination in Angola. We guide you step by step: volume assessment, FCL/LCL choice, pickup organisation, packing advice, detailed quote (freight, customs, insurance) and indicative schedule. The goal is to secure your move end‑to‑end with a single point of contact."
+    },
+    {
+      "q": "Can you combine freight, customs and insurance in a single offer?",
+      "a": "Yes. For most projects (B2B or international moves), we offer an integrated package that brings together sea freight, customs clearance and cargo insurance, so you get a clear view of total delivered cost and a single point of contact to manage the whole process."
+    }
+  ]
 }

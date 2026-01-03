@@ -80,5 +80,20 @@
       "title": "FCL vs LCL — Como decidir?",
       "desc": "Limiares de volume (≈13–15 m³), segurança, prazos e multimodalidade. Método e casos de uso."
     }
-  }
+  },
+  "faq_title": "FAQ — Empresas & mudanças internacionais",
+  "faq": [
+    {
+      "q": "Sou uma empresa: que serviços oferecem no corredor França–Angola?",
+      "a": "Apoiamos as empresas em toda a cadeia: transporte marítimo em contentores FCL/LCL, organização de recolhas e pré/pós‑transporte, desalfandegamento de importação/exportação, seguro de carga ad valorem e seguimento proactivo. Quer envie algumas paletes, um contentor completo ou fluxos recorrentes, desenhamos uma solução adaptada às suas restrições de custo, prazo e risco."
+    },
+    {
+      "q": "Estou a preparar uma mudança para Angola: por onde começar?",
+      "a": "Contacte‑nos com uma estimativa do seu volume (em m³ ou número de peças), da cidade de partida e do destino em Angola. Acompanhamos passo a passo: estimativa de volume, escolha FCL/LCL, organização da recolha, conselhos de embalagem, orçamento detalhado (frete, alfândega, seguro) e calendário indicativo. O objetivo é securizar a sua mudança de ponta a ponta com um único interlocutor."
+    },
+    {
+      "q": "Podem agrupar frete, desalfandegamento e seguro numa única proposta?",
+      "a": "Sim. Na maioria dos projetos (B2B ou mudanças), propomos uma oferta integrada que reúne transporte marítimo, desalfandegamento e seguro de carga, para lhe dar uma visão clara do custo total entregue e um único ponto de contacto para gerir todo o processo."
+    }
+  ]
 }

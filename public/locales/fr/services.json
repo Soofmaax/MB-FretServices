@@ -80,5 +80,20 @@
       "title": "FCL vs LCL — Comment décider ?",
       "desc": "Seuils volumétriques (≈13–15 m³), sécurité, délais, multimodalité. Méthode et cas d’usage."
     }
-  }
+  },
+  "faq_title": "FAQ — Entreprises & déménagements",
+  "faq": [
+    {
+      "q": "Je suis une entreprise : quels services proposez-vous sur le corridor France–Angola ?",
+      "a": "Nous accompagnons les entreprises sur l’ensemble de la chaîne : fret maritime en conteneurs FCL/LCL, organisation des enlèvements et pré/post‑acheminements, dédouanement import/export, assurance cargo ad valorem et suivi proactif. Que vous expédiiez quelques palettes, un conteneur complet ou des flux récurrents, nous construisons une solution adaptée à vos contraintes de coûts, délais et risques."
+    },
+    {
+      "q": "Je prépare un déménagement vers l’Angola : par où commencer ?",
+      "a": "Contactez‑nous avec une idée de votre volume (en m³ ou nombre de pièces), de votre ville de départ et de votre destination en Angola. Nous vous guidons étape par étape : estimation de volume, choix FCL/LCL, organisation de l’enlèvement, conseils d’emballage, devis détaillé (fret, douane, assurance) et planning indicatif. L’objectif est de sécuriser votre déménagement de bout en bout avec un interlocuteur unique."
+    },
+    {
+      "q": "Pouvez-vous combiner fret, douane et assurance dans la même offre ?",
+      "a": "Oui. Pour la plupart des projets (B2B ou déménagement), nous proposons une offre intégrée qui regroupe fret maritime, dédouanement et assurance cargo, afin de vous donner une vision claire du coût total livré et un seul point de contact pour piloter l’ensemble."
+    }
+  ]
 }
