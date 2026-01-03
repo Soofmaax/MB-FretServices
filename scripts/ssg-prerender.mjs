@@ -27,10 +27,7 @@ const ROUTES = [
   '/fr/services/fret-maritime',
   '/fr/services/dedouanement',
   '/fr/services/assurance-cargo',
-  '/fr/services/fret-maritime/france-congo',
-  '/fr/services/fret-maritime/france-congo/fcl-lcl',
-  '/fr/services/fret-maritime/france-congo/douane',
-  '/fr/services/fret-maritime/france-congo/checklist',
+  '/fr/services/fret-maritime/france-angola',
   '/fr/documentation/incoterms-2020',
   '/fr/guides/fcl-vs-lcl',
   // EN
@@ -41,10 +38,7 @@ const ROUTES = [
   '/en/services/maritime-freight',
   '/en/services/customs-clearance',
   '/en/services/cargo-insurance',
-  '/en/services/maritime-freight/france-congo',
-  '/en/services/maritime-freight/france-congo/fcl-lcl',
-  '/en/services/maritime-freight/france-congo/customs',
-  '/en/services/maritime-freight/france-congo/checklist',
+  '/en/services/maritime-freight/france-angola',
   '/en/resources/incoterms-2020',
   '/en/guides/fcl-vs-lcl',
   // PT
@@ -55,10 +49,7 @@ const ROUTES = [
   '/pt/servicos/frete-maritimo',
   '/pt/servicos/despacho-aduaneiro',
   '/pt/servicos/seguro-carga',
-  '/pt/servicos/frete-maritimo/franca-congo',
-  '/pt/servicos/frete-maritimo/franca-congo/fcl-lcl',
-  '/pt/servicos/frete-maritimo/franca-congo/despacho-aduaneiro',
-  '/pt/servicos/frete-maritimo/franca-congo/checklist',
+  '/pt/servicos/frete-maritimo/franca-angola',
   '/pt/documentacao/incoterms-2020',
   '/pt/guias/fcl-vs-lcl',
   // ES
@@ -68,7 +59,6 @@ const ROUTES = [
   '/es/services/maritime-freight',
   '/es/services/customs-clearance',
   '/es/services/cargo-insurance',
-  '/es/services/maritime-freight/france-congo',
   '/es/resources/incoterms-2020',
   '/es/guides/fcl-vs-lcl',
   // TR
@@ -78,7 +68,6 @@ const ROUTES = [
   '/tr/services/maritime-freight',
   '/tr/services/customs-clearance',
   '/tr/services/cargo-insurance',
-  '/tr/services/maritime-freight/france-congo',
   '/tr/resources/incoterms-2020',
   '/tr/guides/fcl-vs-lcl',
   // DE
@@ -88,7 +77,6 @@ const ROUTES = [
   '/de/services/maritime-freight',
   '/de/services/customs-clearance',
   '/de/services/cargo-insurance',
-  '/de/services/maritime-freight/france-congo',
   '/de/resources/incoterms-2020',
   '/de/guides/fcl-vs-lcl',
   // IT
@@ -98,7 +86,6 @@ const ROUTES = [
   '/it/services/maritime-freight',
   '/it/services/customs-clearance',
   '/it/services/cargo-insurance',
-  '/it/services/maritime-freight/france-congo',
   '/it/resources/incoterms-2020',
   '/it/guides/fcl-vs-lcl',
   // SW
@@ -108,7 +95,6 @@ const ROUTES = [
   '/sw/services/maritime-freight',
   '/sw/services/customs-clearance',
   '/sw/services/cargo-insurance',
-  '/sw/services/maritime-freight/france-congo',
   '/sw/resources/incoterms-2020',
   '/sw/guides/fcl-vs-lcl',
   // AR
@@ -118,7 +104,6 @@ const ROUTES = [
   '/ar/services/maritime-freight',
   '/ar/services/customs-clearance',
   '/ar/services/cargo-insurance',
-  '/ar/services/maritime-freight/france-congo',
   '/ar/resources/incoterms-2020',
   '/ar/guides/fcl-vs-lcl',
 ];

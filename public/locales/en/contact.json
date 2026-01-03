@@ -38,16 +38,16 @@
     ]
   },
   "source_banner": {
-    "container_prices": "You are coming from the guide on the cost of a 20'/40' container to Congo / Angola.",
-    "fcl_lcl": "You are coming from the FCL vs LCL guide.",
+    "default": "You are contacting us from the contact page.",
+    "services": "You are contacting us from the Services page.",
+    "destinations": "You are contacting us from the Destinations page.",
+    "freight": "You are contacting us from the Sea Freight page.",
+    "customs": "You are contacting us from the Customs page.",
+    "insurance": "You are contacting us from the Cargo Insurance page.",
+    "container_prices": "You are coming from the guide on the cost of a 20'/40' container to Angola.",
     "incoterms": "You are coming from the Incoterms 2020 guide.",
-    "route_congo": "You are coming from the France ↔ Congo (Pointe-Noire) route page.",
-    "route_angola": "You are coming from the France ↔ Angola (Luanda) route page.",
-    "service_freight_maritime": "You are coming from the Sea freight service page (FCL/LCL containers to Africa).",
-    "service_customs": "You are coming from the Customs & compliance service page for France ↔ Africa flows.",
-    "service_insurance": "You are coming from the Cargo insurance service page for your FCL/LCL containers.",
-    "service_air_freight": "You are coming from the Air freight service page.",
-    "cta": "The details below will help us refine your quote."
+    "fcl_lcl": "You are coming from the FCL vs LCL guide.",
+    "route_angola": "You are coming from the France ↔ Angola (Luanda) route page."
   },
   "form": {
     "name": "Full name",

@@ -44,7 +44,7 @@ const PillarIncoterms: FC = () => {
   );
   const seoDescription = t(
     'pillar_incoterms:description',
-    'Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks, and practical cases on Congo/Angola routes.'
+    'Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks, and practical cases on the France–Angola corridor.'
   );
 
   const breadcrumb = {
@@ -118,12 +118,6 @@ const PillarIncoterms: FC = () => {
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <LocalizedLink
-              to="services/fret-maritime/france-congo"
-              className="underline text-accent-300"
-            >
-              {t('pillar_incoterms:hero_links.congo')}
-            </LocalizedLink>
-            <LocalizedLink
               to="services/fret-maritime/france-angola"
               className="underline text-accent-300"
             >
@@ -186,13 +180,6 @@ const PillarIncoterms: FC = () => {
             </LocalizedLink>
             &nbsp;| {t('pillar_incoterms:links_block.routes_label', 'Route pages:')}&nbsp;
             <LocalizedLink
-              to="services/fret-maritime/france-congo"
-              className="text-accent-700 underline"
-            >
-              {t('pillar_incoterms:hero_links.congo')}
-            </LocalizedLink>
-            ,&nbsp;
-            <LocalizedLink
               to="services/fret-maritime/france-angola"
               className="text-accent-700 underline"
             >
@@ -217,7 +204,7 @@ const PillarIncoterms: FC = () => {
           <p className="text-gray-700">
             {t(
               'pillar_incoterms:cta_desc',
-              'Nous vous aidons à aligner Incoterms, assurance et douane sur vos flux France ↔ Congo/Angola.'
+              'Nous vous aidons à aligner Incoterms, assurance et douane sur vos flux France ↔ Angola.'
             )}
           </p>
           <div className="mt-3 flex gap-3 flex-wrap">

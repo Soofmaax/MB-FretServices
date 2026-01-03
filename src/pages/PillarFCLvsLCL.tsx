@@ -79,14 +79,14 @@ const PillarFCLvsLCL: FC = () => {
   );
   const seoDescription = t(
     'pillar_fcl_lcl:description',
-    'Choisir entre FCL et LCL en B2B maritime: seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage sur les routes France–Congo et France–Angola.'
+    'Choisir entre FCL et LCL en B2B maritime: seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage sur le corridor France–Angola.'
   );
 
   const sections = (t('pillar_fcl_lcl:sections', { returnObjects: true }) as Section[]) || [];
 
   const heroLinks = t('pillar_fcl_lcl:hero_links', {
     returnObjects: true,
-  }) as { maritime: string; congo: string; angola: string };
+  }) as { maritime: string; angola: string };
 
   const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
   const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
@@ -117,12 +117,6 @@ const PillarFCLvsLCL: FC = () => {
               className="underline text-accent-300"
             >
               {heroLinks?.maritime ?? 'Fret maritime'}
-            </LocalizedLink>
-            <LocalizedLink
-              to="services/fret-maritime/france-congo"
-              className="underline text-accent-300"
-            >
-              {heroLinks?.congo ?? 'France–Congo'}
             </LocalizedLink>
             <LocalizedLink
               to="services/fret-maritime/france-angola"
@@ -194,12 +188,6 @@ const PillarFCLvsLCL: FC = () => {
             )}
           </p>
           <div className="mt-3 flex gap-3 flex-wrap">
-            <LocalizedLink
-              to="services/fret-maritime/france-congo"
-              className="text-accent-700 underline"
-            >
-              {heroLinks?.congo ?? 'France–Congo'}
-            </LocalizedLink>
             <LocalizedLink
               to="services/fret-maritime/france-angola"
               className="text-accent-700 underline"

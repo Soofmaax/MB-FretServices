@@ -118,6 +118,52 @@
   to = "/pt/servicos/frete-maritimo"
   status = 301
 
+# Legacy France–Congo route URLs: redirect to Angola corridor
+[[redirects]]
+  from = "/fr/services/fret-maritime/france-congo*"
+  to = "/fr/services/fret-maritime/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/en/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/pt/servicos/frete-maritimo/franca-congo*"
+  to = "/pt/servicos/frete-maritimo/franca-angola"
+  status = 301
+
+[[redirects]]
+  from = "/es/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/tr/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/de/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/it/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/sw/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
+[[redirects]]
+  from = "/ar/services/maritime-freight/france-congo*"
+  to = "/en/services/maritime-freight/france-angola"
+  status = 301
+
 [[redirects]]
   from = "/es/services/maritime-freight/france-turkey*"
   to = "/es/services/maritime-freight"

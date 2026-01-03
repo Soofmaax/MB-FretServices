@@ -1,11 +1,10 @@
 {
-  "title": "Prix d’un conteneur 20' / 40' vers le Congo et l’Angola | MB Fret Services",
-  "description": "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Afrique centrale (Congo, Angola) : type de conteneur, ports, FCL/LCL, saison, services inclus. Exemples de configurations, conseils et méthode pour obtenir un budget réaliste sans mauvaises surprises.",
-  "hero_h1": "Prix d’un conteneur 20' / 40' vers le Congo et l’Angola",
-  "hero_intro": "Pas de \"prix catalogue\" unique pour un conteneur : le budget dépend du volume réel, du type de conteneur, des ports utilisés, de la saison et des services inclus (pré/post‑acheminement, douane, assurance). Ce guide vous aide à comprendre les leviers qui font varier le prix afin de construire un budget réaliste pour vos envois vers le Congo et l’Angola.",
+  "title": "Prix d’un conteneur 20' / 40' vers l’Angola | MB Fret Services",
+  "description": "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Angola : type de conteneur, ports, FCL/LCL, saison, services inclus. Exemples de configurations, conseils et méthode pour obtenir un budget réaliste sans mauvaises surprises.",
+  "hero_h1": "Prix d’un conteneur 20' / 40' vers l’Angola",
+  "hero_intro": "Pas de \"prix catalogue\" unique pour un conteneur : le budget dépend du volume réel, du type de conteneur, des ports utilisés, de la saison et des services inclus (pré/post‑acheminement, douane, assurance). Ce guide vous aide à comprendre les leviers qui font varier le prix afin de construire un budget réaliste pour vos envois vers l’Angola.",
   "hero_links": {
     "maritime": "Fret maritime",
-    "congo": "France ↔ Congo",
     "angola": "France ↔ Angola"
   },
   "sections": [
@@ -30,19 +29,12 @@
     {
       "h2": "Exemples de configurations typiques (sans chiffres fixes)",
       "p": [
-        "Les exemples ci‑dessous ne constituent pas des tarifs, mais des configurations fréquentes que nous traitons sur les axes France → Congo/Angola. Ils vous donnent des scénarios de budget typiques pour visualiser comment le coût total se construit, sans indiquer de montant précis."
+        "Les exemples ci‑dessous ne constituent pas des tarifs, mais des configurations fréquentes que nous traitons sur l’axe France → Angola. Ils vous donnent des scénarios de budget typiques pour visualiser comment le coût total se construit, sans indiquer de montant précis."
       ],
       "ul": [
-        "Exemple 1 – petit volume LCL (3–5 palettes d’effets personnels ou de marchandises B2B) : un envoi en groupage maritime sur un départ régulier depuis un port français ou du Benelux vers Pointe‑Noire ou Luanda. Vous payez uniquement le volume utilisé dans le conteneur partagé.",
+        "Exemple 1 – petit volume LCL (3–5 palettes d’effets personnels ou de marchandises B2B) : un envoi en groupage maritime sur un départ régulier depuis un port français ou du Benelux vers Luanda. Vous payez uniquement le volume utilisé dans le conteneur partagé.",
         "Exemple 2 – déménagement complet en 20' FCL avec effets personnels + éventuellement un véhicule : un conteneur scellé, géré de bout en bout, qui intègre souvent l’enlèvement, la mise en conteneur, le fret, la douane export et l’assurance sur la valeur déclarée.",
         "Exemple 3 – conteneur 40' FCL pour flux B2B volumineux : palettes de marchandises, pièces détachées, consommables, parfois une machine ou un véhicule, avec un schéma de transport régulier et un travail sur la stabilité des tarifs dans le temps."
-      ]
-    },
-    {
-      "h2": "Spécificités France → Congo (Pointe‑Noire)",
-      "p": [
-        "Sur la route France → Congo, le choix du port de départ (Le Havre, Fos, Anvers…) et la combinaison pré/post‑acheminement influencent fortement le budget final. Les rotations vers Pointe‑Noire sont régulières, mais les niveaux tarifaires dépendent des compagnies, des alliances et des périodes de pointe.",
-        "Pour un déménagement complet ou un projet à forte valeur, il est essentiel d’anticiper : définir la fenêtre de départ, regrouper vos volumes, valider le type de conteneur et caler la documentation (BL, douane, assurance) pour éviter les surcoûts de stockage ou de surestaries."
       ]
     },
     {
@@ -86,13 +78,13 @@
       "h2": "Guides & pages associés",
       "p": [
         "Guides associés : FCL vs LCL — comment décider ?, Incoterms 2020.",
-        "Pages services : Fret maritime vers l’Afrique, France ↔ Congo, France ↔ Angola, Dédouanement, Assurance cargo."
+        "Pages services : Fret maritime France ↔ Angola, Dédouanement, Assurance cargo."
       ]
     }
   ],
   "faq": [
     {
-      "q": "Combien coûte un conteneur 20' ou 40' vers le Congo ou l’Angola ?",
+      "q": "Combien coûte un conteneur 20' ou 40' vers l’Angola ?",
       "a": "Il n’existe pas de tarif unique car le prix dépend du type de conteneur (20'/40'), des ports, de la saison, de la nature des marchandises et des services inclus (pré/post‑acheminement, douane, assurance). Concrètement, un 20' ou un 40' FCL représente un budget de plusieurs milliers d’euros : nous détaillons toujours nos devis par poste pour que vous compreniez ce qui compose le coût total livré."
     },
     {

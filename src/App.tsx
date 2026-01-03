@@ -104,39 +104,7 @@ function App() {
               </Suspense>
             }
           />
-          {/* FR route-specific pages */}
-          <Route
-            path="services/fret-maritime/france-congo"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-congo/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-congo/douane"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/fret-maritime/france-congo/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
+          {/* FR route-specific page: France–Angola only */}
           <Route
             path="services/fret-maritime/france-angola"
             element={
@@ -155,7 +123,7 @@ function App() {
             }
           />
           <Route
-            path="guides/prix-conteneur-congo-angola"
+            path="guides/prix-conteneur-angola"
             element={
               <Suspense fallback={null}>
                 <PillarContainerPricing />
@@ -221,39 +189,7 @@ function App() {
               </Suspense>
             }
           />
-          {/* EN + default international slugs for route-specific pages (also used by es/tr/sw/de/it/ar) */}
-          <Route
-            path="services/maritime-freight/france-congo"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-congo/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-congo/customs"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="services/maritime-freight/france-congo/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
+          {/* EN + default international slug for route-specific page (also used by es/tr/sw/de/it/ar) */}
           <Route
             path="services/maritime-freight/france-angola"
             element={
@@ -280,7 +216,7 @@ function App() {
             }
           />
           <Route
-            path="guides/container-prices-congo-angola"
+            path="guides/container-prices-angola"
             element={
               <Suspense fallback={null}>
                 <PillarContainerPricing />
@@ -353,39 +289,7 @@ function App() {
               </Suspense>
             }
           />
-          {/* PT route-specific pages */}
-          <Route
-            path="servicos/frete-maritimo/franca-congo"
-            element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-congo/fcl-lcl"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-congo/despacho-aduaneiro"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="servicos/frete-maritimo/franca-congo/checklist"
-            element={
-              <Suspense fallback={null}>
-                <FreightRouteSubpage />
-              </Suspense>
-            }
-          />
+          {/* PT route-specific page */}
           <Route
             path="servicos/frete-maritimo/franca-angola"
             element={
@@ -412,9 +316,9 @@ function App() {
             }
           />
           <Route
-            path="guias/precos-conteiner-congo-angola"
+            path="guias/precos-conteiner-angola"
             element={
-              <Suspense fallback={null}>
+             < Suspense fallback={null={null}>
                 <PillarContainerPricing />
               </Suspense>
             }

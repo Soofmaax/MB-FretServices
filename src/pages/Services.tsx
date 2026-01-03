@@ -28,7 +28,7 @@ const Services: FC = () => {
   );
   const seoDescription = t(
     'services:seo.description',
-    'Discover our international transport services: sea freight to Central Africa (Congo, Angola), professional customs clearance and cargo insurance.'
+    'Discover our international transport services: sea freight in FCL/LCL containers on the France–Angola corridor, professional customs clearance and cargo insurance.'
   );
 
   const langTagMap: Record<string, string> = {
@@ -268,21 +268,14 @@ const Services: FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                key: 'france_congo' as const,
-                to: 'services/fret-maritime/france-congo',
-                img: '416978',
-              },
-              {
                 key: 'france_angola' as const,
                 to: 'services/fret-maritime/france-angola',
                 img: '906982',
               },
             ].map((r, i) => {
-              const fallbackTitle = r.key === 'france_congo' ? 'France ↔ Congo' : 'France ↔ Angola';
+              const fallbackTitle = 'France ↔ Angola';
               const fallbackTeaser =
-                r.key === 'france_congo'
-                  ? 'Sea freight France–Congo (FCL/LCL), Pointe-Noire, optimized transit times and 24/7 tracking.'
-                  : 'Sea freight France–Angola (FCL/LCL), departures from France/Benelux to Luanda with controlled lead times.';
+                'Sea freight France–Angola (FCL/LCL), departures from France/Benelux to Luanda with controlled lead times.';
               const title = t(`services:routesSection.cards.${r.key}.title`, fallbackTitle);
               const teaser = t(
                 `services:routesSection.cards.${r.key}.teaser`,

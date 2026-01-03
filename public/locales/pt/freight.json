@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Transporte marítimo França–Congo & França–Angola – Contentores FCL/LCL | MB Fret Services",
-    "description": "Transporte marítimo profissional em contentores 20' e 40' (FCL/LCL) a partir de portos franceses e europeus para o Congo e Angola. Mudanças internacionais, envio de veículos e cargas B2B, com desalfandegamento e seguro de carga integrados e orçamento gratuito em 24 horas."
+    "title": "Transporte marítimo França–Angola – Contentores FCL/LCL | MB Fret Services",
+    "description": "Transporte marítimo profissional em contentores 20' e 40' (FCL/LCL) a partir de portos franceses e europeus para Angola. Mudanças internacionais, envio de veículos e cargas B2B, com desalfandegamento e seguro de carga integrados e orçamento gratuito em 24 horas."
   },
   "hero": {
     "title": "Transporte marítimo França–Angola",
@@ -33,13 +33,13 @@
     "subtitle": "Perícia reconhecida no transporte marítimo para África com soluções adaptadas a todas as suas necessidades."
   },
   "advantages": [
-    { "title": "Perícia Marítima", "description": "Perícia dedicada no transporte marítimo para a África Central (Congo, Angola)" },
+    { "title": "Perícia Marítima", "description": "Perícia dedicada no transporte marítimo França–Angola" },
     { "title": "Prazos Controlados", "description": "Rotações regulares e tempos de trânsito otimizados" },
     { "title": "Segurança Garantida", "description": "Seguro de carga e rastreamento em tempo real das suas mercadorias" }
   ],
   "segments": {
     "title": "Mudança, veículos ou mercadorias?",
-    "subtitle": "Uma equipa dedicada aos seus projetos pessoais e profissionais para a África Central (Congo, Angola).",
+    "subtitle": "Uma equipa dedicada aos seus projetos pessoais e profissionais entre a França e Angola.",
     "items": [
       {
         "title": "Mudança internacional",
@@ -71,7 +71,7 @@
     "cta": "Pedir Orçamento Personalizado"
   },
   "lcl": {
-    "title": "Fret LCL para África",
+    "title": "Fret LCL para Angola",
     "subtitle": "Serviço de consolidação marítima a partir da França e da Europa para o Congo e Angola.",
     "blocks": [
       {
@@ -85,9 +85,9 @@
       {
         "title": "Manter flexibilidade e saídas regulares",
         "bullets": [
-          "Saídas LCL regulares a partir de portos franceses e do Benelux para Pointe-Noire e Luanda.",
+          "Saídas LCL regulares a partir de portos franceses e do Benelux para Luanda.",
           "Possibilidade de alternar entre LCL pontual e FCL assim que os volumes aumentam.",
-          "Reservas antecipadas nos principais corredores França–Congo e França–Angola."
+          "Reservas antecipadas no corredor França–Angola."
         ]
       },
       {
@@ -107,7 +107,7 @@
         ]
       }
     ],
-    "cta_title": "Um projeto LCL para África (Congo, Angola)?",
+    "cta_title": "Um projeto LCL para Angola?",
     "cta_text": "Indique-nos o volume aproximado, portos de origem, destino e frequência de envio. Construímos uma solução LCL à medida para mudanças internacionais, envios B2B, veículos ou peças sobressalentes.",
     "cta_label": "Pedir Orçamento LCL"
   },

@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type RouteKey = 'services_freight_france_congo' | 'services_freight_france_angola';
+type RouteKey = 'services_freight_france_angola';
 
 type ClientType = 'business' | 'individual' | 'association';
 

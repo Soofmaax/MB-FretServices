@@ -62,16 +62,16 @@
     ]
   },
   "source_banner": {
-    "container_prices": "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola.",
+    "default": "Vous nous contactez depuis la page contact.",
+    "services": "Vous nous contactez depuis la page Services.",
+    "destinations": "Vous nous contactez depuis la page Destinations.",
+    "freight": "Vous nous contactez depuis la page Fret maritime.",
+    "customs": "Vous nous contactez depuis la page Dédouanement.",
+    "insurance": "Vous nous contactez depuis la page Assurance cargo.",
+    "container_prices": "Vous venez du guide sur le prix d’un conteneur 20' / 40' vers l’Angola.",
+    "incoterms": "Vous venez du guide sur les Incoterms 2020.",
     "fcl_lcl": "Vous venez du guide FCL vs LCL.",
-    "incoterms": "Vous venez du guide Incoterms 2020.",
-    "route_congo": "Vous venez de la page route France ↔ Congo (Pointe‑Noire).",
-    "route_angola": "Vous venez de la page route France ↔ Angola (Luanda).",
-    "service_freight_maritime": "Vous venez de la page Fret maritime (conteneurs FCL/LCL vers l’Afrique).",
-    "service_customs": "Vous venez de la page Dédouanement & conformité France ↔ Afrique.",
-    "service_insurance": "Vous venez de la page Assurance cargo pour vos conteneurs FCL/LCL.",
-    "service_air_freight": "Vous venez de la page Fret aérien.",
-    "cta": "Les informations ci-dessous nous aideront à affiner votre devis."
+    "route_angola": "Vous venez de la page route France ↔ Angola (Luanda)."
   },
   "form": {
     "name": "Nom complet",

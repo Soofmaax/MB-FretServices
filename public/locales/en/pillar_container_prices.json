@@ -1,11 +1,10 @@
 {
-  "title": "Cost of a 20' / 40' container to Congo and Angola | MB Fret Services",
-  "description": "Understand what drives the cost of a 20' or 40' container between France and Central Africa (Congo, Angola): container type, ports, FCL/LCL, seasonality, and included services. Typical configurations, practical advice and a method to build a realistic budget without unpleasant surprises.",
-  "hero_h1": "Cost of a 20' / 40' container to Congo and Angola",
-  "hero_intro": "There is no single “catalogue price” for a container: the budget depends on actual volume, container type, departure and arrival ports, season, and which services are included (pre/post-carriage, customs, insurance). This guide helps you understand the main price drivers so you can build a realistic budget for your shipments to Congo and Angola.",
+  "title": "Cost of a 20' / 40' container to Angola | MB Fret Services",
+  "description": "Understand what drives the cost of a 20' or 40' container between France and Angola: container type, ports, FCL/LCL, seasonality, and included services. Typical configurations, practical advice and a method to build a realistic budget without unpleasant surprises.",
+  "hero_h1": "Cost of a 20' / 40' container to Angola",
+  "hero_intro": "There is no single “catalogue price” for a container: the budget depends on actual volume, container type, departure and arrival ports, season, and which services are included (pre/post-carriage, customs, insurance). This guide helps you understand the main price drivers so you can build a realistic budget for your shipments to Angola.",
   "hero_links": {
     "maritime": "Sea freight",
-    "congo": "France ↔ Congo",
     "angola": "France ↔ Angola"
   },
   "sections": [
@@ -30,19 +29,12 @@
     {
       "h2": "Typical configurations (without fixed price tags)",
       "p": [
-        "The examples below are not price lists, but common configurations we handle on the France → Congo/Angola trades. They provide typical budget scenarios to show how total delivered cost is built in practice, without publishing specific amounts."
+        "The examples below are not price lists, but common configurations we handle on the France → Angola trade. They provide typical budget scenarios to show how total delivered cost is built in practice, without publishing specific amounts."
       ],
       "ul": [
-        "Example 1 – small LCL volume (3–5 pallets of personal effects or B2B cargo): groupage from a French or Benelux port to Pointe-Noire or Luanda. You pay only for the volume you occupy in the shared container.",
+        "Example 1 – small LCL volume (3–5 pallets of personal effects or B2B cargo): groupage from a French or Benelux port to Luanda. You pay only for the volume you occupy in the shared container.",
         "Example 2 – full international move in a 20' FCL with personal effects + possibly one vehicle: a sealed container managed end-to-end, often including pickup, stuffing, freight, export customs and insurance based on declared value.",
         "Example 3 – 40' FCL for large B2B flows: pallets, spare parts, consumables, sometimes a machine or vehicle, with a regular transport pattern and focus on rate stability over time."
-      ]
-    },
-    {
-      "h2": "Specifics of France → Congo (Pointe-Noire)",
-      "p": [
-        "On the France → Congo trade, the choice of departure port (Le Havre, Fos, Antwerp, etc.) and pre/post-carriage combination has a major impact on total budget. Rotations to Pointe-Noire are regular, but rate levels depend on carriers, alliances and peak periods.",
-        "For full moves or high-value projects, planning is essential: define your departure window, group your volumes, choose the right container type, and secure documentation (BL, customs, insurance) early to avoid storage or demurrage costs."
       ]
     },
     {
@@ -86,13 +78,13 @@
       "h2": "Related guides & pages",
       "p": [
         "Related guides: FCL vs LCL — how to decide?, Incoterms 2020.",
-        "Service pages: Sea freight to Africa, France ↔ Congo, France ↔ Angola, Customs clearance, Cargo insurance."
+        "Service pages: Sea freight France ↔ Angola, Customs clearance, Cargo insurance."
       ]
     }
   ],
   "faq": [
     {
-      "q": "How much does a 20' or 40' container to Congo or Angola cost?",
+      "q": "How much does a 20' or 40' container to Angola cost?",
       "a": "There is no single fixed rate because the cost depends on the container type (20'/40'), ports, season, cargo nature and the services included (pre/post-carriage, customs, insurance). In practice, a 20' or 40' FCL represents a budget of several thousand euros: we always break down our quotes by cost element so you clearly understand your total delivered cost."
     },
     {

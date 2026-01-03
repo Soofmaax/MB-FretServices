@@ -12,12 +12,12 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Clock, Ship, MapPin, Home, Car, Package } from 'lucide-react';
 
-type RouteKey = 'services_freight_france_congo' | 'services_freight_france_angola';
+type RouteKey = 'services_freight_france_angola';
 
 function detectRouteKey(): RouteKey | null {
   if (typeof window === 'undefined') return null;
   const k = keyFromPath(window.location.pathname);
-  if (k === 'services_freight_france_congo' || k === 'services_freight_france_angola') {
+  if (k === 'services_freight_france_angola') {
     return k;
   }
   return null;
@@ -31,17 +31,6 @@ const contentMap: Record<
     areaServed: Array<{ '@type': 'Country'; name: string }>;
   }
 > = {
-  services_freight_france_congo: {
-    heroBase: 'hero-congo',
-    ports: {
-      from: ['Le Havre', 'Marseille-Fos'],
-      to: ['Pointe‑Noire'],
-    },
-    areaServed: [
-      { '@type': 'Country', name: 'France' },
-      { '@type': 'Country', name: 'Congo' },
-    ],
-  },
   services_freight_france_angola: {
     heroBase: 'hero-angola',
     ports: {
@@ -67,7 +56,7 @@ const FreightRoute: FC = () => {
 
   const c = contentMap[routeKey];
   const ogImagePath = `/images/og-${c.heroBase.replace('hero-', '')}.webp`;
-  const routeId = routeKey === 'services_freight_france_congo' ? 'france_congo' : 'france_angola';
+  const routeId = 'france_angola';
   const routeLabel = t(`routes_main:${routeId}.label`);
 
   // Localized content (titles, subtitles, lists)
@@ -161,12 +150,7 @@ const FreightRoute: FC = () => {
     },
   };
 
-  const contactSource =
-    routeKey === 'services_freight_france_congo'
-      ? 'route_france_congo'
-      : routeKey === 'services_freight_france_angola'
-      ? 'route_france_angola'
-      : undefined;
+  const contactSource = 'route_france_angola';
 
   const faqLd = {
     '@context': 'https://schema.org',
@@ -184,10 +168,7 @@ const FreightRoute: FC = () => {
   // Create these files under `public/images/departs/`:
   // - france-congo-first.jpg
   // - france-angola-first.jpg
-  const recentDepartureImage =
-    routeKey === 'services_freight_france_congo'
-      ? '/images/departs/france-congo-first.jpg'
-      : '/images/departs/france-angola-first.jpg';
+  const recentDepartureImage = '/images/departs/france-angola-first.jpg';
 
   return (
     <div className="pt-16">
@@ -573,20 +554,11 @@ const FreightRoute: FC = () => {
                 <h3 className="text-2xl font-bold text-primary-900 mb-3">
                   {t('routes_main:headings.ports_corridors').replace('__ROUTE__', routeLabel)}
                 </h3>
-                {routeKey === 'services_freight_france_congo' && (
-                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                    <li>France: Le Havre, Marseille‑Fos</li>
-                    <li>Congo: Pointe‑Noire</li>
-                    <li>Spécificités: visibilité jalons LCL, contrôles douaniers</li>
-                  </ul>
-                )}
-                {routeKey === 'services_freight_france_angola' && (
-                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                    <li>France / Europe: Le Havre, Marseille‑Fos, Anvers, Rotterdam</li>
-                    <li>Angola: Luanda</li>
-                    <li>Atouts: rotations régulières, solutions FCL &amp; LCL, expertise douanière Angola</li>
-                  </ul>
-                )}
+                <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>France / Europe: Le Havre, Marseille‑Fos, Anvers, Rotterdam</li>
+                  <li>Angola: Luanda</li>
+                  <li>Atouts: rotations régulières, solutions FCL &amp; LCL, expertise douanière Angola</li>
+                </ul>
                 <div className="mt-6">
                   <LocalizedLink
                     to="guides/fcl-vs-lcl"
@@ -644,54 +616,7 @@ const FreightRoute: FC = () => {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-            {routeKey === 'services_freight_france_congo' && (
-              <>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:congo.fcl_lcl.h1',
-                      'FCL vs LCL — France ↔ Congo'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-congo/fcl-lcl"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:congo.customs.h1',
-                      'Customs procedures — France ↔ Congo'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-congo/douane"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-                <div className="bg-white rounded-lg p-5 shadow">
-                  <h3 className="font-semibold text-primary-900 mb-2">
-                    {t(
-                      'routes_sub:congo.checklist.h1',
-                      'Document checklist — France ↔ Congo'
-                    )}
-                  </h3>
-                  <LocalizedLink
-                    to="services/fret-maritime/france-congo/checklist"
-                    className="text-accent-600 hover:text-accent-700"
-                  >
-                    {t('routes_sub:labels.view', 'View')}
-                  </LocalizedLink>
-                </div>
-              </>
-            )}
-          </div>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4"></div>
         </div>
       </section>
 
