@@ -1,4 +1,4 @@
-name: CI - Test, Audit and Deploy
+name: CI - Test and Audit
 
 on:
   push:
@@ -154,68 +154,4 @@ jobs:
               core.setFailed(summary.reason || 'Quality Gate failed');
             }
 
-  pages_build:
-    name: Build site for GitHub Pages
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Determine base path (VITE_BASE)
-        id: basepath
-        shell: bash
-        run: |
-          REPO="${GITHUB_REPOSITORY##*/}"
-          OWNER="${GITHUB_REPOSITORY%%/*}"
-          if [[ "$REPO" == "${OWNER}.github.io" ]]; then
-            echo "base=/" >> "$GITHUB_OUTPUT"
-          else
-            echo "base=/${REPO}/" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Install dependencies
-        run: npm install --no-fund --no-audit
-
-      - name: Build for GitHub Pages
-        env:
-          VITE_SITE_URL: https://mb-fretservices.com
-          VITE_BASE: ${{ steps.basepath.outputs.base }}
-        run: npm run build
-
-      - name: Add SPA fallback (404.html)
-        run: cp dist/index.html dist/404.html
-
-      - name: Upload artifact to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  pages_deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: pages_build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+  
