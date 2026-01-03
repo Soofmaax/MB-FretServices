@@ -194,8 +194,8 @@
     }
   },
   "destinations": {
-    "title": "Destinations Fret Maritime Afrique",
-    "subtitle": "Rotations régulières (départs hebdomadaires ou bi‑hebdomadaires) vers les principaux ports d’Afrique centrale avec des délais optimisés.",
+    "title": "Destination Fret maritime France–Angola",
+    "subtitle": "Rotations régulières (départs hebdomadaires ou bi‑hebdomadaires) vers Luanda en Angola avec des délais optimisés.",
     "label_duration": "Durée transit",
     "label_frequency": "Fréquence",
     "label_departure": "Départ depuis",
@@ -206,13 +206,13 @@
     { "country": "Angola", "port": "Luanda", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire", "departure": "Le Havre, Marseille-Fos, Anvers, Rotterdam" }
   ],
   "faq": {
-    "title": "Questions Fréquentes - Fret Maritime",
-    "q1": "Quelle est la différence entre FCL et LCL ?",
-    "a1": "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. C’est particulièrement adapté à un déménagement complet ou à l’envoi d’un grand volume d’effets personnels, souvent avec un véhicule ou deux dans le même envoi. LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, ce qui est idéal pour les petits volumes ou des envois plus ponctuels.",
-    "q2": "Quels documents sont nécessaires pour le fret maritime ?",
-    "a2": "Facture commerciale, liste de colisage, connaissement maritime (Bill of Lading), certificat d'origine si requis, et documents spécifiques selon la nature des marchandises (certificats sanitaires, etc.).",
+    "title": "Questions fréquentes – B2B & déménagements",
+    "q1": "Je suis une entreprise : comment fonctionne le fret maritime France–Angola pour mes palettes et marchandises B2B ?",
+    "a1": "Pour les entreprises, nous construisons votre devis France–Angola à partir de quelques paramètres clés : type de marchandises, volume (m³) ou nombre de palettes, poids, ports ou villes de départ/arrivée et délais souhaités. Nous comparons ensuite FCL (conteneur complet 20'/40') et LCL (groupage) pour optimiser vos coûts et vos délais, intégrons le dédouanement et l’assurance cargo, puis organisons l’enlèvement, le pré‑acheminement, la traversée maritime et, si nécessaire, la livraison finale.",
+    "q2": "Je prépare un déménagement international vers l’Angola : comment se passe l’envoi de mes effets personnels et de mon véhicule ?",
+    "a2": "Pour un déménagement, nous estimons d’abord votre volume (en m³) et la nature de vos biens (cartons, mobilier, électroménager, véhicule, moto…). Selon ce volume, nous recommandons un groupage LCL ou un conteneur complet 20'/40' dédié. Nous vous accompagnons sur l’emballage, le chargement, les formalités export/import, l’assurance ad valorem et le suivi jusqu’à l’arrivée du conteneur à Luanda. Vous disposez d’un interlocuteur unique pour coordonner l’ensemble.",
     "q3": "Comment suivre mon conteneur en transit ?",
-    "a3": "Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, de l'embarquement au port de départ jusqu'à l'arrivée au port de destination."
+    "a3": "Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, de l'embarquement au port de départ jusqu'à l'arrivée au port de destination. Vous êtes informé des grandes étapes (chargement, départ navire, arrivée à Luanda, opérations douanières) et prévenu en cas d’aléa de transit."
   },
   "final": {
     "title": "Prêt à expédier par fret maritime ?",
@@ -284,7 +284,7 @@
   },
   "service_type": "Fret maritime",
   "whatsapp": {
-    "hero_quote_africa": "Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique",
+    "hero_quote_africa": "Bonjour, je souhaite un devis pour du fret maritime vers l'Angola",
     "final_quote": "Bonjour, je souhaite un devis pour du fret maritime"
   }
 }
