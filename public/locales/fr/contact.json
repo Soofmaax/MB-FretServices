@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Contact - Devis Gratuit Déménagement & Fret Maritime | MB Fret Services",
-    "description": "Contactez MB Fret Services pour un devis gratuit. Déménagements internationaux, envoi de véhicules et d’effets personnels vers le Congo et l’Angola, ainsi que solutions pour professionnels. WhatsApp, email ou téléphone. Réponse sous 24h garantie."
+    "title": "Contact - Devis déménagement & conteneur 20' / 40' France–RDC / Congo / Angola | MB Fret Services",
+    "description": "Contactez MB Fret Services pour un devis gratuit de déménagement international, d’envoi de véhicules et de conteneurs 20' / 40' vers la RDC, le Congo et l’Angola. Devis détaillé sous 24h pour vos effets personnels, voitures, motos et palettes, avec douane et assurance cargo sur les corridors France–RDC, France–Congo et France–Angola. WhatsApp, email ou téléphone."
   },
   "hero": {
     "title": "Contactez MB Fret Services",
-    "subtitle": "Besoin d'un devis ou de conseils pour un déménagement, l’envoi d’un véhicule ou de quelques m³ d’effets personnels ? Notre équipe vous répond sous 24h."
+    "subtitle": "Besoin d'un devis pour un déménagement France → RDC / Congo / Angola, l’envoi d’une voiture ou d’un conteneur 20' / 40' ? Notre équipe vous répond sous 24h avec une estimation détaillée."
   },
   "methods": {
     "email": "Email",
@@ -62,10 +62,11 @@
     ]
   },
   "source_banner": {
-    "container_prices": "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola.",
+    "container_prices": "Vous venez du guide sur le prix d'un conteneur 20'/40' vers la RDC, le Congo ou l’Angola.",
     "fcl_lcl": "Vous venez du guide FCL vs LCL.",
     "incoterms": "Vous venez du guide Incoterms 2020.",
     "route_congo": "Vous venez de la page route France ↔ Congo (Pointe‑Noire).",
+    "route_rdc": "Vous venez de la page route France ↔ RDC (Kinshasa / Matadi).",
     "route_angola": "Vous venez de la page route France ↔ Angola (Luanda).",
     "service_freight_maritime": "Vous venez de la page Fret maritime (conteneurs FCL/LCL vers l’Afrique).",
     "service_customs": "Vous venez de la page Dédouanement & conformité France ↔ Afrique.",
