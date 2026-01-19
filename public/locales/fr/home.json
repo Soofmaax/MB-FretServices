@@ -50,5 +50,11 @@
   ],
   "final_cta_title": "Prêt à expédier vos effets personnels ou votre véhicule ?",
   "final_cta_text": "Obtenez un devis personnalisé en moins de 24h. Que vous prépariez un déménagement international, l’envoi d’une voiture ou d’une moto, ou quelques m³ d’effets personnels, nous vous proposons une solution de transport fiable avec des tarifs cohérents avec le marché et un accompagnement à chaque étape. Les professionnels et petites entreprises bénéficient des mêmes standards de suivi.",
+  "final_cta_routes_intro": "Nos corridors principaux vers l’Afrique centrale :",
+  "final_cta_routes": [
+    "France ↔ Congo (Pointe-Noire) — déménagements, effets personnels, véhicules.",
+    "France ↔ RDC (Kinshasa / Matadi) — déménagements, groupage LCL et conteneurs FCL.",
+    "France ↔ Angola (Luanda) — flux particuliers et B2B, FCL/LCL."
+  ],
   "whatsapp": "Nous contacter via WhatsApp"
 }
