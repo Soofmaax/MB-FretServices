@@ -7,7 +7,7 @@ import LocalizedLink from '../components/LocalizedLink';
 import { useTranslation } from 'react-i18next';
 
 type SubTopic = 'fcl_lcl' | 'customs' | 'checklist';
-type Country = 'congo';
+type Country = 'congo' | 'rdc';
 
 function resolveContextFromKey(k: RouteKey): { country: Country; sub: SubTopic; parentKey: RouteKey } | null {
   switch (k) {
@@ -17,6 +17,12 @@ function resolveContextFromKey(k: RouteKey): { country: Country; sub: SubTopic; 
       return { country: 'congo', sub: 'customs', parentKey: 'services_freight_france_congo' };
     case 'services_freight_france_congo_checklist':
       return { country: 'congo', sub: 'checklist', parentKey: 'services_freight_france_congo' };
+    case 'services_freight_france_rdc_fcl_lcl':
+      return { country: 'rdc', sub: 'fcl_lcl', parentKey: 'services_freight_france_rdc' };
+    case 'services_freight_france_rdc_customs':
+      return { country: 'rdc', sub: 'customs', parentKey: 'services_freight_france_rdc' };
+    case 'services_freight_france_rdc_checklist':
+      return { country: 'rdc', sub: 'checklist', parentKey: 'services_freight_france_rdc' };
     default:
       return null;
   }

@@ -22,6 +22,9 @@ export type RouteKey =
   | 'services_freight_france_congo_fcl_lcl'
   | 'services_freight_france_congo_customs'
   | 'services_freight_france_congo_checklist'
+  | 'services_freight_france_rdc_fcl_lcl'
+  | 'services_freight_france_rdc_customs'
+  | 'services_freight_france_rdc_checklist'
   | 'services_freight_france_turkey_fcl_lcl'
   | 'services_freight_france_turkey_customs'
   | 'services_freight_france_turkey_checklist'
@@ -52,6 +55,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/fret-maritime/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/fret-maritime/france-congo/douane',
     services_freight_france_congo_checklist: 'services/fret-maritime/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/fret-maritime/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/fret-maritime/france-rdc/douane',
+    services_freight_france_rdc_checklist: 'services/fret-maritime/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/fret-maritime/france-turquie/fcl-lcl',
     services_freight_france_turkey_customs: 'services/fret-maritime/france-turquie/douane',
     services_freight_france_turkey_checklist: 'services/fret-maritime/france-turquie/checklist',
@@ -427,6 +433,22 @@ const FR_CONGO_CHECKLIST_ALIASES = new Set<string>([
   'servicos/frete-maritimo/franca-congo/checklist',
 ]);
 
+const FR_RDC_FCL_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc/fcl-lcl',
+  'services/maritime-freight/france-rdc/fcl-lcl',
+  'servicos/frete-maritimo/franca-rdc/fcl-lcl',
+]);
+const FR_RDC_CUSTOMS_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc/douane',
+  'services/maritime-freight/france-rdc/customs',
+  'servicos/frete-maritimo/franca-rdc/despacho-aduaneiro',
+]);
+const FR_RDC_CHECKLIST_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc/checklist',
+  'services/maritime-freight/france-rdc/checklist',
+  'servicos/frete-maritimo/franca-rdc/checklist',
+]);
+
 const FR_TURKEY_FCL_ALIASES = new Set<string>([
   'services/fret-maritime/france-turquie/fcl-lcl',
   'services/maritime-freight/france-turkey/fcl-lcl',
@@ -512,6 +534,10 @@ export function keyFromPath(pathname: string): RouteKey {
   if (FR_CONGO_FCL_ALIASES.has(rest)) return 'services_freight_france_congo_fcl_lcl';
   if (FR_CONGO_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_congo_customs';
   if (FR_CONGO_CHECKLIST_ALIASES.has(rest)) return 'services_freight_france_congo_checklist';
+
+  if (FR_RDC_FCL_ALIASES.has(rest)) return 'services_freight_france_rdc_fcl_lcl';
+  if (FR_RDC_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_rdc_customs';
+  if (FR_RDC_CHECKLIST_ALIASES.has(rest)) return 'services_freight_france_rdc_checklist';
 
   if (FR_TURKEY_FCL_ALIASES.has(rest)) return 'services_freight_france_turkey_fcl_lcl';
   if (FR_TURKEY_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_turkey_customs';
