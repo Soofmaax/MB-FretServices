@@ -13,6 +13,7 @@ export type RouteKey =
   | 'services_insurance'
   | 'services_freight_france_china'
   | 'services_freight_france_congo'
+  | 'services_freight_france_rdc'
   | 'services_freight_france_angola'
   | 'services_freight_france_turkey'
   | 'services_freight_france_china_fcl_lcl'
@@ -21,6 +22,9 @@ export type RouteKey =
   | 'services_freight_france_congo_fcl_lcl'
   | 'services_freight_france_congo_customs'
   | 'services_freight_france_congo_checklist'
+  | 'services_freight_france_rdc_fcl_lcl'
+  | 'services_freight_france_rdc_customs'
+  | 'services_freight_france_rdc_checklist'
   | 'services_freight_france_turkey_fcl_lcl'
   | 'services_freight_france_turkey_customs'
   | 'services_freight_france_turkey_checklist'
@@ -42,6 +46,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/assurance-cargo',
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
+    services_freight_france_rdc: 'services/fret-maritime/france-rdc',
     services_freight_france_angola: 'services/fret-maritime/france-angola',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
     services_freight_france_china_fcl_lcl: 'services/fret-maritime/france-chine/fcl-lcl',
@@ -50,6 +55,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/fret-maritime/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/fret-maritime/france-congo/douane',
     services_freight_france_congo_checklist: 'services/fret-maritime/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/fret-maritime/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/fret-maritime/france-rdc/douane',
+    services_freight_france_rdc_checklist: 'services/fret-maritime/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/fret-maritime/france-turquie/fcl-lcl',
     services_freight_france_turkey_customs: 'services/fret-maritime/france-turquie/douane',
     services_freight_france_turkey_checklist: 'services/fret-maritime/france-turquie/checklist',
@@ -70,6 +78,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -78,6 +87,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
@@ -120,13 +132,13 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     destinations: 'destinations',
     contact: 'contact',
     legal: 'legal',
-    privacy: 'privacy',
     services_freight_maritime: 'services/maritime-freight',
     services_air_freight: 'services/air-freight',
     services_customs: 'services/customs-clearance',
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -135,12 +147,14 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
-    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   es: {
     home: '',
@@ -155,6 +169,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -163,6 +178,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
@@ -183,6 +201,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -191,6 +210,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
@@ -211,6 +233,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -219,12 +242,14 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
-    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
   de: {
     home: '',
@@ -239,6 +264,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -247,6 +273,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
@@ -267,6 +296,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -275,6 +305,9 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
@@ -295,6 +328,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/cargo-insurance',
     services_freight_france_china: 'services/maritime-freight/france-china',
     services_freight_france_congo: 'services/maritime-freight/france-congo',
+    services_freight_france_rdc: 'services/maritime-freight/france-rdc',
     services_freight_france_angola: 'services/maritime-freight/france-angola',
     services_freight_france_turkey: 'services/maritime-freight/france-turkey',
     services_freight_france_china_fcl_lcl: 'services/maritime-freight/france-china/fcl-lcl',
@@ -303,12 +337,14 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_freight_france_congo_fcl_lcl: 'services/maritime-freight/france-congo/fcl-lcl',
     services_freight_france_congo_customs: 'services/maritime-freight/france-congo/customs',
     services_freight_france_congo_checklist: 'services/maritime-freight/france-congo/checklist',
+    services_freight_france_rdc_fcl_lcl: 'services/maritime-freight/france-rdc/fcl-lcl',
+    services_freight_france_rdc_customs: 'services/maritime-freight/france-rdc/customs',
+    services_freight_france_rdc_checklist: 'services/maritime-freight/france-rdc/checklist',
     services_freight_france_turkey_fcl_lcl: 'services/maritime-freight/france-turkey/fcl-lcl',
     services_freight_france_turkey_customs: 'services/maritime-freight/france-turkey/customs',
     services_freight_france_turkey_checklist: 'services/maritime-freight/france-turkey/checklist',
     pillar_incoterms: 'resources/incoterms-2020',
     pillar_fcl_lcl: 'guides/fcl-vs-lcl',
-    pillar_container_prices: 'guides/container-prices-congo-angola',
   },
 };
 
@@ -376,6 +412,11 @@ const FREIGHT_FRANCE_CONGO_ALIASES = new Set<string>([
   'services/maritime-freight/france-congo',
   'servicos/frete-maritimo/franca-congo',
 ]);
+const FREIGHT_FRANCE_RDC_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc',
+  'services/maritime-freight/france-rdc',
+  'servicos/frete-maritimo/franca-rdc',
+]);
 const FREIGHT_FRANCE_ANGOLA_ALIASES = new Set<string>([
   'services/fret-maritime/france-angola',
   'services/maritime-freight/france-angola',
@@ -418,6 +459,22 @@ const FR_CONGO_CHECKLIST_ALIASES = new Set<string>([
   'services/fret-maritime/france-congo/checklist',
   'services/maritime-freight/france-congo/checklist',
   'servicos/frete-maritimo/franca-congo/checklist',
+]);
+
+const FR_RDC_FCL_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc/fcl-lcl',
+  'services/maritime-freight/france-rdc/fcl-lcl',
+  'servicos/frete-maritimo/franca-rdc/fcl-lcl',
+]);
+const FR_RDC_CUSTOMS_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc/douane',
+  'services/maritime-freight/france-rdc/customs',
+  'servicos/frete-maritimo/franca-rdc/despacho-aduaneiro',
+]);
+const FR_RDC_CHECKLIST_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc/checklist',
+  'services/maritime-freight/france-rdc/checklist',
+  'servicos/frete-maritimo/franca-rdc/checklist',
 ]);
 
 const FR_TURKEY_FCL_ALIASES = new Set<string>([
@@ -493,6 +550,7 @@ export function keyFromPath(pathname: string): RouteKey {
   // Route main pages
   if (FREIGHT_FRANCE_CHINA_ALIASES.has(rest)) return 'services_freight_france_china';
   if (FREIGHT_FRANCE_CONGO_ALIASES.has(rest)) return 'services_freight_france_congo';
+  if (FREIGHT_FRANCE_RDC_ALIASES.has(rest)) return 'services_freight_france_rdc';
   if (FREIGHT_FRANCE_ANGOLA_ALIASES.has(rest)) return 'services_freight_france_angola';
   if (FREIGHT_FRANCE_TURKEY_ALIASES.has(rest)) return 'services_freight_france_turkey';
 
@@ -504,6 +562,10 @@ export function keyFromPath(pathname: string): RouteKey {
   if (FR_CONGO_FCL_ALIASES.has(rest)) return 'services_freight_france_congo_fcl_lcl';
   if (FR_CONGO_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_congo_customs';
   if (FR_CONGO_CHECKLIST_ALIASES.has(rest)) return 'services_freight_france_congo_checklist';
+
+  if (FR_RDC_FCL_ALIASES.has(rest)) return 'services_freight_france_rdc_fcl_lcl';
+  if (FR_RDC_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_rdc_customs';
+  if (FR_RDC_CHECKLIST_ALIASES.has(rest)) return 'services_freight_france_rdc_checklist';
 
   if (FR_TURKEY_FCL_ALIASES.has(rest)) return 'services_freight_france_turkey_fcl_lcl';
   if (FR_TURKEY_CUSTOMS_ALIASES.has(rest)) return 'services_freight_france_turkey_customs';

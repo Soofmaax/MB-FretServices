@@ -59,16 +59,50 @@ const Home: FC = () => {
 
       {/* Final CTA Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary-900 to-primary-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('home:final_cta_title', 'Ready to ship your goods?')}
           </h2>
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+          <p className="text-xl text-gray-200 mb-6 leading-relaxed">
             {t(
               'home:final_cta_text',
               'Get a personalized quote in under 24 hours. Our experts support you at every step of your logistics project.'
             )}
           </p>
+
+          {/* Mise en avant des corridors RDC / Congo / Angola */}
+          <div className="bg-primary-800/60 rounded-xl border border-primary-600 px-4 py-5 sm:px-6 sm:py-6 mb-8 text-left">
+            <p className="text-sm font-semibold text-accent-200 mb-2">
+              {t('home:final_cta_routes_intro', 'Our main corridors to Central Africa:')}
+            </p>
+            <ul className="space-y-1 text-sm text-gray-100">
+              {(t('home:final_cta_routes', {
+                returnObjects: true,
+                defaultValue: [
+                  'France ↔ Congo (Pointe-Noire) — déménagements, effets personnels, véhicules.',
+                  'France ↔ RDC (Kinshasa / Matadi) — déménagements, groupage LCL et conteneurs FCL.',
+                  'France ↔ Angola (Luanda) — flux particuliers et B2B, FCL/LCL.',
+                ],
+              }) as string[]).map((line, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent-400 mr-2 mt-1.5" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-4 flex flex-wrap gap-3">
+              <CtaButton href="services/fret-maritime/france-congo" variant="secondary" className="text-sm px-4 py-2">
+                France ↔ Congo
+              </CtaButton>
+              <CtaButton href="services/fret-maritime/france-rdc" variant="secondary" className="text-sm px-4 py-2">
+                France ↔ RDC
+              </CtaButton>
+              <CtaButton href="services/fret-maritime/france-angola" variant="secondary" className="text-sm px-4 py-2">
+                France ↔ Angola
+              </CtaButton>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CtaButton href="/contact" variant="primary" className="text-lg px-8 py-4">

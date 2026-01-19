@@ -242,7 +242,7 @@ const Services: FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
             {t('services:routesSection.title', 'Key routes')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 key: 'france_congo' as const,
@@ -250,16 +250,28 @@ const Services: FC = () => {
                 img: '416978',
               },
               {
+                key: 'france_rdc' as const,
+                to: 'services/fret-maritime/france-rdc',
+                img: '1005766',
+              },
+              {
                 key: 'france_angola' as const,
                 to: 'services/fret-maritime/france-angola',
                 img: '906982',
               },
             ].map((r, i) => {
-              const fallbackTitle = r.key === 'france_congo' ? 'France ↔ Congo' : 'France ↔ Angola';
+              const fallbackTitle =
+                r.key === 'france_congo'
+                  ? 'France ↔ Congo'
+                  : r.key === 'france_rdc'
+                  ? 'France ↔ RDC'
+                  : 'France ↔ Angola';
               const fallbackTeaser =
                 r.key === 'france_congo'
-                  ? 'Sea freight France–Congo (FCL/LCL), Pointe-Noire, optimized transit times and 24/7 tracking.'
-                  : 'Sea freight France–Angola (FCL/LCL), departures from France/Benelux to Luanda with controlled lead times.';
+                  ? 'Fret maritime France–Congo (FCL/LCL) vers Pointe-Noire, délais optimisés et suivi 24/7.'
+                  : r.key === 'france_rdc'
+                  ? 'Fret maritime France–RDC (FCL/LCL) vers Matadi / Kinshasa pour déménagements, véhicules et effets personnels.'
+                  : 'Fret maritime France–Angola (FCL/LCL), départs depuis France/Benelux vers Luanda avec délais maîtrisés.';
               const title = t(`services:routesSection.cards.${r.key}.title`, fallbackTitle);
               const teaser = t(
                 `services:routesSection.cards.${r.key}.teaser`,

@@ -36,9 +36,9 @@
     "customs": {
       "h1": "Procédures douanières — France ↔ Congo",
       "title": "Douanes & documents — France ↔ Congo | MB Fret Services",
-      "desc": "Documents requis, représentation et coordination terminal pour éviter retards.",
+      "desc": "Documents requis, représentation et coordination terminal pour éviter retards sur les flux France ↔ Congo.",
       "intro": [
-        "Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur droits & taxes."
+        "Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur droits & taxes pour vos expéditions vers le Congo."
       ],
       "sections": [
         { "h2": "Documents & Incoterms", "ul": [ "Facture/PL/BL, certificat d’origine si requis", "Incoterms: FOB/CIF/DAP/DDP selon partage responsabilité/risque", "Codes SH précis" ] },
@@ -54,9 +54,9 @@
     "checklist": {
       "h1": "Checklist documentaire — France ↔ Congo",
       "title": "Checklist documentaire — France ↔ Congo | MB Fret Services",
-      "desc": "Checklist pratique pour préparer l’expédition vers Pointe‑Noire.",
+      "desc": "Checklist pratique pour préparer une expédition vers Pointe‑Noire.",
       "intro": [
-        "Préparation méthodique pour limiter retards et litiges. Privilégier emballage export, preuve documentaire et cohérence des données."
+        "Préparation méthodique pour limiter retards et litiges sur le corridor France–Congo. Privilégier emballage export, preuve documentaire et cohérence des données."
       ],
       "sections": [
         { "h2": "Avant l’expédition", "ul": [ "CBM/poids", "Choix FCL/LCL", "Service/port", "Emballage export" ] },
@@ -67,6 +67,136 @@
         { "q": "Que vérifier en priorité ?", "a": "Facture/PL, BL (draft), certificats, coordonnées réceptionnaire." },
         { "q": "RDV port ?", "a": "Selon terminal; nous coordonnons les créneaux." },
         { "q": "Assurances ?", "a": "Ad valorem recommandée; conserver preuves et photos." }
+      ]
+    }
+  },
+  "rdc": {
+    "fcl_lcl": {
+      "h1": "FCL vs LCL — France ↔ RDC",
+      "title": "FCL vs LCL sur France ↔ RDC — Déménagements, véhicules et effets personnels | MB Fret Services",
+      "desc": "Comparer FCL et LCL pour vos expéditions France ↔ RDC (Kinshasa / Matadi) : seuils volumétriques (~13–15 m³), sécurité, coûts et risques.",
+      "intro": [
+        "Pour la RDC (Kinshasa / Matadi), le choix entre FCL et LCL dépend de votre volume, de la valeur de vos biens (déménagement complet, véhicule, quelques m³ d’effets personnels) et de votre tolérance au risque. Le groupage LCL est pertinent pour des volumes modestes; dès que vous approchez d’un déménagement complet ou que vous ajoutez un véhicule, un conteneur complet FCL devient souvent plus confortable et plus lisible en termes de coûts."
+      ],
+      "sections": [
+        {
+          "h2": "Seuils, coûts et risques vers la RDC",
+          "ul": [
+            "Comparer le coût total livré (fret, surcharges, THC, pré/post‑acheminement, droits et taxes en RDC) plutôt que le seul tarif au m³.",
+            "Envisager le FCL dès que vous dépassez ~13–15 m³ ou que la valeur/sensibilité de vos biens (mobilier, véhicules, matériel professionnel) est élevée.",
+            "Limiter les manipulations et les risques de litige en concentrant vos effets dans un conteneur FCL scellé lorsque c’est pertinent."
+          ]
+        },
+        {
+          "h3": "Cas d’usage France ↔ RDC",
+          "ul": [
+            "Quelques m³ d’effets personnels ou cartons: LCL groupé vers Matadi, avec visibilité des jalons et estimation des cut‑offs.",
+            "Déménagement complet + éventuellement un véhicule/moto: FCL dédié, emballage et calage renforcés, lisibilité des coûts (fret, port, douane, assurance).",
+            "Flux B2B réguliers vers la RDC: mix LCL/FCL selon le profil de vos expéditions, avec suivi et indicateurs (délais, litiges, écarts de coût)."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "À partir de quel volume passer de LCL à FCL pour la RDC ?",
+          "a": "En pratique, le FCL devient souvent intéressant autour de 13–15 m³, surtout si vos biens ont une valeur importante (meubles, électroménager, matériel pro) ou si vous ajoutez un véhicule. Nous vous proposons systématiquement une comparaison LCL/FCL sur la base du coût total livré."
+        },
+        {
+          "q": "Le LCL est‑il adapté pour des envois de cartons et petits lots vers Kinshasa ?",
+          "a": "Oui. Le groupage LCL est conçu pour les volumes modestes (cartons, bagages, petits lots B2B). Nous opérons des consolidations vers la RDC avec visibilité des jalons et un accompagnement sur la documentation."
+        },
+        {
+          "q": "L’assurance est‑elle indispensable sur France ↔ RDC ?",
+          "a": "Nous recommandons fortement une assurance cargo ad valorem pour les expéditions vers la RDC, en particulier pour les déménagements et les véhicules. Nous vous aidons à dimensionner correctement la couverture et à documenter l’emballage pour limiter les litiges."
+        }
+      ]
+    },
+    "customs": {
+      "h1": "Procédures douanières — France ↔ RDC",
+      "title": "Douanes & documents — France ↔ RDC (Kinshasa / Matadi) | MB Fret Services",
+      "desc": "Documents requis, représentation et coordination terminal pour vos expéditions France ↔ RDC, avec un focus sur Kinshasa / Matadi.",
+      "intro": [
+        "Pour la RDC, la qualité de la documentation est déterminante: facture détaillée, packing list, BL, certificats éventuels et pièces spécifiques selon la nature des marchandises (véhicules, matériel professionnel, effets personnels…). Nous vous accompagnons sur la structuration du dossier (codes SH, valeurs, origines) et coordonnons avec nos partenaires en RDC afin de limiter les blocages et les surcoûts."
+      ],
+      "sections": [
+        {
+          "h2": "Documents & Incoterms pour la RDC",
+          "ul": [
+            "Facture commerciale et packing list détaillées (description, valeur, origine) pour chaque type de bien.",
+            "BL (projet puis définitif), certificat d’origine ou documents spécifiques lorsque requis par les autorités congolaises.",
+            "Incoterms: FOB/CIF pour des flux marchands classiques; DAP/DDP possibles sur étude pour une prise en charge plus large."
+          ]
+        },
+        {
+          "h3": "Pièges fréquents vers la RDC",
+          "ul": [
+            "Sous‑évaluation des biens ou descriptions trop vagues sur les factures, sources de revalorisation et de blocages.",
+            "Manque de cohérence entre facture, packing list et BL, qui complique les contrôles et augmente le risque de litige.",
+            "Assurance insuffisante ou mal documentée, rendant plus difficile l’indemnisation en cas d’avarie."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quels documents sont indispensables pour dédouaner un déménagement vers la RDC ?",
+          "a": "Facture commerciale détaillée (ou liste valorisée des biens), packing list précise, BL, pièces d’identité, et, selon les cas, des certificats ou autorisations spécifiques. Nous vous fournissons une check‑list adaptée à votre projet."
+        },
+        {
+          "q": "Pouvez‑vous représenter le client en douane pour la RDC ?",
+          "a": "Oui, via nos partenaires en RDC. Nous coordonnons la préparation du dossier en France et la représentation locale pour limiter les blocages et maîtriser les délais."
+        },
+        {
+          "q": "Quels Incoterms recommandez‑vous sur France ↔ RDC ?",
+          "a": "Pour les particuliers et la diaspora, des schémas proches du DAP sont souvent privilégiés lorsque c’est possible; pour le B2B, FOB/CIF restent fréquents. Nous ajustons selon votre rôle (vendeur/acheteur) et votre niveau de maîtrise logistique."
+        }
+      ]
+    },
+    "checklist": {
+      "h1": "Checklist documentaire — France ↔ RDC",
+      "title": "Checklist documentaire — France ↔ RDC (Kinshasa / Matadi) | MB Fret Services",
+      "desc": "Checklist pratique pour préparer un déménagement ou une expédition de marchandises vers la RDC (Kinshasa / Matadi).",
+      "intro": [
+        "Pour un flux France–RDC, une bonne préparation en amont permet de limiter les retards et les litiges. Cette checklist vous aide à structurer vos documents, votre emballage et votre planification avant l’embarquement."
+      ],
+      "sections": [
+        {
+          "h2": "Avant l’expédition vers la RDC",
+          "ul": [
+            "Estimer précisément vos volumes (CBM) et vos poids par colis pour arbitrer LCL/FCL.",
+            "Valider le port de départ et le service (trajet direct ou via transbordement) en fonction de vos contraintes de délai et de budget.",
+            "Planifier l’emballage export (cartons renforcés, palettes, caisses) et prévoir des photos datées de l’état des biens."
+          ]
+        },
+        {
+          "h3": "Documents à préparer",
+          "ul": [
+            "Facture commerciale ou liste valorisée détaillant la nature, quantité, valeur et origine des biens.",
+            "Packing list structurée (contenu par colis, poids, dimensions) et BL (projet puis définitif).",
+            "Police d’assurance ad valorem et pièces d’identité / justificatifs demandés par la douane en RDC."
+          ]
+        },
+        {
+          "h3": "Au port et à l’arrivée en RDC",
+          "ul": [
+            "Respecter les cut‑offs (VGM, documentation) pour éviter les reports de départ.",
+            "S’assurer que l’ensemble des documents a été transmis aux interlocuteurs locaux avant l’arrivée du navire à Matadi.",
+            "Suivre la mainlevée et conserver les preuves de livraison (bon de livraison signé, photos, etc.)."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Que vérifier en priorité avant d’expédier vers la RDC ?",
+          "a": "Les points clés: volumes/poids, choix LCL/FCL, qualité de la facture et de la packing list, coordination des cut‑offs, et niveau de couverture d’assurance."
+        },
+        {
+          "q": "Comment éviter les mauvaises surprises à l’arrivée ?",
+          "a": "En travaillant avec une facture réaliste, une packing list détaillée, des photos d’emballage, et en anticipant les droits/taxes estimés. Nous intégrons ces éléments dans nos devis pour vous donner une vision plus proche du coût final."
+        },
+        {
+          "q": "Pouvez‑vous nous aider à remplir cette checklist ?",
+          "a": "Oui. Lors de la préparation de votre projet, nous passons en revue chaque point de la checklist avec vous (volumes, documents, emballage, délais) pour sécuriser votre expédition vers la RDC."
+        }
       ]
     }
   }

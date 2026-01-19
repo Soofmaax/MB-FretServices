@@ -22,7 +22,7 @@
     "fcl_understand": "Comprendre FCL vs LCL",
     "incoterms_guide": "Comprendre les Incoterms",
     "fcl_guide_short": "Guide FCL/LCL",
-    "pricing_guide": "Guide prix conteneur 20' / 40' Congo / Angola",
+    "pricing_guide": "Guide prix conteneur 20' / 40' RDC / Congo / Angola",
     "customs_service": "Voir notre service de dédouanement France–Afrique",
     "insurance_service": "Voir notre service d’assurance cargo"
   },
@@ -80,8 +80,8 @@
   },
   "france_congo": {
     "label": "France ↔ Congo",
-    "title": "Transport & fret maritime France ↔ Congo (Pointe‑Noire) – Groupage, déménagement, véhicules",
-    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
+    "title": "Transport & fret maritime France ↔ Congo (Pointe‑Noire) – Déménagement, conteneurs 20' / 40', véhicules",
+    "subtitle": "Groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Pointe‑Noire depuis la France et l'Europe (France/Benelux). Nous accompagnons familles, diaspora et petites entreprises pour sécuriser l’envoi d’effets personnels, de voitures et de palettes vers le Congo, avec une vision claire du prix d’un conteneur 20' / 40' France → Pointe‑Noire (fret, surcharges, douane, assurance cargo). En tant que transitaire basé en France, nous privilégions des schémas fiables et lisibles sur le corridor France–Congo plutôt qu’un simple prix « le plus bas » sans visibilité.",
     "transit": "Délais indicatifs: 20–30 jours selon départs, escales et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos"],
     "ports_to": ["Pointe‑Noire"],
@@ -165,10 +165,95 @@
       }
     ]
   },
+  "france_rdc": {
+    "label": "France ↔ RDC",
+    "title": "Transport & fret maritime France ↔ RDC (Kinshasa / Matadi) – Déménagement, conteneurs 20' / 40', véhicules",
+    "subtitle": "Spécialiste du corridor France–RDC pour déménagements internationaux, envoi de véhicules et groupages LCL/contenteurs FCL vers Matadi, avec accès à Kinshasa via nos partenaires locaux. Nous accompagnons la diaspora, les familles et les petites entreprises pour sécuriser l’envoi de voitures, motos, cartons et palettes depuis la France et le Benelux, avec une vision claire du prix d’un conteneur 20' / 40' France → RDC (fret, surcharges, douane, assurance cargo).",
+    "transit": "Délais indicatifs: 20–30 jours selon port de départ, rotations et saison.",
+    "ports_from": ["Le Havre", "Marseille-Fos"],
+    "ports_to": ["Matadi"],
+    "costs": [
+      "Vers la RDC (Matadi), le groupage LCL est adapté pour les petits et moyens volumes (cartons, effets personnels, petits lots B2B). Au‑delà d’environ 13–15 m³, un conteneur complet FCL devient généralement plus compétitif et plus confortable pour les déménagements complets ou les véhicules.",
+      "L’analyse doit se faire en coût total livré: fret maritime, surcharges, opérations portuaires (THC), pré/post‑acheminement routier et droits/taxes à l’import en RDC. Nous arbitrons avec vous entre LCL/FCL, ports de départ (France/Benelux) et niveau de service (port à port vs solutions plus intégrées).",
+      "Que vous expédiiez des effets personnels, des véhicules/motos ou des marchandises B2B, nous construisons un schéma de coût transparent en détaillant ce qui est inclus (fret, surcharges, manutentions, pré/post‑acheminement, droits et taxes estimés), afin de limiter les mauvaises surprises à l’arrivée."
+    ],
+    "customs": [
+      "La RDC exige une préparation documentaire rigoureuse: facture détaillée, packing list, BL, certificats éventuels et documents spécifiques selon la nature des marchandises. Nous vous aidons à structurer vos documents (codes SH, valeurs, origines) et coordonnons avec nos partenaires en RDC pour limiter les blocages et retards au port."
+    ],
+    "insurance_risks": [
+      "Assurance cargo ad valorem du départ à l’arrivée en RDC, fortement recommandée pour les déménagements et les véhicules.",
+      "Conseils d’emballage export (renfort cartons, palettes, caisses bois) pour réduire les avaries et faciliter la prise en charge par l’assurance.",
+      "Visibilité des jalons (embarquement, transit, arrivée à Matadi) et échanges réguliers pendant le transit, en particulier sur les dossiers sensibles (véhicules, effets à forte valeur)."
+    ],
+    "services_block": {
+      "title": "Services logistiques complets pour vos expéditions vers la RDC (Kinshasa / Matadi)",
+      "intro": "Sur l’axe France–RDC, nous coordonnons l’ensemble de la chaîne logistique pour vos déménagements, effets personnels et marchandises B2B, notamment :",
+      "items": [
+        "Enlèvements en France et, sur étude, en Belgique/Luxembourg pour cartons, palettes, effets personnels et lots B2B à destination de la RDC.",
+        "Pré‑acheminement routier de conteneurs FCL vers les ports de départ (Le Havre, Fos), gestion de la mise en conteneur et de la sécurisation des véhicules et effets.",
+        "Gestion de la documentation de transport (BL, packing list, facture commerciale, certificats) et vérification de cohérence avant embarquement.",
+        "Formalités douanières à l’export en France et accompagnement pour les formalités à l’import en RDC (Matadi/Kinshasa) via nos correspondants locaux.",
+        "Solutions de groupage maritime LCL vers la RDC pour les volumes intermédiaires, avec possibilités de consolidation/entreposage avant départ.",
+        "Études spécifiques pour combiner déménagement + véhicule dans un même conteneur, en détaillant clairement les implications documentaires et douanières.",
+        "Accompagnement sur les particularités locales (documents requis, contrôles, risques à anticiper) pour réduire l’aléa sur les délais et les coûts."
+      ]
+    },
+    "why_us": [
+      "Positionnement dédié sur le corridor France–RDC pour déménagements, effets personnels, véhicules et flux B2B.",
+      "Expérience sur les flux diaspora (France ↔ Kinshasa/Matadi) avec une attention particulière portée à la lisibilité des devis et des délais.",
+      "Réseau de partenaires en RDC pour le dédouanement et le suivi terrain, permettant d’anticiper les contraintes portuaires et douanières.",
+      "Approche pédagogique: explication détaillée des postes de coût (fret, surcharges, droits et taxes estimés, assurance) pour une vraie vision du coût total livré."
+    ],
+    "use_cases": [
+      "Déménagement complet France → RDC (Kinshasa/Matadi) en conteneur FCL, avec effets personnels, mobilier et éventuellement un véhicule ou une moto.",
+      "Expédition de quelques m³ d’effets personnels ou de cartons en LCL vers la RDC pour la diaspora (envoi d’affaires de famille, bagages supplémentaires…).",
+      "Envois de véhicules et motos en conteneur vers la RDC, avec étude des contraintes douanières et documentaires (valeur, origine, statut du véhicule).",
+      "Expéditions B2B (palettes, pièces détachées, consommables, équipements) en LCL ou FCL selon volume, régularité des flux et contraintes projet.",
+      "Opérations combinant effets personnels + matériel professionnel dans un même conteneur, avec mise en cohérence des documents et du schéma douanier."
+    ],
+    "advice": {
+      "planning_title": "Planification France–RDC & choix du mode",
+      "planning": [
+        "Anticiper vos dates de départ pour réserver le bon service (LCL ou FCL) et sécuriser le slot navire, surtout en période de forte demande.",
+        "Faire un inventaire assez précis des volumes (CBM) et des valeurs pour arbitrer LCL/FCL et dimensionner l’assurance ad valorem.",
+        "Tenir compte des étapes en RDC (dédouanement, acheminement vers Kinshasa) dans la planification globale, pas uniquement du temps de mer."
+      ],
+      "documentation_title": "Documentation & conformité RDC",
+      "documentation": [
+        "Rédiger une facture claire (désignation, quantité, valeur, origine) pour chaque type de marchandise afin de limiter les revalorisations et blocages.",
+        "Soigner la packing list (contenu par colis, poids, dimensions) pour faciliter les contrôles et la circulation des informations entre acteurs.",
+        "Documenter l’emballage (photos, numéros de scellés) et conserver les preuves nécessaires pour l’assurance et la gestion des litiges éventuels."
+      ],
+      "kpis_title": "KPIs à suivre vers la RDC",
+      "kpis": [
+        "Délai global entre enlèvement en France et disponibilité des biens à Kinshasa/Matadi.",
+        "Écart entre devis initial et coût final (incluant droits, taxes et frais portuaires).",
+        "Taux de litiges (avarie, manquants, différends documentaires) sur vos expéditions vers la RDC."
+      ]
+    },
+    "faq": [
+      {
+        "q": "Quel mode choisir pour un déménagement France → RDC : LCL ou FCL ?",
+        "a": "Pour quelques m³ d’effets personnels, le LCL reste pertinent. Dès que vous approchez d’un volume de déménagement complet (mobilier + cartons, éventuellement véhicule), le FCL devient généralement plus intéressant et plus confortable en termes de protection, de délais et de lisibilité des coûts."
+      },
+      {
+        "q": "Combien coûte l’envoi d’un conteneur 20' ou 40' vers la RDC (Matadi) ?",
+        "a": "Le coût d’un conteneur (20' ou 40') vers la RDC dépend du port de départ (Le Havre, Fos), de la saison, de la nature des marchandises, des services inclus (pré/post‑acheminement, douane, assurance cargo) et des droits/taxes à l’import. Nous détaillons toujours nos devis par poste pour vous donner une vision claire du coût total livré."
+      },
+      {
+        "q": "Quels documents sont nécessaires pour expédier vers Kinshasa / Matadi ?",
+        "a": "Facture commerciale détaillée, packing list, BL, pièces d’identité et documents spécifiques selon la nature des marchandises (véhicules, matériel professionnel, etc.). Nous vous accompagnons pour structurer ce dossier et réduire les risques de blocage."
+      },
+      {
+        "q": "Proposez‑vous des solutions pour envoyer un véhicule + des effets personnels dans le même conteneur ?",
+        "a": "Oui, sous réserve d’étude. Nous pouvons combiner véhicule/moto et effets personnels dans un même conteneur, en clarifiant les implications douanières et en adaptant l’emballage pour limiter les risques et faciliter les démarches à l’arrivée en RDC."
+      }
+    ]
+  },
   "france_angola": {
     "label": "France ↔ Angola",
-    "title": "Transport & fret maritime France ↔ Angola (Luanda) – Groupage, déménagement, véhicules et motos",
-    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux), pour particuliers (familles, diaspora) et professionnels, avec prise en charge de colis, bagages et effets personnels en conteneur ou en groupage. En tant que transitaire basé en France, nous travaillons avec plusieurs armateurs majeurs pour privilégier la qualité de service, la fiabilité des délais et un budget cohérent plutôt qu’un simple prix « le plus bas ».",
+    "title": "Transport & fret maritime France ↔ Angola (Luanda) – Déménagement, conteneurs 20' / 40', véhicules et motos",
+    "subtitle": "Notre spécialité : groupage LCL, conteneurs complets FCL, déménagements internationaux et transport de véhicules/motos vers Luanda depuis la France et l'Europe (France/Benelux). Nous aidons familles, diaspora et petites entreprises à expédier effets personnels, voitures, palettes et textiles vers l’Angola, avec une approche budget lisible (fret, surcharges, douane, assurance cargo) pour chaque conteneur 20' / 40'. Ce corridor France–Angola complète nos solutions France–RDC et France–Congo pour couvrir l’ensemble de l’Afrique centrale (RDC, Congo, Angola). En tant que transitaire basé en France, nous travaillons avec plusieurs armateurs majeurs pour privilégier la qualité de service, la fiabilité des délais et un budget cohérent plutôt qu’un simple prix « le plus bas ».",
     "transit": "Délais indicatifs: 20–25 jours selon port de départ, rotations et saison.",
     "ports_from": ["Le Havre", "Marseille-Fos", "Anvers", "Rotterdam"],
     "ports_to": ["Luanda"],

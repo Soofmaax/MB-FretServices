@@ -4,7 +4,7 @@ import SEO from '../SEO';
 import CtaButton from '../ui/CtaButton';
 import ResponsiveImage from '../ui/ResponsiveImage';
 import { getSiteUrl } from '../../utils/siteUrl';
-import { keyFromPath, detectLangFromPath, pathForLang } from '../../utils/paths';
+import { keyFromPath, detectLangFromPath, pathForLang, type RouteKey } from '../../utils/paths';
 import CBMCalculator from './CBMCalculator';
 import QuoteForm from './QuoteForm';
 import LocalizedLink from '../LocalizedLink';
@@ -12,12 +12,14 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Clock, Ship, MapPin, Home, Car, Package } from 'lucide-react';
 
-type RouteKey = 'services_freight_france_congo' | 'services_freight_france_angola';
-
 function detectRouteKey(): RouteKey | null {
   if (typeof window === 'undefined') return null;
   const k = keyFromPath(window.location.pathname);
-  if (k === 'services_freight_france_congo' || k === 'services_freight_france_angola') {
+  if (
+    k === 'services_freight_france_congo' ||
+    k === 'services_freight_france_rdc' ||
+    k === 'services_freight_france_angola'
+  ) {
     return k;
   }
   return null;
@@ -40,6 +42,17 @@ const contentMap: Record<
     areaServed: [
       { '@type': 'Country', name: 'France' },
       { '@type': 'Country', name: 'Congo' },
+    ],
+  },
+  services_freight_france_rdc: {
+    heroBase: 'hero-congo',
+    ports: {
+      from: ['Le Havre', 'Marseille-Fos'],
+      to: ['Matadi'],
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'France' },
+      { '@type': 'Country', name: 'Democratic Republic of the Congo' },
     ],
   },
   services_freight_france_angola: {
@@ -67,7 +80,12 @@ const FreightRoute: FC = () => {
 
   const c = contentMap[routeKey];
   const ogImagePath = `/images/og-${c.heroBase.replace('hero-', '')}.webp`;
-  const routeId = routeKey === 'services_freight_france_congo' ? 'france_congo' : 'france_angola';
+  const routeId =
+    routeKey === 'services_freight_france_congo'
+      ? 'france_congo'
+      : routeKey === 'services_freight_france_rdc'
+      ? 'france_rdc'
+      : 'france_angola';
   const routeLabel = t(`routes_main:${routeId}.label`);
 
   // Localized content (titles, subtitles, lists)
@@ -164,6 +182,8 @@ const FreightRoute: FC = () => {
   const contactSource =
     routeKey === 'services_freight_france_congo'
       ? 'route_france_congo'
+      : routeKey === 'services_freight_france_rdc'
+      ? 'route_france_rdc'
       : routeKey === 'services_freight_france_angola'
       ? 'route_france_angola'
       : undefined;
@@ -567,6 +587,13 @@ const FreightRoute: FC = () => {
                     <li>France: Le Havre, Marseille‑Fos</li>
                     <li>Congo: Pointe‑Noire</li>
                     <li>Spécificités: visibilité jalons LCL, contrôles douaniers</li>
+                  </ul>
+                )}
+                {routeKey === 'services_freight_france_rdc' && (
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>France: Le Havre, Marseille‑Fos</li>
+                    <li>RDC: Matadi (accès Kinshasa)</li>
+                    <li>Spécificités: flux déménagements, effets personnels, véhicules</li>
                   </ul>
                 )}
                 {routeKey === 'services_freight_france_angola' && (
