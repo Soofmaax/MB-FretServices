@@ -4,18 +4,13 @@ import SEO from '../SEO';
 import CtaButton from '../ui/CtaButton';
 import ResponsiveImage from '../ui/ResponsiveImage';
 import { getSiteUrl } from '../../utils/siteUrl';
-import { keyFromPath, detectLangFromPath, pathForLang } from '../../utils/paths';
+import { keyFromPath, detectLangFromPath, pathForLang, type RouteKey } from '../../utils/paths';
 import CBMCalculator from './CBMCalculator';
 import QuoteForm from './QuoteForm';
 import LocalizedLink from '../LocalizedLink';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Clock, Ship, MapPin, Home, Car, Package } from 'lucide-react';
-
-type RouteKey =
-  | 'services_freight_france_congo'
-  | 'services_freight_france_rdc'
-  | 'services_freight_france_angola';
 
 function detectRouteKey(): RouteKey | null {
   if (typeof window === 'undefined') return null;
