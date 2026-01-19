@@ -13,15 +13,21 @@ site:
 @@
   examples:
     - query: "expédier un conteneur 20' vers Pointe-Noire"
-      suggest: "https://mb-fretservices.com/fr/services/fret-maritime"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-congo"
     - query: "prix fret aérien Paris vers Luanda"
       suggest: "https://mb-fretservices.com/fr/services"
-    - query: "dédouanement import machines en France"
-      suggest: "https://mb-fretservices.com/fr/services"
     - query: "déménagement international France vers la RDC (Kinshasa)"
-      suggest: "https://mb-fretservices.com/fr/destinations"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-rdc"
+    - query: "prix conteneur 20' France → RDC (Matadi / Kinshasa)"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-rdc"
+    - query: "FCL ou LCL pour un déménagement France → RDC ?"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-rdc/fcl-lcl"
+    - query: "documents nécessaires pour importer ses affaires en RDC"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-rdc/douane"
+    - query: "checklist déménagement France → RDC (Kinshasa / Matadi)"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-rdc/checklist"
     - query: "dédouanement import machines en France"
       suggest: "https://mb-fretservices.com/fr/services"
 metadata:
   source_of_truth: sitemap.xml, pages content, structured data
-  updated_at: 2025-01-01
+  updated_at: 2025-01-19
