@@ -9,17 +9,9 @@ import { localizeTo, type Lang } from '../utils/paths';
 
 const LANGS = [
   { code: 'fr', label: 'FR' },
-  { code: 'en', label: 'EN' },
-  { code: 'pt', label: 'PT' },
-  { code: 'es', label: 'ES' },
-  { code: 'ar', label: 'AR' },
-  { code: 'tr', label: 'TR' },
-  { code: 'de', label: 'DE' },
-  { code: 'it', label: 'IT' },
-  { code: 'sw', label: 'SW' },
 ];
 
-const SUP = ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'sw', 'de', 'it'] as const;
+const SUP = ['fr'] as const;
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
