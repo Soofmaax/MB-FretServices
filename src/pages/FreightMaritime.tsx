@@ -160,9 +160,10 @@ const FreightMaritime: FC = () => {
               url: SITE_URL,
             },
             areaServed: [
-        { '@type': 'Country', name: 'Congo' },
-        { '@type': 'Country', name: 'Angola' },
-      ],
+              { '@type': 'Country', name: 'Congo' },
+              { '@type': 'Country', name: 'Democratic Republic of the Congo' },
+              { '@type': 'Country', name: 'Angola' },
+            ],
             availableChannel: {
               '@type': 'ServiceChannel',
               serviceLocation: { '@type': 'Place', name: 'France and Europe' },
