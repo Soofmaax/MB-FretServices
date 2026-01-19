@@ -114,6 +114,14 @@ function App() {
             }
           />
           <Route
+            path="services/fret-maritime/france-rdc"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
             path="services/fret-maritime/france-congo/fcl-lcl"
             element={
               <Suspense fallback={null}>
@@ -225,12 +233,17 @@ function App() {
           <Route
             path="services/maritime-freight/france-congo"
             element={
-              <Suspense fallback={null}>
-                <FreightRoute />
-              </Suspense>
+             <<Suspense fallback={null}>
+               <<FreightRoute />
+            </</Suspense>
             }
           />
-          <Route
+         < Route
+            path="services/maritime-freight/france-rdc"
+            element={
+             < Suspense fallback={null}>
+               < FreightRoute />
+            </  Susp          <Route
             path="services/maritime-freight/france-congo/fcl-lcl"
             element={
               <Suspense fallback={null}>
@@ -356,6 +369,14 @@ function App() {
           {/* PT route-specific pages */}
           <Route
             path="servicos/frete-maritimo/franca-congo"
+            element={
+              <Suspense fallback={null}>
+                <FreightRoute />
+              </Suspense>
+            }
+          />
+          <Route
+            path="servicos/frete-maritimo/franca-rdc"
             element={
               <Suspense fallback={null}>
                 <FreightRoute />

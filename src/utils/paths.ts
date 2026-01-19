@@ -13,6 +13,7 @@ export type RouteKey =
   | 'services_insurance'
   | 'services_freight_france_china'
   | 'services_freight_france_congo'
+  | 'services_freight_france_rdc'
   | 'services_freight_france_angola'
   | 'services_freight_france_turkey'
   | 'services_freight_france_china_fcl_lcl'
@@ -42,6 +43,7 @@ const SLUGS: Record<Lang, Record<RouteKey, string>> = {
     services_insurance: 'services/assurance-cargo',
     services_freight_france_china: 'services/fret-maritime/france-chine',
     services_freight_france_congo: 'services/fret-maritime/france-congo',
+    services_freight_france_rdc: 'services/fret-maritime/france-rdc',
     services_freight_france_angola: 'services/fret-maritime/france-angola',
     services_freight_france_turkey: 'services/fret-maritime/france-turquie',
     services_freight_france_china_fcl_lcl: 'services/fret-maritime/france-chine/fcl-lcl',
@@ -376,6 +378,11 @@ const FREIGHT_FRANCE_CONGO_ALIASES = new Set<string>([
   'services/maritime-freight/france-congo',
   'servicos/frete-maritimo/franca-congo',
 ]);
+const FREIGHT_FRANCE_RDC_ALIASES = new Set<string>([
+  'services/fret-maritime/france-rdc',
+  'services/maritime-freight/france-rdc',
+  'servicos/frete-maritimo/franca-rdc',
+]);
 const FREIGHT_FRANCE_ANGOLA_ALIASES = new Set<string>([
   'services/fret-maritime/france-angola',
   'services/maritime-freight/france-angola',
@@ -493,6 +500,7 @@ export function keyFromPath(pathname: string): RouteKey {
   // Route main pages
   if (FREIGHT_FRANCE_CHINA_ALIASES.has(rest)) return 'services_freight_france_china';
   if (FREIGHT_FRANCE_CONGO_ALIASES.has(rest)) return 'services_freight_france_congo';
+  if (FREIGHT_FRANCE_RDC_ALIASES.has(rest)) return 'services_freight_france_rdc';
   if (FREIGHT_FRANCE_ANGOLA_ALIASES.has(rest)) return 'services_freight_france_angola';
   if (FREIGHT_FRANCE_TURKEY_ALIASES.has(rest)) return 'services_freight_france_turkey';
 
