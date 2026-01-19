@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Destinations - Transport vers l'Afrique | MB Fret Services",
-    "description": "Transport international vers le Congo et l'Angola. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+    "title": "Destinations - Transport vers la RDC, le Congo et l'Angola | MB Fret Services",
+    "description": "Transport international et déménagements vers la RDC, le Congo et l'Angola. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
   },
   "hero": {
-    "title": "Nos Destinations Mondiales",
-    "subtitle": "Réseau étendu de partenaires logistiques pour connecter vos marchés. Routes optimisées et fréquences adaptées à vos besoins commerciaux."
+    "title": "Nos Destinations en Afrique Centrale",
+    "subtitle": "Spécialiste des corridors France–RDC, France–Congo et France–Angola. Routes maritimes et aériennes optimisées pour vos déménagements, effets personnels, véhicules et marchandises."
   },
   "labels": {
     "port_principal": "Port principal :",
@@ -20,6 +20,14 @@
     {
       "name": "Afrique Centrale",
       "countries": [
+        {
+          "name": "RDC",
+          "capital": "Kinshasa",
+          "port": "Matadi",
+          "maritime": { "from": "Le Havre, Anvers", "duration": "20-25 jours", "frequency": "Hebdomadaire" },
+          "aerien": { "from": "Paris CDG, Bruxelles", "duration": "8-10 heures", "frequency": "Quotidien" },
+          "specialites": ["Déménagements familiaux", "Effets personnels", "Véhicules et motos"]
+        },
         {
           "name": "Congo",
           "capital": "Brazzaville",
