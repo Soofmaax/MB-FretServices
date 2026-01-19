@@ -16,11 +16,11 @@
   },
   "congo": {
     "fcl_lcl": {
-      "h1": "FCL vs LCL — France ↔ Congo",
-      "title": "FCL vs LCL sur France ↔ Congo — Choisir le bon mode | MB Fret Services",
-      "desc": "Seuils volumétriques (~13–15 m³), sécurité, coûts. Comparez FCL et LCL sur l’axe France ↔ Congo.",
+      "h1": "FCL vs LCL — France ↔ RDC / Congo",
+      "title": "FCL vs LCL sur France ↔ RDC / Congo — Choisir le bon mode | MB Fret Services",
+      "desc": "Seuils volumétriques (~13–15 m³), sécurité, coûts. Comparez FCL et LCL sur l’axe France ↔ RDC / Congo, utile aussi pour vos flux vers l’Angola.",
       "intro": [
-        "FCL/LCL: l’arbitrage dépend du volume et de la sensibilité. Le groupage LCL est très pertinent pour petits volumes vers Pointe‑Noire; FCL prend l’avantage dès que valeur et volume augmentent."
+        "FCL/LCL: l’arbitrage dépend du volume et de la sensibilité. Le groupage LCL est très pertinent pour petits volumes vers Pointe‑Noire et, sur étude, vers la RDC (Kinshasa / Matadi); FCL prend l’avantage dès que valeur et volume augmentent, que ce soit pour le Congo, la RDC ou l’Angola."
       ],
       "sections": [
         { "h2": "Seuils, coûts et risques", "ul": [ "Comparer coût total livré (pré/post‑acheminement, THC, surcharges, assurance)", "Basculer FCL pour limiter manipulations quand la sensibilité/valeur augmente" ] },
@@ -34,11 +34,11 @@
       ]
     },
     "customs": {
-      "h1": "Procédures douanières — France ↔ Congo",
-      "title": "Douanes & documents — France ↔ Congo | MB Fret Services",
-      "desc": "Documents requis, représentation et coordination terminal pour éviter retards.",
+      "h1": "Procédures douanières — France ↔ RDC / Congo",
+      "title": "Douanes & documents — France ↔ RDC / Congo | MB Fret Services",
+      "desc": "Documents requis, représentation et coordination terminal pour éviter retards sur les flux France ↔ RDC / Congo (et, par extension, France ↔ Angola).",
       "intro": [
-        "Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur droits & taxes."
+        "Contrôle documentaire rigoureux: facture, PL, BL, certificat d’origine si requis, et pièces spécifiques à la marchandise. Représentation en douane et accompagnement sur droits & taxes pour vos expéditions vers le Congo, la RDC et l’Angola."
       ],
       "sections": [
         { "h2": "Documents & Incoterms", "ul": [ "Facture/PL/BL, certificat d’origine si requis", "Incoterms: FOB/CIF/DAP/DDP selon partage responsabilité/risque", "Codes SH précis" ] },
@@ -52,11 +52,11 @@
       ]
     },
     "checklist": {
-      "h1": "Checklist documentaire — France ↔ Congo",
-      "title": "Checklist documentaire — France ↔ Congo | MB Fret Services",
-      "desc": "Checklist pratique pour préparer l’expédition vers Pointe‑Noire.",
+      "h1": "Checklist documentaire — France ↔ RDC / Congo",
+      "title": "Checklist documentaire — France ↔ RDC / Congo | MB Fret Services",
+      "desc": "Checklist pratique pour préparer une expédition vers Pointe‑Noire, Kinshasa ou Matadi, utile également pour vos flux voisins vers l’Angola.",
       "intro": [
-        "Préparation méthodique pour limiter retards et litiges. Privilégier emballage export, preuve documentaire et cohérence des données."
+        "Préparation méthodique pour limiter retards et litiges sur les corridors France–RDC, France–Congo et France–Angola. Privilégier emballage export, preuve documentaire et cohérence des données."
       ],
       "sections": [
         { "h2": "Avant l’expédition", "ul": [ "CBM/poids", "Choix FCL/LCL", "Service/port", "Emballage export" ] },
