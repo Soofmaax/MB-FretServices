@@ -5,14 +5,16 @@ import { Mail, Phone, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
-import { detectLangFromPath } from '../utils/paths';
+import { detectLangFromPath, pathForLang, type Lang } from '../utils/paths';
+import { langToBcp47 } from '../utils/seoHelpers';
 
 const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation(['contact', 'navbar']);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const location = useLocation();
-  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+  const lang: Lang =
+    typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
 
   const source = (location.state as { source?: string } | null | undefined)?.source;
 
@@ -100,18 +102,7 @@ const Contact: FC = () => {
       ? 'Demande de devis transport international'
       : 'International freight quote request');
 
-  const langTagMap: Record<string, string> = {
-    fr: 'fr-FR',
-    en: 'en-GB',
-    pt: 'pt-PT',
-    ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
-  };
-  const langTag = langTagMap[lang] || 'fr-FR';
+  const langTag = langToBcp47(lang);
 
   const seoTitle = t(
     'contact:seo.title',
@@ -163,13 +154,13 @@ const Contact: FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('navbar:home', 'Accueil'),
-                item: SITE_URL + '/',
+                item: new URL(pathForLang('home', lang), SITE_URL).href,
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: t('navbar:contact', 'Contact'),
-                item: SITE_URL + '/contact',
+                item: new URL(pathForLang('contact', lang), SITE_URL).href,
               },
             ],
           },
@@ -313,10 +304,17 @@ const Contact: FC = () => {
           <form
             name="contact"
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             className="bg-white rounded-xl shadow-lg p-8"
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
+            <div className="sr-only">
+              <label htmlFor="bot-field">
+                Don't fill this out if you're human:
+              </label>
+              <input id="bot-field" name="bot-field" type="text" />
+            </div>
             {subjectLabel && <input type="hidden" name="subject" value={subjectLabel} />}
             {source && <input type="hidden" name="source" value={source} />}
             <div className="space-y-6">

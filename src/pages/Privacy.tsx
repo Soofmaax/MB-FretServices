@@ -2,27 +2,17 @@ import type { FC } from 'react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
-import { detectLangFromPath, pathForLang } from '../utils/paths';
+import { detectLangFromPath, pathForLang, type Lang } from '../utils/paths';
+import { langToBcp47 } from '../utils/seoHelpers';
 
 const Privacy: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation(['legal', 'navbar']);
-  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+  const lang: Lang = typeof window !== 'undefined'
+    ? detectLangFromPath(window.location.pathname)
+    : 'fr';
   const privacyPath = pathForLang('privacy', lang);
-
-  const langTagMap: Record<string, string> = {
-    fr: 'fr-FR',
-    en: 'en-GB',
-    pt: 'pt-PT',
-    ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
-    zh: 'zh-CN',
-  };
-  const langTag = langTagMap[lang] || 'fr-FR';
+  const langTag = langToBcp47(lang);
 
   const seoTitle = t('legal:privacy_seo_title', 'Politique de confidentialité | MB Fret Services');
   const seoDescription = t(
@@ -45,13 +35,13 @@ const Privacy: FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('navbar:home', 'Accueil'),
-                item: SITE_URL + '/',
+                item: new URL(pathForLang('home', lang), SITE_URL).href,
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: t('legal:privacy.heading', 'Politique de confidentialité'),
-                item: SITE_URL + privacyPath,
+                item: new URL(privacyPath, SITE_URL).href,
               },
             ],
           },

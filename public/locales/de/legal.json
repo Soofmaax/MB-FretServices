@@ -24,8 +24,8 @@
     },
     "hosting": {
       "heading": "Hosting",
-      "content_line1": "Diese Website wird betrieben von {{HEBERGEUR_NOM}}",
-      "content_line2": "{{HEBERGEUR_ADRESSE}}"
+      "content_line1": "Diese Website wird von unserem Infrastruktur-Provider gehostet.",
+      "content_line2": "Detaillierte Hosting-Informationen stellen wir Ihnen auf Anfrage gerne zur Verfügung."
     },
     "ip": {
       "heading": "Geistiges Eigentum",

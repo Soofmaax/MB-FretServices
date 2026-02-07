@@ -28,8 +28,8 @@
     },
     "hosting": {
       "heading": "Hosting",
-      "content_line1": "This site is hosted by {{HEBERGEUR_NOM}}",
-      "content_line2": "{{HEBERGEUR_ADRESSE}}"
+      "content_line1": "This site is hosted by our infrastructure provider.",
+      "content_line2": "Detailed hosting information is available on request."
     },
     "ip": {
       "heading": "Intellectual Property",

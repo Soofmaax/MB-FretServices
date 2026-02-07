@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import { saveConsent, loadConsent } from '../consent';
-import { updateAnalyticsConsent } from '../analytics';
+import { initAnalytics, updateAnalyticsConsent } from '../analytics';
 import { initClarity } from '../clarity';
 import { useTranslation } from 'react-i18next';
 import LocalizedLink from './LocalizedLink';
@@ -15,9 +15,20 @@ const CookieConsent: FC = () => {
   useEffect(() => {
     const prefs = loadConsent();
     if (prefs) {
+      const analyticsGranted = !!prefs.analytics;
       // Already decided, reflect state (used by Manage if reopened)
-      setAnalytics(!!prefs.analytics);
+      setAnalytics(analyticsGranted);
       setVisible(false);
+
+      // If analytics were previously granted, initialize tracking now
+      if (analyticsGranted) {
+        try {
+          initAnalytics(true);
+          initClarity();
+        } catch {
+          // ignore
+        }
+      }
     } else {
       // First visit: show banner
       setVisible(true);
@@ -39,7 +50,17 @@ const CookieConsent: FC = () => {
 
   const applyConsent = (analyticsGranted: boolean) => {
     saveConsent({ analytics: analyticsGranted });
+
+    if (analyticsGranted) {
+      try {
+        initAnalytics(true);
+      } catch {
+        // ignore
+      }
+    }
+
     updateAnalyticsConsent(analyticsGranted);
+
     if (analyticsGranted) {
       try {
         initClarity();

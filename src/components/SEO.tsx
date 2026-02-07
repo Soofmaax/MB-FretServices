@@ -8,6 +8,7 @@ import {
   getCurrentLangFromPath,
   buildAlternateLinks,
   SUP_LANGS,
+  langToBcp47,
 } from '../utils/seoHelpers';
 
 type SEOProps = {
@@ -47,8 +48,8 @@ const SEO: FC<SEOProps> = ({
     .map((l) => OG_LOCALE_MAP[l])
     .filter(Boolean) as string[];
 
-  // Convert OG locale to BCP47 for content-language meta (fr_FR -> fr-FR)
-  const contentLang = (OG_LOCALE_MAP[currentLang] || 'fr_FR').replace('_', '-');
+  // Convert app language to BCP47 for content-language meta
+  const contentLang = langToBcp47(currentLang);
 
   // Optional gating: only index selected languages (env VITE_LANG_INDEX="fr,en")
   const INDEX_LANGS = (import.meta.env?.VITE_LANG_INDEX as string | undefined)
