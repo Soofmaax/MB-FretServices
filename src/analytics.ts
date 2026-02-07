@@ -29,6 +29,24 @@ export function initAnalytics(defaultAnalyticsGranted = false) {
   if (!id) return; // not configured
   if (!shouldTrack()) return;
 
+  // Avoid injecting the script multiple times
+  if (typeof window.gtag === 'function') {
+    // Ensure consent defaults stay in sync with stored preference
+    try {
+      window.gtag('consent', 'update', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: defaultAnalyticsGranted ? 'granted' : 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+      });
+    } catch {
+      // ignore
+    }
+    return;
+  }
+
   // Initialize dataLayer/gtag early
   window.dataLayer = window.dataLayer || [];
   window.gtag = (...args: unknown[]) => {

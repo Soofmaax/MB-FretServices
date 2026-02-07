@@ -28,8 +28,8 @@
     },
     "hosting": {
       "heading": "网站托管",
-      "content_line1": "本网站由 {{HEBERGEUR_NOM}} 提供托管服务",
-      "content_line2": "{{HEBERGEUR_ADRESSE}}"
+      "content_line1": "本网站由我们的基础设施服务商提供托管服务。",
+      "content_line2": "详细的托管信息可应要求提供。"
     },
     "ip": {
       "heading": "知识产权",

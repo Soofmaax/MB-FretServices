@@ -24,8 +24,8 @@
     },
     "hosting": {
       "heading": "Barındırma",
-      "content_line1": "Bu site {{HEBERGEUR_NOM}} tarafından barındırılmaktadır",
-      "content_line2": "{{HEBERGEUR_ADRESSE}}"
+      "content_line1": "Bu site, altyapı sağlayıcımız tarafından barındırılmaktadır.",
+      "content_line2": "Detaylı barındırma bilgileri talep üzerine sunulabilir."
     },
     "ip": {
       "heading": "Fikri Mülkiyet",

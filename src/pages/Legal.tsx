@@ -2,27 +2,33 @@ import type { FC } from 'react';
 import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
-import { detectLangFromPath, pathForLang } from '../utils/paths';
+import { detectLangFromPath, pathForLang, type Lang } from '../utils/paths';
+import { langToBcp47 } from '../utils/seoHelpers';
+import { siteConfig } from '../config/site.config';
 
 const Legal: FC = () => {
   const SITE_URL = getSiteUrl();
   const { t } = useTranslation(['legal', 'navbar']);
-  const lang = typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
+  const lang: Lang =
+    typeof window !== 'undefined' ? detectLangFromPath(window.location.pathname) : 'fr';
   const legalPath = pathForLang('legal', lang);
+  const langTag = langToBcp47(lang);
 
-  const langTagMap: Record<string, string> = {
-    fr: 'fr-FR',
-    en: 'en-GB',
-    pt: 'pt-PT',
-    ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
-    zh: 'zh-CN',
+  const { businessName, legal, address } = siteConfig;
+  const isDev = import.meta.env?.DEV;
+
+  const missingInfoFallback = isDev
+    ? t('legal:placeholders.to_complete', 'À compléter')
+    : t('legal:placeholders.pending', 'Information en cours de mise à jour');
+
+  const formatField = (value: string | undefined): string => {
+    if (value && value.trim().length > 0) return value;
+    return missingInfoFallback;
   };
-  const langTag = langTagMap[lang] || 'fr-FR';
+
+  const addressLine = [address.street, address.postal, address.city]
+    .filter((part) => part && part.trim().length > 0)
+    .join(', ');
 
   const seoTitle = t('legal:seo_title', 'Mentions légales | MB Fret Services');
   const seoDescription = t(
@@ -45,7 +51,7 @@ const Legal: FC = () => {
                 '@type': 'ListItem',
                 position: 1,
                 name: t('navbar:home', 'Accueil'),
-                item: SITE_URL + '/',
+                item: SITE_URL + pathForLang('home', lang),
               },
               {
                 '@type': 'ListItem',
@@ -74,13 +80,15 @@ const Legal: FC = () => {
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-primary-900 mb-4">{t('sections.info.heading')}</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  <strong>{t('sections.info.labels.raison_sociale')} :</strong> MB Fret Services<br />
-                  <strong>{t('sections.info.labels.forme_juridique')} :</strong> {"{{FORME_JURIDIQUE}}"}<br />
-                  <strong>{t('sections.info.labels.capital_social')} :</strong> {"{{CAPITAL}}"}<br />
-                  <strong>{t('sections.info.labels.siege_social')} :</strong> {"{{SIEGE_SOCIAL}}"}<br />
-                  <strong>{t('sections.info.labels.siret')} :</strong> {"{{SIRET}}"}<br />
-                  <strong>{t('sections.info.labels.code_ape')} :</strong> {"{{APE}}"}<br />
-                  <strong>{t('sections.info.labels.rc_pro')} :</strong> {"{{RC_PRO}}"}
+                  <strong>{t('sections.info.labels.raison_sociale')} :</strong> {businessName}<br />
+                  <strong>{t('sections.info.labels.forme_juridique')} :</strong> {formatField(legal?.legalForm)}<br />
+                  <strong>{t('sections.info.labels.capital_social')} :</strong> {formatField(legal?.capital)}<br />
+                  <strong>{t('sections.info.labels.siege_social')} :</strong>{' '}
+                  {addressLine || missingInfoFallback}
+                  <br />
+                  <strong>{t('sections.info.labels.siret')} :</strong> {formatField(legal?.siret)}<br />
+                  <strong>{t('sections.info.labels.code_ape')} :</strong> {formatField(legal?.ape)}<br />
+                  <strong>{t('sections.info.labels.rc_pro')} :</strong> {formatField(legal?.rcPro)}
                 </p>
               </section>
 

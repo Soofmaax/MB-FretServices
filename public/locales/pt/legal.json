@@ -28,8 +28,8 @@
     },
     "hosting": {
       "heading": "Alojamento",
-      "content_line1": "Este site é alojado por {{HEBERGEUR_NOM}}",
-      "content_line2": "{{HEBERGEUR_ADRESSE}}"
+      "content_line1": "Este site é alojado pelo nosso prestador de infraestrutura.",
+      "content_line2": "Informações detalhadas de alojamento estão disponíveis mediante pedido."
     },
     "ip": {
       "heading": "Propriedade Intelectual",

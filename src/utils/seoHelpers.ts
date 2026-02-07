@@ -26,6 +26,27 @@ export const OG_LOCALE_MAP: Record<Lang, string> = {
   it: 'it_IT',
 };
 
+export const BCP47_LANG_MAP: Record<Lang, string> = {
+  fr: 'fr-FR',
+  en: 'en-GB',
+  pt: 'pt-PT',
+  ar: 'ar',
+  zh: 'zh-CN',
+  es: 'es-ES',
+  tr: 'tr-TR',
+  sw: 'sw-KE',
+  de: 'de-DE',
+  it: 'it-IT',
+};
+
+export function langToOgLocale(lang: Lang): string {
+  return OG_LOCALE_MAP[lang] || 'fr_FR';
+}
+
+export function langToBcp47(lang: Lang): string {
+  return BCP47_LANG_MAP[lang] || 'fr-FR';
+}
+
 export function getCurrentLangFromPath(): Lang {
   if (typeof window === 'undefined') return 'fr';
   return detectLangFromPath(window.location.pathname);
@@ -36,23 +57,10 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
   const site = getSiteUrl();
   const key = keyFromPath(window.location.pathname);
 
-  const hreflangMap: Record<Lang, string> = {
-    fr: 'fr-FR',
-    en: 'en-GB',
-    pt: 'pt-PT',
-    ar: 'ar',
-    zh: 'zh-CN',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
-  };
-
   const alternates = SUP_LANGS.map((lng) => {
     const rel = pathForLang(key, lng).replace(/^\//, ''); // make relative so BASE_URL is preserved
     const href = new URL(rel, site).href.replace(/\/$/, '');
-    const hrefLang = hreflangMap[lng];
+    const hrefLang = BCP47_LANG_MAP[lng];
     return { href, hrefLang };
   });
 

@@ -329,13 +329,31 @@ function readEnvSiteUrl() {
 function buildPaths() {
   /** @type {{lang: string, key: string, path: string}[]} */
   const paths = [];
+  let skipped = 0;
+
   for (const lng of SUP_LANGS) {
+    const map = SLUGS[lng];
+    if (!map) {
+      console.warn(`[sitemap] No slug map defined for language "${lng}", skipping.`);
+      continue;
+    }
+
     for (const key of PATH_KEYS) {
-      const slug = SLUGS[lng][key];
+      if (!(key in map)) {
+        console.warn(`[sitemap] Missing slug for key "${key}" in language "${lng}", skipping.`);
+        skipped++;
+        continue;
+      }
+      const slug = map[key];
       const p = `/${lng}${slug ? `/${slug}` : ''}`;
       paths.push({ lang: lng, key, path: p });
     }
   }
+
+  if (skipped) {
+    console.warn(`[sitemap] Skipped ${skipped} path(s) due to missing slug mappings.`);
+  }
+
   return paths;
 }
 
@@ -397,16 +415,26 @@ function buildSitemap(entries, siteUrl) {
       // Build alternate links for the same key across all languages
       const alternates = SUP_LANGS
         .map((lng) => {
-          const altSlug = SLUGS[lng][key];
+          const map = SLUGS[lng];
+          if (!map || !(key in map)) {
+            console.warn(
+              `[sitemap] Missing slug for key "${key}" in language "${lng}" when building alternates, skipping.`
+            );
+            return null;
+          }
+          const altSlug = map[key];
           const altPath = `/${lng}${altSlug ? `/${altSlug}` : ''}`;
           const altHref = new URL(altPath, siteUrl).href.replace(/\/$/, '');
           const hrefLang = HREFLANG_MAP[lng] || lng;
           return `    <xhtml:link rel="alternate" hreflang="${hrefLang}" href="${altHref}" />`;
         })
+        .filter(Boolean)
         .join('\n');
 
-      // x-default -> EN by convention
-      const xDefaultPath = `/${'en'}${SLUGS.en[key] ? `/${SLUGS.en[key]}` : ''}`;
+      // x-default -> EN by convention (fallback to current URL if mapping is missing)
+      const enMap = SLUGS.en || {};
+      const enSlug = enMap[key];
+      const xDefaultPath = enSlug !== undefined ? `/${'en'}${enSlug ? `/${enSlug}` : ''}` : path;
       const xDefaultHref = new URL(xDefaultPath, siteUrl).href.replace(/\/$/, '');
 
       return `  <url>
