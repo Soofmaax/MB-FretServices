@@ -309,11 +309,11 @@ const Contact: FC = () => {
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
-            <div className="hidden" aria-hidden="true">
-              <label>
+            <div className="sr-only">
+              <label htmlFor="bot-field">
                 Don't fill this out if you're human:
-                <input name="bot-field" />
               </label>
+              <input id="bot-field" name="bot-field" type="text" />
             </div>
             {subjectLabel && <input type="hidden" name="subject" value={subjectLabel} />}
             {source && <input type="hidden" name="source" value={source} />}
