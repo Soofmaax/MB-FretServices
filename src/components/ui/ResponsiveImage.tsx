@@ -68,7 +68,9 @@ const ResponsiveImage: FC<ResponsiveImageProps> = ({
   const imgProps: Record<string, string> = {};
   if (priority) {
     imgProps.loading = 'eager';
-    imgProps.fetchPriority = 'high';
+    // Use lowercase attribute name to avoid React warnings while still
+    // hinting the browser about loading priority.
+    imgProps.fetchpriority = 'high';
   } else {
     imgProps.loading = 'lazy';
   }

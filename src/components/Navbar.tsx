@@ -11,15 +11,10 @@ const LANGS = [
   { code: 'fr', label: 'FR' },
   { code: 'en', label: 'EN' },
   { code: 'pt', label: 'PT' },
-  { code: 'es', label: 'ES' },
   { code: 'ar', label: 'AR' },
-  { code: 'tr', label: 'TR' },
-  { code: 'de', label: 'DE' },
-  { code: 'it', label: 'IT' },
-  { code: 'sw', label: 'SW' },
 ];
 
-const SUP = ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'sw', 'de', 'it'] as const;
+const SUP = ['fr', 'en', 'pt', 'ar'] as const;
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +73,6 @@ const Navbar: FC = () => {
   ];
 
   const routesLabel = t('navbar:routes', 'Routes');
-  const routeFranceCongo = t('navbar:route_france_congo', 'France ↔ Congo');
   const routeFranceAngola = t('navbar:route_france_angola', 'France ↔ Angola');
 
   const isActiveLink = (href: string) => {
@@ -154,12 +148,6 @@ const Navbar: FC = () => {
                 </button>
                 {routesOpen && (
                   <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg py-2 z-50">
-                    <LocalizedLink
-                      to="services/fret-maritime/france-congo"
-                      className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
-                    >
-                      {routeFranceCongo}
-                    </LocalizedLink>
                     <LocalizedLink
                       to="services/fret-maritime/france-angola"
                       className="block px-4 py-2 text-sm text-primary-700 hover:bg-gray-50"
@@ -251,13 +239,6 @@ const Navbar: FC = () => {
               <p className="text-xs uppercase tracking-wide text-gray-500 mb-2">
                 {routesLabel}
               </p>
-              <LocalizedLink
-                to="services/fret-maritime/france-congo"
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-primary-700 hover:bg-gray-50 rounded"
-              >
-                {routeFranceCongo}
-              </LocalizedLink>
               <LocalizedLink
                 to="services/fret-maritime/france-angola"
                 onClick={() => setIsOpen(false)}

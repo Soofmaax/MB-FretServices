@@ -4,6 +4,7 @@ import LocalizedLink from '../components/LocalizedLink';
 import { getSiteUrl } from '../utils/siteUrl';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { useTranslation } from 'react-i18next';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type Section = {
   h2?: string;
@@ -53,7 +54,7 @@ const PillarContainerPricing: FC = () => {
         position: 3,
         name: t(
           'pillar_container_prices:breadcrumb_label',
-          "Prix d'un conteneur 20' / 40' vers le Congo et l’Angola"
+          "Prix d'un conteneur 20' / 40' vers l’Angola"
         ),
         item: SITE_URL + pathForLang('pillar_container_prices', lang),
       },
@@ -65,7 +66,7 @@ const PillarContainerPricing: FC = () => {
     '@type': 'Article',
     headline: t(
       'pillar_container_prices:hero_h1',
-      "Prix d'un conteneur 20' / 40' vers le Congo et l’Angola"
+      "Prix d'un conteneur 20' / 40' vers l’Angola"
     ),
     author: { '@type': 'Organization', name: 'MB Fret Services' },
     publisher: { '@type': 'Organization', name: 'MB Fret Services' },
@@ -89,11 +90,11 @@ const PillarContainerPricing: FC = () => {
 
   const seoTitle = t(
     'pillar_container_prices:title',
-    "Prix d’un conteneur 20' / 40' vers le Congo et l’Angola | MB Fret Services"
+    "Prix d’un conteneur 20' / 40' vers l’Angola | MB Fret Services"
   );
   const seoDescription = t(
     'pillar_container_prices:description',
-    "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Afrique centrale (Congo, Angola) et comment obtenir une cotation détaillée et réaliste."
+    "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Angola et comment obtenir une cotation détaillée et réaliste."
   );
 
   const sections =
@@ -101,12 +102,15 @@ const PillarContainerPricing: FC = () => {
 
   const heroLinks = t('pillar_container_prices:hero_links', {
     returnObjects: true,
-  }) as { maritime?: string; congo?: string; angola?: string };
+  }) as { maritime?: string; angola?: string };
 
   const ctaTitle = t(
     'pillar_container_prices:cta_title',
-    "Prêt à construire votre budget conteneur vers le Congo ou l’Angola ?"
+    "Prêt à construire votre budget conteneur vers l’Angola ?"
   );
+
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: articleRef, inView: articleInView } = useInViewAnimation<HTMLDivElement>();
   const ctaDesc = t(
     'pillar_container_prices:cta_desc',
     'Transmettez-nous votre projet (volume approximatif, type de biens, départ et destination). Nous vous remettons une cotation détaillée et lisible pour vos conteneurs 20’/40’, en LCL ou FCL.'
@@ -121,28 +125,27 @@ const PillarContainerPricing: FC = () => {
       <SEO title={seoTitle} description={seoDescription} jsonLd={[breadcrumb, articleLd, faqLd]} />
 
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={heroRef}
+          className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h1 className="text-4xl md:text-5xl font-bold">
             {t(
               'pillar_container_prices:hero_h1',
-              "Prix d'un conteneur 20' / 40' vers le Congo et l’Angola"
+              "Prix d'un conteneur 20' / 40' vers l’Angola"
             )}
           </h1>
           <p className="mt-4 text-xl text-gray-100">
             {t(
               'pillar_container_prices:hero_intro',
-              "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Afrique centrale (Congo, Angola) et comment obtenir une cotation détaillée et réaliste."
+              "Comprendre ce qui fait le prix d’un conteneur 20' ou 40' entre la France et l’Angola et comment obtenir une cotation détaillée et réaliste."
             )}
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <LocalizedLink to="services/fret-maritime" className="underline text-accent-300">
               {heroLinks?.maritime ?? t('navbar:services', 'Services')}
-            </LocalizedLink>
-            <LocalizedLink
-              to="services/fret-maritime/france-congo"
-              className="underline text-accent-300"
-            >
-              {heroLinks?.congo ?? 'France–Congo'}
             </LocalizedLink>
             <LocalizedLink
               to="services/fret-maritime/france-angola"
@@ -154,7 +157,12 @@ const PillarContainerPricing: FC = () => {
         </div>
       </section>
 
-      <article className="prose prose-lg max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article
+        ref={articleRef}
+        className={`prose prose-lg max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-all duration-700 ${
+          articleInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+      >
         {sections.map((section, idx) => (
           <div key={idx}>
             {section.h2 && <h2>{section.h2}</h2>}

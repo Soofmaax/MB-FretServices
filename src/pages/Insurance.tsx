@@ -7,6 +7,7 @@ import { detectLangFromPath, pathForLang } from '../utils/paths';
 import { Shield, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 const Insurance: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -28,11 +29,11 @@ const Insurance: FC = () => {
 
   const seoTitle = t(
     'freight:insurance.seo.title',
-    'Cargo insurance — FCL/LCL containers to Congo and Angola | MB Fret Services'
+    'Cargo insurance — FCL/LCL containers to Angola | MB Fret Services'
   );
   const seoDescription = t(
     'freight:insurance.seo.description',
-    'Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Congo and France ↔ Angola corridors. Claims handling and export packaging advice.'
+    'Ad valorem transport insurance for your FCL/LCL containers (international moves, B2B cargo, vehicles, motorbikes) on the France ↔ Angola corridor. Claims handling and export packaging advice.'
   );
 
   const breadcrumb = {
@@ -64,7 +65,6 @@ const Insurance: FC = () => {
     areaServed: [
       { '@type': 'Place', name: 'France' },
       { '@type': 'Place', name: 'European Union' },
-      { '@type': 'Place', name: 'Republic of the Congo' },
       { '@type': 'Place', name: 'Angola' },
     ],
   };
@@ -86,6 +86,9 @@ const Insurance: FC = () => {
   const claims = t('freight:insurance.claims', {
     returnObjects: true,
   }) as { title?: string; steps?: string[] };
+
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: contentRef, inView: contentInView } = useInViewAnimation<HTMLDivElement>();
 
   return (
     <div className="pt-16">
@@ -132,32 +135,44 @@ const Insurance: FC = () => {
           />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center mb-6">
-            <Shield size={48} className="text-accent-400 mr-4" aria-hidden="true" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('freight:insurance.hero.title', 'Assurance cargo')}
-            </h1>
-          </div>
-          <p className="text-xl text-gray-100">
-            {t(
-              'freight:insurance.hero.subtitle',
-              'Protect your supply chain and cash flow with coverage adapted to your B2B flows.'
-            )}
-          </p>
-          <div className="mt-6">
-            <CtaButton
-              href="contact"
-              variant="primary"
-              state={{ source: 'service_insurance' }}
-            >
-              {t('freight:insurance.hero.cta_quote', 'Request coverage')}
-            </CtaButton>
+          <div
+            ref={heroRef}
+            className={`transition-all duration-700 ${
+              heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
+            <div className="flex items-center mb-6">
+              <Shield size={48} className="text-accent-400 mr-4" aria-hidden="true" />
+              <h1 className="text-4xl md:text-5xl font-bold">
+                {t('freight:insurance.hero.title', 'Assurance cargo')}
+              </h1>
+            </div>
+            <p className="text-xl text-gray-100">
+              {t(
+                'freight:insurance.hero.subtitle',
+                'Protect your supply chain and cash flow with coverage adapted to your B2B flows.'
+              )}
+            </p>
+            <div className="mt-6">
+              <CtaButton
+                href="contact"
+                variant="primary"
+                state={{ source: 'service_insurance' }}
+              >
+                {t('freight:insurance.hero.cta_quote', 'Request coverage')}
+              </CtaButton>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={contentRef}
+          className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            contentInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl font-bold text-primary-900 mb-6">
             {t('freight:insurance.services.title', 'Benefits')}
           </h2>

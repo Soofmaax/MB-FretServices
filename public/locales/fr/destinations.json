@@ -1,11 +1,11 @@
 {
   "seo": {
-    "title": "Destinations - Transport vers l'Afrique | MB Fret Services",
-    "description": "Transport international vers le Congo et l'Angola. Routes maritimes et aériennes depuis la France. Devis personnalisé sous 24h."
+    "title": "Destination – Fret maritime en conteneurs vers l’Angola | MB Fret Services",
+    "description": "Fret maritime en conteneurs FCL/LCL entre la France (Paris / Normandie via Le Havre) et l’Angola (Luanda). Départs réguliers, délais optimisés et devis personnalisé sous 24h."
   },
   "hero": {
-    "title": "Nos Destinations Mondiales",
-    "subtitle": "Réseau étendu de partenaires logistiques pour connecter vos marchés. Routes optimisées et fréquences adaptées à vos besoins commerciaux."
+    "title": "Destination Angola (Luanda)",
+    "subtitle": "Ligne maritime régulière France–Angola depuis la France (Paris / Normandie via Le Havre) vers Luanda, avec des fréquences et délais adaptés à vos projets."
   },
   "labels": {
     "port_principal": "Port principal :",
@@ -18,23 +18,14 @@
   },
   "regions": [
     {
-      "name": "Afrique Centrale",
+      "name": "Afrique Australe",
       "countries": [
-        {
-          "name": "Congo",
-          "capital": "Brazzaville",
-          "port": "Pointe-Noire",
-          "maritime": { "from": "Le Havre, Anvers", "duration": "18-22 jours", "frequency": "Hebdomadaire" },
-          "aerien": { "from": "Paris CDG, Lyon", "duration": "6-8 heures", "frequency": "Quotidien" },
-          "specialites": ["Véhicules", "Machines industrielles", "Produits alimentaires"]
-        },
         {
           "name": "Angola",
           "capital": "Luanda",
           "port": "Luanda",
-          "maritime": { "from": "Anvers, Rotterdam", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire" },
-          "aerien": { "from": "Paris CDG, Marseille", "duration": "7-9 heures", "frequency": "5x/semaine" },
-          "specialites": ["Matériel médical", "BTP", "Électronique"]
+          "maritime": { "from": "Le Havre, Anvers, Rotterdam", "duration": "20–25 jours", "frequency": "Hebdomadaire ou bi‑hebdomadaire" },
+          "specialites": ["Déménagements internationaux", "Véhicules & motos", "Marchandises B2B"]
         }
       ]
     }

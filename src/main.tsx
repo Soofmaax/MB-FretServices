@@ -23,17 +23,10 @@ try {
 
 const consent = loadConsent();
 
-// Initialize analytics with Consent Mode defaults (denied unless user already accepted)
-try {
-  const analyticsDefaultGranted = !!consent?.analytics;
-  initAnalytics(analyticsDefaultGranted);
-} catch {
-  // ignore
-}
-
-// Initialize Microsoft Clarity only if user has already accepted analytics
+// Initialize analytics & Clarity only if the user has already granted analytics consent
 try {
   if (consent?.analytics) {
+    initAnalytics(true);
     initClarity();
   }
 } catch {

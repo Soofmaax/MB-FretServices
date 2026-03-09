@@ -1,12 +1,10 @@
 {
   "title": "Incoterms 2020 — Guia completo (FOB, CIF…) | MB Fret Services",
-  "description": "Compreenda os Incoterms 2020 para o transporte marítimo B2B: responsabilidades, custos, riscos e casos práticos em rotas China/Turquia/Congo. Escolha entre FOB e CIF e avalie o impacto em seguro e prazos.",
+  "description": "Compreenda os Incoterms 2020 para o transporte marítimo B2B: responsabilidades, custos, riscos e casos práticos no corredor França–Angola. Escolha entre FOB e CIF e avalie o impacto em seguro e prazos.",
   "hero_h1": "Incoterms 2020 — Guia completo B2B",
-  "hero_intro": "Domine a repartição de custos e riscos no transporte marítimo. Casos práticos aplicados às suas rotas chave (França–China, França–Turquia, França–Congo) para decisões de compra mais informadas.",
+  "hero_intro": "Domine a repartição de custos e riscos no transporte marítimo B2B. Casos práticos aplicados aos seus fluxos em contentor no corredor França–Angola para decisões de compra mais informadas, quer seja importador, indústria ou PME.",
   "hero_links": {
-    "china": "França ↔ China",
-    "turkey": "França ↔ Turquia",
-    "congo": "França ↔ Congo"
+    "angola": "França ↔ Angola"
   },
   "breadcrumb_label": "Incoterms 2020",
   "faq_title": "FAQ",
@@ -68,21 +66,9 @@
       "h2": "Casos práticos e rotas chave",
       "sub": [
         {
-          "h3": "França ↔ China",
+          "h3": "França ↔ Angola",
           "p": [
-            "Os tempos de trânsito variam (Le Havre/Marselha-Fos ↔ Xangai/Ningbo/Shenzhen). Em fluxos regulares, FOB é adequado para importadores experientes capazes de negociar o frete e otimizar o CBM. CIF traz conforto administrativo quando a prioridade é rapidez de execução e visibilidade orçamental."
-          ]
-        },
-        {
-          "h3": "França ↔ Turquia",
-          "p": [
-            "Num eixo de curta/média distância, a flexibilidade (multimodal Mar/Rodovia/Aéreo) é essencial. CIF pode simplificar a coordenação entre vários intervenientes. FOB mantém-se pertinente se pretender afinar o equilíbrio entre prazos e custos."
-          ]
-        },
-        {
-          "h3": "França ↔ Congo",
-          "p": [
-            "Nos fluxos para África Ocidental/Central, a qualidade documental e o conhecimento das realidades aduaneiras locais são críticos. CIF pode reduzir custos “ocultos” de coordenação; FOB permite a compradores experientes controlar diretamente armadores e horários."
+            "Os tempos de trânsito variam (Le Havre/Antuérpia ↔ Luanda). Em fluxos regulares para Angola, FOB é adequado para importadores experientes capazes de negociar o frete e otimizar o CBM. CIF traz conforto administrativo quando a prioridade é rapidez de execução e visibilidade orçamental."
           ]
         }
       ]
@@ -125,7 +111,7 @@
       "h2": "Guias e páginas de rotas relacionadas",
       "p": [
         "Guias relacionados: FCL vs LCL — como decidir?",
-        "Páginas de rotas: França–China, França–Turquia, França–Congo."
+        "Página de rota: França–Angola."
       ]
     }
   ],
@@ -135,7 +121,7 @@
       "a": "FOB: o vendedor suporta custos/risco até ao embarque. CIF: inclui custo, seguro e frete até ao porto de chegada. Em B2B, CIF oferece previsibilidade sobre o custo total, enquanto FOB dá mais controlo ao importador."
     },
     {
-      "q": "Que Incoterms devo privilegiar para importações da China?",
+      "q": "Que Incoterms devo privilegiar para importações no corredor França–Angola?",
       "a": "FOB e CIF são os mais usados. A escolha depende do nível de controlo desejado, da capacidade de gerir o transporte principal e das necessidades de seguro."
     },
     {

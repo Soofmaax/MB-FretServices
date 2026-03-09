@@ -7,6 +7,7 @@ import ResponsiveImage from '../components/ResponsiveImage';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath, pathForLang } from '../utils/paths';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 type ServiceKey = 'maritime' | 'customs' | 'insurance';
 
@@ -27,7 +28,7 @@ const Services: FC = () => {
   );
   const seoDescription = t(
     'services:seo.description',
-    'Discover our international transport services: sea freight to Central Africa (Congo, Angola), professional customs clearance and cargo insurance.'
+    'Discover our international transport services: sea freight in FCL/LCL containers on the France–Angola corridor, professional customs clearance and cargo insurance.'
   );
 
   const langTagMap: Record<string, string> = {
@@ -42,6 +43,30 @@ const Services: FC = () => {
     it: 'it-IT',
   };
   const langTag = langTagMap[lang] || 'fr-FR';
+
+  const faqEntities =
+    (t('services:faq', {
+      returnObjects: true,
+    }) as Array<{ q: string; a: string }>) || [];
+
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: servicesRef, inView: servicesInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: routesRef, inView: routesInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: guidesRef, inView: guidesInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: ctaRef, inView: ctaInView } = useInViewAnimation<HTMLDivElement>();
+
+  const faqLd =
+    faqEntities.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqEntities.map((qa) => ({
+            '@type': 'Question',
+            name: qa.q,
+            acceptedAnswer: { '@type': 'Answer', text: qa.a },
+          })),
+        }
+      : null;
 
   return (
     <div className="pt-16">
@@ -98,18 +123,24 @@ const Services: FC = () => {
               },
             ],
           },
+          faqLd || undefined,
           {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
             name: `${t('navbar:services', 'Services')} - MB Fret Services`,
             inLanguage: langTag,
           },
-        ]}
+        ].filter(Boolean)}
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
+          <div
+            ref={heroRef}
+            className={`text-center transition-all duration-700 ${
+              heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t('hero.title')}
             </h1>
@@ -122,7 +153,7 @@ const Services: FC = () => {
 
       {/* Services Grid */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={servicesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {serviceDefs.map((def, index) => {
               const Icon = def.icon;
@@ -131,12 +162,23 @@ const Services: FC = () => {
               const description = t(`${def.key}.description`);
               const features = t(`${def.key}.features`, { returnObjects: true }) as string[];
               const destinations = t(`${def.key}.destinations`);
+
               return (
                 <div
                   key={def.key}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center animate-slide-up ${
-                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                  } ${index === 0 ? 'animate-delay-0' : index === 1 ? 'animate-delay-200' : index === 2 ? 'animate-delay-400' : 'animate-delay-600'}`}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center transition-all duration-700 ${
+                    servicesInView
+                      ? `animate-slide-up opacity-100 translate-y-0 ${
+                          index === 0
+                            ? 'animate-delay-0'
+                            : index === 1
+                            ? 'animate-delay-200'
+                            : index === 2
+                            ? 'animate-delay-400'
+                            : 'animate-delay-600'
+                        }`
+                      : 'opacity-0 translate-y-4'
+                  } ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}
                 >
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                     <div className="flex items-center mb-6">
@@ -212,13 +254,9 @@ const Services: FC = () => {
                     <div className="relative rounded-xl overflow-hidden shadow-xl">
                       <ResponsiveImage
                         src={`https://images.pexels.com/photos/${
-                          index === 0 ? '906982' :
-                          index === 1 ? '723240' :
-                          index === 2 ? '7681091' : '416978'
+                          index === 0 ? '906982' : index === 1 ? '723240' : index === 2 ? '7681091' : '416978'
                         }/pexels-photo-${
-                          index === 0 ? '906982' :
-                          index === 1 ? '723240' :
-                          index === 2 ? '7681091' : '416978'
+                          index === 0 ? '906982' : index === 1 ? '723240' : index === 2 ? '7681091' : '416978'
                         }.jpeg?auto=compress&cs=tinysrgb&w=800`}
                         alt={`Service ${title}`}
                         width={800}
@@ -238,28 +276,25 @@ const Services: FC = () => {
 
       {/* Key Maritime Routes */}
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
+        <div ref={routesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            className={`text-3xl md:text-4xl font-bold text-primary-900 mb-8 transition-all duration-700 ${
+              routesInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             {t('services:routesSection.title', 'Key routes')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              {
-                key: 'france_congo' as const,
-                to: 'services/fret-maritime/france-congo',
-                img: '416978',
-              },
               {
                 key: 'france_angola' as const,
                 to: 'services/fret-maritime/france-angola',
                 img: '906982',
               },
             ].map((r, i) => {
-              const fallbackTitle = r.key === 'france_congo' ? 'France ↔ Congo' : 'France ↔ Angola';
+              const fallbackTitle = 'France ↔ Angola';
               const fallbackTeaser =
-                r.key === 'france_congo'
-                  ? 'Sea freight France–Congo (FCL/LCL), Pointe-Noire, optimized transit times and 24/7 tracking.'
-                  : 'Sea freight France–Angola (FCL/LCL), departures from France/Benelux to Luanda with controlled lead times.';
+                'Sea freight France–Angola (FCL/LCL), departures from France/Benelux to Luanda with controlled lead times.';
               const title = t(`services:routesSection.cards.${r.key}.title`, fallbackTitle);
               const teaser = t(
                 `services:routesSection.cards.${r.key}.teaser`,
@@ -270,8 +305,12 @@ const Services: FC = () => {
               return (
                 <div
                   key={r.key}
-                  className={`bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all animate-slide-up ${
-                    i === 1 ? 'animate-delay-150' : 'animate-delay-0'
+                  className={`bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-700 ${
+                    routesInView
+                      ? `animate-slide-up opacity-100 translate-y-0 ${
+                          i === 1 ? 'animate-delay-150' : 'animate-delay-0'
+                        }`
+                      : 'opacity-0 translate-y-4'
                   }`}
                 >
                   <LocalizedLink to={r.to} className="block group">
@@ -305,8 +344,12 @@ const Services: FC = () => {
 
       {/* Guides & Resources */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-8">
+        <div ref={guidesRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            className={`text-3xl md:text-4xl font-bold text-primary-900 mb-8 transition-all duration-700 ${
+              guidesInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             {t('services:guidesSection.title', 'Guides & Resources')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -322,8 +365,12 @@ const Services: FC = () => {
                 <LocalizedLink
                   key={g.key}
                   to={g.to}
-                  className={`block bg-white rounded-xl p-6 shadow hover:shadow-lg transition-all animate-slide-up ${
-                    i === 1 ? 'animate-delay-150' : 'animate-delay-0'
+                  className={`block bg-white rounded-xl p-6 shadow hover:shadow-lg transition-all duration-700 ${
+                    guidesInView
+                      ? `animate-slide-up opacity-100 translate-y-0 ${
+                          i === 1 ? 'animate-delay-150' : 'animate-delay-0'
+                        }`
+                      : 'opacity-0 translate-y-4'
                   }`}
                 >
                   <h3 className="text-xl font-semibold text-primary-900 mb-2">{title}</h3>
@@ -338,9 +385,42 @@ const Services: FC = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      {faqEntities.length > 0 && (
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+                {t('services:faq_title', 'FAQ')}
+              </h2>
+            </div>
+            <div className="space-y-6">
+              {faqEntities.map((qa, index) => (
+                <details
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
+                >
+                  <summary className="cursor-pointer text-lg font-semibold text-primary-900">
+                    {qa.q}
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed whitespace-pre-line">
+                    {qa.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          ref={ctaRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ${
+            ctaInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
             {t('ctaSection.title')}
           </h2>

@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Transitaire et fret maritime France–Afrique – Conteneurs FCL & LCL | MB Fret Services",
-    "description": "Services de fret maritime France–Afrique depuis les ports français & européens vers le Congo et l’Angola. Conteneurs 20' & 40', FCL et LCL, déménagements internationaux, envoi de véhicules et de motos, effets personnels et, en complément, marchandises professionnelles. Réseau de partenaires en Europe et en Afrique, douane interne et assurance cargo. Devis gratuit sous 24h, plus de 15 ans d’expertise."
+    "title": "Fret maritime en conteneurs France–Angola – FCL & LCL | MB Fret Services",
+    "description": "Transitaire basé en France, spécialisé dans le fret maritime en conteneurs 20' et 40' (FCL/LCL) depuis les ports français et européens vers l’Angola. Déménagements internationaux, envoi de véhicules et de motos, effets personnels et marchandises B2B, avec réseau de partenaires en Europe et en Afrique, douane intégrée et assurance cargo. Devis détaillé sous 24h sur le corridor France–Angola."
   },
   "hero": {
-    "title": "Fret Maritime vers l'Afrique",
-    "subtitle": "Transitaire Afrique – solutions conteneurs FCL et LCL vers le Congo et l’Angola",
-    "intro": "Transitaire et transport maritime pour particuliers et professionnels depuis la France et l'Europe vers l’Afrique centrale, avec un focus sur les corridors France–Angola et France–Congo. Conteneurs 20' et 40', groupage LCL, déménagements internationaux, véhicules et motos sur leurs roues lorsque la réglementation le permet. Services de fret maritime sur mesure, avec douane et services à valeur ajoutée intégrés (manutention, stockage, assurance, suivi).",
+    "title": "Fret Maritime France–Angola",
+    "subtitle": "Transitaire Afrique – solutions conteneurs FCL et LCL vers l’Angola",
+    "intro": "Transitaire et transport maritime pour particuliers et professionnels depuis la France et l'Europe vers l’Angola. Conteneurs 20' et 40', groupage LCL, déménagements internationaux, véhicules et motos sur leurs roues lorsque la réglementation le permet. Services de fret maritime sur mesure, avec douane et services à valeur ajoutée intégrés (manutention, stockage, assurance, suivi).",
     "cta_quote": "Devis Fret Maritime Gratuit",
     "cta_whatsapp": "WhatsApp Direct"
   },
@@ -28,69 +28,14 @@
       }
     ]
   },
-  "air": {
-    "seo": {
-      "title": "Fret aérien — Rapide et sécurisé | MB Fret Services",
-      "description": "Solutions de fret aérien B2B: express, sécurisé, traçable. Europe ↔ Afrique. Porte-à-porte, assurance cargo, conformité IATA."
-    },
-    "breadcrumb_service_name": "Fret aérien",
-    "service_name": "Fret aérien B2B – Express et sécurisé",
-    "service_type": "Fret aérien",
-    "faq": [
-      {
-        "q": "Quelles marchandises sont adaptées au fret aérien ?",
-        "a": "Marchandises à forte valeur, périssables ou urgentes. Le fret aérien minimise le temps de transit et l’exposition aux risques."
-      },
-      {
-        "q": "Quels délais typiques en Europe ↔ Afrique ?",
-        "a": "Selon les hubs et la saison : 1–5 jours porte-à-aéroport, 3–8 jours porte-à-porte. Nous proposons des solutions express sur demande."
-      },
-      {
-        "q": "Proposez-vous une assurance cargo pour l’aérien ?",
-        "a": "Oui. Une couverture ad valorem est recommandée ; nous conseillons selon la valeur, la nature et la criticité de votre envoi."
-      }
-    ],
-    "hero": {
-      "title": "Fret aérien",
-      "subtitle": "Priorité, fiabilité, sécurité.",
-      "intro": "Une solution rapide et sûre pour vos expéditions urgentes, sensibles ou à forte valeur. Nous pilotons la chaîne de bout en bout avec un suivi temps réel.",
-      "cta_quote": "Demander un devis",
-      "cta_whatsapp": "WhatsApp"
-    },
-    "features": [
-      {
-        "title": "Délais express",
-        "text": "Acheminement prioritaire, vols réguliers, options express pour vos urgences."
-      },
-      {
-        "title": "Sécurité renforcée",
-        "text": "Traçabilité, contrôle documentaire et assurance adaptée à la valeur."
-      }
-    ],
-    "services": {
-      "title": "Services",
-      "intro": "Nous opérons sur principaux hubs (CDG, AMS, FRA, IST…) avec options express, consolidation et assurance ad valorem.",
-      "list": [
-        "Porte-à-aéroport et porte-à-porte",
-        "Contrôle documentaire et conformité IATA",
-        "Emballage aérien et sécurisation",
-        "Suivi 24/7 et notifications"
-      ],
-      "cta": "Obtenir un devis"
-    },
-    "images": {
-      "hero_alt": "Avion cargo fret aérien",
-      "services_alt": "Chargement aérien"
-    }
-  },
   "why": {
     "title": "Pourquoi choisir MB Fret Services pour votre fret maritime ?",
-    "subtitle": "Transitaire spécialiste du transport maritime France–Afrique, avec un focus sur les corridors France–Angola et France–Congo et des solutions sur mesure pour vos déménagements, envois de véhicules et flux professionnels. Réseau de partenaires dans les ports français & européens et en Afrique centrale, support douanier interne, disponibilité et réactivité commerciales, tarifs compétitifs et approche durable de votre chaîne logistique."
+    "subtitle": "Transitaire spécialiste du transport maritime France–Angola, avec des solutions sur mesure pour vos déménagements, envois de véhicules et flux professionnels. Réseau de partenaires dans les ports français & européens et à Luanda, support douanier interne, disponibilité et réactivité commerciales, tarifs compétitifs et approche durable de votre chaîne logistique."
   },
   "advantages": [
     {
       "title": "Expertise Maritime",
-      "description": "Plus de 15 ans d'expérience dans le transport maritime vers l'Afrique centrale (Angola, Congo) et un accompagnement dédié à vos projets."
+      "description": "Expertise dédiée dans le transport maritime depuis la France vers l’Angola et un accompagnement personnalisé de vos projets."
     },
     {
       "title": "Délais Maîtrisés",
@@ -103,7 +48,7 @@
   ],
   "segments": {
     "title": "Déménagement, véhicules ou marchandises ?",
-    "subtitle": "Une équipe dédiée pour vos projets personnels et professionnels vers l’Afrique centrale (Congo, Angola).",
+    "subtitle": "Une équipe dédiée pour vos projets personnels et professionnels entre la France et l’Angola.",
     "items": [
       {
         "title": "Déménagement international",
@@ -121,7 +66,7 @@
   },
   "services": {
     "title": "Nos services de fret maritime",
-    "subtitle": "Solutions complètes de transport maritime France–Afrique (FCL &amp; LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur les corridors France–Angola et France–Congo. Le conteneur complet (FCL) est idéal lorsque vous expédiez un volume important d’effets personnels, souvent avec un ou deux véhicules sur un même envoi. Nous traitons vos palettes, cartons, vrac sec, colis lourds ou hors gabarit en conteneurs dry, reefer, open top ou flat selon vos besoins.",
+    "subtitle": "Solutions complètes de transport maritime France–Angola (FCL &amp; LCL) pour déménagements internationaux, marchandises B2B, véhicules, motos et machines. De l'enlèvement à la livraison, nous gérons votre fret de A à Z (manutention, mise sur palettes, stockage, douane, assurance cargo) sur le corridor France–Angola. Le conteneur complet (FCL) est idéal lorsque vous expédiez un volume important d’effets personnels, souvent avec un ou deux véhicules sur un même envoi. Nous traitons vos palettes, cartons, vrac sec, colis lourds ou hors gabarit en conteneurs dry, reefer, open top ou flat selon vos besoins.",
     "list": [
       "Conteneurs 20' et 40' (FCL - Full Container Load)",
       "Groupage maritime (LCL - Less than Container Load)",
@@ -135,23 +80,23 @@
     "cta": "Demander un Devis Personnalisé"
   },
   "lcl": {
-    "title": "Fret LCL vers l’Afrique",
-    "subtitle": "Service de consolidation maritime depuis la France et l’Europe vers le Congo et l’Angola.",
+    "title": "Fret LCL vers l’Angola",
+    "subtitle": "Service de consolidation maritime depuis la France et l’Europe vers Luanda, en Angola.",
     "blocks": [
       {
         "title": "Optimiser vos coûts sans remplir un conteneur",
         "bullets": [
           "Vous ne payez que le volume réellement utilisé dans le conteneur.",
           "Idéal pour des volumes de 1 à 15 m³ sans attendre de remplir un FCL complet.",
-          "Alternative plus économique que l’aérien pour les petits lots et les envois réguliers."
+          "Alternative plus économique que les solutions express non maritimes pour les petits lots et les envois réguliers."
         ]
       },
       {
         "title": "Conserver flexibilité et régularité",
         "bullets": [
-          "Départs LCL réguliers depuis les ports français et du Benelux vers Pointe‑Noire et Luanda.",
+          "Départs LCL réguliers depuis les ports français et du Benelux vers Luanda.",
           "Possibilité d’alterner LCL ponctuel et FCL dès que vos volumes augmentent.",
-          "Réservation anticipée sur les principaux corridors France–Congo et France–Angola."
+          "Réservation anticipée sur le corridor France–Angola."
         ]
       },
       {
@@ -165,13 +110,13 @@
       {
         "title": "Intégrer douane et assurance dans vos envois LCL",
         "bullets": [
-          "Dédouanement import/export sur le Congo et l’Angola, avec conseil documentaire adapté.",
+          "Dédouanement import/export en Angola, avec conseil documentaire adapté.",
           "Possibilité d’assurer vos envois LCL en ad valorem dès le premier m³.",
           "Accompagnement sur l’emballage export pour limiter les risques en groupage."
         ]
       }
     ],
-    "cta_title": "Un projet LCL vers l’Afrique (Congo, Angola) ?",
+    "cta_title": "Un projet LCL vers l’Angola ?",
     "cta_text": "Indiquez-nous votre volume approximatif, vos ports d’origine, votre destination et votre fréquence d’expédition. Nous construisons une solution LCL sur mesure pour vos déménagements, envois B2B, véhicules ou pièces détachées.",
     "cta_label": "Demander un devis LCL"
   },
@@ -199,41 +144,41 @@
     ]
   },
   "costs_guide": {
-    "hint": "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers le Congo et l’Angola.",
-    "cta": "Guide prix conteneur 20' / 40' Congo / Angola"
+    "hint": "Pour aller plus loin sur les budgets, consultez notre guide consacré au prix d’un conteneur 20' / 40' vers l’Angola.",
+    "cta": "Guide prix conteneur 20' / 40' Angola"
   },
   "customs": {
     "seo": {
-      "title": "Dédouanement & conformité — Flux conteneurs France ↔ Afrique (Congo, Angola) | MB Fret Services",
-      "description": "Dédouanement import/export pour vos conteneurs FCL/LCL, représentation en douane et calcul des droits & taxes sur vos flux France ↔ Afrique (Congo, Angola). Assistance documentaire, choix d’Incoterms et conformité réglementaire sur toute la chaîne, en lien avec vos opérateurs au Congo et en Angola."
+      "title": "Dédouanement & conformité — Flux conteneurs France ↔ Angola | MB Fret Services",
+      "description": "Dédouanement import/export pour vos conteneurs FCL/LCL, représentation en douane et calcul des droits & taxes sur vos flux France ↔ Angola. Assistance documentaire, choix d’Incoterms et conformité réglementaire sur toute la chaîne."
     },
     "breadcrumb_service_name": "Dédouanement",
     "service_name": "Dédouanement & conformité import/export",
     "service_type": "Dédouanement",
     "faq": [
       {
-        "q": "Quels documents sont indispensables ?",
-        "a": "Facture commerciale détaillée, packing list, documents d’origine, certificats éventuels et autorisations spécifiques selon la marchandise (véhicules, machines, marchandises réglementées…)."
+        "q": "Je suis une entreprise : pouvez-vous gérer le dédouanement de mes flux conteneurs France–Angola ?",
+        "a": "Oui. Nous assurons la représentation en douane pour vos conteneurs FCL/LCL, préparons et déposons les déclarations import/export, vérifions la conformité documentaire et vous accompagnons sur la classification tarifaire et le calcul des droits & taxes. Nous coordonnons également avec nos correspondants à Luanda pour anticiper les exigences locales."
       },
       {
-        "q": "Proposez-vous une représentation en douane ?",
-        "a": "Oui. Nous assurons la représentation en douane, le contrôle documentaire et le suivi des opérations pour vos conteneurs FCL/LCL, avec simulation des droits & taxes lorsque cela est possible."
+        "q": "Je déménage vers l’Angola : m’aidez-vous pour les formalités douanières de mes effets personnels et de mon véhicule ?",
+        "a": "Oui. Nous vous indiquons en amont les documents nécessaires (inventaire détaillé, justificatifs de résidence, documents véhicule, etc.), vérifions la cohérence de votre dossier et travaillons avec nos partenaires pour fluidifier les formalités à l’export comme à l’import. L’objectif est de limiter les blocages et les frais de stationnement liés à la douane."
       },
       {
-        "q": "Pouvez-vous assister sur les Incoterms ?",
-        "a": "Oui, nous vous conseillons sur l’Incoterm optimal (FOB/CIF/DAP…) en fonction de vos flux conteneurs, de votre tolérance au risque et de l’organisation logistique côté Congo/Angola."
+        "q": "Quels documents dois-je prévoir pour éviter les blocages ?",
+        "a": "Au minimum : facture ou inventaire valorisé, liste de colisage, documents d’origine, titres de propriété des véhicules, pièces d’identité et, selon les cas, certificats ou autorisations spécifiques. Nous vous fournissons une liste adaptée à votre cas (B2B ou déménagement) et vérifions votre dossier avant dépôt en douane."
       }
     ],
     "hero": {
       "title": "Dédouanement",
-      "subtitle": "Dédouanement France–Afrique : sécurisez vos conteneurs FCL/LCL vers le Congo et l’Angola avec une documentation maîtrisée et une représentation en douane efficace.",
+      "subtitle": "Dédouanement France–Angola : sécurisez vos conteneurs FCL/LCL vers Luanda avec une documentation maîtrisée et une représentation en douane efficace.",
       "cta_quote": "Parler à un expert"
     },
     "points": [
       "Contrôle documentaire export France (facture, packing list, BL, certificats) pour vos conteneurs FCL/LCL.",
-      "Représentation en douane et classement tarifaire, avec simulation des droits & taxes pour le Congo et l’Angola lorsque c’est possible.",
+      "Représentation en douane et classement tarifaire, avec simulation des droits & taxes lorsque c’est possible.",
       "Accompagnement sur le choix des Incoterms (FOB/CIF/DAP…) adaptés à vos flux conteneurs.",
-      "Coordination avec nos correspondants locaux pour anticiper les exigences documentaires à Pointe‑Noire et Luanda."
+      "Coordination avec nos correspondants locaux pour anticiper les exigences documentaires à Luanda."
     ],
     "services": {
       "title": "Prestations",
@@ -241,7 +186,7 @@
     },
     "links": {
       "maritime_hint": "Besoin de combiner dédouanement, fret maritime et assurance cargo sur le même corridor ?",
-      "maritime": "Fret maritime France–Afrique (Congo, Angola)",
+      "maritime": "Fret maritime France–Angola",
       "insurance": "Assurance cargo pour conteneurs FCL/LCL"
     },
     "images": {
@@ -249,8 +194,8 @@
     }
   },
   "destinations": {
-    "title": "Destinations Fret Maritime Afrique",
-    "subtitle": "Rotations régulières (départs hebdomadaires ou bi‑hebdomadaires) vers les principaux ports d’Afrique centrale avec des délais optimisés.",
+    "title": "Destination Fret maritime France–Angola",
+    "subtitle": "Rotations régulières (départs hebdomadaires ou bi‑hebdomadaires) vers Luanda en Angola avec des délais optimisés.",
     "label_duration": "Durée transit",
     "label_frequency": "Fréquence",
     "label_departure": "Départ depuis",
@@ -258,56 +203,55 @@
     "cta_prefix": "Devis vers "
   },
   "destinations_list": [
-    { "country": "Congo", "port": "Pointe-Noire", "duration": "18-22 jours", "frequency": "Hebdomadaire", "departure": "Le Havre, Anvers" },
-    { "country": "Angola", "port": "Luanda", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire", "departure": "Anvers, Rotterdam" }
+    { "country": "Angola", "port": "Luanda", "duration": "20-25 jours", "frequency": "Bi-hebdomadaire", "departure": "Le Havre, Marseille-Fos, Anvers, Rotterdam" }
   ],
   "faq": {
-    "title": "Questions Fréquentes - Fret Maritime",
-    "q1": "Quelle est la différence entre FCL et LCL ?",
-    "a1": "FCL (Full Container Load) : vous louez un conteneur complet (20' ou 40') pour vos marchandises exclusivement. C’est particulièrement adapté à un déménagement complet ou à l’envoi d’un grand volume d’effets personnels, souvent avec un véhicule ou deux dans le même envoi. LCL (Less than Container Load) : vos marchandises partagent un conteneur avec d'autres expéditeurs, ce qui est idéal pour les petits volumes ou des envois plus ponctuels.",
-    "q2": "Quels documents sont nécessaires pour le fret maritime ?",
-    "a2": "Facture commerciale, liste de colisage, connaissement maritime (Bill of Lading), certificat d'origine si requis, et documents spécifiques selon la nature des marchandises (certificats sanitaires, etc.).",
+    "title": "Questions fréquentes – B2B & déménagements",
+    "q1": "Je suis une entreprise : comment fonctionne le fret maritime France–Angola pour mes palettes et marchandises B2B ?",
+    "a1": "Pour les entreprises, nous construisons votre devis France–Angola à partir de quelques paramètres clés : type de marchandises, volume (m³) ou nombre de palettes, poids, ports ou villes de départ/arrivée et délais souhaités. Nous comparons ensuite FCL (conteneur complet 20'/40') et LCL (groupage) pour optimiser vos coûts et vos délais, intégrons le dédouanement et l’assurance cargo, puis organisons l’enlèvement, le pré‑acheminement, la traversée maritime et, si nécessaire, la livraison finale.",
+    "q2": "Je prépare un déménagement international vers l’Angola : comment se passe l’envoi de mes effets personnels et de mon véhicule ?",
+    "a2": "Pour un déménagement, nous estimons d’abord votre volume (en m³) et la nature de vos biens (cartons, mobilier, électroménager, véhicule, moto…). Selon ce volume, nous recommandons un groupage LCL ou un conteneur complet 20'/40' dédié. Nous vous accompagnons sur l’emballage, le chargement, les formalités export/import, l’assurance ad valorem et le suivi jusqu’à l’arrivée du conteneur à Luanda. Vous disposez d’un interlocuteur unique pour coordonner l’ensemble.",
     "q3": "Comment suivre mon conteneur en transit ?",
-    "a3": "Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, de l'embarquement au port de départ jusqu'à l'arrivée au port de destination."
+    "a3": "Nous fournissons un numéro de suivi et un accès à notre plateforme web pour un suivi en temps réel, de l'embarquement au port de départ jusqu'à l'arrivée au port de destination. Vous êtes informé des grandes étapes (chargement, départ navire, arrivée à Luanda, opérations douanières) et prévenu en cas d’aléa de transit."
   },
   "final": {
     "title": "Prêt à expédier par fret maritime ?",
-    "text": "Obtenez votre devis personnalisé en moins de 24h pour un envoi France → Afrique (Angola, Congo). Nos experts analysent votre projet (déménagement, marchandises, véhicules, motos…) et vous proposent la solution maritime la plus économique et la plus sûre. Nous coordonnons également les services à valeur ajoutée (manutention, stockage, douane, assurance) pour sécuriser toute votre chaîne logistique.",
+    "text": "Obtenez votre devis personnalisé en moins de 24h pour un envoi France → Angola. Nos experts analysent votre projet (déménagement, marchandises, véhicules, motos…) et vous proposent la solution maritime la plus économique et la plus sûre. Nous coordonnons également les services à valeur ajoutée (manutention, stockage, douane, assurance) pour sécuriser toute votre chaîne logistique.",
     "cta": "Devis Fret Maritime",
     "whatsapp": "WhatsApp Immédiat"
   },
   "insurance": {
     "seo": {
-      "title": "Assurance cargo — Conteneurs FCL/LCL vers le Congo et l’Angola | MB Fret Services",
-      "description": "Assurance transport ad valorem pour vos conteneurs FCL/LCL (déménagements, marchandises B2B, véhicules, motos) sur les corridors France ↔ Congo et France ↔ Angola. Gestion des sinistres, conseils d’emballage export et intégration au devis pour une visibilité complète du coût total livré."
+      "title": "Assurance cargo — Conteneurs FCL/LCL vers l’Angola | MB Fret Services",
+      "description": "Assurance transport ad valorem pour vos conteneurs FCL/LCL (déménagements, marchandises B2B, véhicules, motos) sur le corridor France ↔ Angola. Gestion des sinistres, conseils d’emballage export et intégration au devis pour une visibilité complète du coût total livré."
     },
     "breadcrumb_service_name": "Assurance cargo",
     "service_name": "Assurance cargo – couverture ad valorem",
     "service_type": "Assurance transport",
     "faq": [
       {
-        "q": "Pourquoi assurer un conteneur vers le Congo ou l’Angola ?",
-        "a": "Pour couvrir les risques d’avarie, de perte ou de vol sur des flux à forte valeur et à forte sensibilité (déménagements, véhicules, marchandises B2B). Une police ad valorem protège votre trésorerie et vos engagements contractuels tout au long du trajet."
+        "q": "Je suis une entreprise : quel type d’assurance recommandez-vous pour mes conteneurs France–Angola ?",
+        "a": "Pour les flux B2B, nous recommandons en général une couverture ad valorem sur la valeur marchandise + fret, basée sur des clauses de type Institute Cargo Clauses (A) ou équivalent. Nous ajustons la police selon la nature des biens (machines, pièces détachées, marchandises sensibles) et le niveau de risque, en intégrant si besoin les pré/post‑acheminements et les opérations de manutention."
       },
       {
-        "q": "Quelles marchandises sont prioritaires à assurer ?",
-        "a": "Les déménagements (effets personnels, mobilier), les véhicules et motos, les machines, ainsi que les lots B2B à forte valeur (équipements, pièces détachées, produits sensibles). Nous ajustons la couverture selon le type de marchandise et le niveau de risque."
+        "q": "Je déménage ou j’envoie un véhicule vers l’Angola : dois‑je assurer mon conteneur ?",
+        "a": "Oui, c’est fortement conseillé. Un déménagement ou l’envoi d’un véhicule représente un investissement important et les conventions de transport standard limitent fortement l’indemnisation en cas d’avarie ou de perte. Une assurance ad valorem dédiée permet de couvrir la valeur réelle de vos effets personnels, de votre voiture ou de votre moto pendant tout le trajet France–Angola."
       },
       {
-        "q": "Assurez-vous porte-à-porte ?",
-        "a": "Oui, nous calibrons la police du point d’enlèvement à la livraison finale (pré/post‑acheminement, traversées maritimes), avec des conseils d’emballage et de documentation (photos, réserves) pour faciliter toute gestion de sinistre éventuel."
+        "q": "Comment se déroule la gestion d’un sinistre ?",
+        "a": "En cas de dommage, nous vous guidons sur les bons réflexes : réserves à l’arrivée, photos, conservation des emballages, collecte des documents (BL, facture, inventaire…). Nous centralisons votre dossier, échangeons avec l’assureur et, le cas échéant, l’expert mandaté afin de défendre au mieux vos intérêts jusqu’au règlement du sinistre."
       }
     ],
     "hero": {
       "title": "Assurance cargo",
-      "subtitle": "Sécurisez vos conteneurs FCL/LCL vers le Congo et l’Angola avec une assurance ad valorem adaptée à vos déménagements, marchandises B2B, véhicules et motos.",
+      "subtitle": "Sécurisez vos conteneurs FCL/LCL vers l’Angola avec une assurance ad valorem adaptée à vos déménagements, marchandises B2B, véhicules et motos.",
       "cta_quote": "Demander une couverture"
     },
     "benefits": [
-      "Couverture ad valorem ajustée à la valeur et à la nature de vos biens (déménagements, marchandises B2B, véhicules, motos).",
+      "Couverture ad valorem ajustée à la valeur et à la nature vos biens (déménagements, marchandises B2B, véhicules, motos).",
       "Gestion des sinistres et assistance sur les preuves documentaires (photos, réserves, rapports) pour défendre vos intérêts.",
       "Conseils sur l’emballage et la sécurisation export de vos conteneurs (calage, cerclage, caisses, protection).",
-      "Intégration de l’assurance au devis de fret pour une vision claire du coût total livré sur vos flux France ↔ Congo/Angola."
+      "Intégration de l’assurance au devis de fret pour une vision claire du coût total livré sur vos flux France ↔ Angola."
     ],
     "services": {
       "title": "Bénéfices",
@@ -331,7 +275,7 @@
   },
   "links": {
     "customs_insurance_hint": "Besoin de gérer douane et assurance sur le même corridor ?",
-    "customs_service": "Dédouanement France–Afrique (Congo, Angola)",
+    "customs_service": "Dédouanement France–Angola",
     "insurance_service": "Assurance cargo pour conteneurs FCL/LCL"
   },
   "images": {
@@ -340,7 +284,7 @@
   },
   "service_type": "Fret maritime",
   "whatsapp": {
-    "hero_quote_africa": "Bonjour, je souhaite un devis pour du fret maritime vers l'Afrique",
+    "hero_quote_africa": "Bonjour, je souhaite un devis pour du fret maritime vers l'Angola",
     "final_quote": "Bonjour, je souhaite un devis pour du fret maritime"
   }
 }

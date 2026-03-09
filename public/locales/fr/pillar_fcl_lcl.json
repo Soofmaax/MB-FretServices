@@ -1,11 +1,10 @@
 {
   "title": "FCL vs LCL — Comment décider ? | MB Fret Services",
-  "description": "Choisir entre FCL et LCL en B2B maritime: seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage sur les routes France–Congo et France–Angola.",
+  "description": "Choisir entre FCL et LCL pour vos flux B2B et déménagements internationaux : seuils 13–15 m³, sécurité, délais, coûts. Méthode de décision et cas d’usage sur le corridor France–Angola.",
   "hero_h1": "FCL vs LCL — Méthode de décision",
-  "hero_intro": "Optimisez le coût total, la sécurité et le time-to-market. Une méthode claire pour arbitrer selon votre volume, vos délais et la sensibilité de la marchandise.",
+  "hero_intro": "Optimisez le coût total, la sécurité et le time‑to‑market pour vos envois conteneurisés. Une méthode claire pour arbitrer entre FCL et LCL selon votre volume, vos délais et la sensibilité de la marchandise, que vous soyez une entreprise ou en déménagement international.",
   "hero_links": {
     "maritime": "Fret maritime",
-    "congo": "France ↔ Congo",
     "angola": "France ↔ Angola"
   },
   "sections": [
@@ -81,12 +80,6 @@
       "h2": "Cas d’usage par route",
       "sub": [
         {
-          "h3": "France ↔ Congo",
-          "p": [
-            "Groupages LCL pertinents pour les petits volumes (colis, palettes, effets personnels) avec ramassage possible sur plusieurs hubs en France. Dès que la valeur ou le volume augmentent, basculer au FCL réduit les manipulations et sécurise délais et qualité."
-          ]
-        },
-        {
           "h3": "France ↔ Angola",
           "p": [
             "LCL efficace pour colis, bagages ou envois tests; le FCL devient la solution privilégiée dès que vous combinez déménagements, marchandises B2B et éventuellement véhicules ou motos dans un même conteneur, avec une assurance ad valorem dédiée."
@@ -137,9 +130,18 @@
     }
   ],
   "faq": [
-    { "q": "Quel seuil de volume pour passer du LCL au FCL ?", "a": "Autour de 13–15 m³, le FCL devient souvent plus intéressant économiquement et en sécurité. L’arbitrage dépend du port, de la saisonnalité et des délais." },
-    { "q": "Le LCL est-il plus risqué ?", "a": "Le groupage implique des manipulations supplémentaires. Un emballage export et une assurance ad valorem réduisent fortement le risque. Pour des marchandises sensibles, FCL recommandé." },
-    { "q": "Peut-on mixer LCL et aérien pour accélérer une partie du flux ?", "a": "Oui, la multimodalité permet de respecter vos jalons clés. Nous calibrons un plan de transport adapté avec consolidation partielle." }
+    {
+      "q": "Je suis une entreprise : FCL ou LCL pour mes palettes et marchandises B2B France–Angola ?",
+      "a": "Pour un flux B2B, nous commençons par estimer votre volume (m³ ou nombre de palettes), le poids, la récurrence et la sensibilité de la marchandise. En‑dessous d’environ 13–15 m³, le LCL est généralement plus intéressant : vous ne payez que le volume réellement utilisé, au prix de quelques manipulations supplémentaires. Dès que le volume augmente ou que la marchandise est à forte valeur/fragile, un 20' ou 40' FCL devient souvent plus pertinent en coût par m³, en maîtrise des délais et en gestion des risques."
+    },
+    {
+      "q": "Je déménage vers l’Angola : FCL ou LCL pour mes effets personnels et mon véhicule ?",
+      "a": "Pour un déménagement, nous évaluons votre volume d’effets personnels (cartons, mobilier, électroménager…) et la présence éventuelle d’un véhicule ou d’une moto. Pour un petit volume sans véhicule, le LCL peut suffire. Dès que vous approchez des 13–15 m³ ou que vous combinez effets et véhicule dans un même envoi, un conteneur complet 20' ou 40' FCL est en général la meilleure option : intégration de l’emballage, du chargement, de l’assurance ad valorem et des formalités, avec un seul conteneur scellé pour tout votre projet."
+    },
+    {
+      "q": "Quel seuil de volume conseillez-vous pour passer du LCL au FCL ?",
+      "a": "À titre indicatif, autour de 13–15 m³, le FCL devient souvent plus intéressant économiquement et en sécurité, que ce soit pour des palettes B2B ou pour un déménagement. Mais ce seuil dépend aussi des ports, de la saison (haute saison, congestion) et de la valeur/sensibilité de la marchandise : nous comparons systématiquement les scénarios LCL/FCL sur le coût total livré avant de vous recommander une option."
+    }
   ],
   "cta_compare": "Prêt à comparer FCL/LCL ?",
   "cta_compare_desc": "Nos experts recommandent une option selon votre volume, votre risque et vos délais.",

@@ -6,6 +6,7 @@ import SEO from '../components/SEO';
 import { getSiteUrl } from '../utils/siteUrl';
 import { useTranslation } from 'react-i18next';
 import { detectLangFromPath } from '../utils/paths';
+import { useInViewAnimation } from '../components/ui/useInViewAnimation';
 
 const Contact: FC = () => {
   const SITE_URL = getSiteUrl();
@@ -19,8 +20,8 @@ const Contact: FC = () => {
   const defaultMessage =
     source === 'pillar_container_prices'
       ? lang === 'fr'
-        ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
-        : "Hello, I’m coming from the guide about the cost of a 20'/40' container to Congo / Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
+        ? "Bonjour, je viens du guide sur le prix d'un conteneur 20'/40' vers l’Angola. Voici mon projet (volume approximatif, type de biens, ports ou villes de départ/arrivée, délais souhaités) :"
+        : "Hello, I’m coming from the guide about the cost of a 20'/40' container to Angola. Here is my project (approximate volume, cargo types, departure/arrival ports or cities, desired lead times):"
       : source === 'pillar_fcl_lcl'
       ? lang === 'fr'
         ? "Bonjour, je viens du guide FCL vs LCL. Voici mon projet (volume approximatif, type de marchandises, destination, contraintes de délais) pour que vous puissiez me conseiller sur le bon mode :"
@@ -29,10 +30,6 @@ const Contact: FC = () => {
       ? lang === 'fr'
         ? "Bonjour, je viens du guide Incoterms 2020. Voici mon flux (origine, destination, type de marchandise, mode de transport) pour que vous puissiez me recommander l’Incoterm adapté :"
         : "Hello, I’m coming from the Incoterms 2020 guide. Here is my flow (origin, destination, cargo type, transport mode) so you can recommend the appropriate Incoterm:"
-      : source === 'route_france_congo'
-      ? lang === 'fr'
-        ? "Bonjour, je viens de la page route France ↔ Congo (Pointe‑Noire). Voici mon projet (type d’envoi : déménagement, marchandises, véhicule…, volume approximatif en m³ ou nombre de palettes, ville de départ, ville d’arrivée, délais souhaités) :"
-        : "Hello, I’m coming from the France ↔ Congo (Pointe-Noire) route page. Here is my project (shipment type: move, cargo, vehicle…, approximate volume in m³ or number of pallets, departure city, arrival city, desired lead times):"
       : source === 'route_france_angola'
       ? lang === 'fr'
         ? "Bonjour, je viens de la page route France ↔ Angola (Luanda). Voici mon projet (type d’envoi : déménagement, marchandises, véhicule…, volume approximatif en m³ ou nombre de palettes, ville de départ, ville d’arrivée, délais souhaités) :"
@@ -58,8 +55,8 @@ const Contact: FC = () => {
   const subjectLabel =
     source === 'pillar_container_prices'
       ? lang === 'fr'
-        ? "Demande via guide prix conteneur 20'/40' Congo / Angola"
-        : "Request via container price guide 20'/40' Congo / Angola"
+        ? "Demande via guide prix conteneur 20'/40' Angola"
+        : "Request via container price guide 20'/40' Angola"
       : source === 'pillar_fcl_lcl'
       ? lang === 'fr'
         ? 'Demande via guide FCL vs LCL'
@@ -68,10 +65,6 @@ const Contact: FC = () => {
       ? lang === 'fr'
         ? 'Demande via guide Incoterms 2020'
         : 'Request via Incoterms 2020 guide'
-      : source === 'route_france_congo'
-      ? lang === 'fr'
-        ? 'Demande de devis — Route France ↔ Congo (Pointe‑Noire)'
-        : 'Quote request – France ↔ Congo (Pointe-Noire) route'
       : source === 'route_france_angola'
       ? lang === 'fr'
         ? 'Demande de devis — Route France ↔ Angola (Luanda)'
@@ -104,23 +97,23 @@ const Contact: FC = () => {
     fr: 'fr-FR',
     en: 'en-GB',
     pt: 'pt-PT',
-    ar: 'ar',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
   };
   const langTag = langTagMap[lang] || 'fr-FR';
 
   const seoTitle = t(
     'contact:seo.title',
-    'Contact - Devis Gratuit Transport International | MB Fret Services'
+    'Contact - Devis Gratuit Fret Maritime & Déménagement international | MB Fret Services'
   );
   const seoDescription = t(
     'contact:seo.description',
-    'Contactez MB Fret Services pour un devis gratuit. Experts en transport maritime et aérien. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
+    'Contactez MB Fret Services pour un devis gratuit. Spécialiste du fret maritime en conteneurs (FCL/LCL), des déménagements internationaux et de l’envoi de véhicules vers l’Angola. WhatsApp, email ou téléphone. Réponse sous 24h garantie.'
   );
+
+  const { ref: heroRef, inView: heroInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: methodsRef, inView: methodsInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: formRef, inView: formInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: guideRef, inView: guideInView } = useInViewAnimation<HTMLDivElement>();
+  const { ref: ctaRef, inView: ctaInView } = useInViewAnimation<HTMLDivElement>();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -184,7 +177,12 @@ const Contact: FC = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
+          <div
+            ref={heroRef}
+            className={`text-center transition-all duration-700 ${
+              heroInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t('hero.title')}
             </h1>
@@ -197,10 +195,16 @@ const Contact: FC = () => {
 
       {/* Contact Methods */}
       <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={methodsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Email */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group">
+            <div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-0'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Mail size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -217,7 +221,13 @@ const Contact: FC = () => {
             </div>
 
             {/* Téléphone */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-200">
+            <div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-200'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Phone size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -234,8 +244,14 @@ const Contact: FC = () => {
             </div>
 
             {/* WhatsApp */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-400">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-400'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-primary-900 mb-4">{t('methods.whatsapp')}</h3>
@@ -253,7 +269,13 @@ const Contact: FC = () => {
             </div>
 
             {/* Bureau */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 animate-slide-up group animate-delay-600">
+            <div
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-700 ${
+                methodsInView
+                  ? 'animate-slide-up opacity-100 translate-y-0 animate-delay-600'
+                  : 'opacity-0 translate-y-4'
+              } group`}
+            >
               <div className="w-16 h-16 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <MapPin size={32} className="text-white" aria-hidden="true" />
               </div>
@@ -271,7 +293,12 @@ const Contact: FC = () => {
 
       {/* Formulaire de contact */}
       <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={formRef}
+          className={`max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            formInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 text-center">
             {t('hero.title')}
           </h2>
@@ -281,7 +308,7 @@ const Contact: FC = () => {
                 {source === 'pillar_container_prices'
                   ? t(
                       'contact:source_banner.container_prices',
-                      "Vous venez du guide sur le prix d'un conteneur 20'/40' vers le Congo / l’Angola."
+                      "Vous venez du guide sur le prix d'un conteneur 20'/40' vers l’Angola."
                     )
                   : source === 'pillar_fcl_lcl'
                   ? t('contact:source_banner.fcl_lcl', 'Vous venez du guide FCL vs LCL.')
@@ -289,11 +316,6 @@ const Contact: FC = () => {
                   ? t(
                       'contact:source_banner.incoterms',
                       'Vous venez du guide Incoterms 2020.'
-                    )
-                  : source === 'route_france_congo'
-                  ? t(
-                      'contact:source_banner.route_congo',
-                      'Vous venez de la page route France ↔ Congo (Pointe‑Noire).'
                     )
                   : source === 'route_france_angola'
                   ? t(
@@ -388,7 +410,12 @@ const Contact: FC = () => {
 
       {/* Guide pour demande de devis */}
       <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          ref={guideRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${
+            guideInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
               {t('guide.title')}
@@ -440,7 +467,12 @@ const Contact: FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 lg:py-20 bg-primary-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          ref={ctaRef}
+          className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center transition-all duration-700 ${
+            ctaInView ? 'animate-fade-in opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             {t('cta.title')}
           </h2>

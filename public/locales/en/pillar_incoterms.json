@@ -1,12 +1,10 @@
 {
   "title": "Incoterms 2020 — Complete guide (FOB, CIF…) | MB Fret Services",
-  "description": "Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks and practical cases on China/Turkey/Congo. Choose between FOB and CIF, and measure impacts on insurance and lead times.",
+  "description": "Understand Incoterms 2020 for B2B sea freight: responsibilities, costs, risks and practical cases on the France–Angola corridor. Choose between FOB and CIF, and measure impacts on insurance and lead times.",
   "hero_h1": "Incoterms 2020 — Complete B2B guide",
-  "hero_intro": "Master cost and risk allocation in sea freight. Practical use cases applied to your key routes (France–China, France–Turkey, France–Congo) for better purchasing decisions.",
+  "hero_intro": "Master cost and risk allocation in B2B sea freight. Practical use cases applied to your container flows on the France–Angola corridor for better purchasing decisions, whether you are an importer, manufacturer or SME.",
   "hero_links": {
-    "china": "France ↔ China",
-    "turkey": "France ↔ Turkey",
-    "congo": "France ↔ Congo"
+    "angola": "France ↔ Angola"
   },
   "breadcrumb_label": "Incoterms 2020",
   "faq_title": "FAQ",
@@ -16,7 +14,7 @@
     "fcl_guide_label": "FCL vs LCL — how to decide?"
   },
   "cta_title": "Need help choosing your Incoterms?",
-  "cta_desc": "We help you align Incoterms, insurance and customs with your France ↔ Congo/Angola flows.",
+  "cta_desc": "We help you align Incoterms, insurance and customs with your France ↔ Angola flows.",
   "cta_label": "Talk to an Incoterms expert",
   "sections": [
     {
@@ -71,21 +69,9 @@
       "h2": "Practical cases and key routes",
       "sub": [
         {
-          "h3": "France ↔ China",
+          "h3": "France ↔ Angola",
           "p": [
-            "Transit times vary (Le Havre/Marseille-Fos ↔ Shanghai/Ningbo/Shenzhen). For regular flows, FOB suits experienced importers who can negotiate freight and optimise CBM. CIF brings administrative comfort when speed of execution and budget visibility are priorities."
-          ]
-        },
-        {
-          "h3": "France ↔ Turkey",
-          "p": [
-            "On a short/medium-haul corridor, flexibility (multimodal sea/road/air) is essential. CIF can simplify multi-actor coordination. FOB remains relevant if you want to finely balance lead times and costs."
-          ]
-        },
-        {
-          "h3": "France ↔ Congo",
-          "p": [
-            "On flows to West/Central Africa, documentation quality and local customs know-how are critical. CIF can reduce “hidden” coordination costs; FOB allows experienced buyers to control carriers and schedules more directly."
+            "Transit times vary (Le Havre/Antwerp ↔ Luanda). For regular flows to Angola, FOB suits experienced importers who can negotiate freight and optimise CBM. CIF brings administrative comfort when speed of execution and budget visibility are priorities."
           ]
         }
       ]
@@ -128,7 +114,7 @@
       "h2": "Related guides & route pages",
       "p": [
         "Related guides: FCL vs LCL — how to decide?",
-        "Route pages: France–China, France–Turkey, France–Congo."
+        "Route page: France–Angola."
       ]
     }
   ],
@@ -138,8 +124,8 @@
       "a": "FOB: the seller bears costs/risks up to loading on board. CIF: includes cost, insurance and freight to the port of arrival. In B2B, CIF offers predictability on total cost, while FOB offers more control for the importer."
     },
     {
-      "q": "Which Incoterms should I prefer for imports from China?",
-      "a": "FOB and CIF are the most commonly used. The choice depends on desired control, ability to manage main carriage, and insurance needs."
+      "q": "Which Incoterms should I prefer for imports on the France–Angola corridor?",
+      "a": "In practice, most B2B imports on the France–Angola corridor use FOB or CIF. FOB suits experienced importers who want to choose their own carrier, negotiate rates directly and keep control over main carriage. CIF is more comfortable for companies that prioritise budget predictability and a single point of contact on the seller’s side. In all cases, we compare several scenarios (FOB, CFR, CIF and sometimes DAP) on total delivered cost for your container flows before recommending a setup."
     },
     {
       "q": "Do Incoterms influence customs clearance?",

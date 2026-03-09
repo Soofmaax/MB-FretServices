@@ -32,28 +32,34 @@
     {
       "country": "刚果",
       "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["从勒阿弗尔出发的海运", "从巴黎 CDG 出发的空运"]
+      "image": "/images/hero-congo.jpg",
+      "routes": ["从勒阿弗尔出发的海运", "从安特卫普出发的海运"]
     },
     {
       "country": "安哥拉",
       "city": "罗安达",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["从安特卫普出发的海运", "从马赛出发的空运"]
-    },
-    {
-      "country": "中国",
-      "city": "上海",
-      "image": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["跨太平洋航线海运", "直飞空运"]
-    },
-    {
-      "country": "土耳其",
-      "city": "伊斯坦布尔",
-      "image": "https://images.pexels.com/photos/1723637/pexels-photo-1723637.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["公路运输", "从里昂出发的空运"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["从安特卫普出发的海运", "从鹿特丹出发的海运"]
     }
   ],
+  "commitments": {
+    "title": "从第一天起我们的承诺",
+    "subtitle": "一家年轻的公司，但在响应速度、专注路线和沟通方式上有清晰的标准。",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "在 24 个工作小时内回复您的报价或联系请求，并通过第一次人工沟通进一步了解您的项目。"
+      },
+      {
+        "label": "2 条航线",
+        "description": "专注于法国–刚果（Pointe‑Noire）和法国–安哥拉（罗安达）这两条航线，以保持专业、而不是面面俱到。"
+      },
+      {
+        "label": "3 种沟通方式",
+        "description": "您可以通过 WhatsApp、电话或电子邮件与我们联系，中间没有匿名平台。"
+      }
+    ]
+  },
   "final_cta_title": "准备好发货了吗？",
   "final_cta_text": "24 小时内获取个性化报价。我们的专家将在您的物流项目全程为您提供支持。",
   "whatsapp": "通过 WhatsApp 联系我们"

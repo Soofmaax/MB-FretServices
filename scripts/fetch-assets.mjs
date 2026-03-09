@@ -68,7 +68,7 @@ async function buildVariants(name, srcUrl) {
   if (!fs.existsSync(path.join(imagesDir, `${name}.jpg`))) {
     await sharp(buffer)
       .resize({ width: 1200 })
-      .jpeg({ quality: 82, progressive: true })
+      .jpeg({ quality: 75, progressive: true })
       .toFile(path.join(imagesDir, `${name}.jpg`));
   }
 
@@ -78,13 +78,13 @@ async function buildVariants(name, srcUrl) {
     const avifOut = path.join(imagesDir, `${name}-${w}.avif`);
 
     if (!fs.existsSync(jpgOut)) {
-      await sharp(buffer).resize({ width: w }).jpeg({ quality: 82, progressive: true }).toFile(jpgOut);
+      await sharp(buffer).resize({ width: w }).jpeg({ quality: 75, progressive: true }).toFile(jpgOut);
     }
     if (!fs.existsSync(webpOut)) {
-      await sharp(buffer).resize({ width: w }).webp({ quality: 80 }).toFile(webpOut);
+      await sharp(buffer).resize({ width: w }).webp({ quality: 70 }).toFile(webpOut);
     }
     if (!fs.existsSync(avifOut)) {
-      await sharp(buffer).resize({ width: w }).avif({ quality: 50 }).toFile(avifOut);
+      await sharp(buffer).resize({ width: w }).avif({ quality: 40 }).toFile(avifOut);
     }
   }
 }
@@ -140,7 +140,7 @@ async function buildTintedFromPath(name, basePath, tintColor) {
 
   // Base fallback 1200 jpg
   if (!fs.existsSync(path.join(imagesDir, `${name}.jpg`))) {
-    await sharp(basePath).resize({ width: 1200 }).tint(tintColor).jpeg({ quality: 82, progressive: true }).toFile(path.join(imagesDir, `${name}.jpg`));
+    await sharp(basePath).resize({ width: 1200 }).tint(tintColor).jpeg({ quality: 75, progressive: true }).toFile(path.join(imagesDir, `${name}.jpg`));
   }
 
   for (const w of sizes) {
@@ -149,13 +149,13 @@ async function buildTintedFromPath(name, basePath, tintColor) {
     const avifOut = path.join(imagesDir, `${name}-${w}.avif`);
 
     if (!fs.existsSync(jpgOut)) {
-      await sharp(basePath).resize({ width: w }).tint(tintColor).jpeg({ quality: 82, progressive: true }).toFile(jpgOut);
+      await sharp(basePath).resize({ width: w }).tint(tintColor).jpeg({ quality: 75, progressive: true }).toFile(jpgOut);
     }
     if (!fs.existsSync(webpOut)) {
-      await sharp(basePath).resize({ width: w }).tint(tintColor).webp({ quality: 80 }).toFile(webpOut);
+      await sharp(basePath).resize({ width: w }).tint(tintColor).webp({ quality: 70 }).toFile(webpOut);
     }
     if (!fs.existsSync(avifOut)) {
-      await sharp(basePath).resize({ width: w }).tint(tintColor).avif({ quality: 50 }).toFile(avifOut);
+      await sharp(basePath).resize({ width: w }).tint(tintColor).avif({ quality: 40 }).toFile(avifOut);
     }
   }
 }
@@ -203,28 +203,19 @@ async function main() {
     console.warn('Failed to build OG default:', e?.message || e);
   }
 
-  // Build route-specific tinted variants from hero-maritime (to ensure visual distinction)
+  // Build a route-specific tinted variant from hero-maritime (Angola focus)
   try {
     const base1600 = path.join(imagesDir, 'hero-maritime-1600.jpg');
     const fallback1200 = path.join(imagesDir, 'hero-maritime.jpg');
     const basePath = fs.existsSync(base1600) ? base1600 : fallback1200;
 
-    // China: red vif
-    await buildTintedFromPath('hero-china', basePath, { r: 220, g: 38, b: 38 }); // #dc2626
-
-    // Congo: vert forêt
-    await buildTintedFromPath('hero-congo', basePath, { r: 22, g: 101, b: 52 }); // #166534
-
-    // Turkey: rouge profond (différent de Chine)
-    await buildTintedFromPath('hero-turkey', basePath, { r: 190, g: 18, b: 60 }); // #be123c
-
-    // Angola: teinte ambrée chaude
+    // Angola: warm amber tint
     await buildTintedFromPath('hero-angola', basePath, { r: 245, g: 158, b: 11 }); // #f59e0b
   } catch (e) {
-    console.warn('Failed to build tinted route variants:', e?.message || e);
+    console.warn('Failed to build tinted route variant:', e?.message || e);
   }
 
-  // Build route-specific OG images (1200x630) from the tinted variants
+  // Build OG image (1200x630) from the Angola tinted variant
   try {
     const ogOut = (name) => ({
       webp: path.join(publicDir, 'images', `og-${name}.webp`),
@@ -232,15 +223,6 @@ async function main() {
     });
     ensureDir(path.join(publicDir, 'images'));
 
-    const chinaBase = fs.existsSync(path.join(imagesDir, 'hero-china-1600.jpg'))
-      ? path.join(imagesDir, 'hero-china-1600.jpg')
-      : path.join(imagesDir, 'hero-china.jpg');
-    const congoBase = fs.existsSync(path.join(imagesDir, 'hero-congo-1600.jpg'))
-      ? path.join(imagesDir, 'hero-congo-1600.jpg')
-      : path.join(imagesDir, 'hero-congo.jpg');
-    const turkeyBase = fs.existsSync(path.join(imagesDir, 'hero-turkey-1600.jpg'))
-      ? path.join(imagesDir, 'hero-turkey-1600.jpg')
-      : path.join(imagesDir, 'hero-turkey.jpg');
     const angolaBase = fs.existsSync(path.join(imagesDir, 'hero-angola-1600.jpg'))
       ? path.join(imagesDir, 'hero-angola-1600.jpg')
       : path.join(imagesDir, 'hero-angola.jpg');
@@ -257,12 +239,9 @@ async function main() {
       }
     }
 
-    await buildOg('china', chinaBase);
-    await buildOg('congo', congoBase);
-    await buildOg('turkey', turkeyBase);
     await buildOg('angola', angolaBase);
   } catch (e) {
-    console.warn('Failed to build OG route images:', e?.message || e);
+    console.warn('Failed to build OG route image:', e?.message || e);
   }
 
   console.log('Assets prepared under public/images and og-default.* at public/');

@@ -5,7 +5,7 @@ export const siteConfig = {
   businessType: 'logistics' as const,
   
   contact: {
-    phone: '+33 X XX XX XX XX',
+    phone: '+33 7 49 23 55 39',
     email: 'contact@mb-fretservices.com',
   },
   

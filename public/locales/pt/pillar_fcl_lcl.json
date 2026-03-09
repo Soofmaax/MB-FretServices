@@ -1,27 +1,25 @@
 {
   "title": "FCL vs LCL — Como decidir? | MB Fret Services",
-  "description": "Escolher entre FCL e LCL no transporte marítimo B2B: limiares de 13–15 m³, segurança, prazos e custos. Método de decisão e casos de uso nas rotas França–China/Turquia/África.",
+  "description": "Escolher entre FCL e LCL no transporte marítimo B2B e em mudanças internacionais: limiares de 13–15 m³, segurança, prazos e custos. Método de decisão com exemplos práticos no corredor França–Angola.",
   "hero_h1": "FCL vs LCL — Método de decisão",
-  "hero_intro": "Otimize o custo total, a segurança e o time-to-market. Um método claro para arbitrar em função do volume, dos prazos e da sensibilidade da mercadoria.",
+  "hero_intro": "Otimize o custo total, a segurança e o time‑to‑market dos seus envios em contentor. Um método claro para arbitrar entre FCL e LCL em função do volume, dos prazos e da sensibilidade da mercadoria, tanto para empresas como para mudanças internacionais.",
   "hero_links": {
     "maritime": "Transporte marítimo",
-    "china": "França ↔ China",
-    "turkey": "França ↔ Turquia",
-    "congo": "França ↔ Congo"
+    "angola": "França ↔ Angola"
   },
   "sections": [],
   "faq": [
     {
-      "q": "A partir de que volume faz sentido passar de LCL para FCL?",
-      "a": "Na prática, à volta de 13–15 m³, o FCL torna‑se muitas vezes mais interessante em termos económicos e de segurança. A decisão depende ainda do porto, da sazonalidade e das restrições de prazo."
+      "q": "Sou uma empresa: FCL ou LCL para as minhas paletes e cargas B2B França–Angola?",
+      "a": "Para fluxos B2B, começamos por estimar o volume (em m³ ou número de paletes), o peso, a recorrência e a sensibilidade da mercadoria. Abaixo de cerca de 13–15 m³, o LCL é geralmente mais interessante: paga apenas o volume realmente utilizado, com um pouco mais de manuseamento. À medida que o volume aumenta ou que a mercadoria é de alto valor/sensível, um contentor FCL 20' ou 40' torna‑se muitas vezes mais relevante em custo por m³, controlo de prazos e gestão de risco."
     },
     {
-      "q": "O LCL é mais arriscado?",
-      "a": "O groupage implica mais manuseamentos. Uma embalagem export adequada e um seguro ad valorem reduzem fortemente o risco. Para mercadorias sensíveis ou de alto valor, o FCL continua recomendado."
+      "q": "Estou a mudar‑me para Angola: FCL ou LCL para os meus bens pessoais e o meu veículo?",
+      "a": "Numa mudança internacional, avaliamos o volume de bens pessoais (caixas, mobiliário, eletrodomésticos, etc.) e a eventual inclusão de um carro ou moto. Para um volume pequeno sem veículo, o LCL pode ser suficiente. A partir de cerca de 13–15 m³ ou quando combina efeitos pessoais e veículo no mesmo envio, um contentor FCL 20' ou 40' é geralmente a melhor opção: um único contentor selado com embalagem, carregamento, seguro ad valorem e formalidades integradas."
     },
     {
-      "q": "É possível combinar LCL e transporte aéreo para acelerar parte do fluxo?",
-      "a": "Sim, a multimodalidade é uma alavanca útil para cumprir marcos críticos. Calibramos um plano de transporte adequado com consolidação parcial."
+      "q": "A partir de que volume recomendam, na prática, a passagem de LCL para FCL?",
+      "a": "Como referência, à volta de 13–15 m³ o FCL tende a tornar‑se mais interessante, tanto para paletes B2B como para mudanças. Mas o limiar depende também dos portos, da sazonalidade (época alta, congestionamento) e da sensibilidade/valor da mercadoria: comparamos sempre cenários FCL/LCL em custo total entregue antes de recomendar uma opção."
     }
   ],
   "cta_compare": "Pronto para comparar FCL/LCL?",

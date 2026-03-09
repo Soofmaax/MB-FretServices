@@ -37,8 +37,8 @@ const SiteSEO: FC = () => {
         email: 'contact@mb-fretservices.com',
         url: 'https://wa.me/33749235539',
         contactType: 'customer service',
-        areaServed: ['FR', 'EU', 'AF', 'AS'],
-        availableLanguage: ['fr', 'en', 'pt', 'es', 'ar', 'tr', 'de', 'it', 'sw'],
+        areaServed: ['FR', 'EU', 'AF'],
+        availableLanguage: ['fr', 'en', 'pt'],
       },
     ],
   };
@@ -89,7 +89,8 @@ const SiteSEO: FC = () => {
       },
     ],
     areaServed: [
-      'Europe', 'Africa', 'Asia'
+      'Europe',
+      'Africa',
     ],
     sameAs: [
       'https://www.linkedin.com/company/NOM-DE-L-ENTREPRISE-PLACEHOLDER',

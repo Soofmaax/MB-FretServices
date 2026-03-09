@@ -3,14 +3,14 @@ site:
   name: MB Fret Services
   url: https://mb-fretservices.com
   description: >-
-    MB Fret Services propose des solutions de transport international (fret maritime FCL/LCL, fret aérien),
-    dédouanement et assurance cargo depuis l'Europe vers l'Afrique et l'Asie. Devis sous 24 h.
-  languages: [fr, en, pt, es, ar, tr, de, it, sw]
-  topics: [logistics, freight, maritime, air, customs, shipping, africa, asia, europe]
-  target_audience: B2B & particuliers expédiant des marchandises vers l'Afrique et l'Asie depuis l'Europe
+    MB Fret Services propose principalement des solutions de transport international par fret maritime FCL/LCL,
+    avec dédouanement et assurance cargo depuis la France (région parisienne et Normandie) vers l'Angola (Luanda). Devis détaillé sous 24 h.
+  languages: [fr, en, pt]
+  topics: [logistics, freight, maritime, customs, shipping, angola, france]
+  target_audience: B2B & particuliers expédiant des marchandises entre la France (Paris/Normandie) et l'Angola
   service_regions:
-    - Africa: [Congo, Angola, Côte d'Ivoire, Cameroun]
-    - Asia: [China, Turkey]
+    - Europe: [France]
+    - Africa: [Angola]
   contact:
     email: contact@mb-fretservices.com
     phone: "+33 7 49 23 55 39"
@@ -30,9 +30,6 @@ site:
       key: services
       url: https://mb-fretservices.com/fr/services
     - lang: fr
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/fr/services/fret-maritime
-    - lang: fr
       key: destinations
       url: https://mb-fretservices.com/fr/destinations
     - lang: fr
@@ -41,6 +38,27 @@ site:
     - lang: fr
       key: legal
       url: https://mb-fretservices.com/fr/mentions-legales
+    - lang: fr
+      key: services_freight_maritime
+      url: https://mb-fretservices.com/fr/services/fret-maritime
+    - lang: fr
+      key: services_customs
+      url: https://mb-fretservices.com/fr/services/dedouanement
+    - lang: fr
+      key: services_insurance
+      url: https://mb-fretservices.com/fr/services/assurance-cargo
+    - lang: fr
+      key: services_freight_france_angola
+      url: https://mb-fretservices.com/fr/services/fret-maritime/france-angola
+    - lang: fr
+      key: pillar_incoterms
+      url: https://mb-fretservices.com/fr/documentation/incoterms-2020
+    - lang: fr
+      key: pillar_fcl_lcl
+      url: https://mb-fretservices.com/fr/guides/fcl-vs-lcl
+    - lang: fr
+      key: pillar_container_prices
+      url: https://mb-fretservices.com/fr/guides/prix-conteneur-angola
 
     - lang: en
       key: home
@@ -48,9 +66,6 @@ site:
     - lang: en
       key: services
       url: https://mb-fretservices.com/en/services
-    - lang: en
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/en/services/maritime-freight
     - lang: en
       key: destinations
       url: https://mb-fretservices.com/en/destinations
@@ -60,6 +75,27 @@ site:
     - lang: en
       key: legal
       url: https://mb-fretservices.com/en/legal-notice
+    - lang: en
+      key: services_freight_maritime
+      url: https://mb-fretservices.com/en/services/maritime-freight
+    - lang: en
+      key: services_customs
+      url: https://mb-fretservices.com/en/services/customs-clearance
+    - lang: en
+      key: services_insurance
+      url: https://mb-fretservices.com/en/services/cargo-insurance
+    - lang: en
+      key: services_freight_france_angola
+      url: https://mb-fretservices.com/en/services/maritime-freight/france-angola
+    - lang: en
+      key: pillar_incoterms
+      url: https://mb-fretservices.com/en/resources/incoterms-2020
+    - lang: en
+      key: pillar_fcl_lcl
+      url: https://mb-fretservices.com/en/guides/fcl-vs-lcl
+    - lang: en
+      key: pillar_container_prices
+      url: https://mb-fretservices.com/en/guides/container-prices-angola
 
     - lang: pt
       key: home
@@ -67,9 +103,6 @@ site:
     - lang: pt
       key: services
       url: https://mb-fretservices.com/pt/servicos
-    - lang: pt
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/pt/servicos/frete-maritimo
     - lang: pt
       key: destinations
       url: https://mb-fretservices.com/pt/destinos
@@ -79,128 +112,35 @@ site:
     - lang: pt
       key: legal
       url: https://mb-fretservices.com/pt/aviso-legal
-
-    - lang: es
-      key: home
-      url: https://mb-fretservices.com/es
-    - lang: es
-      key: services
-      url: https://mb-fretservices.com/es/services
-    - lang: es
+    - lang: pt
       key: services_freight_maritime
-      url: https://mb-fretservices.com/es/services/maritime-freight
-    - lang: es
-      key: destinations
-      url: https://mb-fretservices.com/es/destinations
-    - lang: es
-      key: contact
-      url: https://mb-fretservices.com/es/contact
-    - lang: es
-      key: legal
-      url: https://mb-fretservices.com/es/legal
-
-    - lang: ar
-      key: home
-      url: https://mb-fretservices.com/ar
-    - lang: ar
-      key: services
-      url: https://mb-fretservices.com/ar/services
-    - lang: ar
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/ar/services/maritime-freight
-    - lang: ar
-      key: destinations
-      url: https://mb-fretservices.com/ar/destinations
-    - lang: ar
-      key: contact
-      url: https://mb-fretservices.com/ar/contact
-    - lang: ar
-      key: legal
-      url: https://mb-fretservices.com/ar/legal
-
-    - lang: tr
-      key: home
-      url: https://mb-fretservices.com/tr
-    - lang: tr
-      key: services
-      url: https://mb-fretservices.com/tr/services
-    - lang: tr
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/tr/services/maritime-freight
-    - lang: tr
-      key: destinations
-      url: https://mb-fretservices.com/tr/destinations
-    - lang: tr
-      key: contact
-      url: https://mb-fretservices.com/tr/contact
-    - lang: tr
-      key: legal
-      url: https://mb-fretservices.com/tr/legal
-
-    - lang: de
-      key: home
-      url: https://mb-fretservices.com/de
-    - lang: de
-      key: services
-      url: https://mb-fretservices.com/de/services
-    - lang: de
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/de/services/maritime-freight
-    - lang: de
-      key: destinations
-      url: https://mb-fretservices.com/de/destinations
-    - lang: de
-      key: contact
-      url: https://mb-fretservices.com/de/contact
-    - lang: de
-      key: legal
-      url: https://mb-fretservices.com/de/legal
-
-    - lang: it
-      key: home
-      url: https://mb-fretservices.com/it
-    - lang: it
-      key: services
-      url: https://mb-fretservices.com/it/services
-    - lang: it
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/it/services/maritime-freight
-    - lang: it
-      key: destinations
-      url: https://mb-fretservices.com/it/destinations
-    - lang: it
-      key: contact
-      url: https://mb-fretservices.com/it/contact
-    - lang: it
-      key: legal
-      url: https://mb-fretservices.com/it/legal
-
-    - lang: sw
-      key: home
-      url: https://mb-fretservices.com/sw
-    - lang: sw
-      key: services
-      url: https://mb-fretservices.com/sw/services
-    - lang: sw
-      key: services_freight_maritime
-      url: https://mb-fretservices.com/sw/services/maritime-freight
-    - lang: sw
-      key: destinations
-      url: https://mb-fretservices.com/sw/destinations
-    - lang: sw
-      key: contact
-      url: https://mb-fretservices.com/sw/contact
-    - lang: sw
-      key: legal
-      url: https://mb-fretservices.com/sw/legal
+      url: https://mb-fretservices.com/pt/servicos/frete-maritimo
+    - lang: pt
+      key: services_customs
+      url: https://mb-fretservices.com/pt/servicos/despacho-aduaneiro
+    - lang: pt
+      key: services_insurance
+      url: https://mb-fretservices.com/pt/servicos/seguro-carga
+    - lang: pt
+      key: services_freight_france_angola
+      url: https://mb-fretservices.com/pt/servicos/frete-maritimo/franca-angola
+    - lang: pt
+      key: pillar_incoterms
+      url: https://mb-fretservices.com/pt/documentacao/incoterms-2020
+    - lang: pt
+      key: pillar_fcl_lcl
+      url: https://mb-fretservices.com/pt/guias/fcl-vs-lcl
+    - lang: pt
+      key: pillar_container_prices
+      url: https://mb-fretservices.com/pt/guias/precos-conteiner-angola
 
   examples:
-    - query: "expédier un conteneur 20' vers Pointe-Noire"
-      suggest: "https://mb-fretservices.com/fr/services/fret-maritime"
-    - query: "prix fret aérien Paris vers Luanda"
-      suggest: "https://mb-fretservices.com/fr/services"
+    - query: "expédier un conteneur 20' depuis la région parisienne vers Luanda"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-angola"
+    - query: "prix fret maritime Le Havre vers Luanda"
+      suggest: "https://mb-fretservices.com/fr/services/fret-maritime/france-angola"
     - query: "dédouanement import machines en France"
-      suggest: "https://mb-fretservices.com/fr/services"
+      suggest: "https://mb-fretservices.com/fr/services/dedouanement"
 metadata:
   source_of_truth: sitemap.xml, pages content, structured data
-  updated_at: 2025-01-01
+  updated_at: 2025-01-03T00:00:00.000Z

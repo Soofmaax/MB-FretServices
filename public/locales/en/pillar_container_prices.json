@@ -1,11 +1,10 @@
 {
-  "title": "Cost of a 20' / 40' container to Congo and Angola | MB Fret Services",
-  "description": "Understand what drives the cost of a 20' or 40' container between France and Central Africa (Congo, Angola): container type, ports, FCL/LCL, seasonality, and included services. Typical configurations, practical advice and a method to build a realistic budget without unpleasant surprises.",
-  "hero_h1": "Cost of a 20' / 40' container to Congo and Angola",
-  "hero_intro": "There is no single “catalogue price” for a container: the budget depends on actual volume, container type, departure and arrival ports, season, and which services are included (pre/post-carriage, customs, insurance). This guide helps you understand the main price drivers so you can build a realistic budget for your shipments to Congo and Angola.",
+  "title": "Cost of a 20' / 40' container to Angola | MB Fret Services",
+  "description": "Understand what drives the cost of a 20' or 40' container between France and Angola for your business shipments and international moves: container type, ports, FCL/LCL, seasonality, and included services. Typical configurations, practical advice and a method to build a realistic budget without unpleasant surprises.",
+  "hero_h1": "Cost of a 20' / 40' container to Angola",
+  "hero_intro": "There is no single “catalogue price” for a container: the budget depends on actual volume, container type, departure and arrival ports, season, and which services are included (pre/post-carriage, customs, insurance). This guide helps you understand the main price drivers so you can build a realistic budget for your shipments to Angola.",
   "hero_links": {
     "maritime": "Sea freight",
-    "congo": "France ↔ Congo",
     "angola": "France ↔ Angola"
   },
   "sections": [
@@ -20,7 +19,7 @@
       "h2": "Key parameters that drive your container cost",
       "ul": [
         "Container type: 20' or 40', Dry, High Cube, Reefer, Open Top, Flat Rack… each setup has a different cost structure.",
-        "Departure and arrival ports: Le Havre, Fos, Antwerp, Rotterdam to Pointe-Noire or Luanda, with varying surcharges depending on trade lanes and carriers.",
+        "Departure and arrival ports: Le Havre, Fos, Antwerp, Rotterdam to Luanda, with varying surcharges depending on trade lanes and carriers.",
         "FCL vs LCL service: a full container reserved for you, or LCL groupage shared with other shippers.",
         "Seasonality and capacity: peak seasons, holidays, port congestion and strikes have a direct impact on rate levels.",
         "Cargo nature: standard, dangerous goods (IMO), reefer, bulky, sensitive or high-value cargo.",
@@ -30,19 +29,12 @@
     {
       "h2": "Typical configurations (without fixed price tags)",
       "p": [
-        "The examples below are not price lists, but common configurations we handle on the France → Congo/Angola trades. They provide typical budget scenarios to show how total delivered cost is built in practice, without publishing specific amounts."
+        "The examples below are not price lists, but common configurations we handle on the France → Angola trade. They provide typical budget scenarios to show how total delivered cost is built in practice, without publishing specific amounts."
       ],
       "ul": [
-        "Example 1 – small LCL volume (3–5 pallets of personal effects or B2B cargo): groupage from a French or Benelux port to Pointe-Noire or Luanda. You pay only for the volume you occupy in the shared container.",
+        "Example 1 – small LCL volume (3–5 pallets of personal effects or B2B cargo): groupage from a French or Benelux port to Luanda. You pay only for the volume you occupy in the shared container.",
         "Example 2 – full international move in a 20' FCL with personal effects + possibly one vehicle: a sealed container managed end-to-end, often including pickup, stuffing, freight, export customs and insurance based on declared value.",
         "Example 3 – 40' FCL for large B2B flows: pallets, spare parts, consumables, sometimes a machine or vehicle, with a regular transport pattern and focus on rate stability over time."
-      ]
-    },
-    {
-      "h2": "Specifics of France → Congo (Pointe-Noire)",
-      "p": [
-        "On the France → Congo trade, the choice of departure port (Le Havre, Fos, Antwerp, etc.) and pre/post-carriage combination has a major impact on total budget. Rotations to Pointe-Noire are regular, but rate levels depend on carriers, alliances and peak periods.",
-        "For full moves or high-value projects, planning is essential: define your departure window, group your volumes, choose the right container type, and secure documentation (BL, customs, insurance) early to avoid storage or demurrage costs."
       ]
     },
     {
@@ -86,37 +78,37 @@
       "h2": "Related guides & pages",
       "p": [
         "Related guides: FCL vs LCL — how to decide?, Incoterms 2020.",
-        "Service pages: Sea freight to Africa, France ↔ Congo, France ↔ Angola, Customs clearance, Cargo insurance."
+        "Service pages: Sea freight France ↔ Angola, Customs clearance, Cargo insurance."
       ]
     }
   ],
   "faq": [
     {
-      "q": "How much does a 20' or 40' container to Congo or Angola cost?",
-      "a": "There is no single fixed rate because the cost depends on the container type (20'/40'), ports, season, cargo nature and the services included (pre/post-carriage, customs, insurance). In practice, a 20' or 40' FCL represents a budget of several thousand euros: we always break down our quotes by cost element so you clearly understand your total delivered cost."
+      "q": "I’m a company: how is the price of a 20' or 40' container for my B2B flows France–Angola calculated?",
+      "a": "For B2B shipments, the cost of a container depends on container type (20'/40', dry, high cube, reefer), departure/arrival ports, seasonality, cargo nature and which services are included (pre/post-carriage, handling, customs, insurance). Your budget quickly runs into several thousand euros. Rather than giving a single price, we break down each cost element (freight, surcharges, THC, pre/post, customs, insurance) so you can clearly understand and control your total delivered cost."
     },
     {
-      "q": "Can you give an idea of price without committing to a fixed rate?",
-      "a": "We can share typical scenarios (for example: small LCL shipment of 3–5 pallets, full 20' FCL move, 40' FCL B2B flows) and explain which cost elements are involved, but we deliberately do not publish catalogue prices. Rate levels move too quickly (seasonality, carrier capacity, surcharges, ports) for a generic figure to stay reliable. The most useful method is to share your concrete project so we can build a detailed, realistic budget line by line."
+      "q": "I’m planning an international move to Angola: what budget should I expect for a 20' or 40' container?",
+      "a": "There is no one-size-fits-all rate, because the price depends on your actual volume (personal effects, furniture, boxes), whether a vehicle is included and which services you need (pickup, packing, loading, customs, insurance). A full move in a 20' or 40' FCL typically represents a budget of several thousand euros. The most efficient approach is to share your project (estimated volume, departure city, destination, required services) so we can build a realistic, itemised budget with you."
     },
     {
       "q": "Why can two container quotes look very different?",
-      "a": "Because they may not cover the same scope: some are purely port-to-port, while others include pickup, customs formalities, insurance and sometimes delivery at destination. We systematically clarify what is included and what remains at your charge to avoid misunderstandings."
+      "a": "Because they may not cover the same scope: some are purely port-to-port, while others include pickup, customs formalities, insurance and sometimes delivery at destination. We systematically clarify what is included and what remains at your charge so you can compare offers on a like‑for‑like basis and avoid misunderstandings."
     },
     {
       "q": "Is LCL always cheaper than a 20' FCL?",
-      "a": "For small volumes (a few cubic metres), LCL groupage is generally more cost-effective. But as soon as your volume increases or you combine moves, vehicles and cargo, a 20' FCL can become more attractive in cost per m³ and in securing the overall project."
+      "a": "For small volumes (a few cubic metres), LCL groupage is generally more cost-effective. But as soon as your volume increases or you combine moves, vehicles and cargo in a single project, a 20' FCL can become more attractive in cost per m³ and in securing your supply chain. We always compare LCL/FCL scenarios before making a recommendation."
     },
     {
       "q": "Can we combine a move and a vehicle in the same container?",
-      "a": "Yes, subject to feasibility and the regulatory constraints of the destination country. This type of project has a direct impact on the budget (space, weight, insurance, customs), which is why a tailor-made quote is far more relevant than a generic price."
+      "a": "Yes, subject to feasibility and the regulatory constraints of the destination country. This type of project has a direct impact on the budget (space, weight, insurance, customs), which is why a tailor-made quote is far more relevant than a generic price. We work with you to build the best setup to combine personal effects and vehicle in a single container when appropriate."
     },
     {
       "q": "How can we avoid unpleasant price surprises (THC, demurrage, etc.)?",
-      "a": "By requesting a quote broken down by cost element and clarifying the quote validity, storage conditions, free time at port and each party’s responsibilities. As your freight forwarder, our role is precisely to help you anticipate those potential extra costs."
+      "a": "By requesting a quote broken down by cost element and clarifying quote validity, storage conditions, free time at port and each party’s responsibilities. As your freight forwarder, our role is to help you anticipate these potential extra costs and clearly frame the scope of services from the outset."
     }
   ],
-  "cta_title": "Ready to build your container budget to Congo or Angola?",
+  "cta_title": "Ready to build your container budget to Angola?",
   "cta_desc": "Tell us about your project (approximate volume, cargo types, departure port or city, destination, required services). We provide a detailed, readable quote for your 20' or 40' containers, in LCL or FCL.",
   "cta_label": "Request a pricing study"
 }

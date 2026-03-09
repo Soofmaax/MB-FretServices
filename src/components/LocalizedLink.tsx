@@ -11,7 +11,7 @@ type Props = {
   'aria-current'?: 'page' | undefined;
 };
 
-const SUP_LANGS: Lang[] = ['fr', 'en', 'pt', 'ar', 'es', 'tr', 'sw', 'de', 'it'];
+const SUP_LANGS: Lang[] = ['fr', 'en', 'pt'];
 
 const LocalizedLink: FC<Props> = ({ to, className, children, onClick, state, ...rest }) => {
   const { lng } = useParams();

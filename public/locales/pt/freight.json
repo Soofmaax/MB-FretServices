@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Transporte Marítimo para África - Contentores FCL LCL | MB Fret Services",
-    "description": "Transporte marítimo profissional para África: Congo, Angola, Costa do Marfim. Contentores 20' e 40', FCL e LCL. Orçamento gratuito em 24h. 15 anos de experiência."
+    "title": "Transporte marítimo França–Angola – Contentores FCL/LCL | MB Fret Services",
+    "description": "Transporte marítimo profissional em contentores 20' e 40' (FCL/LCL) a partir de portos franceses e europeus para Angola. Mudanças internacionais, envio de veículos e cargas B2B, com desalfandegamento e seguro de carga integrados e orçamento gratuito em 24 horas."
   },
   "hero": {
-    "title": "Transporte Marítimo para África",
-    "subtitle": "Soluções de contentores FCL e LCL",
-    "intro": "Transporte marítimo profissional para os principais portos africanos. Contentores 20' e 40', groupage LCL, veículos e mercadorias especiais. Rotações regulares a partir de portos franceses e europeus.",
+    "title": "Transporte marítimo França–Angola",
+    "subtitle": "Contentores FCL/LCL entre Paris / Normandia e Luanda",
+    "intro": "Transporte marítimo profissional em contentores 20' e 40' (FCL/LCL) entre a França (Paris / Normandia via Le Havre) e Angola (Luanda). Mudanças internacionais, envio de veículos e cargas B2B com rotações regulares e acompanhamento dedicado.",
     "cta_quote": "Orçamento Marítimo Gratuito",
     "cta_whatsapp": "WhatsApp Direto"
   },
@@ -28,73 +28,18 @@
       }
     ]
   },
-  "air": {
-    "seo": {
-      "title": "Transporte aéreo — Rápido e seguro | MB Fret Services",
-      "description": "Soluções de transporte aéreo B2B: expresso, seguro, rastreável. Europa ↔ África/Ásia. Porta-a-porta, seguro de carga, conformidade IATA."
-    },
-    "breadcrumb_service_name": "Transporte aéreo",
-    "service_name": "Transporte aéreo B2B – Expresso e seguro",
-    "service_type": "Transporte aéreo",
-    "faq": [
-      {
-        "q": "Que mercadorias são adequadas para transporte aéreo?",
-        "a": "Mercadorias de alto valor, perecíveis ou urgentes. O transporte aéreo reduz o tempo de trânsito e a exposição ao risco."
-      },
-      {
-        "q": "Quais os prazos típicos Europa ↔ África/Ásia?",
-        "a": "Consoante os hubs e a época: 1–5 dias porta-a-aeroporto, 3–8 dias porta-a-porta. Disponibilizamos opções expresso mediante pedido."
-      },
-      {
-        "q": "Oferecem seguro de carga para o aéreo?",
-        "a": "Sim. Uma cobertura ad valorem é recomendada; aconselhamos em função do valor, natureza e criticidade do envio."
-      }
-    ],
-    "hero": {
-      "title": "Transporte aéreo",
-      "subtitle": "Prioridade, fiabilidade, segurança.",
-      "intro": "Uma solução rápida e segura para expedições urgentes, sensíveis ou de alto valor. Gerimos toda a cadeia de ponta a ponta com rastreamento em tempo real.",
-      "cta_quote": "Pedir orçamento",
-      "cta_whatsapp": "WhatsApp"
-    },
-    "features": [
-      {
-        "title": "Prazos expressos",
-        "text": "Tratamento prioritário, voos regulares, opções expresso para as suas urgências."
-      },
-      {
-        "title": "Segurança reforçada",
-        "text": "Rastreabilidade, controlo documental e seguro adaptado ao valor."
-      }
-    ],
-    "services": {
-      "title": "Serviços",
-      "intro": "Operamos nos principais hubs (CDG, AMS, FRA, IST…) com opções expresso, consolidação e seguro ad valorem.",
-      "list": [
-        "Porta-a-aeroporto e porta-a-porta",
-        "Controlo documental e conformidade IATA",
-        "Embalagem aérea e segurança de carga",
-        "Rastreamento 24/7 e notificações"
-      ],
-      "cta": "Obter orçamento"
-    },
-    "images": {
-      "hero_alt": "Aeronave de carga aérea",
-      "services_alt": "Carregamento aéreo"
-    }
-  },
   "why": {
     "title": "Porquê escolher o nosso transporte marítimo?",
     "subtitle": "Perícia reconhecida no transporte marítimo para África com soluções adaptadas a todas as suas necessidades."
   },
   "advantages": [
-    { "title": "Perícia Marítima", "description": "Mais de 15 anos de experiência no transporte marítimo para África" },
+    { "title": "Perícia Marítima", "description": "Perícia dedicada no transporte marítimo França–Angola" },
     { "title": "Prazos Controlados", "description": "Rotações regulares e tempos de trânsito otimizados" },
     { "title": "Segurança Garantida", "description": "Seguro de carga e rastreamento em tempo real das suas mercadorias" }
   ],
   "segments": {
     "title": "Mudança, veículos ou mercadorias?",
-    "subtitle": "Uma equipa dedicada aos seus projetos pessoais e profissionais para a África Central (Congo, Angola).",
+    "subtitle": "Uma equipa dedicada aos seus projetos pessoais e profissionais entre a França e Angola.",
     "items": [
       {
         "title": "Mudança internacional",
@@ -126,8 +71,8 @@
     "cta": "Pedir Orçamento Personalizado"
   },
   "lcl": {
-    "title": "Fret LCL para África",
-    "subtitle": "Serviço de consolidação marítima a partir da França e da Europa para o Congo e Angola.",
+    "title": "Fret LCL para Angola",
+    "subtitle": "Serviço de consolidação marítima a partir da França e da Europa para Angola.",
     "blocks": [
       {
         "title": "Otimize os custos sem encher um contentor completo",
@@ -140,9 +85,9 @@
       {
         "title": "Manter flexibilidade e saídas regulares",
         "bullets": [
-          "Saídas LCL regulares a partir de portos franceses e do Benelux para Pointe-Noire e Luanda.",
+          "Saídas LCL regulares a partir de portos franceses e do Benelux para Luanda.",
           "Possibilidade de alternar entre LCL pontual e FCL assim que os volumes aumentam.",
-          "Reservas antecipadas nos principais corredores França–Congo e França–Angola."
+          "Reservas antecipadas no corredor França–Angola."
         ]
       },
       {
@@ -156,36 +101,36 @@
       {
         "title": "Integrar desalfandegamento e seguro nos envios LCL",
         "bullets": [
-          "Desalfandegamento de importação/exportação no Congo e em Angola, com aconselhamento documental dedicado.",
+          "Desalfandegamento de importação/exportação em Angola, com aconselhamento documental dedicado.",
           "Possibilidade de segurar envios LCL em base ad valorem desde o primeiro metro cúbico.",
           "Apoio na embalagem para exportação a fim de reduzir riscos no groupage."
         ]
       }
     ],
-    "cta_title": "Um projeto LCL para África (Congo, Angola)?",
+    "cta_title": "Um projeto LCL para Angola?",
     "cta_text": "Indique-nos o volume aproximado, portos de origem, destino e frequência de envio. Construímos uma solução LCL à medida para mudanças internacionais, envios B2B, veículos ou peças sobressalentes.",
     "cta_label": "Pedir Orçamento LCL"
   },
   "customs": {
     "seo": {
-      "title": "Desalfandegamento & conformidade — Importação/Exportação | MB Fret Services",
-      "description": "Formalidades aduaneiras de importação/exportação, representação aduaneira, cálculo de direitos & impostos. Assistência documental, Incoterms e conformidade regulamentar."
+      "title": "Desalfandegamento & conformidade — Fluxos de contentores França ↔ Angola | MB Fret Services",
+      "description": "Desalfandegamento de importação/exportação para contentores FCL/LCL no corredor França ↔ Angola. Representação aduaneira, cálculo de direitos & impostos, assistência documental e aconselhamento em Incoterms."
     },
     "breadcrumb_service_name": "Desalfandegamento",
     "service_name": "Desalfandegamento & conformidade importação/exportação",
     "service_type": "Desalfandegamento",
     "faq": [
       {
-        "q": "Que documentos são indispensáveis?",
-        "a": "Fatura comercial, packing list, documentos de origem, certificados eventuais e autorizações específicas segundo a mercadoria."
+        "q": "Sou uma empresa: podem tratar do desalfandegamento dos meus fluxos de contentores França–Angola?",
+        "a": "Sim. Asseguramos a representação aduaneira para contentores FCL/LCL, preparamos e submetemos as declarações de importação/exportação, verificamos a conformidade documental e ajudamos na classificação pautal e no cálculo de direitos & impostos. Coordenamos também com os nossos correspondentes em Luanda para antecipar as exigências locais."
       },
       {
-        "q": "Prestam representação aduaneira?",
-        "a": "Sim, asseguramos a representação em alfândega, o controlo documental e a conformidade regulamentar para as suas importações e exportações."
+        "q": "Estou a mudar‑me para Angola: ajudam‑me nas formalidades aduaneiras dos meus bens pessoais e do meu veículo?",
+        "a": "Sim. Indicamos antecipadamente os documentos necessários (inventário detalhado, comprovativos de residência, documentos do veículo, etc.), verificamos a coerência do seu dossier e trabalhamos com os nossos parceiros para facilitar as formalidades de exportação e importação. O objetivo é limitar bloqueios e custos de parqueamento ligados à alfândega."
       },
       {
-        "q": "Podem aconselhar sobre Incoterms?",
-        "a": "Sim, aconselhamos sobre o Incoterm ideal (FOB/CIF/DAP…) segundo o fluxo, a tolerância ao risco e a organização interna."
+        "q": "Que documentos devo preparar para evitar atrasos?",
+        "a": "No mínimo: fatura ou inventário valorado, lista de embalagem, documentos de origem, títulos de propriedade dos veículos, documento de identificação e, se for o caso, certificados ou autorizações específicas. Fornecemos uma lista adaptada ao seu caso (B2B ou mudança internacional) e verificamos o dossier antes da submissão à alfândega."
       }
     ],
     "hero": {
@@ -208,8 +153,8 @@
     }
   },
   "destinations": {
-    "title": "Destinos de Transporte Marítimo - África",
-    "subtitle": "Rotações regulares para os principais portos africanos com prazos otimizados.",
+    "title": "Destino de transporte marítimo – Angola",
+    "subtitle": "Rotações regulares (saídas semanais ou bissemanal) para Luanda no corredor França–Angola, com prazos otimizados.",
     "label_duration": "Tempo de trânsito",
     "label_frequency": "Frequência",
     "label_departure": "Partida de",
@@ -217,19 +162,22 @@
     "cta_prefix": "Orçamento para "
   },
   "destinations_list": [
-    { "country": "Congo", "port": "Pointe-Noire", "duration": "18–22 dias", "frequency": "Semanal", "departure": "Le Havre, Antuérpia" },
-    { "country": "Angola", "port": "Luanda", "duration": "20–25 dias", "frequency": "Bissemanal", "departure": "Antuérpia, Roterdão" },
-    { "country": "Costa do Marfim", "port": "Abidjan", "duration": "12–15 dias", "frequency": "Diária", "departure": "Le Havre, Marselha" },
-    { "country": "Camarões", "port": "Douala", "duration": "15–18 dias", "frequency": "Bissemanal", "departure": "Antuérpia, Hamburgo" }
+    {
+      "country": "Angola",
+      "port": "Luanda",
+      "duration": "20–25 dias",
+      "frequency": "Bissemanal",
+      "departure": "Le Havre, Marseille-Fos, Antuérpia, Roterdão"
+    }
   ],
   "faq": {
-    "title": "Perguntas Frequentes - Transporte Marítimo",
-    "q1": "Qual é a diferença entre FCL e LCL?",
-    "a1": "FCL (Full Container Load): aluga um contentor completo (20' ou 40') exclusivamente para as suas mercadorias. LCL (Less than Container Load): as suas mercadorias partilham um contentor com outros expedidores, ideal para pequenos volumes.",
-    "q2": "Quais os documentos necessários para o transporte marítimo?",
-    "a2": "Fatura comercial, lista de embalagem, conhecimento de embarque (Bill of Lading), certificado de origem se necessário, e documentos específicos segundo a natureza das mercadorias (certificados sanitários, etc.).",
+    "title": "Perguntas frequentes – B2B & mudanças internacionais",
+    "q1": "Sou uma empresa: como funciona o transporte marítimo França–Angola para as minhas paletes e cargas B2B?",
+    "a1": "Para empresas, construímos o seu orçamento França–Angola a partir de alguns elementos chave: tipo de mercadoria, volume em m³ ou número de paletes, peso, portos ou cidades de partida/destino e prazos desejados. Depois comparamos FCL (contentor completo 20'/40') e LCL (groupage) para otimizar custos e prazos, integramos desalfandegamento e seguro de carga e organizamos recolha, pré‑transporte, travessia marítima e, se necessário, entrega final.",
+    "q2": "Estou a preparar uma mudança internacional para Angola: como funciona o envio dos meus bens pessoais e do meu veículo?",
+    "a2": "Para uma mudança, começamos por estimar o seu volume em m³ e a natureza dos bens (caixas, mobiliário, eletrodomésticos, veículo, moto, etc.). Em função desse volume, recomendamos um groupage LCL ou um contentor dedicado 20'/40'. Acompanhamos a embalagem, o carregamento, as formalidades de exportação/importação, o seguro ad valorem e o seguimento até à chegada do contentor a Luanda. Terá um único interlocutor para coordenar todo o processo.",
     "q3": "Como posso seguir o meu contentor em trânsito?",
-    "a3": "Fornecemos um número de rastreamento e acesso à nossa plataforma web para acompanhamento em tempo real, desde o embarque no porto de partida até à chegada ao porto de destino."
+    "a3": "Fornecemos um número de rastreamento e acesso à nossa plataforma web para acompanhamento em tempo real, desde o embarque no porto de partida até à chegada ao porto de destino. É informado das etapas principais e avisado em caso de imprevistos no trânsito."
   },
   "final": {
     "title": "Pronto para enviar por via marítima?",
@@ -239,24 +187,24 @@
   },
   "insurance": {
     "seo": {
-      "title": "Seguro de carga — Cobertura ad valorem | MB Fret Services",
-      "description": "Seguro de transporte para frete marítimo/aéreo: cobertura ad valorem, gestão de sinistros, aconselhamento sobre embalagem export. Porta-a-porta."
+      "title": "Seguro de carga — Contentores FCL/LCL para Angola | MB Fret Services",
+      "description": "Seguro de transporte ad valorem para contentores FCL/LCL (mudanças internacionais, cargas B2B, veículos, motos) no corredor França ↔ Angola. Gestão de sinistros, aconselhamento sobre embalagem para exportação e integração no orçamento de frete para uma visão clara do custo total entregue."
     },
     "breadcrumb_service_name": "Seguro de carga",
     "service_name": "Seguro de carga – cobertura ad valorem",
     "service_type": "Seguro de transporte",
     "faq": [
       {
-        "q": "Porque assegurar o frete marítimo/aéreo?",
-        "a": "Para cobrir riscos de avaria, perda ou roubo. Uma apólice ad valorem protege a sua tesouraria e compromissos B2B."
+        "q": "Sou uma empresa: que tipo de seguro recomendam para os meus contentores França–Angola?",
+        "a": "Para fluxos B2B, recomendamos em geral uma cobertura ad valorem baseada no valor da mercadoria + frete, com cláusulas do tipo Institute Cargo Clauses (A) ou equivalente. Ajustamos a apólice segundo a natureza dos bens (máquinas, peças sobressalentes, produtos sensíveis) e o nível de risco, podendo incluir pré/pós‑acheminement e operações de manuseamento."
       },
       {
-        "q": "Que cláusulas recomendam?",
-        "a": "Segundo a mercadoria e a rota: Institute Cargo Clauses (A) para uma cobertura ampla, ou convenções específicas (ADR, perecíveis, etc.)."
+        "q": "Estou a mudar‑me ou a enviar um veículo para Angola: devo segurar o meu contentor?",
+        "a": "Sim, é altamente recomendável. Uma mudança internacional ou o envio de um veículo representa um investimento importante, e a responsabilidade standard dos transportadores é muitas vezes inferior ao valor real em caso de dano ou perda. Um seguro ad valorem dedicado protege o valor real dos seus efeitos pessoais, carro ou moto durante toda a rota França–Angola."
       },
       {
-        "q": "Garantem cobertura porta-a-porta?",
-        "a": "Sim, calibramos a apólice desde a recolha até à entrega, incluindo pré/pós-acheminement."
+        "q": "Como funciona na prática a gestão de um sinistro?",
+        "a": "Em caso de dano, orientamo‑lo sobre os passos essenciais: reservas na receção, fotos, conservação das embalagens, recolha de documentos (BL, fatura, inventário, etc.). Centralizamos o dossier, articulamos com a seguradora e, se necessário, com o perito nomeado, para defender os seus interesses até à liquidação do sinistro."
       }
     ],
     "hero": {

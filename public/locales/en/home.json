@@ -1,47 +1,59 @@
 {
   "seo": {
-    "title": "MB Fret Services – Sea Freight France–Congo & France–Angola | FCL & LCL Containers",
-    "description": "French B2B freight forwarder with 15+ years of experience, specialised in the France–Congo and France–Angola corridors. Sea freight in 20' and 40' containers (FCL/LCL), international moves, vehicle and motorbike shipping, maritime groupage, customs clearance and cargo insurance for your import‑export projects."
+    "title": "Sea freight France\u2013Angola \u2013 FCL & LCL containers | MB Fret Services",
+    "description": "French freight forwarder based between Paris and Normandy, specialised in the France\u2013Angola corridor. Sea freight in 20' and 40' containers (FCL/LCL) between France (Paris / Normandy via Le Havre) and Luanda, for international moves, vehicles and B2B cargo, with customs clearance and cargo insurance for a clear view of total delivered cost."
   },
   "valueProps": {
     "title": "Why choose MB Fret Services?",
-    "subtitle": "France‑based Europe–Africa B2B freight forwarder with an operational focus on Central Africa (Congo, Angola). We combine sea freight, customs clearance and cargo insurance to build clear, sustainable, tailor‑made solutions for your flows, from quote to delivery.",
+    "subtitle": "France‑based freight forwarder specialised in the France–Angola corridor. We help families, the diaspora and small businesses ship international moves, personal effects, vehicles and cargo between Paris / Normandy and Luanda, combining sea freight, customs clearance and cargo insurance from quote to delivery.",
     "items": [
       {
         "title": "Sea Freight",
-        "description": "Sea freight from France and Europe to Central Africa (Congo, Angola) with FCL containers and LCL groupage for international moves, vehicles and B2B cargo, with real‑time tracking.",
+        "description": "Sea freight from France (Paris / Normandy via Le Havre) to Angola (Luanda) with FCL containers and LCL groupage for international moves, vehicles and B2B cargo, with real‑time tracking.",
         "features": ["20' and 40' containers", "FCL and LCL", "Port-to-port or door-to-door"]
       },
       {
         "title": "Customs clearance",
-        "description": "Import/export customs clearance between France/Europe and Africa for your FCL/LCL containers, with document control, duties & taxes calculation and Incoterms guidance.",
+        "description": "Import/export customs clearance between France and Angola for your FCL/LCL containers, with document control, duties & taxes calculation and Incoterms guidance.",
         "features": ["Customs declarations", "Regulatory compliance", "Administrative support"]
       },
       {
         "title": "Cargo insurance",
-        "description": "Ad valorem insurance for your containers (international moves, B2B cargo, vehicles, motorbikes) to Congo and Angola, integrated into your quotes for a clear view of total delivered cost.",
+        "description": "Ad valorem insurance for your containers (international moves, B2B cargo, vehicles, motorbikes) to Angola, integrated into your quotes for a clear view of total delivered cost.",
         "features": ["Ad valorem coverage", "Claims handling", "Export packaging advice"]
       }
     ]
   },
-  "destinations_title": "Our Main Destinations",
-  "destinations_subtitle": "We primarily serve Central Africa (Congo, Angola) from France and Europe, with solutions tailored to international moves, vehicles and B2B cargo.",
-  "destinations_more": "See all destinations",
-  "destinations_need_specific": "Need a specific destination? We assess all requests.",
+  "destinations_title": "Our Priority Destination",
+  "destinations_subtitle": "We focus our resources on the France–Angola (Luanda) corridor from France (Paris / Normandy via Le Havre), with solutions tailored to international moves, vehicles and B2B cargo.",
+  "destinations_more": "See destination details",
+  "destinations_need_specific": "A specific project to Angola? We assess every request in detail.",
   "showcase": [
-    {
-      "country": "Congo",
-      "city": "Pointe-Noire",
-      "image": "https://images.pexels.com/photos/5668842/pexels-photo-5668842.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Sea freight from Le Havre", "Air freight from Paris CDG"]
-    },
     {
       "country": "Angola",
       "city": "Luanda",
-      "image": "https://images.pexels.com/photos/9638839/pexels-photo-9638839.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "routes": ["Sea freight from Antwerp", "Air freight from Marseille"]
+      "image": "/images/hero-angola.jpg",
+      "routes": ["Sea freight from Le Havre (via Paris / Normandy)", "Sea freight from Antwerp / Rotterdam depending on sailings"]
     }
   ],
+  "commitments": {
+    "title": "Our commitments from day one",
+    "subtitle": "A young company, with clear standards on responsiveness, focus and communication.",
+    "items": [
+      {
+        "label": "< 24 h",
+        "description": "Response to your quote or contact request within 24 business hours, with a first human conversation to clarify your project."
+      },
+      {
+        "label": "1 corridor",
+        "description": "A deliberate focus on the France–Angola (Luanda) route, to stay specialised rather than generic."
+      },
+      {
+        "label": "3 channels",
+        "description": "Reach us the way you prefer: WhatsApp, phone or email – no anonymous platform in the middle."
+      }
+    ]
+  },
   "final_cta_title": "Ready to ship your goods?",
   "final_cta_text": "Get a personalized quote in under 24 hours. Our experts analyse your needs to propose a reliable transport solution, with market‑aligned pricing and support at every step of your logistics project.",
   "whatsapp": "Contact us on WhatsApp"

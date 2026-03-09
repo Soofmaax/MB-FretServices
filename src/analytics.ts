@@ -29,6 +29,11 @@ export function initAnalytics(defaultAnalyticsGranted = false) {
   if (!id) return; // not configured
   if (!shouldTrack()) return;
 
+  // Avoid double-initialization if gtag is already defined
+  if (typeof window.gtag === 'function') {
+    return;
+  }
+
   // Initialize dataLayer/gtag early
   window.dataLayer = window.dataLayer || [];
   window.gtag = (...args: unknown[]) => {

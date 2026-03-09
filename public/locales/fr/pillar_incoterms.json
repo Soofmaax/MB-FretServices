@@ -1,12 +1,10 @@
 {
   "title": "Incoterms 2020 — Guide complet (FOB, CIF…) | MB Fret Services",
-  "description": "Comprendre les Incoterms 2020 pour le fret maritime B2B: responsabilités, coûts, risques, cas pratiques Chine/Turquie/Congo. Choix FOB vs CIF, impacts assurance et délais.",
+  "description": "Comprendre les Incoterms 2020 pour le fret maritime B2B: responsabilités, coûts, risques, cas pratiques sur le corridor France–Angola. Choix FOB vs CIF, impacts assurance et délais.",
   "hero_h1": "Incoterms 2020 — Guide complet B2B",
-  "hero_intro": "Maîtrisez la répartition des coûts et des risques en fret maritime. Des cas pratiques appliqués à vos routes clés (France–Chine, France–Turquie, France–Congo) pour des décisions d’achat éclairées.",
+  "hero_intro": "Maîtrisez la répartition des coûts et des risques en fret maritime B2B. Des cas pratiques appliqués à vos flux conteneurs France–Angola pour des décisions d’achat éclairées, que vous soyez importateur, industriel ou PME.",
   "hero_links": {
-    "china": "France ↔ Chine",
-    "turkey": "France ↔ Turquie",
-    "congo": "France ↔ Congo"
+    "angola": "France ↔ Angola"
   },
   "breadcrumb_label": "Incoterms 2020",
   "faq_title": "FAQ",
@@ -16,7 +14,7 @@
     "fcl_guide_label": "FCL vs LCL — comment décider ?"
   },
   "cta_title": "Besoin d’aide pour choisir vos Incoterms ?",
-  "cta_desc": "Nous vous aidons à aligner Incoterms, assurance et douane sur vos flux France ↔ Congo/Angola.",
+  "cta_desc": "Nous vous aidons à aligner Incoterms, assurance et douane sur vos flux France ↔ Angola.",
   "cta_label": "Parler à un expert Incoterms",
   "sections": [
     {
@@ -71,15 +69,9 @@
       "h2": "Cas pratiques et routes clés",
       "sub": [
         {
-          "h3": "France ↔ Chine",
+          "h3": "France ↔ Angola",
           "p": [
-            "Les délais de transit varient (Le Havre/Marseille-Fos ↔ Shanghai/Ningbo/Shenzhen). Sur des flux réguliers, FOB convient aux importateurs expérimentés capables de négocier leur fret et d’optimiser le CBM. CIF apporte une sécurité administrative lorsqu’on privilégie la rapidité d’exécution et la visibilité budgétaire."
-          ]
-        },
-        {
-          "h3": "France ↔ Turquie",
-          "p": [
-            "Axe court/moyen-courrier: la flexibilité (multimodal mer/route/air) est primordiale. CIF peut simplifier la coordination multi-acteurs. FOB reste pertinent si vous maîtrisez le flux et souhaitez arbitrer finement délais/coûts."
+            "Les délais de transit varient (Le Havre/Anvers ↔ Luanda). Sur des flux réguliers vers l’Angola, FOB convient aux importateurs expérimentés capables de négocier leur fret et d’optimiser le CBM. CIF apporte une sécurité administrative lorsqu’on privilégie la rapidité d’exécution et la visibilité budgétaire."
           ]
         }
       ]
@@ -122,13 +114,13 @@
       "h2": "Guides associés & pages routes",
       "p": [
         "Guides associés: FCL vs LCL — comment décider ?",
-        "Pages routes: France–Chine, France–Turquie, France–Congo."
+        "Page route: France–Angola."
       ]
     }
   ],
   "faq": [
     { "q": "FOB ou CIF : quelle différence en pratique ?", "a": "FOB: le vendeur supporte les coûts/risques jusqu’à l’embarquement. CIF: inclut coût, assurance et fret jusqu’au port d’arrivée. En B2B, CIF apporte de la prévisibilité sur le coût total, FOB offre plus de contrôle à l’importateur." },
-    { "q": "Quels Incoterms privilégier pour une importation depuis la Chine ?", "a": "FOB et CIF sont les plus utilisés. Le choix dépend du contrôle souhaité, de la capacité à gérer la logistique principale, et des besoins d’assurance." },
+    { "q": "Quels Incoterms privilégier pour une importation sur l’axe France–Angola ?", "a": "En pratique, la majorité des importations B2B sur l’axe France–Angola se fait en FOB ou en CIF. FOB convient aux importateurs aguerris qui souhaitent choisir leur armateur, négocier directement leurs tarifs et piloter le transit. CIF apporte davantage de confort aux entreprises qui privilégient la prévisibilité budgétaire et un interlocuteur unique côté vendeur. Dans tous les cas, nous comparons plusieurs scénarios (FOB, CFR, CIF, voire DAP) sur le coût total livré de vos flux conteneurs avant de vous recommander un schéma." },
     { "q": "Les Incoterms influencent-ils le dédouanement ?", "a": "Ils ne changent pas la réglementation, mais déterminent qui prend en charge les démarches et à quel moment." },
     { "q": "Les Incoterms impactent-ils la responsabilité en cas d’avarie ?", "a": "Oui. Ils déterminent le point de transfert des risques. La bonne police d’assurance et la preuve documentaire sont clés." },
     { "q": "Peut-on changer d’Incoterm en cours de négociation ?", "a": "Oui, s’il est consigné contractuellement et que les effets sont intégrés dans le prix, le planning et les assurances." },

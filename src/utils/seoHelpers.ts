@@ -10,20 +10,15 @@ export const DEFAULT_OG_IMAGE =
 const ENV_SUP_LANGS = (import.meta.env?.VITE_SUP_LANGS as string | undefined)
   ? (import.meta.env.VITE_SUP_LANGS as string).split(',').map((s) => s.trim()).filter(Boolean)
   : [];
+
+// Only three primary languages are exposed: French, English and Portuguese.
 export const SUP_LANGS: Lang[] =
-  (ENV_SUP_LANGS.length ? (ENV_SUP_LANGS as Lang[]) : (['fr', 'en', 'pt', 'ar', 'zh', 'es', 'tr', 'sw', 'de', 'it'] as Lang[]));
+  (ENV_SUP_LANGS.length ? (ENV_SUP_LANGS as Lang[]) : (['fr', 'en', 'pt'] as Lang[]));
 
 export const OG_LOCALE_MAP: Record<Lang, string> = {
   fr: 'fr_FR',
   en: 'en_GB',
   pt: 'pt_PT',
-  ar: 'ar_AR',
-  zh: 'zh_CN',
-  es: 'es_ES',
-  tr: 'tr_TR',
-  sw: 'sw_KE',
-  de: 'de_DE',
-  it: 'it_IT',
 };
 
 export function getCurrentLangFromPath(): Lang {
@@ -40,13 +35,6 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
     fr: 'fr-FR',
     en: 'en-GB',
     pt: 'pt-PT',
-    ar: 'ar',
-    zh: 'zh-CN',
-    es: 'es-ES',
-    tr: 'tr-TR',
-    sw: 'sw-KE',
-    de: 'de-DE',
-    it: 'it-IT',
   };
 
   const alternates = SUP_LANGS.map((lng) => {
@@ -66,20 +54,6 @@ export function buildAlternateLinks(): { href: string; hrefLang: string }[] {
       ['en-GB','en-US','en-NG','en-GH','en-KE','en-ZA','en-UG','en-RW','en-TZ'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
     } else if (lng === 'pt') {
       ['pt-PT','pt-AO','pt-MZ','pt-BR'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'es') {
-      ['es-ES','es-MX','es-CL','es-AR','es-CO','es-PE'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'ar') {
-      ['ar','ar-MA','ar-DZ','ar-TN','ar-EG','ar-SA','ar-AE'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'tr') {
-      ['tr-TR'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'sw') {
-      ['sw-KE','sw-TZ'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'de') {
-      ['de-DE','de-AT','de-CH'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'it') {
-      ['it-IT','it-CH'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
-    } else if (lng === 'zh') {
-      ['zh-CN','zh-SG'].forEach((code) => regional.push({ href: baseHref, hrefLang: code }));
     }
   }
 

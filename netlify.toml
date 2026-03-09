@@ -5,13 +5,13 @@
 [build.environment]
   VITE_SITE_URL = "https://mb-fretservices.com"
   NODE_VERSION = "20"
-  # Fast deployment defaults (can be widened later)
-  VITE_LANG_INDEX = "fr,en,pt,ar,zh"
-  VITE_SUP_LANGS = "fr,en,pt,ar,zh"
+  # Fast deployment defaults: only three active languages
+  VITE_LANG_INDEX = "fr,en,pt"
+  VITE_SUP_LANGS = "fr,en,pt"
   # Build-time script controls (limit heavy tasks)
-  SITEMAP_LANGS = "fr,en,pt,ar,zh"
+  SITEMAP_LANGS = "fr,en,pt"
   PRERENDER_LANGS = "fr,en"
-  AI_TXT_LANGS = "fr,en,pt,ar,zh"
+  AI_TXT_LANGS = "fr,en,pt"
   # Skip i18n translation during Netlify build; run via GitHub Action instead
   I18N_SKIP = "1"
   # Optional: skip Puppeteer prerender completely if needed
@@ -19,6 +19,32 @@
 
 # SEO 301 redirects (must appear before SPA fallback)
 # Legacy root-level paths
+# Portuguese audience (Angola, Portugal, Brazil, Lusophone Africa)
+[[redirects]]
+  from = "/"
+  to = "/pt"
+  status = 302
+  conditions = {Country = ["AO", "PT", "BR", "MZ", "CV", "ST", "GW"]}
+
+# English-speaking audience (main global markets)
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  conditions = {Country = ["US", "GB", "IE", "CA", "AU", "NZ", "NG", "ZA"]}
+
+# Default: French for all remaining countries (including Northrects]]
+  from = "/"
+  to = "/ar"
+  status = 302
+  conditions = {Country = ["MA", "DZ", "TN", "EG", "SA", "AE", "QA", "KW", "BH", "OM", "JO", "LB"]}
+
+# Default: French
+[[redirects]]
+  from = "/"
+  to = "/fr"
+  status = 302
+
 [[redirects]]
   from = "/fret-maritime"
   to = "/fr/services/fret-maritime"
@@ -60,6 +86,8 @@
   to = "/pt/servicos/frete-maritimo"
   status = 301
 
+
+
 # SPA fallback: route all other paths to index.html
 [[redirects]]
   from = "/*"
@@ -71,7 +99,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.pexels.com https://www.google-analytics.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.clarity.ms https://*.clarity.ms https://c.bing.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://images.pexels.com https://www.google-analytics.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://www.clarity.ms https://*.clarity.ms https://c.bing.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"

@@ -1,16 +1,16 @@
 {
   "hero": {
     "title": "Os Nossos Serviços de Transporte Internacional",
-    "subtitle": "Logística internacional ponta-a-ponta adaptada às suas necessidades. Do transporte marítimo económico ao transporte aéreo expresso, gerimos a sua carga de A a Z."
+    "subtitle": "Logística internacional ponta-a-ponta centrada no transporte marítimo em contentores no corredor França–Angola: FCL/LCL, desalfandegamento e seguro de carga para os seus envios."
   },
   "seo": {
-    "title": "Os nossos serviços - Transporte marítimo, aéreo e desalfandegamento | MB Fret Services",
-    "description": "Descubra os nossos serviços de transporte internacional: transporte marítimo para África, transporte aéreo expresso, desalfandegamento profissional e seguro de carga."
+    "title": "Os nossos serviços – Transporte marítimo, desalfandegamento & seguro de carga | MB Fret Services",
+    "description": "Descubra os nossos serviços de transporte internacional: transporte marítimo em contentores (FCL/LCL) para Angola, desalfandegamento profissional e seguro de carga para os seus fluxos B2B e pessoais."
   },
   "maritime": {
     "title": "Transporte Marítimo",
     "subtitle": "Soluções económicas para grandes volumes",
-    "description": "A nossa experiência em transporte marítimo permite-nos oferecer soluções ideais para envios volumosos para África e Ásia. Gerimos todo o tipo de mercadorias com rastreamento completo.",
+    "description": "A nossa experiência em transporte marítimo permite-nos oferecer soluções ideais para envios volumosos entre a França (Paris / Normandia via Le Havre) e Angola (Luanda). Gerimos todo o tipo de mercadorias com rastreamento completo.",
     "features": [
       "Contentores de 20' e 40' (FCL)",
       "Groupage (LCL) para pequenos volumes",
@@ -19,22 +19,8 @@
       "Serviço porto-a-porto ou porta-a-porta",
       "Rastreamento em tempo real via plataforma web"
     ],
-    "destinations": "Principais destinos: Congo, Angola, Costa do Marfim, Camarões",
+    "destinations": "Destino principal: Angola (Luanda)",
     "more_link": "Saiba mais sobre transporte marítimo"
-  },
-  "air": {
-    "title": "Transporte Aéreo",
-    "subtitle": "Rapidez e fiabilidade para as suas urgências",
-    "description": "O transporte aéreo é ideal para mercadorias de alto valor, perecíveis ou urgentes. A nossa rede de parceiros garante prazos apertados para todos os destinos.",
-    "features": [
-      "Expresso 24–48h para destinos principais",
-      "Transporte com temperatura controlada",
-      "Mercadorias frágeis e de alto valor",
-      "Documentos e amostras",
-      "Rastreamento GPS em tempo real",
-      "Seguro contra todos os riscos incluído"
-    ],
-    "destinations": "Servido: China, Turquia, Marrocos, Tunísia, países de África Central"
   },
   "customs": {
     "title": "Desalfandegamento",
@@ -77,9 +63,9 @@
     "title": "Rotas principais",
     "discover": "Descobrir",
     "cards": {
-      "france_congo": {
-        "title": "França ↔ Congo",
-        "teaser": "FCL/LCL, portos principais, prazos otimizados, rastreamento 24/7."
+      "france_angola": {
+        "title": "França ↔ Angola",
+        "teaser": "FCL/LCL, partidas regulares para Luanda, prazos controlados e rastreamento 24/7."
       }
     }
   },
@@ -88,11 +74,26 @@
     "read": "Ler o guia",
     "incoterms": {
       "title": "Incoterms 2020 — Guia completo",
-      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos China/Turquia."
+      "desc": "Compreender responsabilidades, custos e riscos (FOB, CIF, DAP...). Casos práticos em fluxos entre a França e Angola."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — Como decidir?",
       "desc": "Limiares de volume (≈13–15 m³), segurança, prazos e multimodalidade. Método e casos de uso."
     }
-  }
+  },
+  "faq_title": "FAQ — Empresas & mudanças internacionais",
+  "faq": [
+    {
+      "q": "Sou uma empresa: que serviços oferecem no corredor França–Angola?",
+      "a": "Apoiamos as empresas em toda a cadeia: transporte marítimo em contentores FCL/LCL, organização de recolhas e pré/pós‑transporte, desalfandegamento de importação/exportação, seguro de carga ad valorem e seguimento proactivo. Quer envie algumas paletes, um contentor completo ou fluxos recorrentes, desenhamos uma solução adaptada às suas restrições de custo, prazo e risco."
+    },
+    {
+      "q": "Estou a preparar uma mudança para Angola: por onde começar?",
+      "a": "Contacte‑nos com uma estimativa do seu volume (em m³ ou número de peças), da cidade de partida e do destino em Angola. Acompanhamos passo a passo: estimativa de volume, escolha FCL/LCL, organização da recolha, conselhos de embalagem, orçamento detalhado (frete, alfândega, seguro) e calendário indicativo. O objetivo é securizar a sua mudança de ponta a ponta com um único interlocutor."
+    },
+    {
+      "q": "Podem agrupar frete, desalfandegamento e seguro numa única proposta?",
+      "a": "Sim. Na maioria dos projetos (B2B ou mudanças), propomos uma oferta integrada que reúne transporte marítimo, desalfandegamento e seguro de carga, para lhe dar uma visão clara do custo total entregue e um único ponto de contacto para gerir todo o processo."
+    }
+  ]
 }

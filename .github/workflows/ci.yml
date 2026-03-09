@@ -1,4 +1,4 @@
-name: CI - Lint, Test, Build and Verify
+name: CI - Test and Audit
 
 on:
   push:
@@ -7,9 +7,14 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Avoid running multiple CI runs in parallel for the same branch/ref
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
-    name: Lint, Test, Typecheck, Build, and Verify
+    name: Lint, Test, Typecheck and Build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -60,7 +65,7 @@ jobs:
           if-no-files-found: error
 
   audit:
-    name: Quality Audit (links, a11y, Lighthouse)
+    name: Quality Audit (Lighthouse, a11y, links)
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name == 'pull_request'
@@ -115,6 +120,16 @@ jobs:
           BASE_URL: http://localhost:8080
           PR_AUDIT_STRICT: "0"
 
+      - name: Upload audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-audit
+          path: |
+            pa11y.csv
+            audit-report.md
+            audit-summary.json
+          if-no-files-found: ignore
+
       - name: Post audit report as PR comment
         uses: actions/github-script@v7
         with:
@@ -123,14 +138,20 @@ jobs:
             const path = require('path');
             const reportPath = path.join(process.cwd(), 'audit-report.md');
             const summaryPath = path.join(process.cwd(), 'audit-summary.json');
-            const body = fs.existsSync(reportPath) ? fs.readFileSync(reportPath, 'utf8') : 'Audit report not found.';
-            const summary = fs.existsSync(summaryPath) ? JSON.parse(fs.readFileSync(summaryPath, 'utf8')) : {};
+            const body = fs.existsSync(reportPath)
+              ? fs.readFileSync(reportPath, 'utf8')
+              : 'Audit report not found.';
+            const summary = fs.existsSync(summaryPath)
+              ? JSON.parse(fs.readFileSync(summaryPath, 'utf8'))
+              : {};
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body
+              body,
             });
             if (summary.fail) {
               core.setFailed(summary.reason || 'Quality Gate failed');
             }
+
+  

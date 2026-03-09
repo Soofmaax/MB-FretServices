@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import SEO from '../components/SEO';
 import LocalizedLink from '../components/LocalizedLink';
-import { Ship, Plane } from 'lucide-react';
+import { Ship, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const NotFound: FC = () => {
@@ -21,7 +21,7 @@ const NotFound: FC = () => {
             size={56}
             className="text-accent-500/20 absolute -left-6 top-10 animate-drift-slow"
           />
-          <Plane
+          <MapPin
             size={48}
             className="text-accent-500/20 absolute right-6 top-20 animate-float-slow"
           />

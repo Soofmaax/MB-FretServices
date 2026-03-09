@@ -1,17 +1,16 @@
 {
   "hero": {
     "title": "Our International Transport Services",
-    "subtitle": "End-to-end international logistics focused on sea freight to Central Africa (Congo, Angola): FCL/LCL containers, customs clearance and cargo insurance for your flows."
+    "subtitle": "End-to-end international logistics focused on sea freight on the France–Angola corridor: FCL/LCL containers, customs clearance and cargo insurance for your flows."
   },
   "seo": {
-    "title": "Sea Freight, Customs & Cargo Insurance Services | MB Fret Services",
-    "description": "Overview of our international transport services: sea freight (FCL/LCL) to Africa (Congo, Angola), professional customs clearance and cargo insurance for B2B flows."
+    "title": "Sea freight France–Angola, customs & cargo insurance | MB Fret Services",
+    "description": "Overview of our services: containerised sea freight (FCL/LCL) to Angola, professional customs clearance and cargo insurance for both B2B and personal flows."
   },
   "maritime": {
     "title": "Sea Freight",
     "subtitle": "Cost-effective solutions for large volumes",
-    "description": "Our sea freight expertise lets us offer optimal solutions for large shipments to Africa (Congo, Angola). We handle all types of cargo with full trackin_codeg.new"</,
-ng.",
+    "description": "Our sea freight expertise lets us offer optimal solutions for large shipments between France (Paris / Normandy via Le Havre) and Angola (Luanda). We handle all types of cargo with full tracking.",
     "features": [
       "20' and 40' containers (FCL)",
       "Groupage (LCL) for small volumes",
@@ -20,22 +19,8 @@ ng.",
       "Port-to-port or door-to-door service",
       "Real-time tracking via web platform"
     ],
-    "destinations": "Key destinations: Congo, Angola",
+    "destinations": "Key destination: Angola (Luanda)",
     "more_link": "Learn more about sea freight"
-  },
-  "air": {
-    "title": "Air Freight",
-    "subtitle": "Speed and reliability for urgent shipments",
-    "description": "Air transport is ideal for high-value, perishable or urgent goods. Our partner network ensures tight lead times to all destinations.",
-    "features": [
-      "Express 24–48h to key destinations",
-      "Temperature-controlled transport",
-      "Fragile and high-value goods",
-      "Documents and samples",
-      "Real-time GPS tracking",
-      "All-risk insurance included"
-    ],
-    "destinations": "Served: Congo, Angola and Central African countries"
   },
   "customs": {
     "title": "Customs Clearance",
@@ -78,10 +63,6 @@ ng.",
     "title": "Key routes",
     "discover": "Discover",
     "cards": {
-      "france_congo": {
-        "title": "France ↔ Congo",
-        "teaser": "FCL/LCL, major ports, optimized transit times, 24/7 tracking."
-      },
       "france_angola": {
         "title": "France ↔ Angola",
         "teaser": "FCL/LCL, regular departures to Luanda, controlled lead times and 24/7 tracking."
@@ -93,11 +74,26 @@ ng.",
     "read": "Read the guide",
     "incoterms": {
       "title": "Incoterms 2020 — Complete guide",
-      "desc": "Understand responsibilities, costs and risks (FOB, CIF, DAP...). Practical cases on Africa flows (Congo, Angola)."
+      "desc": "Understand responsibilities, costs and risks (FOB, CIF, DAP...). Practical cases on Africa flows (Angola)."
     },
     "fcl_lcl": {
       "title": "FCL vs LCL — How to decide?",
       "desc": "Volume thresholds (≈13–15 m³), safety, lead times and multimodal transport. Method and use cases."
     }
-  }
+  },
+  "faq_title": "FAQ — Companies & international moves",
+  "faq": [
+    {
+      "q": "I’m a company: which services do you provide on the France–Angola corridor?",
+      "a": "We support companies across the whole chain: containerised sea freight FCL/LCL, pickup and pre/post‑carriage organisation, import/export customs clearance, ad valorem cargo insurance and proactive tracking. Whether you ship a few pallets, a full container or recurring flows, we design a solution adapted to your cost, lead-time and risk constraints."
+    },
+    {
+      "q": "I’m planning an international move to Angola: where should I start?",
+      "a": "Reach out with an estimate of your volume (in m³ or number of items), your departure city and your destination in Angola. We guide you step by step: volume assessment, FCL/LCL choice, pickup organisation, packing advice, detailed quote (freight, customs, insurance) and indicative schedule. The goal is to secure your move end‑to‑end with a single point of contact."
+    },
+    {
+      "q": "Can you combine freight, customs and insurance in a single offer?",
+      "a": "Yes. For most projects (B2B or international moves), we offer an integrated package that brings together sea freight, customs clearance and cargo insurance, so you get a clear view of total delivered cost and a single point of contact to manage the whole process."
+    }
+  ]
 }
