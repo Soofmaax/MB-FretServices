@@ -104,6 +104,19 @@ Détails : voir `documentation/ARCHITECTURE.md`.
   - `VITE_SITE_URL`
   - `VITE_GA_ID` (optionnel)
 
+### Vercel
+
+- Importez le repo dans Vercel (Framework : Vite).
+- Output : `dist`.
+- SPA fallback : géré via `vercel.json` (rewrites vers `/index.html`).
+
+Variables d’environnement recommandées (Vercel > Project Settings > Environment Variables) :
+
+- `VITE_SITE_URL` (ex: `https://<votre-projet>.vercel.app` ou votre domaine)
+- `VITE_GA_ID` (optionnel)
+
+Note : le pré-rendu Puppeteer (SSG) est désactivé par défaut sur Vercel via `PRERENDER_SKIP=1` (évite l’installation de Chromium pendant le build).
+
 ## À propos du développeur
 
 Ce projet a été développé par :
