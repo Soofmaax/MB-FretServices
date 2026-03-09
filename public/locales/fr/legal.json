@@ -5,6 +5,7 @@
   "seo_description": "Mentions légales de MB Fret Services : informations légales, responsabilités, propriété intellectuelle et conditions d'utilisation du site.",
   "privacy_seo_title": "Politique de confidentialité | MB Fret Services",
   "privacy_seo_description": "Politique de confidentialité et protection des données personnelles pour les utilisateurs du site MB Fret Services.",
+  "fictional_notice": "Ce projet est un site fictif développé à des fins de démonstration technique (portfolio).",
   "sections": {
     "info": {
       "heading": "Informations légales",
@@ -55,8 +56,8 @@
     "credits": {
       "heading": "Crédits",
       "content": "Conception & développement:",
-      "agency_block": "Le site a été conçu et développé par SMARTER LOGIC WEB, société par actions simplifiée à associé unique au capital de 500,00 € (SASU), immatriculée au RCS de Nanterre sous le numéro 994 493 757 R.C.S. Nanterre, dont le siège social est situé 32 Rue de Paris, 92100 Boulogne-Billancourt, France, domiciliée en commun chez HelloDom, 878 831 312 R.C.S. Paris.",
-      "contact_agency": "Pour tout problème ou demande, merci de nous contacter via notre site :"
+      "agency_block": "Ce projet a été conçu et développé par SmarterLogicWeb dans un objectif de démonstration technique (portfolio).",
+      "contact_agency": "Pour tout problème ou demande, contactez-moi via mon site :"
     },
     "last_update": "Dernière mise à jour : {{date}}"
   }

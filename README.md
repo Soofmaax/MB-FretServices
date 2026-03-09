@@ -1,192 +1,120 @@
-# MB Fret Services — Site vitrine (React + Vite + TS)
+# MB Fret Services — Site fictif de logistique
 
 ![Node](https://img.shields.io/badge/node-20%2B-3c873a) ![License](https://img.shields.io/badge/license-MIT-green) ![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-blue)
 
-Site multilingue optimisé pour le SEO international (Europe ↔ Afrique ↔ Asie), prêt pour GitHub Pages et Netlify. Stack moderne, CI stricte, accessibilité et sécurité soignées.
+Ce projet est un **site fictif** développé à des fins de **démonstration technique** (portfolio). Il ne représente pas une entreprise réelle.
 
-## Sommaire
-- Aperçu
-- Démo & Liens
-- Captures (Screenshots)
-- Stack & Architecture
-- Fonctionnalités clés
-- Qualité & CI
-- Démarrage & Scripts
-- Déploiement (GitHub Pages, Netlify)
-- Audit automatisé (PR & site)
-- Sécurité & Headers
-- Accessibilité (WCAG AA)
-- Performance (Core Web Vitals)
-- SEO technique
-- Variables d’environnement
-- Infos à renseigner (TODO)
-- Contribuer
-- Changelog
-- Développé par
+## Présentation
 
-## Aperçu
-Ce projet React + TypeScript (Vite) propose:
-- Pages multilingues (FR/EN/PT + autres)
-- Métadonnées par page (Helmet), JSON‑LD (Organization, WebSite, LocalBusiness)
-- Sitemap & robots générés automatiquement
-- SSG partiel (pré‑rendu FR/EN/PT) pour un HTML initial riche (SEO/unfurl/IA)
-- Design Tailwind épuré, animations discrètes, CTA principaux bien mis en avant
+Ce projet est un site web fictif représentant une entreprise de fret international.
 
-## Démo & Liens
-- Live: https://mb-fretservices.com/
-- robots.txt: https://mb-fretservices.com/robots.txt
-- sitemap.xml: https://mb-fretservices.com/sitemap.xml
-- ai.txt: https://mb-fretservices.com/ai.txt
+Il a été développé dans le but de démontrer des compétences en développement web moderne, SEO technique et architecture frontend.
 
-## Captures (Screenshots)
-Générez des captures et placez‑les dans `public/screenshots`:
-- Installer Puppeteer si nécessaire
-- `npm run screenshots` (BASE_URL=... pour pointer vers prod ou preview)
+Le projet est utilisé comme démonstration technique dans le cadre de mon activité de développement web.
 
-## Stack & Architecture
-- React 18, TypeScript 5, Vite 5, Tailwind CSS 3
-- Routing via React Router
-- Helmet pour SEO (title, description, canonical, OG/Twitter)
-- i18next pour i18n (9 langues)
-- SSG via Puppeteer postbuild (FR/EN/PT)
-- Détails: voir documentation/ARCHITECTURE.md
+## Objectifs du projet
 
-## Structure
-- `src/components/ui/` : composants génériques et réutilisables quel que soit le secteur (CTA, hero, images responsives, value props, etc.)
-- `src/components/industry/` : composants spécifiques au métier/logistique (simulateurs, formulaires de devis, pages routes détaillées) à adapter ou remplacer pour un autre secteur (yoga, coiffeur, kiné, etc.)
+- démontrer la création d'un site vitrine professionnel
+- mettre en place une architecture SEO internationale
+- construire une interface responsive moderne
+- implémenter une pipeline qualité (CI/CD)
 
-## Fonctionnalités clés
-- SEO International:
-  - Canonical/hreflang par page
-  - JSON‑LD (Organization, WebSite, LocalBusiness) avec `openingHours`
-  - Sitemap postbuild, robots.txt pointant vers le sitemap
-- Accessibilité:
-  - Skip link (`#main`), focus automatique, scroll‑to‑top à chaque navigation
-  - Icônes décoratives `aria-hidden="true"`
-- UX:
-  - Hero avec messages clairs, badges de réassurance
-  - Liens rapides vers Services/Destinations/Contact
-- SSG:
-  - Snapshots FR/EN/PT dans `dist/<route>/index.html`
+## Démo
 
-## Qualité & CI
-- ESLint (type‑aware), TypeScript strict, Vitest
-- CI GitHub Actions (lint, typecheck, test, build)
-- Audit PR automatique: `.github/workflows/pr-audit.yml`
-  - Liens brisés (404)
-  - En‑têtes HTTP (CSP, XFO, XCTO, Referrer‑Policy)
-  - Lighthouse (Perf/A11y/Best Practices/SEO)
-  - Accessibilité (pa11y)
-  - Quality Gate: Perf ≥ 90, pas de 404, headers critiques présents, pas d’erreurs a11y
+- Site (démo) : https://mb-fretservices.com/
+- robots.txt : https://mb-fretservices.com/robots.txt
+- sitemap.xml : https://mb-fretservices.com/sitemap.xml
+- ai.txt : https://mb-fretservices.com/ai.txt
 
-## Démarrage & Scripts
-Installer:
-- `npm ci`
+## Technologies utilisées
 
-Développement:
-- `npm run dev`
+- React
+- TypeScript
+- Vite
+- TailwindCSS
+- i18next
+- GitHub Actions
 
-Format / Lint / Typecheck / Tests:
-- `npm run lint`
-- `npm run typecheck`
-- `npm run test`
+## Fonctionnalités
 
-Build & Preview:
-- `npm run build` (minification JS/CSS, optimisation des assets par Vite)
-- `npm run preview`
+- site multilingue
+- SEO international (canonical + hreflang)
+- sitemap et robots générés automatiquement
+- JSON-LD (Organization, WebSite, WebPage, BreadcrumbList)
+- optimisation Core Web Vitals
+- accessibilité (WCAG)
+- CI/CD GitHub Actions (lint, typecheck, tests, build + audit)
 
-SSG & Génération:
-- Postbuild: sitemap.xml, robots.txt, ai.txt, SSG FR/EN/PT
+## Screenshots
 
-Audit manuel (site):
-- `BASE_URL="https://example-preview" npm run audit:site`
-- Produit `audit-report.md` (liens, robots/sitemap, metas homepage)
+Ajoutez des captures dans `public/screenshots/` (idéalement 1200×630 ou 1440×900).
 
-Screenshots:
-- `BASE_URL="https://example" npm run screenshots`
-- Images sous `public/screenshots/*.png`
+- Génération automatisée (Puppeteer) :
+  - `BASE_URL="https://mb-fretservices.com" npm run screenshots`
+
+Exemples attendus :
+
+- `public/screenshots/home.png`
+- `public/screenshots/services.png`
+- `public/screenshots/destinations.png`
+- `public/screenshots/contact.png`
+
+Puis référencez-les ici :
+
+- `![Accueil](public/screenshots/home.png)`
+- `![Services](public/screenshots/services.png)`
+
+## Architecture
+
+- SPA React (React Router) avec URLs localisées `/:lng/...`.
+- SEO par page via `react-helmet-async` (title, metas, OG/Twitter, canonical, hreflang).
+- Données structurées JSON‑LD via composants dédiés.
+- Génération post-build : `sitemap.xml`, `robots.txt`, `ai.txt`.
+- Pré‑rendu (SSG) via Puppeteer pour fournir un HTML initial riche sur certaines langues/pages.
+
+Détails : voir `documentation/ARCHITECTURE.md`.
 
 ## Déploiement
 
+### Prérequis
+
+- Node.js 20+
+- `npm ci`
+
+### Développement
+
+- `npm run dev`
+
+### Build
+
+- `npm run build`
+- `npm run preview`
+
 ### GitHub Pages
-- Workflow: `.github/workflows/pages.yml` (build + deploy)
-- Fallback SPA: copie `dist/index.html` → `dist/404.html`
-- Base path (VITE_BASE):
-  - User/Org Pages (`username.github.io`): `VITE_BASE=/`
-  - Project Pages (`username.github.io/repo`): `VITE_BASE=/REPO-NAME/`
-  - Détermination automatique côté Actions
+
+- Workflow : `.github/workflows/pages.yml`
+- Base path : contrôlé par `VITE_BASE` (auto sur Actions)
+- Fallback SPA : copie `dist/index.html` → `dist/404.html`
 
 ### Netlify
-- Build: `npm run build` → `dist/`
-- Configuration: `netlify.toml` (publish, redirects, en‑têtes de sécurité)
-- Variables: `VITE_SITE_URL`, `VITE_GA_ID` (optionnel), `VITE_GSC_VERIFICATION` / `VITE_BING_VERIFICATION` (optionnels)
-- Redirections SEO et fallback SPA définis dans `netlify.toml`
 
-## Audit automatisé (PR & site)
-- PR: audit qualité avec commentaire (voir `.github/workflows/pr-audit.yml`)
-- Site: `npm run audit:site` avec `BASE_URL` (sitemap + metas)
+- Build : `npm run build` → `dist/`
+- Configuration : `netlify.toml` (redirects, headers de sécurité)
+- Variables utiles :
+  - `VITE_SITE_URL`
+  - `VITE_GA_ID` (optionnel)
 
-## Sécurité & Headers
-- CSP: `default-src 'self'`, script‑src autorise GTAG/Clarity si activés
-- X‑Frame‑Options: DENY
-- X‑Content‑Type‑Options: nosniff
-- Referrer‑Policy: no-referrer
-- COOP/CORP: same-origin
-- Permissions‑Policy: fonctionnalités critiques désactivées
-- Cache‑Control: immutable sur `/assets/*`, no‑cache sur pages clés
-- HSTS: activer côté domaine (CDN / Netlify si supporté)
+## À propos du développeur
 
-## Accessibilité (WCAG AA)
-- Navigation clavier: skip link “Passer au contenu”
-- Landmarks: `<main id="main">` focus auto
-- Contrastes: palette lisible, hover/focus visibles
-- Images: alt descriptifs, dimensions explicites
+Ce projet a été développé par :
 
-## Performance (Core Web Vitals)
-- Preload hero, preconnect vers ressources externes
-- Dimensions d’images explicites (réduction du CLS)
-- Recommandé:
-  - WebP/AVIF + srcset/sizes pour hero/sections
-  - Fonts locales si CSP stricte (font‑src)
+SmarterLogicWeb  
+https://www.smarterlogicweb.com/
 
-## SEO technique
-- Canonical/OG/Twitter alignés sur domaine prod
-- JSON‑LD (Organization, WebSite, LocalBusiness)
-- robots.txt & sitemap.xml générés
-- hreflang + variantes régionales (fr‑CI, en‑GB, pt‑AO, etc.)
+Ce projet fait partie de mon portfolio de développeur web et sert à démontrer mes compétences en création de sites professionnels.
 
-## Variables d’environnement
-Exemple (`.env.example`):
-- `VITE_SITE_URL=https://example.com`
-- `VITE_BASE=/` (ou `/REPO-NAME/` pour Project Pages)
-- `VITE_GA_ID=G-XXXXXXXXXX`
-- `VITE_GSC_VERIFICATION=...` (optionnel)
-- `VITE_BING_VERIFICATION=...` (optionnel)
+---
 
-## Infos à renseigner (TODO)
-- SIRET / Immatriculation: à compléter (Legal / Footer)
-- Hébergeur: nom + adresse (Legal)
-- Réseaux sociaux (sameAs JSON‑LD): LinkedIn, X/Twitter, Instagram, Facebook
-- `og:image` par défaut: possibilité d’ajouter `public/og-default.webp` et référencer dans Helmet
-- Images hero: personnalisation future (actuellement image Pexels)
-- Micro‑animations: optionnel (gardez `prefers-reduced-motion`)
+### Mention explicite (important)
 
-## Contribuer
-Voir CONTRIBUTING.md pour les conventions de commits, branches, CI et guidelines. Consultez également documentation/STYLEGUIDE.md pour les conventions de style.
-
-
-## Changelog
-- 2025‑01‑03 — Docs: refonte complète du README et ajout ARCHITECTURE/CONTRIBUTING/VISUELS
-- 2025‑01‑03 — Branding: intégration SmarterLogic Web (Footer, Mentions Légales, JSON‑LD, ai.txt)
-- 2025‑01‑03 — Qualité: audit PR (liens, headers, Lighthouse, a11y, Quality Gate)
-- 2025‑01‑03 — SSG: pré‑rendu FR/EN/PT via Puppeteer
-- 2025‑01‑03 — Sécurité: CSP sans nonce + headers Pages
-
-## Développé par
-Développé par **SmarterLogicWeb**.
-
-Pour en savoir plus ou pour nous contacter, visitez notre site: https://smarterlogicweb.com.
-
-- Branding & Identité Visuelle
-- Développement Front‑End
-- Optimisation SEO
+Ce projet est un site fictif développé à des fins de démonstration technique. Aucune information commerciale ne doit être considérée comme réelle.

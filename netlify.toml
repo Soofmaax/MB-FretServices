@@ -33,7 +33,8 @@
   status = 302
   conditions = {Country = ["US", "GB", "IE", "CA", "AU", "NZ", "NG", "ZA"]}
 
-# Default: French for all remaining countries (including Northrects]]
+# Arabic-speaking audience (North Africa + Middle East)
+[[redirects]]
   from = "/"
   to = "/ar"
   status = 302

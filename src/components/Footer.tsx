@@ -181,7 +181,7 @@ const Footer: FC = () => {
             </a>
           </p>
           <p className="text-gray-300 mt-1 text-sm">
-            © 2025 — Développé avec <span aria-hidden="true">❤️</span> par <strong>SmarterLogicWeb</strong>
+            {t('footer:fictional_notice', 'Site fictif — démonstration technique (portfolio).')}
           </p>
         </div>
       </div>

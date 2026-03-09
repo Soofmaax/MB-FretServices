@@ -70,6 +70,12 @@ const Legal: FC = () => {
             <h1 className="text-4xl font-bold text-primary-900 mb-8">
               {t('page_title')}
             </h1>
+
+            <div className="mb-8 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900">
+              <p className="font-medium">
+                {t('fictional_notice', 'Ce projet est un site fictif développé à des fins de démonstration technique (portfolio).')}
+              </p>
+            </div>
             
             <div className="prose prose-lg max-w-none">
               <section className="mb-8">
